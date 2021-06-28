@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:background="@null" android:layout_width="@dimen/listitem_height" android:layout_height="@dimen/listitem_height" android:contentDescription="@null" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:paddingStart="@dimen/listitem_narrow_padding" android:layout_toStartOf="@id/context_menu_icon" android:layout_toEndOf="@id/image">
+        <com.sonyericsson.music.ui.FastTextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:ellipsize="none" android:id="@id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        <com.sonyericsson.music.ui.EllipsizedTextView android:textAppearance="@style/MusicAppTextAppearanceSmallSecondary" android:ellipsize="start" android:id="@id/text2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/text1" android:layout_alignStart="@id/text1" />
+    </RelativeLayout>
+    <com.sonyericsson.music.ui.ContextMenuIconView android:id="@id/context_menu_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:paddingStart="@dimen/listitem_standard_padding" android:paddingEnd="@dimen/context_menu_icon_padding" android:layout_alignParentEnd="true" />
+    <FrameLayout android:id="@id/context_menu_touch_area" android:background="@drawable/context_menu_touch_area_selector" android:layout_width="@dimen/listitem_height" android:layout_height="@dimen/listitem_height" android:contentDescription="@string/context_menu_description_txt" android:layout_alignParentEnd="true" />
+</RelativeLayout>

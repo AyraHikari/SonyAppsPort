@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/artist_view" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+            <TextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:textSize="16.0dip" android:id="@id/header_artist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/artist_images_item" android:maxLines="1" />
+            <TextView android:textAppearance="@style/MusicAppTextAppearanceSmallSecondary" android:textSize="14.0dip" android:id="@id/artist_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+        <CheckBox android:id="@id/artist_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+            <TextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:textSize="16.0dip" android:id="@id/header_album" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/album_images_item" android:maxLines="1" />
+            <TextView android:textAppearance="@style/MusicAppTextAppearanceSmallSecondary" android:textSize="14.0dip" android:id="@id/album_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+        <CheckBox android:id="@id/album_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

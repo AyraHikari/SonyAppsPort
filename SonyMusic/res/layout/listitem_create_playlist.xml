@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:padding="@dimen/listitem_narrow_padding" android:layout_width="@dimen/listitem_height" android:layout_height="@dimen/listitem_height" android:src="@drawable/dialog_add_to" android:tint="?colorControlNormal" android:contentDescription="@null" android:layout_marginEnd="6.0dip" />
+    <TextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:layout_gravity="center_vertical" android:id="@id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/music_playlist_new_playlist_txt" android:maxLines="1" android:layout_marginStart="@dimen/listitem_indicator_min_width" android:layout_marginEnd="@dimen/listitem_standard_padding" />
+</LinearLayout>

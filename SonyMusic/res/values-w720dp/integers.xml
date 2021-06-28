@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="integer" name="full_screen_dialog_image_visibility_land">@integer/visible</item>
+</resources>

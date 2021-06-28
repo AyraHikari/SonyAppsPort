@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edit_music_info_album_size">250.0dip</dimen>
+    <dimen name="landscape_left_pane_width">250.0dip</dimen>
+    <dimen name="widget_min_resize_width">300.0dip</dimen>
+    <dimen name="widget_min_width">460.0dip</dimen>
+    <dimen name="widget_source_image_top_padding">2.5dip</dimen>
+</resources>

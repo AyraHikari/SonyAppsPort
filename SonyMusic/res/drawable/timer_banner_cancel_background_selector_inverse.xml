@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/dark_theme_material_accent_color" />
+    <item>
+        <selector>
+            <item android:state_pressed="true" android:drawable="@color/pressed" />
+            <item android:state_focused="true" android:drawable="@drawable/item_focused" />
+        </selector>
+    </item>
+</layer-list>

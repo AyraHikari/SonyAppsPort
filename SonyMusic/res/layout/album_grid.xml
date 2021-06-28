@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView android:scrollbarSize="2.0dip" android:scrollbarAlwaysDrawVerticalTrack="false" android:scrollbarStyle="outsideOverlay" android:id="@id/list" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="true" android:horizontalSpacing="1.0dip" android:verticalSpacing="0.0dip" android:numColumns="@integer/albums_grid_columns" android:fastScrollAlwaysVisible="true" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" />
+</FrameLayout>

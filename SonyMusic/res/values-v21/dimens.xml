@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dialog_custom_layout_side_padding">16.0dip</dimen>
+    <dimen name="dialog_margin">24.0dip</dimen>
+    <dimen name="fab_margin">16.0dip</dimen>
+    <dimen name="fastscroll_background_offset">0.0dip</dimen>
+    <dimen name="fastscroll_bottom_left_radius">44.0dip</dimen>
+    <dimen name="fastscroll_bottom_right_radius">0.0dip</dimen>
+    <dimen name="fastscroll_inset_side">16.0dip</dimen>
+    <dimen name="note_dialog_permission_list_padding_start_end">22.0dip</dimen>
+    <dimen name="notification_content_margin_start">0.0dip</dimen>
+    <dimen name="notification_main_column_padding_top">0.0dip</dimen>
+    <dimen name="notification_media_narrow_margin">12.0dip</dimen>
+    <dimen name="remote_album_art_size">192.0dip</dimen>
+    <dimen name="preference_no_icon_padding_start">72.0dip</dimen>
+</resources>

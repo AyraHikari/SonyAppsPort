@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:gravity="center" android:layout_gravity="center|top" android:id="@id/empty_search_state" android:padding="@dimen/medium_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?actionBarSize" android:minHeight="?listPreferredItemHeight" android:text="@string/search_no_results_match" android:textIsSelectable="false" android:requiresFadingEdge="none" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/search_list" android:paddingTop="?actionBarSize" android:paddingBottom="@dimen/listitem_narrow_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/search_margin_top" android:overScrollMode="ifContentScrolls" android:layout_marginStart="@dimen/search_margin_left_right" android:layout_marginEnd="@dimen/search_margin_left_right" />
+    <ProgressBar android:layout_gravity="center|top" android:id="@id/progress_bar" android:visibility="gone" android:layout_marginTop="100.0dip" style="@style/SearchProgressSpinner" />
+</FrameLayout>

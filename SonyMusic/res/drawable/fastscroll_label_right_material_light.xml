@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetRight="@dimen/fastscroll_inset_side" android:insetBottom="@dimen/fastscroll_inset_bottom"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <layer-list>
+        <item android:left="@dimen/fastscroll_background_offset" android:top="@dimen/fastscroll_background_offset" android:right="@dimen/fastscroll_background_offset" android:bottom="@dimen/fastscroll_background_offset">
+            <shape android:shape="rectangle">
+                <corners android:topLeftRadius="@dimen/fastscroll_radius" android:topRightRadius="@dimen/fastscroll_radius" android:bottomLeftRadius="@dimen/fastscroll_bottom_left_radius" android:bottomRightRadius="@dimen/fastscroll_bottom_right_radius" />
+                <padding android:left="@dimen/fastscroll_left_padding" android:top="@dimen/fastscroll_padding" android:right="@dimen/fastscroll_right_padding" android:bottom="@dimen/fastscroll_padding" />
+                <solid android:color="@color/light_theme_material_accent_color" />
+            </shape>
+        </item>
+    </layer-list>
+</inset>

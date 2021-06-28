@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_view_art_size">184.0dip</dimen>
+    <dimen name="landing_page_top_padding">200.0dip</dimen>
+</resources>

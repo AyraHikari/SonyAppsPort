@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fastscroll_background_offset">16.0dip</dimen>
+    <dimen name="fastscroll_inset_bottom">0.0dip</dimen>
+    <dimen name="fastscroll_inset_side">0.0dip</dimen>
+    <dimen name="fastscroll_left_padding">20.0dip</dimen>
+    <dimen name="fastscroll_right_padding">-20.0dip</dimen>
+</resources>

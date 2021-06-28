@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/container" android:background="@drawable/list_selector" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:background="@null" android:layout_width="@dimen/listitem_height" android:layout_height="wrap_content" android:src="@drawable/list_folder_icn" android:contentDescription="@null" />
+    <androidx.legacy.widget.Space android:id="@id/space_start" android:layout_width="@dimen/listitem_narrow_padding" android:layout_height="0.0dip" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/text_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/listitem_narrow_padding">
+        <com.sonyericsson.music.ui.FastTextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:ellipsize="none" android:id="@id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        <com.sonyericsson.music.ui.FastTextView android:textAppearance="@style/MusicAppTextAppearanceSmallSecondary" android:ellipsize="none" android:id="@id/text2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+    </LinearLayout>
+    <androidx.legacy.widget.Space android:id="@id/space_end" android:visibility="gone" android:layout_width="@dimen/listitem_standard_padding" android:layout_height="0.0dip" />
+    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/indicator" android:layout_width="wrap_content" android:layout_height="?listPreferredItemHeight">
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:visibility="visible" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="16.0dip" android:indeterminate="true" />
+        <ImageView android:layout_gravity="center" android:id="@id/download_button" android:background="?selectableItemBackgroundBorderless" android:padding="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_cloud_queue" android:scaleType="center" />
+    </FrameLayout>
+</LinearLayout>

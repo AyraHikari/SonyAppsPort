@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="media_dashboard_extension_permission_description">"Autoriser l'enregistrement de l'appli comme une extension multimédia du tableau de bord."</string>
+</resources>

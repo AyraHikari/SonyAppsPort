@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_allow_stacked_button_bar">false</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="config_defaultExplicitAllow">true</bool>
+    <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
+    <bool name="config_showAccessibilityConformance">false</bool>
+    <bool name="config_showDataUsageWarning">false</bool>
+    <bool name="config_showGracenote">true</bool>
+    <bool name="config_showMoraStore">false</bool>
+    <bool name="ga_anonymizeIp">true</bool>
+    <bool name="ga_autoActivityTracking">false</bool>
+    <bool name="ga_reportUncaughtExceptions">false</bool>
+    <bool name="is_phablet_layout">false</bool>
+    <bool name="is_tablet_layout">false</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="mu_enabled">false</bool>
+    <bool name="mu_region_available">false</bool>
+</resources>

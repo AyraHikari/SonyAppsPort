@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sonyericsson.music.authentication.SignInIntroductionFragmentShadowWrapper android:orientation="horizontal" android:id="@id/wrap" android:background="?defaultWindowBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/header_image" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/drive_introduction_image" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+    <include layout="@layout/sign_in_introduction_page" />
+</com.sonyericsson.music.authentication.SignInIntroductionFragmentShadowWrapper>

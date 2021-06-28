@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:walkman="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/save_group">
+        <item android:id="@id/save_button" android:title="@string/music_ics_menu_save" android:alphabeticShortcut="@string/music_ics_menu_save" walkman:showAsAction="always" />
+    </group>
+</menu>

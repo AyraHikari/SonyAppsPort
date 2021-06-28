@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/listitem_standard_padding" android:paddingBottom="@dimen/listitem_margin_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/listitem_margin_small" android:paddingEnd="@dimen/listitem_margin_small"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textColor="?colorAccent" android:layout_gravity="bottom" android:id="@id/label_string" android:padding="@dimen/listitem_narrow_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textSize="12.0sp" android:textColor="?colorAccent" android:layout_gravity="bottom" android:id="@id/label_button" android:background="?selectableItemBackgroundBorderless" android:padding="@dimen/listitem_narrow_padding" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

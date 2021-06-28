@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="china_type_approval_permission_wifi_mobile_data">Dane w sieci WLAN i komórk.</string>
+    <string name="music_settings_download_songs_wifi_mobile_subtitle">WLAN/transmisji danych w sieci komórkowej</string>
+    <string name="music_settings_download_songs_wifi_subtitle">Tylko sieć WLAN</string>
+    <string name="update_as_you_play_setting_option_all">WLAN/transmisja danych w sieci komórkowej</string>
+    <string name="update_as_you_play_setting_option_wifi">Tylko sieć WLAN</string>
+</resources>

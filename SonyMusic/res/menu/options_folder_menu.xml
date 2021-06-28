@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:walkman="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/menu_option_add_to_playlist" android:title="@string/music_add_to_playlist_option" walkman:showAsAction="never" />
+    <item android:id="@id/menu_option_enqueue" android:title="@string/music_library_play_next_txt" walkman:showAsAction="never" />
+    <item android:id="@id/menu_option_enqueue_last" android:title="@string/music_library_add_to_play_queue_txt" walkman:showAsAction="never" />
+</menu>

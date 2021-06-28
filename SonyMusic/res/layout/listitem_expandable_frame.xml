@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/listitem_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/divider" android:background="?android:listDivider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/listitem_standard_padding" />
+    <FrameLayout android:id="@id/drag_handle_wrap" android:layout_width="@dimen/playqueue_handle_width" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/drag_handle" android:layout_width="wrap_content" android:layout_height="@dimen/listitem_height" android:src="@drawable/drag_handle" android:tint="?colorControlNormal" android:contentDescription="@null" />
+    </FrameLayout>
+    <ViewStub android:id="@id/content_stub" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_height" android:layout_toEndOf="@id/drag_handle_wrap" />
+</RelativeLayout>

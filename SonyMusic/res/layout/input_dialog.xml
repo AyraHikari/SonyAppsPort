@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/dialog_custom_layout_side_padding" android:paddingEnd="@dimen/dialog_custom_layout_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/input_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:inputType="textCapSentences" />
+    <CheckBox android:id="@id/online_checkbox" android:paddingTop="5.0dip" android:paddingBottom="15.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:checked="true" android:layout_below="@id/input_field" />
+    <ImageView android:id="@id/plugin_name" android:paddingTop="13.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:layout_below="@id/input_field" android:contentDescription="@null" android:layout_toEndOf="@id/online_checkbox" />
+</RelativeLayout>

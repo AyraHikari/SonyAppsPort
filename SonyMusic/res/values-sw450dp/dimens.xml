@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="full_player_art_margin_land">38.0dip</dimen>
+    <dimen name="full_player_control_size">73.0dip</dimen>
+    <dimen name="full_player_controls_margin_land">44.0dip</dimen>
+    <dimen name="full_player_controls_top_padding">18.0dip</dimen>
+    <dimen name="full_player_metadata_bottom_padding">10.0dip</dimen>
+    <dimen name="full_player_padding_medium">25.0dip</dimen>
+    <dimen name="full_player_padding_small">18.0dip</dimen>
+    <dimen name="full_player_play_pause_size">93.0dip</dimen>
+    <dimen name="full_player_seekbar_padding_land">12.0dip</dimen>
+    <dimen name="full_player_text_size_1">26.0dip</dimen>
+    <dimen name="full_player_text_size_2">20.0dip</dimen>
+    <dimen name="full_player_text_spacing">8.0dip</dimen>
+</resources>

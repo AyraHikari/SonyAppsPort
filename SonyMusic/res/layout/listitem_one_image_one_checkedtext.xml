@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:paddingStart="@dimen/listitem_standard_padding" android:paddingEnd="@dimen/listitem_standard_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/drag_handle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="@dimen/listitem_standard_padding" />
+    <CheckedTextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/checked_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkMark="?android:listChoiceIndicatorMultiple" android:maxLines="1" android:layout_marginStart="@dimen/listitem_standard_padding" />
+</LinearLayout>

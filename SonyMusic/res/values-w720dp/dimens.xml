@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="full_screen_dialog_width_land">640.0dip</dimen>
+</resources>

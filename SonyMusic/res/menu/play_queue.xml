@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:walkman="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/menu_play_queue_save" android:title="@string/music_ics_menu_save" walkman:showAsAction="never" />
+</menu>

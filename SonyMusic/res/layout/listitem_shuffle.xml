@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeight" android:paddingEnd="@dimen/listitem_standard_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/image" android:layout_width="@dimen/listitem_height" android:layout_height="@dimen/listitem_height" android:src="@drawable/music_library_shuffle" android:scaleType="center" android:tint="?colorControlNormal" android:contentDescription="@null" />
+    <TextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:gravity="center_vertical" android:id="@id/text1" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_height" android:text="@string/music_shuffle_all_txt" android:maxLines="1" android:paddingStart="@dimen/listitem_narrow_padding" />
+</LinearLayout>

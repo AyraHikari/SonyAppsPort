@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="full_player_control_size">46.0dip</dimen>
+    <dimen name="full_player_controls_top_padding">10.0dip</dimen>
+    <item type="dimen" name="full_player_controls_weight_inner">0.05</item>
+    <item type="dimen" name="full_player_controls_weight_outer">0.4</item>
+    <dimen name="full_player_metadata_bottom_padding">6.0dip</dimen>
+    <dimen name="full_player_padding_medium">22.0dip</dimen>
+    <dimen name="full_player_padding_small">15.0dip</dimen>
+    <dimen name="full_player_play_pause_size">58.0dip</dimen>
+    <dimen name="full_player_text_spacing">4.0dip</dimen>
+    <dimen name="full_player_tracking_size">50.0dip</dimen>
+    <dimen name="full_screen_dialog_fine_print_size">14.0sp</dimen>
+    <dimen name="full_screen_dialog_main_text_size">16.0sp</dimen>
+    <dimen name="full_screen_dialog_title_size">24.0sp</dimen>
+    <dimen name="full_screen_dialog_width">360.0dip</dimen>
+    <dimen name="preference_category_padding_start">56.0dip</dimen>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="grid_horizontal_spacing">-2.0dip</dimen>
+    <dimen name="grid_padding_end">17.0dip</dimen>
+    <dimen name="grid_padding_start">2.0dip</dimen>
+</resources>

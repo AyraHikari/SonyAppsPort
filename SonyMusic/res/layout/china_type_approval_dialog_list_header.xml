@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dialog_custom_layout_side_padding" android:paddingEnd="@dimen/dialog_custom_layout_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/text_input_dialog_message" android:paddingTop="@dimen/note_dialog_padding" android:paddingBottom="@dimen/note_dialog_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_china_type_approval_popup_message" android:textDirection="locale" android:layout_marginStart="@dimen/min_padding" android:layout_marginEnd="@dimen/min_padding" />
+    <TextView android:id="@id/permission_list_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/china_type_approval_permission_list_title" android:textAllCaps="true" android:layout_marginStart="@dimen/min_padding" android:layout_marginEnd="@dimen/min_padding" />
+    <View android:background="?android:textColorPrimary" android:layout_width="fill_parent" android:layout_height="@dimen/note_dialog_line_thickness" android:layout_marginTop="@dimen/note_dialog_line_top_margin" />
+</LinearLayout>

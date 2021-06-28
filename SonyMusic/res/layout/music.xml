@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sonyericsson.music.ui.MusicLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/content_group" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.sonyericsson.music.ui.TouchInterceptLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/nav_bar_spacer" />
+        <FrameLayout android:id="@id/nav_bar_spacer" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <com.sonyericsson.music.ui.MiniplayerWrap android:orientation="vertical" android:id="@id/miniplayer_wrap" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <fragment android:name="com.sonyericsson.music.MiniPlayerFragment" android:id="@id/mini_player_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.sonyericsson.music.ui.MiniplayerWrap>
+        </FrameLayout>
+        <FrameLayout android:id="@id/nav_bar_shade" android:background="@drawable/bg_navbar" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <FrameLayout android:id="@id/content_full_screen" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include android:id="@id/app_bar_wrap" layout="@layout/app_bar" />
+        <com.sonyericsson.music.ui.VerticalTextView android:textSize="8.0sp" android:textColor="#ffff0000" android:id="@id/version_overlay" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?android:actionBarSize" android:layout_alignParentTop="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <fragment android:name="com.sonyericsson.music.navigationdrawer.NavigationDrawerFragment" android:layout_gravity="start" android:id="@id/navigation_drawer" android:layout_width="@dimen/navigation_drawer_width" android:layout_height="fill_parent" />
+</com.sonyericsson.music.ui.MusicLayout>

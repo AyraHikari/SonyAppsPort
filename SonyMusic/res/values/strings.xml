@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Navigate home</string>
+    <string name="abc_action_bar_up_description">Navigate up</string>
+    <string name="abc_action_menu_overflow_description">More options</string>
+    <string name="abc_action_mode_done">Done</string>
+    <string name="abc_activity_chooser_view_see_all">See all</string>
+    <string name="abc_activitychooserview_choose_application">Choose an app</string>
+    <string name="abc_capital_off">OFF</string>
+    <string name="abc_capital_on">ON</string>
+    <string name="abc_font_family_body_1_material">sans-serif</string>
+    <string name="abc_font_family_body_2_material">sans-serif-medium</string>
+    <string name="abc_font_family_button_material">sans-serif-medium</string>
+    <string name="abc_font_family_caption_material">sans-serif</string>
+    <string name="abc_font_family_display_1_material">sans-serif</string>
+    <string name="abc_font_family_display_2_material">sans-serif</string>
+    <string name="abc_font_family_display_3_material">sans-serif</string>
+    <string name="abc_font_family_display_4_material">sans-serif-light</string>
+    <string name="abc_font_family_headline_material">sans-serif</string>
+    <string name="abc_font_family_menu_material">sans-serif</string>
+    <string name="abc_font_family_subhead_material">sans-serif</string>
+    <string name="abc_font_family_title_material">sans-serif-medium</string>
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+    <string name="abc_menu_delete_shortcut_label">delete</string>
+    <string name="abc_menu_enter_shortcut_label">enter</string>
+    <string name="abc_menu_function_shortcut_label">Function+</string>
+    <string name="abc_menu_meta_shortcut_label">Meta+</string>
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+    <string name="abc_menu_space_shortcut_label">space</string>
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+    <string name="abc_prepend_shortcut_label">Menu+</string>
+    <string name="abc_search_hint">Search…</string>
+    <string name="abc_searchview_description_clear">Clear query</string>
+    <string name="abc_searchview_description_query">Search query</string>
+    <string name="abc_searchview_description_search">Search</string>
+    <string name="abc_searchview_description_submit">Submit query</string>
+    <string name="abc_searchview_description_voice">Voice search</string>
+    <string name="abc_shareactionprovider_share_with">Share with</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="added_to_library">Added to your library</string>
+    <string name="added_to_library_song">Added %1$s to your library</string>
+    <string name="album_images_item">Album images</string>
+    <string name="album_tracks_list_disc_separator">Disc %1$d</string>
+    <string name="alphabetical_option">Alphabetical</string>
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="artist_all_tracks">All songs</string>
+    <string name="artist_images_item">Artist images</string>
+    <string name="artistview_album_count">%1$d albums</string>
+    <string name="artistview_one_album">1 album</string>
+    <string name="beta_settings">Beta settings</string>
+    <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
+    <string name="button_show_all">Show all</string>
+    <string name="cast_notification_connected_message">Connected to %1$s</string>
+    <string name="cast_notification_connecting_message">Connecting to %1$s</string>
+    <string name="cast_notification_default_channel_name">Cast</string>
+    <string name="cast_notification_disconnect">Disconnect</string>
+    <string name="character_counter_content_description">Character limit exceeded %1$d of %2$d</string>
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+    <string name="china_type_approval_permission_list_title">App needs access to:</string>
+    <string name="china_type_approval_permission_wifi_mobile_data">Wi-Fi &amp; mobile data</string>
+    <string name="china_type_approval_remember_selection">Remember this selection</string>
+    <string name="clear_item_description_txt">Clear item</string>
+    <string name="com.crashlytics.android.build_id">00000000000000000000000000000000</string>
+    <string name="common_google_play_services_enable_button">Enable</string>
+    <string name="common_google_play_services_enable_text">"%1$s won't work unless you enable Google Play services."</string>
+    <string name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_install_button">Install</string>
+    <string name="common_google_play_services_install_text">"%1$s won't run without Google Play services, which are missing from your device."</string>
+    <string name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="common_google_play_services_unsupported_text">"%1$s won't run without Google Play services, which are not supported by your device."</string>
+    <string name="common_google_play_services_update_button">Update</string>
+    <string name="common_google_play_services_update_text">"%1$s won't run unless you update Google Play services."</string>
+    <string name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_google_play_services_updating_text">"%1$s won't run without Google Play services, which are currently updating."</string>
+    <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="context_description_album_image">Album image</string>
+    <string name="context_description_artist_image">Artist image</string>
+    <string name="context_description_editbox_album">Album name</string>
+    <string name="context_description_editbox_artist">Artist name</string>
+    <string name="context_description_editbox_disc_number">Disc number</string>
+    <string name="context_description_editbox_song_number">Song number</string>
+    <string name="context_description_editbox_title">Song title</string>
+    <string name="context_description_editbox_year">Song year</string>
+    <string name="context_description_image">Edit art</string>
+    <string name="context_menu_description_txt">Options button</string>
+    <string name="cta_app_permission_connection_not_allowed_toast">Internet connection not allowed. Enable it in App permissions.</string>
+    <string name="data_saver_uayp_information_header">Artwork download paused</string>
+    <string name="data_saver_uayp_information_message">Album and artist art will not be not automatically downloaded when your device is in data saver mode.</string>
+    <string name="data_usage_txt_kb">Total size: %1$d KB</string>
+    <string name="data_usage_txt_mb">Total size: %1$d MB</string>
+    <string name="default_web_client_id">61376316733-2bs3orppqur1e3eti5ik1j3gk1tr2v2e.apps.googleusercontent.com</string>
+    <string name="delete_dialog_header">Delete artwork</string>
+    <string name="delete_dialog_subheader">Delete images stored by the Music application</string>
+    <string name="description_add_favorite">Add to favorites</string>
+    <string name="description_add_to_view_button">Add song</string>
+    <string name="description_album_flickview">Album art. Tap for menu. Swipe to change song.</string>
+    <string name="description_albumart_button">Enter player view</string>
+    <string name="description_artist_view_button">Go to artist view</string>
+    <string name="description_close_button">Close</string>
+    <string name="description_infinite_button">Infinite</string>
+    <string name="description_next_button">Next</string>
+    <string name="description_pause_button">Pause</string>
+    <string name="description_play_button">Play</string>
+    <string name="description_play_queue_button_hide">Hide play queue</string>
+    <string name="description_play_queue_button_show">Show play queue</string>
+    <string name="description_prev_button">Previous</string>
+    <string name="description_set_repeat_all">Set repeat all songs</string>
+    <string name="description_set_repeat_off">Set repeat off</string>
+    <string name="description_set_repeat_one">Set repeat this song</string>
+    <string name="description_track_changed">Song changed</string>
+    <string name="description_turn_off_shuffle">Turn off shuffle</string>
+    <string name="description_turn_on_shuffle">Turn on shuffle</string>
+    <string name="download_failed_message">Could not download file. Retry?</string>
+    <string name="download_failed_title">Download failed</string>
+    <string name="download_notification_downloading_song_text">Downloading: %1$s</string>
+    <string name="download_notification_nbr_songs_left_text">%1$d songs left</string>
+    <string name="download_notification_one_song_left_text">1 song left</string>
+    <string name="download_notification_title_text">Downloading songs</string>
+    <string name="download_started">Download started</string>
+    <string name="download_started_song">Started downloading %1$s</string>
+    <string name="download_wifi_connect">Download will start when you have a network connection</string>
+    <string name="downloads_setting_dialog_header">Download songs using:</string>
+    <string name="edit_music_info_art_context_download">Download image</string>
+    <string name="edit_music_info_art_context_remove">Remove image</string>
+    <string name="edit_music_info_art_context_set">Set image</string>
+    <string name="edit_music_info_context_album">Edit album info</string>
+    <string name="edit_music_info_context_artist">Edit artist info</string>
+    <string name="edit_music_info_context_track">Edit music info</string>
+    <string name="edit_music_info_feedback_album_not_empty">Album name cannot be empty</string>
+    <string name="edit_music_info_feedback_artist_not_empty">Artist name cannot be empty</string>
+    <string name="edit_music_info_feedback_title_not_empty">Song title cannot be empty</string>
+    <string name="edit_music_info_header_album">Album</string>
+    <string name="edit_music_info_header_album_information">Album information</string>
+    <string name="edit_music_info_header_album_input">Album name</string>
+    <string name="edit_music_info_header_artist">Artist</string>
+    <string name="edit_music_info_header_artist_information">Artist information</string>
+    <string name="edit_music_info_header_artist_input">Artist name</string>
+    <string name="edit_music_info_header_discnbr">Disc number</string>
+    <string name="edit_music_info_header_edit">Edit information</string>
+    <string name="edit_music_info_header_genre">Genre</string>
+    <string name="edit_music_info_header_songnbr">Song number</string>
+    <string name="edit_music_info_header_text">Edit music info</string>
+    <string name="edit_music_info_header_title">Title</string>
+    <string name="edit_music_info_header_year">Year</string>
+    <string name="edit_music_info_insufficient_data_album_toast">Please make sure that album name is specified and then try again</string>
+    <string name="edit_music_info_insufficient_data_artist_album_toast">Please make sure that both artist and album are specified and then try again</string>
+    <string name="edit_music_info_insufficient_data_artist_toast">Please make sure that artist name is specified and then try again</string>
+    <string name="edit_music_info_progress_saving">Saving</string>
+    <string name="edit_music_info_toast_saved">Info saved</string>
+    <string name="edit_music_info_track_nbr">Song number: %1$s</string>
+    <string name="edit_music_info_unknown_album">Unknown album</string>
+    <string name="edit_music_info_unknown_artist">Unknown artist</string>
+    <string name="edit_music_info_unknown_genre">Unknown genre</string>
+    <string name="edit_music_info_year">Year: %1$s</string>
+    <string name="empty_folder">No music in folder</string>
+    <string name="expand_button_title">Advanced</string>
+    <string name="extension_provider">com.sonymobile.music.extensionmanager</string>
+    <string name="fab_transformation_scrim_behavior">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
+    <string name="fab_transformation_sheet_behavior">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="feature_not_available_anymore_message">This feature is not available anymore</string>
+    <string name="file_size_subheader">Total size: %s</string>
+    <string name="firebase_analytics_provider">com.sonyericsson.music.firebaseanalyticsprovider</string>
+    <string name="firebase_database_url">https://somc-music.firebaseio.com</string>
+    <string name="firebase_remote_config_provider">com.sonyericsson.music.firebaseremoteconfigprovider</string>
+    <string name="ga_trackingId">UA-21337977-26</string>
+    <string name="gcm_defaultSenderId">61376316733</string>
+    <string name="get_more_album_art_dialog_title">Get more album art</string>
+    <string name="google_api_key">AIzaSyBqADqYEFkG8RQZn_j712GcqPvxlTyBxTM</string>
+    <string name="google_app_id">1:61376316733:android:e776877d472d35c9</string>
+    <string name="google_crash_reporting_api_key">AIzaSyBqADqYEFkG8RQZn_j712GcqPvxlTyBxTM</string>
+    <string name="google_drive_connection_failed">"Couldn't connect to Google Drive. Please try again."</string>
+    <string name="google_drive_contacts_permission_text">In order to access your Google Drive account, Music needs \"Contacts\" permission</string>
+    <string name="google_drive_getting_your_music">Searching for music on your Google Drive</string>
+    <string name="google_drive_introduction_screen_access">Your music on Google Drive - access it from anywhere</string>
+    <string name="google_drive_introduction_screen_subtitle1">- Download all your stored music</string>
+    <string name="google_drive_introduction_screen_subtitle2">- Stream your music without downloading</string>
+    <string name="google_drive_introduction_screen_title">Sign in to Google Drive to:</string>
+    <string name="google_drive_introduction_title">Music on Google Drive</string>
+    <string name="google_drive_sync_failed">Could not connect to Google Drive. Check your internet connection.</string>
+    <string name="google_storage_bucket">somc-music.appspot.com</string>
+    <string name="goole_drive_introduction_explanation">If you have music stored on your Google Drive, you can stream or download directly from the Music app.</string>
+    <string name="goole_drive_introduction_screen_stream">Stream music from your Google Drive account</string>
+    <string name="gui_cancel_txt">Cancel</string>
+    <string name="gui_continue_txt">Continue</string>
+    <string name="gui_delete_txt">Delete</string>
+    <string name="gui_done_txt">Done</string>
+    <string name="gui_go_there_txt">GO THERE</string>
+    <string name="gui_go_to_app_info_txt">APP INFO</string>
+    <string name="gui_ok_txt">OK</string>
+    <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="hide_show_folders_overflow">Hide/show folders</string>
+    <string name="hide_show_playlists_header">Hide/show playlists</string>
+    <string name="hide_show_smart_playlists_dlg_title">Smart playlists</string>
+    <string name="hide_show_smart_playlists_option">Hide/show Smart playlists</string>
+    <string name="info_button_text">Got it</string>
+    <string name="landingpage_item_playlist_empty">Playlist is empty</string>
+    <string name="lets_go_button">"LET'S GO!"</string>
+    <string name="license_text">"
+&lt;p>
+Copyright 2010, 2021 Sony Corporation.&lt;br>
+This software contains confidential and proprietary information of
+Sony Corporation.
+&lt;/p>
+
+&lt;p>This software includes source code from:&lt;/p>
+
+&lt;p>&lt;b>* Android platform/developers/samples
+&lt;br>
+* Android platform/development
+&lt;br>
+* Android platform/frameworks/base
+&lt;br>
+* Android platform/frameworks/support
+&lt;br>
+* Android platform/packages/apps/Music
+&lt;br>
+* Universal Android Music Player Sample
+&lt;/b>&lt;/p>
+
+&lt;p>Copyright (C) 2005-2018 The Android Open Source Project&lt;br>
+Copyright 2010, 2021 Sony Corporation.&lt;/p>
+
+&lt;p>Original code licensed under the Apache License, Version 2.0 (the \"License\");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at&lt;/p>
+
+&lt;p>     http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
+
+&lt;p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an \"AS IS\" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.&lt;/p>
+
+&lt;p>NOTE: This file has been modified by Sony Corporation.
+Modifications are licensed under the Sony Corporation
+End User License Agreement (\"EULA\"). Any use of the modifications is subject
+to the terms of the EULA.&lt;/p>
+&lt;br>
+&lt;br>
+&lt;p>This software uses the following open source software libraries and source code:&lt;/p>
+
+&lt;p>&lt;b>Retrofit&lt;/b>&lt;/p>
+
+&lt;p>Copyright 2013 Square, Inc.&lt;/p>
+
+&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at&lt;/p>
+
+&lt;p>   http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
+
+&lt;p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an \"AS IS\" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.&lt;/p>
+&lt;br>
+&lt;p>&lt;b>Picasso&lt;/b>&lt;/p>
+
+&lt;p>Copyright 2013 Square, Inc.&lt;/p>
+
+&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at&lt;/p>
+
+&lt;p>   http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
+
+&lt;p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an \"AS IS\" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.&lt;/p>
+&lt;br>
+&lt;p>&lt;b>Picasso 2 OkHttp 3 Downloader&lt;/b>&lt;/p>
+
+&lt;p>Copyright 2016 Jake Wharton&lt;/p>
+
+&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at&lt;/p>
+
+&lt;p>   http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
+
+&lt;p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an \"AS IS\" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.&lt;/p>
+&lt;br>
+&lt;p>&lt;b>OkHttp&lt;/b>&lt;/p>
+
+&lt;p>Copyright 2016 Square, Inc.&lt;/p>
+
+&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at&lt;/p>
+
+&lt;p>   http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
+
+&lt;p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an \"AS IS\" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.&lt;/p>
+&lt;br>
+&lt;p>&lt;b>Gson&lt;/b>&lt;/p>
+
+&lt;p>Copyright 2008 Google Inc.&lt;/p>
+
+&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at&lt;/p>
+
+&lt;p>    http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
+
+&lt;p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an \"AS IS\" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.&lt;/p>
+&lt;br>
+&lt;p>&lt;b>Android support libraries&lt;/b>&lt;/p>
+
+&lt;p>Copyright (C) 2005-2018 The Android Open Source Project&lt;/p>
+
+&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at&lt;/p>
+
+&lt;p>     http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
+
+&lt;p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an \"AS IS\" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.&lt;/p>
+&lt;br>
+&lt;br>
+&lt;p>Apache License&lt;/p>
+&lt;p>Version 2.0, January 2004&lt;/p>
+
+&lt;p>http://www.apache.org/licenses/&lt;/p>
+
+&lt;p>TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION&lt;/p>
+
+&lt;p>1. Definitions.&lt;/p>
+
+&lt;p>\"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.
+&lt;/p>
+&lt;p>\"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.
+&lt;/p>
+&lt;p>\"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.
+&lt;/p>
+&lt;p>\"You\" (or \"Your\") shall mean an individual or Legal Entity exercising permissions granted by this License.
+&lt;/p>
+&lt;p>\"Source\" form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.
+&lt;/p>
+&lt;p>\"Object\" form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.
+&lt;/p>
+&lt;p>\"Work\" shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).
+&lt;/p>
+&lt;p>\"Derivative Works\" shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.
+&lt;/p>
+&lt;p>\"Contribution\" shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, \"submitted\" means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as \"Not a Contribution.\"
+&lt;/p>
+&lt;p>\"Contributor\" shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.
+&lt;/p>
+&lt;p>2. Grant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.
+&lt;/p>
+&lt;p>3. Grant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.
+&lt;/p>
+&lt;p>4. Redistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:
+&lt;/p>
+&lt;p>   a. You must give any other recipients of the Work or Derivative Works a copy of this License; and&lt;/p>
+&lt;p>   b. You must cause any modified files to carry prominent notices stating that You changed the files; and&lt;/p>
+&lt;p>   c. You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and&lt;/p>
+&lt;p>   d. If the Work includes a \"NOTICE\" text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License.&lt;/p>
+
+&lt;p>      You may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.
+&lt;/p>
+&lt;p>5. Submission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.
+
+&lt;p>6. Trademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.
+&lt;/p>
+&lt;p>7. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.
+&lt;/p>
+&lt;p>8. Limitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.
+&lt;/p>
+&lt;p>9. Accepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.
+&lt;/p>
+&lt;p>END OF TERMS AND CONDITIONS&lt;/p>
+&lt;br>
+&lt;br>
+&lt;p>This software also uses the following open source software libraries and source code:&lt;/p>
+
+&lt;b>Google Play Services libraries&lt;/b>
+
+"</string>
+    <string name="lmark_display_dialog_option_txt">Do not show this message again</string>
+    <string name="lmark_display_message_txt">L MARK is a registered trademark which appears on licensed mobile / web sites of legitimate digital music providers.</string>
+    <string name="mc_download_music_info_description">Download album art and song info for all your songs in one go</string>
+    <string name="mc_download_music_info_ics">Download music info</string>
+    <string name="mc_edit_music_info_ics">Edit music info</string>
+    <string name="media_dashboard_extension_permission_description">Allow registration of the application as a media dashboard extension.</string>
+    <string name="media_dashboard_extension_permission_label">Allow media dashboard extensions</string>
+    <string name="media_infinite_permission_description">Allow registration of the application as a media extension.</string>
+    <string name="media_infinite_permission_label">Allow extension registration</string>
+    <string name="media_route_controller_cast_device_txt">Cast:</string>
+    <string name="media_route_controller_home_network_speaker_txt">Speaker</string>
+    <string name="media_route_controller_home_network_tv_txt">TV</string>
+    <string name="media_route_controller_home_network_txt">Home network</string>
+    <string name="media_route_menu_title">Google Cast</string>
+    <string name="menu_clearaudioplus">ClearAudio+</string>
+    <string name="menu_dlna_title">Throw</string>
+    <string name="menu_download">Download</string>
+    <string name="menu_equalizer_ics">Sound enhancements</string>
+    <string name="menu_media_server">Media server</string>
+    <string name="menu_quick_play">Quick play</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_sleep_timer">Sleep timer</string>
+    <string name="menu_visualizer">Visualizer</string>
+    <string name="metadatacleanup_album_various_years">Various</string>
+    <string name="metadatacleanup_cannot_add_image_album_artist">Changes could not be saved. You must provide either an album name, an artist name, or both to continue.</string>
+    <string name="metadatacleanup_cannot_add_image_artist">Changes could not be saved, you must provide an artist name to continue.</string>
+    <string name="metadatacleanup_discard_button">Discard</string>
+    <string name="metadatacleanup_discard_info_question">Discard your changes?</string>
+    <string name="metadatacleanup_download_description">Get artwork and track info</string>
+    <string name="metadatacleanup_download_failed_unknown">An unknown error has occurred</string>
+    <string name="metadatacleanup_download_header">Download music info</string>
+    <string name="metadatacleanup_download_no_results">No results found</string>
+    <string name="metadatacleanup_download_not_available">No network connection detected, please connect and try again.</string>
+    <string name="metadatacleanup_download_not_supported_file">Cannot download music info. Unsupported file format.</string>
+    <string name="metadatacleanup_download_progress">Downloading metadata</string>
+    <string name="metadatacleanup_download_timed_out">Connection timed out. Please check your internet connection and try again.</string>
+    <string name="metadatacleanup_eula_title">Legal</string>
+    <string name="metadatacleanup_loading_spinner_description">Loading images</string>
+    <string name="metadatacleanup_save_album_fail_toast">Could not save album info</string>
+    <string name="metadatacleanup_save_artist_fail_toast">Could not save artist info</string>
+    <string name="metadatacleanup_save_track_fail_toast">Could not save track info</string>
+    <string name="metadatacleanup_successful_delete">Items removed successfully</string>
+    <string name="mora_charts_albums_monthly">Albums monthly</string>
+    <string name="mora_charts_albums_weekly">Albums weekly</string>
+    <string name="mora_charts_singles_monthly">Singles monthly</string>
+    <string name="mora_charts_singles_weekly">Singles weekly</string>
+    <string name="mora_genre_all">All</string>
+    <string name="mora_genre_anime">Anime</string>
+    <string name="mora_genre_hires">Hi-Res</string>
+    <string name="mora_genre_japanese">Japanese</string>
+    <string name="mora_genre_western_and_asian">Western &amp; Asian</string>
+    <string name="mora_new_releases_albums">Albums</string>
+    <string name="mora_new_releases_singles">Singles</string>
+    <string name="mora_section_charts">Charts</string>
+    <string name="mora_section_new_releases">New releases</string>
+    <string name="most_played_option">Most played</string>
+    <string name="mr_button_content_description">Cast button</string>
+    <string name="mr_cast_button_connected">Cast button. Connected</string>
+    <string name="mr_cast_button_connecting">Cast button. Connecting</string>
+    <string name="mr_cast_button_disconnected">Cast button. Disconnected</string>
+    <string name="mr_cast_dialog_title_view_placeholder">No info available</string>
+    <string name="mr_chooser_searching">Finding devices</string>
+    <string name="mr_chooser_title">Cast to</string>
+    <string name="mr_controller_album_art">Album art</string>
+    <string name="mr_controller_casting_screen">Casting screen</string>
+    <string name="mr_controller_close_description">Close</string>
+    <string name="mr_controller_collapse_group">Collapse</string>
+    <string name="mr_controller_disconnect">Disconnect</string>
+    <string name="mr_controller_expand_group">Expand</string>
+    <string name="mr_controller_no_info_available">No info available</string>
+    <string name="mr_controller_no_media_selected">No media selected</string>
+    <string name="mr_controller_pause">Pause</string>
+    <string name="mr_controller_play">Play</string>
+    <string name="mr_controller_stop">Stop</string>
+    <string name="mr_controller_stop_casting">Stop casting</string>
+    <string name="mr_controller_volume_slider">Volume slider</string>
+    <string name="mr_dialog_device_header">Cast to a device</string>
+    <string name="mr_dialog_route_header">Play on a group</string>
+    <string name="mr_system_route_name">System</string>
+    <string name="mr_user_route_category_name">Devices</string>
+    <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
+    <string name="music_add_playlist_to_playlist_option">Add to...</string>
+    <string name="music_add_playlists_to_playlist_dialog_title">Add all songs to the end of</string>
+    <string name="music_add_to_playlist_dialog_title">Add to playlist</string>
+    <string name="music_add_to_playlist_option">Add to playlist</string>
+    <string name="music_added_to_playlist">Added to playlist</string>
+    <string name="music_album_added_to_playlist">Album added to %1$s</string>
+    <string name="music_album_by">By %s</string>
+    <string name="music_album_nofind">Cannot find album</string>
+    <string name="music_album_option">Album</string>
+    <string name="music_album_type">Album</string>
+    <string name="music_app_action_bar_title_txt">Music</string>
+    <string name="music_app_name_txt">Music</string>
+    <string name="music_app_update_notification_setting_new_version">A new Music application version is available</string>
+    <string name="music_artist_added_to_playlist">Artist added to %1$s</string>
+    <string name="music_artist_albums">Albums</string>
+    <string name="music_artist_nofind">Cannot find artist</string>
+    <string name="music_artist_option">Artist</string>
+    <string name="music_artist_type">Artist</string>
+    <string name="music_by">By %s</string>
+    <string name="music_china_type_approval_popup_message">"The Music application requests access to the phone functions listed below.
+You can edit permissions in the Music application settings later.
+
+Please note that the Music application may not work properly without the requested access."</string>
+    <string name="music_china_type_approval_popup_title">Music app permissions</string>
+    <string name="music_china_type_approval_settings_description">"To deny any of these access requests, please deselect the corresponding checkbox.
+
+Please note that Music application may not work properly without the requested access."</string>
+    <string name="music_content_not_available">Content is not available</string>
+    <string name="music_delete_failed_one">This item could not be deleted</string>
+    <string name="music_delete_failed_one_or_many">Some items could not be deleted</string>
+    <string name="music_delete_playlist_question">"Delete %1$s? The playlist's content will not be affected."</string>
+    <string name="music_delete_question">Delete %1$s from storage?</string>
+    <string name="music_dialog_body_sd_permission_access_txt">To use the SD card as data storage, please give permission to access SD card on the next screen.</string>
+    <string name="music_dialog_body_sd_permission_retry_txt">Tap RETRY to try again, or tap CANCEL and start over from the beginning.</string>
+    <string name="music_dialog_button_next_txt">Next</string>
+    <string name="music_dialog_title_sd_permission_access_txt">Need permission to access SD card</string>
+    <string name="music_dialog_title_sd_permission_retry_txt">Permission to access SD card not granted</string>
+    <string name="music_download">Download</string>
+    <string name="music_download_batch_finished_description">Download complete</string>
+    <string name="music_download_batch_in_progress_description">Downloading track info</string>
+    <string name="music_download_batch_interrupted_description">Download stopped</string>
+    <string name="music_download_batch_network_interrupted_description">Download stopped due to network error</string>
+    <string name="music_download_batch_notification_aborted_msg">Downloading music info stopped</string>
+    <string name="music_download_batch_notification_finished_msg">Downloading music info finished</string>
+    <string name="music_download_batch_notification_start_msg">Downloading music info</string>
+    <string name="music_download_batch_notification_title">Download music info</string>
+    <string name="music_download_batch_progress">%1$d/%2$d</string>
+    <string name="music_download_batch_progress_updated">%1$d/%2$d scanned</string>
+    <string name="music_download_batch_start_buttontext">Start</string>
+    <string name="music_download_batch_startscreen_checkbox_title">Replace all existing information</string>
+    <string name="music_download_batch_startscreen_description">Download artwork and track information for your music library</string>
+    <string name="music_download_batch_try_again_buttontext">Try again</string>
+    <string name="music_download_pending_progress">Download pending %1$d/%2$d</string>
+    <string name="music_empty_string" />
+    <string name="music_folder_added_to_playlist">Folder added to %1$s</string>
+    <string name="music_folder_type">Folder</string>
+    <string name="music_general_playback_insert_battery_charger">To ensure continuous playback, please connect your charger.</string>
+    <string name="music_general_server_error_text">Could not connect to server. Please try again later.</string>
+    <string name="music_genre_added_to_playlist">Genre added to %1$s</string>
+    <string name="music_genre_type">Genre</string>
+    <string name="music_get_more_metadata_information">You can download more album art for your songs in Settings > Download music info</string>
+    <string name="music_googlecast_insert_battery_charger">To ensure continuous playback when using Google Cast™, please connect your charger.</string>
+    <string name="music_help_option">Help</string>
+    <string name="music_hide_service">Hide this service</string>
+    <string name="music_home">Home</string>
+    <string name="music_how_to_never_show_dialog">Don’t show this again</string>
+    <string name="music_ics_menu_save">Save</string>
+    <string name="music_info_provider">com.sonyericsson.music.musicinfo</string>
+    <string name="music_insights_card_button_add_to_favorites">FAVORITE</string>
+    <string name="music_insights_card_button_play">PLAY</string>
+    <string name="music_insights_card_button_view">VIEW</string>
+    <string name="music_insights_card_subtitle_most_played_last_month">Last month</string>
+    <string name="music_insights_card_subtitle_most_played_last_week">Last week</string>
+    <string name="music_insights_card_text_artist_duration">%1$dh %2$dmin</string>
+    <string name="music_insights_card_text_artist_duration_short">%1$d min</string>
+    <string name="music_insights_card_text_artist_total_duration">Other Music users have played %1$s for %2$d h, %3$d m</string>
+    <string name="music_insights_card_text_artist_total_duration_short">Other Music users have played %1$s for %2$d m</string>
+    <string name="music_insights_card_text_track">%1$d times</string>
+    <string name="music_insights_card_text_trending">Trending among Music users worldwide</string>
+    <string name="music_insights_card_title_most_played">Most played</string>
+    <string name="music_landing_page_category_item_most_played_title1">Most played</string>
+    <string name="music_landing_page_category_item_newly_added_title">Newly added</string>
+    <string name="music_landing_page_category_item_songs_title">Songs</string>
+    <string name="music_landing_page_category_listen_next">Listen next</string>
+    <string name="music_landing_page_category_newly_added">Newly added</string>
+    <string name="music_landing_page_category_play_queue">Play queue</string>
+    <string name="music_landing_page_category_recently_played">Recently played</string>
+    <string name="music_landingpage_card_button_do_it">DO IT</string>
+    <string name="music_landingpage_card_button_go_to">GO TO</string>
+    <string name="music_landingpage_card_button_got_it">GOT IT</string>
+    <string name="music_landingpage_card_button_learn_how">LEARN HOW</string>
+    <string name="music_landingpage_card_button_no_thanks">NO THANKS</string>
+    <string name="music_landingpage_card_button_not_now">NOT NOW</string>
+    <string name="music_landingpage_card_button_show_me">SHOW ME</string>
+    <string name="music_landingpage_card_button_tell_me_more">TELL ME MORE</string>
+    <string name="music_landingpage_card_button_update">UPDATE</string>
+    <string name="music_landingpage_card_text_genre">You can now play your music by genre</string>
+    <string name="music_landingpage_card_text_google_drive">Never lose your music! Sign in to your Google Drive account to access all your songs</string>
+    <string name="music_landingpage_card_text_new_version">There is a newer version of Music available. Do you want to update?</string>
+    <string name="music_landingpage_card_text_no_content">Transfer your music collection from an old device or computer</string>
+    <string name="music_landingpage_card_title_genre">Genres</string>
+    <string name="music_landingpage_card_title_google_drive">Your music on the cloud</string>
+    <string name="music_landingpage_card_title_new_version">Application update</string>
+    <string name="music_landingpage_card_title_no_content">Get your music here</string>
+    <string name="music_landingpage_personal_data_collection_card_text">Help us make the Music application better.</string>
+    <string name="music_landingpage_text_no_content_on_device">No music was found on this device</string>
+    <string name="music_landingpage_title_no_content_on_device">No music</string>
+    <string name="music_library_add_to_play_queue_txt">Add to play queue</string>
+    <string name="music_library_database_unknown_txt">&lt;unknown></string>
+    <string name="music_library_empty_txt">No music available</string>
+    <string name="music_library_enqueue_last_txt">Queue last</string>
+    <string name="music_library_enqueue_next_txt">Queue next</string>
+    <string name="music_library_enqueue_track_txt">Queue</string>
+    <string name="music_library_hide_folder">Hide folder</string>
+    <string name="music_library_n_tracks_txt">Songs: %1$d</string>
+    <string name="music_library_nbr_of_tracks_txt">%1$d songs</string>
+    <string name="music_library_one_track_txt">1 song</string>
+    <string name="music_library_play_next_txt">Play next</string>
+    <string name="music_library_unknown_album_txt">Unknown album</string>
+    <string name="music_library_unknown_artist_txt">Unknown artist</string>
+    <string name="music_menu_delete">Delete from storage</string>
+    <string name="music_menu_refresh">Refresh</string>
+    <string name="music_my_library">My Library</string>
+    <string name="music_never_played_playlist">Never played</string>
+    <string name="music_next_song">Next song in queue</string>
+    <string name="music_nocontent_category_newly_added">To get started, transfer your music to this device</string>
+    <string name="music_nocontent_category_play_queue">There are no songs in the play queue</string>
+    <string name="music_nocontent_category_recently_played">You have not played any music recently</string>
+    <string name="music_notification_channel_download_music_info">Download music info</string>
+    <string name="music_notification_channel_google_drive">Google Drive</string>
+    <string name="music_notification_channel_playback">Playback</string>
+    <string name="music_option_hide_show_playlists">Hide/show playlists</string>
+    <string name="music_option_show_all_folders">Show hidden folders</string>
+    <string name="music_option_show_grid">Show grid</string>
+    <string name="music_option_show_list">Show list</string>
+    <string name="music_option_sort_playlists">Manage playlists</string>
+    <string name="music_option_visible_folders">Visible folders</string>
+    <string name="music_other_recommended">Services</string>
+    <string name="music_permission_broadcast_description">Allows the app to send broadcasts to the Music app</string>
+    <string name="music_permission_broadcast_label">Music app broadcasts</string>
+    <string name="music_permission_contacts">"Contacts
+To access your account information"</string>
+    <string name="music_permission_delete_from_sdcard">"You are trying to delete from an SD card.
+
+%1$s needs you to give permission for this in Directory access."</string>
+    <string name="music_permission_deny_dlg_body_serveral">The Music application requires the following permissions to perform this action</string>
+    <string name="music_permission_deny_dlg_body_single">The Music application requires the following permission to perform this action</string>
+    <string name="music_permission_deny_dlg_body_tap_continue">To grant permissions, tap Continue to go to the Music app permissions.</string>
+    <string name="music_permission_deny_dlg_title_several">Permissions required</string>
+    <string name="music_permission_deny_dlg_title_single">Permission required</string>
+    <string name="music_permission_email_attachment">"Email
+To play email attachments"</string>
+    <string name="music_permission_mms_attachment">"MMS
+To play MMS attachments"</string>
+    <string name="music_permission_music_label">Music application</string>
+    <string name="music_permission_music_service">"Music
+To control music playback"</string>
+    <string name="music_permission_music_service_description">control music playback</string>
+    <string name="music_permission_read_phone_state">"Phone
+To control music playback when you get a call"</string>
+    <string name="music_permission_storage">"Storage
+To access audio content on your device"</string>
+    <string name="music_permission_why_dlg_body_several">The Music application requires the following permissions</string>
+    <string name="music_permission_why_dlg_body_single">The Music application requires the following permission</string>
+    <string name="music_permission_why_dlg_body_single_new">%1$s needs permission(s) to run this feature</string>
+    <string name="music_permission_why_dlg_title">Music permissions</string>
+    <string name="music_permission_why_dlg_title_new">Permission</string>
+    <string name="music_personal_data_collection_title">We need your help</string>
+    <string name="music_picker_audio_files_title">Sound</string>
+    <string name="music_playback_service_error_generic_failure_txt">Cannot play song</string>
+    <string name="music_playback_service_error_media_security_txt">Cannot play song due to insufficient rights</string>
+    <string name="music_playback_service_error_no_server_connection">Cannot play song. No server connection.</string>
+    <string name="music_player_invalid_time_txt">0:00</string>
+    <string name="music_player_unknown_total_track_duration_txt">00:00</string>
+    <string name="music_playlist_added_to_playlist">Playlist added to %1$s</string>
+    <string name="music_playlist_addtrack">Add songs</string>
+    <string name="music_playlist_addtrack_description">Tap to add new songs</string>
+    <string name="music_playlist_created">Playlist saved</string>
+    <string name="music_playlist_created_additional_message">Playlist saved. Remote songs not saved.</string>
+    <string name="music_playlist_created_as">Playlist saved as: %1$s</string>
+    <string name="music_playlist_created_as_additional_message">Playlist saved as: %1$s. Remote songs not saved.</string>
+    <string name="music_playlist_duration">%1$dh %2$dmin</string>
+    <string name="music_playlist_duration_short">%1$d min</string>
+    <string name="music_playlist_edit">Edit</string>
+    <string name="music_playlist_most_played_txt">Most played</string>
+    <string name="music_playlist_music_favourites">Favorites</string>
+    <string name="music_playlist_name_txt">Name</string>
+    <string name="music_playlist_new_playlist_name_txt">Create new playlist</string>
+    <string name="music_playlist_new_playlist_txt">Create new playlist</string>
+    <string name="music_playlist_newly_added_txt">Newly added</string>
+    <string name="music_playlist_nocontent_title_newly_added">"You haven't added any songs"</string>
+    <string name="music_playlist_nocontent_title_recently_played">"You haven't played anything yet"</string>
+    <string name="music_playlist_nofind">Cannot find playlist</string>
+    <string name="music_playlist_not_created">Could not save playlist with remote songs</string>
+    <string name="music_playlist_picker_strings_name_txt">Select playlist</string>
+    <string name="music_playlist_playlistname">My playlist</string>
+    <string name="music_playlist_removefrom">Remove from playlist</string>
+    <string name="music_playlist_rename">Rename</string>
+    <string name="music_playlist_sort_header_title">Sort order:</string>
+    <string name="music_playlist_sort_order_alphabetical">Alphabetical</string>
+    <string name="music_playlist_sort_order_recent">Recently updated</string>
+    <string name="music_playlist_type">Playlist</string>
+    <string name="music_plugin_music_service_description">Enable service in the Music application.</string>
+    <string name="music_plugin_show_service_description">Show service shortcut</string>
+    <string name="music_recently_played_playlist">Recently played</string>
+    <string name="music_remove_from_queue_txt">Remove from play queue</string>
+    <string name="music_search_plugins">Search for more extensions</string>
+    <string name="music_service_hidden_information">Service hidden. You can enable the service again in the application settings menu.</string>
+    <string name="music_service_process_name">:service</string>
+    <string name="music_setting_accessibility_compliance_txt">Accessibility: &lt;a href=\"%s\">Partially compliant&lt;/a></string>
+    <string name="music_setting_cta_app_permission_setting_description">Select which permissions the app is allowed to use</string>
+    <string name="music_setting_quick_play_summary">Select what to play when pressing the Quick play button</string>
+    <string name="music_settings_clear_audio_description">Unique sound setting that automatically gives more clarity to the sound</string>
+    <string name="music_settings_cta_app_permission_setting_title">App permissions</string>
+    <string name="music_settings_customize_header">Customize</string>
+    <string name="music_settings_customize_my_library">Customize My Library</string>
+    <string name="music_settings_customize_my_library_description">Choose which tabs should be visible and the order in which they should appear</string>
+    <string name="music_settings_customize_my_library_no_selection">You cannot deselect all tabs</string>
+    <string name="music_settings_customize_my_library_option">Customize My Library</string>
+    <string name="music_settings_customize_my_library_reset_option">Reset to default</string>
+    <string name="music_settings_delete_dialog_subtitle">Delete artwork added in the Music application</string>
+    <string name="music_settings_download_songs_title">Download songs using:</string>
+    <string name="music_settings_download_songs_wifi_mobile_subtitle">Wi-Fi/Mobile data</string>
+    <string name="music_settings_download_songs_wifi_subtitle">Wi-Fi only</string>
+    <string name="music_settings_download_to_internal_storage_subtitle">All songs will be downloaded to internal memory</string>
+    <string name="music_settings_download_to_sdcard_subtitle">All songs will be downloaded to SD card</string>
+    <string name="music_settings_download_to_sdcard_title">Download songs to SD card</string>
+    <string name="music_settings_general_header">General</string>
+    <string name="music_settings_google_drive_sign_in_subtitle">to access music on your Google Drive</string>
+    <string name="music_settings_google_drive_subtitle">Manage your Google Drive connection</string>
+    <string name="music_settings_google_drive_title">Google Drive settings</string>
+    <string name="music_settings_illumination_title">Light effects</string>
+    <string name="music_settings_media_server">Media server</string>
+    <string name="music_settings_media_server_summary">Share your media content (music, photos, and videos) with other home network devices.</string>
+    <string name="music_settings_music_information_header">Music information</string>
+    <string name="music_settings_music_quality_header">Audio quality</string>
+    <string name="music_settings_my_library_in_nav_menu_description">Show all visible tabs in My Library in the navigation menu</string>
+    <string name="music_settings_my_library_in_nav_menu_title">My Library in navigation menu</string>
+    <string name="music_settings_option">Settings</string>
+    <string name="music_settings_personal_data_collection_subtitle">Help us make the Music application better</string>
+    <string name="music_settings_personal_data_collection_title">Share personal data</string>
+    <string name="music_settings_service_settings_header">Service settings</string>
+    <string name="music_settings_sign_in_title">Sign in</string>
+    <string name="music_settings_sign_out_title">Sign out</string>
+    <string name="music_settings_sleep_timer_subtitle">Automatically turn off playback when the timer ends</string>
+    <string name="music_settings_sleep_timer_title">Sleep timer</string>
+    <string name="music_settings_sound_enhancements_description">Enhance the music experience by personalizing the sound.</string>
+    <string name="music_settings_theme_dark">Dark theme</string>
+    <string name="music_settings_theme_description">Select a UI theme for the application</string>
+    <string name="music_settings_theme_dialog_title">Set theme</string>
+    <string name="music_settings_theme_light">Light theme</string>
+    <string name="music_settings_theme_title">Theme</string>
+    <string name="music_settings_xperia_id">Xperia device ID</string>
+    <string name="music_share_media_option">Share</string>
+    <string name="music_shuffle_all_txt">Shuffle all</string>
+    <string name="music_shuffle_dialog_title">Set shuffle mode</string>
+    <string name="music_smart_playlists">Smart playlists</string>
+    <string name="music_song_added_to_playlist">Song added to %1$s</string>
+    <string name="music_song_type">Song</string>
+    <string name="music_sound_effects">Sound effects</string>
+    <string name="music_strings_artist_book_loading_txt">Loading...</string>
+    <string name="music_strings_artist_book_unknown_artist_txt">Info unavailable</string>
+    <string name="music_strings_nocontent_txt">No content available</string>
+    <string name="music_toast_enqueue_album">Album queued</string>
+    <string name="music_toast_enqueue_artist">Artist queued</string>
+    <string name="music_toast_enqueue_folder">Folder queued</string>
+    <string name="music_toast_enqueue_genre">Genre queued</string>
+    <string name="music_toast_enqueue_playlist">Playlist queued</string>
+    <string name="music_toast_enqueue_track">Song queued</string>
+    <string name="music_toast_hint_download_pending_message_txt">Starting download…</string>
+    <string name="music_track_position_duration_divider">/</string>
+    <string name="music_unknown_track">Unknown song</string>
+    <string name="music_update_notification_setting_header">About</string>
+    <string name="music_update_notification_setting_latest">Latest version installed</string>
+    <string name="music_update_notification_setting_new_version_button">Update to new version</string>
+    <string name="music_update_notification_setting_version">Version %s</string>
+    <string name="music_updating_library_txt">Updating</string>
+    <string name="music_voice_search_not_found">\"%1$s\" not found</string>
+    <string name="music_your_content_will_appear_here_txt">Your content will appear here</string>
+    <string name="music_your_playlists">My playlists</string>
+    <string name="musicshortcutlabel">Artist</string>
+    <string name="musicshortcutlabelalbum">Album</string>
+    <string name="musicshortcutlabelplaylist">Playlist</string>
+    <string name="navigation_drawer_close">Close navigation menu</string>
+    <string name="navigation_drawer_open">Open navigation menu</string>
+    <string name="never_played_option">Never played</string>
+    <string name="newly_added_option">Newly added</string>
+    <string name="no_content_message_line1">No music</string>
+    <string name="no_content_message_line2">Transfer songs to the device</string>
+    <string name="no_content_message_plugin_online_line2">No song selected</string>
+    <string name="no_internet_try_again">No internet connection. Please try again later.</string>
+    <string name="no_network_banner_text">No network connection</string>
+    <string name="option_download_all">Download all</string>
+    <string name="option_view">View</string>
+    <string name="option_view_album">View album</string>
+    <string name="option_view_play_queue">View play queue</string>
+    <string name="option_view_playlist">View playlist</string>
+    <string name="overflow_add_to_playlist">Add to playlist</string>
+    <string name="overflow_delete">Delete</string>
+    <string name="overflow_share">Share</string>
+    <string name="overlay_favorites_add">Add this song to favorites</string>
+    <string name="overlay_favorites_remove">This song is a favorite</string>
+    <string name="own_order_option">Own order</string>
+    <string name="password_toggle_content_description">Show password</string>
+    <string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
+    <string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
+    <string name="permission_missing_network">Network permission disabled, please enable and try again.</string>
+    <string name="permission_missing_storage">Storage permission disabled, please enable and try again.</string>
+    <string name="personal_data_collection_dialog_crash_reports_item">Crash reports (Crash events, location, etc.)</string>
+    <string name="personal_data_collection_dialog_device_ids_expanded_item">Device IDs (Android ID, Xperia device ID, Xperia account ID, etc.)</string>
+    <string name="personal_data_collection_dialog_device_ids_item">Device IDs</string>
+    <string name="personal_data_collection_dialog_listening_activities_item">Listening activities (time, duration, etc.)</string>
+    <string name="personal_data_collection_dialog_location_item">Location</string>
+    <string name="personal_data_collection_dialog_music_metadata_item">Song info (artist)</string>
+    <string name="personal_data_collection_dialog_ok_button">OK</string>
+    <string name="personal_data_collection_dialog_shared_with_partners_device_ids_item">Device IDs (Android ID, Android Advertising ID, etc.)</string>
+    <string name="personal_data_collection_dialog_shared_with_partners_subtitle">Shared with partners:</string>
+    <string name="personal_data_collection_dialog_title">Personal data</string>
+    <string name="personal_data_collection_screen_button_negative">NOT NOW</string>
+    <string name="personal_data_collection_screen_button_positive">I AGREE</string>
+    <string name="personal_data_collection_screen_fine_print">Sony will collect and combine your <a href="entrance://personaldata">personal data</a> in order to improve the service. Sony will handle your data as per our <a href="http://sonymobile.com/privacy">Privacy Policy</a></string>
+    <string name="personal_data_collection_screen_fine_print_us">Sony will collect and combine your <a href="entrance://personaldata">personal data</a> in order to improve the service. Sony will handle your data as per our <a href="https://www.sonymobile.com/us/legal/privacy">Privacy Policy</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">CA Privacy Notice</a>)</string>
+    <string name="personal_data_collection_screen_text">Help us make the Music application better by sharing your listening habits with Sony.</string>
+    <string name="play_queue_open">Open</string>
+    <string name="player_options_add_to_favorites">Add to favorites</string>
+    <string name="player_options_more_about_this">More about this</string>
+    <string name="player_options_remove_from_favorites">Remove from favorites</string>
+    <string name="playlist_sort_dlg_title">Sort order</string>
+    <string name="playlist_sort_option">Sort order</string>
+    <string name="playlistart_provider">com.sonyericsson.music.playlistart</string>
+    <string name="playlists_subtitle_empty_playlist">Empty playlist</string>
+    <string name="playlists_subtitle_smart_playlist">Smart playlist</string>
+    <string name="playqueue_header">Play queue</string>
+    <string name="playqueue_provider">com.sonyericsson.music.playqueue</string>
+    <string name="pref_key_app_permission_wifi_mobile_data">pref_key_app_permission_wifi_mobile_data</string>
+    <string name="pref_key_app_permissions_setting">pref_key_app_permissions_setting</string>
+    <string name="pref_key_music_settings_google_drive">pref_key_music_settings_google_drive</string>
+    <string name="pref_key_music_settings_google_drive_download_connection">pref_key_music_settings_google_drive_download_connection</string>
+    <string name="pref_personal_data_collection">personal_data_collection</string>
+    <string name="pref_theme_value_dark">dark</string>
+    <string name="pref_theme_value_light">light</string>
+    <string name="pref_xperia_id">xperia_id</string>
+    <string name="project_id">somc-music</string>
+    <string name="quick_play_all_tracks_content_description">Shuffle play all songs</string>
+    <string name="quick_play_all_tracks_empty_toast">Transfer songs to your device to play</string>
+    <string name="quick_play_all_tracks_toast">Shuffle playing all songs</string>
+    <string name="quick_play_hide">Hide the button</string>
+    <string name="quick_play_no_playlist_selected">No playlist selected</string>
+    <string name="quick_play_playlist_picker">Playlist</string>
+    <string name="quick_play_shuffle_all_tracks">Shuffle all songs</string>
+    <string name="quick_play_shuffle_user_selected_playlist">Shuffle a playlist</string>
+    <string name="quick_play_user_selected_content_description">Shuffle play playlist</string>
+    <string name="quick_play_user_selected_playlist_empty_toast">Playlist is empty</string>
+    <string name="quick_play_user_selected_playlist_toast">Shuffle playing playlist</string>
+    <string name="recent_option">Recent</string>
+    <string name="recently_played_option">Recently played</string>
+    <string name="recently_played_provider">com.sonyericsson.music.recentlyplayed</string>
+    <string name="repeat_all">Repeat all songs</string>
+    <string name="repeat_none">Repeat off</string>
+    <string name="repeat_one">Repeat this song</string>
+    <string name="retry_button_text">Retry</string>
+    <string name="search_feature_card_text">Try out our new and improved search functionality</string>
+    <string name="search_feature_card_title">Find your music</string>
+    <string name="search_field_hint">Search music</string>
+    <string name="search_hint">Search music</string>
+    <string name="search_history_empty_headline">"There's nothing here yet"</string>
+    <string name="search_history_empty_please_help">HELP ME</string>
+    <string name="search_history_empty_text">You have no search history to show. Is your music library empty? We can help you get some music to your phone.</string>
+    <string name="search_menu_title">Search</string>
+    <string name="search_no_results_match">No results found</string>
+    <string name="search_recent_divider">Recent searches</string>
+    <string name="search_recently_searched_albums_divider">Recently searched albums</string>
+    <string name="search_recently_searched_artists_divider">Recently searched artists</string>
+    <string name="search_recently_searched_songs_divider">Recently searched songs</string>
+    <string name="search_related_searches_divider">Related searches</string>
+    <string name="search_settings_description">Artists, albums and songs.</string>
+    <string name="search_show_all_albums">All album results for: %1$s</string>
+    <string name="search_show_all_artists">All artist results for: %1$s</string>
+    <string name="search_show_all_songs">All song results for: %1$s</string>
+    <string name="setting_hardware_walkman_btn">Walkman key</string>
+    <string name="setting_oss_btn">Open source licenses</string>
+    <string name="settings_header_music_info">Music info</string>
+    <string name="settings_provider">com.sonyericsson.music.settings</string>
+    <string name="shuffle_off">Shuffle off</string>
+    <string name="shuffle_on">Shuffle on</string>
+    <string name="sign_in_success_screen_text">You are all set up to get the best possible music experience</string>
+    <string name="sign_in_success_screen_title">Ready to go!</string>
+    <string name="sign_in_with_google_button">Sign in with Google</string>
+    <string name="sleep_timer_banner_cancel">Cancel</string>
+    <string name="sleep_timer_body_text">Fade out the playback when timer ends</string>
+    <string name="sleep_timer_disabled">Off</string>
+    <string name="sleep_timer_hours">%1$d hours</string>
+    <string name="sleep_timer_less_than_one_minute_remaining">Playback stops in less than 1 minute</string>
+    <string name="sleep_timer_minutes">%1$d minutes</string>
+    <string name="sleep_timer_one_hour">1 hour</string>
+    <string name="sleep_timer_one_minute_remaining">Playback stops in 1 minute</string>
+    <string name="sleep_timer_remaining">Playback stops in %1$d minutes</string>
+    <string name="sort_order_alphabetical">Alphabetical</string>
+    <string name="sort_order_dialog_title">Sort order</string>
+    <string name="sort_order_option">Sort order</string>
+    <string name="sort_order_own_order">Own order</string>
+    <string name="sort_order_recent">Recent</string>
+    <string name="sort_playlists_header">Manage playlists</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
+    <string name="tab_header_albums">Albums</string>
+    <string name="tab_header_artists">Artists</string>
+    <string name="tab_header_folders">Folders</string>
+    <string name="tab_header_genres">Genres</string>
+    <string name="tab_header_playlists">Playlists</string>
+    <string name="tab_header_tracks">Songs</string>
+    <string name="terms_and_conditions_apply"><a href="http://www.sonymobile.com/terms-of-use-applications">Terms and conditions</a> apply</string>
+    <string name="this_may_take_a_while">This may take a while</string>
+    <string name="tile_albums">Albums</string>
+    <string name="tile_artists">Artists</string>
+    <string name="tile_folders">Folders</string>
+    <string name="tile_genres">Genres</string>
+    <string name="tile_playlists">Playlists</string>
+    <string name="tile_playqueue">Play queue</string>
+    <string name="tile_podcast">Podcast</string>
+    <string name="tile_recently_played">Recently played</string>
+    <string name="tile_shuffle_all_songs">Shuffle all songs</string>
+    <string name="tile_tracks">Songs</string>
+    <string name="toast_added_to_favourites">Added to favorites</string>
+    <string name="toast_already_in_favourites">Already added to favorites</string>
+    <string name="toast_deleted">Deleted</string>
+    <string name="toast_removed_from_favourites">Removed from favorites</string>
+    <string name="unlimited_provider">com.sonymobile.music.unlimitedplugin</string>
+    <string name="update_as_you_play_accept_button_text">Turn on</string>
+    <string name="update_as_you_play_music_info_description">Download album and artist art as you are playing your music</string>
+    <string name="update_as_you_play_reject_button_text">Turn off</string>
+    <string name="update_as_you_play_setting">Download artwork while playing</string>
+    <string name="update_as_you_play_setting_dialog_header">Allow automatic art download</string>
+    <string name="update_as_you_play_setting_option_all">Wi-Fi/Mobile data</string>
+    <string name="update_as_you_play_setting_option_off">Never</string>
+    <string name="update_as_you_play_setting_option_wifi">Wi-Fi only</string>
+    <string name="update_as_you_play_splash_header">Introducing automatic art download</string>
+    <string name="update_as_you_play_splash_message">"Music looks better with album and artist art. To improve your experience, the app will update the available art where it is missing - while you play your music.
+
+This setting can be further configured in Music settings."</string>
+    <string name="v7_preference_off">OFF</string>
+    <string name="v7_preference_on">ON</string>
+    <string name="voice_search_dialog_title">Voice search</string>
+    <string name="xperia_id_dialog_collection">This ID is only collected by Sony once you have agreed to share personal data with us</string>
+    <string name="xperia_id_dialog_explanation">This is your Xperia identifier. It can be used to personalize some of your favorite Sony services.</string>
+    <string name="xperia_id_dialog_hint">Your Xperia device ID:</string>
+    <string name="xperia_id_dialog_title">Xperia device ID</string>
+</resources>

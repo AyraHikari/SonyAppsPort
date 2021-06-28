@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="china_type_approval_permission_wifi_mobile_data">WLAN &amp; δεδομένα κιν. τηλ.</string>
+    <string name="music_settings_download_songs_wifi_mobile_subtitle">WLAN/Δεδομένα κινητής τηλεφωνίας</string>
+    <string name="music_settings_download_songs_wifi_subtitle">Μόνο WLAN</string>
+    <string name="update_as_you_play_setting_option_all">WLAN/δεδομένα κινητής τηλεφωνίας</string>
+    <string name="update_as_you_play_setting_option_wifi">Μόνο WLAN</string>
+</resources>

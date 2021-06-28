@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:sharedUserId="com.sonyericsson.music" android:sharedUserLabel="@string/music_app_name_txt" package="com.sonyericsson.music" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <permission android:description="@string/music_permission_music_service_description" android:icon="@drawable/music_permission" android:label="@string/music_permission_music_label" android:name="com.sonyericsson.permission.MUSICSERVICE" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/media_dashboard_extension_permission_description" android:label="@string/media_dashboard_extension_permission_label" android:name="com.sonymobile.media.permission.TILES_ACCESS" android:protectionLevel="normal"/>
+    <permission android:description="@string/music_permission_broadcast_description" android:label="@string/music_permission_broadcast_label" android:name="com.sonyericsson.music.permission.BROADCAST" android:protectionLevel="signature"/>
+    <permission android:name="com.sonyericsson.music.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="com.sonyericsson.illumination.permission.ILLUMINATION"/>
+    <uses-permission android:name="com.sonymobile.playanywhere.permission.READ_CONNECTIVITY_STATE"/>
+    <uses-permission android:name="com.sonymobile.helpapp7.HELP"/>
+    <uses-permission android:name="com.sonyericsson.music.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.sonyericsson.music.permission.BROADCAST"/>
+    <uses-permission android:name="com.sonymobile.dlna.permission.READ_DATA"/>
+    <uses-permission android:name="com.sonymobile.dlna.permission.READ_DATA_V6"/>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    <uses-permission android:name="com.sonymobile.xperiaservices.PROMOTE_XPERIA_SERVICES"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <supports-screens android:anyDensity="true" android:smallScreens="true"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/music_app_icon" android:label="@string/music_app_name_txt" android:name="com.sonyericsson.music.MusicApplication" android:networkSecurityConfig="@xml/network_security_config" android:process="com.sonyericsson.music" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <uses-library android:name="com.sony.device" android:required="false"/>
+        <uses-library android:name="com.sonymobile.audioeffect" android:required="false"/>
+        <uses-library android:name="com.sonymobile.settings.illumination.api" android:required="false"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <uses-library android:name="com.sonyericsson.idd" android:required="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/auto_config"/>
+        <meta-data android:name="com.google.android.gms.car.notification.SmallIcon" android:resource="@mipmap/music_app_icon"/>
+        <meta-data android:name="google_analytics_adid_collection_enabled" android:value="false"/>
+        <meta-data android:name="firebase_analytics_collection_enabled" android:value="false"/>
+        <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false"/>
+        <service android:exported="false" android:name="com.sonyericsson.music.metadata.cloud.DownloadService" android:process="@string/music_service_process_name"/>
+        <activity android:exported="true" android:label="@string/music_app_name_txt" android:name="com.sonyericsson.music.PlayerActivity" android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/itunes"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/itunes"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/itunes"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.sonyericsson.music.delete.DeleteActivity" android:theme="@style/AppTheme.Transparent"/>
+        <activity android:launchMode="singleTop" android:name="com.sonyericsson.music.delete.DeletePlaylistActivity" android:theme="@style/AppTheme.Transparent"/>
+        <activity android:label="@string/music_settings_option" android:launchMode="singleTop" android:name="com.sonyericsson.music.SettingsActivity" android:theme="@style/AppTheme.Settings"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:name="com.sonyericsson.music.QuickPlaySelectionActivity" android:theme="@style/AppTheme.Settings"/>
+        <activity android:launchMode="singleTop" android:name="com.sonyericsson.music.metadata.EditMusicInfoActivity" android:theme="@style/AppTheme.Settings" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/music_settings_customize_my_library" android:launchMode="singleTop" android:name="com.sonyericsson.music.settings.CustomizeMyLibraryActivity" android:theme="@style/AppTheme.Settings" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/setting_oss_btn" android:launchMode="singleTop" android:name="com.sonyericsson.music.settings.OpenSourceActivity" android:theme="@style/AppTheme.Settings"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:name="com.sonyericsson.music.settings.GoogleDriveSettingsActivity" android:theme="@style/AppTheme.Settings"/>
+        <activity android:label="@string/music_settings_personal_data_collection_title" android:name="com.sonyericsson.music.datacollection.dataplatform.PersonalDataCollectionActivity" android:theme="@style/AppTheme.Settings.FullScreen.Dialog"/>
+        <activity android:launchMode="singleTop" android:name="com.sonyericsson.music.authentication.GoogleSignInSignOutActivity" android:theme="@style/AppTheme.Settings.FullScreen.Dialog" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:label="@string/music_app_name_txt" android:launchMode="singleTask" android:name="com.sonyericsson.music.MusicActivity" android:theme="@style/AppTheme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.APP_MUSIC"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MUSIC_PLAYER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <action android:name="android.intent.action.MEDIA_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sonyericsson.music.action.START_PLAYBACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/itunes"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sonyericsson.music.action.START_PLAYBACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/itunes"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sonyericsson.music.action.START_PLAYBACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/itunes"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.dir/playlist"/>
+                <data android:mimeType="vnd.android.cursor.dir/albums"/>
+                <data android:mimeType="vnd.android.cursor.dir/artists"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sonyericsson.music.action.SHOW_LANDING_PAGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <provider android:authorities="com.sonymobile.music.extensionmanager" android:exported="false" android:name="com.sonyericsson.music.extension.ExtensionProvider"/>
+        <provider android:authorities="com.sonyericsson.music.playqueue" android:exported="true" android:name="com.sonyericsson.music.playqueue.provider.PlayqueueProvider" android:process="@string/music_service_process_name"/>
+        <provider android:authorities="com.sonyericsson.music.playlistart" android:exported="false" android:name="com.sonyericsson.music.playlist.provider.PlaylistArtProvider"/>
+        <provider android:authorities="com.sonymobile.music.googleanalyticsprovider" android:exported="false" android:name="com.sonymobile.music.common.GoogleAnalyticsProvider" android:process="@string/music_service_process_name"/>
+        <provider android:authorities="com.sonyericsson.music.firebaseanalyticsprovider" android:exported="false" android:name="com.sonyericsson.music.datacollection.firebase.FirebaseAnalyticsProvider" android:process="@string/music_service_process_name"/>
+        <provider android:authorities="com.sonyericsson.music.firebaseremoteconfigprovider" android:exported="false" android:name="com.sonyericsson.music.datacollection.firebase.FirebaseRemoteConfigProvider" android:process="@string/music_service_process_name"/>
+        <provider android:authorities="com.sonyericsson.music.recentlyplayed" android:exported="false" android:name="com.sonyericsson.music.landingpage.provider.RecentlyPlayedProvider" android:process="@string/music_service_process_name"/>
+        <provider android:authorities="com.sonyericsson.music.musicinfo" android:exported="false" android:name="com.sonyericsson.music.metadata.provider.MusicInfoProvider" android:process="@string/music_service_process_name"/>
+        <provider android:authorities="com.sonyericsson.music.settings" android:exported="false" android:name="com.sonyericsson.music.common.SettingsProvider" android:process="@string/music_service_process_name"/>
+        <provider android:authorities="com.sonyericsson.music.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_file_path"/>
+        </provider>
+        <activity android:configChanges="keyboard|keyboardHidden|screenSize" android:label="@string/music_app_name_txt" android:launchMode="singleTop" android:name="com.sonyericsson.music.infinite.PluginSelectionActivity" android:theme="@style/AppTheme.Transparent"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:name="com.sonyericsson.music.picker.MusicPickerActivity" android:theme="@style/AppTheme.Settings.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+                <data android:mimeType="vnd.android.cursor.dir/track"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+                <data android:mimeType="vnd.android.cursor.dir/audio"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:exported="true" android:icon="@mipmap/music_app_icon" android:label="@string/musicshortcutlabelplaylist" android:name="com.sonyericsson.music.PlaylistShortcutActivity" android:targetActivity="com.sonyericsson.music.picker.MusicPickerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:configChanges="keyboard|keyboardHidden" android:label="@string/music_playlist_picker_strings_name_txt" android:name="com.sonyericsson.music.PlaylistPickerActivity" android:targetActivity="com.sonyericsson.music.picker.MusicPickerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.dir/playlist"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:icon="@mipmap/music_app_icon" android:label="@string/musicshortcutlabelalbum" android:name="com.sonyericsson.music.AlbumShortcutActivity" android:targetActivity="com.sonyericsson.music.picker.MusicPickerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:icon="@mipmap/music_app_icon" android:label="@string/musicshortcutlabel" android:name="com.sonyericsson.music.ArtistShortcutActivity" android:targetActivity="com.sonyericsson.music.picker.MusicPickerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <receiver android:name="com.sonyericsson.music.proxyservice.MediaButtonReceiver" android:process="@string/music_service_process_name">
+            <intent-filter android:priority="2">
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+                <action android:name="com.sonyericsson.music.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="true" android:name="com.sonyericsson.music.proxyservice.PlaybackService" android:process="@string/music_service_process_name">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.sonyericsson.music.proxyservice.ProxyService" android:permission="com.sonyericsson.permission.MUSICSERVICE" android:process="@string/music_service_process_name">
+            <intent-filter>
+                <action android:name="com.sonyericsson.music.SERVICE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sonyericsson.music.SERVICE_V3"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.sonyericsson.music.common.RefreshPlaylistArtService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.sonyericsson.music.musicwidget.MusicWidgetProvider" android:process="@string/music_service_process_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/musicwidgetinfo"/>
+        </receiver>
+        <provider android:authorities="musicdebug" android:exported="false" android:name="com.sonyericsson.music.debug.MusicDebugProvider"/>
+        <receiver android:exported="false" android:name="com.sonyericsson.music.proxyservice.AlarmReceiver"/>
+        <service android:exported="false" android:name="com.sonyericsson.music.metadata.MusicInfoService" android:permission="android.permission.BIND_JOB_SERVICE" android:process="@string/music_service_process_name"/>
+        <service android:exported="false" android:name="com.sonyericsson.music.proxyservice.AnalyticsService" android:permission="android.permission.BIND_JOB_SERVICE" android:process="@string/music_service_process_name"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <uses-library android:name="com.sonyericsson.dlna.api" android:required="false"/>
+        <uses-library android:name="com.sonyericsson.dlna.api_2" android:required="false"/>
+        <uses-library android:name="com.sonyericsson.dlna.api_3" android:required="false"/>
+        <uses-library android:name="com.sonyericsson.dlna.api_4" android:required="false"/>
+        <uses-library android:name="com.sonyericsson.dlna.api_5" android:required="false"/>
+        <uses-library android:name="com.sonyericsson.dlna.api_6" android:required="false"/>
+        <uses-library android:name="com.sonymobile.playanywhere.api" android:required="false"/>
+        <uses-library android:name="com.sonymobile.playanywhere.api_2" android:required="false"/>
+        <uses-library android:name="com.sonymobile.playanywhere.api_3" android:required="false"/>
+        <uses-library android:name="com.sonymobile.playanywhere.api_4" android:required="false"/>
+        <service android:exported="false" android:name="com.sonymobile.somcmediarouter.provider.dlna.DlnaMediaRouteProviderService">
+            <intent-filter>
+                <action android:name="android.media.MediaRouteProviderService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+    </application>
+</manifest>

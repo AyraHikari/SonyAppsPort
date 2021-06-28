@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_more_album_art_dialog_title">"Obt. plus d'images d'albums "</string>
+    <string name="music_playlist_addtrack_description">Taper pour ajouter de nouvelles chansons</string>
+</resources>

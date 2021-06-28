@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_action_bar_default_height_material">48.0dip</dimen>
+    <dimen name="abc_text_size_subtitle_material_toolbar">12.0dip</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">14.0dip</dimen>
+    <dimen name="full_player_controls_bottom_padding">12.0dip</dimen>
+    <dimen name="full_player_metadata_top_padding">8.0dip</dimen>
+    <item type="dimen" name="full_player_play_title_padding">@dimen/full_player_seekbar_padding_land</item>
+    <dimen name="header_view_art_size">96.0dip</dimen>
+    <dimen name="mr_controller_volume_group_list_item_height">61.0dip</dimen>
+    <dimen name="mr_controller_volume_group_list_item_icon_size">18.0dip</dimen>
+    <dimen name="mr_controller_volume_group_list_max_height">132.0dip</dimen>
+    <dimen name="default_album_art_size">175.0dip</dimen>
+</resources>

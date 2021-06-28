@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/instruction" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/music_china_type_approval_settings_description" android:paddingStart="@dimen/note_dialog_permission_list_padding_start_end" android:paddingEnd="@dimen/note_dialog_permission_list_padding_start_end" />
+    <ListView android:id="@id/permissions_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

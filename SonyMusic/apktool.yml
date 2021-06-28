@@ -1,0 +1,69 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: SonyMusic_9.4.9.A.0.4.apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- png
+- jpg
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '17'
+  targetSdkVersion: '29'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  firebase-abt.properties: '0'
+  firebase-analytics.properties: '0'
+  firebase-common.properties: '0'
+  firebase-components.properties: '0'
+  firebase-config.properties: '0'
+  firebase-crashlytics.properties: '0'
+  firebase-encoders-json.properties: '0'
+  firebase-installations-interop.properties: '0'
+  firebase-installations.properties: '0'
+  firebase-measurement-connector.properties: '0'
+  play-services-ads-identifier.properties: '0'
+  play-services-analytics-impl.properties: '0'
+  play-services-analytics.properties: '0'
+  play-services-auth-api-phone.properties: '0'
+  play-services-auth-base.properties: '0'
+  play-services-auth.properties: '0'
+  play-services-base.properties: '0'
+  play-services-basement.properties: '0'
+  play-services-cast.properties: '0'
+  play-services-flags.properties: '0'
+  play-services-measurement-api.properties: '0'
+  play-services-measurement-base.properties: '0'
+  play-services-measurement-impl.properties: '0'
+  play-services-measurement-sdk-api.properties: '0'
+  play-services-measurement-sdk.properties: '0'
+  play-services-measurement.properties: '0'
+  play-services-stats.properties: '0'
+  play-services-tagmanager-v4-impl.properties: '0'
+  play-services-tasks.properties: '0'
+  play-services-wearable.properties: '0'
+  transport-api.properties: '0'
+  transport-backend-cct.properties: '0'
+  transport-runtime.properties: '0'
+  com/sonymobile/ui/support/SystemUiVisibilityWrapper.java: '0'
+  google/protobuf/any.proto: '0'
+  google/protobuf/api.proto: '0'
+  google/protobuf/empty.proto: '0'
+  google/protobuf/field_mask.proto: '0'
+  google/protobuf/source_context.proto: '0'
+  google/protobuf/struct.proto: '0'
+  google/protobuf/timestamp.proto: '0'
+  google/protobuf/type.proto: '0'
+  google/protobuf/wrappers.proto: '0'
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.5.0
+versionInfo:
+  versionCode: '19472388'
+  versionName: 9.4.9.A.0.4

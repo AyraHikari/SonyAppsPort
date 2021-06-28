@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mc_download_music_info_ics">Lejupielādēt mūzikas informāciju</string>
+    <string name="media_dashboard_extension_permission_description">Atļaut programmas kā multivides informācijas paneļa paplašinājuma reģistrāciju.</string>
+    <string name="media_infinite_permission_label">Atļaut paplašinājuma reģistrāciju</string>
+</resources>

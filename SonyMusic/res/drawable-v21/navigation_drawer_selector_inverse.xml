@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@color/dark_theme_navigation_drawer_selected_background" />
+    <item android:drawable="@color/dark_theme_navigation_drawer_selected_background" android:state_activated="true" />
+    <item android:drawable="@drawable/ripple_selector" />
+</selector>

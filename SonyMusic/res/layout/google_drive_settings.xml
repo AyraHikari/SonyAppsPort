@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/preferred_download_connection_group" android:background="@drawable/list_selector" android:layout_width="fill_parent" android:layout_height="73.0dip">
+        <TextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:id="@id/preferred_download_connection_text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/music_settings_download_songs_title" android:paddingStart="16.0dip" />
+        <TextView android:textAppearance="@style/MusicAppTextAppearanceSmall" android:id="@id/preferred_download_connection_text2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/preferred_download_connection_text1" android:paddingStart="16.0dip" android:layout_alignStart="@id/preferred_download_connection_text1" />
+    </RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/listitem_divider_line" />
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/signin_signout_group" android:background="@drawable/list_selector" android:layout_width="fill_parent" android:layout_height="73.0dip">
+        <TextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:id="@id/signin_signout_text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/music_settings_sign_out_title" android:paddingStart="16.0dip" />
+        <TextView android:textAppearance="@style/MusicAppTextAppearanceSmall" android:id="@id/signin_signout_text2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/signin_signout_text1" android:paddingStart="16.0dip" android:layout_alignStart="@id/signin_signout_text1" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/item_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" app:cardBackgroundColor="?colorPrimaryLight" app:cardCornerRadius="0.0dip" app:cardElevation="2.0dip" app:cardUseCompatPadding="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.sonyericsson.music.ui.SquareImageView android:id="@id/image" android:background="?colorPrimaryLight" android:clickable="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" android:contentDescription="@null" />
+        <ImageView android:id="@id/high_res_indicator" android:paddingBottom="@dimen/grid_high_res_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/highres_icon_selector" android:layout_alignBottom="@id/image" android:contentDescription="@null" android:paddingStart="@dimen/grid_high_res_padding" android:layout_alignStart="@id/image" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/griditem_backplate_height" android:minHeight="@dimen/griditem_backplate_height" android:layout_below="@id/image" android:paddingStart="11.0dip" android:paddingEnd="11.0dip">
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" android:textColor="?android:textColorPrimary" android:ellipsize="end" android:id="@id/text1" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@id/text2" android:paddingTop="@dimen/min_padding" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@drawable/carditem_selector" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.cardview.widget.CardView>

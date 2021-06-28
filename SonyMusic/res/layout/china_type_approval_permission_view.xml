@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView android:gravity="center_vertical" android:id="@id/permission_text" android:paddingTop="@dimen/note_dialog_permission_list_padding_top_bottom" android:paddingBottom="@dimen/note_dialog_permission_list_padding_top_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:checked="true" android:checkMark="?android:listChoiceIndicatorMultiple" android:paddingStart="@dimen/note_dialog_permission_list_padding_start_end" android:paddingEnd="@dimen/note_dialog_permission_list_padding_start_end"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

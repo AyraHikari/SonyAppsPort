@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="chinaTypeApprovalPermissionSharedPrefsKeys">
+        <item>@string/pref_key_app_permission_wifi_mobile_data</item>
+    </string-array>
+    <string-array name="chinaTypeApprovalPermissions">
+        <item>@string/china_type_approval_permission_wifi_mobile_data</item>
+    </string-array>
+    <string-array name="pref_theme_options">
+        <item>@string/music_settings_theme_light</item>
+        <item>@string/music_settings_theme_dark</item>
+    </string-array>
+    <string-array name="pref_theme_values">
+        <item>@string/pref_theme_value_light</item>
+        <item>@string/pref_theme_value_dark</item>
+    </string-array>
+</resources>

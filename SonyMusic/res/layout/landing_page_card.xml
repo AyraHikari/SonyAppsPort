@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="?colorPrimaryLight" app:cardCornerRadius="0.0dip" app:cardElevation="2.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/card_image_background" android:background="?colorPrimaryLight" android:layout_width="100.0dip" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:id="@id/card_img" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/card_title_size" android:textColor="?android:textColorPrimary" android:id="@id/card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+            <TextView android:textSize="@dimen/card_text_size" android:textColor="?android:textColorSecondary" android:id="@id/card_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="16.0dip" android:layout_weight="1.0" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+            <LinearLayout android:gravity="start" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:divider="@drawable/spacing_8dp" android:showDividers="middle" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+                <Button android:id="@id/card_negative_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.Music.Button.Flat.Card" />
+                <Button android:id="@id/card_positive_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.Music.Button.Flat.Card" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

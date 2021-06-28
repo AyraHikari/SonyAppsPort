@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/text_checkbox_information" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/dialog_custom_layout_side_padding" android:paddingEnd="@dimen/dialog_custom_layout_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/text_checkbox" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="?android:textColorSecondary" android:id="@id/text_checkbox_information_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/min_padding" android:layout_marginEnd="@dimen/min_padding" style="@style/TextAppearance.AppCompat.Subhead" />
+        <CheckBox android:id="@id/never_show_dialog_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/music_how_to_never_show_dialog" android:layout_below="@id/text_checkbox_information_body" android:layout_marginEnd="8.0dip" style="@style/TextAppearance.AppCompat.Subhead" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:layout_width="?listPreferredItemHeightSmall" android:layout_height="?listPreferredItemHeightSmall" android:scaleType="centerCrop" android:contentDescription="@null" android:layout_marginStart="@dimen/listitem_narrow_padding" android:layout_marginEnd="@dimen/listitem_narrow_padding" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/context_menu_icon" android:layout_toEndOf="@id/image">
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:ellipsize="end" android:id="@id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:textSize="13.0sp" android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@id/text2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+    </LinearLayout>
+    <com.sonyericsson.music.ui.ThemedImageView android:id="@id/context_menu_icon" android:visibility="visible" android:layout_width="@dimen/default_icon_size_small" android:layout_height="@dimen/default_icon_size_small" android:scaleType="center" android:adjustViewBounds="true" android:layout_centerVertical="true" android:layout_marginStart="@dimen/listitem_narrow_padding" android:layout_marginEnd="@dimen/listitem_narrow_padding" android:layout_alignParentEnd="true" />
+    <FrameLayout android:id="@id/context_menu_touch_area" android:background="@drawable/context_menu_touch_area_selector" android:layout_width="?listPreferredItemHeightSmall" android:layout_height="?listPreferredItemHeightSmall" android:contentDescription="@string/context_menu_description_txt" android:layout_alignParentEnd="true" />
+</RelativeLayout>

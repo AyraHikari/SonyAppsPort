@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:padding="18.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:textColor="?android:textColorPrimary" android:id="@id/radio_button_off" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/update_as_you_play_setting_option_off" android:paddingStart="5.0dip" />
+    <RadioButton android:textColor="?android:textColorPrimary" android:id="@id/radio_button_wifi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/update_as_you_play_setting_option_wifi" android:paddingStart="5.0dip" />
+    <RadioButton android:textColor="?android:textColorPrimary" android:id="@id/radio_button_all" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:text="@string/update_as_you_play_setting_option_all" android:paddingStart="5.0dip" />
+</RadioGroup>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="china_type_approval_permission_wifi_mobile_data">Données mobiles WLAN</string>
+    <string name="music_settings_download_songs_wifi_mobile_subtitle">WLAN/Données mobiles</string>
+    <string name="music_settings_download_songs_wifi_subtitle">WLAN seulement</string>
+    <string name="update_as_you_play_setting_option_all">WLAN/Données mobiles</string>
+    <string name="update_as_you_play_setting_option_wifi">WLAN seulement</string>
+</resources>

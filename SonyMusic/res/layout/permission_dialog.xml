@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:textColor="?android:textColorSecondary" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+    <ScrollView android:id="@id/scrollview" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="false" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/permission_scrollview_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+        <Button android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textSize="14.0sp" android:textColor="?colorAccent" android:layout_gravity="end|center" android:id="@id/continue_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="64.0dip" android:text="@string/gui_go_to_app_info_txt" android:textAlignment="textEnd" android:paddingEnd="16.0dip" style="?android:borderlessButtonStyle" />
+        <Button android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textSize="14.0sp" android:textColor="?colorAccent" android:layout_gravity="end|center" android:id="@id/cancel_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="64.0dip" android:text="@android:string/cancel" android:textAlignment="textEnd" android:paddingEnd="16.0dip" style="?android:borderlessButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

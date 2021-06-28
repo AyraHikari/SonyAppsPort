@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>firebaseCrashlyticsDisabler</key>
+        <value />
+    </entry>
+    <entry>
+        <key>moraDisabler</key>
+        <value />
+    </entry>
+    <entry>
+        <key>uaypDisabler</key>
+        <value />
+    </entry>
+    <entry>
+        <key>latestAvailableVersionCode</key>
+        <value />
+    </entry>
+    <entry>
+        <key>googleDriveDisabler</key>
+        <value />
+    </entry>
+    <entry>
+        <key>gafDisabler</key>
+        <value />
+    </entry>
+</defaultsMap>

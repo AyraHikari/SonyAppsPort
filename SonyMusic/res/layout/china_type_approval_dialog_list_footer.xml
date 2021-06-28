@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="@dimen/note_dialog_padding" android:paddingBottom="@dimen/note_dialog_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/listitem_standard_padding" android:paddingEnd="@dimen/listitem_standard_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:id="@id/remember_selection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/china_type_approval_remember_selection" />
+</FrameLayout>

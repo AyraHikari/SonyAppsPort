@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:layout_width="@dimen/full_screen_dialog_width_land" android:layout_height="wrap_content">
+        <ImageView android:id="@id/header_image" android:padding="16.0dip" android:visibility="@integer/full_screen_dialog_image_visibility_land" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/personal_data_collection" android:scaleType="centerInside" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <include layout="@layout/personal_data_collection_activity_texts" />
+            </FrameLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/buttongroup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip">
+                <Button android:id="@id/btn_positive" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/personal_data_collection_screen_button_positive" android:layout_weight="1.0" style="@style/Widget.AppCompat.Button.Colored" />
+                <Space android:layout_width="8.0dip" android:layout_height="0.0dip" />
+                <Button android:id="@id/btn_negative" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/personal_data_collection_screen_button_negative" android:layout_weight="1.0" style="@style/Widget.AppCompat.Button.Borderless" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/all_tracks_group" android:background="@drawable/list_selector" android:focusable="true" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_height" android:contentDescription="@string/quick_play_shuffle_all_tracks">
+        <RadioButton android:id="@id/all_tracks_btn" android:focusable="false" android:layout_width="wrap_content" android:layout_height="@dimen/listitem_height" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/quick_play_selection_start_margin" android:layout_alignParentStart="true" />
+        <TextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:id="@id/all_tracks_btn_text" android:layout_width="wrap_content" android:layout_height="@dimen/listitem_height" android:layout_alignBaseline="@id/all_tracks_btn" android:layout_marginStart="@dimen/quick_play_selection_text_margin" android:layout_toEndOf="@id/all_tracks_btn" />
+    </RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/all_tracks_group" layout="@layout/listitem_divider_line" />
+    <RelativeLayout android:id="@id/playlist_group" android:background="@drawable/list_selector" android:focusable="true" android:nextFocusLeft="@id/button_group" android:nextFocusRight="@id/button_group" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_height" android:layout_below="@id/all_tracks_group" android:layout_alignParentStart="true">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerVertical="true" android:contentDescription="@string/quick_play_shuffle_user_selected_playlist" android:layout_toStartOf="@id/button_group" android:layout_alignParentStart="true">
+            <RadioButton android:id="@id/playlist_btn" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/quick_play_selection_start_margin" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@id/playlist_btn">
+                <TextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:ellipsize="end" android:id="@id/playlist_btn_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="@dimen/quick_play_selection_text_margin" />
+                <TextView android:textAppearance="@style/MusicAppTextAppearanceSmallSecondary" android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@id/playlist_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="@dimen/quick_play_selection_text_margin" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/button_group" android:background="@drawable/list_selector" android:focusable="true" android:nextFocusLeft="@id/playlist_group" android:nextFocusRight="@id/playlist_group" android:layout_width="82.0dip" android:layout_height="fill_parent" android:layout_centerVertical="true" android:contentDescription="@string/music_playlist_picker_strings_name_txt" android:layout_marginStart="@dimen/quick_play_selection_start_margin" android:layout_alignParentEnd="true">
+            <View android:id="@id/divider" android:background="@color/quick_play_button_divider_color" android:layout_width="2.0dip" android:layout_height="32.0dip" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+            <ImageView android:id="@id/select_playlist_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/quick_play_settings" android:tint="?colorControlNormal" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/playlist_group" layout="@layout/listitem_divider_line" />
+    <RelativeLayout android:id="@id/hide_group" android:background="@drawable/list_selector" android:focusable="true" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_height" android:layout_below="@id/playlist_group" android:contentDescription="@string/quick_play_hide">
+        <RadioButton android:id="@id/hide_btn" android:focusable="false" android:layout_width="wrap_content" android:layout_height="@dimen/listitem_height" android:layout_marginStart="@dimen/quick_play_selection_start_margin" android:layout_alignParentStart="true" />
+        <TextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:id="@id/hide_btn_text" android:layout_width="wrap_content" android:layout_height="@dimen/listitem_height" android:layout_alignBaseline="@id/hide_btn" android:layout_marginStart="@dimen/quick_play_selection_text_margin" android:layout_toEndOf="@id/hide_btn" />
+    </RelativeLayout>
+</RelativeLayout>

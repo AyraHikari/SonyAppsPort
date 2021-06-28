@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_more_album_art_dialog_title">Pobierz więcej okł. album.</string>
+    <string name="media_dashboard_extension_permission_description">Zezwalaj na rejestrację aplikacji jako rozszerzenia pulpitu nawig. multim.</string>
+    <string name="music_playlist_sort_header_title">Kolejność sortowania:</string>
+</resources>

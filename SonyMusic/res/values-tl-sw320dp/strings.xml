@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_more_album_art_dialog_title">Kumuha pa ng album art</string>
+    <string name="media_dashboard_extension_permission_description">Payagan pagrehistro ng application bilang media dashboard extension.</string>
+    <string name="voice_search_dialog_title">Boses na search</string>
+</resources>

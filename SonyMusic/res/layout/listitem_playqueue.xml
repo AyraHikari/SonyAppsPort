@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/listitem_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/context_menu_container">
+        <com.sonyericsson.music.playqueue.PlayIndicatorView android:gravity="center" android:id="@id/play_indicator" android:visibility="gone" android:layout_width="@dimen/playqueue_indicator_icon_size" android:layout_height="wrap_content" android:layout_alignTop="@id/text1" android:layout_alignBottom="@id/text1" android:layout_marginEnd="4.0dip" />
+        <com.sonyericsson.music.ui.FastTextView android:textAppearance="@style/MusicAppTextAppearanceMedium" android:ellipsize="none" android:id="@id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_toStartOf="@id/high_res_indicator" android:layout_toEndOf="@id/play_indicator" />
+        <com.sonyericsson.music.ui.FastTextView android:textAppearance="@style/MusicAppTextAppearanceSmallSecondary" android:ellipsize="none" android:id="@id/text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/text1" android:layout_marginEnd="@dimen/listitem_narrow_padding" android:layout_toStartOf="@id/text3" android:layout_alignStart="@id/text1" />
+        <TextView android:textAppearance="@style/MusicAppTextAppearanceSmallSecondary" android:id="@id/text3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/text1" android:layout_alignBaseline="@id/text2" android:layout_alignParentEnd="true" />
+        <ImageView android:id="@id/high_res_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/highres_icon_selector" android:baselineAlignBottom="true" android:layout_alignBaseline="@id/text1" android:contentDescription="@null" android:paddingStart="15.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/context_menu_container" android:layout_width="wrap_content" android:layout_height="@dimen/listitem_height" android:layout_alignParentEnd="true">
+        <com.sonyericsson.music.ui.ContextMenuIconView android:id="@id/context_menu_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/listitem_standard_padding" android:paddingEnd="@dimen/context_menu_icon_padding" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/context_menu_touch_area" android:background="@drawable/context_menu_touch_area_selector" android:layout_width="@dimen/listitem_height" android:layout_height="@dimen/listitem_height" android:contentDescription="@string/context_menu_description_txt" android:layout_alignParentEnd="true" />
+</RelativeLayout>

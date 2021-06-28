@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/music_settings_music_quality_header" android:key="pref_key_music_settings_music_quality">
+        <CheckBoxPreference android:title="@string/menu_clearaudioplus" android:key="pref_key_clear_audio" android:summary="@string/music_settings_clear_audio_description" android:defaultValue="false" />
+        <Preference android:enabled="false" android:id="@id/sound_enhancements" android:title="@string/menu_equalizer_ics" android:key="pref_key_sound_enhancements" android:summary="@string/music_settings_sound_enhancements_description" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/music_settings_general_header" android:key="pref_key_music_settings_general">
+        <Preference android:id="@id/sleep_timer" android:title="@string/music_settings_sleep_timer_title" android:key="pref_key_sleep_timer" android:summary="@string/music_settings_sleep_timer_subtitle" />
+        <Preference android:id="@id/app_permissions_setting" android:title="@string/music_settings_cta_app_permission_setting_title" android:key="@string/pref_key_app_permissions_setting" android:summary="@string/music_setting_cta_app_permission_setting_description" />
+        <Preference android:title="@string/music_settings_google_drive_title" android:key="@string/pref_key_music_settings_google_drive" android:summary="@string/music_settings_google_drive_subtitle" />
+        <com.sonyericsson.music.settings.InterceptableSwitchPreference android:id="@id/personal_data_collection_setting" android:title="@string/music_settings_personal_data_collection_title" android:key="@string/pref_personal_data_collection" android:summary="@string/music_settings_personal_data_collection_subtitle" />
+        <Preference android:title="@string/music_settings_xperia_id" android:key="@string/pref_xperia_id" />
+        <Preference android:id="@id/media_server" android:title="@string/music_settings_media_server" android:key="pref_key_media_server" android:summary="@string/music_settings_media_server_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/music_settings_customize_header" android:key="pref_key_music_settings_customize">
+        <Preference android:id="@id/customize_my_library" android:title="@string/music_settings_customize_my_library" android:key="pref_key_customize_my_library" android:summary="@string/music_settings_customize_my_library_description" />
+        <ListPreference android:entries="@array/pref_theme_options" android:id="@id/theme" android:title="@string/music_settings_theme_title" android:key="pref_key_theme" android:summary="@string/music_settings_theme_description" android:defaultValue="@string/pref_theme_value_light" android:dialogTitle="@string/music_settings_theme_dialog_title" android:entryValues="@array/pref_theme_values" />
+        <Preference android:id="@id/quick_play" android:title="@string/menu_quick_play" android:key="pref_key_quick_play" android:summary="@string/music_setting_quick_play_summary" />
+        <Preference android:id="@id/illumination_setting" android:title="@string/music_settings_illumination_title" android:key="pref_key_illumination_setting" />
+        <Preference android:id="@id/walkman_shake_control_setting" android:title="@string/setting_hardware_walkman_btn" android:key="pref_key_walkman_shake_control_setting" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/music_settings_music_information_header" android:key="pref_key_music_settings_music_info">
+        <Preference android:id="@id/delete" android:title="@string/delete_dialog_header" android:key="pref_key_delete_data" android:summary="@string/delete_dialog_subheader" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/music_settings_service_settings_header" android:key="pref_key_service_settings" />
+    <PreferenceCategory android:title="@string/music_update_notification_setting_header" android:key="pref_key_music_settings_about">
+        <Preference android:key="pref_key_version" />
+        <Preference android:title="@string/setting_oss_btn" android:key="pref_key_oss" />
+        <com.sonyericsson.music.settings.TitleLinkPreference android:selectable="false" android:key="pref_key_accessibility" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Ported by">
+        <Preference android:title="Ayra Hikari" android:summary="Follow my channel to get updates">
+            <intent android:action="android.intent.action.VIEW" android:data="https://telegram.me/AyraProject" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/beta_settings" android:key="pref_key_beta" />
+</PreferenceScreen>

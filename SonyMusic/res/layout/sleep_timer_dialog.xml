@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/medium_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/medium_padding" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+        <TextView android:textSize="16.0dip" android:paddingBottom="@dimen/medium_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sleep_timer_body_text" />
+        <RadioGroup android:id="@id/time_interval" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RadioButton android:textColor="?android:textColorPrimary" android:id="@id/option0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:paddingStart="20.0dip" android:paddingEnd="@dimen/medium_padding" />
+            <RadioButton android:textColor="?android:textColorPrimary" android:id="@id/option1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:paddingStart="20.0dip" android:paddingEnd="@dimen/medium_padding" />
+            <RadioButton android:textColor="?android:textColorPrimary" android:id="@id/option2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:paddingStart="20.0dip" android:paddingEnd="@dimen/medium_padding" />
+            <RadioButton android:textColor="?android:textColorPrimary" android:id="@id/option3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:paddingStart="20.0dip" android:paddingEnd="@dimen/medium_padding" />
+            <RadioButton android:textColor="?android:textColorPrimary" android:id="@id/option4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="20.0dip" android:paddingEnd="@dimen/medium_padding" />
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>

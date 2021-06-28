@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sonyericsson.music.ui.BlurredDrawerContainer android:id="@id/blurred_background" android:layout_width="fill_parent" android:layout_height="fill_parent" app:blurRadius="5.0" app:downScaleFactor="8.0" app:overlayColor="?drawerOverlayColor"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_gravity="top" android:id="@id/navigation_drawer_top_shade" android:background="#33000000" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/drawer_list" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:choiceMode="singleChoice" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="vertical" android:id="@id/extensions_wrap" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="?listDividerColor" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <TextView android:textColor="?android:textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_other_recommended" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/TextAppearance.AppCompat.Caption" />
+            <androidx.recyclerview.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/extensions_list" android:nextFocusUp="@id/drawer_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</com.sonyericsson.music.ui.BlurredDrawerContainer>

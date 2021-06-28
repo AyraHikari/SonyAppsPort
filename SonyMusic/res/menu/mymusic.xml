@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:walkman="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_sort" android:id="@id/menu_option_sort_playlists" android:visible="false" android:title="@string/sort_order_option" walkman:showAsAction="ifRoom" />
+    <item android:id="@id/menu_option_manage_playlists" android:visible="false" android:title="@string/music_option_sort_playlists" walkman:showAsAction="never" />
+    <item android:id="@id/menu_option_manage_playlists_save" android:visible="false" android:title="@string/gui_done_txt" walkman:showAsAction="always" />
+    <item android:id="@id/menu_option_change_album_view" android:visible="false" android:title="@string/music_option_show_list" walkman:showAsAction="never" />
+</menu>

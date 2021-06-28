@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:walkman="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_queue" android:id="@id/menu_option_playqueue" android:visible="true" android:title="@string/option_view_play_queue" walkman:showAsAction="always" />
+    <item android:id="@id/menu_option_visualizer" android:title="@string/menu_visualizer" walkman:showAsAction="never" />
+    <item android:id="@id/menu_option_sleep_timer" android:title="@string/menu_sleep_timer" walkman:showAsAction="never" />
+    <item android:id="@id/menu_option_artist" android:title="@string/music_artist_option" />
+    <item android:id="@id/menu_option_album" android:title="@string/music_album_option" />
+    <item android:id="@id/menu_option_share" android:title="@string/music_share_media_option" />
+    <item android:id="@id/menu_option_editmeta" android:title="@string/mc_edit_music_info_ics" />
+    <item android:id="@id/menu_option_infinite" android:title="@string/player_options_more_about_this" />
+</menu>
