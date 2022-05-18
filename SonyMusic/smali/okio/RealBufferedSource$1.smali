@@ -58,9 +58,9 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    return v0
+    return v1
 
     .line 447
     :cond_0

@@ -241,7 +241,7 @@
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/settings/GoogleDriveSettingsActivity;->mGoogleDriveConnectionSubtitle:Landroid/widget/TextView;
 
-    const v0, 0x7f1001ee
+    const v0, 0x7f1001f0
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 
@@ -251,7 +251,7 @@
     :cond_1
     iget-object p1, p0, Lcom/sonyericsson/music/settings/GoogleDriveSettingsActivity;->mGoogleDriveConnectionSubtitle:Landroid/widget/TextView;
 
-    const v0, 0x7f1001ef
+    const v0, 0x7f1001f1
 
     .line 247
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
@@ -274,7 +274,7 @@
     .line 262
     iget-object p1, p0, Lcom/sonyericsson/music/settings/GoogleDriveSettingsActivity;->mGoogleDriveSignInSignOutTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f100203
+    const v0, 0x7f100205
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 
@@ -289,14 +289,14 @@
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/settings/GoogleDriveSettingsActivity;->mGoogleDriveSignInSignOutTitle:Landroid/widget/TextView;
 
-    const p2, 0x7f100202
+    const p2, 0x7f100204
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(I)V
 
     .line 267
     iget-object p1, p0, Lcom/sonyericsson/music/settings/GoogleDriveSettingsActivity;->mGoogleDriveSignInSignOutSubtitle:Landroid/widget/TextView;
 
-    const p2, 0x7f1001f4
+    const p2, 0x7f1001f6
 
     .line 268
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(I)V
@@ -443,7 +443,7 @@
     .line 67
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    const v1, 0x7f1001f6
+    const v1, 0x7f1001f8
 
     .line 68
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/ActionBar;->setTitle(I)V

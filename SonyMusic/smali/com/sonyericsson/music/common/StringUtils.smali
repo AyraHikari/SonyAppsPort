@@ -161,7 +161,7 @@
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f1001c6
+    const v0, 0x7f1001c8
 
     .line 73
     new-array v1, v1, [Ljava/lang/Object;
@@ -179,7 +179,7 @@
     return-object p0
 
     :cond_1
-    const v3, 0x7f1001c5
+    const v3, 0x7f1001c7
 
     const/4 v4, 0x2
 
@@ -353,7 +353,7 @@
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f10018e
+    const v0, 0x7f100190
 
     .line 139
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -366,7 +366,7 @@
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f10018f
+    const v0, 0x7f100191
 
     .line 140
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -379,7 +379,7 @@
 
     if-nez p0, :cond_1
 
-    const-string p0, "Unknown Album"
+    const-string p0, "Unknown album"
 
     .line 141
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -427,7 +427,7 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    const p1, 0x7f10018e
+    const p1, 0x7f100190
 
     .line 120
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -441,7 +441,7 @@
 .method public static replaceUnknownArtistWithLocalizedString(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    const v0, 0x7f100184
+    const v0, 0x7f100186
 
     .line 130
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -458,7 +458,7 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    const p1, 0x7f10018f
+    const p1, 0x7f100191
 
     .line 132
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -569,7 +569,7 @@
 
     :cond_3
     :goto_0
-    const p1, 0x7f10021f
+    const p1, 0x7f100221
 
     .line 173
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

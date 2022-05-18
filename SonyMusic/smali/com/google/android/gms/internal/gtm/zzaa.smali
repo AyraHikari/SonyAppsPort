@@ -57,9 +57,9 @@
 
     and-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
@@ -71,9 +71,9 @@
 
     and-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
     goto :goto_0
 
@@ -85,13 +85,13 @@
     .line 11
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    const v0, 0x7fffffff
+    const v1, 0x7fffffff
 
     :goto_0
     const/4 p1, 0x0
 
     .line 13
-    invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/gtm/zzaa;-><init>(ZI)V
+    invoke-direct {p0, p1, v1}, Lcom/google/android/gms/internal/gtm/zzaa;-><init>(ZI)V
 
     return-void
 .end method

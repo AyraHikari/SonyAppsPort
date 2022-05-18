@@ -279,9 +279,12 @@ Reţineţi că este posibil ca aplicaţia Muzică să nu funcţioneze corespunz�
     <string name="music_delete_failed_one_or_many">Imposibil de şters unele elemente</string>
     <string name="music_delete_playlist_question">Ştergeţi %1$s? Conţinutul listei de redare nu va fi afectat.</string>
     <string name="music_delete_question">Ştergeţi %1$s din spaţiul de stocare?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Aplicația Muzică va scana în fundal pentru a reface baza de date.
+Scanarea poate dura peste 10 min. în funcție de nr. melodii. Melodiile și listele de redare nu sunt afișate/redate corect până la terminarea scanării."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Pentru a utiliza cartela SD ca spaţiu de stocare a datelor, acordaţi în ecranul următor permisiunea de acces la cartela SD.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Atingeţi REÎNCERCAŢI pentru a încerca din nou sau atingeţi REVOCAŢI şi luaţi-o de la început.</string>
     <string name="music_dialog_button_next_txt">Următorul</string>
+    <string name="music_dialog_title_bg_scan_notice">Notificare</string>
     <string name="music_dialog_title_sd_permission_access_txt">Trebuie permisiune de acces la cartela SD</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Permisiunea de acces la cartela SD nu este acordată</string>
     <string name="music_download">Descărcare</string>
@@ -556,7 +559,7 @@ Pentru a accesa conţinutul audio de pe dispozitiv"</string>
     <string name="personal_data_collection_dialog_title">Date personale</string>
     <string name="personal_data_collection_screen_button_negative">NU ACUM</string>
     <string name="personal_data_collection_screen_button_positive">SUNT DE ACORD</string>
-    <string name="personal_data_collection_screen_fine_print">Sony va colecta şi va combina <a href="entrance://personaldata">datele dvs. personale</a> pentru a îmbunătăţi serviciul. Sony va trata datele dvs. în conformitate cu <a href="http://sonymobile.com/privacy">Politica sa de confidenţialitate</a></string>
+    <string name="personal_data_collection_screen_fine_print">Sony va colecta şi va combina <a href="entrance://personaldata">datele dvs. personale</a> pentru a îmbunătăţi serviciul. Sony va trata datele dvs. în conformitate cu <a href="https://www.sonymobile.com/privacy">Politica sa de confidenţialitate</a></string>
     <string name="personal_data_collection_screen_fine_print_us">Sony va colecta şi va combina <a href="entrance://personaldata">datele dvs. personale</a> pentru a îmbunătăţi serviciul. Sony va trata datele dvs. în conformitate cu <a href="https://www.sonymobile.com/us/legal/privacy">Politica sa de confidenţialitate</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Notă privind confidențialitatea în California</a>)</string>
     <string name="personal_data_collection_screen_text">Ajutaţi-ne să îmbunătăţim aplicaţia Muzică trimiţând la Sony date privind obiceiurile dvs. de ascultare.</string>
     <string name="play_queue_open">Deschidere</string>

@@ -219,7 +219,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f10018f
+    const v1, 0x7f100191
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -328,7 +328,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f1001b8
+    const v1, 0x7f1001ba
 
     .line 251
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -348,7 +348,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f10018a
+    const v1, 0x7f10018c
 
     const/4 v2, 0x1
 
@@ -510,7 +510,7 @@
 .method protected getNoContentText()Ljava/lang/String;
     .locals 1
 
-    const v0, 0x7f100216
+    const v0, 0x7f100218
 
     .line 232
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -595,7 +595,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f10018f
+    const p2, 0x7f100191
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

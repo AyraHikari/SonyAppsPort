@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/sonymobile/music/common/GoogleAnalyticsProvider;)V
     .locals 0
 
-    .line 116
+    .line 119
     iput-object p1, p0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider$1;->this$0:Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -35,7 +35,7 @@
 .method public run()V
     .locals 1
 
-    .line 119
+    .line 122
     iget-object v0, p0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider$1;->this$0:Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
 
     invoke-virtual {v0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;

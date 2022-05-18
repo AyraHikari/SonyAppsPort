@@ -279,9 +279,12 @@
     <string name="music_delete_failed_one_or_many">Некоторые объекты не могут быть удалены</string>
     <string name="music_delete_playlist_question">Удалить %1$s? Материалы списка воспроизведения останутся без изменений.</string>
     <string name="music_delete_question">Удалить %1$s с накопителя?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"\"Музыка\" выполнит фон. сканирование, оно может занять более 10 мин.
+Песни и списки воспроизведения будут отображаться или воспроизводиться неправильно, пока оно не будет завершено."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Чтобы использовать SD-карту для хранения данных, предоставьте разрешение на доступ к SD-карте на следующем экране.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Коснитесь ПОВТОРИТЬ, чтобы повторить попытку, или ОТМЕНА, чтобы начать сначала.</string>
     <string name="music_dialog_button_next_txt">Далее</string>
+    <string name="music_dialog_title_bg_scan_notice">Уведомление</string>
     <string name="music_dialog_title_sd_permission_access_txt">Необходимо разрешение на доступ к SD-карте</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Разрешение на доступ к SD-карте не предоставлено</string>
     <string name="music_download">Загрузить</string>
@@ -556,7 +559,7 @@
     <string name="personal_data_collection_dialog_title">Персональные данные</string>
     <string name="personal_data_collection_screen_button_negative">НЕ СЕЙЧАС</string>
     <string name="personal_data_collection_screen_button_positive">РАЗРЕШАЮ</string>
-    <string name="personal_data_collection_screen_fine_print">Sony будет собирать ваши <a href="entrance://personaldata">персональные данные</a> для улучшения обслуживания. Sony обрабатывает данные в соответствии с <a href="http://sonymobile.com/privacy">Политикой конфиденциальности</a>.</string>
+    <string name="personal_data_collection_screen_fine_print">Sony будет собирать ваши <a href="entrance://personaldata">персональные данные</a> для улучшения обслуживания. Sony обрабатывает данные в соответствии с <a href="https://www.sonymobile.com/privacy">Политикой конфиденциальности</a>.</string>
     <string name="personal_data_collection_screen_fine_print_us">Sony будет собирать ваши <a href="entrance://personaldata">персональные данные</a> для улучшения обслуживания. Sony обрабатывает данные в соответствии с <a href="https://www.sonymobile.com/us/legal/privacy">Политикой конфиденциальности</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Уведомл. о конфиденц. для Калифорнии</a>).</string>
     <string name="personal_data_collection_screen_text">Помогите нам улучшить приложение \"Музыка\", разрешив сбор данных о ваших музыкальных предпочтениях для Sony.</string>
     <string name="play_queue_open">Открыть</string>

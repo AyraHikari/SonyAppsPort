@@ -4,6 +4,15 @@
 
 
 # direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
+
+    .line 393
+    invoke-direct {p0, p1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;-><init>(Landroid/content/Context;)V
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 

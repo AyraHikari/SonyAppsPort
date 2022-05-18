@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->updateMediaRouteAndScan()V
+    value = Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->setShowSyncUserNoticeDialog(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
+.field final synthetic val$show:Z
+
 
 # direct methods
-.method constructor <init>(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;)V
+.method constructor <init>(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;Z)V
     .locals 0
 
-    .line 681
+    .line 678
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$26;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
+
+    iput-boolean p2, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$26;->val$show:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,9 +40,9 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
-    .line 684
+    .line 681
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$26;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->access$000(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;)Lcom/sonyericsson/music/proxyservice/MediaPlayback;
@@ -47,14 +51,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 685
+    .line 682
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$26;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->access$000(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;)Lcom/sonyericsson/music/proxyservice/MediaPlayback;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/sonyericsson/music/proxyservice/MediaPlayback;->updateMediaRouteAndScan()V
+    iget-boolean v1, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$26;->val$show:Z
+
+    invoke-interface {v0, v1}, Lcom/sonyericsson/music/proxyservice/MediaPlayback;->setShowSyncUserNoticeDialog(Z)V
 
     :cond_0
     return-void

@@ -598,7 +598,7 @@
 
     if-eq p1, v1, :cond_1
 
-    const v2, 0x7f10018b
+    const v2, 0x7f10018d
 
     .line 716
     new-array v1, v1, [Ljava/lang/Object;
@@ -618,7 +618,7 @@
     goto :goto_1
 
     :cond_1
-    const p1, 0x7f10018c
+    const p1, 0x7f10018e
 
     .line 717
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;

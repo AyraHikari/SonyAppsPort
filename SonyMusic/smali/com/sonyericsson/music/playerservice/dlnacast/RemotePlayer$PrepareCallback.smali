@@ -125,9 +125,9 @@
 
     move-result-wide p2
 
-    long-to-int p2, p2
+    long-to-int p3, p2
 
-    invoke-virtual {p1, p2}, Lcom/sonyericsson/music/common/Track$TrackBuilder;->duration(I)Lcom/sonyericsson/music/common/Track$TrackBuilder;
+    invoke-virtual {p1, p3}, Lcom/sonyericsson/music/common/Track$TrackBuilder;->duration(I)Lcom/sonyericsson/music/common/Track$TrackBuilder;
 
     move-result-object p1
 

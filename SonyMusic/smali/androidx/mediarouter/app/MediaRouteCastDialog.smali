@@ -102,9 +102,9 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    sput v0, Landroidx/mediarouter/app/MediaRouteCastDialog;->CONNECTION_TIMEOUT_MILLIS:I
+    sput v1, Landroidx/mediarouter/app/MediaRouteCastDialog;->CONNECTION_TIMEOUT_MILLIS:I
 
     return-void
 .end method

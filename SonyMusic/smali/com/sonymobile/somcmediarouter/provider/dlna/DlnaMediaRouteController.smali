@@ -1334,9 +1334,9 @@
     :try_start_0
     iget-object p1, p0, Lcom/sonymobile/somcmediarouter/provider/dlna/DlnaMediaRouteController;->mPlayer:Lcom/sonymobile/somcmediarouter/provider/dlna/DlnaPlayer;
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    invoke-virtual {p1, v0}, Lcom/sonymobile/somcmediarouter/provider/dlna/DlnaPlayer;->setPlaybackPosition(I)V
+    invoke-virtual {p1, v1}, Lcom/sonymobile/somcmediarouter/provider/dlna/DlnaPlayer;->setPlaybackPosition(I)V
 
     .line 382
     invoke-direct {p0}, Lcom/sonymobile/somcmediarouter/provider/dlna/DlnaMediaRouteController;->getItemStatus()Landroidx/mediarouter/media/MediaItemStatus;

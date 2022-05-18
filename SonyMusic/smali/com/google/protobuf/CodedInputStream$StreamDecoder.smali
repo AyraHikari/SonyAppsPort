@@ -730,9 +730,9 @@
     goto :goto_1
 
     :cond_0
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    add-int/2addr v3, v0
+    add-int/2addr v3, v1
 
     goto :goto_0
 
@@ -1952,9 +1952,9 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    return v0
+    return v1
 
     :cond_6
     move v1, v3

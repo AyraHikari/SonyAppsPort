@@ -279,9 +279,12 @@
     <string name="music_delete_failed_one_or_many">काही घटक हटवू शकत नाही</string>
     <string name="music_delete_playlist_question">%1$s हटवायचे? प्लेसूचीच्या सामग्रीवर परिणाम होणार नाही.</string>
     <string name="music_delete_question">%1$s संग्रहणामधून हटवायचे?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"संगीत माहितीसंग्रह पुन्हा तयार करण्यासाठी संगीत अनुप्रयोग पार्श्वभूमीत स्कॅन करेल.
+गीतांच्या संख्येनुसार या स्कॅनला 10 मिनिटांहून जास्त वेळ लागू शकतो. पार्श्वभूमीतील स्कॅन पूर्ण होईपर्यंत गीते आणि प्लेसूची अचूकपणे दिसत नाहीत किंवा प्ले होत नाहीत."</string>
     <string name="music_dialog_body_sd_permission_access_txt">डेटा संग्रहण म्हणून SD कार्ड वापरण्यासाठी, पुढील पडद्यावर SD कार्डामध्ये प्रवेश करण्याची परवानगी द्या.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">पुन्हा प्रयत्न करण्यासाठी पुन्हा प्रयत्न करा किंवा रद्द करा टॅप करून सुरूवातीपासून सुरू करा.</string>
     <string name="music_dialog_button_next_txt">पुढे</string>
+    <string name="music_dialog_title_bg_scan_notice">सूचना</string>
     <string name="music_dialog_title_sd_permission_access_txt">SD कार्डमध्ये प्रवेश घेण्यासाठी परवानगी आवश्यक आहे</string>
     <string name="music_dialog_title_sd_permission_retry_txt">SD कार्डमध्ये प्रवेश परवानगीस मजुरी मिळाली नाही</string>
     <string name="music_download">डाउनलोड करा</string>
@@ -556,7 +559,7 @@ MMS जोडपत्रे प्ले करणे"</string>
     <string name="personal_data_collection_dialog_title">वैयक्तिक डेटा</string>
     <string name="personal_data_collection_screen_button_negative">आता नको</string>
     <string name="personal_data_collection_screen_button_positive">मला मान्य आहे</string>
-    <string name="personal_data_collection_screen_fine_print">सेवा सुधारण्यासाठी Sony आपला <a href="entrance://personaldata">वैयक्तिक डेटा</a>संकलित करून एकत्रित करेल. Sony आमच्या <a href="http://sonymobile.com/privacy">गोपनीयता धोरण</a> नुसार आपला डेटा हाताळेल.</string>
+    <string name="personal_data_collection_screen_fine_print">सेवा सुधारण्यासाठी Sony आपला <a href="entrance://personaldata">वैयक्तिक डेटा</a>संकलित करून एकत्रित करेल. Sony आमच्या <a href="https://www.sonymobile.com/privacy">गोपनीयता धोरण</a> नुसार आपला डेटा हाताळेल.</string>
     <string name="personal_data_collection_screen_fine_print_us">सेवा सुधारण्यासाठी Sony आपला <a href="entrance://personaldata">वैयक्तिक डेटा</a> संकलित करून एकत्रित करेल. Sony आमच्या <a href="https://www.sonymobile.com/us/legal/privacy">गोपनीयता धोरण</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">CA गोपनीयता सूचना</a>) नुसार आपला डेटा हाताळेल.</string>
     <string name="personal_data_collection_screen_text">आपल्या ऐकण्याच्या सवयी Sony सह शेअर करून संगीत अनुप्रयोग अधिक चांगला करण्यासाठी आम्हाला मदत करा.</string>
     <string name="play_queue_open">उघडा</string>

@@ -92,7 +92,7 @@
 .method protected getNoContentText()Ljava/lang/String;
     .locals 1
 
-    const v0, 0x7f100216
+    const v0, 0x7f100218
 
     .line 64
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;

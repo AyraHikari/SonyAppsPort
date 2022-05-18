@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;)V
     .locals 0
 
-    .line 238
+    .line 251
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$3;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,7 +35,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 241
+    .line 254
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$3;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     iget-object v0, p1, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->mWorker:Lcom/sonyericsson/music/proxyservice/worker/Worker;
@@ -48,7 +48,7 @@
 
     goto :goto_0
 
-    .line 245
+    .line 258
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -56,7 +56,7 @@
 
     const-string v0, "com.sonyericsson.music.UpdateAsYouPlay.ART_UPDATED"
 
-    .line 251
+    .line 264
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -67,17 +67,17 @@
 
     const/4 v0, 0x0
 
-    .line 252
+    .line 265
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 254
+    .line 267
     invoke-static {}, Lcom/sonyericsson/music/artdecoder/ArtDecoder;->clearDefaultCache()V
 
-    .line 255
+    .line 268
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$3;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     const/4 p2, 0x0

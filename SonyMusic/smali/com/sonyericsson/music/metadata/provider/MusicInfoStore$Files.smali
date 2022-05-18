@@ -24,7 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1453
+    .line 1459
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,14 +33,14 @@
 .method public static getContentUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
 
-    .line 1456
+    .line 1462
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 1457
+    .line 1463
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -65,7 +65,7 @@
 
     return-object p0
 
-    .line 1459
+    .line 1465
     :cond_0
     invoke-static {p0}, Landroid/provider/MediaStore$Files;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -77,14 +77,14 @@
 .method public static getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
     .locals 2
 
-    .line 1463
+    .line 1469
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 1464
+    .line 1470
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -111,7 +111,7 @@
 
     return-object p0
 
-    .line 1466
+    .line 1472
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/provider/MediaStore$Files;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
 

@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 648
+    .line 654
     new-instance v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;
 
     const-string v1, "MEDIA_STORE"
@@ -49,7 +49,7 @@
 
     const/4 v0, 0x1
 
-    .line 647
+    .line 653
     new-array v0, v0, [Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;->MEDIA_STORE:Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;
@@ -69,10 +69,10 @@
         }
     .end annotation
 
-    .line 652
+    .line 658
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 653
+    .line 659
     iput p3, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;->mSourceId:I
 
     return-void
@@ -81,7 +81,7 @@
 .method public static getSource(I)Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;
     .locals 5
 
-    .line 661
+    .line 667
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;->values()[Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;
 
     move-result-object v0
@@ -95,7 +95,7 @@
 
     aget-object v3, v0, v2
 
-    .line 662
+    .line 668
     invoke-virtual {v3}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;->getId()I
 
     move-result v4
@@ -118,7 +118,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;
     .locals 1
 
-    .line 647
+    .line 653
     const-class v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -133,7 +133,7 @@
 .method public static values()[Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;
     .locals 1
 
-    .line 647
+    .line 653
     sget-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;->$VALUES:[Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;
 
     invoke-virtual {v0}, [Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;->clone()Ljava/lang/Object;
@@ -150,7 +150,7 @@
 .method public getId()I
     .locals 1
 
-    .line 657
+    .line 663
     iget v0, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Source;->mSourceId:I
 
     return v0

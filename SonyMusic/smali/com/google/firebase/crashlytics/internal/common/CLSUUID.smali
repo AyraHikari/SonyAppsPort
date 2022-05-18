@@ -137,10 +137,10 @@
 
     move-result-object v0
 
-    long-to-int p0, p0
+    long-to-int p1, p0
 
     .line 91
-    invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     .line 92
     sget-object p0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
@@ -170,9 +170,9 @@
 
     move-result-object v0
 
-    long-to-int p0, p0
+    long-to-int p1, p0
 
-    int-to-short p0, p0
+    int-to-short p0, p1
 
     .line 100
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;

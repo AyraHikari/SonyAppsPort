@@ -75,45 +75,45 @@
 .method constructor <init>(Landroid/content/Context;Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;)V
     .locals 1
 
-    .line 102
+    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
+    .line 83
     new-instance v0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$1;
 
     invoke-direct {v0, p0}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$1;-><init>(Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
-    .line 103
+    .line 104
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mContext:Landroid/content/Context;
 
-    .line 104
+    .line 105
     iput-object p2, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mAudioSystemListener:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;
 
-    .line 106
+    .line 107
     new-instance v0, Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;
 
     invoke-direct {v0, p1, p0}, Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;-><init>(Landroid/content/Context;Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver$PlayQueueObserverListener;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlayQueueObserver:Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;
 
-    .line 107
+    .line 108
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlayQueueObserver:Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;->register()V
 
-    .line 109
+    .line 110
     invoke-direct {p0, p2}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->setupMediaSession(Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;)V
 
-    .line 111
+    .line 112
     invoke-direct {p0}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->getInitialPlaybackState()I
 
     move-result p1
 
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->updatePrivatePlaybackState(I)V
 
-    .line 113
+    .line 114
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioManagerFactory;->getAudioManager(Landroid/content/Context;)Lcom/sonyericsson/music/proxyservice/audiosystem/AudioManagerWrapper;
@@ -128,14 +128,14 @@
 .method public static getAudioSystem(Landroid/content/Context;Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;)Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;
     .locals 1
 
-    .line 95
+    .line 96
     sget-object v0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->sTestAudioSystem:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 99
+    .line 100
     :cond_0
     new-instance v0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;
 
@@ -155,37 +155,48 @@
 .method private getMediaButtonReceiverIntent()Landroid/app/PendingIntent;
     .locals 4
 
-    .line 368
+    .line 369
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MEDIA_BUTTON"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 369
+    .line 370
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mReceiverComponentName:Landroid/content/ComponentName;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     const/high16 v1, 0x10000000
 
-    .line 370
+    .line 371
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 372
-    iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mContext:Landroid/content/Context;
+    .line 374
+    sget-boolean v1, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_S_API:Z
 
-    .line 373
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    if-eqz v1, :cond_0
 
-    move-result-object v1
+    const/high16 v1, 0xc000000
 
-    const/4 v2, 0x0
+    goto :goto_0
 
-    const/high16 v3, 0x8000000
+    :cond_0
+    const/high16 v1, 0x8000000
 
-    .line 372
-    invoke-static {v1, v2, v0, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    .line 377
+    :goto_0
+    iget-object v2, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mContext:Landroid/content/Context;
+
+    .line 378
+    invoke-virtual {v2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    .line 377
+    invoke-static {v2, v3, v0, v1}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
 
@@ -195,17 +206,17 @@
 .method private retrievePlayQueue()V
     .locals 3
 
-    .line 391
+    .line 396
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mGetPlayQueueTask:Lcom/sonyericsson/music/proxyservice/audiosystem/GetMediaSessionPlayQueueTask;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    .line 392
+    .line 397
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 395
+    .line 400
     :cond_0
     new-instance v0, Lcom/sonyericsson/music/proxyservice/audiosystem/GetMediaSessionPlayQueueTask;
 
@@ -215,7 +226,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mGetPlayQueueTask:Lcom/sonyericsson/music/proxyservice/audiosystem/GetMediaSessionPlayQueueTask;
 
-    .line 396
+    .line 401
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mGetPlayQueueTask:Lcom/sonyericsson/music/proxyservice/audiosystem/GetMediaSessionPlayQueueTask;
 
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
@@ -240,20 +251,20 @@
         }
     .end annotation
 
-    .line 400
+    .line 405
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     if-eqz v0, :cond_0
 
-    .line 401
+    .line 406
     invoke-virtual {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompat;->setQueue(Ljava/util/List;)V
 
-    .line 402
+    .line 407
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1002b4
+    const v1, 0x7f1002b6
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -268,25 +279,25 @@
 .method private setupMediaSession(Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;)V
     .locals 4
 
-    .line 117
+    .line 118
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSessionCallback:Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;
 
     if-nez v0, :cond_0
 
-    .line 118
+    .line 119
     new-instance v0, Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;
 
     invoke-direct {v0, p1}, Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;-><init>(Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback$MediaSessionCallbackListener;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSessionCallback:Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;
 
-    .line 120
+    .line 121
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSessionCallback:Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;
 
     invoke-virtual {v0, p1}, Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;->start(Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback$MediaSessionCallbackListener;)V
 
-    .line 122
+    .line 123
     new-instance p1, Landroid/content/ComponentName;
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mContext:Landroid/content/Context;
@@ -297,7 +308,7 @@
 
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mReceiverComponentName:Landroid/content/ComponentName;
 
-    .line 127
+    .line 128
     new-instance p1, Landroid/support/v4/media/session/MediaSessionCompat;
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mContext:Landroid/content/Context;
@@ -308,7 +319,7 @@
 
     iget-object v2, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mReceiverComponentName:Landroid/content/ComponentName;
 
-    .line 128
+    .line 129
     invoke-direct {p0}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->getMediaButtonReceiverIntent()Landroid/app/PendingIntent;
 
     move-result-object v3
@@ -317,7 +328,7 @@
 
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
-    .line 130
+    .line 131
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mContext:Landroid/content/Context;
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
@@ -328,7 +339,7 @@
 
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mNotificationCreator:Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreator;
 
-    .line 131
+    .line 132
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mNotificationCreator:Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreator;
@@ -339,7 +350,7 @@
 
     invoke-virtual {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat;->setSessionActivity(Landroid/app/PendingIntent;)V
 
-    .line 133
+    .line 134
     new-instance p1, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;
 
     invoke-direct {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;-><init>()V
@@ -348,47 +359,47 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;->setActions(J)Landroid/support/v4/media/session/PlaybackStateCompat$Builder;
 
-    .line 145
+    .line 146
     invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;->build()Landroid/support/v4/media/session/PlaybackStateCompat;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlaybackState:Landroid/support/v4/media/session/PlaybackStateCompat;
 
-    .line 147
+    .line 148
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlaybackState:Landroid/support/v4/media/session/PlaybackStateCompat;
 
     invoke-virtual {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat;->setPlaybackState(Landroid/support/v4/media/session/PlaybackStateCompat;)V
 
-    .line 148
+    .line 149
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     const/4 v0, 0x3
 
     invoke-virtual {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat;->setPlaybackToLocal(I)V
 
-    .line 149
+    .line 150
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     invoke-virtual {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat;->setFlags(I)V
 
-    .line 153
+    .line 154
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSessionCallback:Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;
 
     invoke-virtual {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat;->setCallback(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
 
-    .line 160
+    .line 161
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat;->setActive(Z)V
 
-    .line 162
+    .line 163
     invoke-direct {p0}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->retrievePlayQueue()V
 
     return-void
@@ -397,12 +408,12 @@
 .method private updatePlaybackState(II)V
     .locals 8
 
-    .line 310
+    .line 311
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     if-eqz v0, :cond_3
 
-    .line 311
+    .line 312
     sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string v1, "eng"
@@ -426,7 +437,7 @@
     :cond_0
     if-eqz p2, :cond_2
 
-    .line 318
+    .line 319
     :cond_1
     new-instance v0, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;
 
@@ -440,29 +451,29 @@
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 320
+    .line 321
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
     move-object v1, v0
 
-    .line 319
+    .line 320
     invoke-virtual/range {v1 .. v7}, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;->setState(IJFJ)Landroid/support/v4/media/session/PlaybackStateCompat$Builder;
 
     int-to-long p1, p2
 
-    .line 320
+    .line 321
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;->setActiveQueueItemId(J)Landroid/support/v4/media/session/PlaybackStateCompat$Builder;
 
-    .line 321
+    .line 322
     invoke-virtual {v0}, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;->build()Landroid/support/v4/media/session/PlaybackStateCompat;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlaybackState:Landroid/support/v4/media/session/PlaybackStateCompat;
 
-    .line 322
+    .line 323
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     iget-object p2, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlaybackState:Landroid/support/v4/media/session/PlaybackStateCompat;
@@ -471,7 +482,7 @@
 
     goto :goto_0
 
-    .line 313
+    .line 314
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -489,15 +500,15 @@
 .method private updatePrivatePlaybackState(I)V
     .locals 1
 
-    .line 383
+    .line 388
     iput p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mCurrentPlaybackState:I
 
-    .line 385
+    .line 390
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSessionCallback:Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;
 
     if-eqz p1, :cond_0
 
-    .line 386
+    .line 391
     iget v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mCurrentPlaybackState:I
 
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;->updatePlaybackState(I)V
@@ -511,17 +522,17 @@
 .method public abandonAudioFocus()V
     .locals 2
 
-    .line 243
+    .line 244
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 244
+    .line 245
     invoke-virtual {v0, v1}, Landroid/support/v4/media/session/MediaSessionCompat;->setActive(Z)V
 
-    .line 246
+    .line 247
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mAudioManager:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioManagerWrapper;
 
@@ -529,12 +540,12 @@
 
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioManagerWrapper;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
 
-    .line 249
+    .line 250
     sget-object v0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->sTestAudioSystem:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;
 
     if-nez v0, :cond_1
 
-    .line 250
+    .line 251
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroidx/mediarouter/media/MediaRouter;->getInstance(Landroid/content/Context;)Landroidx/mediarouter/media/MediaRouter;
@@ -552,7 +563,7 @@
 .method public getMediaSessionToken()Landroid/support/v4/media/session/MediaSessionCompat$Token;
     .locals 1
 
-    .line 359
+    .line 360
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     if-eqz v0, :cond_0
@@ -573,7 +584,7 @@
 .method public getNotification(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Z)Landroid/app/Notification;
     .locals 1
 
-    .line 364
+    .line 365
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mNotificationCreator:Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreator;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreator;->getNotification(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Z)Landroid/app/Notification;
@@ -586,17 +597,17 @@
 .method public grabMediaButtonFocus()V
     .locals 2
 
-    .line 200
+    .line 201
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 201
+    .line 202
     invoke-virtual {v0, v1}, Landroid/support/v4/media/session/MediaSessionCompat;->setActive(Z)V
 
-    .line 205
+    .line 206
     :cond_0
     iget v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mCurrentPlaybackState:I
 
@@ -609,7 +620,7 @@
 
     const/4 v1, 0x0
 
-    .line 207
+    .line 208
     invoke-virtual {p0, v0, v1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->setPlaybackState(II)V
 
     :cond_2
@@ -619,7 +630,7 @@
 .method public onPlayQueueChanged()V
     .locals 0
 
-    .line 408
+    .line 413
     invoke-direct {p0}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->retrievePlayQueue()V
 
     return-void
@@ -636,7 +647,7 @@
         }
     .end annotation
 
-    .line 413
+    .line 418
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->setPlayQueue(Ljava/util/List;)V
 
     return-void
@@ -647,33 +658,33 @@
 
     if-eqz p1, :cond_1
 
-    .line 186
+    .line 187
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_0
 
-    .line 189
+    .line 190
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSessionCallback:Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;->release()V
 
-    .line 190
+    .line 191
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat;->release()V
 
-    .line 191
+    .line 192
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
-    .line 194
+    .line 195
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlayQueueObserver:Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;
 
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;->setListener(Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver$PlayQueueObserverListener;)V
 
-    .line 195
+    .line 196
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlayQueueObserver:Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;->unRegister()V
@@ -685,17 +696,17 @@
 .method public requestAudioFocus()V
     .locals 4
 
-    .line 216
+    .line 217
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 217
+    .line 218
     invoke-virtual {v0, v1}, Landroid/support/v4/media/session/MediaSessionCompat;->setActive(Z)V
 
-    .line 219
+    .line 220
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mAudioManager:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioManagerWrapper;
 
@@ -705,52 +716,52 @@
 
     invoke-virtual {v0, v2, v3, v1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioManagerWrapper;->requestAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;II)I
 
-    .line 223
+    .line 224
     sget-object v0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->sTestAudioSystem:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;
 
     if-nez v0, :cond_2
 
-    .line 224
+    .line 225
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroidx/mediarouter/media/MediaRouter;->getInstance(Landroid/content/Context;)Landroidx/mediarouter/media/MediaRouter;
 
     move-result-object v0
 
-    .line 225
+    .line 226
     invoke-virtual {v0}, Landroidx/mediarouter/media/MediaRouter;->getSelectedRoute()Landroidx/mediarouter/media/MediaRouter$RouteInfo;
 
     move-result-object v1
 
-    .line 226
+    .line 227
     iget-object v2, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/sonyericsson/music/common/MediaRouterUtils;->buildSelector(Landroid/content/Context;)Landroidx/mediarouter/media/MediaRouteSelector;
 
     move-result-object v2
 
-    .line 230
+    .line 231
     invoke-virtual {v1, v2}, Landroidx/mediarouter/media/MediaRouter$RouteInfo;->matchesSelector(Landroidx/mediarouter/media/MediaRouteSelector;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 231
+    .line 232
     invoke-static {v1}, Lcom/sonyericsson/music/common/MediaRouterUtils;->isGoogleCast(Landroidx/mediarouter/media/MediaRouter$RouteInfo;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 232
+    .line 233
     invoke-static {v1}, Lcom/sonyericsson/music/common/MediaRouterUtils;->isDlnaCast(Landroidx/mediarouter/media/MediaRouter$RouteInfo;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 233
+    .line 234
     :cond_1
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
@@ -763,15 +774,15 @@
 .method public setListener(Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;)V
     .locals 1
 
-    .line 166
+    .line 167
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mAudioSystemListener:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;
 
-    .line 168
+    .line 169
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSessionCallback:Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;
 
     if-eqz p1, :cond_0
 
-    .line 169
+    .line 170
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mAudioSystemListener:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;
 
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;->setListener(Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback$MediaSessionCallbackListener;)V
@@ -783,7 +794,7 @@
 .method public setPlaybackPosition(I)V
     .locals 0
 
-    .line 297
+    .line 298
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->updatePlaybackState(I)V
 
     return-void
@@ -842,11 +853,11 @@
     :pswitch_9
     const/4 p1, 0x1
 
-    .line 292
+    .line 293
     :goto_0
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->updatePrivatePlaybackState(I)V
 
-    .line 293
+    .line 294
     invoke-virtual {p0, p2}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->updatePlaybackState(I)V
 
     return-void
@@ -871,24 +882,24 @@
 .method public start(Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;)V
     .locals 1
 
-    .line 174
+    .line 175
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     if-nez v0, :cond_0
 
-    .line 175
+    .line 176
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->setupMediaSession(Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;)V
 
-    .line 177
+    .line 178
     :cond_0
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->setListener(Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;)V
 
-    .line 178
+    .line 179
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlayQueueObserver:Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;
 
     invoke-virtual {p1, p0}, Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;->setListener(Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver$PlayQueueObserverListener;)V
 
-    .line 179
+    .line 180
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlayQueueObserver:Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/PlayQueueObserver;->register()V
@@ -899,26 +910,26 @@
 .method public updateMetaData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJLandroid/graphics/Bitmap;I)V
     .locals 3
 
-    .line 330
+    .line 331
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     if-eqz v0, :cond_1
 
-    .line 331
+    .line 332
     new-instance v0, Landroid/support/v4/media/MediaMetadataCompat$Builder;
 
     invoke-direct {v0}, Landroid/support/v4/media/MediaMetadataCompat$Builder;-><init>()V
 
     if-eqz p8, :cond_0
 
-    .line 334
+    .line 335
     invoke-virtual {p8}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 335
+    .line 336
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     const/4 v2, 0x0
@@ -932,49 +943,49 @@
 
     const-string v1, "android.media.metadata.ARTIST"
 
-    .line 344
+    .line 345
     invoke-virtual {v0, v1, p1}, Landroid/support/v4/media/MediaMetadataCompat$Builder;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;
 
     const-string v1, "android.media.metadata.ALBUM_ARTIST"
 
-    .line 345
+    .line 346
     invoke-virtual {v0, v1, p1}, Landroid/support/v4/media/MediaMetadataCompat$Builder;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;
 
     const-string p1, "android.media.metadata.ALBUM"
 
-    .line 346
+    .line 347
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/media/MediaMetadataCompat$Builder;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;
 
     const-string p1, "android.media.metadata.TITLE"
 
-    .line 347
+    .line 348
     invoke-virtual {v0, p1, p3}, Landroid/support/v4/media/MediaMetadataCompat$Builder;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;
 
     const-string p1, "android.media.metadata.TRACK_NUMBER"
 
     int-to-long p2, p4
 
-    .line 348
+    .line 349
     invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/media/MediaMetadataCompat$Builder;->putLong(Ljava/lang/String;J)Landroid/support/v4/media/MediaMetadataCompat$Builder;
 
     const-string p1, "android.media.metadata.NUM_TRACKS"
 
     int-to-long p2, p5
 
-    .line 349
+    .line 350
     invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/media/MediaMetadataCompat$Builder;->putLong(Ljava/lang/String;J)Landroid/support/v4/media/MediaMetadataCompat$Builder;
 
     const-string p1, "android.media.metadata.DURATION"
 
-    .line 350
+    .line 351
     invoke-virtual {v0, p1, p6, p7}, Landroid/support/v4/media/MediaMetadataCompat$Builder;->putLong(Ljava/lang/String;J)Landroid/support/v4/media/MediaMetadataCompat$Builder;
 
     const-string p1, "android.media.metadata.ALBUM_ART"
 
-    .line 351
+    .line 352
     invoke-virtual {v0, p1, p8}, Landroid/support/v4/media/MediaMetadataCompat$Builder;->putBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/support/v4/media/MediaMetadataCompat$Builder;
 
-    .line 353
+    .line 354
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     invoke-virtual {v0}, Landroid/support/v4/media/MediaMetadataCompat$Builder;->build()Landroid/support/v4/media/MediaMetadataCompat;
@@ -983,7 +994,7 @@
 
     invoke-virtual {p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat;->setMetadata(Landroid/support/v4/media/MediaMetadataCompat;)V
 
-    .line 354
+    .line 355
     invoke-direct {p0, p9, p4}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->updatePlaybackState(II)V
 
     :cond_1
@@ -993,12 +1004,12 @@
 .method public updatePlaybackState(I)V
     .locals 8
 
-    .line 301
+    .line 302
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     if-eqz v0, :cond_0
 
-    .line 302
+    .line 303
     new-instance v0, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;
 
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlaybackState:Landroid/support/v4/media/session/PlaybackStateCompat;
@@ -1011,24 +1022,24 @@
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 304
+    .line 305
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
     move-object v1, v0
 
-    .line 303
+    .line 304
     invoke-virtual/range {v1 .. v7}, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;->setState(IJFJ)Landroid/support/v4/media/session/PlaybackStateCompat$Builder;
 
-    .line 304
+    .line 305
     invoke-virtual {v0}, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;->build()Landroid/support/v4/media/session/PlaybackStateCompat;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlaybackState:Landroid/support/v4/media/session/PlaybackStateCompat;
 
-    .line 305
+    .line 306
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mMediaSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mPlaybackState:Landroid/support/v4/media/session/PlaybackStateCompat;

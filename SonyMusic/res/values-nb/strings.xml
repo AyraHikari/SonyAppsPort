@@ -279,9 +279,12 @@ Det kan hende Musikk-appen ikke fungerer som den skal uten tilgangen den har bed
     <string name="music_delete_failed_one_or_many">Enkelte elementer kunne ikke slettes</string>
     <string name="music_delete_playlist_question">Slette %1$s? Innholdet i spillelisten vil ikke bli påvirket.</string>
     <string name="music_delete_question">Slette %1$s fra lagring?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Musikkappen skanner i bakgrunnen for å bygge opp igjen musikkdatabasen.
+Skannen kan ta over ti minutter, avhengig av antall sanger. Sanger og spillelister vises ikke eller spilles ikke av riktig før bakgrunnsskannen er ferdig."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Du må gi tillatelse for tilgang til SD-kort på neste skjermbilde for å bruke SD-kortet til lagring av data.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Trykk på PRØV PÅ NYTT for å prøve igjen eller AVBRYT for å starte fra begynnelsen av.</string>
     <string name="music_dialog_button_next_txt">Neste</string>
+    <string name="music_dialog_title_bg_scan_notice">Merknad</string>
     <string name="music_dialog_title_sd_permission_access_txt">Trenger tillatelse for tilgang til SD-kort</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Tillatelse for tilgang til SD-kort ikke gitt</string>
     <string name="music_download">Last ned</string>
@@ -556,7 +559,7 @@ For å få tilgang til lydinnhold på enheten din"</string>
     <string name="personal_data_collection_dialog_title">Personlige data</string>
     <string name="personal_data_collection_screen_button_negative">IKKE NÅ</string>
     <string name="personal_data_collection_screen_button_positive">JEG GODTAR</string>
-    <string name="personal_data_collection_screen_fine_print">Sony vil samle inn og kombinere <a href="entrance://personaldata">personlige data</a> for å forbedre tjenesten. Sony vil behandle dataene dine i henhold til <a href="http://sonymobile.com/privacy">personvernerklæringen</a> vår</string>
+    <string name="personal_data_collection_screen_fine_print">Sony vil samle inn og kombinere <a href="entrance://personaldata">personlige data</a> for å forbedre tjenesten. Sony vil behandle dataene dine i henhold til <a href="https://www.sonymobile.com/privacy">personvernerklæringen</a> vår</string>
     <string name="personal_data_collection_screen_fine_print_us">Sony vil samle inn og kombinere <a href="entrance://personaldata">personlige data</a> for å forbedre tjenesten. Sony vil behandle dataene dine i henhold til <a href="https://www.sonymobile.com/us/legal/privacy">personvernerklæringen</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Merknad om personvern for California</a>) vår</string>
     <string name="personal_data_collection_screen_text">Hjelp oss å gjøre Musikk-appen bedre ved å dele dine lyttevaner med Sony.</string>
     <string name="play_queue_open">Åpne</string>

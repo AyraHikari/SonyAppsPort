@@ -375,10 +375,10 @@
     invoke-virtual {v0, v5}, Lcom/sonyericsson/music/metadata/EditMusicInfo;->setHasEmbeddedAlbumArt(Z)V
 
     :cond_9
-    long-to-int p2, p2
+    long-to-int p3, p2
 
     .line 480
-    invoke-static {p1, p2}, Lcom/sonyericsson/music/common/DBUtils;->getTrackGenre(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p1, p3}, Lcom/sonyericsson/music/common/DBUtils;->getTrackGenre(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
 

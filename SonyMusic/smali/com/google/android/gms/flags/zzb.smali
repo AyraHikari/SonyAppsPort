@@ -89,15 +89,21 @@
     .line 13
     iput-boolean p1, p0, Lcom/google/android/gms/flags/zzb;->zzj:Z
     :try_end_1
-    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p1
 
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    :goto_0
     :try_start_2
     const-string v0, "FlagValueProvider"
 
@@ -107,7 +113,7 @@
     invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 17
-    :goto_0
+    :goto_1
     monitor-exit p0
 
     return-void

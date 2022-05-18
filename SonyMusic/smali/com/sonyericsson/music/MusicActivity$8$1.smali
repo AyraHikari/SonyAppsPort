@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity$8;)V
     .locals 0
 
-    .line 562
+    .line 619
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$8$1;->this$1:Lcom/sonyericsson/music/MusicActivity$8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 565
+    .line 622
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$8$1;->this$1:Lcom/sonyericsson/music/MusicActivity$8;
 
     iget-object v0, v0, Lcom/sonyericsson/music/MusicActivity$8;->this$0:Lcom/sonyericsson/music/MusicActivity;
@@ -53,7 +53,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 566
+    .line 623
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$8$1;->this$1:Lcom/sonyericsson/music/MusicActivity$8;
 
     iget-object v0, v0, Lcom/sonyericsson/music/MusicActivity$8;->this$0:Lcom/sonyericsson/music/MusicActivity;
@@ -66,7 +66,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/MusicFragmentManager;->removeFragment(Ljava/lang/String;)V
 
-    .line 571
+    .line 628
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$8$1;->this$1:Lcom/sonyericsson/music/MusicActivity$8;
 

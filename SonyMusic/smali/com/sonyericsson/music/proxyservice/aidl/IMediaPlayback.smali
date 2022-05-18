@@ -15,6 +15,10 @@
 .end annotation
 
 
+# static fields
+.field public static final DESCRIPTOR:Ljava/lang/String; = "com.sonyericsson.music.proxyservice.aidl.IMediaPlayback"
+
+
 # virtual methods
 .method public abstract enqueue(Landroid/net/Uri;IZ)V
     .annotation system Ldalvik/annotation/Throws;
@@ -209,6 +213,14 @@
     .end annotation
 .end method
 
+.method public abstract setShowSyncUserNoticeDialog(Z)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract setShuffle(Z)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -218,6 +230,14 @@
 .end method
 
 .method public abstract setWifiAndMobileDataAccepted(Z)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract shouldShowSyncUserNoticeDialog()Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

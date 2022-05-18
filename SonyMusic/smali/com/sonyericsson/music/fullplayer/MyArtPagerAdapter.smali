@@ -111,7 +111,7 @@
     .line 82
     iput-object p2, p0, Lcom/sonyericsson/music/fullplayer/MyArtPagerAdapter;->mPlayerArtDecoder:Lcom/sonyericsson/music/player/PlayerArtDecoder;
 
-    const p2, 0x7f10022f
+    const p2, 0x7f100231
 
     .line 83
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;

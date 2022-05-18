@@ -1,18 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <base-config cleartextTrafficPermitted="true" />
-    <domain-config cleartextTrafficPermitted="false">
-        <domain includeSubdomains="true">googleapis.com</domain>
-        <pin-set>
-            <pin digest="SHA-256">f8NnEFZxQ4ExFOhSN7EiFWtiudZQVD2oY60uauV/n78=</pin>
-            <pin digest="SHA-256">iie1VXtL7HzAMF+/PVPR9xzT80kQxdZeJ+zduCB3uj0=</pin>
-        </pin-set>
-    </domain-config>
-    <domain-config cleartextTrafficPermitted="false">
-        <domain includeSubdomains="true">googleusercontent.com</domain>
-        <pin-set>
-            <pin digest="SHA-256">f8NnEFZxQ4ExFOhSN7EiFWtiudZQVD2oY60uauV/n78=</pin>
-            <pin digest="SHA-256">iie1VXtL7HzAMF+/PVPR9xzT80kQxdZeJ+zduCB3uj0=</pin>
-        </pin-set>
-    </domain-config>
 </network-security-config>

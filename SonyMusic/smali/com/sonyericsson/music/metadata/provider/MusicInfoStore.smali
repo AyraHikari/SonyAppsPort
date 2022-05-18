@@ -56,7 +56,7 @@
 
     const-string v0, "media"
 
-    .line 1475
+    .line 1481
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v1
@@ -71,7 +71,7 @@
 
     return v1
 
-    .line 1476
+    .line 1482
     :cond_0
     sget-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;->MEDIA_URI:Landroid/content/UriMatcher;
 

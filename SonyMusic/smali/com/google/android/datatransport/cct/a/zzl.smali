@@ -77,9 +77,9 @@
 
     xor-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    const v1, 0xf4243
+    const v0, 0xf4243
 
     xor-int/2addr v0, v1
 

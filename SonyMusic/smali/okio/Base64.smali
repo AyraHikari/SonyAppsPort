@@ -228,9 +228,9 @@
     .line 40
     div-long/2addr v5, v7
 
-    long-to-int v5, v5
+    long-to-int v6, v5
 
-    new-array v5, v5, [B
+    new-array v5, v6, [B
 
     const/4 v6, 0x0
 

@@ -685,9 +685,9 @@
 
     xor-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    return v0
+    return v1
 
     .line 297
     :cond_1
@@ -714,9 +714,9 @@
 
     xor-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    return v0
+    return v1
 
     .line 301
     :cond_2

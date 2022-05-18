@@ -474,8 +474,8 @@
 
     check-cast p1, Lcom/google/firebase/remoteconfig/internal/ConfigContainer;
     :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/util/concurrent/TimeoutException; {:try_start_1 .. :try_end_1} :catch_0
 
     return-object p1
@@ -483,6 +483,17 @@
     :catch_0
     move-exception p1
 
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_2
+    move-exception p1
+
+    :goto_0
     const-string p2, "FirebaseRemoteConfig"
 
     const-string v0, "Reading from storage file failed."

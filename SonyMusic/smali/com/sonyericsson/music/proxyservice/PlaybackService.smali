@@ -29,7 +29,11 @@
 
 .field private static final EXTEND_WAKELOCK_TIME_MILLIS:J = 0x1388L
 
+.field private static final FINAL_SYNC_TIME_CALL_MILLIS:I = 0x1388
+
 .field static final PROXY_SERVICE_BINDING_ACTION:Ljava/lang/String; = "com.sonyericsson.music.PROXY_SERVICE_BINDING_ACTION"
+
+.field private static final SYNC_TIME_DELAY_MILLIS:I = 0xbb8
 
 
 # instance fields
@@ -87,32 +91,32 @@
 
     const/4 v0, 0x0
 
-    .line 101
+    .line 105
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mReleasedMediaPlayback:Z
 
-    .line 103
+    .line 107
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlaybackBinding:Z
 
-    .line 104
+    .line 108
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mProxyServiceBinding:Z
 
-    .line 105
+    .line 109
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaBrowserServiceBinding:Z
 
-    .line 107
+    .line 111
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHasEverBeenPlaying:Z
 
-    .line 111
+    .line 115
     new-instance v1, Lcom/sonyericsson/music/proxyservice/PlaybackService$ProxyServiceBinder;
 
     invoke-direct {v1, p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$ProxyServiceBinder;-><init>(Lcom/sonyericsson/music/proxyservice/PlaybackService;)V
 
     iput-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mProxyServiceBinder:Lcom/sonyericsson/music/proxyservice/PlaybackService$ProxyServiceBinder;
 
-    .line 113
+    .line 117
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mReceiverRegistered:Z
 
-    .line 117
+    .line 121
     new-instance v0, Lcom/sonyericsson/music/proxyservice/PlaybackService$1;
 
     invoke-direct {v0, p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$1;-><init>(Lcom/sonyericsson/music/proxyservice/PlaybackService;)V
@@ -121,10 +125,10 @@
 
     const/4 v0, -0x1
 
-    .line 145
+    .line 149
     iput v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mStartId:I
 
-    .line 147
+    .line 151
     new-instance v0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;
 
     invoke-direct {v0, p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;-><init>(Lcom/sonyericsson/music/proxyservice/PlaybackService;)V
@@ -182,14 +186,14 @@
 .method private startMediaPlayback(Landroid/content/Intent;)V
     .locals 3
 
-    .line 440
+    .line 444
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mShutdownRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 442
+    .line 446
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->isStarted()Z
@@ -198,24 +202,24 @@
 
     if-nez v0, :cond_4
 
-    .line 443
+    .line 447
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {v0, p0}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->start(Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$LifecycleControl;)V
 
-    .line 444
+    .line 448
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mIMediaPlayback:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->setMediaPlayback(Lcom/sonyericsson/music/proxyservice/MediaPlayback;)V
 
-    .line 445
+    .line 449
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mIMediaPlayback:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->start()V
 
-    .line 447
+    .line 451
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mPlaylistsContentObserver:Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->isRegistered()Z
@@ -228,7 +232,7 @@
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMusicInfoSyncContentObserver:Lcom/sonyericsson/music/proxyservice/PlaybackService$MusicInfoSyncObserver;
 
-    .line 448
+    .line 452
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$MusicInfoSyncObserver;->isRegistered()Z
 
     move-result v0
@@ -246,18 +250,18 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 450
+    .line 454
     :goto_1
     iget-object v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mPlaylistsContentObserver:Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;
 
     invoke-virtual {v2}, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->register()V
 
-    .line 451
+    .line 455
     iget-object v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMusicInfoSyncContentObserver:Lcom/sonyericsson/music/proxyservice/PlaybackService$MusicInfoSyncObserver;
 
     invoke-virtual {v2}, Lcom/sonyericsson/music/proxyservice/PlaybackService$MusicInfoSyncObserver;->register()V
 
-    .line 452
+    .line 456
     iget-object v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mAudioMediaContentObserver:Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;
 
     invoke-virtual {v2}, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->register()V
@@ -266,23 +270,23 @@
 
     const/16 v0, 0x1388
 
-    .line 457
+    .line 461
     invoke-static {p0, v0}, Lcom/sonyericsson/music/metadata/MusicInfoService;->startPlaylistSync(Landroid/content/Context;I)V
 
-    .line 458
+    .line 462
     invoke-static {p0}, Lcom/sonyericsson/music/metadata/MusicInfoService;->startHighResContainersSync(Landroid/content/Context;)V
 
     :cond_2
     const-string v0, "grab_media_button_focus"
 
-    .line 463
+    .line 467
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 466
+    .line 470
     new-instance v1, Landroid/content/Intent;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -293,15 +297,15 @@
 
     const-string p1, "grab_media_button_focus"
 
-    .line 467
+    .line 471
     invoke-virtual {v1, p1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 468
+    .line 472
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {p1, v1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->performAction(Landroid/content/Intent;)V
 
-    .line 471
+    .line 475
     :cond_3
     invoke-static {p0}, Lcom/sonyericsson/music/proxyservice/AnalyticsService;->sendAnalytics(Landroid/content/Context;)V
 
@@ -314,7 +318,7 @@
 .method canStopService()Z
     .locals 1
 
-    .line 538
+    .line 544
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->getPausedReasonPhoneCall()Z
@@ -348,12 +352,12 @@
 .method cancelDelayNotificationAutoDismiss()V
     .locals 2
 
-    .line 554
+    .line 560
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mAlarmManager:Landroid/app/AlarmManager;
 
     if-eqz v0, :cond_0
 
-    .line 555
+    .line 561
     invoke-static {p0}, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->getNotificationAutoDismissBroadcast(Landroid/content/Context;)Landroid/app/PendingIntent;
 
     move-result-object v1
@@ -362,7 +366,7 @@
 
     const/4 v0, 0x0
 
-    .line 556
+    .line 562
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mAlarmManager:Landroid/app/AlarmManager;
 
     :cond_0
@@ -372,14 +376,14 @@
 .method delayedNotificationAutoDismiss()V
     .locals 4
 
-    .line 546
+    .line 552
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mAlarmManager:Landroid/app/AlarmManager;
 
     if-nez v0, :cond_0
 
     const-string v0, "alarm"
 
-    .line 547
+    .line 553
     invoke-virtual {p0, v0}, Landroid/app/Service;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -388,13 +392,13 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 549
+    .line 555
     :cond_0
     invoke-static {p0}, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->getNotificationAutoDismissBroadcast(Landroid/content/Context;)Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    .line 550
+    .line 556
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mAlarmManager:Landroid/app/AlarmManager;
 
     const-wide/32 v2, 0x1b7740
@@ -407,22 +411,22 @@
 .method fullMediaPlaybackShutdown(Z)V
     .locals 1
 
-    .line 333
+    .line 337
     iget-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mReleasedMediaPlayback:Z
 
     if-nez v0, :cond_0
 
-    .line 334
+    .line 338
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {v0, p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->release(Z)V
 
-    .line 335
+    .line 339
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mIMediaPlayback:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->stop()V
 
-    .line 336
+    .line 340
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mIMediaPlayback:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     const/4 v0, 0x0
@@ -431,20 +435,20 @@
 
     const/4 p1, 0x1
 
-    .line 337
+    .line 341
     iput-boolean p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mReleasedMediaPlayback:Z
 
-    .line 338
+    .line 342
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mPlaylistsContentObserver:Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->unregister()V
 
-    .line 339
+    .line 343
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMusicInfoSyncContentObserver:Lcom/sonyericsson/music/proxyservice/PlaybackService$MusicInfoSyncObserver;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/PlaybackService$MusicInfoSyncObserver;->unregister()V
 
-    .line 340
+    .line 344
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mAudioMediaContentObserver:Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->unregister()V
@@ -456,17 +460,17 @@
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 4
 
-    .line 358
+    .line 362
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->startMediaPlayback(Landroid/content/Intent;)V
 
-    .line 360
+    .line 364
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "SemcMusicPlayer"
 
-    .line 361
+    .line 365
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -503,7 +507,7 @@
 
     const-string v1, "android.intent.action.MAIN"
 
-    .line 364
+    .line 368
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -512,10 +516,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 365
+    .line 369
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlaybackBinding:Z
 
-    .line 366
+    .line 370
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mIMediaPlayback:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     return-object p1
@@ -523,17 +527,17 @@
     :cond_0
     const-string v1, "com.sonyericsson.music.PROXY_SERVICE_BINDING_ACTION"
 
-    .line 367
+    .line 371
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 368
+    .line 372
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mProxyServiceBinding:Z
 
-    .line 369
+    .line 373
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mProxyServiceBinder:Lcom/sonyericsson/music/proxyservice/PlaybackService$ProxyServiceBinder;
 
     return-object p1
@@ -541,17 +545,17 @@
     :cond_1
     const-string v1, "android.media.browse.MediaBrowserService"
 
-    .line 370
+    .line 374
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 371
+    .line 375
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaBrowserServiceBinding:Z
 
-    .line 372
+    .line 376
     invoke-super {p0, p1}, Landroidx/media/MediaBrowserServiceCompat;->onBind(Landroid/content/Intent;)Landroid/os/IBinder;
 
     move-result-object p1
@@ -567,22 +571,22 @@
 .method public onCreate()V
     .locals 4
 
-    .line 179
+    .line 183
     invoke-super {p0}, Landroidx/media/MediaBrowserServiceCompat;->onCreate()V
 
-    .line 181
+    .line 185
     invoke-static {p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper$Factory;->newServiceWrapper(Landroid/app/Service;)Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mServiceWrapper:Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;
 
-    .line 184
+    .line 188
     invoke-virtual {p0}, Landroid/app/Service;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 185
+    .line 189
     invoke-virtual {p0}, Landroid/app/Service;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -595,12 +599,12 @@
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 184
+    .line 188
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     const-string v0, "power"
 
-    .line 187
+    .line 191
     invoke-virtual {p0, v0}, Landroid/app/Service;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -611,14 +615,14 @@
 
     const/4 v2, 0x1
 
-    .line 188
+    .line 192
     invoke-virtual {v0, v2, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 189
+    .line 193
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const/4 v3, 0x0
@@ -627,21 +631,21 @@
 
     const-string v1, "SemcMusicPlayer-timed"
 
-    .line 190
+    .line 194
     invoke-virtual {v0, v2, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mTimedWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 192
+    .line 196
     new-instance v0, Lcom/sonyericsson/music/proxyservice/Notifier;
 
     invoke-direct {v0, p0}, Lcom/sonyericsson/music/proxyservice/Notifier;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mNotifier:Lcom/sonyericsson/music/proxyservice/Notifier;
 
-    .line 193
+    .line 197
     new-instance v0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mNotifier:Lcom/sonyericsson/music/proxyservice/Notifier;
@@ -650,14 +654,14 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
-    .line 194
+    .line 198
     new-instance v0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-direct {v0}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;-><init>()V
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mIMediaPlayback:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
-    .line 196
+    .line 200
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->getPlaybackState()Lcom/sonyericsson/music/proxyservice/aidl/MediaPlaybackState;
@@ -670,63 +674,63 @@
 
     invoke-virtual {p0, v0}, Landroidx/media/MediaBrowserServiceCompat;->setSessionToken(Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
 
-    .line 197
+    .line 201
     new-instance v0, Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserHelper;
 
     invoke-direct {v0, p0}, Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserHelper;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaBrowserHelper:Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserHelper;
 
-    .line 199
+    .line 203
     new-instance v0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;
 
     invoke-direct {v0, p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mPlaylistsContentObserver:Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;
 
-    .line 201
+    .line 205
     new-instance v0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;
 
     invoke-direct {v0, p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mAudioMediaContentObserver:Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;
 
-    .line 203
+    .line 207
     new-instance v0, Lcom/sonyericsson/music/proxyservice/PlaybackService$MusicInfoSyncObserver;
 
     invoke-direct {v0, p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$MusicInfoSyncObserver;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMusicInfoSyncContentObserver:Lcom/sonyericsson/music/proxyservice/PlaybackService$MusicInfoSyncObserver;
 
-    .line 205
+    .line 209
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.ACTION_SHUTDOWN"
 
-    .line 206
+    .line 210
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "com.android.music.musicservicecommand"
 
-    .line 207
+    .line 211
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 209
+    .line 213
     iget-boolean v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mReceiverRegistered:Z
 
     if-nez v1, :cond_0
 
-    .line 210
+    .line 214
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v1, v0}, Landroid/app/Service;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 211
+    .line 215
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mReceiverRegistered:Z
 
-    .line 214
+    .line 218
     :cond_0
     new-instance v0, Landroid/os/Handler;
 
@@ -734,10 +738,10 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHandler:Landroid/os/Handler;
 
-    .line 215
+    .line 219
     iput-boolean v3, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHasEverBeenPlaying:Z
 
-    .line 217
+    .line 221
     invoke-virtual {p0}, Landroid/app/Service;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -762,26 +766,26 @@
 
     const-string v0, "com.sonyericsson.music.service.internal.ACTION_POPULATE_WIDGET"
 
-    .line 288
+    .line 292
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 289
+    .line 293
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->populateWidgetViews()V
 
     const/4 p1, 0x0
 
-    .line 290
+    .line 294
     invoke-virtual {p3, p1}, Landroidx/media/MediaBrowserServiceCompat$Result;->sendResult(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 292
+    .line 296
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroidx/media/MediaBrowserServiceCompat;->onCustomAction(Ljava/lang/String;Landroid/os/Bundle;Landroidx/media/MediaBrowserServiceCompat$Result;)V
 
@@ -792,30 +796,30 @@
 .method public onDestroy()V
     .locals 3
 
-    .line 302
+    .line 306
     invoke-virtual {p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->cancelDelayNotificationAutoDismiss()V
 
     const/4 v0, 0x1
 
-    .line 304
+    .line 308
     invoke-virtual {p0, v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->fullMediaPlaybackShutdown(Z)V
 
-    .line 306
+    .line 310
     iget-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mReceiverRegistered:Z
 
     if-eqz v0, :cond_0
 
-    .line 307
+    .line 311
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Landroid/app/Service;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     const/4 v0, 0x0
 
-    .line 308
+    .line 312
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mReceiverRegistered:Z
 
-    .line 311
+    .line 315
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -831,19 +835,19 @@
 
     const-string v1, "Releasing wakelock from onDestroy"
 
-    .line 312
+    .line 316
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
+    .line 318
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 317
+    .line 321
     :cond_1
     invoke-static {}, Lcom/sonyericsson/music/artdecoder/ArtDecoder;->deinit()V
 
-    .line 320
+    .line 324
     invoke-virtual {p0}, Landroid/app/Service;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -856,22 +860,22 @@
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 323
+    .line 327
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mShutdownRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 325
+    .line 329
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaBrowserHelper:Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserHelper;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserHelper;->release()V
 
-    .line 327
+    .line 331
     iput-object v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mServiceWrapper:Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;
 
-    .line 329
+    .line 333
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
     return-void
@@ -880,7 +884,7 @@
 .method public onGetRoot(Ljava/lang/String;ILandroid/os/Bundle;)Landroidx/media/MediaBrowserServiceCompat$BrowserRoot;
     .locals 1
 
-    .line 430
+    .line 434
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaBrowserHelper:Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserHelper;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserHelper;->onGetRoot(Ljava/lang/String;ILandroid/os/Bundle;)Landroidx/media/MediaBrowserServiceCompat$BrowserRoot;
@@ -903,7 +907,7 @@
         }
     .end annotation
 
-    .line 436
+    .line 440
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaBrowserHelper:Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserHelper;
 
     invoke-virtual {v0, p1, p2}, Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserHelper;->onLoadChildren(Ljava/lang/String;Landroidx/media/MediaBrowserServiceCompat$Result;)V
@@ -914,17 +918,17 @@
 .method public onRebind(Landroid/content/Intent;)V
     .locals 4
 
-    .line 410
+    .line 414
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->startMediaPlayback(Landroid/content/Intent;)V
 
-    .line 412
+    .line 416
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "SemcMusicPlayer"
 
-    .line 413
+    .line 417
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -961,7 +965,7 @@
 
     const-string v1, "android.intent.action.MAIN"
 
-    .line 416
+    .line 420
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -970,7 +974,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 417
+    .line 421
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlaybackBinding:Z
 
     goto :goto_0
@@ -978,14 +982,14 @@
     :cond_0
     const-string v1, "com.sonyericsson.music.PROXY_SERVICE_BINDING_ACTION"
 
-    .line 418
+    .line 422
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 419
+    .line 423
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mProxyServiceBinding:Z
 
     goto :goto_0
@@ -993,17 +997,17 @@
     :cond_1
     const-string v1, "android.media.browse.MediaBrowserService"
 
-    .line 420
+    .line 424
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 421
+    .line 425
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaBrowserServiceBinding:Z
 
-    .line 422
+    .line 426
     invoke-super {p0, p1}, Landroid/app/Service;->onRebind(Landroid/content/Intent;)V
 
     :cond_2
@@ -1014,17 +1018,17 @@
 .method public onStartCommand(Landroid/content/Intent;II)I
     .locals 2
 
-    .line 225
+    .line 229
     invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I
 
-    .line 227
+    .line 231
     iput p3, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mStartId:I
 
     const/4 p2, 0x0
 
     if-eqz p1, :cond_0
 
-    .line 229
+    .line 233
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p3
@@ -1034,18 +1038,18 @@
     :cond_0
     move-object p3, p2
 
-    .line 234
+    .line 238
     :goto_0
     iget-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mReleasedMediaPlayback:Z
 
     if-nez v0, :cond_5
 
-    .line 236
+    .line 240
     invoke-virtual {p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->cancelDelayNotificationAutoDismiss()V
 
     const-string v0, "com.sonyericsson.music.service.internal.DISMISS"
 
-    .line 238
+    .line 242
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1056,7 +1060,7 @@
 
     const/4 v0, 0x0
 
-    .line 243
+    .line 247
     invoke-virtual {p1, p2, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
@@ -1065,7 +1069,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 244
+    .line 248
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->isPlayExpected()Z
@@ -1074,10 +1078,10 @@
 
     if-nez p1, :cond_1
 
-    .line 245
+    .line 249
     invoke-virtual {p0, p2}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->setServiceToBackground(Z)V
 
-    .line 248
+    .line 252
     :cond_1
     invoke-virtual {p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->canStopService()Z
 
@@ -1085,30 +1089,30 @@
 
     if-eqz p1, :cond_5
 
-    .line 249
+    .line 253
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mServiceWrapper:Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;->stopSelf()V
 
     goto :goto_1
 
-    .line 252
+    .line 256
     :cond_2
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->pause()V
 
-    .line 253
+    .line 257
     invoke-virtual {p0, p2}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->setServiceToBackground(Z)V
 
-    .line 254
+    .line 258
     invoke-virtual {p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->canStopService()Z
 
     move-result p1
 
     if-eqz p1, :cond_5
 
-    .line 258
+    .line 262
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mServiceWrapper:Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;->stopSelf()V
@@ -1118,30 +1122,30 @@
     :cond_3
     const-string v0, "com.sonyericsson.music.service.internal.CLEAR_ARTDECODER"
 
-    .line 262
+    .line 266
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 263
+    .line 267
     invoke-static {}, Lcom/sonyericsson/music/artdecoder/ArtDecoder;->clearDefaultCache()V
 
-    .line 265
+    .line 269
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {p1, p2}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->onUpdateArt(Lcom/sonyericsson/music/common/Track;)V
 
     goto :goto_1
 
-    .line 267
+    .line 271
     :cond_4
     iget-object p2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {p2, p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->performAction(Landroid/content/Intent;)V
 
-    .line 271
+    .line 275
     :cond_5
     :goto_1
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHandler:Landroid/os/Handler;
@@ -1152,14 +1156,14 @@
 
     const-string p1, "com.sonyericsson.music.service.internal.DISMISS"
 
-    .line 272
+    .line 276
     invoke-virtual {p1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_6
 
-    .line 273
+    .line 277
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHandler:Landroid/os/Handler;
 
     iget-object p2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mShutdownRunnable:Ljava/lang/Runnable;
@@ -1177,15 +1181,15 @@
 .method public onTaskRemoved(Landroid/content/Intent;)V
     .locals 0
 
-    .line 346
+    .line 350
     invoke-super {p0, p1}, Landroid/app/Service;->onTaskRemoved(Landroid/content/Intent;)V
 
-    .line 348
+    .line 352
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->pause()V
 
-    .line 349
+    .line 353
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mServiceWrapper:Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;->stopSelf()V
@@ -1196,14 +1200,14 @@
 .method public onUnbind(Landroid/content/Intent;)Z
     .locals 3
 
-    .line 384
+    .line 388
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "android.intent.action.MAIN"
 
-    .line 386
+    .line 390
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1212,7 +1216,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 387
+    .line 391
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlaybackBinding:Z
 
     goto :goto_0
@@ -1220,14 +1224,14 @@
     :cond_0
     const-string v1, "com.sonyericsson.music.PROXY_SERVICE_BINDING_ACTION"
 
-    .line 388
+    .line 392
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 389
+    .line 393
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mProxyServiceBinding:Z
 
     goto :goto_0
@@ -1235,20 +1239,20 @@
     :cond_1
     const-string v1, "android.media.browse.MediaBrowserService"
 
-    .line 390
+    .line 394
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 391
+    .line 395
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaBrowserServiceBinding:Z
 
-    .line 392
+    .line 396
     invoke-super {p0, p1}, Landroid/app/Service;->onUnbind(Landroid/content/Intent;)Z
 
-    .line 395
+    .line 399
     :cond_2
     :goto_0
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHandler:Landroid/os/Handler;
@@ -1257,7 +1261,7 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 397
+    .line 401
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mShutdownRunnable:Ljava/lang/Runnable;
@@ -1274,7 +1278,7 @@
 .method public requestShutdown()V
     .locals 4
 
-    .line 521
+    .line 527
     invoke-virtual {p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->canStopService()Z
 
     move-result v0
@@ -1283,22 +1287,22 @@
 
     const/4 v0, 0x1
 
-    .line 522
+    .line 528
     invoke-virtual {p0, v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->setServiceToBackground(Z)V
 
     const/4 v0, 0x0
 
-    .line 525
+    .line 531
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHasEverBeenPlaying:Z
 
-    .line 527
+    .line 533
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mShutdownRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 528
+    .line 534
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mShutdownRunnable:Ljava/lang/Runnable;
@@ -1314,23 +1318,28 @@
 .method public setServiceToBackground(Z)V
     .locals 2
 
+    .line 509
+    sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_S_API:Z
+
+    if-nez v0, :cond_1
+
     if-eqz p1, :cond_0
 
-    .line 506
+    .line 511
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mServiceWrapper:Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;->stopForeground(Z)V
 
-    .line 507
+    .line 512
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mNotifier:Lcom/sonyericsson/music/proxyservice/Notifier;
 
     invoke-virtual {p1, p0}, Lcom/sonyericsson/music/proxyservice/Notifier;->clearNotification(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 509
+    .line 514
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mServiceWrapper:Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;
 
@@ -1338,10 +1347,11 @@
 
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;->stopForeground(Z)V
 
-    .line 510
+    .line 515
     invoke-virtual {p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->delayedNotificationAutoDismiss()V
 
-    .line 513
+    .line 519
+    :cond_1
     :goto_0
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -1349,21 +1359,21 @@
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
-    .line 514
+    .line 520
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mTimedWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const-wide/16 v0, 0x1388
 
     invoke-virtual {p1, v0, v1}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 515
+    .line 521
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {p1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
@@ -1372,10 +1382,10 @@
 
     const/4 v0, 0x1
 
-    .line 481
+    .line 485
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mHasEverBeenPlaying:Z
 
-    .line 483
+    .line 487
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mServiceWrapper:Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;
 
     new-instance v1, Landroid/content/Intent;
@@ -1386,22 +1396,22 @@
 
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;->startService(Landroid/content/Intent;)V
 
-    .line 487
+    .line 491
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mServiceWrapper:Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1, p1}, Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;->startForeground(ILandroid/app/Notification;)V
 
-    .line 488
+    .line 492
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mNotifier:Lcom/sonyericsson/music/proxyservice/Notifier;
 
     invoke-virtual {p1, v1}, Lcom/sonyericsson/music/proxyservice/Notifier;->registerNotificationId(I)V
 
-    .line 490
+    .line 494
     invoke-virtual {p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->cancelDelayNotificationAutoDismiss()V
 
-    .line 493
+    .line 497
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {p1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -1410,7 +1420,7 @@
 
     if-nez p1, :cond_0
 
-    .line 494
+    .line 498
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {p1}, Landroid/os/PowerManager$WakeLock;->acquire()V
@@ -1418,7 +1428,7 @@
     :cond_0
     const-string p1, "SemcMusicPlayer"
 
-    .line 496
+    .line 500
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

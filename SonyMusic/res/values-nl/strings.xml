@@ -279,9 +279,12 @@ De applicatie Muziek werkt mogelijk niet correct zonder de vereiste toegang."</s
     <string name="music_delete_failed_one_or_many">Sommige items zijn niet verwijderd</string>
     <string name="music_delete_playlist_question">%1$s verwijderen? Dit heeft geen invloed op de inhoud van de afspeellijst.</string>
     <string name="music_delete_question">%1$s uit opslag verwijderen?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"De app Muziek voert een achtergrondscan uit om de database opnieuw samen te stellen.
+Deze scan kan meer dan 10 minuten duren afhankelijk van het aantal nummers. Nummers en playlists worden pas correct weergegeven of afgespeeld na de scan."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Om de SD-kaart als dataopslag te gebruiken, moet u op het volgende scherm toestemming verlenen voor toegang tot de SD-kaart</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Tik op OPNIEUW PROBEREN om het nog een keer te proberen of tik op ANNULEREN om opnieuw te beginnen bij het begin.</string>
     <string name="music_dialog_button_next_txt">Volgende</string>
+    <string name="music_dialog_title_bg_scan_notice">Kennisgeving</string>
     <string name="music_dialog_title_sd_permission_access_txt">Toestemming nodig voor toegang tot SD-kaart</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Geen toestemming verleend voor toegang tot SD-kaart</string>
     <string name="music_download">Downloaden</string>
@@ -556,7 +559,7 @@ Toegang tot audio-inhoud op uw apparaat"</string>
     <string name="personal_data_collection_dialog_title">Persoonlijke gegevens</string>
     <string name="personal_data_collection_screen_button_negative">NIET NU</string>
     <string name="personal_data_collection_screen_button_positive">AKKOORD</string>
-    <string name="personal_data_collection_screen_fine_print">Sony verzamelt en koppelt uw <a href="entrance://personaldata">persoonlijke gegevens</a> om de service te verbeteren. Sony verwerkt uw gegevens volgens ons <a href="http://sonymobile.com/privacy">Privacybeleid</a></string>
+    <string name="personal_data_collection_screen_fine_print">Sony verzamelt en koppelt uw <a href="entrance://personaldata">persoonlijke gegevens</a> om de service te verbeteren. Sony verwerkt uw gegevens volgens ons <a href="https://www.sonymobile.com/privacy">Privacybeleid</a></string>
     <string name="personal_data_collection_screen_fine_print_us">Sony verzamelt en koppelt uw <a href="entrance://personaldata">persoonlijke gegevens</a> om de service te verbeteren. Sony verwerkt uw gegevens volgens ons <a href="https://www.sonymobile.com/us/legal/privacy">Privacybeleid</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Privacyverklaring voor Californië</a>)</string>
     <string name="personal_data_collection_screen_text">Help ons de applicatie Muziek te verbeteren door uw luistergedrag te delen met Sony.</string>
     <string name="play_queue_open">Openen</string>

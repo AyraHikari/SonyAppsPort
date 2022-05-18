@@ -24,13 +24,13 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 170
+    .line 175
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 171
+    .line 176
     iput-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mContext:Landroid/content/Context;
 
-    .line 172
+    .line 177
     new-instance v0, Landroid/widget/RemoteViews;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -49,14 +49,14 @@
 .method private static final isRtlText(Ljava/lang/String;)Z
     .locals 2
 
-    .line 339
+    .line 344
     new-instance v0, Ljava/text/Bidi;
 
     const/4 v1, -0x1
 
     invoke-direct {v0, p0, v1}, Ljava/text/Bidi;-><init>(Ljava/lang/String;I)V
 
-    .line 340
+    .line 345
     invoke-virtual {v0}, Ljava/text/Bidi;->isRightToLeft()Z
 
     move-result p0
@@ -69,7 +69,7 @@
 .method public build()Landroid/widget/RemoteViews;
     .locals 1
 
-    .line 335
+    .line 340
     iget-object v0, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     return-object v0
@@ -82,7 +82,7 @@
 
     if-nez p1, :cond_0
 
-    .line 184
+    .line 189
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     const/4 v1, 0x4
@@ -91,7 +91,7 @@
 
     goto :goto_0
 
-    .line 186
+    .line 191
     :cond_0
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
@@ -99,7 +99,7 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 187
+    .line 192
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     const-string v2, "setImageBitmap"
@@ -113,7 +113,7 @@
 .method public setBufferingSpinnerState(Z)Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;
     .locals 4
 
-    .line 290
+    .line 295
     iget-object v0, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     const-string v1, "setEnabled"
@@ -128,7 +128,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 292
+    .line 297
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     const/4 v1, 0x0
@@ -137,7 +137,7 @@
 
     goto :goto_0
 
-    .line 294
+    .line 299
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
@@ -152,7 +152,7 @@
 .method public setPlayStatus(Z)Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;
     .locals 3
 
-    .line 220
+    .line 225
     iget-object v0, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -163,7 +163,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 223
+    .line 228
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     const v2, 0x7f080208
@@ -172,14 +172,14 @@
 
     const p1, 0x7f10006b
 
-    .line 225
+    .line 230
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 227
+    .line 232
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
@@ -189,12 +189,12 @@
 
     const p1, 0x7f10006c
 
-    .line 229
+    .line 234
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 231
+    .line 236
     :goto_0
     iget-object v0, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
@@ -212,21 +212,21 @@
 
     if-nez p1, :cond_0
 
-    .line 200
+    .line 205
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     const/16 v2, 0x8
 
     invoke-virtual {p1, v1, v2}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 201
+    .line 206
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     invoke-virtual {p1, v0, v2}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     goto :goto_0
 
-    .line 203
+    .line 208
     :cond_0
     iget-object v2, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
@@ -234,14 +234,14 @@
 
     invoke-virtual {v2, v1, v3, p1}, Landroid/widget/RemoteViews;->setBitmap(ILjava/lang/String;Landroid/graphics/Bitmap;)V
 
-    .line 204
+    .line 209
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     const/4 v2, 0x0
 
     invoke-virtual {p1, v1, v2}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 205
+    .line 210
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     const/4 v1, 0x4
@@ -255,19 +255,19 @@
 .method public setTrack(Ljava/lang/String;Ljava/lang/String;)Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;
     .locals 6
 
-    .line 245
+    .line 250
     iget-object v0, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/sonyericsson/music/common/StringUtils;->replaceUnknownArtistWithLocalizedString(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 253
+    .line 258
     invoke-static {p1}, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->isRtlText(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 255
+    .line 260
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -282,30 +282,30 @@
 
     if-eqz v1, :cond_0
 
-    .line 256
+    .line 261
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     invoke-virtual {p1, v3, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 257
+    .line 262
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     invoke-virtual {p1, v2, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     goto :goto_2
 
-    .line 259
+    .line 264
     :cond_0
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     invoke-virtual {v1, v3, p1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 260
+    .line 265
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     invoke-virtual {v1, v2, p1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 261
+    .line 266
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     if-eqz v0, :cond_1
@@ -320,7 +320,7 @@
     :goto_0
     invoke-virtual {p1, v3, v1}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 263
+    .line 268
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     if-nez v0, :cond_2
@@ -335,7 +335,7 @@
     :goto_1
     invoke-virtual {p1, v2, v0}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 267
+    .line 272
     :goto_2
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -347,19 +347,19 @@
 
     if-eqz p1, :cond_3
 
-    .line 268
+    .line 273
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     invoke-virtual {p1, v1, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 269
+    .line 274
     iget-object p1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     invoke-virtual {p1, v0, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     goto :goto_4
 
-    .line 271
+    .line 276
     :cond_3
     invoke-static {p2}, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->isRtlText(Ljava/lang/String;)Z
 
@@ -369,17 +369,17 @@
 
     move-result-object p1
 
-    .line 272
+    .line 277
     iget-object v2, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     invoke-virtual {v2, v1, p2}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 273
+    .line 278
     iget-object v2, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     invoke-virtual {v2, v0, p2}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 274
+    .line 279
     iget-object p2, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -398,7 +398,7 @@
     :goto_3
     invoke-virtual {p2, v0, v2}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 276
+    .line 281
     iget-object p2, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -419,7 +419,7 @@
 .method public setupIntents()Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;
     .locals 4
 
-    .line 309
+    .line 314
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mContext:Landroid/content/Context;
@@ -432,10 +432,10 @@
 
     const/4 v2, 0x1
 
-    .line 310
+    .line 315
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 311
+    .line 316
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
@@ -444,7 +444,7 @@
 
     invoke-static {v1, v2, v3, v0}, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager;->access$000(Landroid/content/Context;Landroid/widget/RemoteViews;ILandroid/content/Intent;)V
 
-    .line 315
+    .line 320
     iget-object v0, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
@@ -455,7 +455,7 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager;->access$100(Landroid/content/Context;Landroid/widget/RemoteViews;II)V
 
-    .line 319
+    .line 324
     iget-object v0, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
@@ -466,7 +466,7 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager;->access$100(Landroid/content/Context;Landroid/widget/RemoteViews;II)V
 
-    .line 323
+    .line 328
     iget-object v0, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;

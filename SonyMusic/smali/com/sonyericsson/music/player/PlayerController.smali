@@ -230,7 +230,7 @@
     .line 128
     iput v1, p0, Lcom/sonyericsson/music/player/PlayerController;->mRefreshTriesInPausedState:I
 
-    .line 730
+    .line 739
     new-instance v1, Lcom/sonyericsson/music/player/PlayerController$3;
 
     invoke-direct {v1, p0}, Lcom/sonyericsson/music/player/PlayerController$3;-><init>(Lcom/sonyericsson/music/player/PlayerController;)V
@@ -321,17 +321,17 @@
 
     const/4 v0, -0x1
 
-    .line 602
+    .line 611
     iput v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPendingPlayQueuePosition:I
 
     const/4 v0, 0x0
 
-    .line 603
+    .line 612
     iput v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPendingPlaybackPos:I
 
     const/4 v0, 0x1
 
-    .line 604
+    .line 613
     iput-boolean v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPendingPlayQueuePositionCommited:Z
 
     return-void
@@ -340,33 +340,33 @@
 .method private commitPendingPlayQueuePosition(Z)V
     .locals 4
 
-    .line 576
+    .line 585
     iget v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPendingPlayQueuePosition:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_2
 
-    .line 577
+    .line 586
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/player/PlayerController;->mCommitPendingPlayQueuePositionRunnable:Lcom/sonyericsson/music/player/PlayerController$CommitPendingPlayQueuePositionRunnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 579
+    .line 588
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->isServiceSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 580
+    .line 589
     iget-boolean v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPendingPlayQueuePositionCommited:Z
 
     if-nez v0, :cond_2
 
-    .line 581
+    .line 590
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mServiceWrapper:Lcom/sonyericsson/music/player/MediaPlaybackWrapper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -379,7 +379,7 @@
 
     if-nez p1, :cond_0
 
-    .line 582
+    .line 591
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->getPlayerState()Lcom/sonyericsson/music/player/PlayerState;
 
     move-result-object p1
@@ -393,14 +393,14 @@
     :cond_0
     const/4 p1, 0x1
 
-    .line 581
+    .line 590
     :goto_0
     invoke-virtual {v0, v1, v2, p1}, Lcom/sonyericsson/music/player/MediaPlaybackWrapper;->setQueuePosition(Landroid/content/Context;IZ)V
 
-    .line 583
+    .line 592
     iput-boolean v3, p0, Lcom/sonyericsson/music/player/PlayerController;->mPendingPlayQueuePositionCommited:Z
 
-    .line 592
+    .line 601
     iget-object p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mClearPendingStatesRunnable:Ljava/lang/Runnable;
@@ -411,7 +411,7 @@
 
     goto :goto_1
 
-    .line 596
+    .line 605
     :cond_1
     invoke-direct {p0}, Lcom/sonyericsson/music/player/PlayerController;->clearPendingStates()V
 
@@ -431,7 +431,7 @@
         }
     .end annotation
 
-    .line 503
+    .line 512
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -440,7 +440,7 @@
 
     move-result-object v3
 
-    .line 504
+    .line 513
     new-instance v0, Landroidx/loader/content/CursorLoader;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -465,7 +465,7 @@
 .method private dispatchChanges(Lcom/sonyericsson/music/player/PlayerState;Lcom/sonyericsson/music/player/PlayerState;)V
     .locals 4
 
-    .line 648
+    .line 657
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->isPlaying()Z
 
     move-result v0
@@ -476,12 +476,12 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 649
+    .line 658
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v0, p2}, Lcom/sonyericsson/music/player/PlayerStateObservable;->dispatchIsPlayingChanged(Lcom/sonyericsson/music/player/PlayerState;)V
 
-    .line 651
+    .line 660
     :cond_0
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->getLoadingState()Lcom/sonyericsson/music/player/PlayerState$LoadingState;
 
@@ -493,18 +493,18 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 652
+    .line 661
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v0, p2}, Lcom/sonyericsson/music/player/PlayerStateObservable;->dispatchLoadingStateChanged(Lcom/sonyericsson/music/player/PlayerState;)V
 
-    .line 654
+    .line 663
     :cond_1
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->getCurrentTrack()Lcom/sonyericsson/music/common/Track;
 
     move-result-object v0
 
-    .line 655
+    .line 664
     invoke-virtual {p2}, Lcom/sonyericsson/music/player/PlayerState;->getCurrentTrack()Lcom/sonyericsson/music/common/Track;
 
     move-result-object v1
@@ -515,7 +515,7 @@
 
     goto :goto_0
 
-    .line 656
+    .line 665
     :cond_2
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/common/Track;->equalMetadata(Ljava/lang/Object;)Z
 
@@ -523,13 +523,13 @@
 
     if-nez v2, :cond_3
 
-    .line 657
+    .line 666
     :goto_0
     iget-object v2, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v2, p2}, Lcom/sonyericsson/music/player/PlayerStateObservable;->dispatchCurrentTrackChanged(Lcom/sonyericsson/music/player/PlayerState;)V
 
-    .line 659
+    .line 668
     :cond_3
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->getCurrentTrackColor()I
 
@@ -541,12 +541,12 @@
 
     if-eq v2, v3, :cond_4
 
-    .line 660
+    .line 669
     iget-object v2, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v2, p2}, Lcom/sonyericsson/music/player/PlayerStateObservable;->dispatchCurrentTrackColorChanged(Lcom/sonyericsson/music/player/PlayerState;)V
 
-    .line 662
+    .line 671
     :cond_4
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->getRepeatMode()I
 
@@ -558,12 +558,12 @@
 
     if-eq v2, v3, :cond_5
 
-    .line 663
+    .line 672
     iget-object v2, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v2, p2}, Lcom/sonyericsson/music/player/PlayerStateObservable;->dispatchRepeatModeChanged(Lcom/sonyericsson/music/player/PlayerState;)V
 
-    .line 665
+    .line 674
     :cond_5
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->isShuffle()Z
 
@@ -575,12 +575,12 @@
 
     if-eq v2, v3, :cond_6
 
-    .line 666
+    .line 675
     iget-object v2, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v2, p2}, Lcom/sonyericsson/music/player/PlayerStateObservable;->dispatchShuffleChanged(Lcom/sonyericsson/music/player/PlayerState;)V
 
-    .line 668
+    .line 677
     :cond_6
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->getPlaybackPosition()I
 
@@ -592,12 +592,12 @@
 
     if-eq v2, v3, :cond_7
 
-    .line 669
+    .line 678
     iget-object v2, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v2, p2}, Lcom/sonyericsson/music/player/PlayerStateObservable;->dispatchPlaybackPositionChanged(Lcom/sonyericsson/music/player/PlayerState;)V
 
-    .line 671
+    .line 680
     :cond_7
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->isInPlayQueueMode()Z
 
@@ -609,12 +609,12 @@
 
     if-eq v2, v3, :cond_8
 
-    .line 672
+    .line 681
     iget-object v2, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v2, p2}, Lcom/sonyericsson/music/player/PlayerStateObservable;->dispatchIsInPlayQueueModeChanged(Lcom/sonyericsson/music/player/PlayerState;)V
 
-    .line 674
+    .line 683
     :cond_8
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->getRouteId()Ljava/lang/String;
 
@@ -630,12 +630,12 @@
 
     if-nez v2, :cond_9
 
-    .line 675
+    .line 684
     iget-object v2, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v2, p2}, Lcom/sonyericsson/music/player/PlayerStateObservable;->dispatchRouteIdChanged(Lcom/sonyericsson/music/player/PlayerState;)V
 
-    .line 680
+    .line 689
     :cond_9
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->getPlayQueueCursor()Landroid/database/Cursor;
 
@@ -647,7 +647,7 @@
 
     if-ne v2, v3, :cond_a
 
-    .line 681
+    .line 690
     invoke-direct {p0, v0, v1}, Lcom/sonyericsson/music/player/PlayerController;->isSameMetadata(Lcom/sonyericsson/music/common/Track;Lcom/sonyericsson/music/common/Track;)Z
 
     move-result v0
@@ -664,13 +664,13 @@
 
     if-eq v0, v1, :cond_b
 
-    .line 682
+    .line 691
     :cond_a
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v0, p2}, Lcom/sonyericsson/music/player/PlayerStateObservable;->dispatchPlayQueueChanged(Lcom/sonyericsson/music/player/PlayerState;)V
 
-    .line 684
+    .line 693
     :cond_b
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->getDelayedPauseEndMillis()J
 
@@ -684,7 +684,7 @@
 
     if-eqz p1, :cond_c
 
-    .line 685
+    .line 694
     iget-object p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {p1, p2}, Lcom/sonyericsson/music/player/PlayerStateObservable;->dispatchDelayedPauseEndMillisChanged(Lcom/sonyericsson/music/player/PlayerState;)V
@@ -696,24 +696,24 @@
 .method private getMusicActivity()Lcom/sonyericsson/music/MusicActivity;
     .locals 4
 
-    .line 470
+    .line 479
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 471
+    .line 480
     instance-of v1, v0, Lcom/sonyericsson/music/MusicActivity;
 
     if-eqz v1, :cond_0
 
-    .line 474
+    .line 483
     check-cast v0, Lcom/sonyericsson/music/MusicActivity;
 
     return-object v0
 
-    .line 472
+    .line 481
     :cond_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -739,14 +739,14 @@
 .method private getPlayQueuePos(Lcom/sonyericsson/music/player/PlayerState;)I
     .locals 0
 
-    .line 694
+    .line 703
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerState;->getCurrentTrack()Lcom/sonyericsson/music/common/Track;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 696
+    .line 705
     invoke-virtual {p1}, Lcom/sonyericsson/music/common/Track;->getPlayqueuePosition()I
 
     move-result p1
@@ -812,7 +812,7 @@
 
     goto :goto_0
 
-    .line 690
+    .line 699
     :cond_1
     invoke-virtual {p1, p2}, Lcom/sonyericsson/music/common/Track;->equalMetadata(Ljava/lang/Object;)Z
 
@@ -825,7 +825,7 @@
 .method private registerServiceIntents()V
     .locals 5
 
-    .line 700
+    .line 709
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -834,100 +834,100 @@
 
     move-result-object v0
 
-    .line 701
+    .line 710
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 702
+    .line 711
     invoke-static {v0}, Lcom/sonyericsson/music/playbackcontrol/PlaybackControlStateIntents;->getTrackPreparedIntent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 703
+    .line 712
     invoke-static {v0}, Lcom/sonyericsson/music/playbackcontrol/PlaybackControlStateIntents;->getTrackCompletedIntent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 704
+    .line 713
     invoke-static {v0}, Lcom/sonyericsson/music/playbackcontrol/PlaybackControlStateIntents;->getTrackStartedIntent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 705
+    .line 714
     invoke-static {v0}, Lcom/sonyericsson/music/playbackcontrol/PlaybackControlStateIntents;->getTrackSkippedIntent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 706
+    .line 715
     invoke-static {v0}, Lcom/sonyericsson/music/playbackcontrol/PlaybackControlStateIntents;->getTrackPausedIntent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 707
+    .line 716
     invoke-static {v0}, Lcom/sonyericsson/music/playbackcontrol/PlaybackControlStateIntents;->getTrackSeekedIntent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 708
+    .line 717
     invoke-static {v0}, Lcom/sonyericsson/music/playbackcontrol/PlaybackControlStateIntents;->getPlaybackErrorIntent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 709
+    .line 718
     invoke-static {v0}, Lcom/sonyericsson/music/playbackcontrol/PlaybackControlStateIntents;->getShuffleChangedIntent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 710
+    .line 719
     invoke-static {v0}, Lcom/sonyericsson/music/playbackcontrol/PlaybackControlStateIntents;->getRepeatModeChangedIntent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 711
+    .line 720
     invoke-static {v0}, Lcom/sonyericsson/music/playbackcontrol/PlaybackControlStateIntents;->getBufferingUpdatedIntent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 712
+    .line 721
     invoke-static {v0}, Lcom/sonyericsson/music/playbackcontrol/PlaybackControlStateIntents;->getTrackToBePreparedIntent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 714
+    .line 723
     sget-object v2, Lcom/sonyericsson/music/common/PermissionUtils$BroadcastPriorities;->BROADCAST_PRIORITY_PLAYER_CONTROLLER_BUFFERING:Lcom/sonyericsson/music/common/PermissionUtils$BroadcastPriorities;
 
-    .line 715
+    .line 724
     invoke-virtual {v2}, Lcom/sonyericsson/music/common/PermissionUtils$BroadcastPriorities;->getPriority()I
 
     move-result v2
 
-    .line 714
+    .line 723
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 717
+    .line 726
     iget-object v2, p0, Lcom/sonyericsson/music/player/PlayerController;->mMediaPlaybackListener:Landroid/content/BroadcastReceiver;
 
     const-string v3, "com.sonyericsson.music.permission.BROADCAST"
@@ -938,7 +938,7 @@
 
     const/4 v0, 0x1
 
-    .line 720
+    .line 729
     iput-boolean v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mServiceIntentsRegistered:Z
 
     return-void
@@ -947,26 +947,26 @@
 .method private schedulePendingPlayQueuePosition(IZ)V
     .locals 3
 
-    .line 566
+    .line 575
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/player/PlayerController;->mCommitPendingPlayQueuePositionRunnable:Lcom/sonyericsson/music/player/PlayerController$CommitPendingPlayQueuePositionRunnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 567
+    .line 576
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/player/PlayerController;->mClearPendingStatesRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 568
+    .line 577
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mCommitPendingPlayQueuePositionRunnable:Lcom/sonyericsson/music/player/PlayerController$CommitPendingPlayQueuePositionRunnable;
 
     invoke-virtual {v0, p2}, Lcom/sonyericsson/music/player/PlayerController$CommitPendingPlayQueuePositionRunnable;->forcePlay(Z)V
 
-    .line 569
+    .line 578
     iget-object p2, p0, Lcom/sonyericsson/music/player/PlayerController;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mCommitPendingPlayQueuePositionRunnable:Lcom/sonyericsson/music/player/PlayerController$CommitPendingPlayQueuePositionRunnable;
@@ -975,15 +975,15 @@
 
     invoke-virtual {p2, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 570
+    .line 579
     iput p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mPendingPlayQueuePosition:I
 
     const/4 p1, 0x0
 
-    .line 571
+    .line 580
     iput-boolean p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mPendingPlayQueuePositionCommited:Z
 
-    .line 572
+    .line 581
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->refreshState()V
 
     return-void
@@ -992,7 +992,7 @@
 .method private schedulePositionUpdate(Z)V
     .locals 3
 
-    .line 632
+    .line 641
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/player/PlayerController;->mPositionRefreshRunnable:Ljava/lang/Runnable;
@@ -1005,10 +1005,10 @@
 
     const/4 p1, 0x5
 
-    .line 634
+    .line 643
     iput p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mRefreshTriesInPausedState:I
 
-    .line 635
+    .line 644
     iget-object p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/sonyericsson/music/player/PlayerController;->mPositionRefreshRunnable:Ljava/lang/Runnable;
@@ -1017,7 +1017,7 @@
 
     goto :goto_0
 
-    .line 636
+    .line 645
     :cond_0
     iget p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mRefreshTriesInPausedState:I
 
@@ -1025,10 +1025,10 @@
 
     add-int/lit8 p1, p1, -0x1
 
-    .line 638
+    .line 647
     iput p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mRefreshTriesInPausedState:I
 
-    .line 639
+    .line 648
     iget-object p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/sonyericsson/music/player/PlayerController;->mPositionRefreshRunnable:Ljava/lang/Runnable;
@@ -1043,12 +1043,12 @@
 .method private scheduleRelativePendingPlayQueuePosition(I)V
     .locals 2
 
-    .line 557
+    .line 566
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->getPlayerState()Lcom/sonyericsson/music/player/PlayerState;
 
     move-result-object v0
 
-    .line 558
+    .line 567
     invoke-virtual {v0}, Lcom/sonyericsson/music/player/PlayerState;->getCurrentTrack()Lcom/sonyericsson/music/common/Track;
 
     move-result-object v1
@@ -1057,7 +1057,7 @@
 
     move-result v1
 
-    .line 559
+    .line 568
     invoke-virtual {v0}, Lcom/sonyericsson/music/player/PlayerState;->getPlayQueueCursor()Landroid/database/Cursor;
 
     move-result-object v0
@@ -1068,7 +1068,7 @@
 
     add-int/2addr v1, p1
 
-    .line 561
+    .line 570
     rem-int/2addr v1, v0
 
     add-int/2addr v1, v0
@@ -1077,7 +1077,7 @@
 
     const/4 p1, 0x0
 
-    .line 562
+    .line 571
     invoke-direct {p0, v1, p1}, Lcom/sonyericsson/music/player/PlayerController;->schedulePendingPlayQueuePosition(IZ)V
 
     return-void
@@ -1086,12 +1086,12 @@
 .method private unregisterServiceIntents()V
     .locals 2
 
-    .line 724
+    .line 733
     iget-boolean v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mServiceIntentsRegistered:Z
 
     if-eqz v0, :cond_0
 
-    .line 725
+    .line 734
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -1106,7 +1106,7 @@
 
     const/4 v0, 0x0
 
-    .line 726
+    .line 735
     iput-boolean v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mServiceIntentsRegistered:Z
 
     :cond_0
@@ -1116,14 +1116,14 @@
 .method private unschedulePendingPlayQueuePosition()V
     .locals 2
 
-    .line 608
+    .line 617
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/player/PlayerController;->mCommitPendingPlayQueuePositionRunnable:Lcom/sonyericsson/music/player/PlayerController$CommitPendingPlayQueuePositionRunnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 609
+    .line 618
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/player/PlayerController;->mClearPendingStatesRunnable:Ljava/lang/Runnable;
@@ -1132,17 +1132,17 @@
 
     const/4 v0, -0x1
 
-    .line 610
+    .line 619
     iput v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPendingPlayQueuePosition:I
 
     const/4 v0, 0x0
 
-    .line 611
+    .line 620
     iput v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPendingPlaybackPos:I
 
     const/4 v0, 0x1
 
-    .line 612
+    .line 621
     iput-boolean v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPendingPlayQueuePositionCommited:Z
 
     return-void
@@ -1151,7 +1151,7 @@
 .method private unschedulePositionUpdate()V
     .locals 2
 
-    .line 644
+    .line 653
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/player/PlayerController;->mPositionRefreshRunnable:Ljava/lang/Runnable;
@@ -1240,7 +1240,7 @@
 .method public getPlayerArtDecoder()Lcom/sonyericsson/music/player/PlayerArtDecoder;
     .locals 1
 
-    .line 490
+    .line 499
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayerArtDecoder:Lcom/sonyericsson/music/player/PlayerArtDecoder;
 
     return-object v0
@@ -1272,13 +1272,20 @@
 
     goto :goto_1
 
-    .line 407
+    .line 410
     :pswitch_0
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_3
+
+    .line 411
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->play()V
 
     goto :goto_0
 
-    .line 420
+    .line 429
     :pswitch_1
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
 
@@ -1292,13 +1299,13 @@
 
     const/4 v1, 0x1
 
-    .line 421
+    .line 430
     :cond_0
     invoke-virtual {p0, v1}, Lcom/sonyericsson/music/player/PlayerController;->startWinding(Z)V
 
     goto :goto_0
 
-    .line 422
+    .line 431
     :cond_1
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
 
@@ -1306,32 +1313,60 @@
 
     if-ne p1, v2, :cond_3
 
-    .line 423
+    .line 432
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->stopWinding()V
 
     goto :goto_0
 
-    .line 415
+    .line 422
     :pswitch_2
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_3
+
+    .line 423
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->previous()V
 
     goto :goto_0
 
-    .line 411
+    .line 416
     :pswitch_3
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_3
+
+    .line 417
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->next()V
 
     goto :goto_0
 
-    .line 403
+    .line 404
     :pswitch_4
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_3
+
+    .line 405
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->pause()V
 
     goto :goto_0
 
-    .line 398
+    .line 397
     :cond_2
     :pswitch_5
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_3
+
+    .line 398
     iget-object p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mHeadsetHookHandler:Lcom/sonyericsson/music/common/CustomHeadsetHookHandler;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/common/CustomHeadsetHookHandler;->handleHeadsetHook()V
@@ -1465,10 +1500,10 @@
 .method public onAttach(Landroid/app/Activity;)V
     .locals 1
 
-    .line 510
+    .line 519
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onAttach(Landroid/app/Activity;)V
 
-    .line 511
+    .line 520
     new-instance v0, Lcom/sonyericsson/music/player/PlayerArtDecoder;
 
     invoke-direct {v0, p1}, Lcom/sonyericsson/music/player/PlayerArtDecoder;-><init>(Landroid/content/Context;)V
@@ -1481,17 +1516,17 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 497
+    .line 506
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 498
+    .line 507
     invoke-direct {p0}, Lcom/sonyericsson/music/player/PlayerController;->createLoader()Landroidx/loader/content/Loader;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayQueueLoader:Landroidx/loader/content/Loader;
 
-    .line 499
+    .line 508
     iget-object p1, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayQueueLoader:Landroidx/loader/content/Loader;
 
     const/4 v0, 0x0
@@ -1504,30 +1539,30 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 538
+    .line 547
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
-    .line 539
+    .line 548
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/player/PlayerStateObservable;->unregisterAll()V
 
-    .line 540
+    .line 549
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayQueueLoader:Landroidx/loader/content/Loader;
 
     invoke-virtual {v0, p0}, Landroidx/loader/content/Loader;->unregisterListener(Landroidx/loader/content/Loader$OnLoadCompleteListener;)V
 
-    .line 541
+    .line 550
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayQueueLoader:Landroidx/loader/content/Loader;
 
     invoke-virtual {v0}, Landroidx/loader/content/Loader;->reset()V
 
     const/4 v0, 0x0
 
-    .line 542
+    .line 551
     iput-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayQueueCursor:Landroid/database/Cursor;
 
-    .line 543
+    .line 552
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->refreshState()V
 
     return-void
@@ -1536,17 +1571,17 @@
 .method public onDetach()V
     .locals 1
 
-    .line 548
+    .line 557
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDetach()V
 
-    .line 549
+    .line 558
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayerArtDecoder:Lcom/sonyericsson/music/player/PlayerArtDecoder;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/player/PlayerArtDecoder;->destroy()V
 
     const/4 v0, 0x0
 
-    .line 550
+    .line 559
     iput-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayerArtDecoder:Lcom/sonyericsson/music/player/PlayerArtDecoder;
 
     return-void
@@ -1555,7 +1590,7 @@
 .method public onHeadsetHookPattern(Lcom/sonyericsson/music/common/CustomHeadsetHookHandler$ClickState;)V
     .locals 1
 
-    .line 437
+    .line 446
     sget-object v0, Lcom/sonyericsson/music/player/PlayerController$4;->$SwitchMap$com$sonyericsson$music$common$CustomHeadsetHookHandler$ClickState:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -1568,19 +1603,19 @@
 
     goto :goto_0
 
-    .line 453
+    .line 462
     :pswitch_0
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->previous()V
 
     goto :goto_0
 
-    .line 446
+    .line 455
     :pswitch_1
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->next()V
 
     goto :goto_0
 
-    .line 439
+    .line 448
     :pswitch_2
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->playPause()V
 
@@ -1608,10 +1643,10 @@
         }
     .end annotation
 
-    .line 516
+    .line 525
     iput-object p2, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayQueueCursor:Landroid/database/Cursor;
 
-    .line 517
+    .line 526
     invoke-virtual {p0}, Lcom/sonyericsson/music/player/PlayerController;->refreshState()V
 
     return-void
@@ -1631,13 +1666,13 @@
 .method public onStart()V
     .locals 1
 
-    .line 522
+    .line 531
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onStart()V
 
-    .line 523
+    .line 532
     invoke-direct {p0}, Lcom/sonyericsson/music/player/PlayerController;->registerServiceIntents()V
 
-    .line 524
+    .line 533
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayQueueLoader:Landroidx/loader/content/Loader;
 
     invoke-virtual {v0}, Landroidx/loader/content/Loader;->startLoading()V
@@ -1648,19 +1683,19 @@
 .method public onStop()V
     .locals 1
 
-    .line 529
+    .line 538
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onStop()V
 
-    .line 530
+    .line 539
     invoke-direct {p0}, Lcom/sonyericsson/music/player/PlayerController;->unregisterServiceIntents()V
 
-    .line 531
+    .line 540
     invoke-direct {p0}, Lcom/sonyericsson/music/player/PlayerController;->unschedulePendingPlayQueuePosition()V
 
-    .line 532
+    .line 541
     invoke-direct {p0}, Lcom/sonyericsson/music/player/PlayerController;->unschedulePositionUpdate()V
 
-    .line 533
+    .line 542
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayQueueLoader:Landroidx/loader/content/Loader;
 
     invoke-virtual {v0}, Landroidx/loader/content/Loader;->stopLoading()V
@@ -2008,10 +2043,10 @@
 .method protected refreshState()V
     .locals 7
 
-    .line 616
+    .line 625
     iget-object v6, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayerState:Lcom/sonyericsson/music/player/PlayerState;
 
-    .line 617
+    .line 626
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mServiceWrapper:Lcom/sonyericsson/music/player/MediaPlaybackWrapper;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/player/MediaPlaybackWrapper;->isServiceSet()Z
@@ -2020,7 +2055,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 618
+    .line 627
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mServiceWrapper:Lcom/sonyericsson/music/player/MediaPlaybackWrapper;
 
     iget-object v1, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayQueueCursor:Landroid/database/Cursor;
@@ -2041,13 +2076,13 @@
 
     goto :goto_0
 
-    .line 621
+    .line 630
     :cond_0
     sget-object v0, Lcom/sonyericsson/music/player/PlayerState;->EMPTY:Lcom/sonyericsson/music/player/PlayerState;
 
     iput-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayerState:Lcom/sonyericsson/music/player/PlayerState;
 
-    .line 627
+    .line 636
     :goto_0
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayerState:Lcom/sonyericsson/music/player/PlayerState;
 
@@ -2057,7 +2092,7 @@
 
     invoke-direct {p0, v0}, Lcom/sonyericsson/music/player/PlayerController;->schedulePositionUpdate(Z)V
 
-    .line 628
+    .line 637
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mPlayerState:Lcom/sonyericsson/music/player/PlayerState;
 
     invoke-direct {p0, v6, v0}, Lcom/sonyericsson/music/player/PlayerController;->dispatchChanges(Lcom/sonyericsson/music/player/PlayerState;Lcom/sonyericsson/music/player/PlayerState;)V
@@ -2068,7 +2103,7 @@
 .method public registerPlayerStateListener(Lcom/sonyericsson/music/player/PlayerStateListener;)V
     .locals 1
 
-    .line 478
+    .line 487
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/Observable;->registerObserver(Ljava/lang/Object;)V
@@ -2356,7 +2391,7 @@
 .method public unregisterPlayerStateListener(Lcom/sonyericsson/music/player/PlayerStateListener;)V
     .locals 1
 
-    .line 482
+    .line 491
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController;->mObservable:Lcom/sonyericsson/music/player/PlayerStateObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/Observable;->unregisterObserver(Ljava/lang/Object;)V

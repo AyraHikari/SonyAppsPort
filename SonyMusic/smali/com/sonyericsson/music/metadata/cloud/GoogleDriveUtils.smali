@@ -364,7 +364,7 @@
     .line 62
     invoke-static {p0, v0}, Lcom/sonyericsson/music/metadata/cloud/GoogleDriveUtils;->deleteAccount(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v0, 0x7f100263
+    const v0, 0x7f100265
 
     .line 65
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

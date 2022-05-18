@@ -28,20 +28,20 @@
 
     move-result-object v0
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
     .line 45
-    invoke-static {v0, p1}, Lcom/sonyericsson/music/common/DBUtils;->getPlaylistName(Landroid/content/ContentResolver;I)Ljava/lang/String;
-
-    move-result-object p2
-
-    .line 48
-    invoke-static {p1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists;->getContentUri(I)Landroid/net/Uri;
+    invoke-static {v0, p2}, Lcom/sonyericsson/music/common/DBUtils;->getPlaylistName(Landroid/content/ContentResolver;I)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 48
+    invoke-static {p2}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists;->getContentUri(I)Landroid/net/Uri;
+
+    move-result-object p2
+
     .line 47
-    invoke-static {p0, p2, p1}, Lcom/sonyericsson/music/delete/DeletePlaylistActivity;->createDeletePlaylistIntent(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;)Landroid/content/Intent;
+    invoke-static {p0, p1, p2}, Lcom/sonyericsson/music/delete/DeletePlaylistActivity;->createDeletePlaylistIntent(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;)Landroid/content/Intent;
 
     move-result-object p1
 
@@ -184,10 +184,10 @@
 
     if-lez v3, :cond_1
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
     .line 95
-    invoke-static {p1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$Members;->getContentUri(I)Landroid/net/Uri;
+    invoke-static {p2}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$Members;->getContentUri(I)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -196,13 +196,13 @@
     :cond_1
     xor-long/2addr p1, v1
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    const/4 p2, -0x1
+    const/4 p1, -0x1
 
-    if-lt p1, p2, :cond_2
+    if-lt p2, p1, :cond_2
 
-    packed-switch p1, :pswitch_data_0
+    packed-switch p2, :pswitch_data_0
 
     goto :goto_0
 
@@ -340,15 +340,15 @@
 
     move-result-object v0
 
-    long-to-int p2, p2
+    long-to-int v1, p2
 
     .line 166
-    invoke-static {p0, p2}, Lcom/sonyericsson/music/common/DBUtils;->getPlaylistName(Landroid/content/ContentResolver;I)Ljava/lang/String;
+    invoke-static {p0, v1}, Lcom/sonyericsson/music/common/DBUtils;->getPlaylistName(Landroid/content/ContentResolver;I)Ljava/lang/String;
 
     move-result-object p0
 
     .line 165
-    invoke-static {p0, v0}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->newInstance(Ljava/lang/String;Landroid/net/Uri;)Landroidx/fragment/app/DialogFragment;
+    invoke-static {p0, v0, p2, p3}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->newInstance(Ljava/lang/String;Landroid/net/Uri;J)Landroidx/fragment/app/DialogFragment;
 
     move-result-object p0
 

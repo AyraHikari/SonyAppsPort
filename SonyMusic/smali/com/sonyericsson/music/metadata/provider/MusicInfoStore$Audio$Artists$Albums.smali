@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1401
+    .line 1407
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,14 +30,14 @@
 .method public static getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
     .locals 2
 
-    .line 1404
+    .line 1410
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 1405
+    .line 1411
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,7 +68,7 @@
 
     return-object p0
 
-    .line 1408
+    .line 1414
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/provider/MediaStore$Audio$Artists$Albums;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
 

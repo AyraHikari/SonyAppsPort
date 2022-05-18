@@ -41,7 +41,7 @@
     .line 151
     iget-object v0, p0, Lcom/sonyericsson/music/MiniPlayerFragment$2;->this$0:Lcom/sonyericsson/music/MiniPlayerFragment;
 
-    const v1, 0x7f10022f
+    const v1, 0x7f100231
 
     invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 

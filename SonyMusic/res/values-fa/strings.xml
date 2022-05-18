@@ -279,9 +279,12 @@
     <string name="music_delete_failed_one_or_many">برخی از موارد حذف نمی شوند</string>
     <string name="music_delete_playlist_question">%1$sحذف شود؟ روی محتوای فهرست پخش اثر ندارد.</string>
     <string name="music_delete_question">%1$s از حافظه حذف شود؟</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"برنامه «موسیقی» اسکن پس‌زمینه را برای بازسازی پایگاه داده موسیقی انجام خواهد داد.
+این اسکن، بسته به تعداد آهنگ‌ها ممکن است بیش از ۱۰ دقیقه طول بکشد. تا زمانی که اسکن پس‌زمینه کامل نشود، آهنگ‌ها و لیست‌های پخش به درستی نمایش داده نمی‌شوند یا پخش نخواهند شد."</string>
     <string name="music_dialog_body_sd_permission_access_txt">برای استفاده از کارت SD به‌عنوان ذخیره‌ساز داده‌ها، لطفاً در صفحه بعدی، مجوز دسترسی به کارت SD را بدهید.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">برای تلاش مجدد، روی «تلاش دوباره» ضربه بزنید یا روی «لغو» ضربه بزنید و دوباره از ابتدا شروع کنید.</string>
     <string name="music_dialog_button_next_txt">بعدی</string>
+    <string name="music_dialog_title_bg_scan_notice">اعلامیه</string>
     <string name="music_dialog_title_sd_permission_access_txt">مجوز دسترسی به کارت SD لازم است</string>
     <string name="music_dialog_title_sd_permission_retry_txt">مجوز دسترسی به کارت SD داده نشده است</string>
     <string name="music_download">دانلود</string>
@@ -556,7 +559,7 @@
     <string name="personal_data_collection_dialog_title">داده شخصی</string>
     <string name="personal_data_collection_screen_button_negative">اکنون خیر</string>
     <string name="personal_data_collection_screen_button_positive">موافقم</string>
-    <string name="personal_data_collection_screen_fine_print">‏Sony برای بهبود این سرویس، <a href="entrance://personaldata">داده‌های شخصی</a> شما را جمع‌آوری و ترکیب می‌کند. Sony داده‌های شما را مطابق با <a href="http://sonymobile.com/privacy">خط مشی حریم خصوصی</a> ما مورد استفاده قرار می‌دهد.</string>
+    <string name="personal_data_collection_screen_fine_print">‏Sony برای بهبود این سرویس، <a href="entrance://personaldata">داده‌های شخصی</a> شما را جمع‌آوری و ترکیب می‌کند. Sony داده‌های شما را مطابق با <a href="https://www.sonymobile.com/privacy">خط مشی حریم خصوصی</a> ما مورد استفاده قرار می‌دهد.</string>
     <string name="personal_data_collection_screen_fine_print_us">‏Sony برای بهبود این سرویس، <a href="entrance://personaldata">داده‌های شخصی</a> شما را جمع‌آوری و ترکیب می‌کند. Sony داده‌های شما را مطابق با <a href="https://www.sonymobile.com/us/legal/privacy">خط مشی حریم خصوصی</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">اعلامیه حریم خصوصی کالیفرنیا</a>) ما مورد استفاده قرار می‌دهد.</string>
     <string name="personal_data_collection_screen_text">موسیقی‌های دلخواه خود را با Sony به اشتراک بگذارید و از این طریق به ما در بهبود برنامه «موسیقی» کمک کنید</string>
     <string name="play_queue_open">باز کردن</string>

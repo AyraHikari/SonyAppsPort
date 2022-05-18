@@ -856,7 +856,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f100244
+    const p2, 0x7f100246
 
     invoke-static {p1, p2, v3}, Lcom/sonyericsson/music/common/MusicToast;->show(Landroid/content/Context;II)V
 
@@ -878,7 +878,7 @@
 
     if-nez p3, :cond_5
 
-    const p2, 0x7f100232
+    const p2, 0x7f100234
 
     .line 436
     invoke-static {p1, p2, v3}, Lcom/sonyericsson/music/common/MusicToast;->show(Landroid/content/Context;II)V
@@ -1450,7 +1450,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100244
+    const v0, 0x7f100246
 
     const/4 v1, 0x1
 
@@ -1920,7 +1920,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f100244
+    const v1, 0x7f100246
 
     invoke-static {p1, v1, v0}, Lcom/sonyericsson/music/common/MusicToast;->show(Landroid/content/Context;II)V
 

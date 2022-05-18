@@ -87,7 +87,7 @@
 
     const-string v1, "download_metadata"
 
-    const v2, 0x7f100198
+    const v2, 0x7f10019a
 
     .line 80
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -117,7 +117,7 @@
 
     const-string v1, "download_music"
 
-    const v2, 0x7f100199
+    const v2, 0x7f10019b
 
     .line 68
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -147,7 +147,7 @@
 
     const-string v1, "playback"
 
-    const v2, 0x7f10019a
+    const v2, 0x7f10019c
 
     .line 55
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;

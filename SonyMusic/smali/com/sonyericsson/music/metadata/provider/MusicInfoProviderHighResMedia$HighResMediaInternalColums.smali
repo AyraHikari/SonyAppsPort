@@ -24,7 +24,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 607
+    .line 622
     invoke-direct {p0}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Columns;-><init>()V
 
     return-void

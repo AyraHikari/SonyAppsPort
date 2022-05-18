@@ -279,9 +279,12 @@
     <string name="music_delete_failed_one_or_many">Bazı öğeler silinemedi</string>
     <string name="music_delete_playlist_question">%1$s silinsin mi? Oynatma listesi içeriği etkilenmez.</string>
     <string name="music_delete_question">%1$s depolamadan silinsin mi?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Müzik uygulaması, bir arka plan taraması gerçekleştirecek.
+Bu tarama, 10 dakikadan uzun sürebilir. Arka plan taraması tamamlanana kadar şarkılar ve çalma listeleri düzgün gösterilmeyebilir veya çalınmayabilir."</string>
     <string name="music_dialog_body_sd_permission_access_txt">SD kartı veri depolaması olarak kullanmak için lütfen bir sonraki ekranda SD karta erişim izni verin.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">"Yeniden denemek için TEKRAR DENE'ye dokunun. Veya İPTAL'e dokunarak baştan başlayın."</string>
     <string name="music_dialog_button_next_txt">İleri</string>
+    <string name="music_dialog_title_bg_scan_notice">Bildirim</string>
     <string name="music_dialog_title_sd_permission_access_txt">SD karta erişim için izin gerekli</string>
     <string name="music_dialog_title_sd_permission_retry_txt">SD karta erişim izni verilmedi</string>
     <string name="music_download">İndir</string>
@@ -556,7 +559,7 @@ Cihazınızdaki ses içeriklerine erişmek için"</string>
     <string name="personal_data_collection_dialog_title">Kişisel veriler</string>
     <string name="personal_data_collection_screen_button_negative">ŞİMDİ DEĞİL</string>
     <string name="personal_data_collection_screen_button_positive">KATILIYORUM</string>
-    <string name="personal_data_collection_screen_fine_print">Sony hizmeti iyileştirmek için <a href="entrance://personaldata">kişisel verilerinizi</a> toplar ve birleştirir. Sony verilerinizi <a href="http://sonymobile.com/privacy">Gizlilik Politikamıza</a> uygun olarak işler</string>
+    <string name="personal_data_collection_screen_fine_print">Sony hizmeti iyileştirmek için <a href="entrance://personaldata">kişisel verilerinizi</a> toplar ve birleştirir. Sony verilerinizi <a href="https://www.sonymobile.com/privacy">Gizlilik Politikamıza</a> uygun olarak işler</string>
     <string name="personal_data_collection_screen_fine_print_us">Sony hizmeti iyileştirmek için <a href="entrance://personaldata">kişisel verilerinizi</a> toplar ve birleştirir. Sony verilerinizi <a href="https://www.sonymobile.com/us/legal/privacy">Gizlilik Politikamıza</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">California Gizlilik Bildirimi</a>) uygun olarak işler</string>
     <string name="personal_data_collection_screen_text">Dinleme alışkanlıklarınızı Sony ile paylaşarak Müzik uygulamasını daha iyi hale getirmemize yardımcı olun.</string>
     <string name="play_queue_open">Aç</string>

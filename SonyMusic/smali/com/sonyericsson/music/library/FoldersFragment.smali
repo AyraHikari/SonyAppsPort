@@ -222,7 +222,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f100226
+    const v1, 0x7f100228
 
     .line 300
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -473,7 +473,7 @@
 .end method
 
 .method public onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
-    .locals 3
+    .locals 6
 
     .line 256
     invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/Fragment;->onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
@@ -543,20 +543,24 @@
 
     move-result v0
 
+    int-to-long v1, v0
+
     invoke-virtual {p2}, Lcom/sonyericsson/music/common/Folder;->getName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
     .line 271
     invoke-virtual {p2}, Lcom/sonyericsson/music/common/Folder;->getPathDisplayName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v4
 
     invoke-virtual {p2}, Lcom/sonyericsson/music/common/Folder;->getArtUri()Landroid/net/Uri;
 
-    move-result-object p2
+    move-result-object v5
 
-    invoke-direct {p3, v0, v1, v2, p2}, Lcom/sonyericsson/music/common/MenuUtils$FolderData;-><init>(ILjava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
+    move-object v0, p3
+
+    invoke-direct/range {v0 .. v5}, Lcom/sonyericsson/music/common/MenuUtils$FolderData;-><init>(JLjava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 272
     iput-object p3, p0, Lcom/sonyericsson/music/library/FoldersFragment;->mContextMenuData:Ljava/lang/Object;
@@ -624,7 +628,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f1002b1
+    const p2, 0x7f1002b3
 
     .line 85
     invoke-virtual {p0, p2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;

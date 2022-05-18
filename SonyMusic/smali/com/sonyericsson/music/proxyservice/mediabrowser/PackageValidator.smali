@@ -321,7 +321,7 @@
 
     move-result v0
     :try_end_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -332,17 +332,23 @@
     :goto_2
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
 
-    goto :goto_3
+    goto :goto_4
 
     :catchall_0
     move-exception v0
 
-    goto :goto_4
+    goto :goto_5
 
     :catch_0
     move-exception v0
 
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
     .line 118
+    :goto_3
     :try_start_1
     sget-object v1, Lcom/sonyericsson/music/common/Debug;->DEBUG:Lcom/sonyericsson/music/common/Debug;
 
@@ -358,11 +364,11 @@
 
     goto :goto_2
 
-    :goto_3
+    :goto_4
     return-void
 
     .line 120
-    :goto_4
+    :goto_5
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
 
     .line 121

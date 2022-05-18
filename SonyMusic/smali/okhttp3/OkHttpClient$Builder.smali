@@ -477,24 +477,3 @@
 
     return-object p0
 .end method
-
-.method public certificatePinner(Lokhttp3/CertificatePinner;)Lokhttp3/OkHttpClient$Builder;
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    .line 830
-    iput-object p1, p0, Lokhttp3/OkHttpClient$Builder;->certificatePinner:Lokhttp3/CertificatePinner;
-
-    return-object p0
-
-    .line 829
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "certificatePinner == null"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method

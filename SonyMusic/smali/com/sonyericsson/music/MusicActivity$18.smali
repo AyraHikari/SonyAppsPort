@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sonyericsson/music/MusicActivity;->checkAndPurgeMusicStoreDatabase()V
+    value = Lcom/sonyericsson/music/MusicActivity;->clearOldSharedPrefs()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;Landroid/content/Context;)V
     .locals 0
 
-    .line 2163
+    .line 2275
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$18;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     iput-object p2, p0, Lcom/sonyericsson/music/MusicActivity$18;->val$ctx:Landroid/content/Context;
@@ -40,16 +40,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 2166
-    new-instance v0, Lcom/sonyericsson/music/metadata/UpdateMusicInfo;
+    .line 2278
+    iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$18;->val$ctx:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/sonyericsson/music/MusicActivity$18;->val$ctx:Landroid/content/Context;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, v1}, Lcom/sonyericsson/music/metadata/UpdateMusicInfo;-><init>(Landroid/content/Context;)V
+    .line 2279
+    invoke-static {v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->cleanupOfOldKeys(Landroid/content/Context;)V
 
-    invoke-virtual {v0}, Lcom/sonyericsson/music/metadata/UpdateMusicInfo;->cleanUpUnusedArt()V
-
+    :cond_0
     return-void
 .end method

@@ -58,11 +58,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
     monitor-exit p0
 
-    return v0
+    return v1
 
     .line 86
     :cond_0
@@ -81,11 +81,11 @@
 
     add-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
     monitor-exit p0
 
-    return v0
+    return v1
 
     :catchall_0
     move-exception v0

@@ -639,819 +639,823 @@
 
 .field public static final music_delete_question:I = 0x7f100137
 
-.field public static final music_dialog_body_sd_permission_access_txt:I = 0x7f100138
+.field public static final music_dialog_body_bg_scan_notice_message:I = 0x7f100138
 
-.field public static final music_dialog_body_sd_permission_retry_txt:I = 0x7f100139
+.field public static final music_dialog_body_sd_permission_access_txt:I = 0x7f100139
 
-.field public static final music_dialog_button_next_txt:I = 0x7f10013a
+.field public static final music_dialog_body_sd_permission_retry_txt:I = 0x7f10013a
 
-.field public static final music_dialog_title_sd_permission_access_txt:I = 0x7f10013b
+.field public static final music_dialog_button_next_txt:I = 0x7f10013b
 
-.field public static final music_dialog_title_sd_permission_retry_txt:I = 0x7f10013c
+.field public static final music_dialog_title_bg_scan_notice:I = 0x7f10013c
 
-.field public static final music_download:I = 0x7f10013d
+.field public static final music_dialog_title_sd_permission_access_txt:I = 0x7f10013d
 
-.field public static final music_download_batch_finished_description:I = 0x7f10013e
+.field public static final music_dialog_title_sd_permission_retry_txt:I = 0x7f10013e
 
-.field public static final music_download_batch_in_progress_description:I = 0x7f10013f
+.field public static final music_download:I = 0x7f10013f
 
-.field public static final music_download_batch_interrupted_description:I = 0x7f100140
+.field public static final music_download_batch_finished_description:I = 0x7f100140
 
-.field public static final music_download_batch_network_interrupted_description:I = 0x7f100141
+.field public static final music_download_batch_in_progress_description:I = 0x7f100141
 
-.field public static final music_download_batch_notification_aborted_msg:I = 0x7f100142
+.field public static final music_download_batch_interrupted_description:I = 0x7f100142
 
-.field public static final music_download_batch_notification_finished_msg:I = 0x7f100143
+.field public static final music_download_batch_network_interrupted_description:I = 0x7f100143
 
-.field public static final music_download_batch_notification_start_msg:I = 0x7f100144
+.field public static final music_download_batch_notification_aborted_msg:I = 0x7f100144
 
-.field public static final music_download_batch_notification_title:I = 0x7f100145
+.field public static final music_download_batch_notification_finished_msg:I = 0x7f100145
 
-.field public static final music_download_batch_progress:I = 0x7f100146
+.field public static final music_download_batch_notification_start_msg:I = 0x7f100146
 
-.field public static final music_download_batch_progress_updated:I = 0x7f100147
+.field public static final music_download_batch_notification_title:I = 0x7f100147
 
-.field public static final music_download_batch_start_buttontext:I = 0x7f100148
+.field public static final music_download_batch_progress:I = 0x7f100148
 
-.field public static final music_download_batch_startscreen_checkbox_title:I = 0x7f100149
+.field public static final music_download_batch_progress_updated:I = 0x7f100149
 
-.field public static final music_download_batch_startscreen_description:I = 0x7f10014a
+.field public static final music_download_batch_start_buttontext:I = 0x7f10014a
 
-.field public static final music_download_batch_try_again_buttontext:I = 0x7f10014b
+.field public static final music_download_batch_startscreen_checkbox_title:I = 0x7f10014b
 
-.field public static final music_download_pending_progress:I = 0x7f10014c
+.field public static final music_download_batch_startscreen_description:I = 0x7f10014c
 
-.field public static final music_empty_string:I = 0x7f10014d
+.field public static final music_download_batch_try_again_buttontext:I = 0x7f10014d
 
-.field public static final music_folder_added_to_playlist:I = 0x7f10014e
+.field public static final music_download_pending_progress:I = 0x7f10014e
 
-.field public static final music_folder_type:I = 0x7f10014f
+.field public static final music_empty_string:I = 0x7f10014f
 
-.field public static final music_general_playback_insert_battery_charger:I = 0x7f100150
+.field public static final music_folder_added_to_playlist:I = 0x7f100150
 
-.field public static final music_general_server_error_text:I = 0x7f100151
+.field public static final music_folder_type:I = 0x7f100151
 
-.field public static final music_genre_added_to_playlist:I = 0x7f100152
+.field public static final music_general_playback_insert_battery_charger:I = 0x7f100152
 
-.field public static final music_genre_type:I = 0x7f100153
+.field public static final music_general_server_error_text:I = 0x7f100153
 
-.field public static final music_get_more_metadata_information:I = 0x7f100154
+.field public static final music_genre_added_to_playlist:I = 0x7f100154
 
-.field public static final music_googlecast_insert_battery_charger:I = 0x7f100155
+.field public static final music_genre_type:I = 0x7f100155
 
-.field public static final music_help_option:I = 0x7f100156
+.field public static final music_get_more_metadata_information:I = 0x7f100156
 
-.field public static final music_hide_service:I = 0x7f100157
+.field public static final music_googlecast_insert_battery_charger:I = 0x7f100157
 
-.field public static final music_home:I = 0x7f100158
+.field public static final music_help_option:I = 0x7f100158
 
-.field public static final music_how_to_never_show_dialog:I = 0x7f100159
+.field public static final music_hide_service:I = 0x7f100159
 
-.field public static final music_ics_menu_save:I = 0x7f10015a
+.field public static final music_home:I = 0x7f10015a
 
-.field public static final music_info_provider:I = 0x7f10015b
+.field public static final music_how_to_never_show_dialog:I = 0x7f10015b
 
-.field public static final music_insights_card_button_add_to_favorites:I = 0x7f10015c
+.field public static final music_ics_menu_save:I = 0x7f10015c
 
-.field public static final music_insights_card_button_play:I = 0x7f10015d
+.field public static final music_info_provider:I = 0x7f10015d
 
-.field public static final music_insights_card_button_view:I = 0x7f10015e
+.field public static final music_insights_card_button_add_to_favorites:I = 0x7f10015e
 
-.field public static final music_insights_card_subtitle_most_played_last_month:I = 0x7f10015f
+.field public static final music_insights_card_button_play:I = 0x7f10015f
 
-.field public static final music_insights_card_subtitle_most_played_last_week:I = 0x7f100160
+.field public static final music_insights_card_button_view:I = 0x7f100160
 
-.field public static final music_insights_card_text_artist_duration:I = 0x7f100161
+.field public static final music_insights_card_subtitle_most_played_last_month:I = 0x7f100161
 
-.field public static final music_insights_card_text_artist_duration_short:I = 0x7f100162
+.field public static final music_insights_card_subtitle_most_played_last_week:I = 0x7f100162
 
-.field public static final music_insights_card_text_artist_total_duration:I = 0x7f100163
+.field public static final music_insights_card_text_artist_duration:I = 0x7f100163
 
-.field public static final music_insights_card_text_artist_total_duration_short:I = 0x7f100164
+.field public static final music_insights_card_text_artist_duration_short:I = 0x7f100164
 
-.field public static final music_insights_card_text_track:I = 0x7f100165
+.field public static final music_insights_card_text_artist_total_duration:I = 0x7f100165
 
-.field public static final music_insights_card_text_trending:I = 0x7f100166
+.field public static final music_insights_card_text_artist_total_duration_short:I = 0x7f100166
 
-.field public static final music_insights_card_title_most_played:I = 0x7f100167
+.field public static final music_insights_card_text_track:I = 0x7f100167
 
-.field public static final music_landing_page_category_item_most_played_title1:I = 0x7f100168
+.field public static final music_insights_card_text_trending:I = 0x7f100168
 
-.field public static final music_landing_page_category_item_newly_added_title:I = 0x7f100169
+.field public static final music_insights_card_title_most_played:I = 0x7f100169
 
-.field public static final music_landing_page_category_item_songs_title:I = 0x7f10016a
+.field public static final music_landing_page_category_item_most_played_title1:I = 0x7f10016a
 
-.field public static final music_landing_page_category_listen_next:I = 0x7f10016b
+.field public static final music_landing_page_category_item_newly_added_title:I = 0x7f10016b
 
-.field public static final music_landing_page_category_newly_added:I = 0x7f10016c
+.field public static final music_landing_page_category_item_songs_title:I = 0x7f10016c
 
-.field public static final music_landing_page_category_play_queue:I = 0x7f10016d
+.field public static final music_landing_page_category_listen_next:I = 0x7f10016d
 
-.field public static final music_landing_page_category_recently_played:I = 0x7f10016e
+.field public static final music_landing_page_category_newly_added:I = 0x7f10016e
 
-.field public static final music_landingpage_card_button_do_it:I = 0x7f10016f
+.field public static final music_landing_page_category_play_queue:I = 0x7f10016f
 
-.field public static final music_landingpage_card_button_go_to:I = 0x7f100170
+.field public static final music_landing_page_category_recently_played:I = 0x7f100170
 
-.field public static final music_landingpage_card_button_got_it:I = 0x7f100171
+.field public static final music_landingpage_card_button_do_it:I = 0x7f100171
 
-.field public static final music_landingpage_card_button_learn_how:I = 0x7f100172
+.field public static final music_landingpage_card_button_go_to:I = 0x7f100172
 
-.field public static final music_landingpage_card_button_no_thanks:I = 0x7f100173
+.field public static final music_landingpage_card_button_got_it:I = 0x7f100173
 
-.field public static final music_landingpage_card_button_not_now:I = 0x7f100174
+.field public static final music_landingpage_card_button_learn_how:I = 0x7f100174
 
-.field public static final music_landingpage_card_button_show_me:I = 0x7f100175
+.field public static final music_landingpage_card_button_no_thanks:I = 0x7f100175
 
-.field public static final music_landingpage_card_button_tell_me_more:I = 0x7f100176
+.field public static final music_landingpage_card_button_not_now:I = 0x7f100176
 
-.field public static final music_landingpage_card_button_update:I = 0x7f100177
+.field public static final music_landingpage_card_button_show_me:I = 0x7f100177
 
-.field public static final music_landingpage_card_text_genre:I = 0x7f100178
+.field public static final music_landingpage_card_button_tell_me_more:I = 0x7f100178
 
-.field public static final music_landingpage_card_text_google_drive:I = 0x7f100179
+.field public static final music_landingpage_card_button_update:I = 0x7f100179
 
-.field public static final music_landingpage_card_text_new_version:I = 0x7f10017a
+.field public static final music_landingpage_card_text_genre:I = 0x7f10017a
 
-.field public static final music_landingpage_card_text_no_content:I = 0x7f10017b
+.field public static final music_landingpage_card_text_google_drive:I = 0x7f10017b
 
-.field public static final music_landingpage_card_title_genre:I = 0x7f10017c
+.field public static final music_landingpage_card_text_new_version:I = 0x7f10017c
 
-.field public static final music_landingpage_card_title_google_drive:I = 0x7f10017d
+.field public static final music_landingpage_card_text_no_content:I = 0x7f10017d
 
-.field public static final music_landingpage_card_title_new_version:I = 0x7f10017e
+.field public static final music_landingpage_card_title_genre:I = 0x7f10017e
 
-.field public static final music_landingpage_card_title_no_content:I = 0x7f10017f
+.field public static final music_landingpage_card_title_google_drive:I = 0x7f10017f
 
-.field public static final music_landingpage_personal_data_collection_card_text:I = 0x7f100180
+.field public static final music_landingpage_card_title_new_version:I = 0x7f100180
 
-.field public static final music_landingpage_text_no_content_on_device:I = 0x7f100181
+.field public static final music_landingpage_card_title_no_content:I = 0x7f100181
 
-.field public static final music_landingpage_title_no_content_on_device:I = 0x7f100182
+.field public static final music_landingpage_personal_data_collection_card_text:I = 0x7f100182
 
-.field public static final music_library_add_to_play_queue_txt:I = 0x7f100183
+.field public static final music_landingpage_text_no_content_on_device:I = 0x7f100183
 
-.field public static final music_library_database_unknown_txt:I = 0x7f100184
+.field public static final music_landingpage_title_no_content_on_device:I = 0x7f100184
 
-.field public static final music_library_empty_txt:I = 0x7f100185
+.field public static final music_library_add_to_play_queue_txt:I = 0x7f100185
 
-.field public static final music_library_enqueue_last_txt:I = 0x7f100186
+.field public static final music_library_database_unknown_txt:I = 0x7f100186
 
-.field public static final music_library_enqueue_next_txt:I = 0x7f100187
+.field public static final music_library_empty_txt:I = 0x7f100187
 
-.field public static final music_library_enqueue_track_txt:I = 0x7f100188
+.field public static final music_library_enqueue_last_txt:I = 0x7f100188
 
-.field public static final music_library_hide_folder:I = 0x7f100189
+.field public static final music_library_enqueue_next_txt:I = 0x7f100189
 
-.field public static final music_library_n_tracks_txt:I = 0x7f10018a
+.field public static final music_library_enqueue_track_txt:I = 0x7f10018a
 
-.field public static final music_library_nbr_of_tracks_txt:I = 0x7f10018b
+.field public static final music_library_hide_folder:I = 0x7f10018b
 
-.field public static final music_library_one_track_txt:I = 0x7f10018c
+.field public static final music_library_n_tracks_txt:I = 0x7f10018c
 
-.field public static final music_library_play_next_txt:I = 0x7f10018d
+.field public static final music_library_nbr_of_tracks_txt:I = 0x7f10018d
 
-.field public static final music_library_unknown_album_txt:I = 0x7f10018e
+.field public static final music_library_one_track_txt:I = 0x7f10018e
 
-.field public static final music_library_unknown_artist_txt:I = 0x7f10018f
+.field public static final music_library_play_next_txt:I = 0x7f10018f
 
-.field public static final music_menu_delete:I = 0x7f100190
+.field public static final music_library_unknown_album_txt:I = 0x7f100190
 
-.field public static final music_menu_refresh:I = 0x7f100191
+.field public static final music_library_unknown_artist_txt:I = 0x7f100191
 
-.field public static final music_my_library:I = 0x7f100192
+.field public static final music_menu_delete:I = 0x7f100192
 
-.field public static final music_never_played_playlist:I = 0x7f100193
+.field public static final music_menu_refresh:I = 0x7f100193
 
-.field public static final music_next_song:I = 0x7f100194
+.field public static final music_my_library:I = 0x7f100194
 
-.field public static final music_nocontent_category_newly_added:I = 0x7f100195
+.field public static final music_never_played_playlist:I = 0x7f100195
 
-.field public static final music_nocontent_category_play_queue:I = 0x7f100196
+.field public static final music_next_song:I = 0x7f100196
 
-.field public static final music_nocontent_category_recently_played:I = 0x7f100197
+.field public static final music_nocontent_category_newly_added:I = 0x7f100197
 
-.field public static final music_notification_channel_download_music_info:I = 0x7f100198
+.field public static final music_nocontent_category_play_queue:I = 0x7f100198
 
-.field public static final music_notification_channel_google_drive:I = 0x7f100199
+.field public static final music_nocontent_category_recently_played:I = 0x7f100199
 
-.field public static final music_notification_channel_playback:I = 0x7f10019a
+.field public static final music_notification_channel_download_music_info:I = 0x7f10019a
 
-.field public static final music_option_hide_show_playlists:I = 0x7f10019b
+.field public static final music_notification_channel_google_drive:I = 0x7f10019b
 
-.field public static final music_option_show_all_folders:I = 0x7f10019c
+.field public static final music_notification_channel_playback:I = 0x7f10019c
 
-.field public static final music_option_show_grid:I = 0x7f10019d
+.field public static final music_option_hide_show_playlists:I = 0x7f10019d
 
-.field public static final music_option_show_list:I = 0x7f10019e
+.field public static final music_option_show_all_folders:I = 0x7f10019e
 
-.field public static final music_option_sort_playlists:I = 0x7f10019f
+.field public static final music_option_show_grid:I = 0x7f10019f
 
-.field public static final music_option_visible_folders:I = 0x7f1001a0
+.field public static final music_option_show_list:I = 0x7f1001a0
 
-.field public static final music_other_recommended:I = 0x7f1001a1
+.field public static final music_option_sort_playlists:I = 0x7f1001a1
 
-.field public static final music_permission_broadcast_description:I = 0x7f1001a2
+.field public static final music_option_visible_folders:I = 0x7f1001a2
 
-.field public static final music_permission_broadcast_label:I = 0x7f1001a3
+.field public static final music_other_recommended:I = 0x7f1001a3
 
-.field public static final music_permission_contacts:I = 0x7f1001a4
+.field public static final music_permission_broadcast_description:I = 0x7f1001a4
 
-.field public static final music_permission_delete_from_sdcard:I = 0x7f1001a5
+.field public static final music_permission_broadcast_label:I = 0x7f1001a5
 
-.field public static final music_permission_deny_dlg_body_serveral:I = 0x7f1001a6
+.field public static final music_permission_contacts:I = 0x7f1001a6
 
-.field public static final music_permission_deny_dlg_body_single:I = 0x7f1001a7
+.field public static final music_permission_delete_from_sdcard:I = 0x7f1001a7
 
-.field public static final music_permission_deny_dlg_body_tap_continue:I = 0x7f1001a8
+.field public static final music_permission_deny_dlg_body_serveral:I = 0x7f1001a8
 
-.field public static final music_permission_deny_dlg_title_several:I = 0x7f1001a9
+.field public static final music_permission_deny_dlg_body_single:I = 0x7f1001a9
 
-.field public static final music_permission_deny_dlg_title_single:I = 0x7f1001aa
+.field public static final music_permission_deny_dlg_body_tap_continue:I = 0x7f1001aa
 
-.field public static final music_permission_email_attachment:I = 0x7f1001ab
+.field public static final music_permission_deny_dlg_title_several:I = 0x7f1001ab
 
-.field public static final music_permission_mms_attachment:I = 0x7f1001ac
+.field public static final music_permission_deny_dlg_title_single:I = 0x7f1001ac
 
-.field public static final music_permission_music_label:I = 0x7f1001ad
+.field public static final music_permission_email_attachment:I = 0x7f1001ad
 
-.field public static final music_permission_music_service:I = 0x7f1001ae
+.field public static final music_permission_mms_attachment:I = 0x7f1001ae
 
-.field public static final music_permission_music_service_description:I = 0x7f1001af
+.field public static final music_permission_music_label:I = 0x7f1001af
 
-.field public static final music_permission_read_phone_state:I = 0x7f1001b0
+.field public static final music_permission_music_service:I = 0x7f1001b0
 
-.field public static final music_permission_storage:I = 0x7f1001b1
+.field public static final music_permission_music_service_description:I = 0x7f1001b1
 
-.field public static final music_permission_why_dlg_body_several:I = 0x7f1001b2
+.field public static final music_permission_read_phone_state:I = 0x7f1001b2
 
-.field public static final music_permission_why_dlg_body_single:I = 0x7f1001b3
+.field public static final music_permission_storage:I = 0x7f1001b3
 
-.field public static final music_permission_why_dlg_body_single_new:I = 0x7f1001b4
+.field public static final music_permission_why_dlg_body_several:I = 0x7f1001b4
 
-.field public static final music_permission_why_dlg_title:I = 0x7f1001b5
+.field public static final music_permission_why_dlg_body_single:I = 0x7f1001b5
 
-.field public static final music_permission_why_dlg_title_new:I = 0x7f1001b6
+.field public static final music_permission_why_dlg_body_single_new:I = 0x7f1001b6
 
-.field public static final music_personal_data_collection_title:I = 0x7f1001b7
+.field public static final music_permission_why_dlg_title:I = 0x7f1001b7
 
-.field public static final music_picker_audio_files_title:I = 0x7f1001b8
+.field public static final music_permission_why_dlg_title_new:I = 0x7f1001b8
 
-.field public static final music_playback_service_error_generic_failure_txt:I = 0x7f1001b9
+.field public static final music_personal_data_collection_title:I = 0x7f1001b9
 
-.field public static final music_playback_service_error_media_security_txt:I = 0x7f1001ba
+.field public static final music_picker_audio_files_title:I = 0x7f1001ba
 
-.field public static final music_playback_service_error_no_server_connection:I = 0x7f1001bb
+.field public static final music_playback_service_error_generic_failure_txt:I = 0x7f1001bb
 
-.field public static final music_player_invalid_time_txt:I = 0x7f1001bc
+.field public static final music_playback_service_error_media_security_txt:I = 0x7f1001bc
 
-.field public static final music_player_unknown_total_track_duration_txt:I = 0x7f1001bd
+.field public static final music_playback_service_error_no_server_connection:I = 0x7f1001bd
 
-.field public static final music_playlist_added_to_playlist:I = 0x7f1001be
+.field public static final music_player_invalid_time_txt:I = 0x7f1001be
 
-.field public static final music_playlist_addtrack:I = 0x7f1001bf
+.field public static final music_player_unknown_total_track_duration_txt:I = 0x7f1001bf
 
-.field public static final music_playlist_addtrack_description:I = 0x7f1001c0
+.field public static final music_playlist_added_to_playlist:I = 0x7f1001c0
 
-.field public static final music_playlist_created:I = 0x7f1001c1
+.field public static final music_playlist_addtrack:I = 0x7f1001c1
 
-.field public static final music_playlist_created_additional_message:I = 0x7f1001c2
+.field public static final music_playlist_addtrack_description:I = 0x7f1001c2
 
-.field public static final music_playlist_created_as:I = 0x7f1001c3
+.field public static final music_playlist_created:I = 0x7f1001c3
 
-.field public static final music_playlist_created_as_additional_message:I = 0x7f1001c4
+.field public static final music_playlist_created_additional_message:I = 0x7f1001c4
 
-.field public static final music_playlist_duration:I = 0x7f1001c5
+.field public static final music_playlist_created_as:I = 0x7f1001c5
 
-.field public static final music_playlist_duration_short:I = 0x7f1001c6
+.field public static final music_playlist_created_as_additional_message:I = 0x7f1001c6
 
-.field public static final music_playlist_edit:I = 0x7f1001c7
+.field public static final music_playlist_duration:I = 0x7f1001c7
 
-.field public static final music_playlist_most_played_txt:I = 0x7f1001c8
+.field public static final music_playlist_duration_short:I = 0x7f1001c8
 
-.field public static final music_playlist_music_favourites:I = 0x7f1001c9
+.field public static final music_playlist_edit:I = 0x7f1001c9
 
-.field public static final music_playlist_name_txt:I = 0x7f1001ca
+.field public static final music_playlist_most_played_txt:I = 0x7f1001ca
 
-.field public static final music_playlist_new_playlist_name_txt:I = 0x7f1001cb
+.field public static final music_playlist_music_favourites:I = 0x7f1001cb
 
-.field public static final music_playlist_new_playlist_txt:I = 0x7f1001cc
+.field public static final music_playlist_name_txt:I = 0x7f1001cc
 
-.field public static final music_playlist_newly_added_txt:I = 0x7f1001cd
+.field public static final music_playlist_new_playlist_name_txt:I = 0x7f1001cd
 
-.field public static final music_playlist_nocontent_title_newly_added:I = 0x7f1001ce
+.field public static final music_playlist_new_playlist_txt:I = 0x7f1001ce
 
-.field public static final music_playlist_nocontent_title_recently_played:I = 0x7f1001cf
+.field public static final music_playlist_newly_added_txt:I = 0x7f1001cf
 
-.field public static final music_playlist_nofind:I = 0x7f1001d0
+.field public static final music_playlist_nocontent_title_newly_added:I = 0x7f1001d0
 
-.field public static final music_playlist_not_created:I = 0x7f1001d1
+.field public static final music_playlist_nocontent_title_recently_played:I = 0x7f1001d1
 
-.field public static final music_playlist_picker_strings_name_txt:I = 0x7f1001d2
+.field public static final music_playlist_nofind:I = 0x7f1001d2
 
-.field public static final music_playlist_playlistname:I = 0x7f1001d3
+.field public static final music_playlist_not_created:I = 0x7f1001d3
 
-.field public static final music_playlist_removefrom:I = 0x7f1001d4
+.field public static final music_playlist_picker_strings_name_txt:I = 0x7f1001d4
 
-.field public static final music_playlist_rename:I = 0x7f1001d5
+.field public static final music_playlist_playlistname:I = 0x7f1001d5
 
-.field public static final music_playlist_sort_header_title:I = 0x7f1001d6
+.field public static final music_playlist_removefrom:I = 0x7f1001d6
 
-.field public static final music_playlist_sort_order_alphabetical:I = 0x7f1001d7
+.field public static final music_playlist_rename:I = 0x7f1001d7
 
-.field public static final music_playlist_sort_order_recent:I = 0x7f1001d8
+.field public static final music_playlist_sort_header_title:I = 0x7f1001d8
 
-.field public static final music_playlist_type:I = 0x7f1001d9
+.field public static final music_playlist_sort_order_alphabetical:I = 0x7f1001d9
 
-.field public static final music_plugin_music_service_description:I = 0x7f1001da
+.field public static final music_playlist_sort_order_recent:I = 0x7f1001da
 
-.field public static final music_plugin_show_service_description:I = 0x7f1001db
+.field public static final music_playlist_type:I = 0x7f1001db
 
-.field public static final music_recently_played_playlist:I = 0x7f1001dc
+.field public static final music_plugin_music_service_description:I = 0x7f1001dc
 
-.field public static final music_remove_from_queue_txt:I = 0x7f1001dd
+.field public static final music_plugin_show_service_description:I = 0x7f1001dd
 
-.field public static final music_search_plugins:I = 0x7f1001de
+.field public static final music_recently_played_playlist:I = 0x7f1001de
 
-.field public static final music_service_hidden_information:I = 0x7f1001df
+.field public static final music_remove_from_queue_txt:I = 0x7f1001df
 
-.field public static final music_service_process_name:I = 0x7f1001e0
+.field public static final music_search_plugins:I = 0x7f1001e0
 
-.field public static final music_setting_accessibility_compliance_txt:I = 0x7f1001e1
+.field public static final music_service_hidden_information:I = 0x7f1001e1
 
-.field public static final music_setting_cta_app_permission_setting_description:I = 0x7f1001e2
+.field public static final music_service_process_name:I = 0x7f1001e2
 
-.field public static final music_setting_quick_play_summary:I = 0x7f1001e3
+.field public static final music_setting_accessibility_compliance_txt:I = 0x7f1001e3
 
-.field public static final music_settings_clear_audio_description:I = 0x7f1001e4
+.field public static final music_setting_cta_app_permission_setting_description:I = 0x7f1001e4
 
-.field public static final music_settings_cta_app_permission_setting_title:I = 0x7f1001e5
+.field public static final music_setting_quick_play_summary:I = 0x7f1001e5
 
-.field public static final music_settings_customize_header:I = 0x7f1001e6
+.field public static final music_settings_clear_audio_description:I = 0x7f1001e6
 
-.field public static final music_settings_customize_my_library:I = 0x7f1001e7
+.field public static final music_settings_cta_app_permission_setting_title:I = 0x7f1001e7
 
-.field public static final music_settings_customize_my_library_description:I = 0x7f1001e8
+.field public static final music_settings_customize_header:I = 0x7f1001e8
 
-.field public static final music_settings_customize_my_library_no_selection:I = 0x7f1001e9
+.field public static final music_settings_customize_my_library:I = 0x7f1001e9
 
-.field public static final music_settings_customize_my_library_option:I = 0x7f1001ea
+.field public static final music_settings_customize_my_library_description:I = 0x7f1001ea
 
-.field public static final music_settings_customize_my_library_reset_option:I = 0x7f1001eb
+.field public static final music_settings_customize_my_library_no_selection:I = 0x7f1001eb
 
-.field public static final music_settings_delete_dialog_subtitle:I = 0x7f1001ec
+.field public static final music_settings_customize_my_library_option:I = 0x7f1001ec
 
-.field public static final music_settings_download_songs_title:I = 0x7f1001ed
+.field public static final music_settings_customize_my_library_reset_option:I = 0x7f1001ed
 
-.field public static final music_settings_download_songs_wifi_mobile_subtitle:I = 0x7f1001ee
+.field public static final music_settings_delete_dialog_subtitle:I = 0x7f1001ee
 
-.field public static final music_settings_download_songs_wifi_subtitle:I = 0x7f1001ef
+.field public static final music_settings_download_songs_title:I = 0x7f1001ef
 
-.field public static final music_settings_download_to_internal_storage_subtitle:I = 0x7f1001f0
+.field public static final music_settings_download_songs_wifi_mobile_subtitle:I = 0x7f1001f0
 
-.field public static final music_settings_download_to_sdcard_subtitle:I = 0x7f1001f1
+.field public static final music_settings_download_songs_wifi_subtitle:I = 0x7f1001f1
 
-.field public static final music_settings_download_to_sdcard_title:I = 0x7f1001f2
+.field public static final music_settings_download_to_internal_storage_subtitle:I = 0x7f1001f2
 
-.field public static final music_settings_general_header:I = 0x7f1001f3
+.field public static final music_settings_download_to_sdcard_subtitle:I = 0x7f1001f3
 
-.field public static final music_settings_google_drive_sign_in_subtitle:I = 0x7f1001f4
+.field public static final music_settings_download_to_sdcard_title:I = 0x7f1001f4
 
-.field public static final music_settings_google_drive_subtitle:I = 0x7f1001f5
+.field public static final music_settings_general_header:I = 0x7f1001f5
 
-.field public static final music_settings_google_drive_title:I = 0x7f1001f6
+.field public static final music_settings_google_drive_sign_in_subtitle:I = 0x7f1001f6
 
-.field public static final music_settings_illumination_title:I = 0x7f1001f7
+.field public static final music_settings_google_drive_subtitle:I = 0x7f1001f7
 
-.field public static final music_settings_media_server:I = 0x7f1001f8
+.field public static final music_settings_google_drive_title:I = 0x7f1001f8
 
-.field public static final music_settings_media_server_summary:I = 0x7f1001f9
+.field public static final music_settings_illumination_title:I = 0x7f1001f9
 
-.field public static final music_settings_music_information_header:I = 0x7f1001fa
+.field public static final music_settings_media_server:I = 0x7f1001fa
 
-.field public static final music_settings_music_quality_header:I = 0x7f1001fb
+.field public static final music_settings_media_server_summary:I = 0x7f1001fb
 
-.field public static final music_settings_my_library_in_nav_menu_description:I = 0x7f1001fc
+.field public static final music_settings_music_information_header:I = 0x7f1001fc
 
-.field public static final music_settings_my_library_in_nav_menu_title:I = 0x7f1001fd
+.field public static final music_settings_music_quality_header:I = 0x7f1001fd
 
-.field public static final music_settings_option:I = 0x7f1001fe
+.field public static final music_settings_my_library_in_nav_menu_description:I = 0x7f1001fe
 
-.field public static final music_settings_personal_data_collection_subtitle:I = 0x7f1001ff
+.field public static final music_settings_my_library_in_nav_menu_title:I = 0x7f1001ff
 
-.field public static final music_settings_personal_data_collection_title:I = 0x7f100200
+.field public static final music_settings_option:I = 0x7f100200
 
-.field public static final music_settings_service_settings_header:I = 0x7f100201
+.field public static final music_settings_personal_data_collection_subtitle:I = 0x7f100201
 
-.field public static final music_settings_sign_in_title:I = 0x7f100202
+.field public static final music_settings_personal_data_collection_title:I = 0x7f100202
 
-.field public static final music_settings_sign_out_title:I = 0x7f100203
+.field public static final music_settings_service_settings_header:I = 0x7f100203
 
-.field public static final music_settings_sleep_timer_subtitle:I = 0x7f100204
+.field public static final music_settings_sign_in_title:I = 0x7f100204
 
-.field public static final music_settings_sleep_timer_title:I = 0x7f100205
+.field public static final music_settings_sign_out_title:I = 0x7f100205
 
-.field public static final music_settings_sound_enhancements_description:I = 0x7f100206
+.field public static final music_settings_sleep_timer_subtitle:I = 0x7f100206
 
-.field public static final music_settings_theme_dark:I = 0x7f100207
+.field public static final music_settings_sleep_timer_title:I = 0x7f100207
 
-.field public static final music_settings_theme_description:I = 0x7f100208
+.field public static final music_settings_sound_enhancements_description:I = 0x7f100208
 
-.field public static final music_settings_theme_dialog_title:I = 0x7f100209
+.field public static final music_settings_theme_dark:I = 0x7f100209
 
-.field public static final music_settings_theme_light:I = 0x7f10020a
+.field public static final music_settings_theme_description:I = 0x7f10020a
 
-.field public static final music_settings_theme_title:I = 0x7f10020b
+.field public static final music_settings_theme_dialog_title:I = 0x7f10020b
 
-.field public static final music_settings_xperia_id:I = 0x7f10020c
+.field public static final music_settings_theme_light:I = 0x7f10020c
 
-.field public static final music_share_media_option:I = 0x7f10020d
+.field public static final music_settings_theme_title:I = 0x7f10020d
 
-.field public static final music_shuffle_all_txt:I = 0x7f10020e
+.field public static final music_settings_xperia_id:I = 0x7f10020e
 
-.field public static final music_shuffle_dialog_title:I = 0x7f10020f
+.field public static final music_share_media_option:I = 0x7f10020f
 
-.field public static final music_smart_playlists:I = 0x7f100210
+.field public static final music_shuffle_all_txt:I = 0x7f100210
 
-.field public static final music_song_added_to_playlist:I = 0x7f100211
+.field public static final music_shuffle_dialog_title:I = 0x7f100211
 
-.field public static final music_song_type:I = 0x7f100212
+.field public static final music_smart_playlists:I = 0x7f100212
 
-.field public static final music_sound_effects:I = 0x7f100213
+.field public static final music_song_added_to_playlist:I = 0x7f100213
 
-.field public static final music_strings_artist_book_loading_txt:I = 0x7f100214
+.field public static final music_song_type:I = 0x7f100214
 
-.field public static final music_strings_artist_book_unknown_artist_txt:I = 0x7f100215
+.field public static final music_sound_effects:I = 0x7f100215
 
-.field public static final music_strings_nocontent_txt:I = 0x7f100216
+.field public static final music_strings_artist_book_loading_txt:I = 0x7f100216
 
-.field public static final music_toast_enqueue_album:I = 0x7f100217
+.field public static final music_strings_artist_book_unknown_artist_txt:I = 0x7f100217
 
-.field public static final music_toast_enqueue_artist:I = 0x7f100218
+.field public static final music_strings_nocontent_txt:I = 0x7f100218
 
-.field public static final music_toast_enqueue_folder:I = 0x7f100219
+.field public static final music_toast_enqueue_album:I = 0x7f100219
 
-.field public static final music_toast_enqueue_genre:I = 0x7f10021a
+.field public static final music_toast_enqueue_artist:I = 0x7f10021a
 
-.field public static final music_toast_enqueue_playlist:I = 0x7f10021b
+.field public static final music_toast_enqueue_folder:I = 0x7f10021b
 
-.field public static final music_toast_enqueue_track:I = 0x7f10021c
+.field public static final music_toast_enqueue_genre:I = 0x7f10021c
 
-.field public static final music_toast_hint_download_pending_message_txt:I = 0x7f10021d
+.field public static final music_toast_enqueue_playlist:I = 0x7f10021d
 
-.field public static final music_track_position_duration_divider:I = 0x7f10021e
+.field public static final music_toast_enqueue_track:I = 0x7f10021e
 
-.field public static final music_unknown_track:I = 0x7f10021f
+.field public static final music_toast_hint_download_pending_message_txt:I = 0x7f10021f
 
-.field public static final music_update_notification_setting_header:I = 0x7f100220
+.field public static final music_track_position_duration_divider:I = 0x7f100220
 
-.field public static final music_update_notification_setting_latest:I = 0x7f100221
+.field public static final music_unknown_track:I = 0x7f100221
 
-.field public static final music_update_notification_setting_new_version_button:I = 0x7f100222
+.field public static final music_update_notification_setting_header:I = 0x7f100222
 
-.field public static final music_update_notification_setting_version:I = 0x7f100223
+.field public static final music_update_notification_setting_latest:I = 0x7f100223
 
-.field public static final music_updating_library_txt:I = 0x7f100224
+.field public static final music_update_notification_setting_new_version_button:I = 0x7f100224
 
-.field public static final music_voice_search_not_found:I = 0x7f100225
+.field public static final music_update_notification_setting_version:I = 0x7f100225
 
-.field public static final music_your_content_will_appear_here_txt:I = 0x7f100226
+.field public static final music_updating_library_txt:I = 0x7f100226
 
-.field public static final music_your_playlists:I = 0x7f100227
+.field public static final music_voice_search_not_found:I = 0x7f100227
 
-.field public static final musicshortcutlabel:I = 0x7f100228
+.field public static final music_your_content_will_appear_here_txt:I = 0x7f100228
 
-.field public static final musicshortcutlabelalbum:I = 0x7f100229
+.field public static final music_your_playlists:I = 0x7f100229
 
-.field public static final musicshortcutlabelplaylist:I = 0x7f10022a
+.field public static final musicshortcutlabel:I = 0x7f10022a
 
-.field public static final navigation_drawer_close:I = 0x7f10022b
+.field public static final musicshortcutlabelalbum:I = 0x7f10022b
 
-.field public static final navigation_drawer_open:I = 0x7f10022c
+.field public static final musicshortcutlabelplaylist:I = 0x7f10022c
 
-.field public static final never_played_option:I = 0x7f10022d
+.field public static final navigation_drawer_close:I = 0x7f10022d
 
-.field public static final newly_added_option:I = 0x7f10022e
+.field public static final navigation_drawer_open:I = 0x7f10022e
 
-.field public static final no_content_message_line1:I = 0x7f10022f
+.field public static final never_played_option:I = 0x7f10022f
 
-.field public static final no_content_message_line2:I = 0x7f100230
+.field public static final newly_added_option:I = 0x7f100230
 
-.field public static final no_content_message_plugin_online_line2:I = 0x7f100231
+.field public static final no_content_message_line1:I = 0x7f100231
 
-.field public static final no_internet_try_again:I = 0x7f100232
+.field public static final no_content_message_line2:I = 0x7f100232
 
-.field public static final no_network_banner_text:I = 0x7f100233
+.field public static final no_content_message_plugin_online_line2:I = 0x7f100233
 
-.field public static final option_download_all:I = 0x7f100234
+.field public static final no_internet_try_again:I = 0x7f100234
 
-.field public static final option_view:I = 0x7f100235
+.field public static final no_network_banner_text:I = 0x7f100235
 
-.field public static final option_view_album:I = 0x7f100236
+.field public static final option_download_all:I = 0x7f100236
 
-.field public static final option_view_play_queue:I = 0x7f100237
+.field public static final option_view:I = 0x7f100237
 
-.field public static final option_view_playlist:I = 0x7f100238
+.field public static final option_view_album:I = 0x7f100238
 
-.field public static final overflow_add_to_playlist:I = 0x7f100239
+.field public static final option_view_play_queue:I = 0x7f100239
 
-.field public static final overflow_delete:I = 0x7f10023a
+.field public static final option_view_playlist:I = 0x7f10023a
 
-.field public static final overflow_share:I = 0x7f10023b
+.field public static final overflow_add_to_playlist:I = 0x7f10023b
 
-.field public static final overlay_favorites_add:I = 0x7f10023c
+.field public static final overflow_delete:I = 0x7f10023c
 
-.field public static final overlay_favorites_remove:I = 0x7f10023d
+.field public static final overflow_share:I = 0x7f10023d
 
-.field public static final own_order_option:I = 0x7f10023e
+.field public static final overlay_favorites_add:I = 0x7f10023e
 
-.field public static final password_toggle_content_description:I = 0x7f10023f
+.field public static final overlay_favorites_remove:I = 0x7f10023f
 
-.field public static final path_password_eye:I = 0x7f100240
+.field public static final own_order_option:I = 0x7f100240
 
-.field public static final path_password_eye_mask_strike_through:I = 0x7f100241
+.field public static final password_toggle_content_description:I = 0x7f100241
 
-.field public static final path_password_eye_mask_visible:I = 0x7f100242
+.field public static final path_password_eye:I = 0x7f100242
 
-.field public static final path_password_strike_through:I = 0x7f100243
+.field public static final path_password_eye_mask_strike_through:I = 0x7f100243
 
-.field public static final permission_missing_network:I = 0x7f100244
+.field public static final path_password_eye_mask_visible:I = 0x7f100244
 
-.field public static final permission_missing_storage:I = 0x7f100245
+.field public static final path_password_strike_through:I = 0x7f100245
 
-.field public static final personal_data_collection_dialog_crash_reports_item:I = 0x7f100246
+.field public static final permission_missing_network:I = 0x7f100246
 
-.field public static final personal_data_collection_dialog_device_ids_expanded_item:I = 0x7f100247
+.field public static final permission_missing_storage:I = 0x7f100247
 
-.field public static final personal_data_collection_dialog_device_ids_item:I = 0x7f100248
+.field public static final personal_data_collection_dialog_crash_reports_item:I = 0x7f100248
 
-.field public static final personal_data_collection_dialog_listening_activities_item:I = 0x7f100249
+.field public static final personal_data_collection_dialog_device_ids_expanded_item:I = 0x7f100249
 
-.field public static final personal_data_collection_dialog_location_item:I = 0x7f10024a
+.field public static final personal_data_collection_dialog_device_ids_item:I = 0x7f10024a
 
-.field public static final personal_data_collection_dialog_music_metadata_item:I = 0x7f10024b
+.field public static final personal_data_collection_dialog_listening_activities_item:I = 0x7f10024b
 
-.field public static final personal_data_collection_dialog_ok_button:I = 0x7f10024c
+.field public static final personal_data_collection_dialog_location_item:I = 0x7f10024c
 
-.field public static final personal_data_collection_dialog_shared_with_partners_device_ids_item:I = 0x7f10024d
+.field public static final personal_data_collection_dialog_music_metadata_item:I = 0x7f10024d
 
-.field public static final personal_data_collection_dialog_shared_with_partners_subtitle:I = 0x7f10024e
+.field public static final personal_data_collection_dialog_ok_button:I = 0x7f10024e
 
-.field public static final personal_data_collection_dialog_title:I = 0x7f10024f
+.field public static final personal_data_collection_dialog_shared_with_partners_device_ids_item:I = 0x7f10024f
 
-.field public static final personal_data_collection_screen_button_negative:I = 0x7f100250
+.field public static final personal_data_collection_dialog_shared_with_partners_subtitle:I = 0x7f100250
 
-.field public static final personal_data_collection_screen_button_positive:I = 0x7f100251
+.field public static final personal_data_collection_dialog_title:I = 0x7f100251
 
-.field public static final personal_data_collection_screen_fine_print:I = 0x7f100252
+.field public static final personal_data_collection_screen_button_negative:I = 0x7f100252
 
-.field public static final personal_data_collection_screen_fine_print_us:I = 0x7f100253
+.field public static final personal_data_collection_screen_button_positive:I = 0x7f100253
 
-.field public static final personal_data_collection_screen_text:I = 0x7f100254
+.field public static final personal_data_collection_screen_fine_print:I = 0x7f100254
 
-.field public static final play_queue_open:I = 0x7f100255
+.field public static final personal_data_collection_screen_fine_print_us:I = 0x7f100255
 
-.field public static final player_options_add_to_favorites:I = 0x7f100256
+.field public static final personal_data_collection_screen_text:I = 0x7f100256
 
-.field public static final player_options_more_about_this:I = 0x7f100257
+.field public static final play_queue_open:I = 0x7f100257
 
-.field public static final player_options_remove_from_favorites:I = 0x7f100258
+.field public static final player_options_add_to_favorites:I = 0x7f100258
 
-.field public static final playlist_sort_dlg_title:I = 0x7f100259
+.field public static final player_options_more_about_this:I = 0x7f100259
 
-.field public static final playlist_sort_option:I = 0x7f10025a
+.field public static final player_options_remove_from_favorites:I = 0x7f10025a
 
-.field public static final playlistart_provider:I = 0x7f10025b
+.field public static final playlist_sort_dlg_title:I = 0x7f10025b
 
-.field public static final playlists_subtitle_empty_playlist:I = 0x7f10025c
+.field public static final playlist_sort_option:I = 0x7f10025c
 
-.field public static final playlists_subtitle_smart_playlist:I = 0x7f10025d
+.field public static final playlistart_provider:I = 0x7f10025d
 
-.field public static final playqueue_header:I = 0x7f10025e
+.field public static final playlists_subtitle_empty_playlist:I = 0x7f10025e
 
-.field public static final playqueue_provider:I = 0x7f10025f
+.field public static final playlists_subtitle_smart_playlist:I = 0x7f10025f
 
-.field public static final pref_key_app_permission_wifi_mobile_data:I = 0x7f100260
+.field public static final playqueue_header:I = 0x7f100260
 
-.field public static final pref_key_app_permissions_setting:I = 0x7f100261
+.field public static final playqueue_provider:I = 0x7f100261
 
-.field public static final pref_key_music_settings_google_drive:I = 0x7f100262
+.field public static final pref_key_app_permission_wifi_mobile_data:I = 0x7f100262
 
-.field public static final pref_key_music_settings_google_drive_download_connection:I = 0x7f100263
+.field public static final pref_key_app_permissions_setting:I = 0x7f100263
 
-.field public static final pref_personal_data_collection:I = 0x7f100264
+.field public static final pref_key_music_settings_google_drive:I = 0x7f100264
 
-.field public static final pref_theme_value_dark:I = 0x7f100265
+.field public static final pref_key_music_settings_google_drive_download_connection:I = 0x7f100265
 
-.field public static final pref_theme_value_light:I = 0x7f100266
+.field public static final pref_personal_data_collection:I = 0x7f100266
 
-.field public static final pref_xperia_id:I = 0x7f100267
+.field public static final pref_theme_value_dark:I = 0x7f100267
 
-.field public static final project_id:I = 0x7f100268
+.field public static final pref_theme_value_light:I = 0x7f100268
 
-.field public static final quick_play_all_tracks_content_description:I = 0x7f100269
+.field public static final pref_xperia_id:I = 0x7f100269
 
-.field public static final quick_play_all_tracks_empty_toast:I = 0x7f10026a
+.field public static final project_id:I = 0x7f10026a
 
-.field public static final quick_play_all_tracks_toast:I = 0x7f10026b
+.field public static final quick_play_all_tracks_content_description:I = 0x7f10026b
 
-.field public static final quick_play_hide:I = 0x7f10026c
+.field public static final quick_play_all_tracks_empty_toast:I = 0x7f10026c
 
-.field public static final quick_play_no_playlist_selected:I = 0x7f10026d
+.field public static final quick_play_all_tracks_toast:I = 0x7f10026d
 
-.field public static final quick_play_playlist_picker:I = 0x7f10026e
+.field public static final quick_play_hide:I = 0x7f10026e
 
-.field public static final quick_play_shuffle_all_tracks:I = 0x7f10026f
+.field public static final quick_play_no_playlist_selected:I = 0x7f10026f
 
-.field public static final quick_play_shuffle_user_selected_playlist:I = 0x7f100270
+.field public static final quick_play_playlist_picker:I = 0x7f100270
 
-.field public static final quick_play_user_selected_content_description:I = 0x7f100271
+.field public static final quick_play_shuffle_all_tracks:I = 0x7f100271
 
-.field public static final quick_play_user_selected_playlist_empty_toast:I = 0x7f100272
+.field public static final quick_play_shuffle_user_selected_playlist:I = 0x7f100272
 
-.field public static final quick_play_user_selected_playlist_toast:I = 0x7f100273
+.field public static final quick_play_user_selected_content_description:I = 0x7f100273
 
-.field public static final recent_option:I = 0x7f100274
+.field public static final quick_play_user_selected_playlist_empty_toast:I = 0x7f100274
 
-.field public static final recently_played_option:I = 0x7f100275
+.field public static final quick_play_user_selected_playlist_toast:I = 0x7f100275
 
-.field public static final recently_played_provider:I = 0x7f100276
+.field public static final recent_option:I = 0x7f100276
 
-.field public static final repeat_all:I = 0x7f100277
+.field public static final recently_played_option:I = 0x7f100277
 
-.field public static final repeat_none:I = 0x7f100278
+.field public static final recently_played_provider:I = 0x7f100278
 
-.field public static final repeat_one:I = 0x7f100279
+.field public static final repeat_all:I = 0x7f100279
 
-.field public static final retry_button_text:I = 0x7f10027a
+.field public static final repeat_none:I = 0x7f10027a
 
-.field public static final search_feature_card_text:I = 0x7f10027b
+.field public static final repeat_one:I = 0x7f10027b
 
-.field public static final search_feature_card_title:I = 0x7f10027c
+.field public static final retry_button_text:I = 0x7f10027c
 
-.field public static final search_field_hint:I = 0x7f10027d
+.field public static final search_feature_card_text:I = 0x7f10027d
 
-.field public static final search_hint:I = 0x7f10027e
+.field public static final search_feature_card_title:I = 0x7f10027e
 
-.field public static final search_history_empty_headline:I = 0x7f10027f
+.field public static final search_field_hint:I = 0x7f10027f
 
-.field public static final search_history_empty_please_help:I = 0x7f100280
+.field public static final search_hint:I = 0x7f100280
 
-.field public static final search_history_empty_text:I = 0x7f100281
+.field public static final search_history_empty_headline:I = 0x7f100281
 
-.field public static final search_menu_title:I = 0x7f100282
+.field public static final search_history_empty_please_help:I = 0x7f100282
 
-.field public static final search_no_results_match:I = 0x7f100283
+.field public static final search_history_empty_text:I = 0x7f100283
 
-.field public static final search_recent_divider:I = 0x7f100284
+.field public static final search_menu_title:I = 0x7f100284
 
-.field public static final search_recently_searched_albums_divider:I = 0x7f100285
+.field public static final search_no_results_match:I = 0x7f100285
 
-.field public static final search_recently_searched_artists_divider:I = 0x7f100286
+.field public static final search_recent_divider:I = 0x7f100286
 
-.field public static final search_recently_searched_songs_divider:I = 0x7f100287
+.field public static final search_recently_searched_albums_divider:I = 0x7f100287
 
-.field public static final search_related_searches_divider:I = 0x7f100288
+.field public static final search_recently_searched_artists_divider:I = 0x7f100288
 
-.field public static final search_settings_description:I = 0x7f100289
+.field public static final search_recently_searched_songs_divider:I = 0x7f100289
 
-.field public static final search_show_all_albums:I = 0x7f10028a
+.field public static final search_related_searches_divider:I = 0x7f10028a
 
-.field public static final search_show_all_artists:I = 0x7f10028b
+.field public static final search_settings_description:I = 0x7f10028b
 
-.field public static final search_show_all_songs:I = 0x7f10028c
+.field public static final search_show_all_albums:I = 0x7f10028c
 
-.field public static final setting_hardware_walkman_btn:I = 0x7f10028d
+.field public static final search_show_all_artists:I = 0x7f10028d
 
-.field public static final setting_oss_btn:I = 0x7f10028e
+.field public static final search_show_all_songs:I = 0x7f10028e
 
-.field public static final settings_header_music_info:I = 0x7f10028f
+.field public static final setting_hardware_walkman_btn:I = 0x7f10028f
 
-.field public static final settings_provider:I = 0x7f100290
+.field public static final setting_oss_btn:I = 0x7f100290
 
-.field public static final shuffle_off:I = 0x7f100291
+.field public static final settings_header_music_info:I = 0x7f100291
 
-.field public static final shuffle_on:I = 0x7f100292
+.field public static final settings_provider:I = 0x7f100292
 
-.field public static final sign_in_success_screen_text:I = 0x7f100293
+.field public static final shuffle_off:I = 0x7f100293
 
-.field public static final sign_in_success_screen_title:I = 0x7f100294
+.field public static final shuffle_on:I = 0x7f100294
 
-.field public static final sign_in_with_google_button:I = 0x7f100295
+.field public static final sign_in_success_screen_text:I = 0x7f100295
 
-.field public static final sleep_timer_banner_cancel:I = 0x7f100296
+.field public static final sign_in_success_screen_title:I = 0x7f100296
 
-.field public static final sleep_timer_body_text:I = 0x7f100297
+.field public static final sign_in_with_google_button:I = 0x7f100297
 
-.field public static final sleep_timer_disabled:I = 0x7f100298
+.field public static final sleep_timer_banner_cancel:I = 0x7f100298
 
-.field public static final sleep_timer_hours:I = 0x7f100299
+.field public static final sleep_timer_body_text:I = 0x7f100299
 
-.field public static final sleep_timer_less_than_one_minute_remaining:I = 0x7f10029a
+.field public static final sleep_timer_disabled:I = 0x7f10029a
 
-.field public static final sleep_timer_minutes:I = 0x7f10029b
+.field public static final sleep_timer_hours:I = 0x7f10029b
 
-.field public static final sleep_timer_one_hour:I = 0x7f10029c
+.field public static final sleep_timer_less_than_one_minute_remaining:I = 0x7f10029c
 
-.field public static final sleep_timer_one_minute_remaining:I = 0x7f10029d
+.field public static final sleep_timer_minutes:I = 0x7f10029d
 
-.field public static final sleep_timer_remaining:I = 0x7f10029e
+.field public static final sleep_timer_one_hour:I = 0x7f10029e
 
-.field public static final sort_order_alphabetical:I = 0x7f10029f
+.field public static final sleep_timer_one_minute_remaining:I = 0x7f10029f
 
-.field public static final sort_order_dialog_title:I = 0x7f1002a0
+.field public static final sleep_timer_remaining:I = 0x7f1002a0
 
-.field public static final sort_order_option:I = 0x7f1002a1
+.field public static final sort_order_alphabetical:I = 0x7f1002a1
 
-.field public static final sort_order_own_order:I = 0x7f1002a2
+.field public static final sort_order_dialog_title:I = 0x7f1002a2
 
-.field public static final sort_order_recent:I = 0x7f1002a3
+.field public static final sort_order_option:I = 0x7f1002a3
 
-.field public static final sort_playlists_header:I = 0x7f1002a4
+.field public static final sort_order_own_order:I = 0x7f1002a4
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f1002a5
+.field public static final sort_order_recent:I = 0x7f1002a5
 
-.field public static final summary_collapsed_preference_list:I = 0x7f1002a6
+.field public static final sort_playlists_header:I = 0x7f1002a6
 
-.field public static final tab_header_albums:I = 0x7f1002a7
+.field public static final status_bar_notification_info_overflow:I = 0x7f1002a7
 
-.field public static final tab_header_artists:I = 0x7f1002a8
+.field public static final summary_collapsed_preference_list:I = 0x7f1002a8
 
-.field public static final tab_header_folders:I = 0x7f1002a9
+.field public static final tab_header_albums:I = 0x7f1002a9
 
-.field public static final tab_header_genres:I = 0x7f1002aa
+.field public static final tab_header_artists:I = 0x7f1002aa
 
-.field public static final tab_header_playlists:I = 0x7f1002ab
+.field public static final tab_header_folders:I = 0x7f1002ab
 
-.field public static final tab_header_tracks:I = 0x7f1002ac
+.field public static final tab_header_genres:I = 0x7f1002ac
 
-.field public static final terms_and_conditions_apply:I = 0x7f1002ad
+.field public static final tab_header_playlists:I = 0x7f1002ad
 
-.field public static final this_may_take_a_while:I = 0x7f1002ae
+.field public static final tab_header_tracks:I = 0x7f1002ae
 
-.field public static final tile_albums:I = 0x7f1002af
+.field public static final terms_and_conditions_apply:I = 0x7f1002af
 
-.field public static final tile_artists:I = 0x7f1002b0
+.field public static final this_may_take_a_while:I = 0x7f1002b0
 
-.field public static final tile_folders:I = 0x7f1002b1
+.field public static final tile_albums:I = 0x7f1002b1
 
-.field public static final tile_genres:I = 0x7f1002b2
+.field public static final tile_artists:I = 0x7f1002b2
 
-.field public static final tile_playlists:I = 0x7f1002b3
+.field public static final tile_folders:I = 0x7f1002b3
 
-.field public static final tile_playqueue:I = 0x7f1002b4
+.field public static final tile_genres:I = 0x7f1002b4
 
-.field public static final tile_podcast:I = 0x7f1002b5
+.field public static final tile_playlists:I = 0x7f1002b5
 
-.field public static final tile_recently_played:I = 0x7f1002b6
+.field public static final tile_playqueue:I = 0x7f1002b6
 
-.field public static final tile_shuffle_all_songs:I = 0x7f1002b7
+.field public static final tile_podcast:I = 0x7f1002b7
 
-.field public static final tile_tracks:I = 0x7f1002b8
+.field public static final tile_recently_played:I = 0x7f1002b8
 
-.field public static final toast_added_to_favourites:I = 0x7f1002b9
+.field public static final tile_shuffle_all_songs:I = 0x7f1002b9
 
-.field public static final toast_already_in_favourites:I = 0x7f1002ba
+.field public static final tile_tracks:I = 0x7f1002ba
 
-.field public static final toast_deleted:I = 0x7f1002bb
+.field public static final toast_added_to_favourites:I = 0x7f1002bb
 
-.field public static final toast_removed_from_favourites:I = 0x7f1002bc
+.field public static final toast_already_in_favourites:I = 0x7f1002bc
 
-.field public static final unlimited_provider:I = 0x7f1002bd
+.field public static final toast_deleted:I = 0x7f1002bd
 
-.field public static final update_as_you_play_accept_button_text:I = 0x7f1002be
+.field public static final toast_removed_from_favourites:I = 0x7f1002be
 
-.field public static final update_as_you_play_music_info_description:I = 0x7f1002bf
+.field public static final unlimited_provider:I = 0x7f1002bf
 
-.field public static final update_as_you_play_reject_button_text:I = 0x7f1002c0
+.field public static final update_as_you_play_accept_button_text:I = 0x7f1002c0
 
-.field public static final update_as_you_play_setting:I = 0x7f1002c1
+.field public static final update_as_you_play_music_info_description:I = 0x7f1002c1
 
-.field public static final update_as_you_play_setting_dialog_header:I = 0x7f1002c2
+.field public static final update_as_you_play_reject_button_text:I = 0x7f1002c2
 
-.field public static final update_as_you_play_setting_option_all:I = 0x7f1002c3
+.field public static final update_as_you_play_setting:I = 0x7f1002c3
 
-.field public static final update_as_you_play_setting_option_off:I = 0x7f1002c4
+.field public static final update_as_you_play_setting_dialog_header:I = 0x7f1002c4
 
-.field public static final update_as_you_play_setting_option_wifi:I = 0x7f1002c5
+.field public static final update_as_you_play_setting_option_all:I = 0x7f1002c5
 
-.field public static final update_as_you_play_splash_header:I = 0x7f1002c6
+.field public static final update_as_you_play_setting_option_off:I = 0x7f1002c6
 
-.field public static final update_as_you_play_splash_message:I = 0x7f1002c7
+.field public static final update_as_you_play_setting_option_wifi:I = 0x7f1002c7
 
-.field public static final v7_preference_off:I = 0x7f1002c8
+.field public static final update_as_you_play_splash_header:I = 0x7f1002c8
 
-.field public static final v7_preference_on:I = 0x7f1002c9
+.field public static final update_as_you_play_splash_message:I = 0x7f1002c9
 
-.field public static final voice_search_dialog_title:I = 0x7f1002ca
+.field public static final v7_preference_off:I = 0x7f1002ca
 
-.field public static final xperia_id_dialog_collection:I = 0x7f1002cb
+.field public static final v7_preference_on:I = 0x7f1002cb
 
-.field public static final xperia_id_dialog_explanation:I = 0x7f1002cc
+.field public static final voice_search_dialog_title:I = 0x7f1002cc
 
-.field public static final xperia_id_dialog_hint:I = 0x7f1002cd
+.field public static final xperia_id_dialog_collection:I = 0x7f1002cd
 
-.field public static final xperia_id_dialog_title:I = 0x7f1002ce
+.field public static final xperia_id_dialog_explanation:I = 0x7f1002ce
+
+.field public static final xperia_id_dialog_hint:I = 0x7f1002cf
+
+.field public static final xperia_id_dialog_title:I = 0x7f1002d0
 
 
 # direct methods

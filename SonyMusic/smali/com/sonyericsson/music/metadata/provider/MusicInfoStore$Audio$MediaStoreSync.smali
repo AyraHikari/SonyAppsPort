@@ -38,14 +38,14 @@
 
     const-string v0, "content://media_legacy/external/somc_audio"
 
-    .line 1211
+    .line 1217
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$MediaStoreSync;->LEGACY_SOMC_AUDIO_URI:Landroid/net/Uri;
 
-    .line 1215
+    .line 1221
     new-instance v0, Landroidx/collection/ArraySet;
 
     const/16 v1, 0xb
@@ -132,7 +132,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1205
+    .line 1211
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

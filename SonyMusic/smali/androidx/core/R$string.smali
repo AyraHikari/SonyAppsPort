@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final status_bar_notification_info_overflow:I = 0x7f1002a5
+.field public static final status_bar_notification_info_overflow:I = 0x7f1002a7

@@ -203,208 +203,7 @@
     <string name="info_button_text">Got it</string>
     <string name="landingpage_item_playlist_empty">Playlist is empty</string>
     <string name="lets_go_button">"LET'S GO!"</string>
-    <string name="license_text">"
-&lt;p>
-Copyright 2010, 2021 Sony Corporation.&lt;br>
-This software contains confidential and proprietary information of
-Sony Corporation.
-&lt;/p>
-
-&lt;p>This software includes source code from:&lt;/p>
-
-&lt;p>&lt;b>* Android platform/developers/samples
-&lt;br>
-* Android platform/development
-&lt;br>
-* Android platform/frameworks/base
-&lt;br>
-* Android platform/frameworks/support
-&lt;br>
-* Android platform/packages/apps/Music
-&lt;br>
-* Universal Android Music Player Sample
-&lt;/b>&lt;/p>
-
-&lt;p>Copyright (C) 2005-2018 The Android Open Source Project&lt;br>
-Copyright 2010, 2021 Sony Corporation.&lt;/p>
-
-&lt;p>Original code licensed under the Apache License, Version 2.0 (the \"License\");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at&lt;/p>
-
-&lt;p>     http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
-
-&lt;p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an \"AS IS\" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.&lt;/p>
-
-&lt;p>NOTE: This file has been modified by Sony Corporation.
-Modifications are licensed under the Sony Corporation
-End User License Agreement (\"EULA\"). Any use of the modifications is subject
-to the terms of the EULA.&lt;/p>
-&lt;br>
-&lt;br>
-&lt;p>This software uses the following open source software libraries and source code:&lt;/p>
-
-&lt;p>&lt;b>Retrofit&lt;/b>&lt;/p>
-
-&lt;p>Copyright 2013 Square, Inc.&lt;/p>
-
-&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at&lt;/p>
-
-&lt;p>   http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
-
-&lt;p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an \"AS IS\" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.&lt;/p>
-&lt;br>
-&lt;p>&lt;b>Picasso&lt;/b>&lt;/p>
-
-&lt;p>Copyright 2013 Square, Inc.&lt;/p>
-
-&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at&lt;/p>
-
-&lt;p>   http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
-
-&lt;p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an \"AS IS\" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.&lt;/p>
-&lt;br>
-&lt;p>&lt;b>Picasso 2 OkHttp 3 Downloader&lt;/b>&lt;/p>
-
-&lt;p>Copyright 2016 Jake Wharton&lt;/p>
-
-&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at&lt;/p>
-
-&lt;p>   http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
-
-&lt;p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an \"AS IS\" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.&lt;/p>
-&lt;br>
-&lt;p>&lt;b>OkHttp&lt;/b>&lt;/p>
-
-&lt;p>Copyright 2016 Square, Inc.&lt;/p>
-
-&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at&lt;/p>
-
-&lt;p>   http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
-
-&lt;p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an \"AS IS\" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.&lt;/p>
-&lt;br>
-&lt;p>&lt;b>Gson&lt;/b>&lt;/p>
-
-&lt;p>Copyright 2008 Google Inc.&lt;/p>
-
-&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at&lt;/p>
-
-&lt;p>    http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
-
-&lt;p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an \"AS IS\" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.&lt;/p>
-&lt;br>
-&lt;p>&lt;b>Android support libraries&lt;/b>&lt;/p>
-
-&lt;p>Copyright (C) 2005-2018 The Android Open Source Project&lt;/p>
-
-&lt;p>Licensed under the Apache License, Version 2.0 (the \"License\");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at&lt;/p>
-
-&lt;p>     http://www.apache.org/licenses/LICENSE-2.0&lt;/p>
-
-&lt;p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an \"AS IS\" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.&lt;/p>
-&lt;br>
-&lt;br>
-&lt;p>Apache License&lt;/p>
-&lt;p>Version 2.0, January 2004&lt;/p>
-
-&lt;p>http://www.apache.org/licenses/&lt;/p>
-
-&lt;p>TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION&lt;/p>
-
-&lt;p>1. Definitions.&lt;/p>
-
-&lt;p>\"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.
-&lt;/p>
-&lt;p>\"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.
-&lt;/p>
-&lt;p>\"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.
-&lt;/p>
-&lt;p>\"You\" (or \"Your\") shall mean an individual or Legal Entity exercising permissions granted by this License.
-&lt;/p>
-&lt;p>\"Source\" form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.
-&lt;/p>
-&lt;p>\"Object\" form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.
-&lt;/p>
-&lt;p>\"Work\" shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).
-&lt;/p>
-&lt;p>\"Derivative Works\" shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.
-&lt;/p>
-&lt;p>\"Contribution\" shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, \"submitted\" means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as \"Not a Contribution.\"
-&lt;/p>
-&lt;p>\"Contributor\" shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.
-&lt;/p>
-&lt;p>2. Grant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.
-&lt;/p>
-&lt;p>3. Grant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.
-&lt;/p>
-&lt;p>4. Redistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:
-&lt;/p>
-&lt;p>   a. You must give any other recipients of the Work or Derivative Works a copy of this License; and&lt;/p>
-&lt;p>   b. You must cause any modified files to carry prominent notices stating that You changed the files; and&lt;/p>
-&lt;p>   c. You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and&lt;/p>
-&lt;p>   d. If the Work includes a \"NOTICE\" text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License.&lt;/p>
-
-&lt;p>      You may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.
-&lt;/p>
-&lt;p>5. Submission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.
-
-&lt;p>6. Trademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.
-&lt;/p>
-&lt;p>7. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.
-&lt;/p>
-&lt;p>8. Limitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.
-&lt;/p>
-&lt;p>9. Accepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.
-&lt;/p>
-&lt;p>END OF TERMS AND CONDITIONS&lt;/p>
-&lt;br>
-&lt;br>
-&lt;p>This software also uses the following open source software libraries and source code:&lt;/p>
-
-&lt;b>Google Play Services libraries&lt;/b>
-
-"</string>
+    <string name="license_text">&lt;p> Copyright 2010, 2021 Sony Corporation.&lt;br> This software contains confidential and proprietary information of Sony Corporation. &lt;/p> &lt;p>This software includes source code from:&lt;/p> &lt;p>&lt;b>* Android platform/developers/samples &lt;br> * Android platform/development &lt;br> * Android platform/frameworks/base &lt;br> * Android platform/frameworks/support &lt;br> * Android platform/packages/apps/Music &lt;br> * Universal Android Music Player Sample &lt;/b>&lt;/p> &lt;p>Copyright (C) 2005-2018 The Android Open Source Project&lt;br> Copyright 2010, 2021 Sony Corporation.&lt;/p> &lt;p>Original code licensed under the Apache License, Version 2.0 (the License); you may not use this file except in compliance with the License. You may obtain a copy of the License at&lt;/p> &lt;p> http://www.apache.org/licenses/LICENSE-2.0&lt;/p> &lt;p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&lt;/p> &lt;p>NOTE: This file has been modified by Sony Corporation. Modifications are licensed under the Sony Corporation End User License Agreement (EULA). Any use of the modifications is subject to the terms of the EULA.&lt;/p> &lt;br> &lt;br> &lt;p>This software uses the following open source software libraries and source code:&lt;/p> &lt;p>&lt;b>Retrofit&lt;/b>&lt;/p> &lt;p>Copyright 2013 Square, Inc.&lt;/p> &lt;p>Licensed under the Apache License, Version 2.0 (the License); you may not use this file except in compliance with the License. You may obtain a copy of the License at&lt;/p> &lt;p> http://www.apache.org/licenses/LICENSE-2.0&lt;/p> &lt;p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&lt;/p> &lt;br> &lt;p>&lt;b>Picasso&lt;/b>&lt;/p> &lt;p>Copyright 2013 Square, Inc.&lt;/p> &lt;p>Licensed under the Apache License, Version 2.0 (the License); you may not use this file except in compliance with the License. You may obtain a copy of the License at&lt;/p> &lt;p> http://www.apache.org/licenses/LICENSE-2.0&lt;/p> &lt;p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&lt;/p> &lt;br> &lt;p>&lt;b>Picasso 2 OkHttp 3 Downloader&lt;/b>&lt;/p> &lt;p>Copyright 2016 Jake Wharton&lt;/p> &lt;p>Licensed under the Apache License, Version 2.0 (the License); you may not use this file except in compliance with the License. You may obtain a copy of the License at&lt;/p> &lt;p> http://www.apache.org/licenses/LICENSE-2.0&lt;/p> &lt;p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&lt;/p> &lt;br> &lt;p>&lt;b>OkHttp&lt;/b>&lt;/p> &lt;p>Copyright 2016 Square, Inc.&lt;/p> &lt;p>Licensed under the Apache License, Version 2.0 (the License); you may not use this file except in compliance with the License. You may obtain a copy of the License at&lt;/p> &lt;p> http://www.apache.org/licenses/LICENSE-2.0&lt;/p> &lt;p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&lt;/p> &lt;br> &lt;p>&lt;b>Gson&lt;/b>&lt;/p> &lt;p>Copyright 2008 Google Inc.&lt;/p> &lt;p>Licensed under the Apache License, Version 2.0 (the License); you may not use this file except in compliance with the License. You may obtain a copy of the License at&lt;/p> &lt;p> http://www.apache.org/licenses/LICENSE-2.0&lt;/p> &lt;p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&lt;/p> &lt;br> &lt;p>&lt;b>Android support libraries&lt;/b>&lt;/p> &lt;p>Copyright (C) 2005-2018 The Android Open Source Project&lt;/p> &lt;p>Licensed under the Apache License, Version 2.0 (the License); you may not use this file except in compliance with the License. You may obtain a copy of the License at&lt;/p> &lt;p> http://www.apache.org/licenses/LICENSE-2.0&lt;/p> &lt;p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&lt;/p> &lt;br> &lt;br> &lt;p>Apache License&lt;/p> &lt;p>Version 2.0, January 2004&lt;/p> &lt;p>http://www.apache.org/licenses/&lt;/p> &lt;p>TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION&lt;/p> &lt;p>1. Definitions.&lt;/p> &lt;p>License shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. &lt;/p> &lt;p>Licensor shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. &lt;/p> &lt;p>Legal Entity shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, control means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity. &lt;/p> &lt;p>You (or Your) shall mean an individual or Legal Entity exercising permissions granted by this License. &lt;/p> &lt;p>Source form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files. &lt;/p> &lt;p>Object form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types. &lt;/p> &lt;p>Work shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below). &lt;/p> &lt;p>Derivative Works shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof. &lt;/p> &lt;p>Contribution shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, submitted means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as Not a Contribution. &lt;/p> &lt;p>Contributor shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work. &lt;/p> &lt;p>2. Grant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form. &lt;/p> &lt;p>3. Grant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed. &lt;/p> &lt;p>4. Redistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions: &lt;/p> &lt;p> a. You must give any other recipients of the Work or Derivative Works a copy of this License; and&lt;/p> &lt;p> b. You must cause any modified files to carry prominent notices stating that You changed the files; and&lt;/p> &lt;p> c. You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and&lt;/p> &lt;p> d. If the Work includes a NOTICE text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License.&lt;/p> &lt;p> You may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License. &lt;/p> &lt;p>5. Submission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions. &lt;p>6. Trademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file. &lt;/p> &lt;p>7. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License. &lt;/p> &lt;p>8. Limitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages. &lt;/p> &lt;p>9. Accepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability. &lt;/p> &lt;p>END OF TERMS AND CONDITIONS&lt;/p> &lt;br> &lt;br> &lt;p>This software also uses the following open source software libraries and source code:&lt;/p> &lt;b>Google Play Services libraries&lt;/b></string>
     <string name="lmark_display_dialog_option_txt">Do not show this message again</string>
     <string name="lmark_display_message_txt">L MARK is a registered trademark which appears on licensed mobile / web sites of legitimate digital music providers.</string>
     <string name="mc_download_music_info_description">Download album art and song info for all your songs in one go</string>
@@ -518,9 +317,12 @@ Please note that Music application may not work properly without the requested a
     <string name="music_delete_failed_one_or_many">Some items could not be deleted</string>
     <string name="music_delete_playlist_question">"Delete %1$s? The playlist's content will not be affected."</string>
     <string name="music_delete_question">Delete %1$s from storage?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"The Music app will perform a background scan to rebuild the music database.
+This scan may take more than 10 minutes depending on the number of songs. Songs and playlists are not shown or played correctly until background scan is complete."</string>
     <string name="music_dialog_body_sd_permission_access_txt">To use the SD card as data storage, please give permission to access SD card on the next screen.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Tap RETRY to try again, or tap CANCEL and start over from the beginning.</string>
     <string name="music_dialog_button_next_txt">Next</string>
+    <string name="music_dialog_title_bg_scan_notice">Notice</string>
     <string name="music_dialog_title_sd_permission_access_txt">Need permission to access SD card</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Permission to access SD card not granted</string>
     <string name="music_download">Download</string>
@@ -808,7 +610,7 @@ To access audio content on your device"</string>
     <string name="personal_data_collection_dialog_title">Personal data</string>
     <string name="personal_data_collection_screen_button_negative">NOT NOW</string>
     <string name="personal_data_collection_screen_button_positive">I AGREE</string>
-    <string name="personal_data_collection_screen_fine_print">Sony will collect and combine your <a href="entrance://personaldata">personal data</a> in order to improve the service. Sony will handle your data as per our <a href="http://sonymobile.com/privacy">Privacy Policy</a></string>
+    <string name="personal_data_collection_screen_fine_print">Sony will collect and combine your <a href="entrance://personaldata">personal data</a> in order to improve the service. Sony will handle your data as per our <a href="https://www.sonymobile.com/privacy">Privacy Policy</a></string>
     <string name="personal_data_collection_screen_fine_print_us">Sony will collect and combine your <a href="entrance://personaldata">personal data</a> in order to improve the service. Sony will handle your data as per our <a href="https://www.sonymobile.com/us/legal/privacy">Privacy Policy</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">CA Privacy Notice</a>)</string>
     <string name="personal_data_collection_screen_text">Help us make the Music application better by sharing your listening habits with Sony.</string>
     <string name="play_queue_open">Open</string>

@@ -389,16 +389,16 @@
 
     mul-long v9, v9, v4
 
-    long-to-int v9, v9
+    long-to-int v10, v9
 
     .line 547
-    iget-object v10, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
+    iget-object v9, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
-    iget v10, v10, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->mEnterFadeDuration:I
+    iget v9, v9, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->mEnterFadeDuration:I
 
-    div-int/2addr v9, v10
+    div-int/2addr v10, v9
 
-    rsub-int v9, v9, 0xff
+    rsub-int v9, v10, 0xff
 
     .line 549
     iget v10, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mAlpha:I

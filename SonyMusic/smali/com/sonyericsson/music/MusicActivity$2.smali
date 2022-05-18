@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 282
+    .line 320
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$2;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public onStaticItemsLoaded()V
     .locals 2
 
-    .line 286
+    .line 324
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$2;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     iget-object v0, v0, Lcom/sonyericsson/music/MusicActivity;->mNavigationDrawerFragment:Lcom/sonyericsson/music/navigationdrawer/NavigationDrawerFragment;
 
     invoke-virtual {v0, p0}, Lcom/sonyericsson/music/navigationdrawer/NavigationDrawerFragment;->removeMenuLoadedListener(Lcom/sonyericsson/music/navigationdrawer/NavigationDrawerFragment$MenuLoadedListener;)V
 
-    .line 287
+    .line 325
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$2;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-static {v0}, Lcom/sonyericsson/music/MusicActivity;->access$100(Lcom/sonyericsson/music/MusicActivity;)Z
@@ -54,14 +54,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 288
+    .line 326
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$2;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/sonyericsson/music/MusicActivity;->access$102(Lcom/sonyericsson/music/MusicActivity;Z)Z
 
-    .line 289
+    .line 327
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$2;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     new-instance v1, Lcom/sonyericsson/music/MusicActivity$2$1;

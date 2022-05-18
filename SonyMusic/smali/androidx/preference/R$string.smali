@@ -84,12 +84,12 @@
 
 .field public static final expand_button_title:I = 0x7f1000a1
 
-.field public static final search_menu_title:I = 0x7f100282
+.field public static final search_menu_title:I = 0x7f100284
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f1002a5
+.field public static final status_bar_notification_info_overflow:I = 0x7f1002a7
 
-.field public static final summary_collapsed_preference_list:I = 0x7f1002a6
+.field public static final summary_collapsed_preference_list:I = 0x7f1002a8
 
-.field public static final v7_preference_off:I = 0x7f1002c8
+.field public static final v7_preference_off:I = 0x7f1002ca
 
-.field public static final v7_preference_on:I = 0x7f1002c9
+.field public static final v7_preference_on:I = 0x7f1002cb

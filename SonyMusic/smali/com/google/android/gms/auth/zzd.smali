@@ -394,7 +394,7 @@
 
     move-result-object p2
     :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -408,12 +408,18 @@
     :catchall_0
     move-exception p2
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p2
 
+    goto :goto_0
+
+    :catch_1
+    move-exception p2
+
     .line 81
+    :goto_0
     :try_start_1
     sget-object v1, Lcom/google/android/gms/auth/zzd;->zzn:Lcom/google/android/gms/common/logging/Logger;
 
@@ -446,7 +452,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :goto_0
+    :goto_1
     const-string v1, "GoogleAuthUtil"
 
     .line 83

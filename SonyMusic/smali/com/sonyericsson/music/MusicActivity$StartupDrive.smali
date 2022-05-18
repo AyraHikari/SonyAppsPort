@@ -42,17 +42,17 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;Lcom/sonyericsson/music/authentication/GoogleSignInSignOutActivity$LaunchAction;)V
     .locals 1
 
-    .line 2311
+    .line 2480
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 2312
+    .line 2481
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/MusicActivity$StartupDrive;->mActivity:Ljava/lang/ref/WeakReference;
 
-    .line 2313
+    .line 2482
     iput-object p2, p0, Lcom/sonyericsson/music/MusicActivity$StartupDrive;->mAction:Lcom/sonyericsson/music/authentication/GoogleSignInSignOutActivity$LaunchAction;
 
     return-void
@@ -63,7 +63,7 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 2318
+    .line 2487
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$StartupDrive;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -74,7 +74,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 2319
+    .line 2488
     invoke-static {p1}, Lcom/sonyericsson/music/authentication/GoogleSignIn;->shouldShowIntroduction(Landroid/content/Context;)Z
 
     move-result p1
@@ -95,7 +95,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 2307
+    .line 2476
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/MusicActivity$StartupDrive;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
@@ -108,7 +108,7 @@
 .method protected onPostExecute(Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 2324
+    .line 2493
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$StartupDrive;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -119,21 +119,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 2325
+    .line 2494
     invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 2326
+    .line 2495
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 2328
+    .line 2497
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$StartupDrive;->mAction:Lcom/sonyericsson/music/authentication/GoogleSignInSignOutActivity$LaunchAction;
 
     const/4 v1, 0x4
@@ -142,7 +142,7 @@
 
     goto :goto_0
 
-    .line 2331
+    .line 2500
     :cond_0
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->getMusicFragmentManager()Lcom/sonyericsson/music/MusicFragmentManager;
 
@@ -158,7 +158,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 2307
+    .line 2476
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/MusicActivity$StartupDrive;->onPostExecute(Ljava/lang/Boolean;)V

@@ -291,7 +291,7 @@
 .end method
 
 .method private static initialize(Ljava/io/File;)V
-    .locals 4
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -347,7 +347,23 @@
     .line 207
     new-array v3, v3, [I
 
-    fill-array-data v3, :array_0
+    const/16 v4, 0x1000
+
+    const/4 v5, 0x0
+
+    aput v4, v3, v5
+
+    const/4 v4, 0x1
+
+    aput v5, v3, v4
+
+    const/4 v4, 0x2
+
+    aput v5, v3, v4
+
+    const/4 v4, 0x3
+
+    aput v5, v3, v4
 
     invoke-static {v2, v3}, Lcom/google/firebase/crashlytics/internal/log/QueueFile;->writeInts([B[I)V
 
@@ -386,16 +402,6 @@
 
     .line 211
     throw p0
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x1000
-        0x0
-        0x0
-        0x0
-    .end array-data
 .end method
 
 .method private static nonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;

@@ -358,7 +358,7 @@
     .line 111
     iget-wide v0, p0, Lcom/sonyericsson/music/playqueue/provider/MemCacheEntry;->mId:J
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    return v0
+    return v1
 .end method

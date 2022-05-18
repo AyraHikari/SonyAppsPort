@@ -279,9 +279,12 @@
     <string name="music_delete_failed_one_or_many">Кейбір элементтерді жою мүмкін болмады</string>
     <string name="music_delete_playlist_question">%1$s жою керек пе? Ойнату тізімі мазмұнына әсер етілмейді.</string>
     <string name="music_delete_question">%1$s жадтан жою керек пе?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"«Музыка» қолд. муз.дерекқ. қайта құру үшін фон.реж скан. жүргізеді.
+Әндер санына қарай скан. 10 мин. артық уақыт алуы мүмкін. Фон.реж.скан. аяқталмай әндер мен ойн.тізімдері көрсетілмейді не дұрыс ойнатылмайды."</string>
     <string name="music_dialog_body_sd_permission_access_txt">SD картасын деректер жады ретінде пайдалану үшін келесі экранда SD картасына кіру рұқсатын беріңіз.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Қайталау үшін «ӘРЕКЕТТІ ҚАЙТАЛАУ» опциясын түртіңіз немесе «БАС ТАРТУ» опциясын түртіңіз және басынан бастаңыз.</string>
     <string name="music_dialog_button_next_txt">Келесі</string>
+    <string name="music_dialog_title_bg_scan_notice">Ескерту</string>
     <string name="music_dialog_title_sd_permission_access_txt">SD картасына кіруге рұқсат қажет</string>
     <string name="music_dialog_title_sd_permission_retry_txt">SD картасына кіру рұқсаты берілмеді</string>
     <string name="music_download">Жүктеу</string>
@@ -556,7 +559,7 @@ MMS қосымшаларын ойнату үшін"</string>
     <string name="personal_data_collection_dialog_title">Жеке деректер</string>
     <string name="personal_data_collection_screen_button_negative">ҚАЗІР ЕМЕС</string>
     <string name="personal_data_collection_screen_button_positive">КЕЛІСЕМІН</string>
-    <string name="personal_data_collection_screen_fine_print">Sony компаниясы <a href="entrance://personaldata">жеке деректеріңізді</a> қызметті жақсарту мақсатында жинап біріктіреді. Sony компаниясы деректердіңізді <a href="http://sonymobile.com/privacy">Құпиялылық саясатына</a> сәйкес қолданады</string>
+    <string name="personal_data_collection_screen_fine_print">Sony компаниясы <a href="entrance://personaldata">жеке деректеріңізді</a> қызметті жақсарту мақсатында жинап біріктіреді. Sony компаниясы деректердіңізді <a href="https://www.sonymobile.com/privacy">Құпиялылық саясатына</a> сәйкес қолданады</string>
     <string name="personal_data_collection_screen_fine_print_us">Sony компаниясы <a href="entrance://personaldata">жеке деректеріңізді</a> қызметті жақсарту мақсатында жинап біріктіреді. Sony компаниясы деректердіңізді <a href="https://www.sonymobile.com/us/legal/privacy">Құпиялылық саясатына</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">CA құпиялық ескертпесі</a>) сәйкес қолданады</string>
     <string name="personal_data_collection_screen_text">Тыңдау әдеттеріңізді Sony компаниясымен ортақтастыру арқылы бізге «Музыка» қолданбасын жақсырақ етуге көмектесіңіз.</string>
     <string name="play_queue_open">Ашу</string>

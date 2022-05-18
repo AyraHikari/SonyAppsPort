@@ -303,6 +303,17 @@
     return-void
 .end method
 
+.method public setShowSyncUserNoticeDialog(Z)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    return-void
+.end method
+
 .method public setShuffle(Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
@@ -323,6 +334,19 @@
     .end annotation
 
     return-void
+.end method
+
+.method public shouldShowSyncUserNoticeDialog()Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public shuffleNext()V

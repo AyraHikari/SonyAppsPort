@@ -594,7 +594,7 @@
 .method public onConnectionFailed(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 1
 
-    const p1, 0x7f100151
+    const p1, 0x7f100153
 
     const/4 v0, 0x1
 

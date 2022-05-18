@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 256
+    .line 272
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$1;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 259
+    .line 275
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$1;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-static {v0}, Lcom/sonyericsson/music/MusicActivity;->access$000(Lcom/sonyericsson/music/MusicActivity;)Lcom/sonyericsson/music/common/ListenerBasedRetainedAsyncTask;
@@ -47,20 +47,20 @@
 
     if-nez v0, :cond_0
 
-    .line 260
+    .line 276
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$1;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     const-string v1, "account_cleanup_task_retain_key"
 
-    .line 261
+    .line 277
     invoke-static {v0, v1}, Lcom/sonyericsson/music/authentication/GoogleAccount;->accountCleanup(Landroid/app/Activity;Ljava/lang/String;)Lcom/sonyericsson/music/common/ListenerBasedRetainedAsyncTask;
 
     move-result-object v1
 
-    .line 260
+    .line 276
     invoke-static {v0, v1}, Lcom/sonyericsson/music/MusicActivity;->access$002(Lcom/sonyericsson/music/MusicActivity;Lcom/sonyericsson/music/common/ListenerBasedRetainedAsyncTask;)Lcom/sonyericsson/music/common/ListenerBasedRetainedAsyncTask;
 
-    .line 262
+    .line 278
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$1;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-static {v0}, Lcom/sonyericsson/music/MusicActivity;->access$000(Lcom/sonyericsson/music/MusicActivity;)Lcom/sonyericsson/music/common/ListenerBasedRetainedAsyncTask;

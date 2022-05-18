@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;)V
     .locals 0
 
-    .line 393
+    .line 406
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$6;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-direct {p0}, Landroidx/mediarouter/media/MediaRouter$Callback;-><init>()V
@@ -35,10 +35,10 @@
 .method public onRouteAdded(Landroidx/mediarouter/media/MediaRouter;Landroidx/mediarouter/media/MediaRouter$RouteInfo;)V
     .locals 1
 
-    .line 397
+    .line 410
     invoke-super {p0, p1, p2}, Landroidx/mediarouter/media/MediaRouter$Callback;->onRouteAdded(Landroidx/mediarouter/media/MediaRouter;Landroidx/mediarouter/media/MediaRouter$RouteInfo;)V
 
-    .line 403
+    .line 416
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$6;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-static {p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->access$100(Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;)Landroidx/mediarouter/media/MediaRouter;
@@ -59,14 +59,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 404
+    .line 417
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$6;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     iget-object p1, p1, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->mMediaRouteToSelectAfterAdd:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$MediaRouteInfo;
 
     if-eqz p1, :cond_0
 
-    .line 405
+    .line 418
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$MediaRouteInfo;->getRouteId()Ljava/lang/String;
 
     move-result-object p1
@@ -81,7 +81,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 406
+    .line 419
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$6;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {p2}, Landroidx/mediarouter/media/MediaRouter$RouteInfo;->getExtras()Landroid/os/Bundle;
@@ -94,7 +94,7 @@
 
     invoke-virtual {p1, v0, p2}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->setMediaRoute(Landroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 407
+    .line 420
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$6;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     const/4 p2, 0x0
@@ -108,10 +108,10 @@
 .method public onRouteSelected(Landroidx/mediarouter/media/MediaRouter;Landroidx/mediarouter/media/MediaRouter$RouteInfo;)V
     .locals 1
 
-    .line 415
+    .line 428
     invoke-super {p0, p1, p2}, Landroidx/mediarouter/media/MediaRouter$Callback;->onRouteSelected(Landroidx/mediarouter/media/MediaRouter;Landroidx/mediarouter/media/MediaRouter$RouteInfo;)V
 
-    .line 421
+    .line 434
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$6;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-static {p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->access$100(Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;)Landroidx/mediarouter/media/MediaRouter;
@@ -132,7 +132,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 422
+    .line 435
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$6;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     iget-object p1, p1, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->mMediaPlaybackState:Lcom/sonyericsson/music/proxyservice/aidl/MediaPlaybackState;
@@ -143,7 +143,7 @@
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$6;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
-    .line 423
+    .line 436
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->access$100(Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;)Landroidx/mediarouter/media/MediaRouter;
 
     move-result-object v0
@@ -156,7 +156,7 @@
 
     move-result-object p1
 
-    .line 424
+    .line 437
     invoke-virtual {p2}, Landroidx/mediarouter/media/MediaRouter$RouteInfo;->getId()Ljava/lang/String;
 
     move-result-object p2
@@ -169,7 +169,7 @@
 
     move-result-object p1
 
-    .line 425
+    .line 438
     iget-object p2, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$6;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-static {p2, p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->access$600(Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;Lcom/sonyericsson/music/proxyservice/aidl/MediaPlaybackState;)V
@@ -181,7 +181,7 @@
 .method public onRouteUnselected(Landroidx/mediarouter/media/MediaRouter;Landroidx/mediarouter/media/MediaRouter$RouteInfo;)V
     .locals 0
 
-    .line 431
+    .line 444
     invoke-super {p0, p1, p2}, Landroidx/mediarouter/media/MediaRouter$Callback;->onRouteUnselected(Landroidx/mediarouter/media/MediaRouter;Landroidx/mediarouter/media/MediaRouter$RouteInfo;)V
 
     return-void

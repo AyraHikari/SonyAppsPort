@@ -28,19 +28,19 @@
 .method constructor <init>(ILjava/lang/String;II)V
     .locals 0
 
-    .line 349
+    .line 359
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 350
+    .line 360
     iput-object p2, p0, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;->mPath:Ljava/lang/String;
 
-    .line 351
+    .line 361
     iput p1, p0, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;->mId:I
 
-    .line 352
+    .line 362
     iput p3, p0, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;->mDateCreated:I
 
-    .line 353
+    .line 363
     iput p4, p0, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;->mDateModified:I
 
     return-void

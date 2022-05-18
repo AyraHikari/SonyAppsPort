@@ -115,10 +115,10 @@
 
     sub-long/2addr p1, v1
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
     .line 165
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v0, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-void
 .end method
@@ -138,10 +138,10 @@
 
     sub-long/2addr v1, v3
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
     .line 160
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-void
 .end method
@@ -728,10 +728,10 @@
 
     sub-long/2addr v1, v3
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
     .line 97
-    invoke-virtual {v0, v1, p1}, Ljava/nio/ByteBuffer;->putInt(II)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v2, p1}, Ljava/nio/ByteBuffer;->putInt(II)Ljava/nio/ByteBuffer;
 
     .line 98
     iget-wide v0, p0, Lcom/google/android/gms/internal/gtm/zzqj$zze;->zzaxd:J
@@ -1093,9 +1093,9 @@
 
     sub-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    return v0
+    return v1
 .end method
 
 .method public final zzp(J)V
@@ -1137,9 +1137,9 @@
 
     iput-wide v9, p0, Lcom/google/android/gms/internal/gtm/zzqj$zze;->zzaxd:J
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    int-to-byte p1, p1
+    int-to-byte p1, p2
 
     invoke-static {v0, v1, p1}, Lcom/google/android/gms/internal/gtm/zztx;->zza(JB)V
 
@@ -1189,9 +1189,9 @@
     .line 108
     iput-wide v9, p0, Lcom/google/android/gms/internal/gtm/zzqj$zze;->zzaxd:J
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    int-to-byte p1, p1
+    int-to-byte p1, p2
 
     invoke-static {v0, v1, p1}, Lcom/google/android/gms/internal/gtm/zztx;->zza(JB)V
 
@@ -1283,10 +1283,10 @@
 
     sub-long/2addr v1, v3
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
     .line 116
-    invoke-virtual {v0, v1, p1, p2}, Ljava/nio/ByteBuffer;->putLong(IJ)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v2, p1, p2}, Ljava/nio/ByteBuffer;->putLong(IJ)Ljava/nio/ByteBuffer;
 
     .line 117
     iget-wide p1, p0, Lcom/google/android/gms/internal/gtm/zzqj$zze;->zzaxd:J

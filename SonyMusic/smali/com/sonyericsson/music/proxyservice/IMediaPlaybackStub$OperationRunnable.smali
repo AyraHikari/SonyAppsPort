@@ -27,10 +27,10 @@
 .method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 2
 
-    .line 735
+    .line 775
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 733
+    .line 773
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -39,7 +39,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$OperationRunnable;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 736
+    .line 776
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$OperationRunnable;->mRunnable:Ljava/lang/Runnable;
 
     return-void
@@ -50,12 +50,12 @@
 .method public run()V
     .locals 1
 
-    .line 740
+    .line 780
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$OperationRunnable;->mRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 741
+    .line 781
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$OperationRunnable;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -66,7 +66,7 @@
 .method public waitForComplete()V
     .locals 4
 
-    .line 746
+    .line 786
     :try_start_0
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$OperationRunnable;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 

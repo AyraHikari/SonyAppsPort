@@ -2504,19 +2504,19 @@
 
     move-result-wide v1
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
-    if-gtz v1, :cond_6
+    if-gtz v2, :cond_6
 
-    const/16 v1, 0x708
+    const/16 v2, 0x708
 
     .line 922
     :cond_6
-    iget-object v2, p0, Lcom/sonymobile/gagtmhelper/GaGtmUtils;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/sonymobile/gagtmhelper/GaGtmUtils;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/google/android/gms/analytics/GoogleAnalytics;->getInstance(Landroid/content/Context;)Lcom/google/android/gms/analytics/GoogleAnalytics;
+    invoke-static {v1}, Lcom/google/android/gms/analytics/GoogleAnalytics;->getInstance(Landroid/content/Context;)Lcom/google/android/gms/analytics/GoogleAnalytics;
 
-    move-result-object v2
+    move-result-object v1
 
     .line 923
     invoke-static {}, Lcom/sonymobile/gagtmhelper/GaGtmLog;->isEnabled()Z
@@ -2536,7 +2536,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2546,7 +2546,7 @@
 
     .line 926
     :cond_7
-    invoke-virtual {v2, v1}, Lcom/google/android/gms/analytics/GoogleAnalytics;->setLocalDispatchPeriod(I)V
+    invoke-virtual {v1, v2}, Lcom/google/android/gms/analytics/GoogleAnalytics;->setLocalDispatchPeriod(I)V
 
     const-string v1, "gagtm-exceptionMaxReportedRows"
 
@@ -2555,10 +2555,10 @@
 
     move-result-wide v1
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
     .line 933
-    invoke-static {v1}, Lcom/sonymobile/gagtmhelper/GaGtmExceptionParser;->setMaxReportedRows(I)V
+    invoke-static {v2}, Lcom/sonymobile/gagtmhelper/GaGtmExceptionParser;->setMaxReportedRows(I)V
 
     const-string v1, "gagtm-exceptionMaxTraversedRows"
 
@@ -2567,10 +2567,10 @@
 
     move-result-wide v1
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
     .line 938
-    invoke-static {v1}, Lcom/sonymobile/gagtmhelper/GaGtmExceptionParser;->setMaxTraversedRows(I)V
+    invoke-static {v2}, Lcom/sonymobile/gagtmhelper/GaGtmExceptionParser;->setMaxTraversedRows(I)V
 
     const-string v1, "gagtm-exceptionPackageNames"
 

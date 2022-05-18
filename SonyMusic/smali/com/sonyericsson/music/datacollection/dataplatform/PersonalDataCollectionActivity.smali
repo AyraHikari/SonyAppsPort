@@ -334,7 +334,7 @@
 
     const-string v0, "title"
 
-    const v1, 0x7f1001b7
+    const v1, 0x7f1001b9
 
     .line 83
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -484,12 +484,12 @@
 
     if-eqz v2, :cond_0
 
-    const v2, 0x7f100253
+    const v2, 0x7f100255
 
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f100252
+    const v2, 0x7f100254
 
     .line 106
     :goto_0

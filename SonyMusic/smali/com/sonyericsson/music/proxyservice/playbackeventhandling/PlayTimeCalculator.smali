@@ -55,7 +55,7 @@
 
 # virtual methods
 .method public addPlay(JJ)V
-    .locals 10
+    .locals 11
 
     .line 50
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/PlayTimeCalculator;->mPlayTimeBuckets:[J
@@ -97,11 +97,11 @@
 
     rem-long v7, v0, v3
 
-    long-to-int v7, v7
+    long-to-int v8, v7
 
-    const-wide/16 v8, 0x0
+    const-wide/16 v9, 0x0
 
-    aput-wide v8, v2, v7
+    aput-wide v9, v2, v8
 
     goto :goto_0
 
@@ -111,13 +111,13 @@
 
     rem-long v1, p1, v3
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
-    aget-wide v2, v0, v1
+    aget-wide v3, v0, v2
 
-    add-long/2addr v2, p3
+    add-long/2addr v3, p3
 
-    aput-wide v2, v0, v1
+    aput-wide v3, v0, v2
 
     .line 65
     iput-wide p1, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/PlayTimeCalculator;->mPreviousBucket:J

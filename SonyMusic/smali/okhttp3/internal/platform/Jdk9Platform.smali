@@ -129,7 +129,7 @@
     .line 53
     invoke-virtual {p1, p2}, Ljavax/net/ssl/SSLSocket;->setSSLParameters(Ljavax/net/ssl/SSLParameters;)V
     :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
@@ -137,6 +137,12 @@
     :catch_0
     move-exception p1
 
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    :goto_0
     const-string p2, "unable to set ssl parameters"
 
     .line 55
@@ -173,7 +179,7 @@
 
     move-result v0
     :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
     if-eqz v0, :cond_0
@@ -192,6 +198,12 @@
     :catch_0
     move-exception p1
 
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    :goto_1
     const-string v0, "unable to get selected protocols"
 
     .line 72

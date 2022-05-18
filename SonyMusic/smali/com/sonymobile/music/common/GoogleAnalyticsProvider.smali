@@ -127,12 +127,12 @@
 .method private static loadGtmContainer(Landroid/content/Context;)V
     .locals 10
 
-    .line 319
+    .line 322
     sget-boolean v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
     if-eqz v0, :cond_0
 
-    .line 320
+    .line 323
     sget-object v0, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class v1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -141,7 +141,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sonymobile/music/debug/DebugBase;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 323
+    .line 326
     :cond_0
     invoke-static {}, Lcom/sonymobile/gagtmhelper/GaGtmUtils;->getInstance()Lcom/sonymobile/gagtmhelper/GaGtmUtils;
 
@@ -169,7 +169,7 @@
 .method private setupTagManager()V
     .locals 2
 
-    .line 308
+    .line 311
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -178,17 +178,17 @@
 
     move-result-object v0
 
-    .line 310
+    .line 313
     sget-boolean v1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
     invoke-static {v1}, Lcom/sonymobile/gagtmhelper/GaGtmLog;->enable(Z)V
 
-    .line 314
+    .line 317
     invoke-static {v0}, Lcom/google/android/gms/tagmanager/TagManager;->getInstance(Landroid/content/Context;)Lcom/google/android/gms/tagmanager/TagManager;
 
     move-result-object v0
 
-    .line 315
+    .line 318
     sget-boolean v1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
     invoke-virtual {v0, v1}, Lcom/google/android/gms/tagmanager/TagManager;->setVerboseLoggingEnabled(Z)V
@@ -297,13 +297,13 @@
 
     return-object v4
 
-    .line 254
+    .line 257
     :pswitch_0
     sget-boolean v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
     if-eqz v0, :cond_1
 
-    .line 255
+    .line 258
     sget-object v0, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class v5, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -331,7 +331,7 @@
     :cond_1
     if-eqz p3, :cond_6
 
-    .line 257
+    .line 260
     sget-boolean p1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sAllowTracking:Z
 
     if-nez p1, :cond_2
@@ -341,19 +341,19 @@
     :cond_2
     const-string p1, "custom-dimension-tag"
 
-    .line 261
+    .line 264
     invoke-virtual {p3, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "custom-dimension-value"
 
-    .line 262
+    .line 265
     invoke-virtual {p3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
-    .line 263
+    .line 266
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -368,13 +368,13 @@
 
     goto :goto_2
 
-    .line 267
+    .line 270
     :cond_3
     sget-boolean v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
     if-eqz v0, :cond_4
 
-    .line 268
+    .line 271
     sget-object v0, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class v4, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -405,7 +405,7 @@
 
     invoke-virtual {v0, v4, v5}, Lcom/sonymobile/music/debug/DebugBase;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 272
+    .line 275
     :cond_4
     invoke-static {}, Lcom/sonymobile/gagtmhelper/GaGtmUtils;->getInstance()Lcom/sonymobile/gagtmhelper/GaGtmUtils;
 
@@ -433,13 +433,13 @@
     :goto_3
     return-object v4
 
-    .line 232
+    .line 235
     :pswitch_1
     sget-boolean v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
     if-eqz v0, :cond_7
 
-    .line 233
+    .line 236
     sget-object v0, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class v1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -467,7 +467,7 @@
     :cond_7
     if-eqz p3, :cond_b
 
-    .line 235
+    .line 238
     sget-boolean p1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sAllowTracking:Z
 
     if-nez p1, :cond_8
@@ -477,12 +477,12 @@
     :cond_8
     const-string p1, "exception-msg"
 
-    .line 239
+    .line 242
     invoke-virtual {p3, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 240
+    .line 243
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p3
@@ -491,13 +491,13 @@
 
     return-object v4
 
-    .line 244
+    .line 247
     :cond_9
     sget-boolean p3, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
     if-eqz p3, :cond_a
 
-    .line 245
+    .line 248
     sget-object p3, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -522,7 +522,7 @@
 
     invoke-virtual {p3, v0, v1}, Lcom/sonymobile/music/debug/DebugBase;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 249
+    .line 252
     :cond_a
     invoke-static {}, Lcom/sonymobile/gagtmhelper/GaGtmUtils;->getInstance()Lcom/sonymobile/gagtmhelper/GaGtmUtils;
 
@@ -536,13 +536,13 @@
     :goto_4
     return-object v4
 
-    .line 210
+    .line 213
     :pswitch_2
     sget-boolean v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
     if-eqz v0, :cond_c
 
-    .line 211
+    .line 214
     sget-object v0, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class v1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -570,7 +570,7 @@
     :cond_c
     if-eqz p3, :cond_10
 
-    .line 213
+    .line 216
     sget-boolean p1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sAllowTracking:Z
 
     if-nez p1, :cond_d
@@ -580,12 +580,12 @@
     :cond_d
     const-string p1, "screen-name"
 
-    .line 217
+    .line 220
     invoke-virtual {p3, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 218
+    .line 221
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p3
@@ -594,13 +594,13 @@
 
     return-object v4
 
-    .line 222
+    .line 225
     :cond_e
     sget-boolean p3, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
     if-eqz p3, :cond_f
 
-    .line 223
+    .line 226
     sget-object p3, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -625,7 +625,7 @@
 
     invoke-virtual {p3, v0, v1}, Lcom/sonymobile/music/debug/DebugBase;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 227
+    .line 230
     :cond_f
     invoke-static {}, Lcom/sonymobile/gagtmhelper/GaGtmUtils;->getInstance()Lcom/sonymobile/gagtmhelper/GaGtmUtils;
 
@@ -639,13 +639,13 @@
     :goto_5
     return-object v4
 
-    .line 184
+    .line 187
     :pswitch_3
     sget-boolean v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
     if-eqz v0, :cond_11
 
-    .line 185
+    .line 188
     sget-object v0, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class v1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -673,7 +673,7 @@
     :cond_11
     if-eqz p3, :cond_15
 
-    .line 187
+    .line 190
     sget-boolean p1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sAllowTracking:Z
 
     if-nez p1, :cond_12
@@ -683,33 +683,33 @@
     :cond_12
     const-string p1, "event-category"
 
-    .line 191
+    .line 194
     invoke-virtual {p3, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     const-string p1, "event-action"
 
-    .line 192
+    .line 195
     invoke-virtual {p3, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
     const-string p1, "event-label"
 
-    .line 193
+    .line 196
     invoke-virtual {p3, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     const-string p1, "event-value"
 
-    .line 194
+    .line 197
     invoke-virtual {p3, p1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v9
 
-    .line 195
+    .line 198
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -718,13 +718,13 @@
 
     return-object v4
 
-    .line 199
+    .line 202
     :cond_13
     sget-boolean p1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
     if-eqz p1, :cond_14
 
-    .line 200
+    .line 203
     sget-object p1, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class p3, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -767,7 +767,7 @@
 
     invoke-virtual {p1, p3, v0}, Lcom/sonymobile/music/debug/DebugBase;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 205
+    .line 208
     :cond_14
     invoke-static {}, Lcom/sonymobile/gagtmhelper/GaGtmUtils;->getInstance()Lcom/sonymobile/gagtmhelper/GaGtmUtils;
 
@@ -782,27 +782,37 @@
     return-object v4
 
     :pswitch_4
+    if-eqz p3, :cond_20
+
+    .line 90
+    sget-boolean v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sAllowTracking:Z
+
+    if-nez v0, :cond_16
+
+    goto/16 :goto_9
+
+    :cond_16
     const-string v0, "is_data_traffic_warning_required"
 
-    .line 91
+    .line 94
     invoke-virtual {p3, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 94
+    .line 97
     sget-object v1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->LOCK:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 95
+    .line 98
     :try_start_0
     sget-object v4, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sContainerLoadResult:Lcom/sonymobile/music/common/GoogleAnalyticsProvider$ContainerLoadResult;
 
     sget-object v5, Lcom/sonymobile/music/common/GoogleAnalyticsProvider$ContainerLoadResult;->CONTAINER_LOAD_NONE:Lcom/sonymobile/music/common/GoogleAnalyticsProvider$ContainerLoadResult;
 
-    if-ne v4, v5, :cond_18
+    if-ne v4, v5, :cond_19
 
-    .line 101
+    .line 104
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -815,64 +825,64 @@
 
     move-result-object v4
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_17
 
-    .line 104
+    .line 107
     sget-object v5, Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;->ACCEPTED:Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
 
-    if-ne v4, v5, :cond_16
-
-    const/4 v0, 0x1
-
-    goto :goto_7
-
-    :cond_16
-    if-nez v0, :cond_17
+    if-ne v4, v5, :cond_17
 
     const/4 v0, 0x1
 
     goto :goto_7
 
     :cond_17
+    if-nez v0, :cond_18
+
+    const/4 v0, 0x1
+
+    goto :goto_7
+
+    :cond_18
     const/4 v0, 0x0
 
     :goto_7
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_19
 
-    .line 111
+    .line 114
     sget-object v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider$ContainerLoadResult;->CONTAINER_LOAD_IN_PROGRESS:Lcom/sonymobile/music/common/GoogleAnalyticsProvider$ContainerLoadResult;
 
     sput-object v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sContainerLoadResult:Lcom/sonymobile/music/common/GoogleAnalyticsProvider$ContainerLoadResult;
 
-    .line 116
+    .line 119
     new-instance v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider$1;
 
     invoke-direct {v0, p0}, Lcom/sonymobile/music/common/GoogleAnalyticsProvider$1;-><init>(Lcom/sonymobile/music/common/GoogleAnalyticsProvider;)V
 
-    .line 121
+    .line 124
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 124
-    :cond_18
+    .line 127
+    :cond_19
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     const-string v0, "debug"
 
-    .line 131
+    .line 134
     invoke-virtual {p3, v0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p3
 
     sput-boolean p3, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
-    .line 132
+    .line 135
     sget-boolean p3, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
-    if-eqz p3, :cond_19
+    if-eqz p3, :cond_1a
 
-    .line 133
+    .line 136
     sget-object p3, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -897,40 +907,40 @@
 
     invoke-virtual {p3, v0, p1}, Lcom/sonymobile/music/debug/DebugBase;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 137
-    :cond_19
+    .line 140
+    :cond_1a
     invoke-direct {p0}, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->setupTagManager()V
 
-    .line 140
+    .line 143
     sget-object p1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->LOCK:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 142
+    .line 145
     :try_start_1
     sget-object p3, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sContainerLoadResult:Lcom/sonymobile/music/common/GoogleAnalyticsProvider$ContainerLoadResult;
 
     sget-object v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider$ContainerLoadResult;->CONTAINER_LOAD_IN_PROGRESS:Lcom/sonymobile/music/common/GoogleAnalyticsProvider$ContainerLoadResult;
 
-    if-ne p3, v0, :cond_1a
+    if-ne p3, v0, :cond_1b
 
     const/4 v2, 0x1
 
-    .line 145
-    :cond_1a
+    .line 148
+    :cond_1b
     monitor-exit p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    if-eqz v2, :cond_1d
+    if-eqz v2, :cond_1e
 
-    .line 150
+    .line 153
     :try_start_2
     sget-boolean p1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
-    if-eqz p1, :cond_1b
+    if-eqz p1, :cond_1c
 
-    .line 151
+    .line 154
     sget-object p1, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class p3, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -939,27 +949,27 @@
 
     invoke-virtual {p1, p3, v0}, Lcom/sonymobile/music/debug/DebugBase;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 155
-    :cond_1b
+    .line 158
+    :cond_1c
     sget-object p1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sLoadContainerLatch:Ljava/util/concurrent/CountDownLatch;
 
     const-wide/16 v0, 0xa
 
     sget-object p3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 156
+    .line 159
     invoke-virtual {p1, v0, v1, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
 
     move-result p1
 
-    .line 158
+    .line 161
     sget-boolean p3, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
-    if-eqz p3, :cond_1d
+    if-eqz p3, :cond_1e
 
-    if-eqz p1, :cond_1c
+    if-eqz p1, :cond_1d
 
-    .line 160
+    .line 163
     sget-object p1, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class p3, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -970,8 +980,8 @@
 
     goto :goto_8
 
-    .line 163
-    :cond_1c
+    .line 166
+    :cond_1d
     sget-object p1, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class p3, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -982,21 +992,21 @@
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 173
+    .line 176
     :catch_0
-    :cond_1d
+    :cond_1e
     :goto_8
     sget-object p3, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->LOCK:Ljava/lang/Object;
 
     monitor-enter p3
 
-    .line 174
+    .line 177
     :try_start_3
     sget-boolean p1, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;->sIsDebug:Z
 
-    if-eqz p1, :cond_1e
+    if-eqz p1, :cond_1f
 
-    .line 175
+    .line 178
     sget-object p1, Lcom/sonymobile/music/common/Debug;->DEBUG:Lcom/sonymobile/music/common/Debug;
 
     const-class v0, Lcom/sonymobile/music/common/GoogleAnalyticsProvider;
@@ -1019,8 +1029,8 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/sonymobile/music/debug/DebugBase;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 178
-    :cond_1e
+    .line 181
+    :cond_1f
     monitor-exit p3
 
     return-object p2
@@ -1037,7 +1047,7 @@
     :catchall_1
     move-exception p2
 
-    .line 145
+    .line 148
     :try_start_4
     monitor-exit p1
     :try_end_4
@@ -1048,7 +1058,7 @@
     :catchall_2
     move-exception p1
 
-    .line 124
+    .line 127
     :try_start_5
     monitor-exit v1
     :try_end_5
@@ -1056,7 +1066,9 @@
 
     throw p1
 
-    nop
+    :cond_20
+    :goto_9
+    return-object v4
 
     :sswitch_data_0
     .sparse-switch
@@ -1080,7 +1092,7 @@
 .method public delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 0
 
-    .line 304
+    .line 307
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1091,7 +1103,7 @@
 .method public getType(Landroid/net/Uri;)Ljava/lang/String;
     .locals 0
 
-    .line 283
+    .line 286
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1102,7 +1114,7 @@
 .method public insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     .locals 0
 
-    .line 294
+    .line 297
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1160,7 +1172,7 @@
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 0
 
-    .line 289
+    .line 292
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1171,7 +1183,7 @@
 .method public update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 0
 
-    .line 299
+    .line 302
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V

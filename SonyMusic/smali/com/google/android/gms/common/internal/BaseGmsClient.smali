@@ -2231,9 +2231,9 @@
 
     monitor-enter p1
     :try_end_0
-    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 253
@@ -2285,14 +2285,20 @@
     :try_start_2
     throw p2
     :try_end_2
-    .catch Landroid/os/DeadObjectException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Landroid/os/DeadObjectException; {:try_start_2 .. :try_end_2} :catch_3
+    .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
 
     :catch_0
     move-exception p1
 
+    goto :goto_3
+
+    :catch_1
+    move-exception p1
+
+    :goto_3
     const-string p2, "GmsClient"
 
     const-string v0, "IGmsServiceBroker.getService failed"
@@ -2317,13 +2323,13 @@
 
     return-void
 
-    :catch_1
+    :catch_2
     move-exception p1
 
     .line 265
     throw p1
 
-    :catch_2
+    :catch_3
     move-exception p1
 
     const-string p2, "GmsClient"

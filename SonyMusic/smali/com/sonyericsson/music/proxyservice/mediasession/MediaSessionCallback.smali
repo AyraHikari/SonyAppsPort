@@ -638,11 +638,11 @@
 .method public onSkipToQueueItem(J)V
     .locals 1
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    const/4 p2, 0x1
+    const/4 p1, 0x1
 
-    sub-int/2addr p1, p2
+    sub-int/2addr p2, p1
 
     .line 220
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback;->mListener:Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback$MediaSessionCallbackListener;
@@ -650,7 +650,7 @@
     if-eqz v0, :cond_0
 
     .line 221
-    invoke-interface {v0, p1, p2}, Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback$MediaSessionCallbackListener;->onSetPlayQueuePosition(IZ)V
+    invoke-interface {v0, p2, p1}, Lcom/sonyericsson/music/proxyservice/mediasession/MediaSessionCallback$MediaSessionCallbackListener;->onSetPlayQueuePosition(IZ)V
 
     :cond_0
     return-void

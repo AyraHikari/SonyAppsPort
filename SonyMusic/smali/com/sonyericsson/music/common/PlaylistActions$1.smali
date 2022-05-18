@@ -76,10 +76,10 @@
 
     iget-wide v3, p0, Lcom/sonyericsson/music/common/PlaylistActions$1;->val$id:J
 
-    long-to-int v3, v3
+    long-to-int v4, v3
 
     .line 68
-    invoke-static {v0, v2, v3}, Lcom/sonyericsson/music/common/DBUtils;->getMyPlaylistTracksCursor(Landroid/content/ContentResolver;[Ljava/lang/String;I)Landroid/database/Cursor;
+    invoke-static {v0, v2, v4}, Lcom/sonyericsson/music/common/DBUtils;->getMyPlaylistTracksCursor(Landroid/content/ContentResolver;[Ljava/lang/String;I)Landroid/database/Cursor;
 
     move-result-object v1
 

@@ -609,7 +609,7 @@
 
     if-eqz v0, :cond_1
 
-    const v1, 0x7f10027e
+    const v1, 0x7f100280
 
     .line 766
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -1962,9 +1962,9 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    int-to-long v0, v0
+    int-to-long v0, v1
 
     .line 551
     invoke-static {p1, v0, v1}, Lcom/sonyericsson/music/common/Sender;->sendSingleFile(Landroid/content/Context;J)V

@@ -279,9 +279,12 @@ Atminkite, kad be reikiamos prieigos muzikos programa gali veikti netinkamai."</
     <string name="music_delete_failed_one_or_many">Šių elementų ištrinti nepavyko</string>
     <string name="music_delete_playlist_question">Trinti %1$s? Grojaraščio turiniui tai įtakos neturės.</string>
     <string name="music_delete_question">Ar ištrinti %1$s iš saugyklos?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Muzikos programa atliks aplinkos skenavimą, kad atkurtų muzikos duomenų bazę.
+Skenavimas gali užtrukti ilgiau nei 10 min., priklausomai nuo dainų skaičiaus. Nepasibaigus skenavimui, dainos ir grojaraščiai nebus rodomi ir grojami tinkamai."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Jei norite naudoti SD kortelę kaip duomenų saugyklą, kitame ekrane suteikite leidimą pasiekti SD kortelę.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Bakstelėkite KARTOTI, jei norite bandyti dar kartą, arba bakstelėkite ATŠAUKTI ir pradėkite nuo pradžių.</string>
     <string name="music_dialog_button_next_txt">Toliau</string>
+    <string name="music_dialog_title_bg_scan_notice">Pranešimas</string>
     <string name="music_dialog_title_sd_permission_access_txt">Reikalingas leidimas pasiekti SD kortelę</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Leidimas pasiekti SD kortelę neduotas</string>
     <string name="music_download">Atsisiųsti</string>
@@ -556,7 +559,7 @@ Garso turiniui jūsų prietaise pasiekti"</string>
     <string name="personal_data_collection_dialog_title">Asmens duomenys</string>
     <string name="personal_data_collection_screen_button_negative">NE DABAR</string>
     <string name="personal_data_collection_screen_button_positive">SUTINKU</string>
-    <string name="personal_data_collection_screen_fine_print">„Sony“ rinks ir jungs jūsų <a href="entrance://personaldata">asmens duomenis</a>, siekdama patobulinti paslaugą. „Sony“ apdoros jūsų duomenis remdamasi savo <a href="http://sonymobile.com/privacy">privatumo politika</a></string>
+    <string name="personal_data_collection_screen_fine_print">„Sony“ rinks ir jungs jūsų <a href="entrance://personaldata">asmens duomenis</a>, siekdama patobulinti paslaugą. „Sony“ apdoros jūsų duomenis remdamasi savo <a href="https://www.sonymobile.com/privacy">privatumo politika</a></string>
     <string name="personal_data_collection_screen_fine_print_us">„Sony“ rinks ir jungs jūsų <a href="entrance://personaldata">asmens duomenis</a>, siekdama patobulinti paslaugą. „Sony“ apdoros jūsų duomenis remdamasi savo <a href="https://www.sonymobile.com/us/legal/privacy">privatumo politika</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Kalifornijos informacija apie privatumą</a>)</string>
     <string name="personal_data_collection_screen_text">Padėkite mums pagerinti programą „Muzika“ pasidalydami informacija apie savo klausymo įpročius su „Sony“.</string>
     <string name="play_queue_open">Atidaryti</string>

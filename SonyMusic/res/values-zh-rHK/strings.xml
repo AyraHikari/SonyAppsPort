@@ -279,9 +279,12 @@
     <string name="music_delete_failed_one_or_many">某些項目無法刪除</string>
     <string name="music_delete_playlist_question">是否刪除%1$s？播放清單的內容將不受到影響。</string>
     <string name="music_delete_question">刪除儲存空間中的%1$s？</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"[音樂]應用程式將會執行背景掃描以重建音樂資料庫。
+視乎歌曲數量而定，此掃描可能需要超過10分鐘。歌曲與播放清單無法正確顯示或播放，直至背景掃描完成。"</string>
     <string name="music_dialog_body_sd_permission_access_txt">若要使用SD卡作為數據儲存空間，請在下個屏幕給予存取SD卡的權限。</string>
     <string name="music_dialog_body_sd_permission_retry_txt">請輕按[重試]再試一次，或輕按[取消]並從頭開始。</string>
     <string name="music_dialog_button_next_txt">下一步</string>
+    <string name="music_dialog_title_bg_scan_notice">注意</string>
     <string name="music_dialog_title_sd_permission_access_txt">需要存取SD卡的權限</string>
     <string name="music_dialog_title_sd_permission_retry_txt">未給予存取SD卡的權限</string>
     <string name="music_download">下載</string>
@@ -556,7 +559,7 @@
     <string name="personal_data_collection_dialog_title">個人數據</string>
     <string name="personal_data_collection_screen_button_negative">現在不要</string>
     <string name="personal_data_collection_screen_button_positive">我同意</string>
-    <string name="personal_data_collection_screen_fine_print">索尼會收集並結合您的<a href="entrance://personaldata">個人資料</a>以改善服務。索尼將根據我們的<a href="http://sonymobile.com/privacy">私隱政策</a>使用您的資料</string>
+    <string name="personal_data_collection_screen_fine_print">索尼會收集並結合您的<a href="entrance://personaldata">個人資料</a>以改善服務。索尼將根據我們的<a href="https://www.sonymobile.com/privacy">私隱政策</a>使用您的資料</string>
     <string name="personal_data_collection_screen_fine_print_us">索尼會收集並結合您的<a href="entrance://personaldata">個人資料</a>以改善服務。索尼將根據我們的<a href="https://www.sonymobile.com/us/legal/privacy">私隱政策</a>(<a href="https://www.sonymobile.com/us/legal/privacy#10">加州私隱聲明</a>)使用您的資料</string>
     <string name="personal_data_collection_screen_text">透過與索尼分享您的聆聽習慣，幫助我們讓音樂應用程式更好。</string>
     <string name="play_queue_open">開啟</string>

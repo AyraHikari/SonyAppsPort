@@ -57,7 +57,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 828
+    .line 834
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,7 +66,7 @@
 .method public static final getAccountParentFilesUri(ILjava/lang/String;)Landroid/net/Uri;
     .locals 2
 
-    .line 878
+    .line 884
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$CloudFiles;->getContentUri()Landroid/net/Uri;
 
     move-result-object v0
@@ -81,7 +81,7 @@
 
     move-result-object v0
 
-    .line 879
+    .line 885
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -96,7 +96,7 @@
 
     move-result-object p0
 
-    .line 880
+    .line 886
     invoke-virtual {p0, p1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p0
@@ -111,7 +111,7 @@
 .method public static final getAlbumArtUri(Landroid/net/Uri;)Landroid/net/Uri;
     .locals 2
 
-    .line 874
+    .line 880
     invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object p0
@@ -136,7 +136,7 @@
 
     const-string v0, "content://com.sonyericsson.music.musicinfo/cloud_files"
 
-    .line 866
+    .line 872
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -147,7 +147,7 @@
 .method public static final getContentUri(I)Landroid/net/Uri;
     .locals 1
 
-    .line 870
+    .line 876
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$CloudFiles;->getContentUri()Landroid/net/Uri;
 
     move-result-object v0
@@ -193,12 +193,12 @@
         }
     .end annotation
 
-    .line 884
+    .line 890
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object p0
 
-    .line 885
+    .line 891
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -209,7 +209,7 @@
 
     const/4 v0, 0x1
 
-    .line 886
+    .line 892
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -240,7 +240,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 887
+    .line 893
     new-instance v0, Landroid/util/Pair;
 
     const/4 v2, 0x2

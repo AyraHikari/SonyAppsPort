@@ -24,7 +24,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 437
+    .line 446
     invoke-static {}, Lcom/sonyericsson/music/common/CustomHeadsetHookHandler$ClickState;->values()[Lcom/sonyericsson/music/common/CustomHeadsetHookHandler$ClickState;
 
     move-result-object v0

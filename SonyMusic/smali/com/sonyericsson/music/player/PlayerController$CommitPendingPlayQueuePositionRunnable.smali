@@ -27,14 +27,14 @@
 .method constructor <init>(Lcom/sonyericsson/music/player/PlayerController;)V
     .locals 0
 
-    .line 793
+    .line 802
     iput-object p1, p0, Lcom/sonyericsson/music/player/PlayerController$CommitPendingPlayQueuePositionRunnable;->this$0:Lcom/sonyericsson/music/player/PlayerController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 791
+    .line 800
     iput-boolean p1, p0, Lcom/sonyericsson/music/player/PlayerController$CommitPendingPlayQueuePositionRunnable;->mForcePlay:Z
 
     return-void
@@ -45,7 +45,7 @@
 .method forcePlay(Z)V
     .locals 0
 
-    .line 797
+    .line 806
     iput-boolean p1, p0, Lcom/sonyericsson/music/player/PlayerController$CommitPendingPlayQueuePositionRunnable;->mForcePlay:Z
 
     return-void
@@ -54,7 +54,7 @@
 .method public run()V
     .locals 2
 
-    .line 802
+    .line 811
     iget-object v0, p0, Lcom/sonyericsson/music/player/PlayerController$CommitPendingPlayQueuePositionRunnable;->this$0:Lcom/sonyericsson/music/player/PlayerController;
 
     iget-boolean v1, p0, Lcom/sonyericsson/music/player/PlayerController$CommitPendingPlayQueuePositionRunnable;->mForcePlay:Z

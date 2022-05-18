@@ -279,9 +279,12 @@ Kini parasysh që aplikacioni Muzika mund të mos funksionojë siç duhet pa qas
     <string name="music_delete_failed_one_or_many">Disa objekte nuk mund të fshiheshin</string>
     <string name="music_delete_playlist_question">Do të fshini %1$s? Nuk do të ketë ndikim në përmbajtjen e listës së dëgjimit.</string>
     <string name="music_delete_question">Do të fshini %1$s nga hapësira ruajtëse?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Aplikacioni Muzika do të kryejë një skanim në sfond për një bazë të dhënash për muzikën.
+Ky skanim mund të zgjasë më shumë se 10 minuta në varësi të numrit të këngëve. Këngët dhe listat e dëgjimit nuk shfaqen dhe nuk luhen si duhet derisa të përfundojë skanimi."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Për të përdorur kartën SD si hapësirën ruajtëse të të dhënave, jepni lejen për qasjen te karta SD në ekranin tjetër.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Trokitni lehtë te RIPROVO për të provuar përsëri ose trokitni lehtë tek ANULO për të filluar nga e para.</string>
     <string name="music_dialog_button_next_txt">Tjetër</string>
+    <string name="music_dialog_title_bg_scan_notice">Njoftim</string>
     <string name="music_dialog_title_sd_permission_access_txt">Nevojitet leja për të pasur qasje te karta SD</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Leja për qasjen te karta SD nuk është dhënë</string>
     <string name="music_download">Shkarko</string>
@@ -556,7 +559,7 @@ Për t'u qasur te përmbajtja e audios në pajisjen tuaj"</string>
     <string name="personal_data_collection_dialog_title">Të dhënat personale</string>
     <string name="personal_data_collection_screen_button_negative">JO TANI</string>
     <string name="personal_data_collection_screen_button_positive">PRANOJ</string>
-    <string name="personal_data_collection_screen_fine_print">Sony do të mbledhë dhe do të ndërthurë <a href="entrance://personaldata">të dhënat tuaja personale</a>" për të përmirësuar shërbimin. Sony do t'i trajtojë të dhënat tuaja sipas "<a href="http://sonymobile.com/privacy">Politikës sonë të privatësisë</a></string>
+    <string name="personal_data_collection_screen_fine_print">Sony do të mbledhë dhe do të ndërthurë <a href="entrance://personaldata">të dhënat tuaja personale</a>" për të përmirësuar shërbimin. Sony do t'i trajtojë të dhënat tuaja sipas "<a href="https://www.sonymobile.com/privacy">Politikës sonë të privatësisë</a></string>
     <string name="personal_data_collection_screen_fine_print_us">Sony do të mbledhë dhe do të ndërthurë <a href="entrance://personaldata">të dhënat tuaja personale</a>" për të përmirësuar shërbimin. Sony do t'i trajtojë të dhënat tuaja sipas "<a href="https://www.sonymobile.com/us/legal/privacy">Politikës sonë të privatësisë</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Njoftimi i privatësisë për CA</a>)</string>
     <string name="personal_data_collection_screen_text">Na ndihmoni ta përmirësojmë aplikacionin Muzika duke bashkëndarë zakonet tuaja të dëgjimit me Sony.</string>
     <string name="play_queue_open">Hap</string>

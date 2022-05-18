@@ -34,12 +34,12 @@
 .method public constructor <init>(Lcom/sonyericsson/music/SettingsFragment;Landroid/content/Context;)V
     .locals 0
 
-    .line 953
+    .line 984
     iput-object p1, p0, Lcom/sonyericsson/music/SettingsFragment$HandleClearAudioTask;->this$0:Lcom/sonyericsson/music/SettingsFragment;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 954
+    .line 985
     iput-object p2, p0, Lcom/sonyericsson/music/SettingsFragment$HandleClearAudioTask;->mContext:Landroid/content/Context;
 
     return-void
@@ -50,7 +50,7 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 959
+    .line 990
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment$HandleClearAudioTask;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/sonyericsson/music/common/AvailabilityUtils;->getAudioGlobalSetting(Landroid/content/Context;)Z
@@ -67,7 +67,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 949
+    .line 980
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/SettingsFragment$HandleClearAudioTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
@@ -80,10 +80,10 @@
 .method protected onPostExecute(Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 964
+    .line 995
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 965
+    .line 996
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment$HandleClearAudioTask;->this$0:Lcom/sonyericsson/music/SettingsFragment;
 
     iget-object v1, p0, Lcom/sonyericsson/music/SettingsFragment$HandleClearAudioTask;->mContext:Landroid/content/Context;
@@ -100,7 +100,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 949
+    .line 980
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/SettingsFragment$HandleClearAudioTask;->onPostExecute(Ljava/lang/Boolean;)V

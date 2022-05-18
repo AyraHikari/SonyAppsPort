@@ -287,7 +287,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100210
+    const v1, 0x7f100212
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -335,7 +335,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100227
+    const v1, 0x7f100229
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -2471,7 +2471,7 @@
     .line 251
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->closeAndLockDrawer()V
 
-    const v1, 0x7f1002a4
+    const v1, 0x7f1002a6
 
     .line 253
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -2508,7 +2508,7 @@
     .line 272
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->unlockDrawer()V
 
-    const v1, 0x7f100192
+    const v1, 0x7f100194
 
     .line 274
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;

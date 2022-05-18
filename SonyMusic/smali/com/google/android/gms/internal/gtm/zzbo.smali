@@ -215,7 +215,7 @@
 
     move-result v2
     :try_end_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
     if-nez v2, :cond_3
@@ -232,7 +232,7 @@
     invoke-interface {v3, v0, v2}, Lcom/google/android/gms/internal/gtm/zzbp;->zza(Ljava/lang/String;Z)V
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_3
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
     goto :goto_1
@@ -285,7 +285,7 @@
 
     move-result v2
     :try_end_2
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_2 .. :try_end_2} :catch_3
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
     if-nez v2, :cond_3
@@ -302,7 +302,7 @@
     invoke-interface {v3, v0, v2}, Lcom/google/android/gms/internal/gtm/zzbp;->zzb(Ljava/lang/String;I)V
     :try_end_3
     .catch Ljava/lang/NumberFormatException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_3 .. :try_end_3} :catch_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
     goto :goto_1
@@ -323,7 +323,7 @@
 
     move-result v0
     :try_end_4
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_4 .. :try_end_4} :catch_2
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_4 .. :try_end_4} :catch_3
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
     goto/16 :goto_0
@@ -331,6 +331,12 @@
     :catch_2
     move-exception p1
 
+    goto :goto_2
+
+    :catch_3
+    move-exception p1
+
+    :goto_2
     const-string v0, "Error parsing tracker configuration file"
 
     .line 44

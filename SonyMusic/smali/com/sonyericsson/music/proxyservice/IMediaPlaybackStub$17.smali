@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;Landroid/net/Uri;Landroid/net/Uri;IIZ)V
     .locals 0
 
-    .line 460
+    .line 461
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$17;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     iput-object p2, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$17;->val$trackUri:Landroid/net/Uri;
@@ -58,7 +58,7 @@
 .method public run()V
     .locals 7
 
-    .line 463
+    .line 464
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$17;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->access$000(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;)Lcom/sonyericsson/music/proxyservice/MediaPlayback;
@@ -67,7 +67,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 464
+    .line 465
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$17;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->access$000(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;)Lcom/sonyericsson/music/proxyservice/MediaPlayback;

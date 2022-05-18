@@ -29,7 +29,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 1352
+    .line 1358
     sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
 
     if-eqz v0, :cond_0
@@ -50,7 +50,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1351
+    .line 1357
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,14 +59,14 @@
 .method public static getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
     .locals 2
 
-    .line 1361
+    .line 1367
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 1362
+    .line 1368
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,7 +97,7 @@
 
     return-object p0
 
-    .line 1365
+    .line 1371
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/provider/MediaStore$Audio$Genres$Members;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
 

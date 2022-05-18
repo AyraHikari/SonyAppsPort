@@ -10381,39 +10381,39 @@
 
     move-result-wide v9
 
-    long-to-int v9, v9
+    long-to-int v10, v9
 
     add-int/lit8 v1, v1, 0x1
 
     .line 491
-    aget-object v10, v18, v1
+    aget-object v9, v18, v1
 
-    move/from16 v28, v9
+    move/from16 v28, v10
 
     .line 492
-    instance-of v9, v10, Ljava/lang/reflect/Field;
+    instance-of v10, v9, Ljava/lang/reflect/Field;
 
-    if-eqz v9, :cond_21
+    if-eqz v10, :cond_21
 
     .line 493
-    check-cast v10, Ljava/lang/reflect/Field;
+    check-cast v9, Ljava/lang/reflect/Field;
 
     goto :goto_1c
 
     .line 495
     :cond_21
-    check-cast v10, Ljava/lang/String;
+    check-cast v9, Ljava/lang/String;
 
-    invoke-static {v5, v10}, Lcom/google/protobuf/MessageSchema;->reflectField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-static {v5, v9}, Lcom/google/protobuf/MessageSchema;->reflectField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    move-result-object v10
+    move-result-object v9
 
     .line 496
-    aput-object v10, v18, v1
+    aput-object v9, v18, v1
 
     .line 499
     :goto_1c
-    invoke-virtual {v2, v10}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
+    invoke-virtual {v2, v9}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
 
     move-result-wide v9
 
@@ -10429,13 +10429,13 @@
 
     move/from16 v29, v32
 
-    move v4, v1
-
     move/from16 v28, v8
 
-    const/4 v1, 0x0
-
     move-object v8, v5
+
+    move v5, v1
+
+    const/4 v1, 0x0
 
     goto/16 :goto_25
 
@@ -10726,7 +10726,7 @@
 
     move-result-wide v4
 
-    long-to-int v4, v4
+    long-to-int v5, v4
 
     .line 547
     rem-int/lit8 v1, v1, 0x20
@@ -10744,32 +10744,32 @@
 
     const/4 v1, 0x0
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     :goto_24
-    const/16 v5, 0x12
+    const/16 v4, 0x12
 
-    if-lt v14, v5, :cond_30
+    if-lt v14, v4, :cond_30
 
-    const/16 v5, 0x31
+    const/16 v4, 0x31
 
-    if-gt v14, v5, :cond_30
+    if-gt v14, v4, :cond_30
 
-    add-int/lit8 v5, v23, 0x1
+    add-int/lit8 v4, v23, 0x1
 
     .line 556
     aput v9, v12, v23
 
-    move/from16 v23, v5
+    move/from16 v23, v4
 
     :cond_30
     :goto_25
-    add-int/lit8 v5, v21, 0x1
+    add-int/lit8 v4, v21, 0x1
 
     .line 560
     aput v11, v3, v21
 
-    add-int/lit8 v11, v5, 0x1
+    add-int/lit8 v11, v4, 0x1
 
     and-int/lit16 v15, v6, 0x200
 
@@ -10804,13 +10804,13 @@
     or-int/2addr v6, v9
 
     .line 561
-    aput v6, v3, v5
+    aput v6, v3, v4
 
     add-int/lit8 v21, v11, 0x1
 
     shl-int/lit8 v1, v1, 0x14
 
-    or-int/2addr v1, v4
+    or-int/2addr v1, v5
 
     .line 566
     aput v1, v3, v11

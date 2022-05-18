@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 502
+    .line 559
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$5;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,7 +35,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 506
+    .line 563
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$5;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     iget-boolean p1, p1, Lcom/sonyericsson/music/MusicActivity;->mPerformanceMeasurementReceiverRegistered:Z
@@ -44,7 +44,7 @@
 
     return-void
 
-    .line 512
+    .line 569
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -52,7 +52,7 @@
 
     const-string p2, "com.sonyericsson.music.COLD_PLAYBACK_PERFORMANCE"
 
-    .line 518
+    .line 575
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     return-void

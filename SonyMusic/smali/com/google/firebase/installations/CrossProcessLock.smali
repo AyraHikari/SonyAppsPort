@@ -51,8 +51,8 @@
 
     move-result-object p0
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_5
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_4
 
     .line 52
     :try_start_1
@@ -60,8 +60,8 @@
 
     move-result-object p1
     :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/Error; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Ljava/lang/Error; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 53
     :try_start_2
@@ -69,7 +69,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/google/firebase/installations/CrossProcessLock;-><init>(Ljava/nio/channels/FileChannel;Ljava/nio/channels/FileLock;)V
     :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/Error; {:try_start_2 .. :try_end_2} :catch_0
 
     return-object v1
@@ -77,23 +77,40 @@
     :catch_0
     move-exception v1
 
-    goto :goto_0
+    goto :goto_2
 
     :catch_1
     move-exception v1
 
-    move-object p1, v0
-
-    goto :goto_0
+    goto :goto_2
 
     :catch_2
     move-exception v1
 
+    goto :goto_0
+
+    :catch_3
+    move-exception v1
+
+    :goto_0
+    move-object p1, v0
+
+    goto :goto_2
+
+    :catch_4
+    move-exception v1
+
+    goto :goto_1
+
+    :catch_5
+    move-exception v1
+
+    :goto_1
     move-object p0, v0
 
     move-object p1, p0
 
-    :goto_0
+    :goto_2
     const-string v2, "CrossProcessLock"
 
     const-string v3, "encountered error while creating and acquiring the lock, ignoring"
@@ -107,24 +124,24 @@
     :try_start_3
     invoke-virtual {p1}, Ljava/nio/channels/FileLock;->release()V
     :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_6
 
-    goto :goto_1
+    goto :goto_3
 
-    :catch_3
+    :catch_6
     nop
 
     :cond_0
-    :goto_1
+    :goto_3
     if-eqz p0, :cond_1
 
     .line 71
     :try_start_4
     invoke-virtual {p0}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_7
 
-    :catch_4
+    :catch_7
     :cond_1
     return-object v0
 .end method

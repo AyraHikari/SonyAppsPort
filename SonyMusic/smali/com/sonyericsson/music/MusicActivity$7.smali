@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 540
+    .line 597
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$7;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,7 +35,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 544
+    .line 601
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$7;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     iget-boolean v0, v0, Lcom/sonyericsson/music/MusicActivity;->mIsInternalPlaybackListenerRegistered:Z
@@ -47,7 +47,7 @@
     :cond_0
     const-string v0, "com.sonyericsson.music.playbackcontrol.ENQUEUED_INTENT"
 
-    .line 547
+    .line 604
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -62,12 +62,12 @@
 
     const/4 v1, -0x1
 
-    .line 549
+    .line 606
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 550
+    .line 607
     invoke-static {p1, p2}, Lcom/sonyericsson/music/common/MusicUtils;->showEnqueueToast(Landroid/content/Context;I)V
 
     :cond_1

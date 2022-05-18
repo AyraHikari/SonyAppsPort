@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="abc_switch_padding">0.0px</dimen>
-    <dimen name="grid_horizontal_spacing">2.0dip</dimen>
 </resources>

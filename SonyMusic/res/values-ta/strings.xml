@@ -279,9 +279,12 @@
     <string name="music_delete_failed_one_or_many">சில உருப்படிகளை நீக்க முடியாது</string>
     <string name="music_delete_playlist_question">%1$s -ஐ நீக்கவா? இசைப்பட்டியலின் உள்ளடக்கம் பாதிக்கப்படாது.</string>
     <string name="music_delete_question">%1$s -ஐ சேமிப்பகத்திலிருந்து நீக்கவா?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"மியூசிக் பயன்பாடு பின்னணியில் ஸ்கேன் செய்யும்.
+ஸ்கேனுக்கு 10 நிமிடம் மேல் ஆகலாம். ஸ்கேன் முடியும் வரை பாடல்கள், இசைப்பட்டியல் காட்டப்படாது, சரியாக இயங்காது."</string>
     <string name="music_dialog_body_sd_permission_access_txt">SD கார்டை தரவுச் சேமிப்பகமாகப் பயன்படுத்த, அடுத்த திரையில் SD கார்டை அணுக அனுமதி வழங்கவும்.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">மீண்டும் முயல ‘மீண்டும் முயற்சிசெய்’ என்பதைத் தட்டவும், அல்லது ‘ரத்துசெய்’ என்பதைத் தட்டி மீண்டும் முதலிலிருந்து தொடங்கவும்.</string>
     <string name="music_dialog_button_next_txt">அடுத்து</string>
+    <string name="music_dialog_title_bg_scan_notice">அறிவிப்பு</string>
     <string name="music_dialog_title_sd_permission_access_txt">SD கார்டை அணுக அனுமதி தேவை</string>
     <string name="music_dialog_title_sd_permission_retry_txt">SD கார்டை அணுக அனும. வழங்கப்படவில்.</string>
     <string name="music_download">பதிவிறக்கு</string>
@@ -556,7 +559,7 @@ MMS இணைப்புகளை இயக்க"</string>
     <string name="personal_data_collection_dialog_title">தனிப்பட்ட தரவு</string>
     <string name="personal_data_collection_screen_button_negative">இப்போது வேண்டாம்</string>
     <string name="personal_data_collection_screen_button_positive">ஏற்கிறேன்</string>
-    <string name="personal_data_collection_screen_fine_print">சேவையை மேம்படுத்த, Sony உங்கள் <a href="entrance://personaldata">தனிப்பட்ட தரவைச்</a> சேகரித்து, ஒருங்கிணைக்கும். Sony உங்கள் தரவை எங்கள் <a href="http://sonymobile.com/privacy">தனியுரிமைக் கொள்கைக்கு</a> ஏற்ப கையாளும்</string>
+    <string name="personal_data_collection_screen_fine_print">சேவையை மேம்படுத்த, Sony உங்கள் <a href="entrance://personaldata">தனிப்பட்ட தரவைச்</a> சேகரித்து, ஒருங்கிணைக்கும். Sony உங்கள் தரவை எங்கள் <a href="https://www.sonymobile.com/privacy">தனியுரிமைக் கொள்கைக்கு</a> ஏற்ப கையாளும்</string>
     <string name="personal_data_collection_screen_fine_print_us">சேவையை மேம்படுத்த, Sony உங்கள் <a href="entrance://personaldata">தனிப்பட்ட தரவைச்</a> சேகரித்து, ஒருங்கிணைக்கும். Sony உங்கள் தரவை எங்கள் <a href="https://www.sonymobile.com/us/legal/privacy">தனியுரிமைக் கொள்கைக்கு</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">CA தனியுரிமை அறிவிப்பு</a>) ஏற்ப கையாளும்</string>
     <string name="personal_data_collection_screen_text">உங்களது இசை கேட்கும் பழக்கங்களை Sony உடன் பகிர்வதன் மூலம் இசைப் பயன்பாட்டைச் சிறப்பானதாக்க எங்களுக்கு உதவுங்கள்.</string>
     <string name="play_queue_open">திற</string>

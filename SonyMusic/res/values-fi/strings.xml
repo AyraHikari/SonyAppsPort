@@ -279,9 +279,12 @@ Ota huomioon, että Musiikki-sovellus ei ehkä toimi oikein ilman pyydettyjä oi
     <string name="music_delete_failed_one_or_many">Joitakin kohteita ei voi poistaa</string>
     <string name="music_delete_playlist_question">Poistetaanko %1$s? Tämä ei vaikuta soittolistan sisältöön.</string>
     <string name="music_delete_question">Poistetaanko %1$s tallennustilasta?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Musiikki-sovellus suorittaa taustaskannauksen.
+Skannaus voi kestää yli 10 minuuttia kappaleiden määrästä riippuen. Kappaleita ja soittolistoja ei näytetä tai toisteta oikein ennen taustaskannauksen valmistumista."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Jos haluat käyttää SD-korttia tietojen tallentamiseen, anna SD-kortin käyttöoikeudet seuraavassa näytössä.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Yritä uudelleen napauttamalla YRITÄ UUDELLEEN tai aloita alusta napauttamalla PERUUTA.</string>
     <string name="music_dialog_button_next_txt">Seuraava</string>
+    <string name="music_dialog_title_bg_scan_notice">Ilmoitus</string>
     <string name="music_dialog_title_sd_permission_access_txt">SD-kortin käyttäminen edellyttää käyttöoikeuksia</string>
     <string name="music_dialog_title_sd_permission_retry_txt">SD-kortin käyttöoikeuksia ei ole myönnetty</string>
     <string name="music_download">Lataa</string>
@@ -556,7 +559,7 @@ Laitteen äänisisällön käyttäminen"</string>
     <string name="personal_data_collection_dialog_title">Henkilökohtaiset tiedot</string>
     <string name="personal_data_collection_screen_button_negative">EI NYT</string>
     <string name="personal_data_collection_screen_button_positive">HYVÄKSYN</string>
-    <string name="personal_data_collection_screen_fine_print">Sony kerää ja yhdistää <a href="entrance://personaldata">henkilötietosi</a> palvelun parantamiseksi. Sony käsittelee tietoja <a href="http://sonymobile.com/privacy">tietosuojakäytännön</a> mukaisesti.</string>
+    <string name="personal_data_collection_screen_fine_print">Sony kerää ja yhdistää <a href="entrance://personaldata">henkilötietosi</a> palvelun parantamiseksi. Sony käsittelee tietoja <a href="https://www.sonymobile.com/privacy">tietosuojakäytännön</a> mukaisesti.</string>
     <string name="personal_data_collection_screen_fine_print_us">Sony kerää ja yhdistää <a href="entrance://personaldata">henkilötietosi</a> palvelun parantamiseksi. Sony käsittelee tietoja <a href="https://www.sonymobile.com/us/legal/privacy">tietosuojakäytännön</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Kalifornian tietosuojailmoitus</a>) mukaisesti.</string>
     <string name="personal_data_collection_screen_text">Auta meitä parantamaan Musiikki-sovellusta jakamalla kuuntelutietosi Sonyn kanssa.</string>
     <string name="play_queue_open">Avaa</string>

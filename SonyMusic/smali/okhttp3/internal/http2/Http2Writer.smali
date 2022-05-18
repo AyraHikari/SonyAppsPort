@@ -104,13 +104,13 @@
 
     move-result-wide v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    int-to-long v3, v2
+    int-to-long v4, v3
 
-    sub-long/2addr p2, v3
+    sub-long/2addr p2, v4
 
-    const/16 v5, 0x9
+    const/16 v2, 0x9
 
     cmp-long v6, p2, v0
 
@@ -125,14 +125,14 @@
 
     .line 292
     :goto_1
-    invoke-virtual {p0, p1, v2, v5, v0}, Lokhttp3/internal/http2/Http2Writer;->frameHeader(IIBB)V
+    invoke-virtual {p0, p1, v3, v2, v0}, Lokhttp3/internal/http2/Http2Writer;->frameHeader(IIBB)V
 
     .line 293
     iget-object v0, p0, Lokhttp3/internal/http2/Http2Writer;->sink:Lokio/BufferedSink;
 
     iget-object v1, p0, Lokhttp3/internal/http2/Http2Writer;->hpackBuffer:Lokio/Buffer;
 
-    invoke-interface {v0, v1, v3, v4}, Lokio/Sink;->write(Lokio/Buffer;J)V
+    invoke-interface {v0, v1, v4, v5}, Lokio/Sink;->write(Lokio/Buffer;J)V
 
     goto :goto_0
 
@@ -1367,9 +1367,9 @@
     .line 261
     iget-object p1, p0, Lokhttp3/internal/http2/Http2Writer;->sink:Lokio/BufferedSink;
 
-    long-to-int p2, p2
+    long-to-int p3, p2
 
-    invoke-interface {p1, p2}, Lokio/BufferedSink;->writeInt(I)Lokio/BufferedSink;
+    invoke-interface {p1, p3}, Lokio/BufferedSink;->writeInt(I)Lokio/BufferedSink;
 
     .line 262
     iget-object p1, p0, Lokhttp3/internal/http2/Http2Writer;->sink:Lokio/BufferedSink;

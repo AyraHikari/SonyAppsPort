@@ -240,7 +240,7 @@
     goto :goto_0
 
     :pswitch_0
-    const p1, 0x7f100153
+    const p1, 0x7f100155
 
     .line 373
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -250,7 +250,7 @@
     goto :goto_0
 
     :pswitch_1
-    const p1, 0x7f1001d9
+    const p1, 0x7f1001db
 
     .line 370
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -260,7 +260,7 @@
     goto :goto_0
 
     :pswitch_2
-    const p1, 0x7f10014f
+    const p1, 0x7f100151
 
     .line 367
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -300,7 +300,7 @@
     goto :goto_0
 
     :cond_1
-    const p1, 0x7f100212
+    const p1, 0x7f100214
 
     .line 352
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -437,21 +437,29 @@
 .end method
 
 .method public getItemCount()I
-    .locals 3
+    .locals 2
 
     .line 320
     iget-object v0, p0, Lcom/sonyericsson/music/landingpage/LandingPageCategoryAdapter;->mCursor:Landroid/database/Cursor;
 
     if-eqz v0, :cond_1
 
+    invoke-interface {v0}, Landroid/database/Cursor;->isClosed()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
     .line 321
-    iget v1, p0, Lcom/sonyericsson/music/landingpage/LandingPageCategoryAdapter;->mMaxCount:I
+    iget v0, p0, Lcom/sonyericsson/music/landingpage/LandingPageCategoryAdapter;->mMaxCount:I
 
-    const/4 v2, -0x1
+    const/4 v1, -0x1
 
-    if-ne v1, v2, :cond_0
+    if-ne v0, v1, :cond_0
 
     .line 322
+    iget-object v0, p0, Lcom/sonyericsson/music/landingpage/LandingPageCategoryAdapter;->mCursor:Landroid/database/Cursor;
+
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
@@ -460,6 +468,8 @@
 
     .line 324
     :cond_0
+    iget-object v0, p0, Lcom/sonyericsson/music/landingpage/LandingPageCategoryAdapter;->mCursor:Landroid/database/Cursor;
+
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
     move-result v0

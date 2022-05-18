@@ -819,9 +819,9 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    return v0
+    return v1
 
     :cond_1
     add-int/lit8 v1, v3, 0x1

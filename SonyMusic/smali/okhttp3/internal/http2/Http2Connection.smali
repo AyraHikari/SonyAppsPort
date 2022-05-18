@@ -1648,16 +1648,16 @@
 
     move-result-wide v3
 
-    long-to-int v3, v3
+    long-to-int v4, v3
 
     .line 316
-    iget-object v4, p0, Lokhttp3/internal/http2/Http2Connection;->writer:Lokhttp3/internal/http2/Http2Writer;
+    iget-object v3, p0, Lokhttp3/internal/http2/Http2Connection;->writer:Lokhttp3/internal/http2/Http2Writer;
 
-    invoke-virtual {v4}, Lokhttp3/internal/http2/Http2Writer;->maxDataLength()I
+    invoke-virtual {v3}, Lokhttp3/internal/http2/Http2Writer;->maxDataLength()I
 
-    move-result v4
+    move-result v3
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
+    invoke-static {v4, v3}, Ljava/lang/Math;->min(II)I
 
     move-result v3
 

@@ -826,9 +826,9 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/internal/gtm/zzqj$zzd;->zzawy:Ljava/nio/ByteBuffer;
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    int-to-byte p1, p1
+    int-to-byte p1, p2
 
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 

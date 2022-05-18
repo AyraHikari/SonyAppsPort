@@ -88,7 +88,7 @@
     .line 162
     iget-object p1, p0, Lcom/sonyericsson/music/dialogs/GoogleDriveConnectionSettingsDialog$SettingsUpdater;->mAppContext:Landroid/content/Context;
 
-    const v0, 0x7f100263
+    const v0, 0x7f100265
 
     .line 163
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

@@ -933,10 +933,10 @@
 
     if-lez v7, :cond_1
 
-    long-to-int v3, v3
+    long-to-int v4, v3
 
     .line 127
-    invoke-virtual {v2, p1, v1, v3}, Lokio/Buffer;->read([BII)I
+    invoke-virtual {v2, p1, v1, v4}, Lokio/Buffer;->read([BII)I
 
     move-result v2
 

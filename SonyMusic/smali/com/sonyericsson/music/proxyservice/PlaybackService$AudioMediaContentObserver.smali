@@ -17,24 +17,69 @@
 # instance fields
 .field private final mContext:Landroid/content/Context;
 
+.field private mLastOnChangeCallTime:J
+
+.field private mMediaSyncHandler:Landroid/os/Handler;
+
 .field private mRegistered:Z
+
+.field private final mRunnable:Ljava/lang/Runnable;
 
 
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
-    .locals 1
+    .locals 2
 
-    .line 784
+    .line 817
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 785
+    .line 813
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mLastOnChangeCallTime:J
+
+    .line 879
+    new-instance v0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver$1;
+
+    invoke-direct {v0, p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver$1;-><init>(Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;)V
+
+    iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mRunnable:Ljava/lang/Runnable;
+
+    .line 818
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mContext:Landroid/content/Context;
 
+    .line 819
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-direct {p1}, Landroid/os/Handler;-><init>()V
+
+    iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mMediaSyncHandler:Landroid/os/Handler;
+
     return-void
+.end method
+
+.method static synthetic access$700(Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;)Landroid/content/Context;
+    .locals 0
+
+    .line 809
+    iget-object p0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$802(Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;J)J
+    .locals 0
+
+    .line 809
+    iput-wide p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mLastOnChangeCallTime:J
+
+    return-wide p1
 .end method
 
 
@@ -42,7 +87,7 @@
 .method isRegistered()Z
     .locals 1
 
-    .line 814
+    .line 850
     iget-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mRegistered:Z
 
     return v0
@@ -53,27 +98,106 @@
 
     const/4 v0, 0x0
 
-    .line 819
+    .line 855
     invoke-virtual {p0, p1, v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->onChange(ZLandroid/net/Uri;)V
 
     return-void
 .end method
 
 .method public onChange(ZLandroid/net/Uri;)V
-    .locals 0
+    .locals 3
 
-    .line 828
+    .line 860
+    sget-boolean p1, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    .line 865
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p1
+
+    iget-wide v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mLastOnChangeCallTime:J
+
+    sub-long/2addr p1, v0
+
+    const-wide/16 v0, 0xbb8
+
+    cmp-long v2, p1, v0
+
+    if-ltz v2, :cond_2
+
+    .line 866
+    iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mMediaSyncHandler:Landroid/os/Handler;
+
+    iget-object p2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mRunnable:Ljava/lang/Runnable;
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->hasCallbacks(Ljava/lang/Runnable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    .line 867
+    iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mMediaSyncHandler:Landroid/os/Handler;
+
+    iget-object p2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mRunnable:Ljava/lang/Runnable;
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 869
+    :cond_1
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/sonyericsson/music/metadata/MusicInfoService;->startMediaStoreDataSync(Landroid/content/Context;)V
 
+    .line 870
+    iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mContext:Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/sonyericsson/music/metadata/MusicInfoService;->startHighResContainersSync(Landroid/content/Context;)V
+
+    .line 871
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mLastOnChangeCallTime:J
+
+    goto :goto_0
+
+    .line 873
+    :cond_2
+    iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mMediaSyncHandler:Landroid/os/Handler;
+
+    iget-object p2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mRunnable:Ljava/lang/Runnable;
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->hasCallbacks(Ljava/lang/Runnable;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    .line 874
+    iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mMediaSyncHandler:Landroid/os/Handler;
+
+    iget-object p2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mRunnable:Ljava/lang/Runnable;
+
+    const-wide/16 v0, 0x1388
+
+    invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_3
+    :goto_0
     return-void
 .end method
 
 .method register()V
     .locals 3
 
-    .line 789
+    .line 823
     iget-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mRegistered:Z
 
     if-nez v0, :cond_0
@@ -82,7 +206,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 794
+    .line 828
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -95,7 +219,7 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 797
+    .line 831
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mRegistered:Z
 
     :cond_0
@@ -103,14 +227,14 @@
 .end method
 
 .method unregister()V
-    .locals 1
+    .locals 2
 
-    .line 802
+    .line 836
     iget-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mRegistered:Z
 
     if-eqz v0, :cond_0
 
-    .line 807
+    .line 841
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -121,8 +245,15 @@
 
     const/4 v0, 0x0
 
-    .line 809
+    .line 843
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mRegistered:Z
+
+    .line 845
+    iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mMediaSyncHandler:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->mRunnable:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void

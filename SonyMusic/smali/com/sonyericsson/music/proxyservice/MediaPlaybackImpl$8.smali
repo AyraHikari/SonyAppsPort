@@ -32,7 +32,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;)V
     .locals 0
 
-    .line 799
+    .line 812
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$8;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -45,7 +45,7 @@
 .method protected varargs doInBackground([Ljava/lang/String;)Landroid/net/Uri;
     .locals 3
 
-    .line 802
+    .line 815
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -56,7 +56,7 @@
 
     const/4 v2, 0x0
 
-    .line 803
+    .line 816
     aget-object p1, p1, v2
 
     goto :goto_0
@@ -67,7 +67,7 @@
     :goto_0
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 804
+    .line 817
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$8;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     iget-object p1, p1, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->mContext:Landroid/content/Context;
@@ -82,7 +82,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 799
+    .line 812
     check-cast p1, [Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$8;->doInBackground([Ljava/lang/String;)Landroid/net/Uri;
@@ -97,14 +97,14 @@
 
     if-nez p1, :cond_0
 
-    .line 812
+    .line 825
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$8;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->play()V
 
     goto :goto_1
 
-    .line 814
+    .line 827
     :cond_0
     invoke-static {p1}, Lcom/sonyericsson/music/common/MediaStoreUriMatcher;->getUriType(Landroid/net/Uri;)I
 
@@ -121,7 +121,7 @@
     :cond_1
     const/4 v2, 0x0
 
-    .line 817
+    .line 830
     :goto_0
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$8;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
@@ -134,7 +134,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 799
+    .line 812
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$8;->onPostExecute(Landroid/net/Uri;)V

@@ -27,7 +27,7 @@
 .method constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    .line 357
+    .line 364
     iput-object p1, p0, Lcom/sonyericsson/music/common/MusicUtils$2;->val$appContext:Landroid/content/Context;
 
     iput p2, p0, Lcom/sonyericsson/music/common/MusicUtils$2;->val$labelId:I
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 360
+    .line 367
     iget-object v0, p0, Lcom/sonyericsson/music/common/MusicUtils$2;->val$appContext:Landroid/content/Context;
 
     iget v1, p0, Lcom/sonyericsson/music/common/MusicUtils$2;->val$labelId:I

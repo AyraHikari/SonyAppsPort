@@ -191,7 +191,7 @@
     .line 73
     iget-object v0, p0, Lcom/sonyericsson/music/metadata/cloud/FileDownload;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f100263
+    const v1, 0x7f100265
 
     .line 74
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

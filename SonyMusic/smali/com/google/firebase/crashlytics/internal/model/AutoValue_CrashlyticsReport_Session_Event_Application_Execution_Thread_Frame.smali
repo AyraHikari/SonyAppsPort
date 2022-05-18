@@ -217,13 +217,13 @@
 
     xor-long/2addr v0, v3
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    const v1, 0xf4243
+    const v0, 0xf4243
 
-    xor-int/2addr v0, v1
+    xor-int/2addr v1, v0
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 94
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->symbol:Ljava/lang/String;
@@ -232,9 +232,9 @@
 
     move-result v3
 
-    xor-int/2addr v0, v3
+    xor-int/2addr v1, v3
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 96
     iget-object v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->file:Ljava/lang/String;
@@ -251,9 +251,9 @@
     move-result v3
 
     :goto_0
-    xor-int/2addr v0, v3
+    xor-int/2addr v1, v3
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 98
     iget-wide v3, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->offset:J
@@ -264,12 +264,12 @@
 
     long-to-int v2, v3
 
-    xor-int/2addr v0, v2
+    xor-int/2addr v1, v2
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 100
-    iget v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->importance:I
+    iget v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame;->importance:I
 
     xor-int/2addr v0, v1
 

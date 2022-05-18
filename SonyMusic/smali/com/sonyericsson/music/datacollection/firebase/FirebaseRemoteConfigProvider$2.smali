@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;)V
     .locals 0
 
-    .line 360
+    .line 364
     iput-object p1, p0, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$2;->this$0:Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,30 +38,30 @@
 .method public onCanceled()V
     .locals 2
 
-    .line 371
+    .line 375
     invoke-static {}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;->access$200()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
-    .line 372
+    .line 376
     :try_start_0
     sget-object v1, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;->CONFIG_FETCH_COMPLETE:Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;
 
     invoke-static {v1}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;->access$302(Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;)Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;
 
-    .line 373
+    .line 377
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 376
+    .line 380
     iget-object v0, p0, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$2;->this$0:Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;
 
     invoke-static {v0}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;->access$400(Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;)V
 
-    .line 379
+    .line 383
     invoke-static {}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;->access$500()Ljava/util/concurrent/CountDownLatch;
 
     move-result-object v0
@@ -73,7 +73,7 @@
     :catchall_0
     move-exception v1
 
-    .line 373
+    .line 377
     :try_start_1
     monitor-exit v0
     :try_end_1

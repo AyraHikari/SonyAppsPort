@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$2;)V
     .locals 0
 
-    .line 222
+    .line 225
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$2$1;->this$1:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 225
+    .line 228
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$2$1;->this$1:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$2;
 
     iget-object v0, v0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$2;->this$0:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;

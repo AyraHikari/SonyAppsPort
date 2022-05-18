@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sonyericsson/music/MusicActivity;->clearOldSharedPrefs()V
+    value = Lcom/sonyericsson/music/MusicActivity;->tryHandleIntent()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,13 @@
 # instance fields
 .field final synthetic this$0:Lcom/sonyericsson/music/MusicActivity;
 
-.field final synthetic val$ctx:Landroid/content/Context;
-
 
 # direct methods
-.method constructor <init>(Lcom/sonyericsson/music/MusicActivity;Landroid/content/Context;)V
+.method constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 2106
+    .line 1125
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$14;->this$0:Lcom/sonyericsson/music/MusicActivity;
-
-    iput-object p2, p0, Lcom/sonyericsson/music/MusicActivity$14;->val$ctx:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,16 +36,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
-    .line 2109
-    iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$14;->val$ctx:Landroid/content/Context;
+    .line 1128
+    iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$14;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
-    if-eqz v0, :cond_0
+    new-instance v1, Lcom/sonyericsson/music/MusicActivity$14$1;
 
-    .line 2110
-    invoke-static {v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->cleanupOfOldKeys(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, Lcom/sonyericsson/music/MusicActivity$14$1;-><init>(Lcom/sonyericsson/music/MusicActivity$14;)V
 
-    :cond_0
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
     return-void
 .end method

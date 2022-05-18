@@ -1,11 +1,14 @@
 .class Lcom/sonyericsson/music/MusicActivity$11;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source "MusicActivity.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sonyericsson/music/MusicActivity;->initDrmUtils()V
+    value = Lcom/sonyericsson/music/MusicActivity;->showSyncUserNoticeDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,37 +25,41 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 1257
+    .line 920
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$11;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    .line 1260
-    iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$11;->this$0:Lcom/sonyericsson/music/MusicActivity;
+    .line 924
+    :try_start_0
+    iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$11;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
-    invoke-static {v0}, Lcom/sonyericsson/music/MusicActivity;->access$800(Lcom/sonyericsson/music/MusicActivity;)Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {p1}, Lcom/sonyericsson/music/MusicActivity;->access$200(Lcom/sonyericsson/music/MusicActivity;)Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;
 
-    move-result-object v0
+    move-result-object p1
 
-    new-instance v1, Lcom/sonyericsson/music/common/DrmUtilsImpl;
+    const/4 p2, 0x0
 
-    iget-object v2, p0, Lcom/sonyericsson/music/MusicActivity$11;->this$0:Lcom/sonyericsson/music/MusicActivity;
+    invoke-interface {p1, p2}, Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;->setShowSyncUserNoticeDialog(Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v2}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    goto :goto_0
 
-    move-result-object v2
+    :catch_0
+    move-exception p1
 
-    invoke-direct {v1, v2}, Lcom/sonyericsson/music/common/DrmUtilsImpl;-><init>(Landroid/content/Context;)V
+    .line 926
+    invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
+    :goto_0
     return-void
 .end method

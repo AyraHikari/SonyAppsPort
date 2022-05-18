@@ -1138,39 +1138,39 @@
 
     move-result-wide v8
 
-    long-to-int v8, v8
+    long-to-int v9, v8
 
     add-int/lit8 v2, v2, 0x1
 
     .line 182
-    aget-object v9, v17, v2
+    aget-object v8, v17, v2
 
-    move/from16 v28, v8
+    move/from16 v28, v9
 
     .line 183
-    instance-of v8, v9, Ljava/lang/reflect/Field;
+    instance-of v9, v8, Ljava/lang/reflect/Field;
 
-    if-eqz v8, :cond_21
+    if-eqz v9, :cond_21
 
     .line 184
-    check-cast v9, Ljava/lang/reflect/Field;
+    check-cast v8, Ljava/lang/reflect/Field;
 
     goto :goto_1c
 
     .line 185
     :cond_21
-    check-cast v9, Ljava/lang/String;
+    check-cast v8, Ljava/lang/String;
 
-    invoke-static {v7, v9}, Lcom/google/android/gms/internal/gtm/zzso;->zza(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-static {v7, v8}, Lcom/google/android/gms/internal/gtm/zzso;->zza(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    move-result-object v9
+    move-result-object v8
 
     .line 186
-    aput-object v9, v17, v2
+    aput-object v8, v17, v2
 
     .line 187
     :goto_1c
-    invoke-virtual {v6, v9}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
+    invoke-virtual {v6, v8}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
 
     move-result-wide v8
 
@@ -1178,21 +1178,21 @@
 
     move-object/from16 v31, v1
 
+    move v8, v2
+
     move-object v1, v7
 
     move/from16 v25, v18
 
     move/from16 v9, v28
 
-    const/16 v19, 0x1
+    const/4 v2, 0x0
 
-    move v7, v2
+    const/16 v19, 0x1
 
     move/from16 v28, v11
 
     move/from16 v18, v13
-
-    const/4 v2, 0x0
 
     move v13, v12
 
@@ -1508,7 +1508,7 @@
 
     move-result-wide v7
 
-    long-to-int v7, v7
+    long-to-int v8, v7
 
     .line 221
     rem-int/lit8 v2, v2, 0x20
@@ -1528,23 +1528,23 @@
 
     const/4 v2, 0x0
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
     :goto_25
-    const/16 v8, 0x12
+    const/16 v7, 0x12
 
-    if-lt v3, v8, :cond_30
+    if-lt v3, v7, :cond_30
 
-    const/16 v8, 0x31
+    const/16 v7, 0x31
 
-    if-gt v3, v8, :cond_30
+    if-gt v3, v7, :cond_30
 
-    add-int/lit8 v8, v23, 0x1
+    add-int/lit8 v7, v23, 0x1
 
     .line 226
     aput v9, v15, v23
 
-    move/from16 v23, v8
+    move/from16 v23, v7
 
     move v12, v11
 
@@ -1554,12 +1554,12 @@
     move v12, v11
 
     :goto_26
-    add-int/lit8 v8, v21, 0x1
+    add-int/lit8 v7, v21, 0x1
 
     .line 227
     aput v13, v10, v21
 
-    add-int/lit8 v11, v8, 0x1
+    add-int/lit8 v11, v7, 0x1
 
     and-int/lit16 v13, v4, 0x200
 
@@ -1594,13 +1594,13 @@
     or-int/2addr v3, v9
 
     .line 230
-    aput v3, v10, v8
+    aput v3, v10, v7
 
     add-int/lit8 v21, v11, 0x1
 
     shl-int/lit8 v2, v2, 0x14
 
-    or-int/2addr v2, v7
+    or-int/2addr v2, v8
 
     .line 231
     aput v2, v10, v11

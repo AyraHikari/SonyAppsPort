@@ -298,7 +298,7 @@
     .line 226
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchAdapter;->mResources:Landroid/content/res/Resources;
 
-    const v1, 0x7f100212
+    const v1, 0x7f100214
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1052,7 +1052,7 @@
     .line 307
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchAdapter;->mResources:Landroid/content/res/Resources;
 
-    const v2, 0x7f100284
+    const v2, 0x7f100286
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1141,7 +1141,7 @@
     :pswitch_0
     iget-object v3, p0, Lcom/sonyericsson/music/search/SearchAdapter;->mResources:Landroid/content/res/Resources;
 
-    const v4, 0x7f1002b8
+    const v4, 0x7f1002ba
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1156,7 +1156,7 @@
     :pswitch_1
     iget-object v3, p0, Lcom/sonyericsson/music/search/SearchAdapter;->mResources:Landroid/content/res/Resources;
 
-    const v4, 0x7f1002af
+    const v4, 0x7f1002b1
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1171,7 +1171,7 @@
     :pswitch_2
     iget-object v3, p0, Lcom/sonyericsson/music/search/SearchAdapter;->mResources:Landroid/content/res/Resources;
 
-    const v4, 0x7f1002b0
+    const v4, 0x7f1002b2
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

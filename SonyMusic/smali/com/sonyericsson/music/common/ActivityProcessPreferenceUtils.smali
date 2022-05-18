@@ -132,76 +132,76 @@
 .method public static cleanupOfOldKeys(Landroid/content/Context;)V
     .locals 1
 
-    .line 837
+    .line 842
     invoke-static {p0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 839
+    .line 844
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
     const-string v0, "ga_empty_card_seen_reported"
 
-    .line 844
+    .line 849
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "ga_google_drive_card_seen_reported"
 
-    .line 845
+    .line 850
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "ga_personal_data_collection_card_seen_reported"
 
-    .line 846
+    .line 851
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "ga_update_card_seen_reported"
 
-    .line 847
+    .line 852
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "ga_most_played_card_seen_reported"
 
-    .line 848
+    .line 853
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "ga_user_learned_scroll_reported"
 
-    .line 850
+    .line 855
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_key_cast_devices_v2"
 
-    .line 852
+    .line 857
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_key_customize_my_library_drawer"
 
-    .line 854
+    .line 859
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "wear_promo_dismissed"
 
-    .line 856
+    .line 861
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_key_analytics_cleanup_time"
 
-    .line 861
+    .line 866
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "cloud_account"
 
-    .line 869
+    .line 874
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_key_cloud_startup_introduction"
 
-    .line 870
+    .line 875
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -210,47 +210,47 @@
 
     const-string v0, "pref_key_most_played_artists"
 
-    .line 875
+    .line 880
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_key_most_played_reset_value"
 
-    .line 876
+    .line 881
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_key_most_played_card_dismissed"
 
-    .line 877
+    .line 882
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_key_gracenote_emi_disabled"
 
-    .line 882
+    .line 887
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_update_as_you_play"
 
-    .line 887
+    .line 892
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_key_update_as_you_play_alert"
 
-    .line 888
+    .line 893
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_key_gracenote_disabled"
 
-    .line 889
+    .line 894
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_key_uayp_disabled"
 
-    .line 890
+    .line 895
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v0, "pref_key_uayp_data_saver_information"
 
-    .line 891
+    .line 896
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     :cond_0
@@ -260,14 +260,14 @@
 .method public static clearCustomizedMyLibraryPages(Landroid/content/Context;)V
     .locals 1
 
-    .line 727
+    .line 732
     invoke-static {p0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 729
+    .line 734
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
@@ -278,7 +278,7 @@
 
     move-result-object p0
 
-    .line 730
+    .line 735
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     :cond_0
@@ -288,7 +288,7 @@
 .method public static getAlbumsLayout(Landroid/content/Context;)I
     .locals 2
 
-    .line 735
+    .line 740
     invoke-static {p0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
@@ -299,7 +299,7 @@
 
     const-string v1, "pref_key_albums_layout"
 
-    .line 737
+    .line 742
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -418,17 +418,17 @@
 
     const/4 v0, 0x0
 
-    .line 821
+    .line 826
     invoke-static {p0, v0}, Lcom/sonymobile/music/common/ProcessUtils;->validateCorrectProcessUsage(Landroid/content/Context;Z)V
 
-    .line 822
+    .line 827
     invoke-static {p0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 825
+    .line 830
     invoke-interface {p0, p1, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -470,7 +470,7 @@
 .method public static getCustomizedMyLibraryPages(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    .line 717
+    .line 722
     invoke-static {p0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
@@ -481,7 +481,7 @@
 
     const-string v1, "pref_key_customize_my_library_value"
 
-    .line 720
+    .line 725
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -497,10 +497,10 @@
 
     const/4 v0, 0x0
 
-    .line 832
+    .line 837
     invoke-static {p0, v0}, Lcom/sonymobile/music/common/ProcessUtils;->validateCorrectProcessUsage(Landroid/content/Context;Z)V
 
-    .line 833
+    .line 838
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
@@ -519,7 +519,7 @@
 
     const-string v0, "google_drive_disabled"
 
-    .line 803
+    .line 808
     invoke-static {p0, v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getBooleanPreference(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -805,7 +805,7 @@
 
     const-string v0, "gaf_empty_card_first_seen_reported"
 
-    .line 766
+    .line 771
     invoke-static {p0, v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getBooleanPreference(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -872,7 +872,7 @@
 
     const-string v0, "gaf_drive_card_first_seen_reported"
 
-    .line 774
+    .line 779
     invoke-static {p0, v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getBooleanPreference(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -885,7 +885,7 @@
 
     const-string v0, "google_drive_used"
 
-    .line 758
+    .line 763
     invoke-static {p0, v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getBooleanPreference(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -898,7 +898,7 @@
 
     const-string v0, "google_sign_in_intro_shown"
 
-    .line 750
+    .line 755
     invoke-static {p0, v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getBooleanPreference(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -1010,20 +1010,28 @@
 .end method
 
 .method public static isSettingsMusicInformationCategoryDisabled(Landroid/content/Context;)Z
-    .locals 0
+    .locals 2
 
-    .line 696
+    .line 695
+    sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_S_API:Z
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    .line 701
+    :cond_0
     invoke-static {p0}, Lcom/sonyericsson/music/common/AvailabilityUtils;->isSettingsMusicInformationCategoryShown(Landroid/content/Context;)Z
 
     move-result p0
 
-    if-nez p0, :cond_0
+    if-nez p0, :cond_1
 
-    const/4 p0, 0x1
+    return v1
 
-    return p0
-
-    :cond_0
+    :cond_1
     const/4 p0, 0x0
 
     return p0
@@ -1136,7 +1144,7 @@
 .method public static isUpdateCardFirstSeenReported(Landroid/content/Context;I)Z
     .locals 2
 
-    .line 783
+    .line 788
     invoke-static {p0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
@@ -1147,7 +1155,7 @@
 
     const-string v1, "gaf_update_card_first_seen_reported"
 
-    .line 787
+    .line 792
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -1170,7 +1178,7 @@
     .line 325
     invoke-static {p0, v0}, Lcom/sonymobile/music/common/ProcessUtils;->validateCorrectProcessUsage(Landroid/content/Context;Z)V
 
-    const v0, 0x7f100260
+    const v0, 0x7f100262
 
     .line 327
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1188,14 +1196,14 @@
 .method public static setAlbumsLayout(Landroid/content/Context;I)V
     .locals 1
 
-    .line 743
+    .line 748
     invoke-static {p0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 745
+    .line 750
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
@@ -1289,22 +1297,22 @@
 
     const/4 v0, 0x0
 
-    .line 811
+    .line 816
     invoke-static {p0, v0}, Lcom/sonymobile/music/common/ProcessUtils;->validateCorrectProcessUsage(Landroid/content/Context;Z)V
 
-    .line 812
+    .line 817
     invoke-static {p0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 815
+    .line 820
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 816
+    .line 821
     invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
@@ -1394,26 +1402,26 @@
 .method public static setCustomizedMyLibraryPages(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
-    .line 707
+    .line 712
     invoke-static {p0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 709
+    .line 714
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
     const-string v0, "pref_key_customize_my_library_value"
 
-    .line 710
+    .line 715
     invoke-interface {p0, v0, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 711
+    .line 716
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     :cond_0
@@ -1425,7 +1433,7 @@
 
     const-string v0, "gaf_empty_card_first_seen_reported"
 
-    .line 770
+    .line 775
     invoke-static {p0, v0, p1}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setBooleanPreference(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
@@ -1493,7 +1501,7 @@
 
     const-string v0, "gaf_drive_card_first_seen_reported"
 
-    .line 778
+    .line 783
     invoke-static {p0, v0, p1}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setBooleanPreference(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
@@ -1504,7 +1512,7 @@
 
     const-string v0, "google_drive_disabled"
 
-    .line 807
+    .line 812
     invoke-static {p0, v0, p1}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setBooleanPreference(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
@@ -1515,7 +1523,7 @@
 
     const-string v0, "google_drive_used"
 
-    .line 762
+    .line 767
     invoke-static {p0, v0, p1}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setBooleanPreference(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
@@ -1570,7 +1578,7 @@
 
     const-string v0, "google_sign_in_intro_shown"
 
-    .line 754
+    .line 759
     invoke-static {p0, v0, p1}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setBooleanPreference(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
@@ -1952,26 +1960,26 @@
 .method public static setUpdateCardFirstSeenReported(Landroid/content/Context;I)V
     .locals 1
 
-    .line 794
+    .line 799
     invoke-static {p0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 796
+    .line 801
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
     const-string v0, "gaf_update_card_first_seen_reported"
 
-    .line 797
+    .line 802
     invoke-interface {p0, v0, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 798
+    .line 803
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     :cond_0
@@ -1998,7 +2006,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100260
+    const v1, 0x7f100262
 
     .line 336
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

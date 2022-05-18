@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/library/PlaylistOperationFragment;)V
     .locals 0
 
-    .line 291
+    .line 300
     iput-object p1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment$1;->this$0:Lcom/sonyericsson/music/library/PlaylistOperationFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onTaskCompleted(Ljava/lang/Object;)V
     .locals 2
 
-    .line 294
+    .line 303
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x1e
@@ -47,7 +47,7 @@
 
     return-void
 
-    .line 295
+    .line 304
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment$1;->this$0:Lcom/sonyericsson/music/library/PlaylistOperationFragment;
 
@@ -59,7 +59,7 @@
 
     invoke-static {v0, v1}, Lcom/sonyericsson/music/library/PlaylistBaseFragment$NoEditLocalPlaylist;->removeNoEditLocalPlaylist(J)V
 
-    .line 296
+    .line 305
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment$1;->this$0:Lcom/sonyericsson/music/library/PlaylistOperationFragment;
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -70,7 +70,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 298
+    .line 307
     invoke-virtual {p1}, Lcom/sonyericsson/music/MusicActivity;->isFragmentTransactionAllowed()Z
 
     move-result v0
@@ -79,24 +79,24 @@
 
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment$1;->this$0:Lcom/sonyericsson/music/library/PlaylistOperationFragment;
 
-    .line 299
+    .line 308
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isResumed()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 300
+    .line 309
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
 
-    .line 301
+    .line 310
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->popBackStack()V
 
     goto :goto_0
 
-    .line 303
+    .line 312
     :cond_1
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment$1;->this$0:Lcom/sonyericsson/music/library/PlaylistOperationFragment;
 

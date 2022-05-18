@@ -16,6 +16,8 @@
 
 .field private static final COLUMNS:[Ljava/lang/String;
 
+.field private static final COLUMNS_FOR_EDIT:[Ljava/lang/String;
+
 .field public static final MODE_ADD_TRACKS:I = 0x2
 
 .field public static final MODE_CREATE_PLAYLIST:I = 0x0
@@ -63,50 +65,91 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 9
 
     const/4 v0, 0x6
 
-    .line 72
-    new-array v0, v0, [Ljava/lang/String;
+    .line 73
+    new-array v1, v0, [Ljava/lang/String;
 
-    const-string v1, "_id"
+    const-string v2, "_id"
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    aput-object v1, v0, v2
+    aput-object v2, v1, v3
 
-    const-string v1, "title"
+    const-string v2, "title"
 
-    const/4 v2, 0x1
+    const/4 v4, 0x1
 
-    aput-object v1, v0, v2
+    aput-object v2, v1, v4
 
-    const-string v1, "artist"
+    const-string v2, "artist"
 
-    const/4 v2, 0x2
+    const/4 v5, 0x2
 
-    aput-object v1, v0, v2
+    aput-object v2, v1, v5
 
-    const-string v1, "artist_id"
+    const-string v2, "artist_id"
 
-    const/4 v2, 0x3
+    const/4 v6, 0x3
 
-    aput-object v1, v0, v2
+    aput-object v2, v1, v6
 
-    const-string v1, "album"
+    const-string v2, "album"
 
-    const/4 v2, 0x4
+    const/4 v7, 0x4
 
-    aput-object v1, v0, v2
+    aput-object v2, v1, v7
 
-    const-string v1, "album_id"
+    const-string v2, "album_id"
 
-    const/4 v2, 0x5
+    const/4 v8, 0x5
 
-    aput-object v1, v0, v2
+    aput-object v2, v1, v8
 
-    sput-object v0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->COLUMNS:[Ljava/lang/String;
+    sput-object v1, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->COLUMNS:[Ljava/lang/String;
+
+    const/16 v1, 0x8
+
+    .line 79
+    new-array v1, v1, [Ljava/lang/String;
+
+    const-string v2, "_id"
+
+    aput-object v2, v1, v3
+
+    const-string v2, "title"
+
+    aput-object v2, v1, v4
+
+    const-string v2, "artist"
+
+    aput-object v2, v1, v5
+
+    const-string v2, "artist_id"
+
+    aput-object v2, v1, v6
+
+    const-string v2, "album"
+
+    aput-object v2, v1, v7
+
+    const-string v2, "album_id"
+
+    aput-object v2, v1, v8
+
+    const-string v2, "play_order"
+
+    aput-object v2, v1, v0
+
+    const-string v0, "playlist_id"
+
+    const/4 v2, 0x7
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->COLUMNS_FOR_EDIT:[Ljava/lang/String;
 
     return-void
 .end method
@@ -114,28 +157,28 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 57
+    .line 58
     invoke-direct {p0}, Lcom/sonyericsson/music/library/LibraryListFragment;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 91
+    .line 100
     iput-boolean v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mEnableListView:Z
 
     const/4 v0, 0x0
 
-    .line 95
+    .line 104
     iput-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMarkedItems:Ljava/util/ArrayList;
 
-    .line 97
+    .line 106
     iput-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistAsyncTask:Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
     const/4 v0, 0x0
 
-    .line 101
+    .line 110
     iput-boolean v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPendingClose:Z
 
-    .line 105
+    .line 114
     iput-boolean v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mIsProgressLoadingShown:Z
 
     return-void
@@ -144,7 +187,7 @@
 .method static synthetic access$000(Lcom/sonyericsson/music/library/PlaylistOperationFragment;)I
     .locals 0
 
-    .line 57
+    .line 58
     iget p0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mLocalPlaylistId:I
 
     return p0
@@ -153,7 +196,7 @@
 .method static synthetic access$102(Lcom/sonyericsson/music/library/PlaylistOperationFragment;Z)Z
     .locals 0
 
-    .line 57
+    .line 58
     iput-boolean p1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPendingClose:Z
 
     return p1
@@ -164,15 +207,15 @@
 
     const/4 v0, 0x0
 
-    .line 367
+    .line 384
     iput-boolean v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPendingClose:Z
 
-    .line 368
+    .line 385
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
 
-    .line 369
+    .line 386
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->popBackStack()V
 
     return-void
@@ -181,12 +224,12 @@
 .method private getAddTrackView()Landroid/view/View;
     .locals 5
 
-    .line 226
+    .line 235
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mAddTrackView:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 227
+    .line 236
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -195,21 +238,21 @@
 
     const/4 v2, 0x0
 
-    .line 228
+    .line 237
     invoke-static {v0, v1, v2}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
     const v2, 0x7f0900db
 
-    .line 229
+    .line 238
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/ImageView;
 
-    .line 230
+    .line 239
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -220,12 +263,12 @@
 
     move-result v3
 
-    .line 231
+    .line 240
     invoke-virtual {v2, v3, v3, v3, v3}, Landroid/widget/ImageView;->setPadding(IIII)V
 
     const v3, 0x7f080080
 
-    .line 232
+    .line 241
     invoke-static {v0, v3}, Lcom/sonyericsson/music/common/UIUtils;->getTintedDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -234,36 +277,36 @@
 
     const v0, 0x7f0901fb
 
-    .line 233
+    .line 242
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f1001bf
+    const v2, 0x7f1001c1
 
-    .line 234
+    .line 243
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     const v0, 0x7f0901fc
 
-    .line 235
+    .line 244
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f1001c0
+    const v2, 0x7f1001c2
 
-    .line 236
+    .line 245
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
-    .line 237
+    .line 246
     iput-object v1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mAddTrackView:Landroid/view/View;
 
-    .line 239
+    .line 248
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mAddTrackView:Landroid/view/View;
 
@@ -273,24 +316,24 @@
 .method private getLocalPlaylistId()I
     .locals 3
 
-    .line 349
+    .line 366
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistTracksUri:Ljava/lang/String;
 
     const/4 v1, -0x1
 
     if-eqz v0, :cond_0
 
-    .line 350
+    .line 367
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 352
+    .line 369
     invoke-virtual {v0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
 
-    .line 353
+    .line 370
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -299,7 +342,7 @@
 
     if-le v2, v1, :cond_0
 
-    .line 356
+    .line 373
     :try_start_0
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -321,7 +364,7 @@
 .method public static getTag(I)Ljava/lang/String;
     .locals 2
 
-    .line 481
+    .line 522
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -342,37 +385,37 @@
 .method public static newInstance(ILjava/lang/String;Ljava/lang/String;)Lcom/sonyericsson/music/library/PlaylistOperationFragment;
     .locals 3
 
-    .line 120
+    .line 129
     new-instance v0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;
 
     invoke-direct {v0}, Lcom/sonyericsson/music/library/PlaylistOperationFragment;-><init>()V
 
-    .line 122
+    .line 131
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     const-string v2, "playlistMode"
 
-    .line 123
+    .line 132
     invoke-virtual {v1, v2, p0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p0, "playlistName"
 
-    .line 124
+    .line 133
     invoke-virtual {v1, p0, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p0, "playlistTracksUri"
 
-    .line 125
+    .line 134
     invoke-virtual {v1, p0, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x1
 
-    .line 126
+    .line 135
     invoke-virtual {v0, p0}, Landroidx/fragment/app/Fragment;->setRetainInstance(Z)V
 
-    .line 127
+    .line 136
     invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     return-object v0
@@ -381,12 +424,12 @@
 .method private savePlaylist()V
     .locals 6
 
-    .line 276
+    .line 285
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
-    .line 277
+    .line 286
     invoke-virtual {v0}, Lcom/sonyericsson/music/library/LibraryListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v0
@@ -397,7 +440,7 @@
 
     move-result-object v0
 
-    .line 280
+    .line 289
     iget v1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMode:I
 
     const/4 v2, 0x1
@@ -410,14 +453,14 @@
 
     if-nez v1, :cond_0
 
-    .line 281
+    .line 290
     new-instance v1, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataCreatePlaylist;
 
     iget-object v4, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistName:Ljava/lang/String;
 
     invoke-direct {v1, v4, v0}, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataCreatePlaylist;-><init>(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 283
+    .line 292
     new-instance v0, Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -428,7 +471,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistAsyncTask:Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
-    .line 284
+    .line 293
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistAsyncTask:Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -439,7 +482,7 @@
 
     goto/16 :goto_0
 
-    .line 286
+    .line 295
     :cond_0
     iget v1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMode:I
 
@@ -447,24 +490,24 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 287
+    .line 296
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_4
+    if-lez v1, :cond_5
 
-    .line 288
+    .line 297
     iget v1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mLocalPlaylistId:I
 
-    if-le v1, v4, :cond_4
+    if-le v1, v4, :cond_5
 
-    .line 289
+    .line 298
     new-instance v4, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataRemoveFromPlaylist;
 
     invoke-direct {v4, v1, v0}, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataRemoveFromPlaylist;-><init>(ILjava/util/Collection;)V
 
-    .line 291
+    .line 300
     new-instance v0, Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -479,7 +522,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistAsyncTask:Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
-    .line 308
+    .line 317
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistAsyncTask:Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
     new-array v1, v2, [Ljava/lang/Object;
@@ -488,45 +531,45 @@
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 309
+    .line 318
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
-    if-ne v0, v1, :cond_4
+    if-ne v0, v1, :cond_5
 
-    .line 310
+    .line 319
     iget v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mLocalPlaylistId:I
 
     int-to-long v0, v0
 
     invoke-static {v0, v1}, Lcom/sonyericsson/music/library/PlaylistBaseFragment$NoEditLocalPlaylist;->addNoEditLocalPlaylist(J)V
 
-    .line 311
+    .line 320
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_1
 
-    .line 312
+    .line 321
     invoke-virtual {v0, v3}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 314
+    .line 323
     :cond_1
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mListView:Landroid/widget/AbsListView;
 
     if-eqz v0, :cond_2
 
-    .line 315
+    .line 324
     invoke-virtual {v0, v3}, Landroid/widget/AbsListView;->setEnabled(Z)V
 
-    .line 316
+    .line 325
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mListView:Landroid/widget/AbsListView;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/widget/AbsListView;->setVisibility(I)V
 
-    .line 318
+    .line 327
     :cond_2
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->getMusicActivity()Lcom/sonyericsson/music/MusicActivity;
 
@@ -534,7 +577,7 @@
 
     invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatActivity;->invalidateOptionsMenu()V
 
-    .line 319
+    .line 328
     iput-boolean v2, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mIsProgressLoadingShown:Z
 
     return-void
@@ -542,30 +585,54 @@
     :cond_3
     const/4 v5, 0x2
 
-    if-ne v1, v5, :cond_4
+    if-ne v1, v5, :cond_5
 
-    .line 324
+    .line 333
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_4
+    if-lez v1, :cond_5
 
     iget-object v1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistAsyncTask:Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_5
 
-    .line 326
+    .line 335
     iget v1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mLocalPlaylistId:I
 
-    if-le v1, v4, :cond_4
+    if-le v1, v4, :cond_5
 
-    .line 327
+    .line 336
     new-instance v4, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataAddTracks;
 
     invoke-direct {v4, v1, v0, v3, v3}, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataAddTracks;-><init>(ILjava/util/List;ZZ)V
 
-    .line 329
+    .line 338
+    sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
+
+    if-eqz v0, :cond_4
+
+    .line 339
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/sonyericsson/music/MusicActivity;
+
+    if-eqz v0, :cond_5
+
+    .line 341
+    iget v1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mLocalPlaylistId:I
+
+    int-to-long v1, v1
+
+    invoke-virtual {v0, v4, v1, v2}, Lcom/sonyericsson/music/MusicActivity;->showRequestDialogToModifyPlaylist(Ljava/lang/Object;J)V
+
+    goto :goto_0
+
+    .line 344
+    :cond_4
     new-instance v0, Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -576,7 +643,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistAsyncTask:Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
-    .line 330
+    .line 345
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistAsyncTask:Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
     new-array v1, v2, [Ljava/lang/Object;
@@ -585,8 +652,8 @@
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 335
-    :cond_4
+    .line 352
+    :cond_5
     :goto_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -594,22 +661,22 @@
 
     check-cast v0, Lcom/sonyericsson/music/MusicActivity;
 
-    .line 336
+    .line 353
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->isFragmentTransactionAllowed()Z
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
-    .line 337
+    .line 354
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 338
+    .line 355
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->popBackStack()V
 
-    :cond_5
+    :cond_6
     return-void
 .end method
 
@@ -618,7 +685,7 @@
 .method protected getAdapter()Landroid/widget/CursorAdapter;
     .locals 3
 
-    .line 176
+    .line 185
     new-instance v0, Lcom/sonyericsson/music/library/PlaylistOperationAdapter;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -635,7 +702,7 @@
 .method protected bridge synthetic getAdapter()Landroid/widget/ListAdapter;
     .locals 1
 
-    .line 57
+    .line 58
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->getAdapter()Landroid/widget/CursorAdapter;
 
     move-result-object v0
@@ -646,7 +713,7 @@
 .method protected getDrawerIndicator()Lcom/sonyericsson/music/navigationdrawer/NavigationDrawerFragment$DrawerIndicator;
     .locals 1
 
-    .line 400
+    .line 417
     sget-object v0, Lcom/sonyericsson/music/navigationdrawer/NavigationDrawerFragment$DrawerIndicator;->CLOSE:Lcom/sonyericsson/music/navigationdrawer/NavigationDrawerFragment$DrawerIndicator;
 
     return-object v0
@@ -655,7 +722,7 @@
 .method protected getRootLayoutResource()I
     .locals 2
 
-    .line 167
+    .line 176
     iget v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMode:I
 
     const/4 v1, 0x1
@@ -666,7 +733,7 @@
 
     return v0
 
-    .line 170
+    .line 179
     :cond_0
     invoke-super {p0}, Lcom/sonyericsson/music/library/LibraryListFragment;->getRootLayoutResource()I
 
@@ -678,7 +745,7 @@
 .method public getScrollAllowed(Z)Z
     .locals 2
 
-    .line 487
+    .line 528
     iget v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMode:I
 
     const/4 v1, 0x1
@@ -689,7 +756,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 488
+    .line 529
     check-cast v0, Lcom/sonyericsson/music/ui/RearrangeableListView;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/ui/RearrangeableListView;->isRearranging()Z
@@ -700,7 +767,7 @@
 
     if-nez v1, :cond_0
 
-    .line 490
+    .line 531
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->getToolbarControl()Lcom/sonyericsson/music/ToolbarControl;
 
     move-result-object v0
@@ -710,7 +777,7 @@
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 493
+    .line 534
     invoke-super {p0, p1}, Lcom/sonyericsson/music/library/LibraryListFragment;->getScrollAllowed(Z)Z
 
     move-result p1
@@ -727,7 +794,7 @@
 .method public isMovableView(I)Z
     .locals 1
 
-    .line 461
+    .line 502
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/library/LibraryListAdapter;->getHeaderCount()I
@@ -750,7 +817,7 @@
 .method public onBackPressed(Lcom/sonyericsson/music/MusicActivity$BackSource;)Z
     .locals 1
 
-    .line 244
+    .line 253
     iget-boolean v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mIsProgressLoadingShown:Z
 
     if-eqz v0, :cond_0
@@ -759,7 +826,7 @@
 
     return p1
 
-    .line 245
+    .line 254
     :cond_0
     invoke-super {p0, p1}, Lcom/sonyericsson/music/library/BaseFragment;->onBackPressed(Lcom/sonyericsson/music/MusicActivity$BackSource;)Z
 
@@ -783,14 +850,14 @@
 
     move-object/from16 v0, p0
 
-    .line 183
+    .line 192
     iget v1, v0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMode:I
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_0
 
-    .line 185
+    .line 194
     new-instance v1, Lcom/sonyericsson/music/common/PermissionCursorLoader;
 
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -803,7 +870,7 @@
 
     move-result-object v5
 
-    sget-object v6, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->COLUMNS:[Ljava/lang/String;
+    sget-object v6, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->COLUMNS_FOR_EDIT:[Ljava/lang/String;
 
     const/4 v7, 0x0
 
@@ -819,7 +886,7 @@
 
     goto :goto_0
 
-    .line 190
+    .line 199
     :cond_0
     new-instance v1, Lcom/sonyericsson/music/common/PermissionCursorLoader;
 
@@ -850,15 +917,15 @@
 .method public onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
     .locals 1
 
-    .line 250
+    .line 259
     invoke-super {p0, p1, p2}, Lcom/sonyericsson/music/library/LibraryBaseFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
-    .line 252
+    .line 261
     invoke-interface {p1}, Landroid/view/Menu;->clear()V
 
     const v0, 0x7f0d000e
 
-    .line 253
+    .line 262
     invoke-virtual {p2, v0, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
     return-void
@@ -867,14 +934,14 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    .line 134
+    .line 143
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
     const-string v1, "playlistMode"
 
-    .line 135
+    .line 144
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v1
@@ -883,7 +950,7 @@
 
     const-string v1, "playlistName"
 
-    .line 136
+    .line 145
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -892,42 +959,42 @@
 
     const-string v1, "playlistTracksUri"
 
-    .line 138
+    .line 147
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistTracksUri:Ljava/lang/String;
 
-    .line 139
+    .line 148
     invoke-direct {p0}, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->getLocalPlaylistId()I
 
     move-result v0
 
     iput v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mLocalPlaylistId:I
 
-    .line 141
+    .line 150
     invoke-super {p0, p1, p2, p3}, Lcom/sonyericsson/music/library/LibraryListFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p1
 
-    .line 143
+    .line 152
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p2
 
     check-cast p2, Lcom/sonyericsson/music/MusicActivity;
 
-    .line 144
+    .line 153
     iget p3, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMode:I
 
     const/4 v0, 0x2
 
     if-ne p3, v0, :cond_0
 
-    const p3, 0x7f1001bf
+    const p3, 0x7f1001c1
 
-    .line 145
+    .line 154
     invoke-virtual {p0, p3}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p3
@@ -936,13 +1003,13 @@
 
     goto :goto_0
 
-    .line 147
+    .line 156
     :cond_0
     iget-object p3, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistName:Ljava/lang/String;
 
     invoke-virtual {p2, p3}, Lcom/sonyericsson/music/MusicActivity;->setActionBarTitle(Ljava/lang/CharSequence;)V
 
-    .line 149
+    .line 158
     :goto_0
     iget p2, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMode:I
 
@@ -950,14 +1017,14 @@
 
     if-ne p2, p3, :cond_1
 
-    .line 150
+    .line 159
     iget-object p2, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mListView:Landroid/widget/AbsListView;
 
     check-cast p2, Lcom/sonyericsson/music/ui/RearrangeableListView;
 
     invoke-virtual {p2, p3}, Lcom/sonyericsson/music/ui/RearrangeableListView;->setMovingItemEnabled(Z)V
 
-    .line 151
+    .line 160
     iget-object p2, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mListView:Landroid/widget/AbsListView;
 
     check-cast p2, Lcom/sonyericsson/music/ui/RearrangeableListView;
@@ -966,14 +1033,14 @@
 
     invoke-virtual {p2, p3}, Lcom/sonyericsson/music/ui/RearrangeableListView;->setMovingHandleViewId(I)V
 
-    .line 152
+    .line 161
     iget-object p2, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mListView:Landroid/widget/AbsListView;
 
     check-cast p2, Lcom/sonyericsson/music/ui/RearrangeableListView;
 
     invoke-virtual {p2, p0}, Lcom/sonyericsson/music/ui/RearrangeableListView;->setItemMovedListener(Lcom/sonyericsson/music/ui/RearrangeableListView$OnItemMovedListener;)V
 
-    .line 154
+    .line 163
     iget-object p2, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mListView:Landroid/widget/AbsListView;
 
     iget-boolean p3, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mEnableListView:Z
@@ -982,7 +1049,7 @@
 
     const p2, 0x7f090195
 
-    .line 155
+    .line 164
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -991,26 +1058,26 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mProgress:Landroid/widget/ProgressBar;
 
-    .line 156
+    .line 165
     iget-boolean p2, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mIsProgressLoadingShown:Z
 
     if-eqz p2, :cond_1
 
-    .line 157
+    .line 166
     iget-object p2, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mListView:Landroid/widget/AbsListView;
 
     const/4 p3, 0x0
 
     invoke-virtual {p2, p3}, Landroid/widget/AbsListView;->setEnabled(Z)V
 
-    .line 158
+    .line 167
     iget-object p2, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mListView:Landroid/widget/AbsListView;
 
     const/4 v0, 0x4
 
     invoke-virtual {p2, v0}, Landroid/widget/AbsListView;->setVisibility(I)V
 
-    .line 159
+    .line 168
     iget-object p2, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {p2, p3}, Landroid/widget/ProgressBar;->setVisibility(I)V
@@ -1022,7 +1089,7 @@
 .method public onDestroyView()V
     .locals 3
 
-    .line 217
+    .line 226
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mListView:Landroid/widget/AbsListView;
 
     const/4 v1, 0x0
@@ -1033,16 +1100,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 218
+    .line 227
     check-cast v0, Lcom/sonyericsson/music/ui/RearrangeableListView;
 
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/ui/RearrangeableListView;->setItemMovedListener(Lcom/sonyericsson/music/ui/RearrangeableListView$OnItemMovedListener;)V
 
-    .line 220
+    .line 229
     :cond_0
     iput-object v1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mAddTrackView:Landroid/view/View;
 
-    .line 222
+    .line 231
     invoke-super {p0}, Lcom/sonyericsson/music/library/LibraryListFragment;->onDestroyView()V
 
     return-void
@@ -1060,7 +1127,7 @@
         }
     .end annotation
 
-    .line 405
+    .line 422
     iget-object p1, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/library/LibraryListAdapter;->getHeaderCount()I
@@ -1075,7 +1142,7 @@
 
     return-void
 
-    .line 408
+    .line 425
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
@@ -1085,7 +1152,7 @@
 
     sub-int/2addr p3, p1
 
-    .line 410
+    .line 427
     iget p1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMode:I
 
     if-ne p1, p4, :cond_2
@@ -1094,7 +1161,7 @@
 
     if-ne p3, p1, :cond_2
 
-    .line 411
+    .line 428
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -1109,30 +1176,30 @@
 
     return-void
 
-    .line 415
+    .line 432
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
 
-    .line 416
+    .line 433
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
-    .line 417
+    .line 434
     iget-object p2, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistName:Ljava/lang/String;
 
     iget-object p3, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistTracksUri:Ljava/lang/String;
 
     const/4 p4, 0x2
 
-    .line 418
+    .line 435
     invoke-static {p4, p2, p3}, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->newInstance(ILjava/lang/String;Ljava/lang/String;)Lcom/sonyericsson/music/library/PlaylistOperationFragment;
 
     move-result-object p2
 
-    .line 420
+    .line 437
     invoke-static {p4}, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->getTag(I)Ljava/lang/String;
 
     move-result-object p3
@@ -1145,10 +1212,10 @@
 
     const v0, 0x7f010013
 
-    .line 421
+    .line 438
     invoke-virtual {p1, p3, v0, p5, v0}, Landroidx/fragment/app/FragmentTransaction;->setCustomAnimations(IIII)Landroidx/fragment/app/FragmentTransaction;
 
-    .line 423
+    .line 440
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->getMusicActivity()Lcom/sonyericsson/music/MusicActivity;
 
     move-result-object p3
@@ -1157,20 +1224,20 @@
 
     move-result-object p3
 
-    .line 425
+    .line 442
     invoke-static {p4}, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->getTag(I)Ljava/lang/String;
 
     move-result-object p4
 
-    .line 424
+    .line 441
     invoke-virtual {p3, p1, p2, p4}, Lcom/sonyericsson/music/MusicFragmentManager;->placeContent(Landroidx/fragment/app/FragmentTransaction;Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
 
-    .line 426
+    .line 443
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     goto :goto_0
 
-    .line 430
+    .line 447
     :cond_2
     iget-object p1, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
@@ -1184,7 +1251,7 @@
 
     move-result p1
 
-    .line 431
+    .line 448
     iget-object p3, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
     invoke-virtual {p3}, Lcom/sonyericsson/music/library/LibraryListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
@@ -1199,21 +1266,21 @@
 
     iput-object p3, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMarkedItems:Ljava/util/ArrayList;
 
-    .line 432
+    .line 449
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Lcom/sonyericsson/music/library/PlaylistOperationAdapter$ViewHolder;
 
-    .line 434
+    .line 451
     iget p3, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMode:I
 
     if-ne p3, p4, :cond_3
 
     xor-int/lit8 p1, p1, 0x1
 
-    .line 438
+    .line 455
     :cond_3
     iget-object p2, p2, Lcom/sonyericsson/music/library/PlaylistOperationAdapter$ViewHolder;->checkbox:Landroid/widget/CheckBox;
 
@@ -1228,7 +1295,7 @@
 
     const v0, 0x7f090097
 
-    .line 472
+    .line 513
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -1245,7 +1312,7 @@
 
     const p2, 0x7f090097
 
-    .line 467
+    .line 508
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -1260,7 +1327,7 @@
 .method public onItemMoved(II)V
     .locals 2
 
-    .line 445
+    .line 462
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/library/LibraryListAdapter;->getHeaderCount()I
@@ -1271,7 +1338,7 @@
 
     sub-int/2addr p2, v0
 
-    .line 448
+    .line 465
     iget-object v1, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
     invoke-virtual {v1}, Lcom/sonyericsson/music/library/LibraryListAdapter;->getCount()I
@@ -1280,9 +1347,9 @@
 
     sub-int/2addr v1, v0
 
-    if-ge p2, v1, :cond_0
+    if-ge p2, v1, :cond_4
 
-    .line 449
+    .line 466
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/library/LibraryListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
@@ -1293,19 +1360,99 @@
 
     invoke-virtual {v0, p1, p2}, Lcom/sonyericsson/music/library/RearrangeAdapter;->switchItems(II)V
 
-    .line 450
+    .line 467
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
     invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 451
+    .line 472
+    sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
+
+    if-eqz v0, :cond_3
+
+    .line 473
+    iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
+
+    invoke-virtual {v0}, Lcom/sonyericsson/music/library/LibraryListAdapter;->getCursor()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    if-eqz v0, :cond_0
+
+    .line 474
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->moveToPosition(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "play_order"
+
+    .line 475
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result p1
+
+    if-eq p1, v1, :cond_0
+
+    .line 477
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, -0x1
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    .line 480
+    invoke-interface {v0, p2}, Landroid/database/Cursor;->moveToPosition(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    const-string p2, "play_order"
+
+    .line 481
+    invoke-interface {v0, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result p2
+
+    if-eq p2, v1, :cond_1
+
+    .line 483
+    invoke-interface {v0, p2}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result p2
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p2, -0x1
+
+    :goto_1
+    if-eq p1, v1, :cond_2
+
+    if-ne p2, v1, :cond_3
+
+    :cond_2
+    return-void
+
+    .line 492
+    :cond_3
     new-instance v0, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataMoveTrack;
 
     iget v1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mLocalPlaylistId:I
 
     invoke-direct {v0, v1, p1, p2}, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataMoveTrack;-><init>(III)V
 
-    .line 453
+    .line 494
     new-instance p1, Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -1316,7 +1463,7 @@
 
     iput-object p1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistAsyncTask:Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
-    .line 454
+    .line 495
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPlaylistAsyncTask:Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
     const/4 p2, 0x1
@@ -1329,7 +1476,7 @@
 
     invoke-virtual {p1, p2}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    :cond_0
+    :cond_4
     return-void
 .end method
 
@@ -1346,25 +1493,25 @@
         }
     .end annotation
 
-    .line 200
+    .line 209
     iget-boolean v0, p0, Lcom/sonyericsson/music/library/LibraryBaseFragment;->mViewDestroyed:Z
 
     if-nez v0, :cond_4
 
     if-eqz p2, :cond_0
 
-    .line 201
+    .line 210
     invoke-interface {p2}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 202
+    .line 211
     :cond_0
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/LibraryListFragment;->showNoContentHeaderView()V
 
-    .line 204
+    .line 213
     :cond_1
     iget v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMode:I
 
@@ -1372,23 +1519,23 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 205
+    .line 214
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/LibraryListFragment;->removeNoContentHeaderView()V
 
-    .line 206
+    .line 215
     invoke-direct {p0}, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->getAddTrackView()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/sonyericsson/music/library/LibraryListFragment;->addHeader(Landroid/view/View;)Z
 
-    .line 208
+    .line 217
     :cond_2
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mMarkedItems:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_3
 
-    .line 209
+    .line 218
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/library/LibraryListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
@@ -1401,7 +1548,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/library/PlaylistOperationAdapter;->setMarkedItems(Ljava/util/ArrayList;)V
 
-    .line 211
+    .line 220
     :cond_3
     invoke-super {p0, p1, p2}, Lcom/sonyericsson/music/library/LibraryListFragment;->onLoadFinished(Landroidx/loader/content/Loader;Landroid/database/Cursor;)V
 
@@ -1412,7 +1559,7 @@
 .method public bridge synthetic onLoadFinished(Landroidx/loader/content/Loader;Ljava/lang/Object;)V
     .locals 0
 
-    .line 57
+    .line 58
     check-cast p2, Landroid/database/Cursor;
 
     invoke-virtual {p0, p1, p2}, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->onLoadFinished(Landroidx/loader/content/Loader;Landroid/database/Cursor;)V
@@ -1423,7 +1570,7 @@
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 2
 
-    .line 266
+    .line 275
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
@@ -1432,14 +1579,14 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 271
+    .line 280
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result p1
 
     return p1
 
-    .line 268
+    .line 277
     :cond_0
     invoke-direct {p0}, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->savePlaylist()V
 
@@ -1451,10 +1598,10 @@
 .method public onPause()V
     .locals 1
 
-    .line 391
+    .line 408
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
-    .line 392
+    .line 409
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -1463,7 +1610,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 394
+    .line 411
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->unlockDrawer()V
 
     :cond_0
@@ -1473,17 +1620,17 @@
 .method public onPrepareOptionsMenu(Landroid/view/Menu;)V
     .locals 1
 
-    .line 258
+    .line 267
     invoke-super {p0, p1}, Lcom/sonyericsson/music/library/BaseFragment;->onPrepareOptionsMenu(Landroid/view/Menu;)V
 
-    .line 259
+    .line 268
     iget-boolean v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mIsProgressLoadingShown:Z
 
     if-eqz v0, :cond_0
 
     const v0, 0x7f09011d
 
-    .line 260
+    .line 269
     invoke-interface {p1, v0}, Landroid/view/Menu;->removeItem(I)V
 
     :cond_0
@@ -1493,10 +1640,10 @@
 .method public onResume()V
     .locals 1
 
-    .line 382
+    .line 399
     invoke-super {p0}, Lcom/sonyericsson/music/library/BaseFragment;->onResume()V
 
-    .line 383
+    .line 400
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -1505,7 +1652,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 385
+    .line 402
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->closeAndLockDrawer()V
 
     :cond_0
@@ -1515,15 +1662,15 @@
 .method public onStart()V
     .locals 1
 
-    .line 374
+    .line 391
     invoke-super {p0}, Lcom/sonyericsson/music/library/LibraryBaseFragment;->onStart()V
 
-    .line 375
+    .line 392
     iget-boolean v0, p0, Lcom/sonyericsson/music/library/PlaylistOperationFragment;->mPendingClose:Z
 
     if-eqz v0, :cond_0
 
-    .line 376
+    .line 393
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0

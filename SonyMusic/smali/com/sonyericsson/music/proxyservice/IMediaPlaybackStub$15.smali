@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;IZ)V
     .locals 0
 
-    .line 415
+    .line 416
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$15;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     iput p2, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$15;->val$index:I
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 3
 
-    .line 418
+    .line 419
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$15;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->access$000(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;)Lcom/sonyericsson/music/proxyservice/MediaPlayback;
@@ -55,7 +55,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 419
+    .line 420
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$15;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->access$000(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;)Lcom/sonyericsson/music/proxyservice/MediaPlayback;

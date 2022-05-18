@@ -26,16 +26,16 @@
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 407
+    .line 411
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 408
+    .line 412
     iput p1, p0, Lcom/sonyericsson/music/library/BaseFragment$MatcherData;->mId:I
 
-    .line 409
+    .line 413
     iput-object p2, p0, Lcom/sonyericsson/music/library/BaseFragment$MatcherData;->mPath:Ljava/lang/String;
 
-    .line 410
+    .line 414
     iput-object p3, p0, Lcom/sonyericsson/music/library/BaseFragment$MatcherData;->mAuthority:Ljava/lang/String;
 
     return-void

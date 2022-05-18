@@ -769,9 +769,9 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
+    invoke-virtual {p1, v1}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
     .line 223
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
@@ -782,9 +782,9 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
+    invoke-virtual {p1, v1}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
     const-string v0, "If-None-Match"
 
@@ -930,7 +930,7 @@
 
     move-result-object p3
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -989,19 +989,25 @@
 
     throw p3
     :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     :catchall_0
     move-exception p2
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_1
     move-exception p2
 
+    goto :goto_0
+
+    :catch_2
+    move-exception p2
+
     .line 197
+    :goto_0
     :try_start_3
     new-instance p3, Lcom/google/firebase/remoteconfig/FirebaseRemoteConfigClientException;
 
@@ -1014,7 +1020,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 200
-    :goto_0
+    :goto_1
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     .line 203
@@ -1025,9 +1031,9 @@
 
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
     .line 206
-    :catch_2
+    :catch_3
     throw p2
 .end method

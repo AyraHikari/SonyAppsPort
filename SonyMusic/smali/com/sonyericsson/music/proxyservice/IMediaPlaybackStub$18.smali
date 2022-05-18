@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;Ljava/util/List;)V
     .locals 0
 
-    .line 483
+    .line 484
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$18;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     iput-object p2, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$18;->val$tracks:Ljava/util/List;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 486
+    .line 487
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$18;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->access$000(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;)Lcom/sonyericsson/music/proxyservice/MediaPlayback;
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 487
+    .line 488
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub$18;->this$0:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->access$000(Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;)Lcom/sonyericsson/music/proxyservice/MediaPlayback;

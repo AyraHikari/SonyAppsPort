@@ -547,6 +547,10 @@
 
     .line 118
     :goto_0
+    sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
+
+    if-eqz v0, :cond_0
+
     invoke-static {p0}, Lcom/sonyericsson/music/common/PermissionUtils;->isDataTrafficWarningRequired(Landroid/content/Context;)Z
 
     move-result v0

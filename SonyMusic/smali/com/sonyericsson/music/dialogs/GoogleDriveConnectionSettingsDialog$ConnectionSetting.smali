@@ -47,7 +47,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f1001ef
+    const v3, 0x7f1001f1
 
     invoke-direct {v0, v1, v2, v2, v3}, Lcom/sonyericsson/music/dialogs/GoogleDriveConnectionSettingsDialog$ConnectionSetting;-><init>(Ljava/lang/String;III)V
 
@@ -60,7 +60,7 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f1001ee
+    const v4, 0x7f1001f0
 
     invoke-direct {v0, v1, v3, v3, v4}, Lcom/sonyericsson/music/dialogs/GoogleDriveConnectionSettingsDialog$ConnectionSetting;-><init>(Ljava/lang/String;III)V
 

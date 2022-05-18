@@ -58,7 +58,7 @@
 
 .field public static final USER_CREATED_PLAYLIST_DATA_PATH:Ljava/lang/String;
 
-.field public static final USER_CREATED_PLAYLIST_DATA_PATH_FROM_Q:Ljava/lang/String;
+.field public static final USER_CREATED_PLAYLIST_DATA_PATH_FROM_R:Ljava/lang/String;
 
 
 # direct methods
@@ -99,7 +99,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "/"
+    const-string v1, "/Music/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -107,7 +107,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/sonyericsson/music/Constants;->USER_CREATED_PLAYLIST_DATA_PATH_FROM_Q:Ljava/lang/String;
+    sput-object v0, Lcom/sonyericsson/music/Constants;->USER_CREATED_PLAYLIST_DATA_PATH_FROM_R:Ljava/lang/String;
 
     return-void
 .end method

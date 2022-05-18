@@ -153,25 +153,25 @@
 
     move-result-wide v1
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
     .line 79
-    iget-object v2, p0, Lokio/Okio$1;->val$out:Ljava/io/OutputStream;
+    iget-object v1, p0, Lokio/Okio$1;->val$out:Ljava/io/OutputStream;
 
     iget-object v3, v0, Lokio/Segment;->data:[B
 
     iget v4, v0, Lokio/Segment;->pos:I
 
-    invoke-virtual {v2, v3, v4, v1}, Ljava/io/OutputStream;->write([BII)V
+    invoke-virtual {v1, v3, v4, v2}, Ljava/io/OutputStream;->write([BII)V
 
     .line 81
-    iget v2, v0, Lokio/Segment;->pos:I
+    iget v1, v0, Lokio/Segment;->pos:I
 
-    add-int/2addr v2, v1
+    add-int/2addr v1, v2
 
-    iput v2, v0, Lokio/Segment;->pos:I
+    iput v1, v0, Lokio/Segment;->pos:I
 
-    int-to-long v1, v1
+    int-to-long v1, v2
 
     sub-long/2addr p2, v1
 

@@ -841,10 +841,10 @@
 
     move-result p1
     :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
     return p1
@@ -852,6 +852,17 @@
     :catch_0
     move-exception p1
 
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_2
+    move-exception p1
+
+    :goto_0
     const-string v0, "unable to determine cleartext support"
 
     .line 178
@@ -862,7 +873,7 @@
     throw p1
 
     .line 176
-    :catch_1
+    :catch_3
     invoke-super {p0, p1}, Lokhttp3/internal/platform/Platform;->isCleartextTrafficPermitted(Ljava/lang/String;)Z
 
     move-result p1

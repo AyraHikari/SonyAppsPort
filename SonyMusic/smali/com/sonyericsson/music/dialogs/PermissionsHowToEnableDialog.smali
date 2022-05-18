@@ -256,7 +256,7 @@
 
     aput-object v4, v3, v5
 
-    const v4, 0x7f1001b4
+    const v4, 0x7f1001b6
 
     .line 63
     invoke-virtual {p0, v4, v3}, Landroidx/fragment/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -321,7 +321,7 @@
 
     iput-boolean p1, p0, Lcom/sonyericsson/music/dialogs/PermissionsHowToEnableDialog;->mFinishWhenCancel:Z
 
-    const p1, 0x7f1001b6
+    const p1, 0x7f1001b8
 
     .line 77
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;

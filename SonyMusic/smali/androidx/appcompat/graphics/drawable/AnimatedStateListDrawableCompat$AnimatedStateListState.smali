@@ -257,9 +257,9 @@
 
     move-result-wide p1
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    return p1
+    return p2
 .end method
 
 .method isTransitionReversed(II)Z

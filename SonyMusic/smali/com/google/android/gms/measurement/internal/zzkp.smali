@@ -6828,9 +6828,9 @@
 
     move-result-wide v6
 
-    long-to-int v6, v6
+    long-to-int v7, v6
 
-    invoke-virtual {v2, v6}, Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;->zzg(I)Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;
+    invoke-virtual {v2, v7}, Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;->zzg(I)Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;
 
     .line 1730
     invoke-virtual {v2}, Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;->zzf()J
@@ -11070,9 +11070,9 @@
     .line 695
     iget-wide v6, v3, Lcom/google/android/gms/measurement/internal/zzn;->zzj:J
 
-    long-to-int v6, v6
+    long-to-int v7, v6
 
-    invoke-virtual {v2, v6}, Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;->zzh(I)Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;
+    invoke-virtual {v2, v7}, Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;->zzh(I)Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;
 
     .line 696
     :cond_2a
@@ -11597,9 +11597,9 @@
 
     move-result-wide v10
 
-    long-to-int v10, v10
+    long-to-int v11, v10
 
-    invoke-virtual {v7, v10}, Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;->zzf(I)Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;
+    invoke-virtual {v7, v11}, Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;->zzf(I)Lcom/google/android/gms/internal/measurement/zzcd$zzg$zza;
 
     move-result-object v7
 
@@ -19109,8 +19109,8 @@
 
     check-cast v0, Ljava/lang/String;
     :try_end_0
-    .catch Ljava/util/concurrent/TimeoutException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/util/concurrent/TimeoutException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object v0
@@ -19118,7 +19118,18 @@
     :catch_0
     move-exception v0
 
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v0
+
     .line 3166
+    :goto_0
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzkp;->zzk:Lcom/google/android/gms/measurement/internal/zzgb;
 
     invoke-virtual {v1}, Lcom/google/android/gms/measurement/internal/zzgb;->zzq()Lcom/google/android/gms/measurement/internal/zzex;

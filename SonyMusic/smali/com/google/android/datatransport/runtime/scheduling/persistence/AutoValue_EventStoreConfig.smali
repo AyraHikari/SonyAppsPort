@@ -197,27 +197,27 @@
 
     xor-long/2addr v0, v3
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    const v1, 0xf4243
+    const v0, 0xf4243
 
-    xor-int/2addr v0, v1
+    xor-int/2addr v1, v0
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 89
     iget v3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig;->loadBatchSize:I
 
-    xor-int/2addr v0, v3
+    xor-int/2addr v1, v3
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 91
     iget v3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig;->criticalSectionEnterTimeoutMs:I
 
-    xor-int/2addr v0, v3
+    xor-int/2addr v1, v3
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 93
     iget-wide v3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig;->eventCleanUpAge:J
@@ -228,12 +228,12 @@
 
     long-to-int v2, v3
 
-    xor-int/2addr v0, v2
+    xor-int/2addr v1, v2
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 95
-    iget v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig;->maxBlobByteSizePerRow:I
+    iget v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig;->maxBlobByteSizePerRow:I
 
     xor-int/2addr v0, v1
 

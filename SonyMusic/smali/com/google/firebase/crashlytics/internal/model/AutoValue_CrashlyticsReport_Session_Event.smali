@@ -222,13 +222,13 @@
 
     xor-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    const v1, 0xf4243
+    const v0, 0xf4243
 
-    xor-int/2addr v0, v1
+    xor-int/2addr v1, v0
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 96
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event;->type:Ljava/lang/String;
@@ -237,9 +237,9 @@
 
     move-result v2
 
-    xor-int/2addr v0, v2
+    xor-int/2addr v1, v2
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 98
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event;->app:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Application;
@@ -248,9 +248,9 @@
 
     move-result v2
 
-    xor-int/2addr v0, v2
+    xor-int/2addr v1, v2
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 100
     iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event;->device:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Device;
@@ -259,23 +259,23 @@
 
     move-result v2
 
-    xor-int/2addr v0, v2
+    xor-int/2addr v1, v2
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 102
-    iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event;->log:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Log;
+    iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/model/AutoValue_CrashlyticsReport_Session_Event;->log:Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Session$Event$Log;
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result v0
 
     :goto_0
     xor-int/2addr v0, v1

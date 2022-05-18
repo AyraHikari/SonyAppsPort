@@ -1648,17 +1648,17 @@
     throw v0
 
     :pswitch_0
-    const p1, 0x7f100279
+    const p1, 0x7f10027b
 
     return p1
 
     :pswitch_1
-    const p1, 0x7f100277
+    const p1, 0x7f100279
 
     return p1
 
     :pswitch_2
-    const p1, 0x7f100278
+    const p1, 0x7f10027a
 
     return p1
 
@@ -2690,12 +2690,12 @@
 
     if-eqz p1, :cond_1
 
-    const p1, 0x7f100292
+    const p1, 0x7f100294
 
     goto :goto_0
 
     :cond_1
-    const p1, 0x7f100291
+    const p1, 0x7f100293
 
     .line 1019
     :goto_0

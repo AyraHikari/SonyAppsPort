@@ -40,7 +40,7 @@
 
     aput-object v5, v4, v6
 
-    const-string v5, "Unknown Album"
+    const-string v5, "Unknown album"
 
     const/4 v7, 0x2
 
@@ -131,7 +131,7 @@
 
     aput-object v2, v1, v6
 
-    const-string v2, "Unknown Album"
+    const-string v2, "Unknown album"
 
     aput-object v2, v1, v7
 
@@ -165,7 +165,7 @@
 .method public static getColumns(Landroid/content/Context;)[Ljava/lang/String;
     .locals 2
 
-    const v0, 0x7f10018e
+    const v0, 0x7f100190
 
     .line 69
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -222,7 +222,7 @@
 .method public static getSortOrder(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    const v0, 0x7f10018e
+    const v0, 0x7f100190
 
     .line 90
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

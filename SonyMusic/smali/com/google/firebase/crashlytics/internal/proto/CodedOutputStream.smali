@@ -1122,10 +1122,10 @@
 
     if-nez v4, :cond_0
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
     .line 795
-    invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/proto/CodedOutputStream;->writeRawByte(I)V
+    invoke-virtual {p0, p2}, Lcom/google/firebase/crashlytics/internal/proto/CodedOutputStream;->writeRawByte(I)V
 
     return-void
 

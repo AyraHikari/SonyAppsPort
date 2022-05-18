@@ -474,11 +474,11 @@
 
     const-wide/16 v15, -0x1
 
-    long-to-int v6, v6
+    long-to-int v7, v6
 
     move-object v10, v1
 
-    move/from16 v18, v6
+    move/from16 v18, v7
 
     invoke-direct/range {v10 .. v18}, Lcom/sonyericsson/music/common/MenuUtils$PlaylistData;-><init>(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;JLjava/lang/String;I)V
 
@@ -686,51 +686,49 @@
     :pswitch_4
     invoke-virtual/range {p2 .. p2}, Lcom/sonyericsson/music/landingpage/LandingPageItemData;->getContainerId()J
 
-    move-result-wide v1
+    move-result-wide v11
 
     .line 207
     invoke-virtual/range {p2 .. p2}, Lcom/sonyericsson/music/landingpage/LandingPageItemData;->getContainerTitle()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v13
 
     .line 208
     invoke-virtual/range {p2 .. p2}, Lcom/sonyericsson/music/landingpage/LandingPageItemData;->getContainerData()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v14
 
     .line 209
     invoke-virtual/range {p2 .. p2}, Lcom/sonyericsson/music/landingpage/LandingPageItemData;->getContainerArtUri()Landroid/net/Uri;
 
-    move-result-object v8
+    move-result-object v15
 
     .line 210
-    new-instance v10, Lcom/sonyericsson/music/common/MenuUtils$FolderData;
+    new-instance v1, Lcom/sonyericsson/music/common/MenuUtils$FolderData;
 
-    long-to-int v1, v1
+    move-object v10, v1
 
-    invoke-direct {v10, v1, v6, v7, v8}, Lcom/sonyericsson/music/common/MenuUtils$FolderData;-><init>(ILjava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct/range {v10 .. v15}, Lcom/sonyericsson/music/common/MenuUtils$FolderData;-><init>(JLjava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 213
-    iget-object v1, v0, Lcom/sonyericsson/music/landingpage/LandingPageCategory;->mMusicActivity:Lcom/sonyericsson/music/MusicActivity;
+    iget-object v2, v0, Lcom/sonyericsson/music/landingpage/LandingPageCategory;->mMusicActivity:Lcom/sonyericsson/music/MusicActivity;
 
-    invoke-static {v1, v10}, Lcom/sonyericsson/music/common/MenuUtils;->getFolderMenuBuilder(Lcom/sonyericsson/music/MusicActivity;Lcom/sonyericsson/music/common/MenuUtils$FolderData;)Lcom/sonyericsson/music/common/ContextMenuBuilder;
+    invoke-static {v2, v1}, Lcom/sonyericsson/music/common/MenuUtils;->getFolderMenuBuilder(Lcom/sonyericsson/music/MusicActivity;Lcom/sonyericsson/music/common/MenuUtils$FolderData;)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
     .line 214
-    invoke-virtual {v1, v4}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setOpenOption(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
+    invoke-virtual {v2, v4}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setOpenOption(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
-    move-object v2, v1
+    move-object v4, v1
 
     move-object v6, v5
 
     move-object v7, v6
 
     move-object v8, v7
-
-    move-object v4, v10
 
     :goto_2
     if-eqz v2, :cond_2
@@ -754,6 +752,8 @@
 
     :cond_2
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1
@@ -814,7 +814,7 @@
     .line 62
     iget-object v0, p0, Lcom/sonyericsson/music/landingpage/LandingPageCategory;->mMusicActivity:Lcom/sonyericsson/music/MusicActivity;
 
-    const v1, 0x7f10016e
+    const v1, 0x7f100170
 
     .line 63
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;

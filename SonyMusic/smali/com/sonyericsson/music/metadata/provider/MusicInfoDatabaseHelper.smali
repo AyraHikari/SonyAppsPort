@@ -6,7 +6,7 @@
 # static fields
 .field private static final DATABASE_NAME:Ljava/lang/String; = "music_info.db"
 
-.field private static final DATABASE_VERSION:I = 0x11
+.field private static final DATABASE_VERSION:I = 0x13
 
 .field static final TABLE_ALBUMS:Ljava/lang/String; = "albums"
 
@@ -36,6 +36,10 @@
 
 .field static final TABLE_SENSME:Ljava/lang/String; = "sensme"
 
+.field static final TABLE_SMART_PLAYLISTS:Ljava/lang/String; = "smart_playlists"
+
+.field static final TABLE_SMART_PLAYLISTS_TRACK:Ljava/lang/String; = "smart_playlists_map"
+
 .field static final TABLE_TRACKS:Ljava/lang/String; = "tracks"
 
 .field private static final TABLE_UPDATE_AS_YOU_PLAY_STATISTICS:Ljava/lang/String; = "uayp_stats"
@@ -49,9 +53,9 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x11
+    const/16 v2, 0x13
 
-    .line 63
+    .line 67
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
     return-void
@@ -76,7 +80,7 @@
 
     move-object v0, p1
 
-    .line 420
+    .line 450
     :try_start_0
     invoke-static/range {v0 .. v5}, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderCloudAccount;->query(Landroid/database/sqlite/SQLiteDatabase;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -86,7 +90,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 421
+    .line 451
     :try_start_1
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -96,14 +100,14 @@
 
     const-string v1, "_id"
 
-    .line 422
+    .line 452
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
 
     const-string v2, "name"
 
-    .line 423
+    .line 453
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -112,7 +116,7 @@
 
     const/4 v3, 0x0
 
-    .line 425
+    .line 455
     :cond_0
     :try_start_2
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -121,24 +125,24 @@
 
     if-eqz v4, :cond_2
 
-    .line 430
+    .line 460
     new-instance v5, Landroid/content/ContentValues;
 
     invoke-direct {v5}, Landroid/content/ContentValues;-><init>()V
 
     const-string v8, "name"
 
-    .line 431
+    .line 461
     invoke-virtual {v5, v8, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v4, "_id = ?"
 
     const/4 v8, 0x1
 
-    .line 433
+    .line 463
     new-array v9, v8, [Ljava/lang/String;
 
-    .line 435
+    .line 465
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v10
@@ -149,7 +153,7 @@
 
     aput-object v10, v9, v6
 
-    .line 433
+    .line 463
     invoke-static {p1, v5, v4, v9}, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderCloudAccount;->update(Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v3
@@ -164,7 +168,7 @@
     :goto_0
     move v3, v8
 
-    .line 438
+    .line 468
     :cond_2
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -195,13 +199,13 @@
     :goto_1
     if-eqz v3, :cond_5
 
-    .line 444
+    .line 474
     invoke-static {p1, v7, v7}, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderCloudAccount;->delete(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[Ljava/lang/String;)I
 
     :cond_5
     if-eqz v0, :cond_6
 
-    .line 448
+    .line 478
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     :cond_6
@@ -218,16 +222,16 @@
     :goto_3
     if-eqz v3, :cond_7
 
-    .line 444
+    .line 474
     invoke-static {p1, v7, v7}, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderCloudAccount;->delete(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[Ljava/lang/String;)I
 
     :cond_7
     if-eqz v0, :cond_8
 
-    .line 448
+    .line 478
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 450
+    .line 480
     :cond_8
     throw v1
 
@@ -239,12 +243,12 @@
 .method public onConfigure(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 1
 
-    .line 82
+    .line 86
     invoke-super {p0, p1}, Landroid/database/sqlite/SQLiteOpenHelper;->onConfigure(Landroid/database/sqlite/SQLiteDatabase;)V
 
     const/4 v0, 0x1
 
-    .line 84
+    .line 88
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->setForeignKeyConstraintsEnabled(Z)V
 
     return-void
@@ -255,9 +259,9 @@
 
     const/4 v0, 0x0
 
-    const/16 v1, 0x11
+    const/16 v1, 0x13
 
-    .line 68
+    .line 72
     invoke-virtual {p0, p1, v0, v1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoDatabaseHelper;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
 
     return-void
@@ -266,12 +270,12 @@
 .method public onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 0
 
-    .line 73
+    .line 77
     sget-object p2, Lcom/sonyericsson/music/common/Debug;->DEBUG:Lcom/sonyericsson/music/common/Debug;
 
     const/4 p2, 0x0
 
-    .line 77
+    .line 81
     invoke-virtual {p0, p1, p2, p3}, Lcom/sonyericsson/music/metadata/provider/MusicInfoDatabaseHelper;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
 
     return-void
@@ -280,12 +284,12 @@
 .method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 2
 
-    .line 89
+    .line 93
     sget-object v0, Lcom/sonyericsson/music/common/Debug;->DEBUG:Lcom/sonyericsson/music/common/Debug;
 
-    const/16 v0, 0x11
+    const/16 v0, 0x13
 
-    if-ne p3, v0, :cond_11
+    if-ne p3, v0, :cond_13
 
     const/4 p3, 0x1
 
@@ -293,7 +297,7 @@
 
     const-string p3, "DROP TABLE IF EXISTS uayp_stats"
 
-    .line 100
+    .line 104
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_0
@@ -303,32 +307,32 @@
 
     const-string p3, "DROP TABLE IF EXISTS artists"
 
-    .line 104
+    .line 108
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "DROP TABLE IF EXISTS sensme"
 
-    .line 105
+    .line 109
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "DROP TABLE IF EXISTS albums"
 
-    .line 106
+    .line 110
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE artists (_id INTEGER PRIMARY KEY AUTOINCREMENT, artist TEXT, art_path TEXT);"
 
-    .line 108
+    .line 112
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE sensme (_id INTEGER PRIMARY KEY AUTOINCREMENT, audio_id INTEGER NOT NULL, sensme_channel INTEGER, available INTEGER DEFAULT 1, UNIQUE (audio_id, sensme_channel));"
 
-    .line 113
+    .line 117
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE albums (_id INTEGER PRIMARY KEY AUTOINCREMENT, artist TEXT, album TEXT, art_path TEXT);"
 
-    .line 121
+    .line 125
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_1
@@ -338,27 +342,27 @@
 
     const-string p3, "DROP TABLE IF EXISTS artists"
 
-    .line 129
+    .line 133
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE artists (_id INTEGER PRIMARY KEY AUTOINCREMENT, artist TEXT NOT NULL UNIQUE, art_path TEXT);"
 
-    .line 130
+    .line 134
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "DROP TABLE IF EXISTS albums"
 
-    .line 135
+    .line 139
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE albums (_id INTEGER PRIMARY KEY AUTOINCREMENT, artist TEXT, album TEXT, art_path TEXT, UNIQUE (artist, album));"
 
-    .line 136
+    .line 140
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "DROP TABLE IF EXISTS uayp_stats"
 
-    .line 144
+    .line 148
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_2
@@ -368,12 +372,12 @@
 
     const-string p3, "DROP TABLE IF EXISTS tracks"
 
-    .line 148
+    .line 152
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE tracks (_id INTEGER PRIMARY KEY AUTOINCREMENT, track_id INTEGER UNIQUE);"
 
-    .line 150
+    .line 154
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_3
@@ -383,12 +387,12 @@
 
     const-string p3, "ALTER TABLE artists ADD COLUMN art_source TEXT"
 
-    .line 156
+    .line 160
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "ALTER TABLE albums ADD COLUMN art_source TEXT"
 
-    .line 158
+    .line 162
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_4
@@ -398,12 +402,12 @@
 
     const-string p3, "DROP TABLE IF EXISTS playlists"
 
-    .line 163
+    .line 167
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE playlists (_id INTEGER PRIMARY KEY NOT NULL UNIQUE, name TEXT NOT NULL, path TEXT NOT NULL UNIQUE, mediastore_id INTEGER NOT NULL UNIQUE, date_created INTEGER DEFAULT 0, date_updated INTEGER DEFAULT 0, date_played INTEGER DEFAULT 0, is_deleted INTEGER DEFAULT 0, smart_playlist_type INTEGER DEFAULT 0, is_hidden INTEGER DEFAULT 0, play_count INTEGER DEFAULT 0, sort_order INTEGER DEFAULT 0,is_available INTEGER DEFAULT 1);"
 
-    .line 166
+    .line 170
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_5
@@ -413,7 +417,7 @@
 
     const-string p3, "ALTER TABLE playlists ADD COLUMN members_count INTEGER DEFAULT 0"
 
-    .line 196
+    .line 200
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_6
@@ -423,22 +427,22 @@
 
     const-string p3, "DROP TABLE IF EXISTS cloud_account"
 
-    .line 201
+    .line 205
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE cloud_account (_id INTEGER PRIMARY KEY AUTOINCREMENT, service_id INTEGER, name TEXT NOT NULL, state INTEGER DEFAULT 0,sync_state INTEGER DEFAULT 0,last_sync_date LONG DEFAULT 0)"
 
-    .line 203
+    .line 207
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "DROP TABLE IF EXISTS cloud_files"
 
-    .line 213
+    .line 217
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE cloud_files (_id INTEGER PRIMARY KEY AUTOINCREMENT, file_name TEXT NOT NULL, file_id TEXT NOT NULL, mime_type TEXT NOT NULL, parents TEXT NOT NULL, download_state INTEGER DEFAULT 0,file_path TEXT, title TEXT DEFAULT NULL, artist TEXT DEFAULT NULL, album TEXT DEFAULT NULL, duration INTEGER DEFAULT 0, has_metadata INTEGER DEFAULT 0,art_path TEXT DEFAULT NULL, account_id INTEGER, FOREIGN KEY(account_id) REFERENCES cloud_account(_id) ON DELETE CASCADE);"
 
-    .line 215
+    .line 219
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_7
@@ -448,12 +452,12 @@
 
     const-string p3, "DROP TABLE IF EXISTS high_res_media"
 
-    .line 238
+    .line 242
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE high_res_media (_id INTEGER PRIMARY KEY AUTOINCREMENT, source INTEGER NOT NULL, type INTEGER NOT NULL, source_id TEXT NOT NULL, path TEXT, date_added INTEGER, is_high_res INTEGER DEFAULT 0, UNIQUE (source, type, source_id) ON CONFLICT REPLACE);"
 
-    .line 240
+    .line 244
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_8
@@ -463,17 +467,17 @@
 
     const-string p3, "DROP TABLE IF EXISTS high_res_media"
 
-    .line 263
+    .line 267
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE high_res_media (_id INTEGER PRIMARY KEY AUTOINCREMENT, source INTEGER NOT NULL, type INTEGER NOT NULL, source_id TEXT NOT NULL, path TEXT, date_added INTEGER, is_high_res INTEGER DEFAULT 0, UNIQUE (source, type, source_id) ON CONFLICT REPLACE);"
 
-    .line 265
+    .line 269
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "ALTER TABLE cloud_files ADD COLUMN retry_count INTEGER DEFAULT 0"
 
-    .line 278
+    .line 282
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_9
@@ -483,7 +487,7 @@
 
     const-string p3, "ALTER TABLE high_res_media ADD COLUMN is_available INTEGER DEFAULT 1"
 
-    .line 283
+    .line 287
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_a
@@ -493,12 +497,12 @@
 
     const-string p3, "DROP TABLE IF EXISTS high_res_media"
 
-    .line 299
+    .line 303
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE high_res_media (_id INTEGER PRIMARY KEY AUTOINCREMENT, source INTEGER NOT NULL, type INTEGER NOT NULL, source_id TEXT NOT NULL, path TEXT, date_added INTEGER, is_high_res INTEGER DEFAULT 0, is_available INTEGER DEFAULT 1, UNIQUE (source, type, source_id) ON CONFLICT REPLACE);"
 
-    .line 301
+    .line 305
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_b
@@ -508,7 +512,7 @@
 
     const-string p3, "DROP TABLE IF EXISTS sensme"
 
-    .line 317
+    .line 321
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_c
@@ -518,12 +522,12 @@
 
     const-string p3, "DROP TABLE IF EXISTS search_history"
 
-    .line 321
+    .line 325
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string p3, "CREATE TABLE search_history (_id INTEGER PRIMARY KEY AUTOINCREMENT, content_id TEXT NOT NULL, type INTEGER NOT NULL, source INTEGER NOT NULL, track TEXT NOT NULL, artist TEXT NOT NULL, album TEXT NOT NULL, date_updated INTEGER NOT NULL, UNIQUE (content_id, source, type) ON CONFLICT REPLACE);"
 
-    .line 322
+    .line 326
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_d
@@ -531,7 +535,7 @@
 
     if-ge p2, p3, :cond_e
 
-    .line 339
+    .line 343
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoDatabaseHelper;->replaceAccountNames(Landroid/database/sqlite/SQLiteDatabase;)V
 
     :cond_e
@@ -541,67 +545,112 @@
 
     const-string p3, "DROP TABLE IF EXISTS uayp_stats"
 
-    .line 343
+    .line 347
     invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_f
-    if-ge p2, v0, :cond_10
+    const/16 p3, 0x11
 
-    const-string p2, "DROP TABLE IF EXISTS audio"
+    if-ge p2, p3, :cond_10
 
-    .line 347
-    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    const-string p2, "DROP TABLE IF EXISTS audio_tag"
-
-    .line 348
-    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    const-string p2, "DROP TABLE IF EXISTS audio_albums"
-
-    .line 349
-    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    const-string p2, "DROP TABLE IF EXISTS audio_artists"
-
-    .line 350
-    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    const-string p2, "DROP TABLE IF EXISTS audio_genres"
+    const-string p3, "DROP TABLE IF EXISTS audio"
 
     .line 351
-    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    const-string p2, "CREATE TABLE audio(_id INTEGER NOT NULL UNIQUE,_data TEXT UNIQUE COLLATE NOCASE,_size INTEGER,date_added INTEGER,date_modified INTEGER,mime_type TEXT,title TEXT,_display_name TEXT,datetaken INTEGER,bucket_id TEXT,bucket_display_name TEXT,title_key TEXT,artist_id INTEGER,album_id INTEGER,composer TEXT,track INTEGER,year INTEGER CHECK(year!=0),is_ringtone INTEGER,is_music INTEGER,is_alarm INTEGER,is_notification INTEGER,is_podcast INTEGER,album_artist TEXT,duration INTEGER,bookmark INTEGER,artist TEXT,album TEXT,is_drm INTEGER,title_resource_uri TEXT,owner_package_name TEXT DEFAULT NULL,is_pending INTEGER DEFAULT 0,is_download INTEGER DEFAULT 0,is_audiobook INTEGER DEFAULT 0,date_expires INTEGER DEFAULT NULL,is_trashed INTEGER DEFAULT 0,document_id TEXT DEFAULT NULL,instance_id TEXT DEFAULT NULL,original_document_id TEXT DEFAULT NULL,relative_path TEXT DEFAULT NULL,volume_name TEXT DEFAULT NULL,artist_key TEXT DEFAULT NULL,album_key TEXT DEFAULT NULL,genre TEXT DEFAULT NULL,genre_key TEXT DEFAULT NULL,genre_id INTEGER,author TEXT DEFAULT NULL, bitrate INTEGER DEFAULT NULL,cd_track_number TEXT DEFAULT NULL,compilation INTEGER DEFAULT NULL, disc_number TEXT DEFAULT NULL,is_favorite INTEGER DEFAULT 0, num_tracks INTEGER DEFAULT NULL,writer TEXT DEFAULT NULL,generation_added INTEGER DEFAULT 0,generation_modified INTEGER DEFAULT 0)"
+    const-string p3, "DROP TABLE IF EXISTS audio_tag"
+
+    .line 352
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string p3, "DROP TABLE IF EXISTS audio_albums"
 
     .line 353
-    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    const-string p2, "CREATE TABLE audio_tag (_id  INTEGER PRIMARY KEY AUTOINCREMENT, audio_id INTEGER, volume_name TEXT, relative_path TEXT, _display_name TEXT, title TEXT, artist TEXT, album TEXT, genre TEXT, track INTEGER, year INTEGER  );"
+    const-string p3, "DROP TABLE IF EXISTS audio_artists"
 
-    .line 382
-    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    .line 354
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    const-string p2, "CREATE TABLE audio_albums (_id  INTEGER PRIMARY KEY AUTOINCREMENT, album TEXT, album_key TEXT );"
+    const-string p3, "DROP TABLE IF EXISTS audio_genres"
 
-    .line 396
-    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    .line 355
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    const-string p2, "CREATE TABLE audio_artists (_id  INTEGER PRIMARY KEY AUTOINCREMENT, artist TEXT, artist_key TEXT );"
+    const-string p3, "CREATE TABLE audio(_id INTEGER NOT NULL UNIQUE,_data TEXT UNIQUE COLLATE NOCASE,_size INTEGER,date_added INTEGER,date_modified INTEGER,mime_type TEXT,title TEXT,_display_name TEXT,datetaken INTEGER,bucket_id TEXT,bucket_display_name TEXT,title_key TEXT,artist_id INTEGER,album_id INTEGER,composer TEXT,track INTEGER,year INTEGER CHECK(year!=0),is_ringtone INTEGER,is_music INTEGER,is_alarm INTEGER,is_notification INTEGER,is_podcast INTEGER,album_artist TEXT,duration INTEGER,bookmark INTEGER,artist TEXT,album TEXT,is_drm INTEGER,title_resource_uri TEXT,owner_package_name TEXT DEFAULT NULL,is_pending INTEGER DEFAULT 0,is_download INTEGER DEFAULT 0,is_audiobook INTEGER DEFAULT 0,date_expires INTEGER DEFAULT NULL,is_trashed INTEGER DEFAULT 0,document_id TEXT DEFAULT NULL,instance_id TEXT DEFAULT NULL,original_document_id TEXT DEFAULT NULL,relative_path TEXT DEFAULT NULL,volume_name TEXT DEFAULT NULL,artist_key TEXT DEFAULT NULL,album_key TEXT DEFAULT NULL,genre TEXT DEFAULT NULL,genre_key TEXT DEFAULT NULL,genre_id INTEGER,author TEXT DEFAULT NULL, bitrate INTEGER DEFAULT NULL,cd_track_number TEXT DEFAULT NULL,compilation INTEGER DEFAULT NULL, disc_number TEXT DEFAULT NULL,is_favorite INTEGER DEFAULT 0, num_tracks INTEGER DEFAULT NULL,writer TEXT DEFAULT NULL,generation_added INTEGER DEFAULT 0,generation_modified INTEGER DEFAULT 0)"
 
-    .line 402
-    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    .line 357
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    const-string p2, "CREATE TABLE audio_genres (_id  INTEGER PRIMARY KEY AUTOINCREMENT, genre TEXT, genre_key TEXT );"
+    const-string p3, "CREATE TABLE audio_tag (_id  INTEGER PRIMARY KEY AUTOINCREMENT, audio_id INTEGER, volume_name TEXT, relative_path TEXT, _display_name TEXT, title TEXT, artist TEXT, album TEXT, genre TEXT, track INTEGER, year INTEGER  );"
 
-    .line 408
-    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    .line 386
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string p3, "CREATE TABLE audio_albums (_id  INTEGER PRIMARY KEY AUTOINCREMENT, album TEXT, album_key TEXT );"
+
+    .line 400
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string p3, "CREATE TABLE audio_artists (_id  INTEGER PRIMARY KEY AUTOINCREMENT, artist TEXT, artist_key TEXT );"
+
+    .line 406
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string p3, "CREATE TABLE audio_genres (_id  INTEGER PRIMARY KEY AUTOINCREMENT, genre TEXT, genre_key TEXT );"
+
+    .line 412
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     :cond_10
+    const/16 p3, 0x12
+
+    if-ge p2, p3, :cond_11
+
+    const-string p3, "DROP TABLE IF EXISTS smart_playlists"
+
+    .line 420
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string p3, "DROP VIEW IF EXISTS smart_playlists_map"
+
+    .line 421
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string p3, "CREATE TABLE smart_playlists (play_order  INTEGER PRIMARY KEY AUTOINCREMENT, audio_id INTEGER NOT NULL, playlist_id INTEGER NOT NULL, play_count INTEGER DEFAULT 1 );"
+
+    .line 423
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string p3, "CREATE VIEW smart_playlists_map AS SELECT * FROM audio AS a, smart_playlists AS s WHERE a._id = s.audio_id"
+
+    .line 430
+    invoke-virtual {p1, p3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    :cond_11
+    if-ge p2, v0, :cond_12
+
+    const-string p2, "ALTER TABLE smart_playlists ADD COLUMN volume_name TEXT "
+
+    .line 436
+    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string p2, "ALTER TABLE smart_playlists ADD COLUMN relative_path TEXT "
+
+    .line 438
+    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string p2, "ALTER TABLE smart_playlists ADD COLUMN _display_name TEXT "
+
+    .line 440
+    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    :cond_12
     return-void
 
-    .line 95
-    :cond_11
+    .line 99
+    :cond_13
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance p2, Ljava/lang/StringBuilder;

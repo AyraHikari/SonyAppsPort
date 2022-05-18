@@ -76,7 +76,7 @@
 .method public static getColumns(Landroid/content/Context;)[Ljava/lang/String;
     .locals 2
 
-    const v0, 0x7f10018e
+    const v0, 0x7f100190
 
     .line 44
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

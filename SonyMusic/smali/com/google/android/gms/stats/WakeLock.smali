@@ -341,14 +341,20 @@
 
     invoke-virtual {p2, p1}, Landroid/os/PowerManager$WakeLock;->setWorkSource(Landroid/os/WorkSource;)V
     :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_3
+    goto :goto_4
 
     :catch_0
     move-exception p1
 
+    goto :goto_3
+
+    :catch_1
+    move-exception p1
+
+    :goto_3
     const-string p2, "WakeLock"
 
     .line 41
@@ -360,7 +366,7 @@
 
     .line 42
     :cond_4
-    :goto_3
+    :goto_4
     sget-object p1, Lcom/google/android/gms/stats/WakeLock;->zzn:Ljava/util/concurrent/ScheduledExecutorService;
 
     if-nez p1, :cond_5

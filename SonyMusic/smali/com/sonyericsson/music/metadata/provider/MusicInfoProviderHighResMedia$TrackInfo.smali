@@ -32,25 +32,25 @@
 .method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    .line 575
+    .line 590
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 576
+    .line 591
     iput-object p1, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderHighResMedia$TrackInfo;->id:Ljava/lang/String;
 
-    .line 577
+    .line 592
     iput-object p2, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderHighResMedia$TrackInfo;->title:Ljava/lang/String;
 
-    .line 578
+    .line 593
     iput-object p3, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderHighResMedia$TrackInfo;->albumId:Ljava/lang/String;
 
-    .line 579
+    .line 594
     iput-object p4, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderHighResMedia$TrackInfo;->mimeType:Ljava/lang/String;
 
-    .line 580
+    .line 595
     iput-object p5, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderHighResMedia$TrackInfo;->dataPath:Ljava/lang/String;
 
-    .line 581
+    .line 596
     iput p6, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderHighResMedia$TrackInfo;->dateAdded:I
 
     return-void

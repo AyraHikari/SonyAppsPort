@@ -54,7 +54,7 @@
 
     const/4 v2, 0x0
 
-    const v4, 0x7f1002b6
+    const v4, 0x7f1002b8
 
     const/4 v5, 0x1
 
@@ -75,7 +75,7 @@
 
     const/4 v11, 0x1
 
-    const v13, 0x7f1002b3
+    const v13, 0x7f1002b5
 
     const/4 v14, 0x1
 
@@ -96,7 +96,7 @@
 
     const/4 v3, 0x2
 
-    const v5, 0x7f1002b0
+    const v5, 0x7f1002b2
 
     const/4 v6, 0x1
 
@@ -117,7 +117,7 @@
 
     const/4 v11, 0x3
 
-    const v13, 0x7f1002af
+    const v13, 0x7f1002b1
 
     const-wide/16 v15, 0x2
 
@@ -136,7 +136,7 @@
 
     const/4 v3, 0x4
 
-    const v5, 0x7f1002b7
+    const v5, 0x7f1002b9
 
     const/4 v6, 0x0
 
@@ -157,7 +157,7 @@
 
     const/4 v11, 0x5
 
-    const v13, 0x7f1002b8
+    const v13, 0x7f1002ba
 
     const-wide/16 v15, 0x1
 

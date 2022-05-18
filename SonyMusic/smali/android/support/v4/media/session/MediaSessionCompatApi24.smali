@@ -55,8 +55,8 @@
 
     check-cast p0, Ljava/lang/String;
     :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p0
@@ -64,6 +64,17 @@
     :catch_0
     move-exception p0
 
+    goto :goto_0
+
+    :catch_1
+    move-exception p0
+
+    goto :goto_0
+
+    :catch_2
+    move-exception p0
+
+    :goto_0
     const-string v0, "MediaSessionCompatApi24"
 
     const-string v1, "Cannot execute MediaSession.getCallingPackage()"

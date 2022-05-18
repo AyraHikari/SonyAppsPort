@@ -19,29 +19,29 @@
 
 .field private final mFolderName:Ljava/lang/String;
 
-.field private final mId:I
+.field private final mId:J
 
 .field private final mPathDisplayName:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
     .locals 0
 
     .line 270
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 271
-    iput p1, p0, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->mId:I
+    iput-wide p1, p0, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->mId:J
 
     .line 272
-    iput-object p2, p0, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->mFolderName:Ljava/lang/String;
+    iput-object p3, p0, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->mFolderName:Ljava/lang/String;
 
     .line 273
-    iput-object p3, p0, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->mPathDisplayName:Ljava/lang/String;
+    iput-object p4, p0, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->mPathDisplayName:Ljava/lang/String;
 
     .line 274
-    iput-object p4, p0, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->mFolderArtUri:Landroid/net/Uri;
+    iput-object p5, p0, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->mFolderArtUri:Landroid/net/Uri;
 
     return-void
 .end method
@@ -66,13 +66,13 @@
     return-object v0
 .end method
 
-.method public getId()I
-    .locals 1
+.method public getId()J
+    .locals 2
 
     .line 282
-    iget v0, p0, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->mId:I
+    iget-wide v0, p0, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->mId:J
 
-    return v0
+    return-wide v0
 .end method
 
 .method public getPathDisplayName()Ljava/lang/String;

@@ -353,7 +353,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v1, 0x7f10025f
+    const v1, 0x7f100261
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2066,7 +2066,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f10025f
+    const v1, 0x7f100261
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

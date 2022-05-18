@@ -488,7 +488,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/QuickPlaySelectionActivity;->mSelectedType:Lcom/sonyericsson/music/common/QuickPlayUtils$Type;
 
-    const p2, 0x7f1001c8
+    const p2, 0x7f1001ca
 
     .line 290
     invoke-virtual {p0, p2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -505,7 +505,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/QuickPlaySelectionActivity;->mSelectedType:Lcom/sonyericsson/music/common/QuickPlayUtils$Type;
 
-    const p2, 0x7f1001cd
+    const p2, 0x7f1001cf
 
     .line 298
     invoke-virtual {p0, p2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -522,7 +522,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/QuickPlaySelectionActivity;->mSelectedType:Lcom/sonyericsson/music/common/QuickPlayUtils$Type;
 
-    const p2, 0x7f1001dc
+    const p2, 0x7f1001de
 
     .line 294
     invoke-virtual {p0, p2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -539,7 +539,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/QuickPlaySelectionActivity;->mSelectedType:Lcom/sonyericsson/music/common/QuickPlayUtils$Type;
 
-    const p2, 0x7f1001c9
+    const p2, 0x7f1001cb
 
     .line 286
     invoke-virtual {p0, p2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -1137,7 +1137,7 @@
     goto :goto_1
 
     :cond_5
-    const p1, 0x7f10026d
+    const p1, 0x7f10026f
 
     .line 154
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;

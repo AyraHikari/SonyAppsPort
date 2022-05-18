@@ -25,7 +25,7 @@
 .method constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    .line 565
+    .line 568
     iput-object p1, p0, Lcom/sonyericsson/music/common/AlbumArtUtils$1;->val$fileIds:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
 
     const-string v0, "drive_images"
 
-    .line 568
+    .line 571
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object p1

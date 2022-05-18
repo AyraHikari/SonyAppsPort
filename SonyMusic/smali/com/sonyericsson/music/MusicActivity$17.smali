@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sonyericsson/music/MusicActivity;->clearMUFiles()V
+    value = Lcom/sonyericsson/music/MusicActivity;->showToastOnUiThread(Ljava/lang/String;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,21 @@
 # instance fields
 .field final synthetic this$0:Lcom/sonyericsson/music/MusicActivity;
 
-.field final synthetic val$ctx:Landroid/content/Context;
+.field final synthetic val$duration:I
+
+.field final synthetic val$message:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/sonyericsson/music/MusicActivity;Landroid/content/Context;)V
+.method constructor <init>(Lcom/sonyericsson/music/MusicActivity;Ljava/lang/String;I)V
     .locals 0
 
-    .line 2149
+    .line 1766
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$17;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
-    iput-object p2, p0, Lcom/sonyericsson/music/MusicActivity$17;->val$ctx:Landroid/content/Context;
+    iput-object p2, p0, Lcom/sonyericsson/music/MusicActivity$17;->val$message:Ljava/lang/String;
+
+    iput p3, p0, Lcom/sonyericsson/music/MusicActivity$17;->val$duration:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,21 +44,20 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 3
 
-    .line 2152
-    iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$17;->val$ctx:Landroid/content/Context;
+    .line 1769
+    iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$17;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
-    .line 2153
-    invoke-static {v0}, Lcom/sonyericsson/music/common/MusicUtils;->deleteMUFiles(Landroid/content/Context;)V
+    move-result-object v0
 
-    .line 2154
-    iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$17;->val$ctx:Landroid/content/Context;
+    iget-object v1, p0, Lcom/sonyericsson/music/MusicActivity$17;->val$message:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setMUFilesCleared(Landroid/content/Context;)V
+    iget v2, p0, Lcom/sonyericsson/music/MusicActivity$17;->val$duration:I
 
-    :cond_0
+    invoke-static {v0, v1, v2}, Lcom/sonyericsson/music/common/MusicToast;->show(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
     return-void
 .end method

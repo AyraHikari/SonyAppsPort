@@ -71,8 +71,12 @@
 
     invoke-static {v0, v1, v2}, Lcom/sonyericsson/music/library/BaseFragment;->access$000(Lcom/sonyericsson/music/library/BaseFragment;II)V
 
-    :cond_0
     const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x1
 
     return v0
 .end method

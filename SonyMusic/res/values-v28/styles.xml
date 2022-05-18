@@ -3,9 +3,9 @@
     <style name="Base.Theme.AppCompat" parent="@style/Base.V28.Theme.AppCompat" />
     <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V28.Theme.AppCompat.Light" />
     <style name="Base.V28.Theme.AppCompat" parent="@style/Base.V26.Theme.AppCompat">
-        <item name="dialogCornerRadius">?android:dialogCornerRadius</item>
+        <item name="dialogCornerRadius">@null</item>
     </style>
     <style name="Base.V28.Theme.AppCompat.Light" parent="@style/Base.V26.Theme.AppCompat.Light">
-        <item name="dialogCornerRadius">?android:dialogCornerRadius</item>
+        <item name="dialogCornerRadius">@null</item>
     </style>
 </resources>

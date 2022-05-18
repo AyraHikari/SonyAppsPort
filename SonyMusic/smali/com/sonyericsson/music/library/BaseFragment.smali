@@ -62,26 +62,26 @@
 .method private applyTopPadding(II)V
     .locals 1
 
-    .line 327
+    .line 331
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->isContentFragment()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 328
+    .line 332
     invoke-virtual {p0, p1, p2}, Lcom/sonyericsson/music/library/BaseFragment;->onApplyTopPadding(II)I
 
     move-result p1
 
-    .line 329
+    .line 333
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
-    .line 331
+    .line 335
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->getContainerId()I
 
     move-result v0
@@ -90,12 +90,12 @@
 
     move-result-object p2
 
-    .line 332
+    .line 336
     invoke-static {p2, p1}, Lcom/sonyericsson/music/library/BaseFragment;->setPaddingTop(Landroid/view/View;I)V
 
     goto :goto_0
 
-    .line 337
+    .line 341
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/sonyericsson/music/library/BaseFragment;->onApplyTopPadding(II)I
 
@@ -300,7 +300,7 @@
 .method protected static setPaddingTop(Landroid/view/View;I)V
     .locals 3
 
-    .line 342
+    .line 346
     invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v0
@@ -321,17 +321,17 @@
 .method private setupSystemUI()V
     .locals 2
 
-    .line 432
+    .line 436
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->getSystemUIConfig()Lcom/sonyericsson/music/library/SystemUIConfig;
 
     move-result-object v0
 
-    .line 433
+    .line 437
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
-    .line 434
+    .line 438
     invoke-static {v1, v0}, Lcom/sonyericsson/music/library/SystemUIConfig;->applySystemUiConfig(Landroid/app/Activity;Lcom/sonyericsson/music/library/SystemUIConfig;)V
 
     return-void
@@ -443,7 +443,7 @@
 .method protected getSystemUIConfig()Lcom/sonyericsson/music/library/SystemUIConfig;
     .locals 1
 
-    .line 442
+    .line 446
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -458,7 +458,7 @@
 .method protected getToolbarContentColor()I
     .locals 1
 
-    .line 438
+    .line 442
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -623,7 +623,7 @@
 .method protected onGetToolbarScroller(Lcom/sonyericsson/music/ToolbarControl;)Lcom/sonyericsson/music/ToolbarControl$ToolbarScroller;
     .locals 1
 
-    .line 381
+    .line 385
     new-instance v0, Lcom/sonyericsson/music/ToolbarControl$FixedScroller;
 
     invoke-direct {v0, p1}, Lcom/sonyericsson/music/ToolbarControl$FixedScroller;-><init>(Lcom/sonyericsson/music/ToolbarControl;)V
@@ -794,45 +794,45 @@
 .method public onStart()V
     .locals 2
 
-    .line 361
+    .line 365
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onStart()V
 
-    .line 363
+    .line 367
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->getMusicActivity()Lcom/sonyericsson/music/MusicActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 364
+    .line 368
     invoke-direct {p0}, Lcom/sonyericsson/music/library/BaseFragment;->calculateInitialTopPadding()V
 
-    .line 365
+    .line 369
     invoke-direct {p0}, Lcom/sonyericsson/music/library/BaseFragment;->registerForWindowInsets()V
 
-    .line 366
+    .line 370
     invoke-direct {p0}, Lcom/sonyericsson/music/library/BaseFragment;->registerForToolbarHeight()V
 
-    .line 367
+    .line 371
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->isContentFragment()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 368
+    .line 372
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->getToolbarControl()Lcom/sonyericsson/music/ToolbarControl;
 
     move-result-object v0
 
-    .line 369
+    .line 373
     invoke-virtual {p0, v0}, Lcom/sonyericsson/music/library/BaseFragment;->onGetToolbarScroller(Lcom/sonyericsson/music/ToolbarControl;)Lcom/sonyericsson/music/ToolbarControl$ToolbarScroller;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/ToolbarControl;->setScroller(Lcom/sonyericsson/music/ToolbarControl$ToolbarScroller;)V
 
-    .line 373
+    .line 377
     :cond_0
     invoke-direct {p0}, Lcom/sonyericsson/music/library/BaseFragment;->setupSystemUI()V
 
@@ -842,30 +842,30 @@
 .method public onStop()V
     .locals 1
 
-    .line 386
+    .line 390
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onStop()V
 
-    .line 388
+    .line 392
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->getMusicActivity()Lcom/sonyericsson/music/MusicActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 389
+    .line 393
     invoke-direct {p0}, Lcom/sonyericsson/music/library/BaseFragment;->unregisterForWindowInsets()V
 
-    .line 390
+    .line 394
     invoke-direct {p0}, Lcom/sonyericsson/music/library/BaseFragment;->unregisterForToolbarHeight()V
 
-    .line 391
+    .line 395
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->isContentFragment()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 392
+    .line 396
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/BaseFragment;->getToolbarControl()Lcom/sonyericsson/music/ToolbarControl;
 
     move-result-object v0

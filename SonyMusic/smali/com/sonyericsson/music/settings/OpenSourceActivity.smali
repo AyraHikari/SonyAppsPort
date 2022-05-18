@@ -70,7 +70,7 @@
     .line 46
     invoke-virtual {p1, v0}, Landroidx/appcompat/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    const v0, 0x7f10028e
+    const v0, 0x7f100290
 
     .line 47
     invoke-virtual {p1, v0}, Landroidx/appcompat/app/ActionBar;->setTitle(I)V

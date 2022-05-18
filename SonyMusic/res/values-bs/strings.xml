@@ -279,9 +279,12 @@ Moguće je da aplikacija Muzika bez traženog pristupa neće funkcionirati pravi
     <string name="music_delete_failed_one_or_many">Nije bilo moguće izbrisati neke stavke</string>
     <string name="music_delete_playlist_question">Izbrisati %1$s? Sadržaj liste reprodukcije neće biti izmijenjen.</string>
     <string name="music_delete_question">Izbrisati %1$s iz pohrane?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Aplikacija Muzika će izvršiti skeniranje u pozadini.
+Skeniranje može trajati više od 10 minuta. Pjesme i liste reprodukcije se ne prikazuju i ne reproduciraju ispravno dok se ne završi skeniranje u pozadini."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Da biste koristili SD karticu kao pohranu za podatke, na narednom ekranu dajte dozvolu za pristupanje SD kartici.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Kucnite POKUŠAJ PONOVO kako biste opet probali ili kucnite OTKAŽI kako biste krenuli ispočetka.</string>
     <string name="music_dialog_button_next_txt">Sljedeće</string>
+    <string name="music_dialog_title_bg_scan_notice">Obavještenje</string>
     <string name="music_dialog_title_sd_permission_access_txt">Potrebna je dozvola za pristup SD kartici</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Dozvola za pristup SD kartici nije dodijeljena</string>
     <string name="music_download">Preuzmi</string>
@@ -556,7 +559,7 @@ Pristupanje audio sadržaju na uređaju"</string>
     <string name="personal_data_collection_dialog_title">Lični podaci</string>
     <string name="personal_data_collection_screen_button_negative">NE SADA</string>
     <string name="personal_data_collection_screen_button_positive">PRISTAJEM</string>
-    <string name="personal_data_collection_screen_fine_print">Sony će prikupljati i objedinjavati vaše <a href="entrance://personaldata">lične podatke</a> radi unapređivanja usluge. Sony će s vašim podacima postupati u skladu s našim <a href="http://sonymobile.com/privacy">pravilima privatnosti</a></string>
+    <string name="personal_data_collection_screen_fine_print">Sony će prikupljati i objedinjavati vaše <a href="entrance://personaldata">lične podatke</a> radi unapređivanja usluge. Sony će s vašim podacima postupati u skladu s našim <a href="https://www.sonymobile.com/privacy">pravilima privatnosti</a></string>
     <string name="personal_data_collection_screen_fine_print_us">Sony će prikupljati i objedinjavati vaše <a href="entrance://personaldata">lične podatke</a> radi unapređivanja usluge. Sony će s vašim podacima postupati u skladu s našim <a href="https://www.sonymobile.com/us/legal/privacy">pravilima privatnosti</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Obavještenje o privatnosti za Kaliforniju</a>)</string>
     <string name="personal_data_collection_screen_text">Pomozite nam da aplikaciju Muzika učinimo boljom kroz dijeljenje vaših navika slušanja s kompanijom Sony.</string>
     <string name="play_queue_open">Otvori</string>

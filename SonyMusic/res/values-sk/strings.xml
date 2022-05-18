@@ -279,9 +279,12 @@ Aplikácia Hudba nemusí bez požadovaného prístupu pracovať správne."</stri
     <string name="music_delete_failed_one_or_many">Niektoré položky sa nepodarilo odstrániť</string>
     <string name="music_delete_playlist_question">Odstrániť %1$s? Obsah zoznamu skladieb zostane nezmenený.</string>
     <string name="music_delete_question">Odstrániť %1$s z úložiska?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Aplikácia Hudba bude na pozadí vykonávať vyhľadávanie.
+Toto vyhľadávanie môže trvať viac než 10 minút. Skladby a zoznamy skladieb sa až do skončenia vyhľadávania na pozadí nebudú zobrazovať alebo prehrávať správne."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Ak chcete kartu SD použiť ako priestor na ukladanie dát, na ďalšej obrazovke udeľte povolenie na prístup ku karte SD.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Ak to chcete skúsiť znova, ťuknite na tlačidlo OPAKOVAŤ, alebo ťuknite na tlačidlo ZRUŠIŤ a začnite úplne od začiatku.</string>
     <string name="music_dialog_button_next_txt">Ďalej</string>
+    <string name="music_dialog_title_bg_scan_notice">Upozornenie</string>
     <string name="music_dialog_title_sd_permission_access_txt">Je potrebné povolenie na prístup ku karte SD</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Nebolo udelené povolenie na prístup ku karte SD</string>
     <string name="music_download">Prevziať</string>
@@ -556,7 +559,7 @@ Prístup k zvukovému obsahu v zariadení"</string>
     <string name="personal_data_collection_dialog_title">Osobné údaje</string>
     <string name="personal_data_collection_screen_button_negative">TERAZ NIE</string>
     <string name="personal_data_collection_screen_button_positive">SÚHLASÍM</string>
-    <string name="personal_data_collection_screen_fine_print">Spoločnosť Sony bude zhromažďovať a kombinovať vaše <a href="entrance://personaldata">osobné údaje</a> na účely zlepšovania svojich služieb. Spoločnosť Sony bude vaše údaje používať v súlade s našimi <a href="http://sonymobile.com/privacy">zásadami ochrany osobných údajov</a>.</string>
+    <string name="personal_data_collection_screen_fine_print">Spoločnosť Sony bude zhromažďovať a kombinovať vaše <a href="entrance://personaldata">osobné údaje</a> na účely zlepšovania svojich služieb. Spoločnosť Sony bude vaše údaje používať v súlade s našimi <a href="https://www.sonymobile.com/privacy">zásadami ochrany osobných údajov</a>.</string>
     <string name="personal_data_collection_screen_fine_print_us">Spoločnosť Sony bude zhromažďovať a kombinovať vaše <a href="entrance://personaldata">osobné údaje</a> na účely zlepšovania svojich služieb. Spoločnosť Sony bude vaše údaje používať v súlade s našimi <a href="https://www.sonymobile.com/us/legal/privacy">zásadami ochrany osobných údajov</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Ochrana os. údajov pre Kaliforniu</a>).</string>
     <string name="personal_data_collection_screen_text">Ak sa o svoje návyky pri počúvaní hudby podelíte so spoločnosťou Sony, prispejete k zlepšovaniu aplikácie Hudba.</string>
     <string name="play_queue_open">Otvoriť</string>

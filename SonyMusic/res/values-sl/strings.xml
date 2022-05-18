@@ -279,9 +279,12 @@ Program Glasba ne bo pravilno deloval brez zahtevanega dostopa."</string>
     <string name="music_delete_failed_one_or_many">Nekaterih elementov ni mogoče izbrisati</string>
     <string name="music_delete_playlist_question">Želite izbrisati %1$s? To ne vpliva na vsebino seznama predvajanja.</string>
     <string name="music_delete_question">Ali želite izbrisati %1$s iz pomnilnika?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Aplikacija Glasba bo opravila pregledovanje v ozadju.
+To lahko traja več kot 10 minut, odvisno od števila skladb. Skladbe in seznami predvajanja niso prikazani niti predvajani pravilno, dokler se to pregledovanje ne konča."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Če želite kartico SD uporabljati kot shrambo podatkov, na naslednjem zaslonu podelite dovoljenje za dostop do kartice SD.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Tapnite POSKUSI ZNOVA, če želite poskusiti znova, ali pa tapnite PREKLIČI, če želite začeti od začetka.</string>
     <string name="music_dialog_button_next_txt">Naprej</string>
+    <string name="music_dialog_title_bg_scan_notice">Obvestilo</string>
     <string name="music_dialog_title_sd_permission_access_txt">Potrebno je dovoljenje za dostop do kartice SD</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Dovoljenje za kartico SD ni podeljeno</string>
     <string name="music_download">Prenos</string>
@@ -556,7 +559,7 @@ Za dostop do zvočne vsebine v napravi"</string>
     <string name="personal_data_collection_dialog_title">Osebni podatki</string>
     <string name="personal_data_collection_screen_button_negative">NE ZDAJ</string>
     <string name="personal_data_collection_screen_button_positive">STRINJAM SE</string>
-    <string name="personal_data_collection_screen_fine_print">Družba Sony bo zbrala in združila vaše <a href="entrance://personaldata">osebne podatke</a>, da bi izboljšala storitev. Družba Sony bo vaše podatke obravnavala v skladu s svojim <a href="http://sonymobile.com/privacy">pravilnikom o zasebnosti</a>.</string>
+    <string name="personal_data_collection_screen_fine_print">Družba Sony bo zbrala in združila vaše <a href="entrance://personaldata">osebne podatke</a>, da bi izboljšala storitev. Družba Sony bo vaše podatke obravnavala v skladu s svojim <a href="https://www.sonymobile.com/privacy">pravilnikom o zasebnosti</a>.</string>
     <string name="personal_data_collection_screen_fine_print_us">Družba Sony bo zbrala in združila vaše <a href="entrance://personaldata">osebne podatke</a>, da bi izboljšala storitev. Družba Sony bo vaše podatke obravnavala v skladu s svojim <a href="https://www.sonymobile.com/us/legal/privacy">pravilnikom o zasebnosti</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Obvestilo o zasebnosti CA</a>).</string>
     <string name="personal_data_collection_screen_text">Pomagajte nam izboljšati program Glasba tako, da družbi Sony posredujete podatke o svojih navadah poslušanja.</string>
     <string name="play_queue_open">Odpri</string>

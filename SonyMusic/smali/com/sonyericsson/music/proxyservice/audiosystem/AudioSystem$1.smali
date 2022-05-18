@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;)V
     .locals 0
 
-    .line 82
+    .line 83
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$1;->this$0:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public onAudioFocusChange(I)V
     .locals 1
 
-    .line 88
+    .line 89
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$1;->this$0:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;
 
     iget-object v0, v0, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->mAudioSystemListener:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;
 
     if-eqz v0, :cond_0
 
-    .line 89
+    .line 90
     invoke-interface {v0, p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem$AudioSystemListener;->onAudioFocusChanged(I)V
 
     :cond_0

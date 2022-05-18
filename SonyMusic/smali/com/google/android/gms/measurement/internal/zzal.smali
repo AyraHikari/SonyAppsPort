@@ -464,8 +464,8 @@
     .line 56
     iput-wide v0, p0, Lcom/google/android/gms/measurement/internal/zzal;->zzf:J
     :try_end_0
-    .catch Landroid/accounts/AuthenticatorException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/accounts/AuthenticatorException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Landroid/accounts/OperationCanceledException; {:try_start_0 .. :try_end_0} :catch_0
 
     return v6
@@ -473,7 +473,18 @@
     :catch_0
     move-exception v2
 
+    goto :goto_0
+
+    :catch_1
+    move-exception v2
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v2
+
     .line 60
+    :goto_0
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzgu;->zzq()Lcom/google/android/gms/measurement/internal/zzex;
 
     move-result-object v4

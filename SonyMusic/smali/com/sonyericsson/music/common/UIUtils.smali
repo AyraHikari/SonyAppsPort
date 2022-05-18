@@ -63,17 +63,17 @@
 .method public static colorizeToolbarContent(Lcom/sonyericsson/music/ToolbarControl;I)V
     .locals 5
 
-    .line 414
+    .line 417
     invoke-virtual {p0}, Lcom/sonyericsson/music/ToolbarControl;->getToolbar()Lcom/sonyericsson/music/ui/ShadowingToolbar;
 
     move-result-object p0
 
-    .line 415
+    .line 418
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
 
     move-result-object v0
 
-    .line 416
+    .line 419
     invoke-interface {v0}, Landroid/view/Menu;->size()I
 
     move-result v1
@@ -83,26 +83,26 @@
     :goto_0
     if-ge v2, v1, :cond_2
 
-    .line 418
+    .line 421
     invoke-interface {v0, v2}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v3
 
-    .line 419
+    .line 422
     invoke-interface {v3}, Landroid/view/MenuItem;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
-    .line 421
+    .line 424
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v4, p1, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     goto :goto_1
 
-    .line 422
+    .line 425
     :cond_0
     invoke-static {v3}, Landroidx/core/view/MenuItemCompat;->getActionProvider(Landroid/view/MenuItem;)Landroidx/core/view/ActionProvider;
 
@@ -112,14 +112,14 @@
 
     if-eqz v4, :cond_1
 
-    .line 424
+    .line 427
     invoke-static {v3}, Landroidx/core/view/MenuItemCompat;->getActionProvider(Landroid/view/MenuItem;)Landroidx/core/view/ActionProvider;
 
     move-result-object v3
 
     check-cast v3, Lcom/sonyericsson/music/ui/TintedMediaRouteActionProvider;
 
-    .line 425
+    .line 428
     invoke-virtual {v3, p1}, Lcom/sonyericsson/music/ui/TintedMediaRouteActionProvider;->setTint(I)V
 
     :cond_1
@@ -128,7 +128,7 @@
 
     goto :goto_0
 
-    .line 428
+    .line 431
     :cond_2
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getOverflowIcon()Landroid/graphics/drawable/Drawable;
 
@@ -136,12 +136,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 430
+    .line 433
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v0, p1, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 432
+    .line 435
     :cond_3
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
 
@@ -149,12 +149,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 434
+    .line 437
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v0, p1, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 436
+    .line 439
     :cond_4
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setTitleTextColor(I)V
 
@@ -164,22 +164,22 @@
 .method public static getColorFromAttr(Landroid/content/Context;I)I
     .locals 2
 
-    .line 372
+    .line 375
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    .line 373
+    .line 376
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0
 
     const/4 v1, 0x1
 
-    .line 374
+    .line 377
     invoke-virtual {p0, p1, v0, v1}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 375
+    .line 378
     iget p0, v0, Landroid/util/TypedValue;->data:I
 
     return p0
@@ -188,28 +188,28 @@
 .method public static getDisplayAspectRatio(Landroid/content/Context;)F
     .locals 2
 
-    .line 482
+    .line 485
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     const-string v1, "window"
 
-    .line 483
+    .line 486
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/view/WindowManager;
 
-    .line 484
+    .line 487
     invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object p0
 
     invoke-virtual {p0, v0}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 488
+    .line 491
     iget p0, v0, Landroid/graphics/Point;->x:I
 
     iget v0, v0, Landroid/graphics/Point;->y:I
@@ -240,26 +240,26 @@
 
     const-string v0, "window"
 
-    .line 291
+    .line 294
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 292
+    .line 295
     new-instance v1, Landroid/graphics/Point;
 
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
-    .line 293
+    .line 296
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 294
+    .line 297
     iget v0, v1, Landroid/graphics/Point;->x:I
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -278,7 +278,7 @@
 .method public static getStatusBarHeight()I
     .locals 1
 
-    .line 214
+    .line 217
     sget v0, Lcom/sonyericsson/music/common/UIUtils;->sStatusBarHeight:I
 
     return v0
@@ -287,7 +287,7 @@
 .method private static getSystemUiWrapper(Landroid/view/View;ZZZ)Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;
     .locals 0
 
-    .line 175
+    .line 178
     invoke-static {p0}, Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;->newInstance(Landroid/view/View;)Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;
 
     move-result-object p0
@@ -296,7 +296,7 @@
 
     const/16 p1, 0x400
 
-    .line 178
+    .line 181
     invoke-virtual {p0, p1, p3}, Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;->setVisibilityFlag(IZ)Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;
 
     :cond_0
@@ -304,7 +304,7 @@
 
     const/16 p1, 0x200
 
-    .line 182
+    .line 185
     invoke-virtual {p0, p1, p3}, Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;->setVisibilityFlag(IZ)Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;
 
     :cond_1
@@ -314,7 +314,7 @@
 .method public static getThemedLayoutInflater(Landroid/view/LayoutInflater;I)Landroid/view/LayoutInflater;
     .locals 1
 
-    .line 277
+    .line 280
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
     invoke-virtual {p0}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
@@ -325,7 +325,7 @@
 
     const-string p0, "layout_inflater"
 
-    .line 278
+    .line 281
     invoke-virtual {v0, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -338,7 +338,7 @@
 .method public static getTintedDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 359
+    .line 362
     invoke-static {p0}, Lcom/sonyericsson/music/common/UIUtils;->isUseDarkTheme(Landroid/content/Context;)Z
 
     move-result v0
@@ -353,7 +353,7 @@
 .method public static getTintedDrawable(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 363
+    .line 366
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -364,14 +364,14 @@
 
     if-eqz p2, :cond_0
 
-    .line 365
+    .line 368
     invoke-static {p0}, Landroidx/core/graphics/drawable/DrawableCompat;->wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     const/4 p2, -0x1
 
-    .line 366
+    .line 369
     invoke-static {p1, p2}, Landroidx/core/graphics/drawable/DrawableCompat;->setTint(Landroid/graphics/drawable/Drawable;I)V
 
     :cond_0
@@ -381,7 +381,7 @@
 .method private static init(Landroid/content/Context;)V
     .locals 3
 
-    .line 191
+    .line 194
     :try_start_0
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -393,12 +393,12 @@
 
     const-string v2, "android"
 
-    .line 193
+    .line 196
     invoke-virtual {p0, v0, v1, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 195
+    .line 198
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
@@ -416,28 +416,28 @@
 
     const-string v0, "power"
 
-    .line 282
+    .line 285
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/os/PowerManager;
 
-    .line 283
+    .line 286
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-ge v0, v1, :cond_0
 
-    .line 284
+    .line 287
     invoke-virtual {p0}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result p0
 
     return p0
 
-    .line 286
+    .line 289
     :cond_0
     invoke-virtual {p0}, Landroid/os/PowerManager;->isInteractive()Z
 
@@ -449,7 +449,7 @@
 .method public static isPhabletLayout(Landroid/app/Activity;)Z
     .locals 1
 
-    .line 218
+    .line 221
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -470,7 +470,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 245
+    .line 248
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -481,7 +481,7 @@
 
     iget v1, v1, Landroid/content/res/Configuration;->orientation:I
 
-    .line 246
+    .line 249
     invoke-static {p0}, Lcom/sonyericsson/music/common/UIUtils;->isTabletLayout(Landroid/app/Activity;)Z
 
     move-result p0
@@ -508,7 +508,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 331
+    .line 334
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -537,7 +537,7 @@
 .method public static isRTL(Ljava/lang/String;)Z
     .locals 1
 
-    .line 338
+    .line 341
     invoke-static {}, Landroidx/core/text/BidiFormatter;->getInstance()Landroidx/core/text/BidiFormatter;
 
     move-result-object v0
@@ -558,7 +558,7 @@
 
     const-string v1, "window"
 
-    .line 262
+    .line 265
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -567,7 +567,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 265
+    .line 268
     invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object p0
@@ -576,7 +576,7 @@
 
     move-result p0
 
-    .line 267
+    .line 270
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x19
@@ -603,7 +603,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 227
+    .line 230
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -614,7 +614,7 @@
 
     iget v1, v1, Landroid/content/res/Configuration;->orientation:I
 
-    .line 228
+    .line 231
     invoke-static {p0}, Lcom/sonyericsson/music/common/UIUtils;->isTabletLayout(Landroid/app/Activity;)Z
 
     move-result p0
@@ -637,7 +637,7 @@
 .method public static isTabletLayout(Landroid/app/Activity;)Z
     .locals 1
 
-    .line 222
+    .line 225
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -658,7 +658,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 236
+    .line 239
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -669,7 +669,7 @@
 
     iget v1, v1, Landroid/content/res/Configuration;->orientation:I
 
-    .line 237
+    .line 240
     invoke-static {p0}, Lcom/sonyericsson/music/common/UIUtils;->isTabletLayout(Landroid/app/Activity;)Z
 
     move-result p0
@@ -694,7 +694,7 @@
 
     const-string v0, "accessibility"
 
-    .line 206
+    .line 209
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -703,7 +703,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 207
+    .line 210
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
 
     move-result p0
@@ -723,28 +723,28 @@
 .method public static isUseDarkTheme(Landroid/content/Context;)Z
     .locals 3
 
-    .line 353
+    .line 356
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     const-string v1, "pref_key_theme"
 
-    const v2, 0x7f100266
+    const v2, 0x7f100268
 
-    .line 354
+    .line 357
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 353
+    .line 356
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const v1, 0x7f100265
+    const v1, 0x7f100267
 
-    .line 355
+    .line 358
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -761,7 +761,7 @@
 
     if-nez p1, :cond_0
 
-    .line 343
+    .line 346
     invoke-static {p0}, Lcom/sonyericsson/music/common/ThemeColor;->primary(Landroid/content/Context;)I
 
     move-result p1
@@ -769,13 +769,13 @@
     :cond_0
     const/4 p0, 0x3
 
-    .line 345
+    .line 348
     new-array p0, p0, [F
 
-    .line 346
+    .line 349
     invoke-static {p1, p0}, Landroid/graphics/Color;->colorToHSV(I[F)V
 
-    .line 347
+    .line 350
     sget-object p1, Lcom/sonyericsson/music/common/UIUtils;->BG_NORMALIZED_HSV:[F
 
     const/4 v0, 0x1
@@ -786,12 +786,12 @@
 
     const/4 v0, 0x2
 
-    .line 348
+    .line 351
     aget p1, p1, v0
 
     aput p1, p0, v0
 
-    .line 349
+    .line 352
     invoke-static {p0}, Landroid/graphics/Color;->HSVToColor([F)I
 
     move-result p0
@@ -802,12 +802,12 @@
 .method public static varargs playTogether([Landroid/animation/Animator;)Landroid/animation/AnimatorSet;
     .locals 1
 
-    .line 470
+    .line 473
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 471
+    .line 474
     invoke-virtual {v0, p0}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
     return-object v0
@@ -816,7 +816,7 @@
 .method public static setDefaultLightSystemUI(Landroid/app/Activity;)V
     .locals 1
 
-    .line 379
+    .line 382
     invoke-static {p0}, Lcom/sonyericsson/music/common/UIUtils;->isUseDarkTheme(Landroid/content/Context;)Z
 
     move-result v0
@@ -852,24 +852,24 @@
 .method public static setLightSystemUI(Landroid/app/Activity;Z)V
     .locals 2
 
-    .line 383
+    .line 386
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_2
 
-    .line 384
+    .line 387
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object p0
 
-    .line 385
+    .line 388
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object p0
 
-    .line 386
+    .line 389
     invoke-virtual {p0}, Landroid/view/View;->getSystemUiVisibility()I
 
     move-result v0
@@ -880,7 +880,7 @@
 
     or-int/lit16 p1, v0, 0x2000
 
-    .line 389
+    .line 392
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v0, v1, :cond_1
@@ -892,14 +892,14 @@
     :cond_0
     and-int/lit16 p1, v0, -0x2001
 
-    .line 394
+    .line 397
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v0, v1, :cond_1
 
     and-int/lit8 p1, p1, -0x11
 
-    .line 399
+    .line 402
     :cond_1
     :goto_0
     invoke-virtual {p0, p1}, Landroid/view/View;->setSystemUiVisibility(I)V
@@ -911,26 +911,26 @@
 .method public static setSystemUIBackgroundColor(Landroid/app/Activity;II)V
     .locals 3
 
-    .line 404
+    .line 407
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    .line 406
+    .line 409
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
 
     if-lt v1, v2, :cond_0
 
-    .line 407
+    .line 410
     invoke-static {p0, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p2
 
     invoke-virtual {v0, p2}, Landroid/view/Window;->setNavigationBarColor(I)V
 
-    .line 408
+    .line 411
     invoke-static {p0, p1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p0
@@ -1098,13 +1098,23 @@
     .line 130
     invoke-virtual {p0, p2}, Landroid/view/Window;->setNavigationBarColor(I)V
 
-    .line 133
+    .line 131
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 p2, 0x1d
+
+    if-lt p1, p2, :cond_9
+
+    .line 132
+    invoke-virtual {p0, v2}, Landroid/view/Window;->setNavigationBarContrastEnforced(Z)V
+
+    .line 136
     :cond_9
     invoke-virtual {p0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object p1
 
-    .line 134
+    .line 137
     iget p2, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const/high16 p3, -0x80000000
@@ -1113,7 +1123,7 @@
 
     iput p2, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 135
+    .line 138
     invoke-virtual {p0, p1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
     :cond_a
@@ -1124,7 +1134,7 @@
 .method public static setSystemUIVisibilityPreKK(Landroid/view/View;IZ)Z
     .locals 4
 
-    .line 146
+    .line 149
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x0
@@ -1160,13 +1170,13 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 154
+    .line 157
     :goto_1
     invoke-static {p0, v0, p1, p2}, Lcom/sonyericsson/music/common/UIUtils;->getSystemUiWrapper(Landroid/view/View;ZZZ)Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;
 
     move-result-object p0
 
-    .line 158
+    .line 161
     invoke-virtual {p0}, Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;->supportsTranslucentBackground()Z
 
     move-result p1
@@ -1175,7 +1185,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 159
+    .line 162
     invoke-virtual {p0, v0}, Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;->supportsTranslucentBackgroundOpacity(I)Z
 
     move-result p1
@@ -1187,13 +1197,13 @@
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 162
+    .line 165
     invoke-virtual {p0, p2}, Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;->setTranslucentBackground(Z)Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;
 
-    .line 164
+    .line 167
     invoke-virtual {p0, v0}, Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;->setTranslucentBackgroundOpacity(I)Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;
 
-    .line 166
+    .line 169
     :cond_3
     invoke-virtual {p0}, Lcom/sonymobile/ui/support/SystemUiVisibilityWrapper;->apply()V
 
@@ -1206,7 +1216,7 @@
 
     const/4 v0, 0x3
 
-    .line 140
+    .line 143
     invoke-static {p0, v0, p1}, Lcom/sonyericsson/music/common/UIUtils;->setSystemUIVisibilityPreKK(Landroid/view/View;IZ)Z
 
     move-result p0
@@ -1221,7 +1231,7 @@
 
     return-void
 
-    .line 302
+    .line 305
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -1231,37 +1241,37 @@
 
     if-eqz v0, :cond_1
 
-    .line 305
+    .line 308
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 308
+    .line 311
     :cond_1
     invoke-virtual {p0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 310
+    .line 313
     instance-of v0, p0, Landroid/widget/ImageView;
 
     if-eqz v0, :cond_2
 
-    .line 311
+    .line 314
     move-object v0, p0
 
     check-cast v0, Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 314
+    .line 317
     :cond_2
     instance-of v0, p0, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_4
 
-    .line 315
+    .line 318
     move-object v0, p0
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 317
+    .line 320
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
@@ -1271,7 +1281,7 @@
     :goto_0
     if-ge v2, v1, :cond_3
 
-    .line 320
+    .line 323
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
@@ -1282,13 +1292,13 @@
 
     goto :goto_0
 
-    .line 323
+    .line 326
     :cond_3
     instance-of p0, p0, Landroid/widget/AdapterView;
 
     if-nez p0, :cond_4
 
-    .line 324
+    .line 327
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     :cond_4
@@ -1298,12 +1308,12 @@
 .method public static waitForMeasure(Landroid/view/View;Lcom/sonyericsson/music/common/UIUtils$MeasureCallback;)V
     .locals 2
 
-    .line 445
+    .line 448
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
 
-    .line 446
+    .line 449
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v1
@@ -1314,13 +1324,13 @@
 
     goto :goto_0
 
-    .line 451
+    .line 454
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    .line 452
+    .line 455
     new-instance v1, Lcom/sonyericsson/music/common/UIUtils$1;
 
     invoke-direct {v1, p0, p1}, Lcom/sonyericsson/music/common/UIUtils$1;-><init>(Landroid/view/View;Lcom/sonyericsson/music/common/UIUtils$MeasureCallback;)V
@@ -1329,7 +1339,7 @@
 
     goto :goto_1
 
-    .line 449
+    .line 452
     :cond_1
     :goto_0
     invoke-interface {p1, p0, v0, v1}, Lcom/sonyericsson/music/common/UIUtils$MeasureCallback;->onMeasured(Landroid/view/View;II)V

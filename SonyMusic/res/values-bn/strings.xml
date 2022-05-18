@@ -279,9 +279,12 @@
     <string name="music_delete_failed_one_or_many">কিছু আইটেম মুছা গেল না</string>
     <string name="music_delete_playlist_question">%1$s মুছবেন? প্লেলিস্টের বিষয়বস্তু প্রভাবিত হবে না।</string>
     <string name="music_delete_question">স্টোরেজ থেকে %1$s মুছবেন?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"সংগীতের ডেটাবেস পুনঃনির্মাণ করতে সংগীতের অ্যাপটি একটি ব্যাকগ্রাউন্ড স্ক্যান করবে।
+গানের সংখ্যার ওপর নির্ভর করে এই স্ক্যানটি 10 মিনিটের বেশি সময় নিতে পারে। ব্যাকগ্রাউন্ড স্ক্যান সঠিকভাবে সম্পূর্ণ না হওয়া পর্যন্ত গান এবং প্লেলিস্টগুলি দেখানো বা বাজানো হয় না।"</string>
     <string name="music_dialog_body_sd_permission_access_txt">SD কার্ডটি ডেটা সঞ্চয়স্থান হিসাবে ব্যবহার করতে, পরবর্তী স্ক্রীনে SD কার্ডে অ্যাক্সেস করার জন্য অনুগ্রহ করে অনুমতি দিন।</string>
     <string name="music_dialog_body_sd_permission_retry_txt">পূনরায় চেষ্টা করতে পুনঃপ্রয়াস করুন-এ আলতো চাপুন, বা বাতিল করুন-আলতো চাপুন এবং প্রথম থেকে শুরু করুন।</string>
     <string name="music_dialog_button_next_txt">পরবর্তী</string>
+    <string name="music_dialog_title_bg_scan_notice">বিজ্ঞপ্তি</string>
     <string name="music_dialog_title_sd_permission_access_txt">SD কার্ডে অ্যাক্সেস করতে অনুমতির প্রয়োজন</string>
     <string name="music_dialog_title_sd_permission_retry_txt">SD কার্ড অ্যাক্সেস ক. অনুমতির জন্য সম্মতি জা. হয়নি</string>
     <string name="music_download">ডা্উনলোড করুন</string>
@@ -556,7 +559,7 @@ MMS অ্যাটাচমেন্ট প্লে করতে"</string>
     <string name="personal_data_collection_dialog_title">ব্যক্তিগত ডেটা</string>
     <string name="personal_data_collection_screen_button_negative">এখন নয়</string>
     <string name="personal_data_collection_screen_button_positive">আমি সম্মত</string>
-    <string name="personal_data_collection_screen_fine_print">পরিষেবাটি উন্নত করার জন্য Sony আপনার <a href="entrance://personaldata">ব্যক্তিগত তথ্য</a> সংগ্রহ এবং একত্রিত করবে। আমাদের<a href="http://sonymobile.com/privacy">গোপনীয়তা নীতি</a> অনুসারে Sony আপনার ডেটা পরিচালনা করবে।</string>
+    <string name="personal_data_collection_screen_fine_print">পরিষেবাটি উন্নত করার জন্য Sony আপনার <a href="entrance://personaldata">ব্যক্তিগত তথ্য</a> সংগ্রহ এবং একত্রিত করবে। আমাদের<a href="https://www.sonymobile.com/privacy">গোপনীয়তা নীতি</a> অনুসারে Sony আপনার ডেটা পরিচালনা করবে।</string>
     <string name="personal_data_collection_screen_fine_print_us">পরিষেবাটি উন্নত করার জন্য Sony আপনার <a href="entrance://personaldata">ব্যক্তিগত তথ্য</a> সংগ্রহ এবং একত্রিত করবে। আমাদের<a href="https://www.sonymobile.com/us/legal/privacy">গোপনীয়তা নীতি</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">ক্যালিফোর্নিয়া গোপনীয়তা বিজ্ঞপ্তি</a>) অনুসারে Sony আপনার ডেটা পরিচালনা করবে।</string>
     <string name="personal_data_collection_screen_text">Sony-র সাথে আপনার শোনার অভ্যাস শেয়ার করে সংগীত অ্যাপ্লিকেশনকে আরও ভালো করতে আমাদের সহায়তা করুন।</string>
     <string name="play_queue_open">খুলুন</string>

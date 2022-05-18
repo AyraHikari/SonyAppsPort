@@ -53,7 +53,7 @@
         }
     .end annotation
 
-    .line 408
+    .line 411
     invoke-static {}, Lcom/sonymobile/music/common/ThreadingUtils;->throwIfMainDebug()V
 
     const/4 v0, 0x0
@@ -62,7 +62,7 @@
 
     if-eqz p3, :cond_2
 
-    .line 413
+    .line 416
     :try_start_0
     invoke-static {p1, p2, p3}, Lcom/sonyericsson/music/common/FolderUtils;->getAudioFilesFromFolder(Ljava/util/HashMap;Ljava/util/HashMap;Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -80,7 +80,7 @@
 
     const-string v1, "album_id"
 
-    .line 416
+    .line 419
     invoke-static {p0, p1, p2, p3, v1}, Lcom/sonyericsson/music/common/AlbumArtUtils;->getFolderArtUri(Landroid/content/Context;Landroid/database/Cursor;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
@@ -106,7 +106,7 @@
     :goto_0
     if-eqz p1, :cond_2
 
-    .line 427
+    .line 430
     :goto_1
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
@@ -122,7 +122,7 @@
 
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 429
+    .line 432
     :cond_1
     throw p0
 
@@ -379,10 +379,10 @@
 .method public static deleteGoogleDriveArtwork(Landroid/content/Context;)V
     .locals 3
 
-    .line 539
+    .line 542
     invoke-static {}, Lcom/sonymobile/music/common/ThreadingUtils;->throwIfMainDebug()V
 
-    .line 541
+    .line 544
     invoke-static {}, Lcom/sonyericsson/music/common/MusicUtils;->isExternalStorageMounted()Z
 
     move-result v0
@@ -391,28 +391,28 @@
 
     const-string v0, "drive_images"
 
-    .line 542
+    .line 545
     invoke-virtual {p0, v0}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 543
+    .line 546
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 544
+    .line 547
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 546
+    .line 549
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -422,7 +422,7 @@
 
     aget-object v2, p0, v1
 
-    .line 547
+    .line 550
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     add-int/lit8 v1, v1, 0x1
@@ -445,10 +445,10 @@
         }
     .end annotation
 
-    .line 559
+    .line 562
     invoke-static {}, Lcom/sonymobile/music/common/ThreadingUtils;->throwIfMainDebug()V
 
-    .line 561
+    .line 564
     invoke-static {}, Lcom/sonyericsson/music/common/MusicUtils;->isExternalStorageMounted()Z
 
     move-result v0
@@ -465,21 +465,21 @@
 
     const-string v0, "drive_images"
 
-    .line 562
+    .line 565
     invoke-virtual {p0, v0}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 563
+    .line 566
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 565
+    .line 568
     new-instance v0, Lcom/sonyericsson/music/common/AlbumArtUtils$1;
 
     invoke-direct {v0, p1}, Lcom/sonyericsson/music/common/AlbumArtUtils$1;-><init>(Ljava/util/List;)V
@@ -490,7 +490,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 572
+    .line 575
     array-length p1, p0
 
     const/4 v0, 0x0
@@ -500,7 +500,7 @@
 
     aget-object v1, p0, v0
 
-    .line 573
+    .line 576
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     add-int/lit8 v0, v0, 0x1
@@ -533,7 +533,7 @@
 
     if-nez v0, :cond_1
 
-    const-string v0, "Unknown Album"
+    const-string v0, "Unknown album"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -544,6 +544,15 @@
     const-string v0, "unknown_album"
 
     .line 251
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "<unknown>"
+
+    .line 252
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -561,7 +570,7 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 253
+    .line 254
     :goto_1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -571,6 +580,24 @@
 
     const-string v3, "unknown_artist"
 
+    invoke-virtual {v3, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    const-string v3, "Unknown artist"
+
+    .line 255
+    invoke-virtual {v3, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    const-string v3, "<unknown>"
+
+    .line 256
     invoke-virtual {v3, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -597,9 +624,9 @@
     :cond_5
     if-eqz v0, :cond_6
 
-    const-string p1, "Unknown Album"
+    const-string p1, "<unknown>"
 
-    .line 257
+    .line 260
     :cond_6
     invoke-static {p0, p1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Albums;->getContentUri(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -611,14 +638,14 @@
 .method public static getDecodeAlbumArt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
     .locals 0
 
-    .line 276
+    .line 279
     invoke-static {p1, p2}, Lcom/sonyericsson/music/common/AlbumArtUtils;->getAlbumArtUri(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
     const/4 p2, 0x0
 
-    .line 277
+    .line 280
     invoke-static {p0, p1, p3, p4, p2}, Lcom/sonyericsson/music/common/AlbumArtUtils;->getDecodeArt(Landroid/content/Context;Landroid/net/Uri;ILandroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -635,7 +662,7 @@
 
     return-object v0
 
-    .line 300
+    .line 303
     :cond_0
     invoke-static {p1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore;->isMediaStoreUri(Landroid/net/Uri;)Z
 
@@ -643,7 +670,7 @@
 
     const-string v2, "com.sonyericsson.music.musicinfo"
 
-    .line 301
+    .line 304
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v3
@@ -652,7 +679,7 @@
 
     move-result v2
 
-    .line 302
+    .line 305
     invoke-static {p1}, Lcom/sonyericsson/music/common/DBUtils;->isUriCloudFileType(Landroid/net/Uri;)Z
 
     move-result v3
@@ -663,7 +690,7 @@
 
     if-nez v3, :cond_2
 
-    .line 307
+    .line 310
     :cond_1
     invoke-static {p0}, Lcom/sonyericsson/music/common/PermissionUtils;->isReadStoragePermissionGranted(Landroid/content/Context;)Z
 
@@ -673,18 +700,18 @@
 
     return-object v0
 
-    .line 312
+    .line 315
     :cond_2
     new-instance v3, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v3}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 313
+    .line 316
     iput-object p3, v3, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
     const/4 p3, 0x1
 
-    .line 314
+    .line 317
     iput p3, v3, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     const/4 p3, -0x1
@@ -695,13 +722,13 @@
 
     if-eqz v2, :cond_4
 
-    .line 318
+    .line 321
     :cond_3
     invoke-static {p0, p1}, Lcom/sonyericsson/music/common/AlbumArtUtils;->getDecodeOptions(Landroid/content/Context;Landroid/net/Uri;)Landroid/graphics/BitmapFactory$Options;
 
     move-result-object p3
 
-    .line 319
+    .line 322
     iget v1, p3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     iget p3, p3, Landroid/graphics/BitmapFactory$Options;->outHeight:I
@@ -731,12 +758,12 @@
     :cond_4
     if-eqz p0, :cond_8
 
-    .line 325
+    .line 328
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p3
 
-    .line 329
+    .line 332
     :try_start_0
     invoke-virtual {p3, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
@@ -749,7 +776,7 @@
 
     if-eqz p1, :cond_6
 
-    .line 331
+    .line 334
     :try_start_1
     invoke-static {p1, v0, v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -757,19 +784,19 @@
 
     if-eqz p4, :cond_5
 
-    .line 334
+    .line 337
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    .line 335
+    .line 338
     invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object p0
 
     sget-object p4, Lcom/sonyericsson/music/common/ScalingUtilities$ScalingLogic;->FIT:Lcom/sonyericsson/music/common/ScalingUtilities$ScalingLogic;
 
-    .line 334
+    .line 337
     invoke-static {p3, p0, p2, p2, p4}, Lcom/sonyericsson/music/common/ScalingUtilities;->createScaledBitmap(Landroid/graphics/Bitmap;Landroid/util/DisplayMetrics;IILcom/sonyericsson/music/common/ScalingUtilities$ScalingLogic;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -797,7 +824,7 @@
     :goto_0
     if-eqz p1, :cond_8
 
-    .line 352
+    .line 355
     :goto_1
     :try_start_2
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
@@ -811,7 +838,7 @@
 
     const-string p1, "File InputStream close Error."
 
-    .line 355
+    .line 358
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
@@ -824,7 +851,7 @@
     :goto_2
     if-eqz p1, :cond_7
 
-    .line 352
+    .line 355
     :try_start_3
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -837,10 +864,10 @@
 
     const-string p2, "File InputStream close Error."
 
-    .line 355
+    .line 358
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
+    .line 360
     :cond_7
     :goto_3
     throw p0
@@ -1012,19 +1039,19 @@
 .method public static getFolderArtUri(Landroid/content/Context;Landroid/database/Cursor;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
     .locals 0
 
-    .line 448
+    .line 451
     invoke-static {p1, p2, p3, p4}, Lcom/sonyericsson/music/common/AlbumArtUtils;->getUnique2by2Images(Landroid/database/Cursor;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 451
+    .line 454
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 452
+    .line 455
     invoke-static {p0, p1}, Lcom/sonyericsson/music/playlist/provider/PlaylistArtStore$PlaylistArt;->getPlaylistArtUri(Landroid/content/Context;Ljava/util/List;)Landroid/net/Uri;
 
     move-result-object p0
@@ -1056,36 +1083,36 @@
         }
     .end annotation
 
-    .line 461
+    .line 464
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     if-eqz p0, :cond_3
 
-    .line 465
+    .line 468
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 466
+    .line 469
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 467
+    .line 470
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result p2
 
-    .line 468
+    .line 471
     invoke-interface {p0, p3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result p3
 
-    .line 469
+    .line 472
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -1094,23 +1121,23 @@
 
     const/4 v3, 0x0
 
-    .line 471
+    .line 474
     :cond_0
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 472
+    .line 475
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 473
+    .line 476
     invoke-interface {p0, p3}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v6
 
-    .line 474
+    .line 477
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -1121,14 +1148,14 @@
 
     if-nez v7, :cond_1
 
-    .line 475
+    .line 478
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 476
+    .line 479
     new-instance v6, Landroid/util/Pair;
 
     invoke-direct {v6, v4, v5}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -1147,7 +1174,7 @@
     :cond_2
     if-nez v3, :cond_3
 
-    .line 483
+    .line 486
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v4
@@ -1166,10 +1193,10 @@
         }
     .end annotation
 
-    .line 503
+    .line 506
     invoke-static {}, Lcom/sonymobile/music/common/ThreadingUtils;->throwIfMainDebug()V
 
-    .line 505
+    .line 508
     invoke-static {}, Lcom/sonyericsson/music/common/MusicUtils;->isExternalStorageMounted()Z
 
     move-result v0
@@ -1178,14 +1205,14 @@
 
     const-string v0, "drive_images"
 
-    .line 506
+    .line 509
     invoke-virtual {p0, v0}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 512
+    .line 515
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1202,7 +1229,7 @@
 
     move-result-object v0
 
-    .line 513
+    .line 516
     invoke-static {v0}, Lcom/sonyericsson/music/common/FileUtils;->fileExists(Ljava/lang/String;)Z
 
     move-result v1
@@ -1214,14 +1241,14 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 519
+    .line 522
     array-length v0, p2
 
     if-lez v0, :cond_1
 
     const/4 v1, 0x0
 
-    .line 521
+    .line 524
     invoke-static {p2, v1, v0}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
 
     move-result-object p2
@@ -1230,7 +1257,7 @@
 
     const-string v0, "drive_images"
 
-    .line 523
+    .line 526
     invoke-static {p0, v0, p1, p2}, Lcom/sonyericsson/music/common/FileUtils;->storeImageToExternalStorage(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;)Ljava/lang/String;
 
     move-result-object p0
@@ -1242,7 +1269,7 @@
 
     return-object p0
 
-    .line 509
+    .line 512
     :cond_2
     new-instance p0, Lcom/sonyericsson/music/common/AlbumArtUtils$ExternalStorageNotMountedException;
 
@@ -1250,7 +1277,7 @@
 
     throw p0
 
-    .line 529
+    .line 532
     :cond_3
     new-instance p0, Lcom/sonyericsson/music/common/AlbumArtUtils$ExternalStorageNotMountedException;
 
@@ -1264,12 +1291,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 373
+    .line 376
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 374
+    .line 377
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
@@ -1280,7 +1307,7 @@
 
     div-float/2addr p1, p2
 
-    .line 380
+    .line 383
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
@@ -1291,7 +1318,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 383
+    .line 386
     invoke-virtual {v5, p1, p1}, Landroid/graphics/Matrix;->postScale(FF)Z
 
     :cond_0
@@ -1303,7 +1330,7 @@
 
     move-object v0, p0
 
-    .line 385
+    .line 388
     invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object p0

@@ -279,9 +279,12 @@
     <string name="music_delete_failed_one_or_many">일부 항목을 삭제할 수 없음</string>
     <string name="music_delete_playlist_question">%1$s을(를) 삭제하시겠습니까? 재생 목록의 콘텐츠에는 영향을 주지 않습니다.</string>
     <string name="music_delete_question">저장소에서 %1$s을(를) 삭제하시겠습니까?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"음악 앱은 음악 데이터베이스를 재구축하기 위해 백그라운드 검색을 수행하게 됩니다.
+이 스캔은 노래 수에 따라 10분 이상 걸릴 수 있습니다. 백그라운드 검색이 완료될 때까지 노래와 재생 목록이 제대로 표시되거나 재생되지 않습니다."</string>
     <string name="music_dialog_body_sd_permission_access_txt">SD 카드를 데이터 저장소로 사용하려면 다음 화면에서 SD 카드 접속 권한을 부여하세요.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">재시도를 눌러 다시 시도하거나 취소를 눌러 처음부터 다시 시작합니다.</string>
     <string name="music_dialog_button_next_txt">다음</string>
+    <string name="music_dialog_title_bg_scan_notice">고지 사항</string>
     <string name="music_dialog_title_sd_permission_access_txt">SD 카드 접속 권한이 필요함</string>
     <string name="music_dialog_title_sd_permission_retry_txt">SD 카드 접속 권한이 부여되지 않음</string>
     <string name="music_download">다운로드</string>
@@ -556,7 +559,7 @@ MMS 첨부 파일 재생"</string>
     <string name="personal_data_collection_dialog_title">개인 데이터</string>
     <string name="personal_data_collection_screen_button_negative">지금 안 함</string>
     <string name="personal_data_collection_screen_button_positive">동의</string>
-    <string name="personal_data_collection_screen_fine_print">소니는 서비스 향상을 위해 <a href="entrance://personaldata">개인 데이터</a>를 수집하고 취합합니다. 소니는 당사 <a href="http://sonymobile.com/privacy">개인정보 보호정책</a>에 따라 개인 데이터를 처리합니다.</string>
+    <string name="personal_data_collection_screen_fine_print">소니는 서비스 향상을 위해 <a href="entrance://personaldata">개인 데이터</a>를 수집하고 취합합니다. 소니는 당사 <a href="https://www.sonymobile.com/privacy">개인정보 보호정책</a>에 따라 개인 데이터를 처리합니다.</string>
     <string name="personal_data_collection_screen_fine_print_us">소니는 서비스 향상을 위해 <a href="entrance://personaldata">개인 데이터</a>를 수집하고 취합합니다. 소니는 당사 <a href="https://www.sonymobile.com/us/legal/privacy">개인정보 보호정책</a>(<a href="https://www.sonymobile.com/us/legal/privacy#10">CA 개인정보 공지</a>)에 따라 개인 데이터를 처리합니다.</string>
     <string name="personal_data_collection_screen_text">음악 응용프로그램을 개선할 수 있도록 소니에서 음악 듣는 습관을 공유해 주세요.</string>
     <string name="play_queue_open">열기</string>

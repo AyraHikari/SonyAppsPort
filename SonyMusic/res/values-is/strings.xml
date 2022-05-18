@@ -279,9 +279,12 @@ Athugaðu að Music-forritið virkar kannski ekki rétt án umbeðins aðgangs."
     <string name="music_delete_failed_one_or_many">Ekki var hægt að eyða einhverjum atriðum</string>
     <string name="music_delete_playlist_question">Á að eyða %1$s? Þetta hefur ekki áhrif á lögin á spilunarlistanum.</string>
     <string name="music_delete_question">Eyða %1$s úr geymslu?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Tónlistarforritið skannar í bakgrunninum til að byggja aftur upp tónlistargagnagrunninn.
+þetta gæti tekið meira en 10 mínútur, eftir fjölda laga. Lög og spilunarlistar eru ekki sýnd eða spiluð rétt fyrr en búið er að skanna."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Til að nota SD-kortið sem gagnageymslu þarftu að gefa samþykki fyrir aðgangi að SD-kortinu á næstu skjámynd.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Pikkaðu á REYNA AFTUR til að reyna aftur eða pikkaðu á HÆTTA VIÐ til að byrja aftur frá byrjun.</string>
     <string name="music_dialog_button_next_txt">Áfram</string>
+    <string name="music_dialog_title_bg_scan_notice">Ath.</string>
     <string name="music_dialog_title_sd_permission_access_txt">Þarf samþykki til að fá aðgang að SD-korti</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Samþykki til að fá aðgang að SD-korti ekki veitt</string>
     <string name="music_download">Sækja</string>
@@ -556,7 +559,7 @@ Til að opna hljóðefni í tækinu þínu"</string>
     <string name="personal_data_collection_dialog_title">Persónuleg gögn</string>
     <string name="personal_data_collection_screen_button_negative">EKKI NÚNA</string>
     <string name="personal_data_collection_screen_button_positive">ÉG SAMÞYKKI</string>
-    <string name="personal_data_collection_screen_fine_print">Sony safnar <a href="entrance://personaldata">persónulegum gögnum</a> þínum og sameinar þau til að bæta þjónustuna. Sony mun fara með gögn þín í samræmi við <a href="http://sonymobile.com/privacy">persónuverndarstefnu</a> okkar.</string>
+    <string name="personal_data_collection_screen_fine_print">Sony safnar <a href="entrance://personaldata">persónulegum gögnum</a> þínum og sameinar þau til að bæta þjónustuna. Sony mun fara með gögn þín í samræmi við <a href="https://www.sonymobile.com/privacy">persónuverndarstefnu</a> okkar.</string>
     <string name="personal_data_collection_screen_fine_print_us">Sony safnar <a href="entrance://personaldata">persónulegum gögnum</a> þínum og sameinar þau til að bæta þjónustuna. Sony mun fara með gögn þín í samræmi við <a href="https://www.sonymobile.com/us/legal/privacy">persónuverndarstefnu</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Yfirlýsing um gagnaleynd í Kaliforníu</a>) okkar.</string>
     <string name="personal_data_collection_screen_text">Hjálpaðu okkur að bæta tónlistarforritið með því að deila hlustunarvenjum þínum Sony.</string>
     <string name="play_queue_open">Opna</string>

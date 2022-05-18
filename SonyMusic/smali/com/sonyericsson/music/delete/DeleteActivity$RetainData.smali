@@ -59,25 +59,25 @@
         }
     .end annotation
 
-    .line 521
+    .line 561
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 522
+    .line 562
     iput-object p1, p0, Lcom/sonyericsson/music/delete/DeleteActivity$RetainData;->mDeleteFiles:Ljava/util/List;
 
-    .line 523
+    .line 563
     iput-object p2, p0, Lcom/sonyericsson/music/delete/DeleteActivity$RetainData;->mStorageVolumes:Ljava/util/List;
 
-    .line 524
+    .line 564
     iput-boolean p3, p0, Lcom/sonyericsson/music/delete/DeleteActivity$RetainData;->mShowingDeleteDialog:Z
 
-    .line 525
+    .line 565
     iput-boolean p4, p0, Lcom/sonyericsson/music/delete/DeleteActivity$RetainData;->mLaunchedDirectoryAccessDlg:Z
 
-    .line 526
+    .line 566
     iput-boolean p5, p0, Lcom/sonyericsson/music/delete/DeleteActivity$RetainData;->mLaunchedSdcardAccessDlg:Z
 
-    .line 527
+    .line 567
     iput p6, p0, Lcom/sonyericsson/music/delete/DeleteActivity$RetainData;->mSdcardAccessDialogType:I
 
     return-void

@@ -279,9 +279,12 @@
     <string name="music_delete_failed_one_or_many">ಕೆಲವು ವಸ್ತುಗಳನ್ನು ಅಳಿಸಲು ಸಾಧ್ವವಾಗಲಿಲ್ಲ</string>
     <string name="music_delete_playlist_question">%1$s ಅಳಿಸುವುದೇ? ಪ್ಲೇಪಟ್ಟಿಯ ವಿಷಯಕ್ಕೆ ಪರಿಣಾಮವಾಗುವುದಿಲ್ಲ.</string>
     <string name="music_delete_question">ಸಂಗ್ರಹಣೆಯಿಂದ %1$s ಅಳಿಸುವುದೇ?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"ಸಂಗೀತ ಡೇಟಾಬೇಸ್ ಮರುನಿರ್ಮಿಸಲು Music ಆ್ಯಪ್, ಹಿನ್ನೆಲೆ ಸ್ಕ್ಯಾನ್ ನಡೆಸುತ್ತದೆ, ಹಾಡಿನ ಸಂಖ್ಯೆ ಆಧರಿಸಿ ಸ್ಕ್ಯಾನ್ಗೆ 10 ನಿಮಿಷಕ್ಕಿಂತ ಹೆಚ್ಚು ಸಮಯ ಬೇಕಾಗಬಹುದು.
+ಸ್ಕ್ಯಾನ್ ವೇಳೆ ಹಾಡು, ಪ್ಲೇಲಿಸ್ಟ್ ಅನ್ನು ಸರಿಯಾಗಿ ತೋರಿಸಲ್ಲ/ಪ್ಲೇ ಮಾಡಲ್ಲ."</string>
     <string name="music_dialog_body_sd_permission_access_txt">ಡೇಟಾ ಸಂಗ್ರಹಣೆಯಾಗಿ SD ಕಾರ್ಡ್ ಬಳಸಲು, ಮುಂದಿನ ಪರದೆಯಲ್ಲಿ SD ಕಾರ್ಡ್ ಪ್ರವೇಶಿಸಲು ದಯವಿಟ್ಟು ಅನುಮತಿ ನೀಡಿ.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಲು ಮರುಪ್ರಯತ್ನಿಸಿ ಅನ್ನು ತಟ್ಟಿ ಅಥವಾ ರದ್ದು ಅನ್ನು ತಟ್ಟಿ ಮತ್ತು ಪ್ರಾರಂಭದಿಂದ ಆರಂಭಿಸಿ.</string>
     <string name="music_dialog_button_next_txt">ಮುಂದಿನ</string>
+    <string name="music_dialog_title_bg_scan_notice">ಗಮನಿಸಿ</string>
     <string name="music_dialog_title_sd_permission_access_txt">SD ಕಾರ್ಡ್ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿ ಅಗತ್ಯವಿದೆ</string>
     <string name="music_dialog_title_sd_permission_retry_txt">SD ಕಾರ್ಡ್ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿ ನೀಡಲಾಗಿಲ್ಲ</string>
     <string name="music_download">ಡೌನ್‌ಲೋಡ್</string>
@@ -556,7 +559,7 @@ MMS ಅಟಾಚ್ಮೆಂಟ್‌ಗಳನ್ನು ಚಾಲಿಸಲು"</
     <string name="personal_data_collection_dialog_title">ವೈಯಕ್ತಿಕ ಡೇಟಾ</string>
     <string name="personal_data_collection_screen_button_negative">ಈಗಲ್ಲ</string>
     <string name="personal_data_collection_screen_button_positive">ನಾನು ಒಪ್ಪುತ್ತೇನೆ</string>
-    <string name="personal_data_collection_screen_fine_print">ಸೇವೆಯನ್ನು ಸುಧಾರಿಸುವುದಕ್ಕಾಗಿ ನಿಮ್ಮ <a href="entrance://personaldata">ವೈಯಕ್ತಿಕ ಡೇಟಾ</a>ವನ್ನು Sony ಸಂಗ್ರಹಿಸುತ್ತದೆ ಮತ್ತು ಒಟ್ಟುಗೂಡಿಸುತ್ತದೆ. Sony ನಿಮ್ಮ ಡೇಟಾವನ್ನು ನಮ್ಮ <a href="http://sonymobile.com/privacy">ಗೌಪ್ಯತೆ ನೀತಿ</a> ಪ್ರಕಾರ ನಿರ್ವಹಣೆ ಮಾಡುತ್ತದೆ</string>
+    <string name="personal_data_collection_screen_fine_print">ಸೇವೆಯನ್ನು ಸುಧಾರಿಸುವುದಕ್ಕಾಗಿ ನಿಮ್ಮ <a href="entrance://personaldata">ವೈಯಕ್ತಿಕ ಡೇಟಾ</a>ವನ್ನು Sony ಸಂಗ್ರಹಿಸುತ್ತದೆ ಮತ್ತು ಒಟ್ಟುಗೂಡಿಸುತ್ತದೆ. Sony ನಿಮ್ಮ ಡೇಟಾವನ್ನು ನಮ್ಮ <a href="https://www.sonymobile.com/privacy">ಗೌಪ್ಯತೆ ನೀತಿ</a> ಪ್ರಕಾರ ನಿರ್ವಹಣೆ ಮಾಡುತ್ತದೆ</string>
     <string name="personal_data_collection_screen_fine_print_us">ಸೇವೆಯನ್ನು ಸುಧಾರಿಸುವುದಕ್ಕಾಗಿ ನಿಮ್ಮ<a href="entrance://personaldata">ವೈಯಕ್ತಿಕ ಡೇಟಾ</a>ವನ್ನು Sony ಸಂಗ್ರಹಿಸುತ್ತದೆ ಮತ್ತು ಒಟ್ಟುಗೂಡಿಸುತ್ತದೆ. Sony ನಿಮ್ಮ ಡೇಟಾವನ್ನು ನಮ್ಮ <a href="https://www.sonymobile.com/us/legal/privacy">ಗೌಪ್ಯತೆ ನೀತಿ</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">ಕ್ಯಾಲಿಫೋರ್ನಿಯಾ ಗೌಪ್ಯತೆ ಸೂಚನೆ</a>) ಪ್ರಕಾರ ನಿರ್ವಹಣೆ ಮಾಡುತ್ತದೆ</string>
     <string name="personal_data_collection_screen_text">Sony ಜೊತೆಗೆ ನಿಮ್ಮ ಕೇಳುವಿಕೆಯ ಹವ್ಯಾಸಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳುವ ಮೂಲಕ ಸಂಗೀತ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಉತ್ತಮಗೊಳಿಸಲು ನಮಗೆ ಸಹಾಯ ಮಾಡಿ.</string>
     <string name="play_queue_open">ತೆರೆ</string>

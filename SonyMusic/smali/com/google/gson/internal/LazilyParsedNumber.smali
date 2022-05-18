@@ -133,9 +133,9 @@
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    return v0
+    return v1
 
     .line 42
     :catch_1

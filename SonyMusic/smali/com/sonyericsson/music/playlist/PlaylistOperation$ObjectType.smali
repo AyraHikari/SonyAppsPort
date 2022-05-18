@@ -44,7 +44,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .line 51
+    .line 52
     new-instance v0, Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;
 
     const-string v1, "TRACK"
@@ -117,7 +117,7 @@
 
     const/4 v0, 0x7
 
-    .line 50
+    .line 51
     new-array v0, v0, [Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;
 
     sget-object v1, Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;->TRACK:Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;
@@ -161,7 +161,7 @@
         }
     .end annotation
 
-    .line 50
+    .line 51
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -170,7 +170,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;
     .locals 1
 
-    .line 50
+    .line 51
     const-class v0, Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -185,7 +185,7 @@
 .method public static values()[Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;
     .locals 1
 
-    .line 50
+    .line 51
     sget-object v0, Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;->$VALUES:[Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;
 
     invoke-virtual {v0}, [Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;->clone()Ljava/lang/Object;

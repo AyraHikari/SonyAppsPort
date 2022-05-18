@@ -24,13 +24,13 @@
 .method constructor <init>(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1777
+    .line 1800
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1778
+    .line 1801
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$MediaRouteInfo;->mRouteId:Ljava/lang/String;
 
-    .line 1779
+    .line 1802
     iput-object p2, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$MediaRouteInfo;->mCastDevice:Landroid/os/Bundle;
 
     return-void
@@ -41,7 +41,7 @@
 .method getCastDevice()Landroid/os/Bundle;
     .locals 1
 
-    .line 1787
+    .line 1810
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$MediaRouteInfo;->mCastDevice:Landroid/os/Bundle;
 
     return-object v0
@@ -50,7 +50,7 @@
 .method getRouteId()Ljava/lang/String;
     .locals 1
 
-    .line 1783
+    .line 1806
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl$MediaRouteInfo;->mRouteId:Ljava/lang/String;
 
     return-object v0

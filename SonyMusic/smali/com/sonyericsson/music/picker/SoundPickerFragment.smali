@@ -71,7 +71,7 @@
 .method protected getNoContentText()Ljava/lang/String;
     .locals 1
 
-    const v0, 0x7f100216
+    const v0, 0x7f100218
 
     .line 137
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -133,7 +133,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f10018f
+    const p2, 0x7f100191
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

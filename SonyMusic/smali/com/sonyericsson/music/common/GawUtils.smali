@@ -176,14 +176,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 119
+    .line 122
     sget-object v0, Lcom/sonyericsson/music/common/GawUtils;->sTextPaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 120
+    .line 123
     sget-object v0, Lcom/sonyericsson/music/common/GawUtils;->sTextPaint:Landroid/graphics/Paint;
 
     int-to-float p2, p2
@@ -208,14 +208,14 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 121
+    .line 124
     sget-object v0, Lcom/sonyericsson/music/common/GawUtils;->sTextPaint:Landroid/graphics/Paint;
 
     sget-object v2, Lcom/sonyericsson/music/common/GawUtils;->sOverlayXfermode:Landroid/graphics/Xfermode;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 122
+    .line 125
     invoke-virtual {p1}, Ljava/lang/Character;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -224,7 +224,7 @@
 
     invoke-virtual {p0, v0, p3, p4, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 124
+    .line 127
     sget-object v0, Lcom/sonyericsson/music/common/GawUtils;->sTextPaint:Landroid/graphics/Paint;
 
     invoke-static {v1, p2}, Ljava/lang/Math;->min(FF)F
@@ -239,14 +239,14 @@
 
     invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 125
+    .line 128
     sget-object p2, Lcom/sonyericsson/music/common/GawUtils;->sTextPaint:Landroid/graphics/Paint;
 
     const/4 v0, 0x0
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 126
+    .line 129
     invoke-virtual {p1}, Ljava/lang/Character;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -302,11 +302,12 @@
 
     move-result-object v3
     :try_end_2
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/lang/NullPointerException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/lang/NullPointerException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 80
+    .line 83
     :try_start_3
     new-instance v4, Landroid/graphics/Canvas;
 
@@ -314,10 +315,10 @@
 
     int-to-float p1, p1
 
-    .line 81
+    .line 84
     invoke-virtual {v4, p1, p1}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 85
+    .line 88
     sget-object p1, Lcom/sonyericsson/music/common/GawUtils;->sPaints:[Landroid/graphics/Paint;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -346,14 +347,14 @@
 
     invoke-virtual {v4, p1}, Landroid/graphics/Canvas;->drawPaint(Landroid/graphics/Paint;)V
 
-    .line 89
+    .line 92
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-nez p1, :cond_5
 
-    .line 90
+    .line 93
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
@@ -364,12 +365,12 @@
 
     move-result-object p0
 
-    .line 91
+    .line 94
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 92
+    .line 95
     array-length v5, p0
 
     const/4 v6, 0x0
@@ -381,7 +382,7 @@
 
     aget-object v8, p0, v7
 
-    .line 93
+    .line 96
     invoke-virtual {v8}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v9
@@ -392,7 +393,7 @@
 
     if-nez v9, :cond_1
 
-    .line 94
+    .line 97
     invoke-virtual {v8}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v8
@@ -404,7 +405,7 @@
 
     goto :goto_0
 
-    .line 97
+    .line 100
     :cond_2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -412,14 +413,14 @@
 
     if-ne p0, v1, :cond_4
 
-    .line 98
+    .line 101
     invoke-interface {p1, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Ljava/lang/String;
 
-    .line 99
+    .line 102
     invoke-virtual {p0, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result p1
@@ -432,14 +433,14 @@
 
     move-result-object p1
 
-    .line 100
+    .line 103
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v5
 
     if-le v5, v1, :cond_3
 
-    .line 101
+    .line 104
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
@@ -459,7 +460,7 @@
 
     goto :goto_1
 
-    .line 103
+    .line 106
     :cond_4
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -467,7 +468,7 @@
 
     if-le p0, v1, :cond_5
 
-    .line 104
+    .line 107
     invoke-interface {p1, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -486,7 +487,7 @@
 
     move-result-object v2
 
-    .line 105
+    .line 108
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -515,7 +516,7 @@
 
     const/4 v1, 0x0
 
-    .line 109
+    .line 112
     invoke-virtual {v4, p1, v1, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
 
     const/16 p1, 0x2e
@@ -524,31 +525,37 @@
 
     const v5, 0x3f866666    # 1.05f
 
-    .line 111
+    .line 114
     invoke-static {v4, v2, p1, v1, v5}, Lcom/sonyericsson/music/common/GawUtils;->drawLetter(Landroid/graphics/Canvas;Ljava/lang/Character;IFF)V
 
     const/16 p1, 0x1c
 
     const v1, 0x3e99999a    # 0.3f
 
-    .line 112
+    .line 115
     invoke-static {v4, p0, p1, v1, v5}, Lcom/sonyericsson/music/common/GawUtils;->drawLetter(Landroid/graphics/Canvas;Ljava/lang/Character;IFF)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 114
+    .line 117
     monitor-exit v0
 
     return-object v3
 
-    .line 77
+    .line 80
     :catch_0
     monitor-exit v0
 
     return-object v2
 
-    .line 74
+    .line 77
     :catch_1
+    monitor-exit v0
+
+    return-object v2
+
+    .line 74
+    :catch_2
     monitor-exit v0
 
     return-object v2
@@ -570,13 +577,13 @@
 
     monitor-enter v0
 
-    .line 135
+    .line 138
     :try_start_0
     sget-object v1, Lcom/sonyericsson/music/common/GawUtils;->sHsv:[F
 
     invoke-static {p0, v1}, Landroid/graphics/Color;->colorToHSV(I[F)V
 
-    .line 136
+    .line 139
     sget-object v1, Lcom/sonyericsson/music/common/GawUtils;->sHsv:[F
 
     sget-object v2, Lcom/sonyericsson/music/common/GawUtils;->sHsv:[F
@@ -595,7 +602,7 @@
 
     aput v2, v1, v3
 
-    .line 137
+    .line 140
     sget-object v1, Lcom/sonyericsson/music/common/GawUtils;->sHsv:[F
 
     sget-object v2, Lcom/sonyericsson/music/common/GawUtils;->sHsv:[F
@@ -612,7 +619,7 @@
 
     aput p1, v1, v3
 
-    .line 138
+    .line 141
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result p0
@@ -648,7 +655,7 @@
 
     const/high16 v2, 0x3f400000    # 0.75f
 
-    .line 131
+    .line 134
     :try_start_0
     invoke-static {p0, v1, v2}, Lcom/sonyericsson/music/common/GawUtils;->setHsvFactors(IFF)I
 

@@ -279,9 +279,12 @@ Bitte beachten Sie, dass die Musik-App ohne den angeforderten Zugriff möglicher
     <string name="music_delete_failed_one_or_many">Einige Elemente konnten nicht gelöscht werden.</string>
     <string name="music_delete_playlist_question">%1$s löschen? Der Inhalt der Playlist wird dadurch nicht beeinträchtigt.</string>
     <string name="music_delete_question">%1$s aus Speicher löschen?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Die Musik-App aktualisiert die Musik-Datenbank.
+Dieser Vorgang kann je nach Anzahl der Titel rund 10 Minuten dauern. Während der Suche werden Titel und Playlisten nicht korrekt angezeigt oder abgespielt."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Um die SD-Karte als Datenspeicher zu verwenden, erteilen Sie bitte im nächsten Bildschirm die Berechtigung zum Zugriff auf die SD-Karte.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Tippen Sie auf WIEDERHOLEN, um es erneut zu versuchen, oder auf ABBRECHEN, um von vorne zu beginnen.</string>
     <string name="music_dialog_button_next_txt">Weiter</string>
+    <string name="music_dialog_title_bg_scan_notice">Hinweis</string>
     <string name="music_dialog_title_sd_permission_access_txt">Berechtigung zum Zugriff auf SD-Karte erforderlich</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Berechtigung zum Zugriff auf die SD-Karte nicht erteilt</string>
     <string name="music_download">Herunterladen</string>
@@ -556,7 +559,7 @@ Zum Zugriff auf Audioinhalte auf Ihrem Gerät"</string>
     <string name="personal_data_collection_dialog_title">Persönliche Daten</string>
     <string name="personal_data_collection_screen_button_negative">NICHT JETZT</string>
     <string name="personal_data_collection_screen_button_positive">ICH STIMME ZU</string>
-    <string name="personal_data_collection_screen_fine_print">Sony erfasst und bündelt Ihre <a href="entrance://personaldata">persönlichen Daten</a>, um den Dienst zu verbessern. Sony behandelt Ihre Daten gemäß seiner <a href="http://sonymobile.com/privacy">Datenschutzrichtlinie</a></string>
+    <string name="personal_data_collection_screen_fine_print">Sony erfasst und bündelt Ihre <a href="entrance://personaldata">persönlichen Daten</a>, um den Dienst zu verbessern. Sony behandelt Ihre Daten gemäß seiner <a href="https://www.sonymobile.com/privacy">Datenschutzrichtlinie</a></string>
     <string name="personal_data_collection_screen_fine_print_us">Sony erfasst und bündelt Ihre <a href="entrance://personaldata">persönlichen Daten</a>, um den Dienst zu verbessern. Sony behandelt Ihre Daten gemäß seiner <a href="https://www.sonymobile.com/us/legal/privacy">Datenschutzrichtlinie</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Datenschutzhinweis für Kalifornien</a>)</string>
     <string name="personal_data_collection_screen_text">Helfen Sie uns, die Musik-Anwendung zu verbessern, indem Sie Ihre Hörgewohnheiten mit Sony teilen.</string>
     <string name="play_queue_open">Öffnen</string>

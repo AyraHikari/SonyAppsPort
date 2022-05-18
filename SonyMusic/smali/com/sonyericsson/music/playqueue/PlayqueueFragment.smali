@@ -853,7 +853,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/fragment/app/Fragment;->registerForContextMenu(Landroid/view/View;)V
 
-    const p2, 0x7f10025e
+    const p2, 0x7f100260
 
     .line 154
     invoke-virtual {p0, p2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -989,7 +989,7 @@
     .line 381
     iget-object p1, p0, Lcom/sonyericsson/music/playqueue/PlayqueueFragment;->mActivity:Lcom/sonyericsson/music/MusicActivity;
 
-    const p2, 0x7f1001b9
+    const p2, 0x7f1001bb
 
     invoke-static {p1, p2, p4}, Lcom/sonyericsson/music/common/MusicToast;->show(Landroid/content/Context;II)V
 

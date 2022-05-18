@@ -170,7 +170,7 @@
 .method private static getLocalizedColumns(Landroid/content/Context;[Ljava/lang/String;)[Ljava/lang/String;
     .locals 1
 
-    const v0, 0x7f10018f
+    const v0, 0x7f100191
 
     .line 101
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -206,7 +206,7 @@
 .method public static getSortOrder(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    const v0, 0x7f10018f
+    const v0, 0x7f100191
 
     .line 115
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

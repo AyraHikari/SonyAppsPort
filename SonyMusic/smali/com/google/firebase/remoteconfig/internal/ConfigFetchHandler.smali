@@ -723,9 +723,9 @@
 
     iget-object p1, p0, Lcom/google/firebase/remoteconfig/internal/ConfigFetchHandler;->randomGenerator:Ljava/util/Random;
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    invoke-virtual {p1, v0}, Ljava/util/Random;->nextInt(I)I
+    invoke-virtual {p1, v1}, Ljava/util/Random;->nextInt(I)I
 
     move-result p1
 

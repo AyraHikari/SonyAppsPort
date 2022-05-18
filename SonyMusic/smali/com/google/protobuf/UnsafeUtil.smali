@@ -302,9 +302,9 @@
 
     and-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    sput v0, Lcom/google/protobuf/UnsafeUtil;->BYTE_ARRAY_ALIGNMENT:I
+    sput v1, Lcom/google/protobuf/UnsafeUtil;->BYTE_ARRAY_ALIGNMENT:I
 
     .line 83
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
@@ -884,9 +884,9 @@
 
     shl-long/2addr p1, v0
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    ushr-int/2addr p0, p1
+    ushr-int/2addr p0, p2
 
     and-int/lit16 p0, p0, 0xff
 
@@ -915,9 +915,9 @@
 
     shl-long/2addr p1, v0
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    ushr-int/2addr p0, p1
+    ushr-int/2addr p0, p2
 
     and-int/lit16 p0, p0, 0xff
 
@@ -1159,9 +1159,9 @@
 
     move-result v2
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    xor-int/lit8 p1, p1, -0x1
+    xor-int/lit8 p1, p2, -0x1
 
     and-int/lit8 p1, p1, 0x3
 
@@ -1199,9 +1199,9 @@
 
     move-result v2
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    and-int/lit8 p1, p1, 0x3
+    and-int/lit8 p1, p2, 0x3
 
     shl-int/lit8 p1, p1, 0x3
 

@@ -32,10 +32,10 @@
 
     and-long/2addr p1, v0
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
     .line 5
-    invoke-static {p1, p3}, Llibcore/io/Memory;->pokeByte(IB)V
+    invoke-static {p2, p3}, Llibcore/io/Memory;->pokeByte(IB)V
 
     return-void
 .end method
@@ -99,14 +99,14 @@
 
     and-long/2addr p4, v0
 
-    long-to-int p4, p4
+    long-to-int p5, p4
 
-    long-to-int p2, p2
+    long-to-int p3, p2
 
-    long-to-int p3, p6
+    long-to-int p2, p6
 
     .line 31
-    invoke-static {p4, p1, p2, p3}, Llibcore/io/Memory;->pokeByteArray(I[BII)V
+    invoke-static {p5, p1, p3, p2}, Llibcore/io/Memory;->pokeByteArray(I[BII)V
 
     return-void
 .end method

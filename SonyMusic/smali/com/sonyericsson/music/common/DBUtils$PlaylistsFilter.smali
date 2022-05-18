@@ -38,7 +38,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 354
+    .line 358
     new-instance v0, Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
 
     const-string v1, "NON_HIDDEN_EDITABLE"
@@ -49,7 +49,7 @@
 
     sput-object v0, Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;->NON_HIDDEN_EDITABLE:Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
 
-    .line 355
+    .line 359
     new-instance v0, Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
 
     const-string v1, "NON_HIDDEN_NON_SMART"
@@ -60,7 +60,7 @@
 
     sput-object v0, Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;->NON_HIDDEN_NON_SMART:Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
 
-    .line 356
+    .line 360
     new-instance v0, Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
 
     const-string v1, "ALL_NON_HIDDEN"
@@ -71,7 +71,7 @@
 
     sput-object v0, Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;->ALL_NON_HIDDEN:Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
 
-    .line 357
+    .line 361
     new-instance v0, Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
 
     const-string v1, "ALL_INCLUDING_HIDDEN"
@@ -84,7 +84,7 @@
 
     const/4 v0, 0x4
 
-    .line 353
+    .line 357
     new-array v0, v0, [Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
 
     sget-object v1, Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;->NON_HIDDEN_EDITABLE:Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
@@ -116,7 +116,7 @@
         }
     .end annotation
 
-    .line 353
+    .line 357
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -125,7 +125,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
     .locals 1
 
-    .line 353
+    .line 357
     const-class v0, Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -140,7 +140,7 @@
 .method public static values()[Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
     .locals 1
 
-    .line 353
+    .line 357
     sget-object v0, Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;->$VALUES:[Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
 
     invoke-virtual {v0}, [Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;->clone()Ljava/lang/Object;

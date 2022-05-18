@@ -997,9 +997,9 @@
     :cond_d
     iget-wide v3, v3, Lcom/google/android/gms/internal/wearable/zzj;->zzgq:J
 
-    long-to-int v3, v3
+    long-to-int v4, v3
 
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 

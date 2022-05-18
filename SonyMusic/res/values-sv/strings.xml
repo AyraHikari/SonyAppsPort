@@ -279,9 +279,12 @@ Observera att Musik-appen kanske inte fungerar korrekt utan begärd åtkomst."</
     <string name="music_delete_failed_one_or_many">Det gick inte att radera vissa objekt</string>
     <string name="music_delete_playlist_question">Vill du ta bort %1$s? Spellistans innehåll påverkas inte.</string>
     <string name="music_delete_question">Vill du ta bort %1$s från lagringsutrymmet?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Musik-appen skannar bakgrunden för att återskapa musikdatabasen.
+Skanningen kan ta över tio minuter beroende på antal låtar. Låtar och spellistor visas och spelas inte korrekt förrän skanningen är avslutad."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Om du vill använda SD-kortet som lagringsutrymme ger du behörighet för åtkomst till SD-kortet på nästa skärm.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Tryck på FÖRSÖK IGEN för att försöka igen eller tryck på AVBRYT och börja om.</string>
     <string name="music_dialog_button_next_txt">Nästa</string>
+    <string name="music_dialog_title_bg_scan_notice">Avisering</string>
     <string name="music_dialog_title_sd_permission_access_txt">Behörighet krävs för åtkomst till SD-kort</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Behörighet för åtkomst till SD-kort saknas</string>
     <string name="music_download">Hämta</string>
@@ -556,7 +559,7 @@ Styra musikuppspelningen vid samtal"</string>
     <string name="personal_data_collection_dialog_title">Personliga data</string>
     <string name="personal_data_collection_screen_button_negative">INTE NU</string>
     <string name="personal_data_collection_screen_button_positive">JAG GODKÄNNER</string>
-    <string name="personal_data_collection_screen_fine_print">Sony samlar in och kombinerar dina <a href="entrance://personaldata">personliga data</a> så att vi kan förbättra tjänsten. Sony hanterar dina personliga data enligt vår <a href="http://sonymobile.com/privacy">sekretesspolicy</a></string>
+    <string name="personal_data_collection_screen_fine_print">Sony samlar in och kombinerar dina <a href="entrance://personaldata">personliga data</a> så att vi kan förbättra tjänsten. Sony hanterar dina personliga data enligt vår <a href="https://www.sonymobile.com/privacy">sekretesspolicy</a></string>
     <string name="personal_data_collection_screen_fine_print_us">Sony samlar in och kombinerar dina <a href="entrance://personaldata">personliga data</a> så att vi kan förbättra tjänsten. Sony hanterar dina personliga data enligt vår <a href="https://www.sonymobile.com/us/legal/privacy">sekretesspolicy</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Sekretessmeddelande för Kalifornien</a>)</string>
     <string name="personal_data_collection_screen_text">Hjälp oss att förbättra Musik-appen genom att dela dina lyssningsvanor med Sony.</string>
     <string name="play_queue_open">Öppna</string>

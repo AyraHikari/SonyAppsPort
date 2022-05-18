@@ -262,9 +262,9 @@
 
     move-result-wide v9
 
-    long-to-int v9, v9
+    long-to-int v10, v9
 
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
 

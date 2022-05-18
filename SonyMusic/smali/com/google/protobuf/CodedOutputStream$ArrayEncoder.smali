@@ -569,9 +569,9 @@
 
     shr-long v2, p1, v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    and-int/lit16 v2, v2, 0xff
+    and-int/lit16 v2, v3, 0xff
 
     int-to-byte v2, v2
 
@@ -590,9 +590,9 @@
 
     shr-long v2, p1, v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    and-int/lit16 v2, v2, 0xff
+    and-int/lit16 v2, v3, 0xff
 
     int-to-byte v2, v2
 
@@ -611,9 +611,9 @@
 
     shr-long v2, p1, v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    and-int/lit16 v2, v2, 0xff
+    and-int/lit16 v2, v3, 0xff
 
     int-to-byte v2, v2
 
@@ -632,9 +632,9 @@
 
     shr-long v2, p1, v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    and-int/lit16 v2, v2, 0xff
+    and-int/lit16 v2, v3, 0xff
 
     int-to-byte v2, v2
 
@@ -653,9 +653,9 @@
 
     shr-long v2, p1, v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    and-int/lit16 v2, v2, 0xff
+    and-int/lit16 v2, v3, 0xff
 
     int-to-byte v2, v2
 
@@ -674,9 +674,9 @@
 
     shr-long v2, p1, v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    and-int/lit16 v2, v2, 0xff
+    and-int/lit16 v2, v3, 0xff
 
     int-to-byte v2, v2
 
@@ -695,9 +695,9 @@
 
     shr-long/2addr p1, v2
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    and-int/lit16 p1, p1, 0xff
+    and-int/lit16 p1, p2, 0xff
 
     int-to-byte p1, p1
 
@@ -1501,9 +1501,9 @@
 
     int-to-long v1, v1
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    int-to-byte p1, p1
+    int-to-byte p1, p2
 
     invoke-static {v0, v1, v2, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
 
@@ -1553,9 +1553,9 @@
 
     iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    int-to-byte p1, p1
+    int-to-byte p1, p2
 
     aput-byte p1, v0, v1
 

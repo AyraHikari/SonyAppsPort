@@ -55,9 +55,9 @@
 
 .field public static final common_signin_button_text_long:I = 0x7f100050
 
-.field public static final music_service_process_name:I = 0x7f1001e0
+.field public static final music_service_process_name:I = 0x7f1001e2
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f1002a5
+.field public static final status_bar_notification_info_overflow:I = 0x7f1002a7
 
 
 # direct methods

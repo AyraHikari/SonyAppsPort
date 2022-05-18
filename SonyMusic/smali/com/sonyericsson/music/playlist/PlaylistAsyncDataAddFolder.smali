@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private mFolderId:I
+.field private mFolderId:J
 
 .field private mPlaylistId:I
 
@@ -12,8 +12,8 @@
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 1
+.method public constructor <init>(IJ)V
+    .locals 2
 
     .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -23,8 +23,10 @@
     .line 11
     iput v0, p0, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataAddFolder;->mPlaylistId:I
 
+    const-wide/16 v0, -0x1
+
     .line 13
-    iput v0, p0, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataAddFolder;->mFolderId:I
+    iput-wide v0, p0, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataAddFolder;->mFolderId:J
 
     const/4 v0, 0x0
 
@@ -35,20 +37,20 @@
     iput p1, p0, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataAddFolder;->mPlaylistId:I
 
     .line 19
-    iput p2, p0, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataAddFolder;->mFolderId:I
+    iput-wide p2, p0, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataAddFolder;->mFolderId:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getFolderId()I
-    .locals 1
+.method public getFolderId()J
+    .locals 2
 
     .line 27
-    iget v0, p0, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataAddFolder;->mFolderId:I
+    iget-wide v0, p0, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataAddFolder;->mFolderId:J
 
-    return v0
+    return-wide v0
 .end method
 
 .method public getPlaylistId()I

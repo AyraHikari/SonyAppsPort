@@ -38,12 +38,12 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 1244
+    .line 1250
     sget-object v0, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1247
+    .line 1253
     sget-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;->NOTIFY_PLAYLIST_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->NOTIFY_PLAYLIST_URI:Landroid/net/Uri;
@@ -54,7 +54,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1240
+    .line 1246
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,7 +63,7 @@
 .method public static getContentUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 0
 
-    .line 1251
+    .line 1257
     invoke-static {p0}, Landroid/provider/MediaStore$Audio$Playlists;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0

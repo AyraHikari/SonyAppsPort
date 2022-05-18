@@ -181,9 +181,9 @@
 
     xor-long/2addr v1, v3
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
-    xor-int/2addr v0, v1
+    xor-int/2addr v0, v2
 
     return v0
 .end method

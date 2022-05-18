@@ -147,9 +147,9 @@
     .line 361
     const-class v0, Lokio/AsyncTimeout;
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    invoke-virtual {v0, v6, v7, v2}, Ljava/lang/Object;->wait(JI)V
+    invoke-virtual {v0, v6, v7, v3}, Ljava/lang/Object;->wait(JI)V
 
     return-object v1
 

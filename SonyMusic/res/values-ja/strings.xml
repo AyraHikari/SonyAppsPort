@@ -279,10 +279,13 @@
     <string name="music_delete_failed_one_or_many">いくつかのアイテムを削除できませんでした</string>
     <string name="music_delete_playlist_question">%1$sを削除しますか?　プレイリスト内の既存のコンテンツは保持されます。</string>
     <string name="music_delete_question">ストレージから%1$sを削除しますか?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"ミュージックアプリはバックグラウンドでスキャンを実行します。
+このスキャンは、曲数によっては10分以上かかる場合があります。バックグラウンドでのスキャンが完了するまで、曲とプレイリストは正しく表示または再生されません。"</string>
     <string name="music_dialog_body_sd_permission_access_txt">[次へ]を押して、移動先の画面でSDカードへのアクセスを許可してください。</string>
     <string name="music_dialog_body_sd_permission_retry_txt">"[再試行]を押して、もう一度お試しください。
 または、[キャンセル]を押して、もう一度最初からお試しください。"</string>
     <string name="music_dialog_button_next_txt">次へ</string>
+    <string name="music_dialog_title_bg_scan_notice">お知らせ</string>
     <string name="music_dialog_title_sd_permission_access_txt">SDカードへのアクセス許可が必要です</string>
     <string name="music_dialog_title_sd_permission_retry_txt">SDカードへのアクセス権限がありません</string>
     <string name="music_download">ダウンロード</string>
@@ -558,7 +561,7 @@ Eメールの添付ファイルを表示するため"</string>
     <string name="personal_data_collection_dialog_title">個人データ</string>
     <string name="personal_data_collection_screen_button_negative">後で行う</string>
     <string name="personal_data_collection_screen_button_positive">同意する</string>
-    <string name="personal_data_collection_screen_fine_print">ソニーは、サービス改善のため、<a href="entrance://personaldata">個人データ</a>を収集および統合します。ソニーは<a href="http://sonymobile.com/privacy">プライバシーポリシー</a>に従いデータを取り扱います。</string>
+    <string name="personal_data_collection_screen_fine_print">ソニーは、サービス改善のため、<a href="entrance://personaldata">個人データ</a>を収集および統合します。ソニーは<a href="https://www.sonymobile.com/privacy">プライバシーポリシー</a>に従いデータを取り扱います。</string>
     <string name="personal_data_collection_screen_fine_print_us">ソニーは、サービス改善のため、<a href="entrance://personaldata">個人データ</a>を収集および統合します。ソニーは<a href="https://www.sonymobile.com/us/legal/privacy">プライバシーポリシー</a>(<a href="https://www.sonymobile.com/us/legal/privacy#10">カリフォルニア州 プライバシー通知</a>)に従いデータを取り扱います。</string>
     <string name="personal_data_collection_screen_text">音楽の好みの傾向をソニーと共有することで、ミュージックアプリの改善に役立ちます。</string>
     <string name="play_queue_open">開く</string>

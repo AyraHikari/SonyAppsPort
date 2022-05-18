@@ -421,9 +421,9 @@
 
     move-result-wide v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    int-to-short v2, v2
+    int-to-short v2, v3
 
     invoke-direct {v6, v0, v1, v2}, Lokio/GzipSource;->checkEqual(Ljava/lang/String;II)V
 
@@ -459,9 +459,9 @@
 
     move-result-wide v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    invoke-direct {p0, v0, v1, v2}, Lokio/GzipSource;->checkEqual(Ljava/lang/String;II)V
+    invoke-direct {p0, v0, v1, v3}, Lokio/GzipSource;->checkEqual(Ljava/lang/String;II)V
 
     const-string v0, "ISIZE"
 
@@ -478,9 +478,9 @@
 
     move-result-wide v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    invoke-direct {p0, v0, v1, v2}, Lokio/GzipSource;->checkEqual(Ljava/lang/String;II)V
+    invoke-direct {p0, v0, v1, v3}, Lokio/GzipSource;->checkEqual(Ljava/lang/String;II)V
 
     return-void
 .end method

@@ -185,16 +185,16 @@
 
     move-result-wide v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
     .line 68
-    iget-object v3, p0, Lokio/InflaterSource;->inflater:Ljava/util/zip/Inflater;
+    iget-object v2, p0, Lokio/InflaterSource;->inflater:Ljava/util/zip/Inflater;
 
     iget-object v4, v1, Lokio/Segment;->data:[B
 
     iget v5, v1, Lokio/Segment;->limit:I
 
-    invoke-virtual {v3, v4, v5, v2}, Ljava/util/zip/Inflater;->inflate([BII)I
+    invoke-virtual {v2, v4, v5, v3}, Ljava/util/zip/Inflater;->inflate([BII)I
 
     move-result v2
 

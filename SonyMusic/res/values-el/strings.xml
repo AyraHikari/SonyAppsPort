@@ -279,9 +279,12 @@
     <string name="music_delete_failed_one_or_many">Δεν ήταν δυνατή η διαγραφή κάποιων στοιχείων</string>
     <string name="music_delete_playlist_question">Διαγραφή του %1$s; Το περιεχόμενο του playlist δεν θα επηρεαστεί.</string>
     <string name="music_delete_question">Διαγραφή του %1$s από τη μνήμη;</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Η Μουσική θα εκτελέσει σάρωση στο παρασκήνιο.
+Η σάρωση μπορεί να διαρκέσει πάνω από 10 λεπτά. Τα τραγούδια και τα playlist δεν εμφανίζονται ούτε αναπαράγονται σωστά μέχρι να ολοκληρωθεί η σάρωση."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Για να χρησιμοποιήσετε την κάρτα SD ως μνήμη δεδομένων, στην επόμενη οθόνη πρέπει να εκχωρήσετε άδεια για πρόσβαση στην κάρτα SD.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Πατήστε ΕΠΑΝΑΛΗΨΗ για να προσπαθήσετε ξανά ή πατήστε ΑΚΥΡΟ και ξεκινήστε από την αρχή.</string>
     <string name="music_dialog_button_next_txt">Επόμενο</string>
+    <string name="music_dialog_title_bg_scan_notice">Ειδοποίηση</string>
     <string name="music_dialog_title_sd_permission_access_txt">Απαιτείται άδεια για πρόσβαση στην κάρτα SD</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Η άδεια για πρόσβαση στην κάρτα SD δεν εκχωρήθηκε</string>
     <string name="music_download">Λήψη</string>
@@ -556,7 +559,7 @@
     <string name="personal_data_collection_dialog_title">Προσωπικά δεδομένα</string>
     <string name="personal_data_collection_screen_button_negative">ΟΧΙ ΤΩΡΑ</string>
     <string name="personal_data_collection_screen_button_positive">ΣΥΜΦΩΝΩ</string>
-    <string name="personal_data_collection_screen_fine_print">Η Sony θα συλλέξει και θα συνδυάσει τα <a href="entrance://personaldata">προσωπικά δεδομένα</a> σας για να βελτιώσει την υπηρεσία. Η Sony θα χειριστεί τα δεδομένα σας σύμφωνα με την <a href="http://sonymobile.com/privacy">Πολιτική Απορρήτου</a></string>
+    <string name="personal_data_collection_screen_fine_print">Η Sony θα συλλέξει και θα συνδυάσει τα <a href="entrance://personaldata">προσωπικά δεδομένα</a> σας για να βελτιώσει την υπηρεσία. Η Sony θα χειριστεί τα δεδομένα σας σύμφωνα με την <a href="https://www.sonymobile.com/privacy">Πολιτική Απορρήτου</a></string>
     <string name="personal_data_collection_screen_fine_print_us">Η Sony θα συλλέξει και θα συνδυάσει τα <a href="entrance://personaldata">προσωπικά δεδομένα</a> σας για να βελτιώσει την υπηρεσία. Η Sony θα χειριστεί τα δεδομένα σας σύμφωνα με την <a href="https://www.sonymobile.com/us/legal/privacy">Πολιτική Απορρήτου</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Δήλωση απορρήτου για την Καλιφόρνια</a>)</string>
     <string name="personal_data_collection_screen_text">Βοηθήστε μας να βελτιώσουμε την εφαρμογή Μουσική. Μοιραστείτε τις συνήθειες ακρόασης με την Sony.</string>
     <string name="play_queue_open">Άνοιγμα</string>

@@ -79,7 +79,7 @@
 
 # virtual methods
 .method final zza(I[BII)I
-    .locals 17
+    .locals 15
 
     move-object/from16 v0, p2
 
@@ -102,7 +102,7 @@
 
     const/4 v6, 0x0
 
-    if-ltz v3, :cond_12
+    if-ltz v3, :cond_13
 
     int-to-long v7, v1
 
@@ -110,25 +110,25 @@
 
     sub-long/2addr v1, v7
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
-    const/16 v2, 0x10
+    const/16 v1, 0x10
 
     const-wide/16 v9, 0x1
 
-    if-ge v1, v2, :cond_0
+    if-ge v2, v1, :cond_0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     goto :goto_1
 
     :cond_0
     move-wide v11, v7
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_2
+    if-ge v1, v2, :cond_2
 
     add-long v13, v11, v9
 
@@ -142,209 +142,216 @@
     goto :goto_1
 
     :cond_1
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     move-wide v11, v13
 
     goto :goto_0
 
     :cond_2
-    move v2, v1
+    move v1, v2
 
     :goto_1
-    sub-int/2addr v1, v2
+    sub-int/2addr v2, v1
 
-    int-to-long v2, v2
+    int-to-long v11, v1
 
-    add-long/2addr v7, v2
+    add-long/2addr v7, v11
 
-    :cond_3
     :goto_2
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :goto_3
-    if-lez v1, :cond_5
+    if-lez v2, :cond_3
 
-    add-long v2, v7, v9
+    add-long v11, v7, v9
 
     .line 20
     invoke-static {v0, v7, v8}, Lcom/google/android/gms/internal/measurement/zzkt;->zza([BJ)B
 
-    move-result v7
+    move-result v1
 
-    if-ltz v7, :cond_4
+    if-ltz v1, :cond_4
 
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 v2, v2, -0x1
 
-    move-wide v15, v2
-
-    move v2, v7
-
-    move-wide v7, v15
+    move-wide v7, v11
 
     goto :goto_3
 
+    :cond_3
+    move-wide v11, v7
+
     :cond_4
-    move-wide v15, v2
-
-    move v2, v7
-
-    move-wide v7, v15
-
-    :cond_5
-    if-nez v1, :cond_6
+    if-nez v2, :cond_5
 
     return v6
 
-    :cond_6
-    add-int/lit8 v1, v1, -0x1
+    :cond_5
+    add-int/lit8 v2, v2, -0x1
 
     const/16 v3, -0x20
 
-    const/16 v11, -0x41
+    const/16 v7, -0x41
 
-    const/4 v12, -0x1
+    const/4 v8, -0x1
 
-    if-ge v2, v3, :cond_a
+    if-ge v1, v3, :cond_9
 
-    if-nez v1, :cond_7
+    if-nez v2, :cond_6
 
-    return v2
+    return v1
 
-    :cond_7
-    add-int/lit8 v1, v1, -0x1
+    :cond_6
+    add-int/lit8 v2, v2, -0x1
 
     const/16 v3, -0x3e
 
-    if-lt v2, v3, :cond_9
+    if-lt v1, v3, :cond_8
 
-    add-long v2, v7, v9
+    add-long v13, v11, v9
 
     .line 28
-    invoke-static {v0, v7, v8}, Lcom/google/android/gms/internal/measurement/zzkt;->zza([BJ)B
+    invoke-static {v0, v11, v12}, Lcom/google/android/gms/internal/measurement/zzkt;->zza([BJ)B
 
-    move-result v7
+    move-result v1
 
-    if-le v7, v11, :cond_8
+    if-le v1, v7, :cond_7
 
     goto :goto_4
 
-    :cond_8
-    move-wide v7, v2
+    :cond_7
+    move-wide v7, v13
 
     goto :goto_2
 
-    :cond_9
+    :cond_8
     :goto_4
-    return v12
+    return v8
 
-    :cond_a
+    :cond_9
     const/16 v13, -0x10
 
-    if-ge v2, v13, :cond_f
+    if-ge v1, v13, :cond_f
 
-    if-ge v1, v4, :cond_b
+    if-ge v2, v4, :cond_a
 
     .line 32
-    invoke-static {v0, v2, v7, v8, v1}, Lcom/google/android/gms/internal/measurement/zzlc;->zza([BIJI)I
+    invoke-static {v0, v1, v11, v12, v2}, Lcom/google/android/gms/internal/measurement/zzlc;->zza([BIJI)I
 
     move-result v0
 
     return v0
 
-    :cond_b
-    add-int/lit8 v1, v1, -0x2
+    :cond_a
+    add-int/lit8 v2, v2, -0x2
 
-    add-long v13, v7, v9
+    add-long v13, v11, v9
 
     .line 34
-    invoke-static {v0, v7, v8}, Lcom/google/android/gms/internal/measurement/zzkt;->zza([BJ)B
+    invoke-static {v0, v11, v12}, Lcom/google/android/gms/internal/measurement/zzkt;->zza([BJ)B
 
-    move-result v7
+    move-result v11
 
-    if-gt v7, v11, :cond_e
+    if-gt v11, v7, :cond_e
 
-    const/16 v8, -0x60
+    const/16 v12, -0x60
 
-    if-ne v2, v3, :cond_c
+    if-ne v1, v3, :cond_b
 
-    if-lt v7, v8, :cond_e
+    if-lt v11, v12, :cond_e
 
-    :cond_c
+    :cond_b
     const/16 v3, -0x13
 
-    if-ne v2, v3, :cond_d
+    if-ne v1, v3, :cond_c
 
-    if-ge v7, v8, :cond_e
+    if-ge v11, v12, :cond_e
 
-    :cond_d
-    add-long v7, v13, v9
+    :cond_c
+    add-long v11, v13, v9
 
     .line 35
     invoke-static {v0, v13, v14}, Lcom/google/android/gms/internal/measurement/zzkt;->zza([BJ)B
 
-    move-result v2
+    move-result v1
 
-    if-le v2, v11, :cond_3
+    if-le v1, v7, :cond_d
+
+    goto :goto_5
+
+    :cond_d
+    move-wide v7, v11
+
+    goto :goto_2
 
     :cond_e
-    return v12
+    :goto_5
+    return v8
 
     :cond_f
-    if-ge v1, v5, :cond_10
+    if-ge v2, v5, :cond_10
 
     .line 39
-    invoke-static {v0, v2, v7, v8, v1}, Lcom/google/android/gms/internal/measurement/zzlc;->zza([BIJI)I
+    invoke-static {v0, v1, v11, v12, v2}, Lcom/google/android/gms/internal/measurement/zzlc;->zza([BIJI)I
 
     move-result v0
 
     return v0
 
     :cond_10
-    add-int/lit8 v1, v1, -0x3
+    add-int/lit8 v2, v2, -0x3
 
-    add-long v13, v7, v9
+    add-long v13, v11, v9
 
     .line 41
-    invoke-static {v0, v7, v8}, Lcom/google/android/gms/internal/measurement/zzkt;->zza([BJ)B
+    invoke-static {v0, v11, v12}, Lcom/google/android/gms/internal/measurement/zzkt;->zza([BJ)B
 
     move-result v3
 
-    if-gt v3, v11, :cond_11
+    if-gt v3, v7, :cond_12
 
-    shl-int/lit8 v2, v2, 0x1c
+    shl-int/lit8 v1, v1, 0x1c
 
     add-int/lit8 v3, v3, 0x70
 
-    add-int/2addr v2, v3
+    add-int/2addr v1, v3
 
-    shr-int/lit8 v2, v2, 0x1e
+    shr-int/lit8 v1, v1, 0x1e
 
-    if-nez v2, :cond_11
+    if-nez v1, :cond_12
 
-    add-long v2, v13, v9
+    add-long v11, v13, v9
 
     .line 42
     invoke-static {v0, v13, v14}, Lcom/google/android/gms/internal/measurement/zzkt;->zza([BJ)B
 
-    move-result v7
+    move-result v1
 
-    if-gt v7, v11, :cond_11
+    if-gt v1, v7, :cond_12
 
-    add-long v7, v2, v9
+    add-long v13, v11, v9
 
     .line 43
-    invoke-static {v0, v2, v3}, Lcom/google/android/gms/internal/measurement/zzkt;->zza([BJ)B
+    invoke-static {v0, v11, v12}, Lcom/google/android/gms/internal/measurement/zzkt;->zza([BJ)B
 
-    move-result v2
+    move-result v1
 
-    if-le v2, v11, :cond_3
+    if-le v1, v7, :cond_11
+
+    goto :goto_6
 
     :cond_11
-    return v12
+    move-wide v7, v13
+
+    goto/16 :goto_2
+
+    :cond_12
+    :goto_6
+    return v8
 
     .line 3
-    :cond_12
+    :cond_13
     new-instance v3, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     new-array v5, v5, [Ljava/lang/Object;

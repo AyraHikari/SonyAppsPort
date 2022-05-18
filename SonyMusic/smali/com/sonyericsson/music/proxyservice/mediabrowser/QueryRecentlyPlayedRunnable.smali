@@ -89,7 +89,7 @@
     :pswitch_0
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/mediabrowser/QueryRunnable;->mAppContext:Landroid/content/Context;
 
-    const p2, 0x7f100153
+    const p2, 0x7f100155
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -101,7 +101,7 @@
     :pswitch_1
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/mediabrowser/QueryRunnable;->mAppContext:Landroid/content/Context;
 
-    const p2, 0x7f10014f
+    const p2, 0x7f100151
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -151,7 +151,7 @@
     :pswitch_4
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/mediabrowser/QueryRunnable;->mAppContext:Landroid/content/Context;
 
-    const p2, 0x7f1001d9
+    const p2, 0x7f1001db
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

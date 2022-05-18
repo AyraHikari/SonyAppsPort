@@ -15,7 +15,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 29
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,14 +30,14 @@
 
     if-eqz p1, :cond_5
 
-    .line 202
+    .line 212
     invoke-static {p1}, Lcom/sonyericsson/music/common/DBUtils;->isMediaStoreUri(Landroid/net/Uri;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 204
+    .line 214
     invoke-static {p1}, Lcom/sonyericsson/music/common/MediaStoreUriMatcher;->getUriType(Landroid/net/Uri;)I
 
     move-result v1
@@ -52,7 +52,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 208
+    .line 218
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object p1
@@ -70,7 +70,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 210
+    .line 220
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -93,7 +93,7 @@
     :goto_0
     if-eq p1, v5, :cond_5
 
-    .line 215
+    .line 225
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists;->getContentUri()Landroid/net/Uri;
 
     move-result-object v2
@@ -104,27 +104,27 @@
 
     sget-object v5, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->FILTER_MEDIASTORE_IDS:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;
 
-    .line 216
+    .line 226
     invoke-virtual {v5}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getParameter()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 217
+    .line 227
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 216
+    .line 226
     invoke-virtual {v2, v5, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p1
 
-    .line 217
+    .line 227
     invoke-virtual {p1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v6
 
-    .line 220
+    .line 230
     :try_start_0
     new-array v7, v3, [Ljava/lang/String;
 
@@ -148,7 +148,7 @@
 
     if-eqz p0, :cond_3
 
-    .line 222
+    .line 232
     :try_start_1
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -158,7 +158,7 @@
 
     const-string p1, "_id"
 
-    .line 223
+    .line 233
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p1
@@ -169,7 +169,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 225
+    .line 235
     invoke-static {p1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$Members;->getContentUri(I)Landroid/net/Uri;
 
     move-result-object p1
@@ -178,7 +178,7 @@
 
     goto :goto_1
 
-    .line 227
+    .line 237
     :cond_2
     invoke-static {p1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists;->getContentUri(I)Landroid/net/Uri;
 
@@ -199,7 +199,7 @@
     :goto_1
     if-eqz p0, :cond_5
 
-    .line 232
+    .line 242
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     goto :goto_3
@@ -214,7 +214,7 @@
 
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
-    .line 234
+    .line 244
     :cond_4
     throw p1
 
@@ -232,14 +232,14 @@
 
     if-eqz p1, :cond_5
 
-    .line 252
+    .line 262
     invoke-static {p1}, Lcom/sonyericsson/music/common/DBUtils;->isMusicInfoStoreUri(Landroid/net/Uri;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 254
+    .line 264
     invoke-static {p1}, Lcom/sonyericsson/music/common/MediaStoreUriMatcher;->getUriType(Landroid/net/Uri;)I
 
     move-result v1
@@ -254,7 +254,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 258
+    .line 268
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object p1
@@ -272,7 +272,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 260
+    .line 270
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -295,7 +295,7 @@
     :goto_0
     if-eq p1, v5, :cond_5
 
-    .line 265
+    .line 275
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists;->getContentUri()Landroid/net/Uri;
 
     move-result-object v2
@@ -306,27 +306,27 @@
 
     sget-object v5, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->FILTER_PLAYLIST_IDS:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;
 
-    .line 266
+    .line 276
     invoke-virtual {v5}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getParameter()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 267
+    .line 277
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 266
+    .line 276
     invoke-virtual {v2, v5, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p1
 
-    .line 267
+    .line 277
     invoke-virtual {p1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v6
 
-    .line 270
+    .line 280
     :try_start_0
     new-array v7, v3, [Ljava/lang/String;
 
@@ -350,7 +350,7 @@
 
     if-eqz p0, :cond_3
 
-    .line 272
+    .line 282
     :try_start_1
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -360,7 +360,7 @@
 
     const-string p1, "mediastore_id"
 
-    .line 273
+    .line 283
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p1
@@ -375,7 +375,7 @@
 
     int-to-long v1, p1
 
-    .line 275
+    .line 285
     invoke-static {v0, v1, v2}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists$Members;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
 
     move-result-object p1
@@ -384,16 +384,16 @@
 
     goto :goto_1
 
-    .line 278
+    .line 288
     :cond_2
     sget-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 279
+    .line 289
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 278
+    .line 288
     invoke-static {v0, p1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -413,7 +413,7 @@
     :goto_1
     if-eqz p0, :cond_5
 
-    .line 284
+    .line 294
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     goto :goto_3
@@ -428,7 +428,7 @@
 
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
-    .line 286
+    .line 296
     :cond_4
     throw p1
 
@@ -440,45 +440,124 @@
 .method static createOrGetPlaylistData(Landroid/content/ContentResolver;Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;
     .locals 6
 
-    .line 76
-    invoke-static {p0, p1}, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils;->getPlaylistData(Landroid/content/ContentResolver;Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    if-nez p1, :cond_0
 
-    if-nez v0, :cond_0
+    return-object v0
 
     .line 78
-    new-instance v1, Landroid/content/ContentValues;
+    :cond_0
+    sget-boolean v1, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
 
-    invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
+    if-eqz v1, :cond_5
 
-    const-string v2, "name"
+    const/4 v1, -0x1
 
     .line 79
-    invoke-virtual {v1, v2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    const/4 v2, 0x0
+    move-result v2
 
-    .line 82
+    const v3, -0x4c4ae7e9
+
+    if-eq v2, v3, :cond_3
+
+    const v3, -0x48c9c3ce
+
+    if-eq v2, v3, :cond_2
+
+    const v3, 0x5f5e609d
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const-string v2, "Music_favorites"
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_2
+    const-string v2, "Music_most_played_tracks"
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    const-string v2, "Music_recently_played_tracks"
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    const/4 v1, 0x2
+
+    :cond_4
+    :goto_0
+    packed-switch v1, :pswitch_data_0
+
+    goto :goto_1
+
+    :pswitch_0
+    return-object v0
+
+    .line 86
+    :cond_5
+    :goto_1
+    invoke-static {p0, p1}, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils;->getPlaylistData(Landroid/content/ContentResolver;Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;
+
+    move-result-object v1
+
+    if-nez v1, :cond_6
+
+    .line 88
+    new-instance v2, Landroid/content/ContentValues;
+
+    invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
+
+    const-string v3, "name"
+
+    .line 89
+    invoke-virtual {v2, v3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 92
     :try_start_0
     sget-object v3, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    invoke-virtual {p0, v3, v1}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
+    invoke-virtual {p0, v3, v2}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    move-result-object v2
+    move-result-object v0
     :try_end_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_2
 
     :catch_0
-    move-exception v1
+    move-exception v2
 
     const-string v3, "SemcMusicPlayer"
 
-    .line 95
+    .line 105
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -495,76 +574,83 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_0
+    goto :goto_2
 
     :catch_1
-    move-exception v1
+    move-exception v2
 
     const-string v3, "SemcMusicPlayer"
-
-    .line 89
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Error inserting playlist into "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v5, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_0
-
-    :catch_2
-    move-exception v1
-
-    const-string v3, "SemcMusicPlayer"
-
-    .line 84
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Error inserting playlist into "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v5, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_0
-    if-eqz v2, :cond_0
 
     .line 99
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Error inserting playlist into "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v5, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v2
+
+    const-string v3, "SemcMusicPlayer"
+
+    .line 94
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Error inserting playlist into "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v5, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_2
+    if-eqz v0, :cond_6
+
+    .line 109
     invoke-static {p0, p1}, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils;->getPlaylistData(Landroid/content/ContentResolver;Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;
 
-    move-result-object v0
+    move-result-object v1
 
-    :cond_0
-    return-object v0
+    :cond_6
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method static createSmartPlaylist(Landroid/content/ContentResolver;Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)I
     .locals 2
 
-    .line 118
+    .line 128
     sget-object v0, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$1;->$SwitchMap$com$sonyericsson$music$common$SmartPlaylistUtils$SmartPlaylistType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -584,7 +670,7 @@
     :pswitch_0
     const-string v1, "WALKMAN favorites"
 
-    .line 133
+    .line 143
     invoke-virtual {p1}, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;->getMediaProviderName()Ljava/lang/String;
 
     move-result-object p1
@@ -594,7 +680,7 @@
     :pswitch_1
     const-string v1, "WALKMAN recently played tracks"
 
-    .line 127
+    .line 137
     invoke-virtual {p1}, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;->getMediaProviderName()Ljava/lang/String;
 
     move-result-object p1
@@ -604,7 +690,7 @@
     :pswitch_2
     const-string v1, "WALKMAN most played tracks"
 
-    .line 121
+    .line 131
     invoke-virtual {p1}, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;->getMediaProviderName()Ljava/lang/String;
 
     move-result-object p1
@@ -616,7 +702,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 139
+    .line 149
     invoke-static {p0, v1, p1}, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils;->renameSmartPlaylist(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
@@ -629,14 +715,14 @@
     :goto_1
     if-ne v1, v0, :cond_2
 
-    .line 143
+    .line 153
     invoke-static {p0, p1}, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils;->createOrGetPlaylistData(Landroid/content/ContentResolver;Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 144
+    .line 154
     iget v0, p0, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;->mId:I
 
     move v1, v0
@@ -669,14 +755,14 @@
 
     const/4 v0, 0x1
 
-    .line 162
+    .line 172
     new-array v4, v0, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
     aput-object p1, v4, v1
 
-    .line 166
+    .line 176
     sget-object p1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     const/4 v2, 0x4
@@ -715,7 +801,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 172
+    .line 182
     :try_start_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -725,40 +811,40 @@
 
     const-string p1, "_id"
 
-    .line 173
+    .line 183
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p1
 
     const-string v0, "_data"
 
-    .line 174
+    .line 184
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
     const-string v1, "date_added"
 
-    .line 175
+    .line 185
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
 
     const-string v2, "date_modified"
 
-    .line 177
+    .line 187
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 179
+    .line 189
     new-instance v3, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;
 
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p1
 
-    .line 180
+    .line 190
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -767,7 +853,7 @@
 
     move-result v1
 
-    .line 181
+    .line 191
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
@@ -776,7 +862,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 184
+    .line 194
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     return-object v3
@@ -791,7 +877,7 @@
 
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
-    .line 185
+    .line 195
     throw p1
 
     :cond_1
@@ -814,10 +900,10 @@
 
     const/4 v1, 0x1
 
-    .line 46
+    .line 47
     new-array v6, v1, [Ljava/lang/String;
 
-    .line 47
+    .line 48
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -826,7 +912,7 @@
 
     aput-object p1, v6, v2
 
-    .line 50
+    .line 51
     sget-object v3, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     new-array v4, v1, [Ljava/lang/String;
@@ -845,7 +931,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 56
+    .line 57
     :try_start_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -855,12 +941,12 @@
 
     const-string p1, "name"
 
-    .line 57
+    .line 58
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 58
+    .line 59
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -869,7 +955,7 @@
 
     move-object v0, p1
 
-    .line 61
+    .line 62
     :cond_0
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
@@ -880,7 +966,7 @@
 
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
-    .line 62
+    .line 63
     throw p1
 
     :cond_1
@@ -891,12 +977,12 @@
 .method static renameSmartPlaylist(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)I
     .locals 3
 
-    .line 297
+    .line 307
     invoke-static {p0, p2}, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils;->getPlaylistData(Landroid/content/ContentResolver;Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;
 
     move-result-object v0
 
-    .line 298
+    .line 308
     invoke-static {p0, p1}, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils;->getPlaylistData(Landroid/content/ContentResolver;Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;
 
     move-result-object v1
@@ -914,7 +1000,7 @@
 
     const/4 p2, 0x1
 
-    .line 307
+    .line 317
     new-array p2, p2, [Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -927,45 +1013,45 @@
 
     aput-object v1, p2, v0
 
-    .line 308
+    .line 318
     sget-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p0, v0, p1, p2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
     return v2
 
-    .line 312
+    .line 322
     :cond_1
     iget v0, v1, Lcom/sonyericsson/music/metadata/provider/MediastorePlaylistUtils$MediaStorePlaylistCreatedData;->mId:I
 
     if-le v0, v2, :cond_2
 
-    .line 315
+    .line 325
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
     const-string v2, "name"
 
-    .line 316
+    .line 326
     invoke-virtual {v1, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 318
+    .line 328
     sget-object p2, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 319
+    .line 329
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 318
+    .line 328
     invoke-static {p2, v2}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p2
 
     const/4 v2, 0x0
 
-    .line 322
+    .line 332
     :try_start_0
     invoke-virtual {p0, p2, v1, v2, v2}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_0
@@ -980,7 +1066,7 @@
 
     const-string p2, "SemcMusicPlayer"
 
-    .line 335
+    .line 345
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1012,7 +1098,7 @@
 
     const-string p2, "SemcMusicPlayer"
 
-    .line 329
+    .line 339
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1044,7 +1130,7 @@
 
     const-string p2, "SemcMusicPlayer"
 
-    .line 324
+    .line 334
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

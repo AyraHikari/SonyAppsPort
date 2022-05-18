@@ -338,7 +338,7 @@
     return-object v0
 
     :pswitch_0
-    const v0, 0x7f1001ce
+    const v0, 0x7f1001d0
 
     .line 140
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -348,7 +348,7 @@
     return-object v0
 
     :pswitch_1
-    const v0, 0x7f1001cf
+    const v0, 0x7f1001d1
 
     .line 138
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;

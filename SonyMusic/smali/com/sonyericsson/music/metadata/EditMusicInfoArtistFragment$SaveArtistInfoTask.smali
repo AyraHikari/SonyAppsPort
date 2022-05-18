@@ -43,15 +43,15 @@
 
     move-result-wide p1
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, -0x1
+    const/4 p2, -0x1
 
     :goto_0
-    if-eq p1, v1, :cond_1
+    if-eq p2, v1, :cond_1
 
     goto :goto_1
 

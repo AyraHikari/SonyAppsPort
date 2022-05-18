@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 597
+    .line 623
     invoke-static {}, Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;->values()[Lcom/sonyericsson/music/playlist/PlaylistOperation$ObjectType;
 
     move-result-object v0

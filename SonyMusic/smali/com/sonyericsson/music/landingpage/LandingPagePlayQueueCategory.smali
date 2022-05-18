@@ -808,7 +808,7 @@
     :goto_0
     iget-object p1, p0, Lcom/sonyericsson/music/landingpage/LandingPageCategory;->mMusicActivity:Lcom/sonyericsson/music/MusicActivity;
 
-    const v1, 0x7f10016d
+    const v1, 0x7f10016f
 
     .line 181
     invoke-virtual {p1, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;

@@ -98,7 +98,7 @@
 
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment$3;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
 
-    const v2, 0x7f10027e
+    const v2, 0x7f100280
 
     invoke-virtual {v1, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 

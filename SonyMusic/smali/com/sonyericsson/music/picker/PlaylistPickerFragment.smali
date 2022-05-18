@@ -128,7 +128,7 @@
 .method protected getNoContentText()Ljava/lang/String;
     .locals 1
 
-    const v0, 0x7f100216
+    const v0, 0x7f100218
 
     .line 83
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -294,9 +294,9 @@
 
     move-result-object p3
 
-    long-to-int p4, p4
+    long-to-int p5, p4
 
-    invoke-direct {p1, p3, p4}, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {p1, p3, p5}, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;-><init>(Landroid/app/Activity;I)V
 
     sget-object p3, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 

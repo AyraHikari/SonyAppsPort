@@ -151,9 +151,9 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    int-to-byte v0, v0
+    int-to-byte v0, v1
 
     return v0
 .end method
@@ -258,9 +258,9 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    return v0
+    return v1
 .end method
 
 .method public final longValue()J
@@ -292,9 +292,9 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    int-to-short v0, v0
+    int-to-short v0, v1
 
     return v0
 .end method

@@ -279,9 +279,12 @@ Harap catat bahwa aplikasi Musik mungkin tidak berfungsi dengan baik tanpa akses
     <string name="music_delete_failed_one_or_many">Beberapa item tidak dapat dihapus</string>
     <string name="music_delete_playlist_question">Hapus %1$s? Konten daftar putar tidak akan terpengaruh.</string>
     <string name="music_delete_question">Hapus %1$s dari penyimpanan?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Apl Musik akan memindai latar belakang guna membangun kembali basis data musik.
+Pemindaian akan membutuhkan lebih dari 10 menit tergantung pada jumlah lagu. Lagu dan daftar putar tidak ditampilkan atau diputar dengan benar selama pemindaian."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Untuk menggunakan kartu SD sebagai penyimpanan data, berikan izin untuk mengakses kartu SD di layar berikutnya.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Ketuk COBA LAGI untuk mencoba lagi, atau ketuk BATAL lalu mulai lagi dari awal.</string>
     <string name="music_dialog_button_next_txt">Selanjutnya</string>
+    <string name="music_dialog_title_bg_scan_notice">Pemberitahuan</string>
     <string name="music_dialog_title_sd_permission_access_txt">Perlu izin untuk mengakses kartu SD</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Izin untuk akses kartu SD tidak diberikan</string>
     <string name="music_download">Unduh</string>
@@ -556,7 +559,7 @@ Untuk mengakses konten pada perangkat Anda"</string>
     <string name="personal_data_collection_dialog_title">Data pribadi</string>
     <string name="personal_data_collection_screen_button_negative">TIDAK SEKARANG</string>
     <string name="personal_data_collection_screen_button_positive">SAYA SETUJU</string>
-    <string name="personal_data_collection_screen_fine_print">Sony akan mengumpulkan dan menggabungkan <a href="entrance://personaldata">data pribadi</a> Anda agar dapat meningkatkan layanan. Sony akan menangani data Anda berdasarkan <a href="http://sonymobile.com/privacy">Kebijakan Privasi</a> kami</string>
+    <string name="personal_data_collection_screen_fine_print">Sony akan mengumpulkan dan menggabungkan <a href="entrance://personaldata">data pribadi</a> Anda agar dapat meningkatkan layanan. Sony akan menangani data Anda berdasarkan <a href="https://www.sonymobile.com/privacy">Kebijakan Privasi</a> kami</string>
     <string name="personal_data_collection_screen_fine_print_us">Sony akan mengumpulkan dan menggabungkan <a href="entrance://personaldata">data pribadi</a> Anda agar dapat meningkatkan layanan. Sony akan menangani data Anda berdasarkan <a href="https://www.sonymobile.com/us/legal/privacy">Kebijakan Privasi</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Pemberitahuan Privasi CA</a>) kami</string>
     <string name="personal_data_collection_screen_text">Bantu kami menjadikan aplikasi Musik lebih baik dengan berbagi kebiasaan mendengarkan dengan Sony.</string>
     <string name="play_queue_open">Buka</string>

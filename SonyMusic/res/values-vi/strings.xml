@@ -279,9 +279,12 @@ Xin lưu ý rằng ứng dụng Nhạc có thể không hoạt động đúng n�
     <string name="music_delete_failed_one_or_many">Không thể xóa một số mục</string>
     <string name="music_delete_playlist_question">Xóa %1$s? Nội dung của danh sách phát sẽ không bị ảnh hưởng.</string>
     <string name="music_delete_question">Xóa %1$s khỏi bộ nhớ?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Ứng dụng Âm nhạc sẽ quét nền.
+Hoạt động quét này có thể mất hơn 10 phút. Các bài hát và danh sách phát không được hiển thị hoặc phát chính xác cho đến khi quá trình quét nền hoàn tất."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Để dùng thẻ SD làm bộ nhớ dữ liệu, hãy cho phép truy cập thẻ SD trên màn hình tiếp theo.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Nhấn THỬ LẠI để thử lại hoặc nhấn HỦY và bắt đầu lại từ đầu.</string>
     <string name="music_dialog_button_next_txt">Tiếp theo</string>
+    <string name="music_dialog_title_bg_scan_notice">Thông báo</string>
     <string name="music_dialog_title_sd_permission_access_txt">Cần có quyền truy cập thẻ SD</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Không thể cấp quyền truy cập thẻ SD</string>
     <string name="music_download">Tải xuống</string>
@@ -556,7 +559,7 @@ Xin lưu ý rằng ứng dụng Nhạc có thể không hoạt động đúng n�
     <string name="personal_data_collection_dialog_title">Dữ liệu cá nhân</string>
     <string name="personal_data_collection_screen_button_negative">ĐỂ SAU</string>
     <string name="personal_data_collection_screen_button_positive">TÔI ĐỒNG Ý</string>
-    <string name="personal_data_collection_screen_fine_print">Sony sẽ thu thập và kết hợp <a href="entrance://personaldata">dữ liệu cá nhân</a> của bạn để cải thiện dịch vụ. Sony sẽ xử lý dữ liệu của bạn theo <a href="http://sonymobile.com/privacy">Chính sách bảo mật</a> của chúng tôi</string>
+    <string name="personal_data_collection_screen_fine_print">Sony sẽ thu thập và kết hợp <a href="entrance://personaldata">dữ liệu cá nhân</a> của bạn để cải thiện dịch vụ. Sony sẽ xử lý dữ liệu của bạn theo <a href="https://www.sonymobile.com/privacy">Chính sách bảo mật</a> của chúng tôi</string>
     <string name="personal_data_collection_screen_fine_print_us">Sony sẽ thu thập và kết hợp <a href="entrance://personaldata">dữ liệu cá nhân</a> của bạn để cải thiện dịch vụ. Sony sẽ xử lý dữ liệu của bạn theo <a href="https://www.sonymobile.com/us/legal/privacy">Chính sách bảo mật</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Thông báo bảo mật tại California</a>) của chúng tôi</string>
     <string name="personal_data_collection_screen_text">Giúp chúng tôi cải thiện ứng dụng Nhạc bằng cách chia sẻ thói quen nghe nhạc của bạn với Sony.</string>
     <string name="play_queue_open">Mở</string>

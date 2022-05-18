@@ -34,10 +34,10 @@
 .method constructor <init>(Landroid/os/Looper;Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;)V
     .locals 0
 
-    .line 3425
+    .line 4117
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 3426
+    .line 4118
     iput-object p2, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider$MusicInfoSyncHandler;->mMusicInfoprovider:Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;
 
     return-void
@@ -46,7 +46,7 @@
 .method public static createMusicInfoSyncHandler(Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;)Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider$MusicInfoSyncHandler;
     .locals 3
 
-    .line 3418
+    .line 4110
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "MusicInfoProvider:SyncHandler"
@@ -55,10 +55,10 @@
 
     invoke-direct {v0, v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 3420
+    .line 4112
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 3421
+    .line 4113
     new-instance v1, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider$MusicInfoSyncHandler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -75,14 +75,14 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 3432
+    .line 4124
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 3447
+    .line 4139
     :pswitch_0
     iget-object p1, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider$MusicInfoSyncHandler;->mMusicInfoprovider:Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;
 
@@ -90,7 +90,7 @@
 
     goto :goto_0
 
-    .line 3443
+    .line 4135
     :pswitch_1
     iget-object p1, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider$MusicInfoSyncHandler;->mMusicInfoprovider:Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;
 
@@ -98,13 +98,13 @@
 
     goto :goto_0
 
-    .line 3436
+    .line 4128
     :pswitch_2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/os/Bundle;
 
-    .line 3437
+    .line 4129
     iget-object v0, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider$MusicInfoSyncHandler;->mMusicInfoprovider:Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;
 
     invoke-virtual {v0, p1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;->syncPlaylistsWithMediaStore(Landroid/os/Bundle;)V

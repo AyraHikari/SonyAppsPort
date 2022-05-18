@@ -33,10 +33,10 @@
 .method protected constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 40
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
+    .line 42
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreator;->mContext:Landroid/content/Context;
 
     return-void
@@ -45,21 +45,21 @@
 .method static getNotificationCreator(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;)Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreator;
     .locals 2
 
-    .line 33
+    .line 34
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 34
+    .line 35
     new-instance v0, Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreatorFromL;
 
     invoke-direct {v0, p0, p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreatorFromL;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;)V
 
     return-object v0
 
-    .line 36
+    .line 37
     :cond_0
     new-instance p1, Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreatorPreL;
 
@@ -73,7 +73,7 @@
 .method getLaunchIntent()Landroid/app/PendingIntent;
     .locals 4
 
-    .line 45
+    .line 46
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreator;->mContext:Landroid/content/Context;
@@ -86,18 +86,29 @@
 
     const/4 v2, 0x1
 
-    .line 46
+    .line 47
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 47
-    iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreator;->mContext:Landroid/content/Context;
+    .line 50
+    sget-boolean v1, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_S_API:Z
 
-    const/4 v2, 0x7
+    if-eqz v1, :cond_0
 
-    const/high16 v3, 0x10000000
+    const/high16 v1, 0x14000000
 
-    .line 48
-    invoke-static {v1, v2, v0, v3}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    goto :goto_0
+
+    :cond_0
+    const/high16 v1, 0x10000000
+
+    .line 53
+    :goto_0
+    iget-object v2, p0, Lcom/sonyericsson/music/proxyservice/audiosystem/NotificationCreator;->mContext:Landroid/content/Context;
+
+    const/4 v3, 0x7
+
+    .line 54
+    invoke-static {v2, v3, v0, v1}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
 

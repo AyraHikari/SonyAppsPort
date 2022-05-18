@@ -74,7 +74,7 @@
 
     check-cast p1, Landroid/graphics/Typeface;
     :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p1
@@ -82,7 +82,13 @@
     :catch_0
     move-exception p1
 
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
     .line 54
+    :goto_0
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

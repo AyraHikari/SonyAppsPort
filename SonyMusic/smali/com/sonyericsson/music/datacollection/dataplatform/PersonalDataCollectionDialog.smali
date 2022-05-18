@@ -126,7 +126,7 @@
 
     if-nez v3, :cond_0
 
-    const v3, 0x7f100247
+    const v3, 0x7f100249
 
     .line 53
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
@@ -225,12 +225,12 @@
     .line 71
     invoke-virtual {v0, p1}, Landroidx/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    const p1, 0x7f10024f
+    const p1, 0x7f100251
 
     .line 72
     invoke-virtual {v0, p1}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    const p1, 0x7f10024c
+    const p1, 0x7f10024e
 
     .line 74
     new-instance v1, Lcom/sonyericsson/music/datacollection/dataplatform/PersonalDataCollectionDialog$1;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:sharedUserId="com.sonyericsson.music" android:sharedUserLabel="@string/music_app_name_txt" package="com.sonyericsson.music" platformBuildVersionCode="28" platformBuildVersionName="9">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" android:sharedUserId="com.sonyericsson.music" android:sharedUserLabel="@string/music_app_name_txt" package="com.sonyericsson.music" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415">
     <permission android:description="@string/music_permission_music_service_description" android:icon="@drawable/music_permission" android:label="@string/music_permission_music_label" android:name="com.sonyericsson.permission.MUSICSERVICE" android:protectionLevel="dangerous"/>
     <permission android:description="@string/media_dashboard_extension_permission_description" android:label="@string/media_dashboard_extension_permission_label" android:name="com.sonymobile.media.permission.TILES_ACCESS" android:protectionLevel="normal"/>
     <permission android:description="@string/music_permission_broadcast_description" android:label="@string/music_permission_broadcast_label" android:name="com.sonyericsson.music.permission.BROADCAST" android:protectionLevel="signature"/>
@@ -16,6 +16,7 @@
     <uses-permission android:name="com.sonyericsson.music.permission.C2D_MESSAGE"/>
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <uses-permission android:name="com.sonyericsson.music.permission.BROADCAST"/>
     <uses-permission android:name="com.sonymobile.dlna.permission.READ_DATA"/>
     <uses-permission android:name="com.sonymobile.dlna.permission.READ_DATA_V6"/>
@@ -24,6 +25,25 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-feature android:name="android.hardware.telephony" android:required="false"/>
     <supports-screens android:anyDensity="true" android:smallScreens="true"/>
+    <queries>
+        <package android:name="com.android.musicfx"/>
+        <intent>
+            <action android:name="com.android.camera.action.CROP"/>
+            <data android:mimeType="image/*"/>
+        </intent>
+        <intent>
+            <action android:name="com.sonyericsson.drmdialogs.RENEW_LICENSE"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+        <intent>
+            <action android:name="com.sonymobile.media.dashboard.ACTION_VIEW_MUSIC_TILE"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+        <intent>
+            <action android:name="com.sonyericsson.media.infinite.ACTION_VIEW_INFINITE"/>
+            <data android:mimeType="audio/*"/>
+        </intent>
+    </queries>
     <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/music_app_icon" android:label="@string/music_app_name_txt" android:name="com.sonyericsson.music.MusicApplication" android:networkSecurityConfig="@xml/network_security_config" android:process="com.sonyericsson.music" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@style/AppTheme">
         <uses-library android:name="com.sony.device" android:required="false"/>
         <uses-library android:name="com.sonymobile.audioeffect" android:required="false"/>
@@ -79,7 +99,7 @@
         <activity android:configChanges="keyboard|keyboardHidden" android:name="com.sonyericsson.music.settings.GoogleDriveSettingsActivity" android:theme="@style/AppTheme.Settings"/>
         <activity android:label="@string/music_settings_personal_data_collection_title" android:name="com.sonyericsson.music.datacollection.dataplatform.PersonalDataCollectionActivity" android:theme="@style/AppTheme.Settings.FullScreen.Dialog"/>
         <activity android:launchMode="singleTop" android:name="com.sonyericsson.music.authentication.GoogleSignInSignOutActivity" android:theme="@style/AppTheme.Settings.FullScreen.Dialog" android:windowSoftInputMode="stateHidden"/>
-        <activity android:configChanges="keyboard|keyboardHidden" android:label="@string/music_app_name_txt" android:launchMode="singleTask" android:name="com.sonyericsson.music.MusicActivity" android:theme="@style/AppTheme" android:windowSoftInputMode="adjustPan">
+        <activity android:configChanges="keyboard|keyboardHidden" android:exported="true" android:label="@string/music_app_name_txt" android:launchMode="singleTask" android:name="com.sonyericsson.music.MusicActivity" android:theme="@style/AppTheme" android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -155,7 +175,7 @@
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_file_path"/>
         </provider>
         <activity android:configChanges="keyboard|keyboardHidden|screenSize" android:label="@string/music_app_name_txt" android:launchMode="singleTop" android:name="com.sonyericsson.music.infinite.PluginSelectionActivity" android:theme="@style/AppTheme.Transparent"/>
-        <activity android:configChanges="keyboard|keyboardHidden" android:name="com.sonyericsson.music.picker.MusicPickerActivity" android:theme="@style/AppTheme.Settings.NoActionBar">
+        <activity android:configChanges="keyboard|keyboardHidden" android:exported="true" android:name="com.sonyericsson.music.picker.MusicPickerActivity" android:theme="@style/AppTheme.Settings.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.PICK"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -183,7 +203,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity-alias>
-        <activity-alias android:configChanges="keyboard|keyboardHidden" android:label="@string/music_playlist_picker_strings_name_txt" android:name="com.sonyericsson.music.PlaylistPickerActivity" android:targetActivity="com.sonyericsson.music.picker.MusicPickerActivity">
+        <activity-alias android:configChanges="keyboard|keyboardHidden" android:exported="true" android:label="@string/music_playlist_picker_strings_name_txt" android:name="com.sonyericsson.music.PlaylistPickerActivity" android:targetActivity="com.sonyericsson.music.picker.MusicPickerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.PICK"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -202,7 +222,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity-alias>
-        <receiver android:name="com.sonyericsson.music.proxyservice.MediaButtonReceiver" android:process="@string/music_service_process_name">
+        <receiver android:exported="true" android:name="com.sonyericsson.music.proxyservice.MediaButtonReceiver" android:process="@string/music_service_process_name">
             <intent-filter android:priority="2">
                 <action android:name="android.intent.action.MEDIA_BUTTON"/>
                 <action android:name="com.sonyericsson.music.intent.action.MEDIA_BUTTON"/>
@@ -222,7 +242,7 @@
             </intent-filter>
         </service>
         <service android:exported="false" android:name="com.sonyericsson.music.common.RefreshPlaylistArtService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <receiver android:name="com.sonyericsson.music.musicwidget.MusicWidgetProvider" android:process="@string/music_service_process_name">
+        <receiver android:exported="true" android:name="com.sonyericsson.music.musicwidget.MusicWidgetProvider" android:process="@string/music_service_process_name">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>

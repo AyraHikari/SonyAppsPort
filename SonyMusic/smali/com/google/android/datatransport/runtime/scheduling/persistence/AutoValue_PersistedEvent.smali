@@ -164,13 +164,13 @@
 
     xor-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    const v1, 0xf4243
+    const v0, 0xf4243
 
-    xor-int/2addr v0, v1
+    xor-int/2addr v1, v0
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 76
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
@@ -179,16 +179,16 @@
 
     move-result v2
 
-    xor-int/2addr v0, v2
+    xor-int/2addr v1, v2
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 78
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->event:Lcom/google/android/datatransport/runtime/EventInternal;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_PersistedEvent;->event:Lcom/google/android/datatransport/runtime/EventInternal;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result v0
 
     xor-int/2addr v0, v1
 

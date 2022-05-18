@@ -37,7 +37,7 @@
     .line 31
     iput-object p2, p0, Lcom/sonyericsson/music/navigationdrawer/MyLibraryNavigationMenuItem;->mMyLibraryPage:Lcom/sonyericsson/music/library/Page;
 
-    const v0, 0x7f100192
+    const v0, 0x7f100194
 
     .line 32
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

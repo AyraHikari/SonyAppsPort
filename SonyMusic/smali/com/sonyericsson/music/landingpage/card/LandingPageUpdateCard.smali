@@ -311,22 +311,22 @@
     .line 48
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/landingpage/card/CardHolder;->setImage(I)V
 
-    const v0, 0x7f10017e
+    const v0, 0x7f100180
 
     .line 49
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/landingpage/card/CardHolder;->setTitle(I)V
 
-    const v0, 0x7f10017a
+    const v0, 0x7f10017c
 
     .line 50
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/landingpage/card/CardHolder;->setText(I)V
 
-    const v0, 0x7f100177
+    const v0, 0x7f100179
 
     .line 51
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/landingpage/card/CardHolder;->setupPositiveAction(I)V
 
-    const v0, 0x7f100174
+    const v0, 0x7f100176
 
     .line 52
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/landingpage/card/CardHolder;->setupNegativeAction(I)V

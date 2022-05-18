@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 530
+    .line 587
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$6;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-direct {p0}, Lcom/sonyericsson/music/player/PlayerStateListener$PlayerStateAdapter;-><init>()V
@@ -35,10 +35,10 @@
 .method public onRouteIdChanged(Lcom/sonyericsson/music/player/PlayerState;)V
     .locals 0
 
-    .line 534
+    .line 591
     invoke-super {p0, p1}, Lcom/sonyericsson/music/player/PlayerStateListener$PlayerStateAdapter;->onRouteIdChanged(Lcom/sonyericsson/music/player/PlayerState;)V
 
-    .line 536
+    .line 593
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$6;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-static {p1}, Lcom/sonyericsson/music/MusicActivity;->access$400(Lcom/sonyericsson/music/MusicActivity;)V

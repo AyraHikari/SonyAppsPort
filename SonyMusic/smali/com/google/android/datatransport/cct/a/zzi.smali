@@ -258,13 +258,13 @@
 
     xor-long/2addr v0, v3
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    const v1, 0xf4243
+    const v0, 0xf4243
 
-    xor-int/2addr v0, v1
+    xor-int/2addr v1, v0
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 2
     iget-object v3, p0, Lcom/google/android/datatransport/cct/a/zzi;->zzb:Ljava/lang/Integer;
@@ -283,9 +283,9 @@
     move-result v3
 
     :goto_0
-    xor-int/2addr v0, v3
+    xor-int/2addr v1, v3
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 3
     iget-wide v5, p0, Lcom/google/android/datatransport/cct/a/zzi;->zzc:J
@@ -296,9 +296,9 @@
 
     long-to-int v3, v5
 
-    xor-int/2addr v0, v3
+    xor-int/2addr v1, v3
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 4
     iget-object v3, p0, Lcom/google/android/datatransport/cct/a/zzi;->zzd:[B
@@ -307,9 +307,9 @@
 
     move-result v3
 
-    xor-int/2addr v0, v3
+    xor-int/2addr v1, v3
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 5
     iget-object v3, p0, Lcom/google/android/datatransport/cct/a/zzi;->zze:Ljava/lang/String;
@@ -326,9 +326,9 @@
     move-result v3
 
     :goto_1
-    xor-int/2addr v0, v3
+    xor-int/2addr v1, v3
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 6
     iget-wide v5, p0, Lcom/google/android/datatransport/cct/a/zzi;->zzf:J
@@ -337,26 +337,26 @@
 
     xor-long/2addr v2, v5
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    xor-int/2addr v0, v2
+    xor-int/2addr v1, v3
 
-    mul-int v0, v0, v1
+    mul-int v1, v1, v0
 
     .line 7
-    iget-object v1, p0, Lcom/google/android/datatransport/cct/a/zzi;->zzg:Lcom/google/android/datatransport/cct/a/zzt;
+    iget-object v0, p0, Lcom/google/android/datatransport/cct/a/zzi;->zzg:Lcom/google/android/datatransport/cct/a/zzt;
 
-    if-nez v1, :cond_2
+    if-nez v0, :cond_2
 
     goto :goto_2
 
     :cond_2
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v4
 
     :goto_2
-    xor-int/2addr v0, v4
+    xor-int v0, v1, v4
 
     return v0
 .end method

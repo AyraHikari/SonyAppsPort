@@ -545,9 +545,9 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    sub-int/2addr v0, v2
+    add-int/lit8 v0, v1, -0x1
 
     goto :goto_0
 
@@ -1039,6 +1039,8 @@
     :cond_11
     :goto_3
     return-void
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

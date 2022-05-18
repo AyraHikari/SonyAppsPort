@@ -191,7 +191,7 @@
 
     move-result-object p2
 
-    const v3, 0x7f100151
+    const v3, 0x7f100153
 
     invoke-static {p2, v3, v0}, Lcom/sonyericsson/music/common/MusicToast;->show(Landroid/content/Context;II)V
 

@@ -203,9 +203,9 @@
 
     xor-long/2addr v3, v5
 
-    long-to-int v3, v3
+    long-to-int v4, v3
 
-    xor-int/2addr v0, v3
+    xor-int/2addr v0, v4
 
     mul-int v0, v0, v2
 

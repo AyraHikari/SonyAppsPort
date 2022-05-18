@@ -92,9 +92,9 @@
 
     sub-long v1, p1, v1
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
-    invoke-virtual {v0, v1}, Ljava/io/InputStream;->mark(I)V
+    invoke-virtual {v0, v2}, Ljava/io/InputStream;->mark(I)V
 
     .line 80
     iget-wide v0, p0, Lcom/squareup/picasso/MarkableInputStream;->reset:J
@@ -118,9 +118,9 @@
 
     sub-long v1, p1, v1
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
-    invoke-virtual {v0, v1}, Ljava/io/InputStream;->mark(I)V
+    invoke-virtual {v0, v2}, Ljava/io/InputStream;->mark(I)V
 
     .line 85
     :goto_0

@@ -514,7 +514,7 @@
     .line 312
     new-instance v1, Lcom/sonyericsson/music/navigationdrawer/NavigationMenuListItem;
 
-    const v2, 0x7f100158
+    const v2, 0x7f10015a
 
     .line 313
     invoke-virtual {p0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -553,7 +553,7 @@
 
     new-instance v2, Lcom/sonyericsson/music/navigationdrawer/NavigationMenuListItem;
 
-    const v3, 0x7f1002b4
+    const v3, 0x7f1002b6
 
     invoke-virtual {p0, v3}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
@@ -603,7 +603,7 @@
 
     new-instance v2, Lcom/sonyericsson/music/navigationdrawer/NavigationMenuListItem;
 
-    const v3, 0x7f1002b1
+    const v3, 0x7f1002b3
 
     .line 331
     invoke-virtual {p0, v3}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -630,7 +630,7 @@
     .line 336
     new-instance v1, Lcom/sonyericsson/music/navigationdrawer/NoFragmentMenuItem;
 
-    const v2, 0x7f100199
+    const v2, 0x7f10019b
 
     .line 337
     invoke-virtual {p0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -652,7 +652,7 @@
     :cond_2
     new-instance v1, Lcom/sonyericsson/music/navigationdrawer/NoFragmentMenuItem;
 
-    const v2, 0x7f1002b5
+    const v2, 0x7f1002b7
 
     invoke-virtual {p0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
@@ -804,7 +804,7 @@
     :cond_3
     new-instance v0, Lcom/sonyericsson/music/navigationdrawer/NoFragmentMenuItem;
 
-    const v1, 0x7f1001fe
+    const v1, 0x7f100200
 
     .line 371
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -2218,9 +2218,9 @@
 
     move-result-object v4
 
-    const v5, 0x7f10022c
+    const v5, 0x7f10022e
 
-    const v6, 0x7f10022b
+    const v6, 0x7f10022d
 
     move-object v0, p1
 

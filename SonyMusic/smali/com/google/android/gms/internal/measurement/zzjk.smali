@@ -2778,7 +2778,7 @@
     .line 20
     instance-of v1, v0, Lcom/google/android/gms/internal/measurement/zzjt;
 
-    if-eqz v1, :cond_34
+    if-eqz v1, :cond_35
 
     .line 21
     check-cast v0, Lcom/google/android/gms/internal/measurement/zzjt;
@@ -3354,7 +3354,7 @@
     const/16 v20, 0x0
 
     :goto_12
-    if-ge v10, v2, :cond_33
+    if-ge v10, v2, :cond_34
 
     add-int/lit8 v23, v10, 0x1
 
@@ -3648,53 +3648,55 @@
 
     move-result-wide v5
 
-    long-to-int v5, v5
+    long-to-int v6, v5
 
     add-int/lit8 v2, v2, 0x1
 
     .line 180
-    aget-object v6, v17, v2
+    aget-object v5, v17, v2
 
-    move/from16 v27, v5
+    move/from16 v27, v6
 
     .line 181
-    instance-of v5, v6, Ljava/lang/reflect/Field;
+    instance-of v6, v5, Ljava/lang/reflect/Field;
 
-    if-eqz v5, :cond_21
+    if-eqz v6, :cond_21
 
     .line 182
-    check-cast v6, Ljava/lang/reflect/Field;
+    check-cast v5, Ljava/lang/reflect/Field;
 
     goto :goto_1b
 
     .line 183
     :cond_21
-    check-cast v6, Ljava/lang/String;
+    check-cast v5, Ljava/lang/String;
 
-    invoke-static {v8, v6}, Lcom/google/android/gms/internal/measurement/zzjk;->zza(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-static {v8, v5}, Lcom/google/android/gms/internal/measurement/zzjk;->zza(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    move-result-object v6
+    move-result-object v5
 
     .line 184
-    aput-object v6, v17, v2
+    aput-object v5, v17, v2
 
     .line 185
     :goto_1b
-    invoke-virtual {v3, v6}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
+    invoke-virtual {v3, v5}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
 
     move-result-wide v5
 
     long-to-int v2, v5
 
-    move v6, v2
+    move v5, v2
 
-    move/from16 v5, v27
+    move-object/from16 v18, v8
+
+    move/from16 v6, v27
 
     move/from16 v28, v30
 
     const/4 v2, 0x0
 
-    goto/16 :goto_25
+    goto/16 :goto_26
 
     :cond_22
     move-object v12, v6
@@ -3865,19 +3867,19 @@
 
     move-result-wide v5
 
-    long-to-int v5, v5
+    long-to-int v6, v5
 
-    and-int/lit16 v6, v4, 0x1000
+    and-int/lit16 v5, v4, 0x1000
 
     const/16 v7, 0x1000
 
-    if-ne v6, v7, :cond_2f
+    if-ne v5, v7, :cond_30
 
-    const/16 v6, 0x11
+    const/16 v5, 0x11
 
-    if-gt v14, v6, :cond_2f
+    if-gt v14, v5, :cond_2f
 
-    add-int/lit8 v6, v2, 0x1
+    add-int/lit8 v5, v2, 0x1
 
     .line 204
     invoke-virtual {v1, v2}, Ljava/lang/String;->charAt(I)C
@@ -3893,40 +3895,40 @@
     const/16 v18, 0xd
 
     :goto_21
-    add-int/lit8 v28, v6, 0x1
+    add-int/lit8 v28, v5, 0x1
 
     .line 208
-    invoke-virtual {v1, v6}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v1, v5}, Ljava/lang/String;->charAt(I)C
 
-    move-result v6
+    move-result v5
 
-    if-lt v6, v7, :cond_2c
+    if-lt v5, v7, :cond_2c
 
-    and-int/lit16 v6, v6, 0x1fff
+    and-int/lit16 v5, v5, 0x1fff
 
-    shl-int v6, v6, v18
+    shl-int v5, v5, v18
 
-    or-int/2addr v2, v6
+    or-int/2addr v2, v5
 
     add-int/lit8 v18, v18, 0xd
 
-    move/from16 v6, v28
+    move/from16 v5, v28
 
     goto :goto_21
 
     :cond_2c
-    shl-int v6, v6, v18
+    shl-int v5, v5, v18
 
-    or-int/2addr v2, v6
+    or-int/2addr v2, v5
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
     goto :goto_22
 
     :cond_2d
-    move/from16 v28, v6
+    move/from16 v28, v5
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
     :goto_22
     shl-int/lit8 v18, v16, 0x1
@@ -3937,127 +3939,141 @@
     add-int v18, v18, v24
 
     .line 214
-    aget-object v6, v17, v18
+    aget-object v5, v17, v18
 
     .line 215
-    instance-of v7, v6, Ljava/lang/reflect/Field;
+    instance-of v7, v5, Ljava/lang/reflect/Field;
 
     if-eqz v7, :cond_2e
 
     .line 216
-    check-cast v6, Ljava/lang/reflect/Field;
+    check-cast v5, Ljava/lang/reflect/Field;
+
+    move-object/from16 v18, v8
 
     goto :goto_23
 
     .line 217
     :cond_2e
-    check-cast v6, Ljava/lang/String;
+    check-cast v5, Ljava/lang/String;
 
-    invoke-static {v8, v6}, Lcom/google/android/gms/internal/measurement/zzjk;->zza(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-static {v8, v5}, Lcom/google/android/gms/internal/measurement/zzjk;->zza(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    move-result-object v6
+    move-result-object v5
 
     .line 218
-    aput-object v6, v17, v18
+    aput-object v5, v17, v18
+
+    move-object/from16 v18, v8
 
     .line 219
     :goto_23
-    invoke-virtual {v3, v6}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
+    invoke-virtual {v3, v5}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
 
-    move-result-wide v6
+    move-result-wide v7
 
-    long-to-int v6, v6
+    long-to-int v5, v7
 
     .line 220
     rem-int/lit8 v2, v2, 0x20
 
-    goto :goto_24
+    goto :goto_25
 
     :cond_2f
-    const v6, 0xfffff
+    move-object/from16 v18, v8
+
+    goto :goto_24
+
+    :cond_30
+    move-object/from16 v18, v8
+
+    :goto_24
+    const v5, 0xfffff
 
     move/from16 v28, v2
 
     const/4 v2, 0x0
 
-    :goto_24
+    :goto_25
     const/16 v7, 0x12
 
-    if-lt v14, v7, :cond_30
+    if-lt v14, v7, :cond_31
 
     const/16 v7, 0x31
 
-    if-gt v14, v7, :cond_30
+    if-gt v14, v7, :cond_31
 
     add-int/lit8 v7, v22, 0x1
 
     .line 225
-    aput v5, v15, v22
+    aput v6, v15, v22
 
     move/from16 v22, v7
 
     move/from16 v7, v27
 
-    goto :goto_25
+    goto :goto_26
 
-    :cond_30
+    :cond_31
     move/from16 v7, v27
 
-    :goto_25
-    add-int/lit8 v18, v20, 0x1
+    :goto_26
+    add-int/lit8 v8, v20, 0x1
 
     .line 226
     aput v10, v12, v20
 
-    add-int/lit8 v10, v18, 0x1
+    add-int/lit8 v10, v8, 0x1
 
     move-object/from16 v20, v1
 
     and-int/lit16 v1, v4, 0x200
 
-    if-eqz v1, :cond_31
+    if-eqz v1, :cond_32
 
     const/high16 v1, 0x20000000
-
-    goto :goto_26
-
-    :cond_31
-    const/4 v1, 0x0
-
-    :goto_26
-    and-int/lit16 v4, v4, 0x100
-
-    if-eqz v4, :cond_32
-
-    const/high16 v4, 0x10000000
 
     goto :goto_27
 
     :cond_32
-    const/4 v4, 0x0
+    const/4 v1, 0x0
 
     :goto_27
+    and-int/lit16 v4, v4, 0x100
+
+    if-eqz v4, :cond_33
+
+    const/high16 v4, 0x10000000
+
+    goto :goto_28
+
+    :cond_33
+    const/4 v4, 0x0
+
+    :goto_28
     or-int/2addr v1, v4
 
     shl-int/lit8 v4, v14, 0x14
 
     or-int/2addr v1, v4
 
-    or-int/2addr v1, v5
+    or-int/2addr v1, v6
 
     .line 229
-    aput v1, v12, v18
+    aput v1, v12, v8
 
     add-int/lit8 v1, v10, 0x1
 
     shl-int/lit8 v2, v2, 0x14
 
-    or-int/2addr v2, v6
+    or-int/2addr v2, v5
 
     .line 230
     aput v2, v12, v10
 
     move-object v6, v12
+
+    move-object/from16 v8, v18
 
     move/from16 v14, v23
 
@@ -4079,7 +4095,7 @@
 
     goto/16 :goto_12
 
-    :cond_33
+    :cond_34
     move/from16 v26, v12
 
     move/from16 v23, v14
@@ -4125,7 +4141,7 @@
     return-object v1
 
     .line 235
-    :cond_34
+    :cond_35
     check-cast v0, Lcom/google/android/gms/internal/measurement/zzkk;
 
     .line 236

@@ -84,6 +84,9 @@
 .method public abstract setRepeatMode(I)V
 .end method
 
+.method public abstract setShowSyncUserNoticeDialog(Z)V
+.end method
+
 .method public abstract setShuffle(Z)V
 .end method
 
@@ -91,6 +94,9 @@
 .end method
 
 .method public abstract setWifiAndMobileDataAccepted(Z)V
+.end method
+
+.method public abstract shouldShowSyncUserNoticeDialog()Z
 .end method
 
 .method public abstract shuffleNext()V

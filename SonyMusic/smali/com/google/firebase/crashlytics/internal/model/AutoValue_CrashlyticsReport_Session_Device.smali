@@ -319,9 +319,9 @@
 
     xor-long/2addr v2, v5
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    xor-int/2addr v0, v2
+    xor-int/2addr v0, v3
 
     mul-int v0, v0, v1
 
@@ -332,9 +332,9 @@
 
     xor-long/2addr v2, v4
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    xor-int/2addr v0, v2
+    xor-int/2addr v0, v3
 
     mul-int v0, v0, v1
 

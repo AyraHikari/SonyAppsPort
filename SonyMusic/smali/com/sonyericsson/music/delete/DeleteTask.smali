@@ -317,7 +317,7 @@
     :cond_3
     iget-object p1, p0, Lcom/sonyericsson/music/delete/DeleteTask;->mAppContext:Landroid/content/Context;
 
-    const v1, 0x7f1002bb
+    const v1, 0x7f1002bd
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

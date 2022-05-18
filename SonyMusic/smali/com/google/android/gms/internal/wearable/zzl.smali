@@ -230,10 +230,10 @@
 
     if-nez v4, :cond_0
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
     .line 222
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/wearable/zzl;->zzj(I)V
+    invoke-direct {p0, p2}, Lcom/google/android/gms/internal/wearable/zzl;->zzj(I)V
 
     return-void
 

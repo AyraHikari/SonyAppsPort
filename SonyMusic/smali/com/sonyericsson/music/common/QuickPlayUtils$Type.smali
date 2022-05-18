@@ -69,17 +69,17 @@
 
     const/4 v2, 0x0
 
-    const v4, 0x7f10026f
+    const v4, 0x7f100271
 
     const v5, 0x7f0801ed
 
     const/4 v6, 0x3
 
-    const v7, 0x7f10026b
+    const v7, 0x7f10026d
 
-    const v8, 0x7f10026a
+    const v8, 0x7f10026c
 
-    const v9, 0x7f100269
+    const v9, 0x7f10026b
 
     move-object v0, v10
 
@@ -96,17 +96,17 @@
 
     const/4 v13, 0x1
 
-    const v15, 0x7f100270
+    const v15, 0x7f100272
 
     const v16, 0x7f0801ed
 
     const/16 v17, -0x1
 
-    const v18, 0x7f100273
+    const v18, 0x7f100275
 
-    const v19, 0x7f100272
+    const v19, 0x7f100274
 
-    const v20, 0x7f100271
+    const v20, 0x7f100273
 
     move-object v11, v0
 
@@ -138,11 +138,11 @@
 
     const v6, 0x7f0801ed
 
-    const v8, 0x7f100273
+    const v8, 0x7f100275
 
-    const v9, 0x7f100272
+    const v9, 0x7f100274
 
-    const v10, 0x7f100271
+    const v10, 0x7f100273
 
     move-object v1, v0
 
@@ -239,7 +239,7 @@
 
     const/4 v3, 0x6
 
-    const v5, 0x7f10026c
+    const v5, 0x7f10026e
 
     const/4 v6, -0x1
 

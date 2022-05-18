@@ -945,7 +945,7 @@
     :cond_5
     iget-object v5, v0, Lcom/sonyericsson/music/library/PlaylistsAdapter$ViewHolder;->mText2:Landroid/widget/TextView;
 
-    const v6, 0x7f10025d
+    const v6, 0x7f10025f
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -971,7 +971,7 @@
     .line 236
     iget-object v6, p0, Lcom/sonyericsson/music/library/PlaylistsAdapter;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f10018b
+    const v7, 0x7f10018d
 
     new-array v8, v2, [Ljava/lang/Object;
 
@@ -992,7 +992,7 @@
     :cond_7
     iget-object v5, p0, Lcom/sonyericsson/music/library/PlaylistsAdapter;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f10018c
+    const v6, 0x7f10018e
 
     .line 238
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1005,7 +1005,7 @@
     :cond_8
     iget-object v5, p0, Lcom/sonyericsson/music/library/PlaylistsAdapter;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f10025c
+    const v6, 0x7f10025e
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

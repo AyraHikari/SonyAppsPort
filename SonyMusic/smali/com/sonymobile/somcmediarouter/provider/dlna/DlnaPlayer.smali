@@ -1259,22 +1259,22 @@
     :cond_4
     sub-long v5, v3, v1
 
-    long-to-int v5, v5
+    long-to-int v6, v5
 
     goto :goto_1
 
     :cond_5
     :goto_0
-    const/4 v5, -0x1
+    const/4 v6, -0x1
 
     .line 895
     :goto_1
-    sget-boolean v6, Lcom/sonymobile/somcmediarouter/provider/utils/Log;->LOG_ENABLE:Z
+    sget-boolean v5, Lcom/sonymobile/somcmediarouter/provider/utils/Log;->LOG_ENABLE:Z
 
-    if-eqz v6, :cond_6
+    if-eqz v5, :cond_6
 
     .line 896
-    sget-object v6, Lcom/sonymobile/somcmediarouter/provider/dlna/DlnaPlayer;->TAG:Ljava/lang/String;
+    sget-object v5, Lcom/sonymobile/somcmediarouter/provider/dlna/DlnaPlayer;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1302,12 +1302,12 @@
 
     move-result-object v1
 
-    invoke-static {v6, v1}, Lcom/sonymobile/somcmediarouter/provider/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Lcom/sonymobile/somcmediarouter/provider/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_6
-    if-lez v5, :cond_7
+    if-lez v6, :cond_7
 
-    add-int/2addr v0, v5
+    add-int/2addr v0, v6
 
     .line 903
     :cond_7

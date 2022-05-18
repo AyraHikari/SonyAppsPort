@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 277
+    .line 315
     new-instance v0, Lcom/sonyericsson/music/MusicActivity$BackSource;
 
     const-string v1, "HOME"
@@ -47,7 +47,7 @@
 
     sput-object v0, Lcom/sonyericsson/music/MusicActivity$BackSource;->HOME:Lcom/sonyericsson/music/MusicActivity$BackSource;
 
-    .line 278
+    .line 316
     new-instance v0, Lcom/sonyericsson/music/MusicActivity$BackSource;
 
     const-string v1, "KEYCODE"
@@ -58,7 +58,7 @@
 
     sput-object v0, Lcom/sonyericsson/music/MusicActivity$BackSource;->KEYCODE:Lcom/sonyericsson/music/MusicActivity$BackSource;
 
-    .line 279
+    .line 317
     new-instance v0, Lcom/sonyericsson/music/MusicActivity$BackSource;
 
     const-string v1, "SWIPE"
@@ -71,7 +71,7 @@
 
     const/4 v0, 0x3
 
-    .line 276
+    .line 314
     new-array v0, v0, [Lcom/sonyericsson/music/MusicActivity$BackSource;
 
     sget-object v1, Lcom/sonyericsson/music/MusicActivity$BackSource;->HOME:Lcom/sonyericsson/music/MusicActivity$BackSource;
@@ -99,7 +99,7 @@
         }
     .end annotation
 
-    .line 276
+    .line 314
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -108,7 +108,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sonyericsson/music/MusicActivity$BackSource;
     .locals 1
 
-    .line 276
+    .line 314
     const-class v0, Lcom/sonyericsson/music/MusicActivity$BackSource;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -123,7 +123,7 @@
 .method public static values()[Lcom/sonyericsson/music/MusicActivity$BackSource;
     .locals 1
 
-    .line 276
+    .line 314
     sget-object v0, Lcom/sonyericsson/music/MusicActivity$BackSource;->$VALUES:[Lcom/sonyericsson/music/MusicActivity$BackSource;
 
     invoke-virtual {v0}, [Lcom/sonyericsson/music/MusicActivity$BackSource;->clone()Ljava/lang/Object;

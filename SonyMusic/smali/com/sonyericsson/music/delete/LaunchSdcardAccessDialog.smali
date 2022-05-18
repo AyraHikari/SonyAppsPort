@@ -74,17 +74,17 @@
 
     if-eq p1, v0, :cond_0
 
-    const p1, 0x7f10013a
+    const p1, 0x7f10013b
 
     .line 121
     iput p1, p0, Lcom/sonyericsson/music/delete/LaunchSdcardAccessDialog;->mPositiveButtonText:I
 
-    const p1, 0x7f10013b
+    const p1, 0x7f10013d
 
     .line 122
     iput p1, p0, Lcom/sonyericsson/music/delete/LaunchSdcardAccessDialog;->mTitleText:I
 
-    const p1, 0x7f100138
+    const p1, 0x7f100139
 
     .line 123
     iput p1, p0, Lcom/sonyericsson/music/delete/LaunchSdcardAccessDialog;->mBodyText:I
@@ -92,17 +92,17 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f10027a
+    const p1, 0x7f10027c
 
     .line 113
     iput p1, p0, Lcom/sonyericsson/music/delete/LaunchSdcardAccessDialog;->mPositiveButtonText:I
 
-    const p1, 0x7f10013c
+    const p1, 0x7f10013e
 
     .line 114
     iput p1, p0, Lcom/sonyericsson/music/delete/LaunchSdcardAccessDialog;->mTitleText:I
 
-    const p1, 0x7f100139
+    const p1, 0x7f10013a
 
     .line 115
     iput p1, p0, Lcom/sonyericsson/music/delete/LaunchSdcardAccessDialog;->mBodyText:I

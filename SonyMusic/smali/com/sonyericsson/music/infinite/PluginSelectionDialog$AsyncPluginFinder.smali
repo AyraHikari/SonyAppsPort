@@ -69,7 +69,7 @@
 
     iget-object v1, p0, Lcom/sonyericsson/music/infinite/PluginSelectionDialog$AsyncPluginFinder;->mAppContext:Landroid/content/Context;
 
-    const v2, 0x7f1001de
+    const v2, 0x7f1001e0
 
     const v3, 0x7f0801ae
 

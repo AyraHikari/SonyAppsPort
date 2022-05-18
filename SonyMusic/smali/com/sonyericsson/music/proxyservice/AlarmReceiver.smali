@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 20
+    .line 21
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -32,14 +32,14 @@
 .method private acquireTimedWakeLock(Landroid/content/Context;)V
     .locals 2
 
-    .line 112
+    .line 122
     sget-object v0, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->sTimedWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-nez v0, :cond_0
 
     const-string v0, "power"
 
-    .line 113
+    .line 123
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -50,19 +50,19 @@
 
     const-class v1, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;
 
-    .line 115
+    .line 125
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 114
+    .line 124
     invoke-virtual {p1, v0, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p1
 
     sput-object p1, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->sTimedWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 117
+    .line 127
     :cond_0
     sget-object p1, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->sTimedWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -70,7 +70,7 @@
 
     const-wide/16 v0, 0x1388
 
-    .line 118
+    .line 128
     invoke-virtual {p1, v0, v1}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
     :cond_1
@@ -80,12 +80,12 @@
 .method public static getNotificationAutoDismissBroadcast(Landroid/content/Context;)Landroid/app/PendingIntent;
     .locals 3
 
-    .line 79
+    .line 84
     sget-object v0, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->sAutoDismissAlarmPendingIntent:Landroid/app/PendingIntent;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    .line 80
+    .line 85
     new-instance v0, Landroid/content/Intent;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -98,33 +98,41 @@
 
     const-string v1, "com.sonyericsson.music.service.internal.DISMISS"
 
-    .line 81
+    .line 86
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "com.sonyericsson.music.service.internal.EXTRA_DISMISS_IS_AUTOMATIC"
 
     const/4 v2, 0x1
 
-    .line 82
+    .line 87
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 83
+    const/high16 v1, 0x10000000
+
+    .line 90
+    sget-boolean v2, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_S_API:Z
+
+    if-eqz v2, :cond_0
+
+    const/high16 v1, 0x14000000
+
+    .line 93
+    :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/high16 v2, 0x10000000
-
-    invoke-static {p0, v1, v0, v2}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {p0, v2, v0, v1}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p0
 
     sput-object p0, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->sAutoDismissAlarmPendingIntent:Landroid/app/PendingIntent;
 
-    .line 86
-    :cond_0
+    .line 96
+    :cond_1
     sget-object p0, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->sAutoDismissAlarmPendingIntent:Landroid/app/PendingIntent;
 
     return-object p0
@@ -133,12 +141,12 @@
 .method public static getSleepTimerPauseBroadcast(Landroid/content/Context;)Landroid/app/PendingIntent;
     .locals 3
 
-    .line 68
+    .line 69
     sget-object v0, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->sSleepTimerAlarmPendingIntent:Landroid/app/PendingIntent;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    .line 69
+    .line 70
     new-instance v0, Landroid/content/Intent;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -151,33 +159,41 @@
 
     const-string v1, "com.sonyericsson.music.service.internal.ACTION_PLAYBACK_PAUSE"
 
-    .line 70
+    .line 71
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "timer_extra"
 
     const/4 v2, 0x1
 
-    .line 71
+    .line 72
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 72
+    const/high16 v1, 0x10000000
+
+    .line 74
+    sget-boolean v2, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_S_API:Z
+
+    if-eqz v2, :cond_0
+
+    const/high16 v1, 0x14000000
+
+    .line 77
+    :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/high16 v2, 0x10000000
-
-    invoke-static {p0, v1, v0, v2}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {p0, v2, v0, v1}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p0
 
     sput-object p0, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->sSleepTimerAlarmPendingIntent:Landroid/app/PendingIntent;
 
-    .line 75
-    :cond_0
+    .line 80
+    :cond_1
     sget-object p0, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->sSleepTimerAlarmPendingIntent:Landroid/app/PendingIntent;
 
     return-object p0
@@ -186,14 +202,14 @@
 .method public static setExactRtcAlarm(Landroid/app/AlarmManager;Landroid/app/PendingIntent;J)J
     .locals 3
 
-    .line 91
+    .line 101
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     add-long/2addr v0, p2
 
-    .line 93
+    .line 103
     sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 p3, 0x0
@@ -202,7 +218,7 @@
 
     if-lt p2, v2, :cond_0
 
-    .line 94
+    .line 104
     invoke-virtual {p0, p3, v0, v1, p1}, Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(IJLandroid/app/PendingIntent;)V
 
     goto :goto_0
@@ -212,12 +228,12 @@
 
     if-lt p2, v2, :cond_1
 
-    .line 96
+    .line 106
     invoke-virtual {p0, p3, v0, v1, p1}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
     goto :goto_0
 
-    .line 98
+    .line 108
     :cond_1
     invoke-virtual {p0, p3, v0, v1, p1}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
@@ -228,7 +244,7 @@
 .method public static setInExactRtcAlarm(Landroid/app/AlarmManager;Landroid/app/PendingIntent;J)J
     .locals 2
 
-    .line 106
+    .line 116
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -237,7 +253,7 @@
 
     const/4 p2, 0x0
 
-    .line 107
+    .line 117
     invoke-virtual {p0, p2, v0, v1, p1}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
     return-wide v0
@@ -252,7 +268,7 @@
 
     return-void
 
-    .line 37
+    .line 38
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -260,7 +276,7 @@
 
     const-string v0, "com.sonyericsson.music.service.internal.ACTION_PLAYBACK_PAUSE"
 
-    .line 39
+    .line 40
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -269,7 +285,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 41
+    .line 42
     :try_start_0
     new-instance p2, Landroid/content/Intent;
 
@@ -279,18 +295,18 @@
 
     const-string v0, "com.sonyericsson.music.service.internal.ACTION_PLAYBACK_PAUSE"
 
-    .line 42
+    .line 43
     invoke-virtual {p2, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "timer_extra"
 
-    .line 43
+    .line 44
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 44
+    .line 45
     invoke-virtual {p1, p2}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 46
+    .line 47
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->acquireTimedWakeLock(Landroid/content/Context;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
@@ -300,14 +316,14 @@
     :cond_1
     const-string v0, "com.sonyericsson.music.service.internal.DISMISS"
 
-    .line 51
+    .line 52
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 53
+    .line 54
     :try_start_1
     new-instance p2, Landroid/content/Intent;
 
@@ -317,18 +333,18 @@
 
     const-string v0, "com.sonyericsson.music.service.internal.DISMISS"
 
-    .line 54
+    .line 55
     invoke-virtual {p2, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "com.sonyericsson.music.service.internal.EXTRA_DISMISS_IS_AUTOMATIC"
 
-    .line 55
+    .line 56
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 56
+    .line 57
     invoke-virtual {p1, p2}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 58
+    .line 59
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/proxyservice/AlarmReceiver;->acquireTimedWakeLock(Landroid/content/Context;)V
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0

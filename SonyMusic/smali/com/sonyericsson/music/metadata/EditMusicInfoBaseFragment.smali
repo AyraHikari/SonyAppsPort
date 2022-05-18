@@ -216,7 +216,7 @@
     .line 569
     new-instance v0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ProgressRunnable;
 
-    const v1, 0x7f100214
+    const v1, 0x7f100216
 
     .line 570
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

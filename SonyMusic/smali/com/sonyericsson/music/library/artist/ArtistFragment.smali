@@ -869,7 +869,7 @@
     .line 538
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v0, 0x7f10018b
+    const v0, 0x7f10018d
 
     const/4 v2, 0x1
 

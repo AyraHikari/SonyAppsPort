@@ -170,7 +170,7 @@
 
     const-string v1, "title"
 
-    const v2, 0x7f1001b7
+    const v2, 0x7f1001b9
 
     .line 82
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
@@ -216,12 +216,12 @@
     .line 47
     check-cast p1, Lcom/sonyericsson/music/landingpage/card/CardHolder;
 
-    const v0, 0x7f1001b7
+    const v0, 0x7f1001b9
 
     .line 48
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/landingpage/card/CardHolder;->setTitle(I)V
 
-    const v0, 0x7f100180
+    const v0, 0x7f100182
 
     .line 49
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/landingpage/card/CardHolder;->setText(I)V
@@ -251,12 +251,12 @@
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/landingpage/card/CardHolder;->setImageFlipped(Landroid/content/Context;)V
 
     :cond_0
-    const v0, 0x7f100176
+    const v0, 0x7f100178
 
     .line 56
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/landingpage/card/CardHolder;->setupPositiveAction(I)V
 
-    const v0, 0x7f100174
+    const v0, 0x7f100176
 
     .line 57
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/landingpage/card/CardHolder;->setupNegativeAction(I)V

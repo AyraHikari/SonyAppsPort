@@ -98,7 +98,7 @@
 
     move-result p1
     :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
     return p1
@@ -106,6 +106,12 @@
     :catch_0
     move-exception p2
 
+    goto :goto_0
+
+    :catch_1
+    move-exception p2
+
+    :goto_0
     const-string p3, "error calling scheduleAsPackage"
 
     .line 25
@@ -333,7 +339,7 @@
 
     move-result v0
     :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
     return v0
@@ -341,6 +347,12 @@
     :catch_0
     move-exception v0
 
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    :goto_0
     const-string v2, "JobSchedulerCompat"
 
     const/4 v3, 0x6

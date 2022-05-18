@@ -582,7 +582,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f100224
+    const v3, 0x7f100226
 
     invoke-static {v0, v3, v1}, Lcom/sonyericsson/music/common/MusicToast;->show(Landroid/content/Context;II)V
 
@@ -616,7 +616,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f100216
+    const v3, 0x7f100218
 
     invoke-static {v0, v3, v1}, Lcom/sonyericsson/music/common/MusicToast;->show(Landroid/content/Context;II)V
 
@@ -1160,7 +1160,7 @@
 
     const-string v4, "android.permission-group.STORAGE"
 
-    const v5, 0x7f1001b1
+    const v5, 0x7f1001b3
 
     invoke-direct {v3, v4, v5}, Lcom/sonyericsson/music/dialogs/PermissionsHowToEnableDialog$PermissionInfo;-><init>(Ljava/lang/String;I)V
 

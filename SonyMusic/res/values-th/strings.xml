@@ -280,9 +280,12 @@
     <string name="music_delete_failed_one_or_many">ไม่สามารถลบบางรายการได้</string>
     <string name="music_delete_playlist_question">ลบ %1$s ไหม การดำเนินการนี้จะไม่กระทบกับเนื้อหาของรายการเพลง</string>
     <string name="music_delete_question">ลบ %1$s จากที่เก็บข้อมูลไหม</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"แอปเพลงจะทำการสแกนในพื้นหลังเพื่อสร้างฐานข้อมูลเพลงใหม่
+การสแกนนี้อาจใช้เวลานานกว่า 10 นาที ขึ้นอยู่กับจำนวนเพลง เพลงหรือรายการเพลงจะไม่แสดงขึ้นหรือเล่นอย่างถูกต้องจนกว่าการสแกนในพื้นหลังจะเสร็จสมบูรณ์"</string>
     <string name="music_dialog_body_sd_permission_access_txt">เพื่อใช้การ์ด SD เป็นที่เก็บข้อมูล โปรดอนุญาตให้เข้าสู่การ์ด SD ในหน้าจอถัดไป</string>
     <string name="music_dialog_body_sd_permission_retry_txt">แตะ ลองใหม่ เพื่อลองอีกครั้ง หรือแตะ ยกเลิก เพื่อเริ่มใหม่ตั้งแต่ต้น</string>
     <string name="music_dialog_button_next_txt">ถัดไป</string>
+    <string name="music_dialog_title_bg_scan_notice">ประกาศ</string>
     <string name="music_dialog_title_sd_permission_access_txt">ต้องได้รับการอนุญาตเพื่อเข้าถึงการ์ด SD</string>
     <string name="music_dialog_title_sd_permission_retry_txt">ไม่ได้รับอนุญาตให้เข้าถึงการ์ด SD</string>
     <string name="music_download">ดาวน์โหลด</string>
@@ -559,7 +562,7 @@
     <string name="personal_data_collection_dialog_title">ข้อมูลส่วนตัว</string>
     <string name="personal_data_collection_screen_button_negative">ไม่ใช่ตอนนี้</string>
     <string name="personal_data_collection_screen_button_positive">ฉันตกลง</string>
-    <string name="personal_data_collection_screen_fine_print">Sony จะรวบรวมและผสมผสาน<a href="entrance://personaldata">ข้อมูลส่วนบุคคล</a>เพื่อปรับปรุงบริการ โดย Sony จะจัดการกับข้อมูลของคุณตาม<a href="http://sonymobile.com/privacy">นโยบายความเป็นส่วนตัว</a>ของเรา</string>
+    <string name="personal_data_collection_screen_fine_print">Sony จะรวบรวมและผสมผสาน<a href="entrance://personaldata">ข้อมูลส่วนบุคคล</a>เพื่อปรับปรุงบริการ โดย Sony จะจัดการกับข้อมูลของคุณตาม<a href="https://www.sonymobile.com/privacy">นโยบายความเป็นส่วนตัว</a>ของเรา</string>
     <string name="personal_data_collection_screen_fine_print_us">Sony จะรวบรวมและผสมผสาน<a href="entrance://personaldata">ข้อมูลส่วนบุคคล</a>เพื่อปรับปรุงบริการ โดย Sony จะจัดการกับข้อมูลของคุณตาม<a href="https://www.sonymobile.com/us/legal/privacy">นโยบายความเป็นส่วนตัว</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">คำชี้แจงความเป็นส่วนตัวของรัฐแคลิฟอร์เนีย</a>)ของเรา</string>
     <string name="personal_data_collection_screen_text">ช่วยเราปรับปรุงแอปพลิเคชันเพลงโดยแชร์นิสัยการฟังของคุณกับ Sony</string>
     <string name="play_queue_open">เปิด</string>

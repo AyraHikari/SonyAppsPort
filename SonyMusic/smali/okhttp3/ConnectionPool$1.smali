@@ -84,9 +84,9 @@
     :try_start_0
     iget-object v3, p0, Lokhttp3/ConnectionPool$1;->this$0:Lokhttp3/ConnectionPool;
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    invoke-virtual {v3, v4, v5, v0}, Ljava/lang/Object;->wait(JI)V
+    invoke-virtual {v3, v4, v5, v1}, Ljava/lang/Object;->wait(JI)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 1063
+    .line 1069
     new-instance v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;
 
     const-string v1, "MEDIA_STORE"
@@ -49,7 +49,7 @@
 
     const/4 v0, 0x1
 
-    .line 1062
+    .line 1068
     new-array v0, v0, [Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;->MEDIA_STORE:Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;
@@ -69,10 +69,10 @@
         }
     .end annotation
 
-    .line 1067
+    .line 1073
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1068
+    .line 1074
     iput p3, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;->mSourceId:I
 
     return-void
@@ -81,7 +81,7 @@
 .method public static getSource(I)Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;
     .locals 5
 
-    .line 1076
+    .line 1082
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;->values()[Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;
 
     move-result-object v0
@@ -95,7 +95,7 @@
 
     aget-object v3, v0, v2
 
-    .line 1077
+    .line 1083
     invoke-virtual {v3}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;->id()I
 
     move-result v4
@@ -109,7 +109,7 @@
 
     goto :goto_0
 
-    .line 1081
+    .line 1087
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -137,7 +137,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;
     .locals 1
 
-    .line 1062
+    .line 1068
     const-class v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -152,7 +152,7 @@
 .method public static values()[Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;
     .locals 1
 
-    .line 1062
+    .line 1068
     sget-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;->$VALUES:[Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;
 
     invoke-virtual {v0}, [Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;->clone()Ljava/lang/Object;
@@ -169,7 +169,7 @@
 .method public id()I
     .locals 1
 
-    .line 1072
+    .line 1078
     iget v0, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$SearchHistoryTable$Source;->mSourceId:I
 
     return v0

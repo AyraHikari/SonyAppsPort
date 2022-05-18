@@ -257,7 +257,7 @@
     .line 572
     iget-object p2, p0, Lcom/sonyericsson/music/ViewRequestController$IntentHandler;->mActivity:Lcom/sonyericsson/music/MusicActivity;
 
-    const v1, 0x7f10021d
+    const v1, 0x7f10021f
 
     const/4 v2, 0x1
 

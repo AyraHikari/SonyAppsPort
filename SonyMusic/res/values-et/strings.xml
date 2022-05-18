@@ -279,9 +279,12 @@ Pange tähele, et rakendus Muusika ei pruugi taotletud lubadeta õigesti tööta
     <string name="music_delete_failed_one_or_many">Mõnda objekti ei saanud kustutada</string>
     <string name="music_delete_playlist_question">Kas kustutada %1$s? Esitusloendi sisu ei muutu.</string>
     <string name="music_delete_question">Kas kustutada üksus %1$s salvestusruumist?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Rakendus Muusika teeb muusikaandmebaasi taastamiseks tausta skannimise.
+See skannimine võib sõltuvalt lugude arvust kesta kauem kui 10 minutit. Laule ja esitusloendeid ei kuvata ega esitata õigesti enne, kui tausta skannimine on lõpetatud."</string>
     <string name="music_dialog_body_sd_permission_access_txt">SD-kaardi kasutamiseks andmemäluna andke järgmisel ekraanil luba juurdepääsuks SD-kaardile.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Uuestiproovimiseks koputage valikut PROOVI UUESTI või koputage valikut TÜHISTA ja alustage algusest.</string>
     <string name="music_dialog_button_next_txt">Edasi</string>
+    <string name="music_dialog_title_bg_scan_notice">Teade</string>
     <string name="music_dialog_title_sd_permission_access_txt">Vajate luba juurdepääsuks SD-kaardile</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Luba juurdepääsuks SD-kaardile ei antud</string>
     <string name="music_download">Laadi alla</string>
@@ -556,7 +559,7 @@ Teie seadme helisisule juurdepääsuks"</string>
     <string name="personal_data_collection_dialog_title">Isikuandmed</string>
     <string name="personal_data_collection_screen_button_negative">MITTE NÜÜD</string>
     <string name="personal_data_collection_screen_button_positive">NÕUSTUN</string>
-    <string name="personal_data_collection_screen_fine_print">Sony kogub ja kombineerib teie <a href="entrance://personaldata">isiklikke andmeid</a> teenuse parandamiseks. Sony käsitleb teie andmeid meie <a href="http://sonymobile.com/privacy">privaatsuspoliitika</a> järgi</string>
+    <string name="personal_data_collection_screen_fine_print">Sony kogub ja kombineerib teie <a href="entrance://personaldata">isiklikke andmeid</a> teenuse parandamiseks. Sony käsitleb teie andmeid meie <a href="https://www.sonymobile.com/privacy">privaatsuspoliitika</a> järgi</string>
     <string name="personal_data_collection_screen_fine_print_us">Sony kogub ja kombineerib teie <a href="entrance://personaldata">isiklikke andmeid</a> teenuse parandamiseks. Sony käsitleb teie andmeid meie <a href="https://www.sonymobile.com/us/legal/privacy">privaatsuspoliitika</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">CA privaatsusavaldus</a>) järgi</string>
     <string name="personal_data_collection_screen_text">Aidake muuta rakendus Muusika paremaks, jagades Sonyga oma kuulamisharjumusi.</string>
     <string name="play_queue_open">Ava</string>

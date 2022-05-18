@@ -79,19 +79,19 @@
         }
     .end annotation
 
-    .line 596
+    .line 611
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 597
+    .line 612
     iput-object p1, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderHighResMedia$VerifiedMedia;->tracksToBeParsed:Ljava/util/Map;
 
-    .line 598
+    .line 613
     iput-object p2, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderHighResMedia$VerifiedMedia;->tracksToBeRemovedFromMusicInfo:Ljava/util/List;
 
-    .line 599
+    .line 614
     iput-object p3, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderHighResMedia$VerifiedMedia;->tracksUnavailableInMediaStore:Ljava/util/List;
 
-    .line 600
+    .line 615
     iput-object p4, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProviderHighResMedia$VerifiedMedia;->hiResAlbums:Ljava/util/List;
 
     return-void

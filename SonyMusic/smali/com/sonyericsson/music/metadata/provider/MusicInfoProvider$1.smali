@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;)V
     .locals 0
 
-    .line 218
+    .line 248
     iput-object p1, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider$1;->this$0:Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 221
+    .line 251
     iget-object v0, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider$1;->this$0:Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;
 
     invoke-virtual {v0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
@@ -59,7 +59,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 222
+    .line 252
     sget-object v0, Lcom/sonyericsson/music/common/RefreshPlaylistArtService$PlaylistArtUpdateType;->PLAYLISTS:Lcom/sonyericsson/music/common/RefreshPlaylistArtService$PlaylistArtUpdateType;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/common/RefreshPlaylistArtService$PlaylistArtUpdateType;->getPlaylistArtTypeValue()I
@@ -68,14 +68,14 @@
 
     sget-object v1, Lcom/sonyericsson/music/common/RefreshPlaylistArtService$PlaylistArtUpdateType;->SMARTPLAYLIST:Lcom/sonyericsson/music/common/RefreshPlaylistArtService$PlaylistArtUpdateType;
 
-    .line 223
+    .line 253
     invoke-virtual {v1}, Lcom/sonyericsson/music/common/RefreshPlaylistArtService$PlaylistArtUpdateType;->getPlaylistArtTypeValue()I
 
     move-result v1
 
     or-int/2addr v0, v1
 
-    .line 225
+    .line 255
     iget-object v1, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider$1;->this$0:Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;
 
     invoke-virtual {v1}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;

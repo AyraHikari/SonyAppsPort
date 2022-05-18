@@ -22,7 +22,7 @@
 .method public constructor <init>(Lcom/sonyericsson/music/proxyservice/PlaybackService;)V
     .locals 0
 
-    .line 562
+    .line 568
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$ProxyServiceBinder;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
@@ -35,7 +35,7 @@
 .method public getMediaPlayback()Lcom/sonyericsson/music/proxyservice/MediaPlayback;
     .locals 1
 
-    .line 568
+    .line 574
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$ProxyServiceBinder;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     iget-object v0, v0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
@@ -46,7 +46,7 @@
 .method public getMediaSessionToken()Landroid/support/v4/media/session/MediaSessionCompat$Token;
     .locals 1
 
-    .line 564
+    .line 570
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$ProxyServiceBinder;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     iget-object v0, v0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;

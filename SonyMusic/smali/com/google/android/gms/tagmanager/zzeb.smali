@@ -961,9 +961,7 @@
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    long-to-int v0, v0
-
-    move v1, v0
+    long-to-int v1, v0
 
     :cond_1
     if-eqz v2, :cond_2

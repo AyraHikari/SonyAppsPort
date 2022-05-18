@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/SettingsFragment;Landroidx/preference/Preference;)V
     .locals 0
 
-    .line 467
+    .line 472
     iput-object p1, p0, Lcom/sonyericsson/music/SettingsFragment$1;->this$0:Lcom/sonyericsson/music/SettingsFragment;
 
     iput-object p2, p0, Lcom/sonyericsson/music/SettingsFragment$1;->val$clearAudioPref:Landroidx/preference/Preference;
@@ -49,7 +49,7 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 2
 
-    .line 471
+    .line 476
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment$1;->val$clearAudioPref:Landroidx/preference/Preference;
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getSharedPreferences()Landroid/content/SharedPreferences;
@@ -62,7 +62,7 @@
 
     const-string v1, "pref_key_clear_audio"
 
-    .line 473
+    .line 478
     invoke-interface {p1, v1, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
@@ -73,7 +73,7 @@
 
     return-object p1
 
-    .line 476
+    .line 481
     :cond_0
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -85,7 +85,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 467
+    .line 472
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/SettingsFragment$1;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
@@ -98,14 +98,14 @@
 .method protected onPostExecute(Ljava/lang/Boolean;)V
     .locals 1
 
-    .line 480
+    .line 485
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment$1;->this$0:Lcom/sonyericsson/music/SettingsFragment;
 
     iget-object v0, v0, Lcom/sonyericsson/music/SettingsFragment;->mSoundEnhancementsPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_0
 
-    .line 481
+    .line 486
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -121,7 +121,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 467
+    .line 472
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/SettingsFragment$1;->onPostExecute(Ljava/lang/Boolean;)V

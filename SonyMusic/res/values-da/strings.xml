@@ -279,9 +279,12 @@ Bemærk, at programmet Musik måske ikke fungerer korrekt uden den nødvendige a
     <string name="music_delete_failed_one_or_many">Nogle elementer kunne ikke slettes</string>
     <string name="music_delete_playlist_question">Slet %1$s? Afspilningslistens indhold vil ikke blive påvirket.</string>
     <string name="music_delete_question">Slet %1$s fra lager?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Appen Musik udfører en baggrundsscanning for at genopbygge musikdatabasen.
+Denne scanning kan tage mere end 10 minutter. Sange og afspilningslister vises eller afspilles ikke korrekt, indtil baggrundsscanningen gennemføres."</string>
     <string name="music_dialog_body_sd_permission_access_txt">For at bruge SD-kortet som datalager skal du give tilladelse til at få adgang til SD-kortet på det næste skærmbillede.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Tryk på PRØV IGEN for at prøve igen, eller tryk på ANNULLER for at starte forfra.</string>
     <string name="music_dialog_button_next_txt">Næste</string>
+    <string name="music_dialog_title_bg_scan_notice">Meddelelse</string>
     <string name="music_dialog_title_sd_permission_access_txt">Kræver tilladelse til at opnå adgang til SD-kort</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Tilladelse til at få adgang til SD-kortet ikke givet</string>
     <string name="music_download">Overfør</string>
@@ -556,7 +559,7 @@ For at få adgang til lydindhold på din enhed"</string>
     <string name="personal_data_collection_dialog_title">Personlige data</string>
     <string name="personal_data_collection_screen_button_negative">IKKE NU</string>
     <string name="personal_data_collection_screen_button_positive">JEG ACCEPTERER</string>
-    <string name="personal_data_collection_screen_fine_print">Sony indhenter og samler dine <a href="entrance://personaldata">personlige data</a> for at forbedre tjenesten. Sony behandler dine data i overensstemmelse med vores <a href="http://sonymobile.com/privacy">fortrolighedspolitik</a></string>
+    <string name="personal_data_collection_screen_fine_print">Sony indhenter og samler dine <a href="entrance://personaldata">personlige data</a> for at forbedre tjenesten. Sony behandler dine data i overensstemmelse med vores <a href="https://www.sonymobile.com/privacy">fortrolighedspolitik</a></string>
     <string name="personal_data_collection_screen_fine_print_us">Sony indhenter og samler dine <a href="entrance://personaldata">personlige data</a> for at forbedre tjenesten. Sony behandler dine data i overensstemmelse med vores <a href="https://www.sonymobile.com/us/legal/privacy">fortrolighedspolitik</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Fortrolighedsmeddelelse for Californien</a>)</string>
     <string name="personal_data_collection_screen_text">Hjælp os med at gøre musikprogrammet bedre ved at dele dine lyttevaner med Sony.</string>
     <string name="play_queue_open">Åbn</string>

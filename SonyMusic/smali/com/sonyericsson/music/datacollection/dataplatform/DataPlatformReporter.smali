@@ -167,9 +167,9 @@
     :try_start_0
     const-string v0, "com.sonyericsson.music"
 
-    const-string v1, "9.4.9.A.0.4"
+    const-string v1, "9.4.10.A.0.11"
 
-    const v2, 0x1292004
+    const v2, 0x129400b
 
     .line 162
     new-instance v3, Lorg/json/JSONObject;
@@ -179,7 +179,7 @@
     invoke-static {v0, v1, v2, v3}, Lcom/sonyericsson/idd/api/Idd;->addAppDataJSON(Ljava/lang/String;Ljava/lang/String;ILorg/json/JSONObject;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
     :cond_0

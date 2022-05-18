@@ -630,9 +630,9 @@
     .line 306
     iget-object v0, v0, Lokio/Segment;->data:[B
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    add-int/2addr v2, p1
+    add-int/2addr v2, p2
 
     aget-byte p1, v0, v2
 
@@ -675,9 +675,9 @@
     .line 313
     iget-object v0, v0, Lokio/Segment;->data:[B
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
-    add-int/2addr v2, p1
+    add-int/2addr v2, p2
 
     aget-byte p1, v0, v2
 
@@ -886,28 +886,28 @@
 
     move-result-wide v11
 
-    long-to-int v11, v11
+    long-to-int v12, v11
 
     .line 1456
-    iget v12, v7, Lokio/Segment;->pos:I
+    iget v11, v7, Lokio/Segment;->pos:I
 
-    int-to-long v12, v12
+    int-to-long v13, v11
 
-    add-long/2addr v12, v1
+    add-long/2addr v13, v1
 
-    sub-long/2addr v12, v8
+    sub-long/2addr v13, v8
 
-    long-to-int v1, v12
+    long-to-int v1, v13
 
     :goto_4
-    if-ge v1, v11, :cond_7
+    if-ge v1, v12, :cond_7
 
     .line 1458
     aget-byte v2, v10, v1
 
-    move/from16 v12, p1
+    move/from16 v11, p1
 
-    if-ne v2, v12, :cond_6
+    if-ne v2, v11, :cond_6
 
     .line 1459
     iget v2, v7, Lokio/Segment;->pos:I
@@ -926,7 +926,7 @@
     goto :goto_4
 
     :cond_7
-    move/from16 v12, p1
+    move/from16 v11, p1
 
     .line 1464
     iget v1, v7, Lokio/Segment;->limit:I
@@ -1492,10 +1492,10 @@
 
     if-gtz v2, :cond_0
 
-    long-to-int p1, p1
+    long-to-int p2, p1
 
     .line 861
-    new-array p1, p1, [B
+    new-array p1, p2, [B
 
     .line 862
     invoke-virtual {p0, p1}, Lokio/Buffer;->readFully([B)V
@@ -2888,7 +2888,7 @@
 .end method
 
 .method public skip(J)V
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/EOFException;
@@ -2921,44 +2921,44 @@
 
     move-result-wide v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
     .line 934
-    iget-wide v1, p0, Lokio/Buffer;->size:J
+    iget-wide v2, p0, Lokio/Buffer;->size:J
 
-    int-to-long v3, v0
+    int-to-long v4, v1
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v2, v4
 
-    iput-wide v1, p0, Lokio/Buffer;->size:J
+    iput-wide v2, p0, Lokio/Buffer;->size:J
 
-    sub-long/2addr p1, v3
+    sub-long/2addr p1, v4
 
     .line 936
-    iget-object v1, p0, Lokio/Buffer;->head:Lokio/Segment;
+    iget-object v0, p0, Lokio/Buffer;->head:Lokio/Segment;
 
-    iget v2, v1, Lokio/Segment;->pos:I
+    iget v2, v0, Lokio/Segment;->pos:I
 
-    add-int/2addr v2, v0
+    add-int/2addr v2, v1
 
-    iput v2, v1, Lokio/Segment;->pos:I
+    iput v2, v0, Lokio/Segment;->pos:I
 
     .line 938
-    iget v0, v1, Lokio/Segment;->pos:I
+    iget v1, v0, Lokio/Segment;->pos:I
 
-    iget v2, v1, Lokio/Segment;->limit:I
+    iget v2, v0, Lokio/Segment;->limit:I
 
-    if-ne v0, v2, :cond_0
+    if-ne v1, v2, :cond_0
 
     .line 940
-    invoke-virtual {v1}, Lokio/Segment;->pop()Lokio/Segment;
+    invoke-virtual {v0}, Lokio/Segment;->pop()Lokio/Segment;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lokio/Buffer;->head:Lokio/Segment;
+    iput-object v1, p0, Lokio/Buffer;->head:Lokio/Segment;
 
     .line 941
-    invoke-static {v1}, Lokio/SegmentPool;->recycle(Lokio/Segment;)V
+    invoke-static {v0}, Lokio/SegmentPool;->recycle(Lokio/Segment;)V
 
     goto :goto_0
 
@@ -2986,10 +2986,10 @@
 
     if-gtz v4, :cond_0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
     .line 1823
-    invoke-virtual {p0, v0}, Lokio/Buffer;->snapshot(I)Lokio/ByteString;
+    invoke-virtual {p0, v1}, Lokio/Buffer;->snapshot(I)Lokio/ByteString;
 
     move-result-object v0
 
@@ -3963,14 +3963,14 @@
     .line 1253
     rem-long v9, p1, v6
 
-    long-to-int v9, v9
+    long-to-int v10, v9
 
     add-int/lit8 v8, v8, -0x1
 
     .line 1254
-    sget-object v10, Lokio/Buffer;->DIGITS:[B
+    sget-object v9, Lokio/Buffer;->DIGITS:[B
 
-    aget-byte v9, v10, v9
+    aget-byte v9, v9, v10
 
     aput-byte v9, v5, v8
 
@@ -4080,9 +4080,9 @@
 
     and-long/2addr v7, p1
 
-    long-to-int v7, v7
+    long-to-int v8, v7
 
-    aget-byte v6, v6, v7
+    aget-byte v6, v6, v8
 
     aput-byte v6, v3, v5
 

@@ -83,7 +83,7 @@
 
     if-eqz p1, :cond_1
 
-    const-string p1, "Unknown Album"
+    const-string p1, "Unknown album"
 
     goto :goto_0
 

@@ -430,63 +430,63 @@
 
     xor-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 141
     invoke-virtual {p0}, Lcom/google/android/material/animation/MotionTiming;->getDuration()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {p0}, Lcom/google/android/material/animation/MotionTiming;->getDuration()J
 
     move-result-wide v5
 
-    ushr-long v3, v5, v4
+    ushr-long v4, v5, v4
 
-    xor-long/2addr v1, v3
+    xor-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v0, v2
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 142
     invoke-virtual {p0}, Lcom/google/android/material/animation/MotionTiming;->getInterpolator()Landroid/animation/TimeInterpolator;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result v0
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 143
     invoke-virtual {p0}, Lcom/google/android/material/animation/MotionTiming;->getRepeatCount()I
 
-    move-result v1
+    move-result v0
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 144
     invoke-virtual {p0}, Lcom/google/android/material/animation/MotionTiming;->getRepeatMode()I
 
-    move-result v1
+    move-result v0
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    return v0
+    return v1
 .end method
 
 .method public toString()Ljava/lang/String;

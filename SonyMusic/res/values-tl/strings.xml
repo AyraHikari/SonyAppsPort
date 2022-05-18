@@ -279,9 +279,12 @@ Pakitandaan na ang application na Musika ay maaaring hindi gumana nang tama nang
     <string name="music_delete_failed_one_or_many">Hindi matatanggal ang ilang item</string>
     <string name="music_delete_playlist_question">Tanggalin ang %1$s? Hindi maaapektuhan ang nilalaman ng playlist.</string>
     <string name="music_delete_question">Tanggalin ang %1$s sa storage?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Magsi-scan ang Music app sa background para muling buuhin ang database ng musika.
+Aabutin ang pag-scan nang higit sa 10 minuto depende sa bilang ng kanta. Hindi ipapakita o ipi-play ang mga kanta at playlist hanggang sa matapos ang pag-scan."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Para magamit ang SD card bilang data storage, magbigay ng pahintulot na i-access ang SD card sa susunod na screen.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">I-tap ang SUBUKANG MULI para ulitin, o i-tap ang KANSELAHIN at magsimula mula sa umpisa.</string>
     <string name="music_dialog_button_next_txt">Susunod</string>
+    <string name="music_dialog_title_bg_scan_notice">Abiso</string>
     <string name="music_dialog_title_sd_permission_access_txt">Kailangan ng pahintulot para ma-access ang SD card</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Hindi nabigyan ng pahintulot na i-access ang SD card</string>
     <string name="music_download">I-download</string>
@@ -556,7 +559,7 @@ Para mag-access ng audio sa iyong device"</string>
     <string name="personal_data_collection_dialog_title">Personal na data</string>
     <string name="personal_data_collection_screen_button_negative">HUWAG NGAYON</string>
     <string name="personal_data_collection_screen_button_positive">SUMASANG-AYON AKO</string>
-    <string name="personal_data_collection_screen_fine_print">Kokolektahin at pagsasama-samahin ng Sony ang iyong <a href="entrance://personaldata">personal na data</a> para mapahusay ang serbisyo. Gagamitin ng Sony ang iyong data alinsunod sa aming <a href="http://sonymobile.com/privacy">Patakaran sa Privacy</a></string>
+    <string name="personal_data_collection_screen_fine_print">Kokolektahin at pagsasama-samahin ng Sony ang iyong <a href="entrance://personaldata">personal na data</a> para mapahusay ang serbisyo. Gagamitin ng Sony ang iyong data alinsunod sa aming <a href="https://www.sonymobile.com/privacy">Patakaran sa Privacy</a></string>
     <string name="personal_data_collection_screen_fine_print_us">Kokolektahin at pagsasama-samahin ng Sony ang iyong <a href="entrance://personaldata">personal na data</a> para mapahusay ang serbisyo. Gagamitin ng Sony ang iyong data alinsunod sa aming <a href="https://www.sonymobile.com/us/legal/privacy">Patakaran sa Privacy</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Abisong Privacy ng California</a>)</string>
     <string name="personal_data_collection_screen_text">Tulungan kaming mas mapahusay ang application na Musika sa pamamagitan ng pagbabahagi ng iyong mga kasanayan sa pakikinig sa Sony</string>
     <string name="play_queue_open">Buksan</string>

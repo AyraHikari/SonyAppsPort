@@ -4410,7 +4410,7 @@
 
     invoke-direct {p2, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
     :try_end_0
-    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p2
@@ -4418,7 +4418,13 @@
     :catch_0
     move-exception p1
 
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
     .line 883
+    :goto_0
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzgu;->zzq()Lcom/google/android/gms/measurement/internal/zzex;
 
     move-result-object p2

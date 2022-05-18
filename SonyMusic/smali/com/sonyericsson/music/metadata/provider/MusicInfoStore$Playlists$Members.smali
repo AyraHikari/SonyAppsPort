@@ -35,6 +35,8 @@
 
 .field public static final PLAYLIST_ID:Ljava/lang/String; = "playlist_id"
 
+.field public static final PLAY_COUNT:Ljava/lang/String; = "play_count"
+
 .field public static final PLAY_ORDER:Ljava/lang/String; = "play_order"
 
 .field public static final SIZE:Ljava/lang/String; = "_size"
@@ -48,7 +50,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 498
+    .line 501
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,7 +61,7 @@
 
     const-string v0, "content://com.sonyericsson.music.musicinfo/"
 
-    .line 500
+    .line 503
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -68,7 +70,7 @@
 
     move-result-object v0
 
-    .line 501
+    .line 504
     invoke-static {p0}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$Members;->getMembersPath(I)Ljava/lang/String;
 
     move-result-object p0
@@ -87,7 +89,7 @@
 .method public static getMembersPath(I)Ljava/lang/String;
     .locals 2
 
-    .line 511
+    .line 514
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,7 +118,7 @@
 .method public static getMoveContentUri(III)Landroid/net/Uri;
     .locals 1
 
-    .line 505
+    .line 508
     invoke-static {p0}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$Members;->getContentUri(I)Landroid/net/Uri;
 
     move-result-object p0
@@ -127,7 +129,7 @@
 
     const-string v0, "from"
 
-    .line 506
+    .line 509
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -138,7 +140,7 @@
 
     const-string p1, "to"
 
-    .line 507
+    .line 510
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p2

@@ -98,8 +98,8 @@
 
     check-cast p0, Landroid/os/IBinder;
     :try_end_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
 
     return-object p0
@@ -107,6 +107,17 @@
     :catch_1
     move-exception p0
 
+    goto :goto_1
+
+    :catch_2
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_3
+    move-exception p0
+
+    :goto_1
     const-string p1, "BundleCompatBaseImpl"
 
     const-string v0, "Failed to invoke getIBinder via reflection"
@@ -197,15 +208,26 @@
 
     invoke-virtual {v0, p0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
 
-    goto :goto_1
+    goto :goto_2
 
     :catch_1
     move-exception p0
 
+    goto :goto_1
+
+    :catch_2
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_3
+    move-exception p0
+
+    :goto_1
     const-string p1, "BundleCompatBaseImpl"
 
     const-string p2, "Failed to invoke putIBinder via reflection"
@@ -219,6 +241,6 @@
     sput-object p0, Landroidx/core/app/BundleCompat$BundleCompatBaseImpl;->sPutIBinderMethod:Ljava/lang/reflect/Method;
 
     :cond_1
-    :goto_1
+    :goto_2
     return-void
 .end method

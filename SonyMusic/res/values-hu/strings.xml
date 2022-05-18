@@ -279,9 +279,12 @@ Vegye figyelembe, hogy a kért hozzáférés nélkül a Zene alkalmazás nem fel
     <string name="music_delete_failed_one_or_many">Néhány elem nem törölhető</string>
     <string name="music_delete_playlist_question">Törli a(z) %1$s listát? A művelet nem érinti a lejátszási lista tartalmát.</string>
     <string name="music_delete_question">Törli a következőt a tárhelyről: %1$s?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"A Zene alkalmazás a háttérben keresést végez, hogy újra felépítse a zenei adatbázist.
+Ez a dalok számától függően akár több mint 10 percet is igénybe vehet. A dalok és a lejátszási listák nem jelennek meg, és lejátszani sem lehet őket a keresés végéig."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Az SD-kártya adattárolóként való használatához a következő képernyőn engedélyezze az SD-kártyához való hozzáférést.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Az ismételt próbálkozáshoz koppintson az ISMÉT gombra, vagy koppintson a MÉGSE gombra, és kezdje elölről.</string>
     <string name="music_dialog_button_next_txt">Következő</string>
+    <string name="music_dialog_title_bg_scan_notice">Figyelem</string>
     <string name="music_dialog_title_sd_permission_access_txt">Az SD-kártya eléréséhez engedély szükséges</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Nincs engedélyezve az SD-kártyához való hozzáférés</string>
     <string name="music_download">Letöltés</string>
@@ -556,7 +559,7 @@ A készüléken tárolt hanganyagok eléréséhez"</string>
     <string name="personal_data_collection_dialog_title">Személyes adatok</string>
     <string name="personal_data_collection_screen_button_negative">MOST NEM</string>
     <string name="personal_data_collection_screen_button_positive">BELEEGYEZEM</string>
-    <string name="personal_data_collection_screen_fine_print">A Sony összegyűjti és egyesíti az Ön <a href="entrance://personaldata">személyes adatait</a> a szolgáltatás javítása céljából. A Sony az <a href="http://sonymobile.com/privacy">adatvédelmi szabályzatának</a> megfelelően kezeli az adatokat.</string>
+    <string name="personal_data_collection_screen_fine_print">A Sony összegyűjti és egyesíti az Ön <a href="entrance://personaldata">személyes adatait</a> a szolgáltatás javítása céljából. A Sony az <a href="https://www.sonymobile.com/privacy">adatvédelmi szabályzatának</a> megfelelően kezeli az adatokat.</string>
     <string name="personal_data_collection_screen_fine_print_us">A Sony összegyűjti és egyesíti az Ön <a href="entrance://personaldata">személyes adatait</a> a szolgáltatás javítása céljából. A Sony az <a href="https://www.sonymobile.com/us/legal/privacy">adatvédelmi szabályzatának</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">Kaliforniai adatvédelmi nyilatkozat</a>) megfelelően kezeli az adatokat.</string>
     <string name="personal_data_collection_screen_text">Segítsen nekünk a Zene alkalmazás javításában, és ossza meg zenehallgatási szokásait a Sony céggel.</string>
     <string name="play_queue_open">Megnyitás</string>

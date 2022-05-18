@@ -279,9 +279,12 @@ Vēlāk varat rediģēt atļaujas lietotnes Mūzika iestatījumos.
     <string name="music_delete_failed_one_or_many">Dažus objektus nevarēja izdzēst</string>
     <string name="music_delete_playlist_question">Vai dzēst %1$s? Atskaņošanas saraksta saturs netiks ietekmēts.</string>
     <string name="music_delete_question">Vai dzēst %1$s no krātuves?</string>
+    <string name="music_dialog_body_bg_scan_notice_message">"Lietotne Music app veiks fona skenēšanu, lai atjaunotu mūzikas datubāzi.
+Skenēšana var aizņemt ilgāk par 10 minūtēm atkarībā no dziesmu skaita. Dziesmas un atskaņošanas saraksti netiek rādīti vai attēloti pareizi līdz fona skenēšanas pabeigšanai."</string>
     <string name="music_dialog_body_sd_permission_access_txt">Lai izmantotu SD karti kā datu krātuvi, lūdzu, nākamajā ekrānā piešķiriet atļauju piekļūt SD kartei.</string>
     <string name="music_dialog_body_sd_permission_retry_txt">Piesitiet pie MĒĢINĀT VĒLREIZ, lai mēģinātu vēlreiz, vai pie ATCELT un sāciet no sākuma.</string>
     <string name="music_dialog_button_next_txt">Tālāk</string>
+    <string name="music_dialog_title_bg_scan_notice">Paziņojums</string>
     <string name="music_dialog_title_sd_permission_access_txt">Nepieciešama atļauja, lai piekļūtu SD kartei</string>
     <string name="music_dialog_title_sd_permission_retry_txt">Atļauja piekļūt SD kartei nav piešķirta</string>
     <string name="music_download">Lejupielādēt</string>
@@ -556,7 +559,7 @@ Lai piekļūtu audio saturam ierīcē"</string>
     <string name="personal_data_collection_dialog_title">Personiskie dati</string>
     <string name="personal_data_collection_screen_button_negative">NE TAGAD</string>
     <string name="personal_data_collection_screen_button_positive">ES PIEKRĪTU</string>
-    <string name="personal_data_collection_screen_fine_print">Sony apkopos un apvienos jūsu <a href="entrance://personaldata">personas datus</a>, lai uzlabotu pakalpojumu. Sony apstrādās jūsu datus atbilstoši mūsu <a href="http://sonymobile.com/privacy">konfidencialitātes politikai</a></string>
+    <string name="personal_data_collection_screen_fine_print">Sony apkopos un apvienos jūsu <a href="entrance://personaldata">personas datus</a>, lai uzlabotu pakalpojumu. Sony apstrādās jūsu datus atbilstoši mūsu <a href="https://www.sonymobile.com/privacy">konfidencialitātes politikai</a></string>
     <string name="personal_data_collection_screen_fine_print_us">Sony apkopos un apvienos jūsu <a href="entrance://personaldata">personas datus</a>, lai uzlabotu pakalpojumu. Sony apstrādās jūsu datus atbilstoši mūsu <a href="https://www.sonymobile.com/us/legal/privacy">konfidencialitātes politikai</a> (<a href="https://www.sonymobile.com/us/legal/privacy#10">CA konfidencialitātes paziņojums</a>)</string>
     <string name="personal_data_collection_screen_text">Palīdziet mums uzlabot Mūzikas lietotni, kopīgojot savus klausīšanās ieradumus ar Sony.</string>
     <string name="play_queue_open">Atvērt</string>

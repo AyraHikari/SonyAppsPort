@@ -205,7 +205,7 @@
 
     iget-object p1, p1, Lcom/sonyericsson/music/ViewRequestController$IntentHandler;->mActivity:Lcom/sonyericsson/music/MusicActivity;
 
-    const v0, 0x7f1001d0
+    const v0, 0x7f1001d2
 
     invoke-static {p1, v0}, Lcom/sonyericsson/music/ViewRequestController;->access$100(Lcom/sonyericsson/music/MusicActivity;I)V
 

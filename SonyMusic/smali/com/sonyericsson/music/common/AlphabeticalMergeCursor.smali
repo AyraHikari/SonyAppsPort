@@ -527,45 +527,45 @@
 
     and-long/2addr v1, v7
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
     .line 160
-    iget-object v2, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursorA:Landroid/database/Cursor;
+    iget-object v1, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursorA:Landroid/database/Cursor;
 
-    iput-object v2, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursor:Landroid/database/Cursor;
+    iput-object v1, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursor:Landroid/database/Cursor;
 
     .line 161
     iget-boolean v4, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mEmittedA:Z
 
     if-nez v4, :cond_2
 
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
 
-    move-result v2
+    move-result v1
 
-    if-ne v1, v2, :cond_2
+    if-ne v2, v1, :cond_2
 
-    iget-object v2, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mListener:Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;
+    iget-object v1, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mListener:Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;
 
-    if-eqz v2, :cond_2
+    if-eqz v1, :cond_2
 
     .line 166
     invoke-static {v5, v6}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v4
 
-    shr-long v2, v4, v3
+    shr-long v3, v4, v3
 
-    and-long/2addr v2, v7
+    and-long/2addr v3, v7
 
-    long-to-int v2, v2
+    long-to-int v1, v3
 
     .line 168
     iput-boolean v11, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mEmittedA:Z
 
-    add-int/2addr v2, v1
+    add-int/2addr v1, v2
 
-    add-int/lit8 v3, v2, -0x1
+    add-int/lit8 v3, v1, -0x1
 
     .line 169
     invoke-virtual/range {p0 .. p0}, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->getCount()I
@@ -574,25 +574,25 @@
 
     if-ne v3, v4, :cond_1
 
-    add-int/lit8 v3, v2, -0x2
+    add-int/lit8 v3, v1, -0x2
 
     .line 170
     :cond_1
-    iget-object v2, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mListener:Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;
+    iget-object v1, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mListener:Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;
 
     iget-object v4, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursorA:Landroid/database/Cursor;
 
     iget-object v5, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mTypeA:Lcom/sonyericsson/music/common/MixedContentCursor$ContentType;
 
-    invoke-interface {v2, v4, v5, v3}, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;->onEndOfCursorReached(Landroid/database/Cursor;Lcom/sonyericsson/music/common/MixedContentCursor$ContentType;I)V
+    invoke-interface {v1, v4, v5, v3}, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;->onEndOfCursorReached(Landroid/database/Cursor;Lcom/sonyericsson/music/common/MixedContentCursor$ContentType;I)V
 
     .line 172
     :cond_2
-    iget-object v2, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursorA:Landroid/database/Cursor;
+    iget-object v1, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursorA:Landroid/database/Cursor;
 
-    sub-int/2addr v1, v11
+    sub-int/2addr v2, v11
 
-    invoke-interface {v2, v1}, Landroid/database/Cursor;->moveToPosition(I)Z
+    invoke-interface {v1, v2}, Landroid/database/Cursor;->moveToPosition(I)Z
 
     move-result v1
 
@@ -612,43 +612,43 @@
 
     and-long/2addr v1, v7
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
     .line 178
-    iget-object v2, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursorB:Landroid/database/Cursor;
+    iget-object v1, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursorB:Landroid/database/Cursor;
 
-    iput-object v2, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursor:Landroid/database/Cursor;
+    iput-object v1, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursor:Landroid/database/Cursor;
 
     .line 179
     iget-boolean v3, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mEmittedB:Z
 
     if-nez v3, :cond_5
 
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
 
-    move-result v2
+    move-result v1
 
-    if-ne v1, v2, :cond_5
+    if-ne v2, v1, :cond_5
 
-    iget-object v2, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mListener:Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;
+    iget-object v1, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mListener:Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;
 
-    if-eqz v2, :cond_5
+    if-eqz v1, :cond_5
 
     .line 181
     invoke-static {v5, v6}, Ljava/lang/Math;->abs(J)J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    and-long/2addr v2, v7
+    and-long/2addr v3, v7
 
-    long-to-int v2, v2
+    long-to-int v1, v3
 
     .line 183
     iput-boolean v11, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mEmittedB:Z
 
-    add-int/2addr v2, v1
+    add-int/2addr v1, v2
 
-    add-int/lit8 v3, v2, -0x1
+    add-int/lit8 v3, v1, -0x1
 
     .line 184
     invoke-virtual/range {p0 .. p0}, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->getCount()I
@@ -657,25 +657,25 @@
 
     if-ne v3, v4, :cond_4
 
-    add-int/lit8 v3, v2, -0x2
+    add-int/lit8 v3, v1, -0x2
 
     .line 185
     :cond_4
-    iget-object v2, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mListener:Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;
+    iget-object v1, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mListener:Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;
 
     iget-object v4, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursorB:Landroid/database/Cursor;
 
     iget-object v5, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mTypeB:Lcom/sonyericsson/music/common/MixedContentCursor$ContentType;
 
-    invoke-interface {v2, v4, v5, v3}, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;->onEndOfCursorReached(Landroid/database/Cursor;Lcom/sonyericsson/music/common/MixedContentCursor$ContentType;I)V
+    invoke-interface {v1, v4, v5, v3}, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor$EndOfCursorReachedListener;->onEndOfCursorReached(Landroid/database/Cursor;Lcom/sonyericsson/music/common/MixedContentCursor$ContentType;I)V
 
     .line 187
     :cond_5
-    iget-object v2, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursorB:Landroid/database/Cursor;
+    iget-object v1, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursorB:Landroid/database/Cursor;
 
-    sub-int/2addr v1, v11
+    sub-int/2addr v2, v11
 
-    invoke-interface {v2, v1}, Landroid/database/Cursor;->moveToPosition(I)Z
+    invoke-interface {v1, v2}, Landroid/database/Cursor;->moveToPosition(I)Z
 
     move-result v1
 
@@ -738,17 +738,17 @@
 
     and-long v4, v13, v7
 
-    long-to-int v4, v4
+    long-to-int v5, v4
 
-    sub-int/2addr v4, v11
+    sub-int/2addr v5, v11
 
     shr-long/2addr v13, v3
 
     and-long/2addr v13, v7
 
-    long-to-int v5, v13
+    long-to-int v4, v13
 
-    sub-int/2addr v5, v11
+    sub-int/2addr v4, v11
 
     .line 211
     aget-wide v13, v2, v12
@@ -767,14 +767,14 @@
     .line 214
     iget-object v13, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursor:Landroid/database/Cursor;
 
-    invoke-interface {v13, v4}, Landroid/database/Cursor;->moveToPosition(I)Z
+    invoke-interface {v13, v5}, Landroid/database/Cursor;->moveToPosition(I)Z
 
     :cond_8
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v5, v5, 0x1
 
-    move v13, v4
+    move v14, v4
 
-    move v14, v5
+    move v13, v5
 
     goto :goto_2
 
@@ -789,14 +789,14 @@
     .line 221
     iget-object v13, v0, Lcom/sonyericsson/music/common/AlphabeticalMergeCursor;->mCursor:Landroid/database/Cursor;
 
-    invoke-interface {v13, v5}, Landroid/database/Cursor;->moveToPosition(I)Z
+    invoke-interface {v13, v4}, Landroid/database/Cursor;->moveToPosition(I)Z
 
     :cond_a
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v4, v4, 0x1
 
-    move v13, v4
+    move v14, v4
 
-    move v14, v5
+    move v13, v5
 
     :goto_2
     add-int/lit8 v12, v12, 0x1

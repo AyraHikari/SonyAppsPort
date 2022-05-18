@@ -1,69 +1,60 @@
-.class synthetic Lcom/sonyericsson/music/MusicActivity$20;
+.class Lcom/sonyericsson/music/MusicActivity$20;
 .super Ljava/lang/Object;
 .source "MusicActivity.java"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/sonyericsson/music/MusicActivity;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/sonyericsson/music/MusicActivity;->clearSunsetFiles()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic $SwitchMap$com$sonyericsson$music$common$DrmUtils$RightsCheckResult:[I
+# instance fields
+.field final synthetic this$0:Lcom/sonyericsson/music/MusicActivity;
+
+.field final synthetic val$ctx:Landroid/content/Context;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/sonyericsson/music/MusicActivity;Landroid/content/Context;)V
+    .locals 0
 
-    .line 1895
-    invoke-static {}, Lcom/sonyericsson/music/common/DrmUtils$RightsCheckResult;->values()[Lcom/sonyericsson/music/common/DrmUtils$RightsCheckResult;
+    .line 2303
+    iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$20;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
-    move-result-object v0
+    iput-object p2, p0, Lcom/sonyericsson/music/MusicActivity$20;->val$ctx:Landroid/content/Context;
 
-    array-length v0, v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    return-void
+.end method
 
-    sput-object v0, Lcom/sonyericsson/music/MusicActivity$20;->$SwitchMap$com$sonyericsson$music$common$DrmUtils$RightsCheckResult:[I
 
-    :try_start_0
-    sget-object v0, Lcom/sonyericsson/music/MusicActivity$20;->$SwitchMap$com$sonyericsson$music$common$DrmUtils$RightsCheckResult:[I
+# virtual methods
+.method public run()V
+    .locals 1
 
-    sget-object v1, Lcom/sonyericsson/music/common/DrmUtils$RightsCheckResult;->HAS_DRM_RIGHTS:Lcom/sonyericsson/music/common/DrmUtils$RightsCheckResult;
+    .line 2306
+    iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$20;->val$ctx:Landroid/content/Context;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    if-eqz v0, :cond_0
 
-    move-result v1
+    .line 2307
+    invoke-static {v0}, Lcom/sonyericsson/music/common/MusicUtils;->deleteSunsetFiles(Landroid/content/Context;)V
 
-    const/4 v2, 0x1
+    .line 2308
+    iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$20;->val$ctx:Landroid/content/Context;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setSunsetFilesCleared(Landroid/content/Context;)V
 
-    :catch_0
-    :try_start_1
-    sget-object v0, Lcom/sonyericsson/music/MusicActivity$20;->$SwitchMap$com$sonyericsson$music$common$DrmUtils$RightsCheckResult:[I
-
-    sget-object v1, Lcom/sonyericsson/music/common/DrmUtils$RightsCheckResult;->HAS_NO_DRM_RIGHTS:Lcom/sonyericsson/music/common/DrmUtils$RightsCheckResult;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
+    :cond_0
     return-void
 .end method

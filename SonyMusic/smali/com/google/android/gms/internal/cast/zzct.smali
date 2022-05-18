@@ -1223,7 +1223,7 @@
 
     if-nez v0, :cond_0
 
-    goto :goto_1
+    goto :goto_2
 
     .line 41
     :cond_0
@@ -1240,7 +1240,7 @@
     .line 43
     invoke-interface {v0}, Lcom/google/android/gms/internal/cast/zzdf;->disconnect()V
     :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1252,12 +1252,18 @@
     :catchall_0
     move-exception v0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception v0
 
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
     .line 47
+    :goto_0
     :try_start_1
     sget-object v1, Lcom/google/android/gms/internal/cast/zzct;->zzbf:Lcom/google/android/gms/internal/cast/zzdo;
 
@@ -1281,14 +1287,14 @@
     return-void
 
     .line 50
-    :goto_0
+    :goto_1
     invoke-super {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->disconnect()V
 
     throw v0
 
     .line 39
     :cond_1
-    :goto_1
+    :goto_2
     sget-object v0, Lcom/google/android/gms/internal/cast/zzct;->zzbf:Lcom/google/android/gms/internal/cast/zzdo;
 
     const-string v1, "already disposed, so short-circuiting"

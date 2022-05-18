@@ -215,7 +215,7 @@
 
     invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    const p1, 0x7f100151
+    const p1, 0x7f100153
 
     .line 92
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/library/CloudFragment;->handleAuthorizeFailed(I)V
@@ -255,7 +255,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const v0, 0x7f100199
+    const v0, 0x7f10019b
 
     .line 66
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;

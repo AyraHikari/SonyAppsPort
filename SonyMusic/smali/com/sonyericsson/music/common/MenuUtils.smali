@@ -142,7 +142,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f100235
+    const p1, 0x7f100237
 
     .line 425
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setOpenText(I)Lcom/sonyericsson/music/common/ContextMenuBuilder;
@@ -207,7 +207,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f100235
+    const p1, 0x7f100237
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setOpenText(I)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
@@ -266,7 +266,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f100235
+    const p1, 0x7f100237
 
     .line 465
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setOpenText(I)Lcom/sonyericsson/music/common/ContextMenuBuilder;
@@ -331,7 +331,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f100235
+    const p1, 0x7f100237
 
     .line 498
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setOpenText(I)Lcom/sonyericsson/music/common/ContextMenuBuilder;
@@ -670,7 +670,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f100235
+    const p1, 0x7f100237
 
     .line 451
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setOpenText(I)Lcom/sonyericsson/music/common/ContextMenuBuilder;
@@ -1243,11 +1243,9 @@
     const-string v4, "external"
 
     .line 776
-    invoke-virtual {p2}, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->getId()I
+    invoke-virtual {p2}, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->getId()J
 
-    move-result v5
-
-    int-to-long v5, v5
+    move-result-wide v5
 
     invoke-static {v4, v5, v6}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Files;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
 
@@ -1273,11 +1271,11 @@
 
     .line 791
     :cond_2
-    invoke-virtual {p2}, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->getId()I
+    invoke-virtual {p2}, Lcom/sonyericsson/music/common/MenuUtils$FolderData;->getId()J
 
-    move-result p1
+    move-result-wide v3
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p1
 

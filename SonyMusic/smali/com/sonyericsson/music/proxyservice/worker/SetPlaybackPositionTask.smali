@@ -39,12 +39,12 @@
 .method private static safeLongToInt(J)I
     .locals 0
 
-    long-to-int p0, p0
+    long-to-int p1, p0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
     .line 30
-    invoke-static {p1, p0}, Ljava/lang/Math;->max(II)I
+    invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p0
 

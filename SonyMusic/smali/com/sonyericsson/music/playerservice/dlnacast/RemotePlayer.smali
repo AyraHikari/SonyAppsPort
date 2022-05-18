@@ -173,9 +173,9 @@
     :catch_0
     aget-wide v0, v2, v1
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    return v0
+    return v1
 
     :cond_0
     return v1

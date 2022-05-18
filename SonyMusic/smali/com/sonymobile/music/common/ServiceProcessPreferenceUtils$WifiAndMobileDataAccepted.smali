@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 37
+    .line 51
     new-instance v0, Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
 
     const-string v1, "NOT_SET"
@@ -47,7 +47,7 @@
 
     sput-object v0, Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;->NOT_SET:Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
 
-    .line 38
+    .line 52
     new-instance v0, Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
 
     const-string v1, "ACCEPTED"
@@ -58,7 +58,7 @@
 
     sput-object v0, Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;->ACCEPTED:Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
 
-    .line 39
+    .line 53
     new-instance v0, Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
 
     const-string v1, "DECLINED"
@@ -71,7 +71,7 @@
 
     const/4 v0, 0x3
 
-    .line 36
+    .line 50
     new-array v0, v0, [Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
 
     sget-object v1, Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;->NOT_SET:Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
@@ -99,7 +99,7 @@
         }
     .end annotation
 
-    .line 36
+    .line 50
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -108,7 +108,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
     .locals 1
 
-    .line 36
+    .line 50
     const-class v0, Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -123,7 +123,7 @@
 .method public static values()[Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
     .locals 1
 
-    .line 36
+    .line 50
     sget-object v0, Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;->$VALUES:[Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
 
     invoke-virtual {v0}, [Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;->clone()Ljava/lang/Object;

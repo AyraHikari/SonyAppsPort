@@ -89,12 +89,12 @@
 .method public final zza([BJJJ)V
     .locals 0
 
-    long-to-int p2, p2
+    long-to-int p3, p2
 
-    long-to-int p3, p6
+    long-to-int p2, p6
 
     .line 25
-    invoke-static {p4, p5, p1, p2, p3}, Llibcore/io/Memory;->pokeByteArray(J[BII)V
+    invoke-static {p4, p5, p1, p3, p2}, Llibcore/io/Memory;->pokeByteArray(J[BII)V
 
     return-void
 .end method

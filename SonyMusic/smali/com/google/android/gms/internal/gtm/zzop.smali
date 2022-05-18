@@ -215,9 +215,9 @@
 
     xor-long/2addr v1, v3
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, v2
 
     .line 31
     iget-object v1, p0, Lcom/google/android/gms/internal/gtm/zzop;->zzqk:Lcom/google/android/gms/internal/gtm/zzi;

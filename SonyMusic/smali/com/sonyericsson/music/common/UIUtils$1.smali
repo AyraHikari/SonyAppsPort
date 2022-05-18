@@ -27,7 +27,7 @@
 .method constructor <init>(Landroid/view/View;Lcom/sonyericsson/music/common/UIUtils$MeasureCallback;)V
     .locals 0
 
-    .line 452
+    .line 455
     iput-object p1, p0, Lcom/sonyericsson/music/common/UIUtils$1;->val$view:Landroid/view/View;
 
     iput-object p2, p0, Lcom/sonyericsson/music/common/UIUtils$1;->val$callback:Lcom/sonyericsson/music/common/UIUtils$MeasureCallback;
@@ -42,7 +42,7 @@
 .method public onPreDraw()Z
     .locals 4
 
-    .line 455
+    .line 458
     iget-object v0, p0, Lcom/sonyericsson/music/common/UIUtils$1;->val$view:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 456
+    .line 459
     iget-object v0, p0, Lcom/sonyericsson/music/common/UIUtils$1;->val$callback:Lcom/sonyericsson/music/common/UIUtils$MeasureCallback;
 
     iget-object v1, p0, Lcom/sonyericsson/music/common/UIUtils$1;->val$view:Landroid/view/View;

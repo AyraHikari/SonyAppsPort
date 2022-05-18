@@ -214,7 +214,7 @@
 
     move-result p1
     :try_end_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
@@ -222,6 +222,12 @@
     :catch_0
     move-exception p0
 
+    goto :goto_6
+
+    :catch_1
+    move-exception p0
+
+    :goto_6
     const-string p1, "FirebaseRemoteConfig"
 
     const-string v1, "Encountered an error while parsing the defaults XML file."

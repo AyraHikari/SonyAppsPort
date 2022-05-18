@@ -374,7 +374,7 @@
 .end method
 
 .method private setFolderData(ILjava/lang/String;Ljava/lang/String;Landroid/net/Uri;)Z
-    .locals 1
+    .locals 7
 
     .line 635
     iget-object v0, p0, Lcom/sonyericsson/music/library/FolderFragment;->mFolderData:Lcom/sonyericsson/music/common/MenuUtils$FolderData;
@@ -399,7 +399,17 @@
     .line 637
     new-instance v0, Lcom/sonyericsson/music/common/MenuUtils$FolderData;
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lcom/sonyericsson/music/common/MenuUtils$FolderData;-><init>(ILjava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
+    int-to-long v2, p1
+
+    move-object v1, v0
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    move-object v6, p4
+
+    invoke-direct/range {v1 .. v6}, Lcom/sonyericsson/music/common/MenuUtils$FolderData;-><init>(JLjava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/library/FolderFragment;->mFolderData:Lcom/sonyericsson/music/common/MenuUtils$FolderData;
 
@@ -450,7 +460,7 @@
 
     if-eq p1, v0, :cond_0
 
-    const v1, 0x7f10018b
+    const v1, 0x7f10018d
 
     .line 524
     new-array v0, v0, [Ljava/lang/Object;
@@ -472,7 +482,7 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f10018c
+    const p1, 0x7f10018e
 
     .line 525
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;

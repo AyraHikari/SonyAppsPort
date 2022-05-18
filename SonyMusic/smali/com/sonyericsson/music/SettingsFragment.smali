@@ -100,15 +100,15 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 90
+    .line 95
     invoke-direct {p0}, Landroidx/preference/PreferenceFragmentCompat;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 135
+    .line 140
     iput-boolean v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mIsGlobalAudioAvailable:Z
 
-    .line 157
+    .line 162
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -121,7 +121,7 @@
 .method static synthetic access$000(Lcom/sonyericsson/music/SettingsFragment;)Ljava/util/HashMap;
     .locals 0
 
-    .line 90
+    .line 95
     iget-object p0, p0, Lcom/sonyericsson/music/SettingsFragment;->mExtensionsMap:Ljava/util/HashMap;
 
     return-object p0
@@ -130,7 +130,7 @@
 .method static synthetic access$100(Lcom/sonyericsson/music/SettingsFragment;)Landroidx/preference/PreferenceCategory;
     .locals 0
 
-    .line 90
+    .line 95
     iget-object p0, p0, Lcom/sonyericsson/music/SettingsFragment;->mExtensionsCategory:Landroidx/preference/PreferenceCategory;
 
     return-object p0
@@ -139,7 +139,7 @@
 .method static synthetic access$200(Lcom/sonyericsson/music/SettingsFragment;Landroid/content/Context;Z)V
     .locals 0
 
-    .line 90
+    .line 95
     invoke-direct {p0, p1, p2}, Lcom/sonyericsson/music/SettingsFragment;->setIsGlobalAudioSettingsAvailable(Landroid/content/Context;Z)V
 
     return-void
@@ -148,7 +148,7 @@
 .method static synthetic access$300(Lcom/sonyericsson/music/SettingsFragment;Ljava/lang/String;)V
     .locals 0
 
-    .line 90
+    .line 95
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/SettingsFragment;->enableXperiaId(Ljava/lang/String;)V
 
     return-void
@@ -159,14 +159,14 @@
 
     if-eqz p0, :cond_0
 
-    .line 861
+    .line 892
     invoke-virtual {p0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 862
+    .line 893
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -175,15 +175,46 @@
 
     const/4 v2, 0x1
 
-    .line 863
+    .line 894
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     const/4 v1, -0x1
 
-    .line 864
+    .line 895
     invoke-virtual {p0, v1, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     :cond_0
+    return-void
+.end method
+
+.method private callSleeperTimerDialog()V
+    .locals 3
+
+    .line 809
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/sonyericsson/music/SettingsActivity;
+
+    .line 810
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object v0
+
+    .line 811
+    invoke-static {}, Lcom/sonyericsson/music/dialogs/SleepTimerDialog;->newInstance()Lcom/sonyericsson/music/dialogs/SleepTimerDialog;
+
+    move-result-object v1
+
+    .line 812
+    invoke-virtual {v1, p0}, Lcom/sonyericsson/music/dialogs/SleepTimerDialog;->setSleepTimerController(Lcom/sonyericsson/music/dialogs/SleepTimerDialog$SleepTimerController;)V
+
+    const-string v2, "sleeptimer_dialog"
+
+    .line 813
+    invoke-virtual {v1, v0, v2}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+
     return-void
 .end method
 
@@ -192,7 +223,7 @@
 
     const-string v0, "pref_key_accessibility"
 
-    .line 618
+    .line 623
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -203,28 +234,28 @@
 
     const-string v0, "pref_key_music_settings_about"
 
-    .line 619
+    .line 624
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroidx/preference/PreferenceCategory;
 
-    .line 622
+    .line 627
     invoke-static {p1}, Lcom/sonyericsson/music/common/AvailabilityUtils;->showAccessibilityConformance(Landroid/content/Context;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 623
+    .line 628
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment;->mAccessibilityPref:Lcom/sonyericsson/music/settings/TitleLinkPreference;
 
     invoke-virtual {v0, p1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
     goto :goto_1
 
-    .line 626
+    .line 631
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -234,7 +265,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f1001e1
+    const v0, 0x7f1001e3
 
     const/4 v1, 0x1
 
@@ -246,32 +277,32 @@
 
     aput-object v2, v1, v3
 
-    .line 627
+    .line 632
     invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 630
+    .line 635
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-lt v0, v1, :cond_1
 
-    .line 631
+    .line 636
     invoke-static {p1, v3}, Landroid/text/Html;->fromHtml(Ljava/lang/String;I)Landroid/text/Spanned;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 633
+    .line 638
     :cond_1
     invoke-static {p1}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object p1
 
-    .line 635
+    .line 640
     :goto_0
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mAccessibilityPref:Lcom/sonyericsson/music/settings/TitleLinkPreference;
 
@@ -284,9 +315,9 @@
 .method private enableAppPermissionSettings(Landroid/content/Context;)V
     .locals 1
 
-    const v0, 0x7f100261
+    const v0, 0x7f100263
 
-    .line 596
+    .line 601
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -297,24 +328,24 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mPermissionsPref:Landroidx/preference/Preference;
 
-    .line 598
+    .line 603
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mPermissionsPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_0
 
-    .line 599
+    .line 604
     invoke-static {p1}, Lcom/sonyericsson/music/common/PermissionUtils;->isDataTrafficWarningRequired(Landroid/content/Context;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 600
+    .line 605
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment;->mGeneralCategory:Landroidx/preference/PreferenceCategory;
 
     if-eqz p1, :cond_0
 
-    .line 601
+    .line 606
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mPermissionsPref:Landroidx/preference/Preference;
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
@@ -328,7 +359,7 @@
 
     const-string v0, "pref_key_delete_data"
 
-    .line 570
+    .line 575
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -343,21 +374,21 @@
 
     const-string v0, "pref_key_illumination_setting"
 
-    .line 551
+    .line 556
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mIlluminationPref:Landroidx/preference/Preference;
 
-    .line 552
+    .line 557
     invoke-static {p1}, Lcom/sonyericsson/music/common/AvailabilityUtils;->isIlluminationSettingsAvailable(Landroid/content/Context;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 553
+    .line 558
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment;->mCustomizeCategory:Landroidx/preference/PreferenceCategory;
 
     if-eqz p1, :cond_0
@@ -366,7 +397,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 554
+    .line 559
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
     :cond_0
@@ -378,21 +409,21 @@
 
     const-string v0, "pref_key_media_server"
 
-    .line 542
+    .line 547
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mMediaServerPreference:Landroidx/preference/Preference;
 
-    .line 543
+    .line 548
     invoke-static {p1}, Lcom/sonyericsson/music/common/AvailabilityUtils;->isMediaServerSettingsAvailable(Landroid/content/Context;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 544
+    .line 549
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment;->mGeneralCategory:Landroidx/preference/PreferenceCategory;
 
     if-eqz p1, :cond_0
@@ -401,7 +432,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 545
+    .line 550
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
     :cond_0
@@ -411,14 +442,14 @@
 .method private enablePersonalDataCollection()V
     .locals 1
 
-    const v0, 0x7f100264
+    const v0, 0x7f100266
 
-    .line 575
+    .line 580
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 574
+    .line 579
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -427,12 +458,12 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mPersonalDataCollectionPref:Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;
 
-    .line 576
+    .line 581
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mPersonalDataCollectionPref:Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;
 
     if-eqz v0, :cond_0
 
-    .line 577
+    .line 582
     invoke-virtual {v0, p0}, Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;->setInterceptor(Lcom/sonyericsson/music/settings/InterceptableSwitchPreference$SwitchInterceptor;)V
 
     :cond_0
@@ -444,7 +475,7 @@
 
     const-string v0, "pref_key_sleep_timer"
 
-    .line 592
+    .line 597
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -459,12 +490,12 @@
 
     const-string v0, "pref_key_clear_audio"
 
-    .line 447
+    .line 452
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
-    .line 449
+    .line 454
     sget-object v1, Lcom/sonyericsson/music/common/ApiAvailabilityManager$Api;->CLEAR_AUDIO_PLUS:Lcom/sonyericsson/music/common/ApiAvailabilityManager$Api;
 
     invoke-static {v1}, Lcom/sonyericsson/music/common/ApiAvailabilityManager;->isApiAvailable(Lcom/sonyericsson/music/common/ApiAvailabilityManager$Api;)Z
@@ -480,7 +511,7 @@
 
     const-string v1, "pref_key_music_settings_music_quality"
 
-    .line 452
+    .line 457
     invoke-virtual {p0, v1}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v1
@@ -489,10 +520,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 455
+    .line 460
     invoke-virtual {v1, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 459
+    .line 464
     :cond_1
     invoke-static {p1}, Lcom/sonyericsson/music/common/AvailabilityUtils;->isAudioControlPanelAvailable(Landroid/content/Context;)Z
 
@@ -502,26 +533,26 @@
 
     const-string p2, "pref_key_music_settings_music_quality"
 
-    .line 460
+    .line 465
     invoke-virtual {p0, p2}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p2
 
     check-cast p2, Landroidx/preference/PreferenceCategory;
 
-    .line 462
+    .line 467
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mSoundEnhancementsPref:Landroidx/preference/Preference;
 
     invoke-virtual {p2, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
     const/4 p2, 0x0
 
-    .line 463
+    .line 468
     iput-object p2, p0, Lcom/sonyericsson/music/SettingsFragment;->mSoundEnhancementsPref:Landroidx/preference/Preference;
 
     goto :goto_0
 
-    .line 465
+    .line 470
     :cond_2
     iget-object v1, p0, Lcom/sonyericsson/music/SettingsFragment;->mSoundEnhancementsPref:Landroidx/preference/Preference;
 
@@ -529,7 +560,7 @@
 
     if-nez p2, :cond_3
 
-    .line 467
+    .line 472
     new-instance p2, Lcom/sonyericsson/music/SettingsFragment$1;
 
     invoke-direct {p2, p0, v0}, Lcom/sonyericsson/music/SettingsFragment$1;-><init>(Lcom/sonyericsson/music/SettingsFragment;Landroidx/preference/Preference;)V
@@ -540,12 +571,12 @@
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 485
+    .line 490
     invoke-virtual {p2, v0, v1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto :goto_0
 
-    .line 488
+    .line 493
     :cond_3
     iget-object p2, p0, Lcom/sonyericsson/music/SettingsFragment;->mSoundEnhancementsPref:Landroidx/preference/Preference;
 
@@ -553,7 +584,7 @@
 
     invoke-virtual {p2, v0}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    .line 491
+    .line 496
     :goto_0
     iget-object p2, p0, Lcom/sonyericsson/music/SettingsFragment;->mSoundEnhancementsPref:Landroidx/preference/Preference;
 
@@ -561,19 +592,19 @@
 
     const-string v0, "com.sonyericsson.soundenhancement"
 
-    const v1, 0x7f100213
+    const v1, 0x7f100215
 
-    .line 494
+    .line 499
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 493
+    .line 498
     invoke-static {p1, v0, v1}, Lcom/sonyericsson/music/common/MusicUtils;->getApplicationName(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 492
+    .line 497
     invoke-virtual {p2, p1}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
     :cond_4
@@ -585,21 +616,21 @@
 
     const-string v0, "pref_key_walkman_shake_control_setting"
 
-    .line 560
+    .line 565
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mWalkmanShakeControlPref:Landroidx/preference/Preference;
 
-    .line 562
+    .line 567
     invoke-static {p1}, Lcom/sonyericsson/music/common/AvailabilityUtils;->isWalkmanShakeControlSettingAvailable(Landroid/content/Context;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 563
+    .line 568
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment;->mCustomizeCategory:Landroidx/preference/PreferenceCategory;
 
     if-eqz p1, :cond_0
@@ -608,7 +639,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 564
+    .line 569
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
     :cond_0
@@ -618,14 +649,14 @@
 .method private enableXperiaId(Ljava/lang/String;)V
     .locals 2
 
-    .line 582
+    .line 587
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 583
+    .line 588
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment;->mGeneralCategory:Landroidx/preference/PreferenceCategory;
 
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mXperiaIdPref:Landroidx/preference/Preference;
@@ -634,7 +665,7 @@
 
     goto :goto_0
 
-    .line 585
+    .line 590
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mGeneralCategory:Landroidx/preference/PreferenceCategory;
 
@@ -642,12 +673,12 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
 
-    .line 586
+    .line 591
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mXperiaIdPref:Landroidx/preference/Preference;
 
     invoke-virtual {v0, p1}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 587
+    .line 592
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment;->mXperiaIdPref:Landroidx/preference/Preference;
 
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
@@ -661,14 +692,14 @@
 
     if-eqz p0, :cond_0
 
-    .line 869
+    .line 900
     invoke-virtual {p0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 870
+    .line 901
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -677,15 +708,15 @@
 
     const/4 v2, 0x1
 
-    .line 871
+    .line 902
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     const/4 v1, -0x1
 
-    .line 872
+    .line 903
     invoke-virtual {p0, v1, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
-    .line 873
+    .line 904
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     :cond_0
@@ -697,14 +728,14 @@
 
     if-eqz p0, :cond_0
 
-    .line 852
+    .line 883
     invoke-virtual {p0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 853
+    .line 884
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -713,15 +744,15 @@
 
     const/4 v2, 0x1
 
-    .line 854
+    .line 885
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     const/4 v1, -0x1
 
-    .line 855
+    .line 886
     invoke-virtual {p0, v1, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
-    .line 856
+    .line 887
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     :cond_0
@@ -731,17 +762,17 @@
 .method public static newInstance()Lcom/sonyericsson/music/SettingsFragment;
     .locals 2
 
-    .line 160
+    .line 165
     new-instance v0, Lcom/sonyericsson/music/SettingsFragment;
 
     invoke-direct {v0}, Lcom/sonyericsson/music/SettingsFragment;-><init>()V
 
-    .line 162
+    .line 167
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 163
+    .line 168
     invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     return-object v0
@@ -750,24 +781,24 @@
 .method private setIsGlobalAudioSettingsAvailable(Landroid/content/Context;Z)V
     .locals 0
 
-    .line 439
+    .line 444
     iput-boolean p2, p0, Lcom/sonyericsson/music/SettingsFragment;->mIsGlobalAudioAvailable:Z
 
-    .line 440
+    .line 445
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 441
+    .line 446
     invoke-virtual {p2}, Landroid/app/Activity;->isFinishing()Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    .line 442
+    .line 447
     iget-boolean p2, p0, Lcom/sonyericsson/music/SettingsFragment;->mIsGlobalAudioAvailable:Z
 
     invoke-direct {p0, p1, p2}, Lcom/sonyericsson/music/SettingsFragment;->enableSoundEnhancement(Landroid/content/Context;Z)V
@@ -781,23 +812,23 @@
 
     const-string v0, "pref_key_version"
 
-    .line 608
+    .line 613
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mVersionPref:Landroidx/preference/Preference;
 
-    .line 609
+    .line 614
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mVersionPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f100223
+    const v1, 0x7f100225
 
     const/4 v2, 0x1
 
-    .line 610
+    .line 615
     new-array v2, v2, [Ljava/lang/Object;
 
     const/4 v3, 0x0
@@ -810,7 +841,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 612
+    .line 617
     invoke-static {}, Lcom/sonyericsson/music/common/VersionUtils;->getVersionName()Ljava/lang/String;
 
     move-result-object v5
@@ -823,12 +854,12 @@
 
     aput-object v4, v2, v3
 
-    .line 611
+    .line 616
     invoke-virtual {p1, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 610
+    .line 615
     invoke-virtual {v0, p1}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
     :cond_0
@@ -838,7 +869,7 @@
 .method private startEqualizer()V
     .locals 4
 
-    .line 808
+    .line 839
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -847,26 +878,26 @@
 
     if-eqz v0, :cond_5
 
-    .line 809
+    .line 840
     invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v1
 
     if-nez v1, :cond_5
 
-    .line 810
+    .line 841
     invoke-static {v0}, Lcom/sonyericsson/music/common/AvailabilityUtils;->isAudioControlPanelAvailable(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 811
+    .line 842
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 816
+    .line 847
     iget-boolean v2, p0, Lcom/sonyericsson/music/SettingsFragment;->mIsGlobalAudioAvailable:Z
 
     if-eqz v2, :cond_1
@@ -879,7 +910,7 @@
 
     goto :goto_0
 
-    .line 837
+    .line 868
     :cond_0
     new-instance v0, Landroid/content/ComponentName;
 
@@ -893,7 +924,7 @@
 
     goto :goto_3
 
-    .line 817
+    .line 848
     :cond_1
     :goto_0
     invoke-virtual {v0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
@@ -902,29 +933,29 @@
 
     const-string v3, "android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL"
 
-    .line 818
+    .line 849
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v3, "android.media.extra.PACKAGE_NAME"
 
-    .line 819
+    .line 850
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v2, "android.media.extra.CONTENT_TYPE"
 
     const/4 v3, 0x0
 
-    .line 820
+    .line 851
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 822
+    .line 853
     invoke-virtual {v0}, Lcom/sonyericsson/music/SettingsActivity;->getMediaPlayback()Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 825
+    .line 856
     :try_start_0
     invoke-interface {v0}, Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;->getPlaybackState()Lcom/sonyericsson/music/proxyservice/aidl/MediaPlaybackState;
 
@@ -940,7 +971,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 826
+    .line 857
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/aidl/MediaPlaybackState;->getAudioSession()I
 
     move-result v0
@@ -955,7 +986,7 @@
 
     const-string v2, "android.media.extra.AUDIO_SESSION"
 
-    .line 831
+    .line 862
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -965,7 +996,7 @@
     :goto_3
     const/4 v0, 0x1
 
-    .line 842
+    .line 873
     :try_start_1
     invoke-virtual {p0, v1, v0}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_1
@@ -973,7 +1004,7 @@
 
     goto :goto_4
 
-    .line 844
+    .line 875
     :catch_1
     sget-object v0, Lcom/sonyericsson/music/common/Debug;->DEBUG:Lcom/sonyericsson/music/common/Debug;
 
@@ -993,7 +1024,7 @@
 .method private startIlluminationSettings()V
     .locals 2
 
-    .line 521
+    .line 526
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.sonymobile.settings.intent.action.ILLUMINATION_SETTING"
@@ -1002,7 +1033,7 @@
 
     const/4 v1, 0x2
 
-    .line 522
+    .line 527
     invoke-virtual {p0, v0, v1}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
@@ -1011,38 +1042,38 @@
 .method private startPersonalDataCollectionActivity()V
     .locals 4
 
-    .line 531
+    .line 536
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 532
+    .line 537
     invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 533
+    .line 538
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 534
+    .line 539
     const-class v2, Lcom/sonyericsson/music/datacollection/dataplatform/PersonalDataCollectionActivity;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     const-string v2, "title"
 
-    const v3, 0x7f100200
+    const v3, 0x7f100202
 
-    .line 535
+    .line 540
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 537
+    .line 542
     invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     :cond_0
@@ -1052,14 +1083,14 @@
 .method private startWalkmanShakeControlSettings()V
     .locals 2
 
-    .line 526
+    .line 531
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.sonymobile.settings.intent.action.SHAKECONTROL_SETTING"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 527
+    .line 532
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->startActivity(Landroid/content/Intent;)V
 
     return-void
@@ -1068,7 +1099,7 @@
 .method private toggleClearAudio(Z)V
     .locals 4
 
-    .line 499
+    .line 504
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -1077,39 +1108,39 @@
 
     if-eqz v0, :cond_0
 
-    .line 502
+    .line 507
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.sonymobile.audioeffect.intent.action.CLEARAUDIO_PLUS_REQUEST"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 503
+    .line 508
     invoke-virtual {v0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "com.sonymobile.audioeffect.intent.extra.CLEARAUDIO_PLUS_PACKAGE_NAME"
 
-    .line 504
+    .line 509
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v2, "com.sonymobile.audioeffect.intent.extra.CLEARAUDIO_PLUS_STATUS"
 
-    .line 505
+    .line 510
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 507
+    .line 512
     invoke-virtual {v0, v1}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 509
+    .line 514
     invoke-virtual {v0}, Lcom/sonyericsson/music/SettingsActivity;->getMediaPlayback()Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 512
+    .line 517
     :try_start_0
     invoke-interface {v0, p1}, Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;->setClearAudioEnabled(Z)V
     :try_end_0
@@ -1117,7 +1148,7 @@
 
     goto :goto_0
 
-    .line 514
+    .line 519
     :catch_0
     sget-object p1, Lcom/sonyericsson/music/common/Debug;->DEBUG:Lcom/sonyericsson/music/common/Debug;
 
@@ -1137,7 +1168,7 @@
 .method public activateDelayedPause(J)V
     .locals 1
 
-    .line 681
+    .line 686
     :try_start_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1151,7 +1182,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 683
+    .line 688
     invoke-interface {v0, p1, p2}, Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;->pauseDelayed(J)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1164,7 +1195,7 @@
 .method public getDelayedPausedEndMillis()J
     .locals 2
 
-    .line 666
+    .line 671
     :try_start_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1178,7 +1209,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 668
+    .line 673
     invoke-interface {v0}, Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;->getPlaybackState()Lcom/sonyericsson/music/proxyservice/aidl/MediaPlaybackState;
 
     move-result-object v0
@@ -1201,7 +1232,7 @@
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 1
 
-    .line 787
+    .line 818
     invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/Fragment;->onActivityResult(IILandroid/content/Intent;)V
 
     const/4 v0, -0x1
@@ -1215,14 +1246,14 @@
 
     const-string p1, "extra_launch_google_drive"
 
-    .line 797
+    .line 828
     invoke-virtual {p3, p1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 798
+    .line 829
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -1234,14 +1265,14 @@
     :cond_0
     const-string p1, "extra_pop_google_drive"
 
-    .line 799
+    .line 830
     invoke-virtual {p3, p1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 800
+    .line 831
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -1253,7 +1284,7 @@
     :pswitch_1
     if-ne p2, v0, :cond_1
 
-    .line 792
+    .line 823
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -1274,10 +1305,10 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
 
-    .line 170
+    .line 175
     invoke-super {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->onCreate(Landroid/os/Bundle;)V
 
-    .line 171
+    .line 176
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -1288,19 +1319,19 @@
 
     const-string v0, "pref_key_sound_enhancements"
 
-    .line 173
+    .line 178
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mSoundEnhancementsPref:Landroidx/preference/Preference;
 
-    .line 174
+    .line 179
     new-instance v0, Lcom/sonyericsson/music/SettingsFragment$HandleClearAudioTask;
 
     invoke-direct {v0, p0, p1}, Lcom/sonyericsson/music/SettingsFragment$HandleClearAudioTask;-><init>(Lcom/sonyericsson/music/SettingsFragment;Landroid/content/Context;)V
 
-    .line 175
+    .line 180
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     const/4 v2, 0x0
@@ -1311,7 +1342,7 @@
 
     const-string v0, "pref_key_music_settings_general"
 
-    .line 177
+    .line 182
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -1322,7 +1353,7 @@
 
     const-string v0, "pref_key_music_settings_customize"
 
-    .line 179
+    .line 184
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -1333,7 +1364,7 @@
 
     const-string v0, "pref_key_music_settings_music_info"
 
-    .line 181
+    .line 186
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -1344,7 +1375,7 @@
 
     const-string v0, "pref_key_service_settings"
 
-    .line 183
+    .line 188
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -1353,16 +1384,16 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mExtensionsCategory:Landroidx/preference/PreferenceCategory;
 
-    const v0, 0x7f100262
+    const v0, 0x7f100264
 
-    .line 185
+    .line 190
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mGoogleDriveSettingsKey:Ljava/lang/String;
 
-    .line 186
+    .line 191
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mGoogleDriveSettingsKey:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
@@ -1373,7 +1404,7 @@
 
     const-string v0, "pref_key_beta"
 
-    .line 187
+    .line 192
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -1382,9 +1413,9 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mBetaCategory:Landroidx/preference/PreferenceCategory;
 
-    const v0, 0x7f100267
+    const v0, 0x7f100269
 
-    .line 189
+    .line 194
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1395,33 +1426,33 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mXperiaIdPref:Landroidx/preference/Preference;
 
-    .line 191
+    .line 196
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/SettingsFragment;->enableIlluminationSettings(Landroid/content/Context;)V
 
-    .line 192
+    .line 197
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/SettingsFragment;->enableWalkmanShakeControlSettings(Landroid/content/Context;)V
 
-    .line 193
+    .line 198
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/SettingsFragment;->enableAppPermissionSettings(Landroid/content/Context;)V
 
-    .line 194
+    .line 199
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/SettingsFragment;->enableMediaServer(Landroid/content/Context;)V
 
-    .line 195
+    .line 200
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/SettingsFragment;->enableAccessibility(Landroid/content/Context;)V
 
-    .line 197
+    .line 202
     invoke-direct {p0}, Lcom/sonyericsson/music/SettingsFragment;->enableDeleteFiles()V
 
-    .line 198
+    .line 203
     invoke-direct {p0}, Lcom/sonyericsson/music/SettingsFragment;->enablePersonalDataCollection()V
 
-    .line 199
+    .line 204
     invoke-direct {p0}, Lcom/sonyericsson/music/SettingsFragment;->enableSleepTimer()V
 
     const-string v0, "pref_key_quick_play"
 
-    .line 201
+    .line 206
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -1430,24 +1461,24 @@
 
     const-string v0, "pref_key_customize_my_library"
 
-    .line 202
+    .line 207
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mCustomizeMyLibraryPref:Landroidx/preference/Preference;
 
-    .line 204
+    .line 209
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/SettingsFragment;->showVersionPreference(Landroid/content/Context;)V
 
-    .line 207
+    .line 212
     new-instance v0, Lcom/sonyericsson/music/SettingsFragment$HandleExtensionsPrefs;
 
     invoke-direct {v0, p0, p0}, Lcom/sonyericsson/music/SettingsFragment$HandleExtensionsPrefs;-><init>(Lcom/sonyericsson/music/SettingsFragment;Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mHandleExtensionsPrefs:Lcom/sonyericsson/music/SettingsFragment$HandleExtensionsPrefs;
 
-    .line 208
+    .line 213
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mHandleExtensionsPrefs:Lcom/sonyericsson/music/SettingsFragment$HandleExtensionsPrefs;
 
     sget-object v1, Lcom/sonymobile/music/common/LongRunningTasks;->LRT_THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
@@ -1456,26 +1487,26 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 211
+    .line 216
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mGeneralCategory:Landroidx/preference/PreferenceCategory;
 
     iget-object v1, p0, Lcom/sonyericsson/music/SettingsFragment;->mXperiaIdPref:Landroidx/preference/Preference;
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 213
+    .line 218
     new-instance v0, Lcom/sonyericsson/music/SettingsFragment$HandleXperiaIdTask;
 
     invoke-direct {v0, p0, p1}, Lcom/sonyericsson/music/SettingsFragment$HandleXperiaIdTask;-><init>(Lcom/sonyericsson/music/SettingsFragment;Landroid/content/Context;)V
 
-    .line 214
+    .line 219
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     new-array v2, v2, [Ljava/lang/Void;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 218
+    .line 223
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mGeneralCategory:Landroidx/preference/PreferenceCategory;
 
     invoke-virtual {v0}, Landroidx/preference/PreferenceGroup;->getPreferenceCount()I
@@ -1484,7 +1515,7 @@
 
     if-nez v0, :cond_0
 
-    .line 219
+    .line 224
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -1493,7 +1524,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 221
+    .line 226
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mCustomizeCategory:Landroidx/preference/PreferenceCategory;
 
@@ -1503,7 +1534,7 @@
 
     if-nez v0, :cond_1
 
-    .line 222
+    .line 227
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -1512,7 +1543,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 225
+    .line 230
     :cond_1
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mExtensionsCategory:Landroidx/preference/PreferenceCategory;
 
@@ -1522,7 +1553,7 @@
 
     if-nez v0, :cond_2
 
-    .line 226
+    .line 231
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -1531,7 +1562,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 228
+    .line 233
     :cond_2
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mBetaCategory:Landroidx/preference/PreferenceCategory;
 
@@ -1541,7 +1572,7 @@
 
     if-nez v0, :cond_3
 
-    .line 229
+    .line 234
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -1550,7 +1581,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 232
+    .line 237
     :cond_3
     invoke-static {p1}, Lcom/sonyericsson/music/metadata/cloud/GoogleDriveUtils;->isGoogleDriveAvailable(Landroid/content/Context;)Z
 
@@ -1558,14 +1589,14 @@
 
     if-nez p1, :cond_4
 
-    .line 233
+    .line 238
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment;->mGeneralCategory:Landroidx/preference/PreferenceCategory;
 
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mGoogleDriveSettings:Landroidx/preference/Preference;
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 236
+    .line 241
     :cond_4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1577,7 +1608,7 @@
 
     if-eqz p1, :cond_5
 
-    .line 237
+    .line 242
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object p1
@@ -1595,7 +1626,7 @@
 
     const p1, 0x7f130007
 
-    .line 255
+    .line 260
     invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->addPreferencesFromResource(I)V
 
     return-void
@@ -1604,14 +1635,14 @@
 .method public onCreateRecyclerView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 0
 
-    .line 245
+    .line 250
     invoke-super {p0, p1, p2, p3}, Landroidx/preference/PreferenceFragmentCompat;->onCreateRecyclerView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p1
 
     const/4 p2, 0x0
 
-    .line 248
+    .line 253
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
     return-object p1
@@ -1620,17 +1651,17 @@
 .method public onDestroy()V
     .locals 2
 
-    .line 260
+    .line 265
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mHandleExtensionsPrefs:Lcom/sonyericsson/music/SettingsFragment$HandleExtensionsPrefs;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    .line 261
+    .line 266
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 264
+    .line 269
     :cond_0
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
@@ -1640,42 +1671,42 @@
 .method public onIntercept(Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;)V
     .locals 1
 
-    .line 641
+    .line 646
     invoke-virtual {p1}, Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;->isChecked()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 643
+    .line 648
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment;->mPersonalDataCollectionPref:Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;->setChecked(Z)Z
 
-    .line 644
+    .line 649
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     invoke-static {p1, v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setPersonalDataCollectionConsented(Landroid/content/Context;I)V
 
-    .line 648
+    .line 653
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     check-cast p1, Lcom/sonyericsson/music/SettingsActivity;
 
-    .line 649
+    .line 654
     invoke-virtual {p1}, Lcom/sonyericsson/music/SettingsActivity;->getMediaPlayback()Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 652
+    .line 657
     :try_start_0
     invoke-interface {p1, v0}, Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;->setPersonalDataCollectionConsented(Z)V
     :try_end_0
@@ -1683,7 +1714,7 @@
 
     goto :goto_0
 
-    .line 659
+    .line 664
     :cond_0
     invoke-direct {p0}, Lcom/sonyericsson/music/SettingsFragment;->startPersonalDataCollectionActivity()V
 
@@ -1696,10 +1727,10 @@
 .method public onPause()V
     .locals 3
 
-    .line 369
+    .line 374
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
-    .line 371
+    .line 376
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -1710,10 +1741,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 373
+    .line 378
     invoke-interface {v0, p0}, Landroid/content/SharedPreferences;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    .line 376
+    .line 381
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mSoundEnhancementsPref:Landroidx/preference/Preference;
 
@@ -1721,113 +1752,113 @@
 
     if-eqz v0, :cond_1
 
-    .line 377
+    .line 382
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 380
+    .line 385
     :cond_1
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mIlluminationPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_2
 
-    .line 381
+    .line 386
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 384
+    .line 389
     :cond_2
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mWalkmanShakeControlPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_3
 
-    .line 385
+    .line 390
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 388
+    .line 393
     :cond_3
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mMediaServerPreference:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_4
 
-    .line 389
+    .line 394
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 392
+    .line 397
     :cond_4
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mQuickPlayPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_5
 
-    .line 393
+    .line 398
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 396
+    .line 401
     :cond_5
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mDeleteFilesPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_6
 
-    .line 397
+    .line 402
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 400
+    .line 405
     :cond_6
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mPersonalDataCollectionPref:Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;
 
     if-eqz v0, :cond_7
 
-    .line 401
+    .line 406
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;->setInterceptor(Lcom/sonyericsson/music/settings/InterceptableSwitchPreference$SwitchInterceptor;)V
 
-    .line 404
+    .line 409
     :cond_7
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mXperiaIdPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_8
 
-    .line 405
+    .line 410
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 408
+    .line 413
     :cond_8
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mVersionPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_9
 
-    .line 409
+    .line 414
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 412
+    .line 417
     :cond_9
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mCustomizeMyLibraryPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_a
 
-    .line 413
+    .line 418
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
     :cond_a
     const-string v0, "pref_key_oss"
 
-    .line 416
+    .line 421
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
     if-eqz v0, :cond_b
 
-    .line 418
+    .line 423
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 421
+    .line 426
     :cond_b
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mSleepTimerPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_c
 
-    .line 422
+    .line 427
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 425
+    .line 430
     :cond_c
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mExtensionsMap:Ljava/util/HashMap;
 
@@ -1852,27 +1883,27 @@
 
     check-cast v2, Landroidx/preference/Preference;
 
-    .line 426
+    .line 431
     invoke-virtual {v2, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
     goto :goto_0
 
-    .line 429
+    .line 434
     :cond_d
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mPermissionsPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_e
 
-    .line 430
+    .line 435
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 433
+    .line 438
     :cond_e
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mGoogleDriveSettings:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_f
 
-    .line 434
+    .line 439
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
     :cond_f
@@ -1882,7 +1913,7 @@
 .method public onPreferenceClick(Landroidx/preference/Preference;)Z
     .locals 5
 
-    .line 694
+    .line 699
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -1891,7 +1922,7 @@
 
     const-string v1, "pref_key_sound_enhancements"
 
-    .line 696
+    .line 701
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v2
@@ -1904,7 +1935,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 697
+    .line 702
     invoke-direct {p0}, Lcom/sonyericsson/music/SettingsFragment;->startEqualizer()V
 
     goto/16 :goto_0
@@ -1912,7 +1943,7 @@
     :cond_0
     const-string v1, "pref_key_illumination_setting"
 
-    .line 698
+    .line 703
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v3
@@ -1923,7 +1954,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 699
+    .line 704
     invoke-direct {p0}, Lcom/sonyericsson/music/SettingsFragment;->startIlluminationSettings()V
 
     goto/16 :goto_0
@@ -1931,7 +1962,7 @@
     :cond_1
     const-string v1, "pref_key_walkman_shake_control_setting"
 
-    .line 700
+    .line 705
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v3
@@ -1942,7 +1973,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 701
+    .line 706
     invoke-direct {p0}, Lcom/sonyericsson/music/SettingsFragment;->startWalkmanShakeControlSettings()V
 
     goto/16 :goto_0
@@ -1950,7 +1981,7 @@
     :cond_2
     const-string v1, "pref_key_extension"
 
-    .line 702
+    .line 707
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v3
@@ -1967,10 +1998,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 704
+    .line 709
     check-cast p1, Landroidx/preference/CheckBoxPreference;
 
-    .line 705
+    .line 710
     iget-object v1, p0, Lcom/sonyericsson/music/SettingsFragment;->mExtensionsMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1979,11 +2010,11 @@
 
     check-cast v1, Ljava/lang/String;
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_11
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_11
 
-    .line 708
+    .line 713
     new-instance v4, Lcom/sonyericsson/music/extension/ExtensionManager$EnableExtensionTask;
 
     invoke-virtual {p1}, Landroidx/preference/TwoStatePreference;->isChecked()Z
@@ -1996,7 +2027,7 @@
 
     new-array v0, v3, [Ljava/lang/Void;
 
-    .line 709
+    .line 714
     invoke-virtual {v4, p1, v0}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto/16 :goto_0
@@ -2004,7 +2035,7 @@
     :cond_3
     const-string v1, "pref_key_media_server"
 
-    .line 711
+    .line 716
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v4
@@ -2015,9 +2046,9 @@
 
     if-eqz v1, :cond_4
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_11
 
-    .line 713
+    .line 718
     new-instance p1, Landroid/content/Intent;
 
     const-string v1, "com.sonymobile.dlna.intent.action.START_DMS_ACTIVITY"
@@ -2031,7 +2062,7 @@
     :cond_4
     const-string v1, "pref_key_quick_play"
 
-    .line 715
+    .line 720
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v4
@@ -2042,16 +2073,16 @@
 
     if-eqz v1, :cond_5
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_11
 
-    .line 717
+    .line 722
     invoke-static {v0}, Lcom/sonymobile/music/common/FragmentUtil;->isFragmentTransactionAllowed(Landroidx/fragment/app/FragmentActivity;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_f
+    if-eqz p1, :cond_11
 
-    .line 718
+    .line 723
     invoke-static {v0}, Lcom/sonyericsson/music/QuickPlaySelectionActivity;->start(Landroid/app/Activity;)V
 
     goto/16 :goto_0
@@ -2059,7 +2090,7 @@
     :cond_5
     const-string v1, "pref_key_oss"
 
-    .line 721
+    .line 726
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v4
@@ -2070,26 +2101,26 @@
 
     if-eqz v1, :cond_6
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_11
 
-    .line 722
+    .line 727
     invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result p1
 
-    if-nez p1, :cond_f
+    if-nez p1, :cond_11
 
-    .line 723
+    .line 728
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
-    .line 724
+    .line 729
     const-class v1, Lcom/sonyericsson/music/settings/OpenSourceActivity;
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 725
+    .line 730
     invoke-virtual {v0, p1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_0
@@ -2097,7 +2128,7 @@
     :cond_6
     const-string v1, "pref_key_delete_data"
 
-    .line 728
+    .line 733
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v4
@@ -2108,7 +2139,7 @@
 
     if-eqz v1, :cond_7
 
-    .line 729
+    .line 734
     invoke-static {}, Lcom/sonyericsson/music/dialogs/ClearDataDialog;->newInstance()Lcom/sonyericsson/music/dialogs/ClearDataDialog;
 
     move-result-object p1
@@ -2124,35 +2155,35 @@
     goto/16 :goto_0
 
     :cond_7
-    const v1, 0x7f100260
+    const v1, 0x7f100262
 
-    .line 730
+    .line 735
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 731
+    .line 736
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 730
+    .line 735
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_11
 
-    .line 732
+    .line 737
     invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result p1
 
-    if-nez p1, :cond_f
+    if-nez p1, :cond_11
 
-    .line 734
+    .line 739
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -2161,14 +2192,14 @@
 
     move-result p1
 
-    .line 735
+    .line 740
     invoke-virtual {v0}, Lcom/sonyericsson/music/SettingsActivity;->getMediaPlayback()Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;
 
     move-result-object v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_11
 
-    .line 738
+    .line 743
     :try_start_0
     invoke-interface {v0, p1}, Lcom/sonyericsson/music/proxyservice/aidl/IMediaPlayback;->setWifiAndMobileDataAccepted(Z)V
     :try_end_0
@@ -2179,48 +2210,7 @@
     :cond_8
     const-string v1, "pref_key_sleep_timer"
 
-    .line 744
-    invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    .line 745
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/sonyericsson/music/SettingsActivity;
-
-    .line 746
-    invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
-
-    move-result-object p1
-
-    .line 747
-    invoke-static {}, Lcom/sonyericsson/music/dialogs/SleepTimerDialog;->newInstance()Lcom/sonyericsson/music/dialogs/SleepTimerDialog;
-
-    move-result-object v0
-
-    .line 748
-    invoke-virtual {v0, p0}, Lcom/sonyericsson/music/dialogs/SleepTimerDialog;->setSleepTimerController(Lcom/sonyericsson/music/dialogs/SleepTimerDialog$SleepTimerController;)V
-
-    const-string v1, "sleeptimer_dialog"
-
     .line 749
-    invoke-virtual {v0, p1, v1}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    :cond_9
-    const-string v1, "pref_key_version"
-
-    .line 750
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v4
@@ -2229,9 +2219,14 @@
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_b
 
     .line 751
+    sget-boolean p1, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_S_API:Z
+
+    if-eqz p1, :cond_a
+
+    .line 752
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -2240,7 +2235,94 @@
 
     move-result-object p1
 
-    .line 752
+    const-string v0, "alarm"
+
+    .line 754
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/AlarmManager;
+
+    .line 755
+    invoke-virtual {p1}, Landroid/app/AlarmManager;->canScheduleExactAlarms()Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    .line 760
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    .line 761
+    invoke-direct {p0}, Lcom/sonyericsson/music/SettingsFragment;->callSleeperTimerDialog()V
+
+    goto/16 :goto_0
+
+    .line 763
+    :cond_9
+    new-instance p1, Landroid/content/Intent;
+
+    const-string v0, "android.settings.REQUEST_SCHEDULE_EXACT_ALARM"
+
+    const-string v1, "package:com.sonyericsson.music"
+
+    .line 764
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-direct {p1, v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    const/high16 v0, 0x10000000
+
+    .line 765
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 766
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    .line 767
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_0
+
+    .line 770
+    :cond_a
+    invoke-direct {p0}, Lcom/sonyericsson/music/SettingsFragment;->callSleeperTimerDialog()V
+
+    goto/16 :goto_0
+
+    :cond_b
+    const-string v1, "pref_key_version"
+
+    .line 773
+    invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_c
+
+    .line 774
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    .line 775
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -2253,7 +2335,7 @@
 
     const-string v1, "Your android-id is: %s"
 
-    .line 753
+    .line 776
     new-array v4, v2, [Ljava/lang/Object;
 
     aput-object v0, v4, v3
@@ -2266,45 +2348,10 @@
 
     goto/16 :goto_0
 
-    :cond_a
+    :cond_c
     const-string v1, "pref_key_customize_my_library"
 
-    .line 756
-    invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    .line 757
-    new-instance p1, Landroid/content/Intent;
-
-    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
-
-    .line 758
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    const-class v1, Lcom/sonyericsson/music/settings/CustomizeMyLibraryActivity;
-
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    const/4 v0, 0x3
-
-    .line 759
-    invoke-virtual {p0, p1, v0}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto/16 :goto_0
-
-    .line 760
-    :cond_b
-    iget-object v1, p0, Lcom/sonyericsson/music/SettingsFragment;->mGoogleDriveSettingsKey:Ljava/lang/String;
-
+    .line 779
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v4
@@ -2315,21 +2362,56 @@
 
     if-eqz v1, :cond_d
 
-    if-eqz v0, :cond_f
-
-    .line 762
-    invoke-static {v0}, Lcom/sonyericsson/music/common/PermissionUtils;->isDataAllowed(Landroid/content/Context;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_c
-
-    .line 763
+    .line 780
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
-    .line 764
+    .line 781
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    const-class v1, Lcom/sonyericsson/music/settings/CustomizeMyLibraryActivity;
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    const/4 v0, 0x3
+
+    .line 782
+    invoke-virtual {p0, p1, v0}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto/16 :goto_0
+
+    .line 783
+    :cond_d
+    iget-object v1, p0, Lcom/sonyericsson/music/SettingsFragment;->mGoogleDriveSettingsKey:Ljava/lang/String;
+
+    invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_f
+
+    if-eqz v0, :cond_11
+
+    .line 785
+    invoke-static {v0}, Lcom/sonyericsson/music/common/PermissionUtils;->isDataAllowed(Landroid/content/Context;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_e
+
+    .line 786
+    new-instance p1, Landroid/content/Intent;
+
+    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
+
+    .line 787
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -2340,24 +2422,24 @@
 
     const/4 v0, 0x4
 
-    .line 765
+    .line 788
     invoke-virtual {p0, p1, v0}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 
-    :cond_c
-    const p1, 0x7f100244
+    :cond_e
+    const p1, 0x7f100246
 
-    .line 767
+    .line 790
     invoke-static {v0, p1, v2}, Lcom/sonyericsson/music/common/MusicToast;->show(Landroid/content/Context;II)V
 
     goto :goto_0
 
-    .line 770
-    :cond_d
+    .line 793
+    :cond_f
     iget-object v1, p0, Lcom/sonyericsson/music/SettingsFragment;->mXperiaIdPref:Landroidx/preference/Preference;
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_10
 
     invoke-virtual {v1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
@@ -2371,9 +2453,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_10
 
-    .line 771
+    .line 794
     iget-object p1, p0, Lcom/sonyericsson/music/SettingsFragment;->mXperiaIdPref:Landroidx/preference/Preference;
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getSummary()Ljava/lang/CharSequence;
@@ -2388,7 +2470,7 @@
 
     move-result-object p1
 
-    .line 772
+    .line 795
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
@@ -2399,11 +2481,11 @@
 
     goto :goto_0
 
-    .line 773
-    :cond_e
+    .line 796
+    :cond_10
     iget-object v1, p0, Lcom/sonyericsson/music/SettingsFragment;->mPermissionsPref:Landroidx/preference/Preference;
 
-    if-eqz v1, :cond_10
+    if-eqz v1, :cond_12
 
     invoke-virtual {v1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
@@ -2417,9 +2499,9 @@
 
     move-result p1
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_12
 
-    .line 775
+    .line 798
     invoke-static {}, Lcom/sonyericsson/music/dialogs/AppPermissionsSettingDialog;->newInstance()Lcom/sonyericsson/music/dialogs/AppPermissionsSettingDialog;
 
     move-result-object p1
@@ -2433,21 +2515,21 @@
     invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     :catch_0
-    :cond_f
+    :cond_11
     :goto_0
     return v2
 
-    :cond_10
+    :cond_12
     return v3
 .end method
 
 .method public onResume()V
     .locals 3
 
-    .line 293
+    .line 298
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onResume()V
 
-    .line 295
+    .line 300
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -2458,81 +2540,81 @@
 
     if-eqz v0, :cond_0
 
-    .line 297
+    .line 302
     invoke-interface {v0, p0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    .line 300
+    .line 305
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mMediaServerPreference:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_1
 
-    .line 301
+    .line 306
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 304
+    .line 309
     :cond_1
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mSoundEnhancementsPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_2
 
-    .line 305
+    .line 310
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 308
+    .line 313
     :cond_2
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mIlluminationPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_3
 
-    .line 309
+    .line 314
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 312
+    .line 317
     :cond_3
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mWalkmanShakeControlPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_4
 
-    .line 313
+    .line 318
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 316
+    .line 321
     :cond_4
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mQuickPlayPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_5
 
-    .line 317
+    .line 322
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 320
+    .line 325
     :cond_5
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mDeleteFilesPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_6
 
-    .line 321
+    .line 326
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 324
+    .line 329
     :cond_6
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mPersonalDataCollectionPref:Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;
 
     if-eqz v0, :cond_8
 
-    .line 325
+    .line 330
     invoke-virtual {v0, p0}, Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;->setInterceptor(Lcom/sonyericsson/music/settings/InterceptableSwitchPreference$SwitchInterceptor;)V
 
-    .line 326
+    .line 331
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mPersonalDataCollectionPref:Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;
 
-    .line 328
+    .line 333
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
-    .line 327
+    .line 332
     invoke-static {v1}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->isPersonalDataCollectionConsented(Landroid/content/Context;)I
 
     move-result v1
@@ -2546,54 +2628,54 @@
     :cond_7
     const/4 v2, 0x0
 
-    .line 326
+    .line 331
     :goto_0
     invoke-virtual {v0, v2}, Lcom/sonyericsson/music/settings/InterceptableSwitchPreference;->setChecked(Z)Z
 
-    .line 332
+    .line 337
     :cond_8
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mXperiaIdPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_9
 
-    .line 333
+    .line 338
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 336
+    .line 341
     :cond_9
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mSleepTimerPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_a
 
-    .line 337
+    .line 342
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 340
+    .line 345
     :cond_a
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mCustomizeMyLibraryPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_b
 
-    .line 341
+    .line 346
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 344
+    .line 349
     :cond_b
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mVersionPref:Landroidx/preference/Preference;
 
     const-string v0, "pref_key_oss"
 
-    .line 349
+    .line 354
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
     if-eqz v0, :cond_c
 
-    .line 351
+    .line 356
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 354
+    .line 359
     :cond_c
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mExtensionsMap:Ljava/util/HashMap;
 
@@ -2618,27 +2700,27 @@
 
     check-cast v1, Landroidx/preference/Preference;
 
-    .line 355
+    .line 360
     invoke-virtual {v1, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
     goto :goto_1
 
-    .line 358
+    .line 363
     :cond_d
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mPermissionsPref:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_e
 
-    .line 359
+    .line 364
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 362
+    .line 367
     :cond_e
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mGoogleDriveSettings:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_f
 
-    .line 363
+    .line 368
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
     :cond_f
@@ -2648,14 +2730,14 @@
 .method public onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 2
 
-    .line 269
+    .line 274
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
     const-string v1, "pref_key_clear_audio"
 
-    .line 271
+    .line 276
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2666,22 +2748,22 @@
 
     const/4 v0, 0x0
 
-    .line 273
+    .line 278
     invoke-interface {p1, p2, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    .line 274
+    .line 279
     iget-object p2, p0, Lcom/sonyericsson/music/SettingsFragment;->mSoundEnhancementsPref:Landroidx/preference/Preference;
 
     if-eqz p2, :cond_0
 
     xor-int/lit8 v0, p1, 0x1
 
-    .line 275
+    .line 280
     invoke-virtual {p2, v0}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    .line 277
+    .line 282
     :cond_0
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/SettingsFragment;->toggleClearAudio(Z)V
 
@@ -2690,7 +2772,7 @@
     :cond_1
     const-string p1, "pref_key_theme"
 
-    .line 278
+    .line 283
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -2699,7 +2781,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 279
+    .line 284
     new-instance p1, Lcom/sonyericsson/music/datacollection/googleanalytics/ThemeSelectionTask;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
@@ -2710,7 +2792,7 @@
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/datacollection/googleanalytics/ThemeSelectionTask;->run()V
 
-    .line 280
+    .line 285
     new-instance p1, Lcom/sonyericsson/music/datacollection/firebase/FirebaseThemeSelectionTask;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
@@ -2721,13 +2803,13 @@
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseThemeSelectionTask;->run()V
 
-    .line 284
+    .line 289
     invoke-static {}, Lcom/sonyericsson/music/ui/LandingPageItemView;->clearDrawableCache()V
 
-    .line 285
+    .line 290
     invoke-static {}, Lcom/sonyericsson/music/ui/DrawerItemView;->clearDrawableCache()V
 
-    .line 287
+    .line 292
     invoke-static {v0}, Lcom/sonyericsson/music/SettingsFragment;->finishForReload(Landroid/app/Activity;)V
 
     :cond_2

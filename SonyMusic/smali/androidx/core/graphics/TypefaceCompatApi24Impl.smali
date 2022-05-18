@@ -113,18 +113,24 @@
 
     move-result-object v0
     :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-object v2, v0
 
     move-object v0, v3
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception v1
 
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    :goto_0
     const-string v2, "TypefaceCompatApi24Impl"
 
     .line 78
@@ -145,7 +151,7 @@
     move-object v4, v2
 
     .line 84
-    :goto_0
+    :goto_1
     sput-object v0, Landroidx/core/graphics/TypefaceCompatApi24Impl;->sFontFamilyCtor:Ljava/lang/reflect/Constructor;
 
     .line 85

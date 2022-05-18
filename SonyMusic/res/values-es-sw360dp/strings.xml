@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="mc_download_music_info_ics">Descargar información de música</string>
-    <string name="mc_edit_music_info_ics">Editar información</string>
     <string name="music_recently_played_playlist">Recién reproducidas</string>
     <string name="music_remove_from_queue_txt">Eliminar de cola de reproducción</string>
     <string name="playqueue_header">Música en cola</string>

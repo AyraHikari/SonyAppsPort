@@ -89,8 +89,8 @@
 
     check-cast v1, Ljava/net/HttpURLConnection;
     :try_end_0
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
@@ -156,13 +156,19 @@
 
     throw v2
     :try_end_2
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
 
     :catch_0
     move-exception v1
 
+    goto :goto_1
+
+    :catch_1
+    move-exception v1
+
+    :goto_1
     const-string v2, "HttpUrlPinger"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -195,7 +201,7 @@
 
     const-string v4, "Error while pinging URL: "
 
-    :goto_1
+    :goto_2
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -214,7 +220,7 @@
 
     return-void
 
-    :catch_1
+    :catch_2
     move-exception v1
 
     const-string v2, "HttpUrlPinger"
@@ -249,5 +255,5 @@
 
     const-string v4, "Error while parsing ping URL: "
 
-    goto :goto_1
+    goto :goto_2
 .end method

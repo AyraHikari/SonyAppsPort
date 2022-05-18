@@ -1126,7 +1126,7 @@
 .end method
 
 .method private getFolderData(Landroid/content/Context;Ljava/util/HashMap;)Ljava/util/ArrayList;
-    .locals 19
+    .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1193,16 +1193,18 @@
 
     move-result v4
 
+    int-to-long v9, v4
+
     .line 480
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v0, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
     if-nez v1, :cond_1
 
@@ -1213,56 +1215,54 @@
 
     .line 485
     :cond_1
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v0, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v4
 
-    check-cast v5, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;
+    check-cast v4, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;
 
     .line 486
-    invoke-virtual {v5}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getContainerUri()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getContainerUri()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v5
 
-    if-eqz v6, :cond_0
+    if-eqz v5, :cond_0
 
-    const/4 v8, 0x4
+    const/4 v6, 0x4
 
     .line 488
-    invoke-virtual {v5}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getContainerUri()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getContainerUri()Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v7
 
     .line 489
-    invoke-virtual {v5}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getTimestamp()I
+    invoke-virtual {v4}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getTimestamp()I
 
-    move-result v10
-
-    int-to-long v11, v4
+    move-result v8
 
     invoke-virtual {v3}, Lcom/sonyericsson/music/common/Folder;->getName()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v11
 
-    const-wide/16 v14, -0x1
+    const-wide/16 v12, -0x1
 
-    const/16 v16, 0x0
+    const/4 v14, 0x0
 
-    const/16 v17, 0x0
+    const/4 v15, 0x0
 
     .line 490
     invoke-virtual {v3}, Lcom/sonyericsson/music/common/Folder;->getPathDisplayName()Ljava/lang/String;
 
-    move-result-object v18
+    move-result-object v16
 
-    move-object/from16 v7, p0
+    move-object/from16 v5, p0
 
     .line 487
-    invoke-direct/range {v7 .. v18}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider;->createNewRow(ILjava/lang/String;IJLjava/lang/String;JLjava/lang/String;ZLjava/lang/String;)[Ljava/lang/Object;
+    invoke-direct/range {v5 .. v16}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider;->createNewRow(ILjava/lang/String;IJLjava/lang/String;JLjava/lang/String;ZLjava/lang/String;)[Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1627,7 +1627,7 @@
 .end method
 
 .method private getPlaylistData(Landroid/content/Context;Ljava/util/HashMap;)Ljava/util/ArrayList;
-    .locals 22
+    .locals 19
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1813,69 +1813,65 @@
 
     .line 575
     :cond_1
-    invoke-interface {v2, v3}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v2, v3}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result v7
+    move-result-wide v11
 
     .line 576
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    invoke-virtual {v0, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;
+
+    if-eqz v7, :cond_2
+
+    .line 577
+    invoke-virtual {v7}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getContainerUri()Ljava/lang/String;
 
     move-result-object v8
-
-    invoke-virtual {v0, v8}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;
 
     if-eqz v8, :cond_2
 
-    .line 577
-    invoke-virtual {v8}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getContainerUri()Ljava/lang/String;
+    const/4 v8, 0x1
+
+    .line 580
+    invoke-virtual {v7}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getContainerUri()Ljava/lang/String;
 
     move-result-object v9
 
-    if-eqz v9, :cond_2
+    invoke-virtual {v7}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getTimestamp()I
 
-    const/4 v11, 0x1
-
-    .line 580
-    invoke-virtual {v8}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getContainerUri()Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-virtual {v8}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider$RecentlyPlayedData;->getTimestamp()I
-
-    move-result v13
-
-    int-to-long v14, v7
+    move-result v10
 
     .line 581
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v16
+    move-result-object v13
 
     invoke-interface {v2, v6}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v7
 
-    int-to-long v7, v7
+    int-to-long v14, v7
 
-    const/16 v19, 0x0
+    const/16 v16, 0x0
 
-    const/16 v20, 0x0
+    const/16 v17, 0x0
 
     .line 582
     invoke-interface {v2, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v21
+    move-result-object v18
 
-    move-object/from16 v10, p0
-
-    move-wide/from16 v17, v7
+    move-object/from16 v7, p0
 
     .line 578
-    invoke-direct/range {v10 .. v21}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider;->createNewRow(ILjava/lang/String;IJLjava/lang/String;JLjava/lang/String;ZLjava/lang/String;)[Ljava/lang/Object;
+    invoke-direct/range {v7 .. v18}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedProvider;->createNewRow(ILjava/lang/String;IJLjava/lang/String;JLjava/lang/String;ZLjava/lang/String;)[Ljava/lang/Object;
 
     move-result-object v7
 

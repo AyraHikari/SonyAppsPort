@@ -235,9 +235,9 @@
 
     move-result-object v4
     :try_end_0
-    .catch Ljava/net/ConnectException; {:try_start_0 .. :try_end_0} :catch_9
-    .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_9
-    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_0 .. :try_end_0} :catch_8
+    .catch Ljava/net/ConnectException; {:try_start_0 .. :try_end_0} :catch_b
+    .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_a
+    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_0 .. :try_end_0} :catch_9
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_8
 
     .line 19
@@ -277,9 +277,9 @@
     :try_start_4
     invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
     :try_end_4
-    .catch Ljava/net/ConnectException; {:try_start_4 .. :try_end_4} :catch_9
-    .catch Ljava/net/UnknownHostException; {:try_start_4 .. :try_end_4} :catch_9
-    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_4 .. :try_end_4} :catch_8
+    .catch Ljava/net/ConnectException; {:try_start_4 .. :try_end_4} :catch_b
+    .catch Ljava/net/UnknownHostException; {:try_start_4 .. :try_end_4} :catch_a
+    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_4 .. :try_end_4} :catch_9
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_8
 
     .line 22
@@ -547,14 +547,20 @@
     :try_start_f
     throw p1
     :try_end_f
-    .catch Ljava/net/ConnectException; {:try_start_f .. :try_end_f} :catch_9
-    .catch Ljava/net/UnknownHostException; {:try_start_f .. :try_end_f} :catch_9
-    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_f .. :try_end_f} :catch_8
+    .catch Ljava/net/ConnectException; {:try_start_f .. :try_end_f} :catch_b
+    .catch Ljava/net/UnknownHostException; {:try_start_f .. :try_end_f} :catch_a
+    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_f .. :try_end_f} :catch_9
     .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_8
 
     :catch_8
     move-exception p1
 
+    goto :goto_2
+
+    :catch_9
+    move-exception p1
+
+    :goto_2
     const-string v0, "CctTransportBackend"
 
     const-string v4, "Couldn\'t encode request, returning with 400"
@@ -571,9 +577,15 @@
 
     return-object p1
 
-    :catch_9
+    :catch_a
     move-exception p1
 
+    goto :goto_3
+
+    :catch_b
+    move-exception p1
+
+    :goto_3
     const-string v0, "CctTransportBackend"
 
     const-string v4, "Couldn\'t open connection, returning with 500"

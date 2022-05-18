@@ -84,7 +84,7 @@
 
     invoke-direct {v0, p0}, Lcom/sonyericsson/music/dialogs/CloudRetryDownloadDialog$1;-><init>(Lcom/sonyericsson/music/dialogs/CloudRetryDownloadDialog;)V
 
-    const v1, 0x7f10027a
+    const v1, 0x7f10027c
 
     invoke-virtual {p1, v1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 

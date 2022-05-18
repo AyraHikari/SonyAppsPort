@@ -912,12 +912,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f10019e
+    const v0, 0x7f1001a0
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f10019d
+    const v0, 0x7f10019f
 
     :goto_0
     invoke-interface {p1, v0}, Landroid/view/MenuItem;->setTitle(I)Landroid/view/MenuItem;

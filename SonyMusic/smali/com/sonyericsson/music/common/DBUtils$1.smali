@@ -26,7 +26,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 1898
+    .line 1957
     invoke-static {}, Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;->values()[Lcom/sonyericsson/music/common/DBUtils$PlaylistsFilter;
 
     move-result-object v0
@@ -100,7 +100,7 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 1884
+    .line 1943
     :catch_3
     invoke-static {}, Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;->values()[Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;
 
@@ -139,7 +139,7 @@
     :try_end_5
     .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 435
+    .line 439
     :catch_5
     invoke-static {}, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;->values()[Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;
 

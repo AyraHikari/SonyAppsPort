@@ -16,7 +16,7 @@
 .method public static canStartPlugins(Lcom/sonyericsson/music/common/Track;Landroid/content/Context;)Z
     .locals 2
 
-    const v0, 0x7f100184
+    const v0, 0x7f100186
 
     .line 20
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

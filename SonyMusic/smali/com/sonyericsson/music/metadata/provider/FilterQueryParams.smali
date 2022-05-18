@@ -19,7 +19,7 @@
 
 .field static final MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS:[Ljava/lang/String;
 
-.field static final MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_Q:[Ljava/lang/String;
+.field static final MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_R:[Ljava/lang/String;
 
 .field static final MEDIASTORE_WHERE_MYPLAYLISTS:Ljava/lang/String; = "name NOT IN (?,?,?,?,?,?,?) "
 
@@ -29,13 +29,13 @@
 
 .field static final MUSICINFOSTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS:[Ljava/lang/String;
 
-.field static final MUSICINFOSTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_Q:[Ljava/lang/String;
+.field static final MUSICINFOSTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_R:[Ljava/lang/String;
 
 .field static final MUSICINFOSTORE_WHERE_MYPLAYLISTS:Ljava/lang/String; = "smart_playlist_type = ?"
 
 .field static final MUSICINFOSTORE_WHERE_MY_EDITABLE_PLAYLISTS:Ljava/lang/String; = "smart_playlist_type = ? AND path NOT NULL AND path LIKE ?"
 
-.field static final MUSICINFOSTORE_WHERE_MY_EDITABLE_PLAYLISTS_FROM_Q:Ljava/lang/String; = "smart_playlist_type = ? AND path NOT NULL AND path LIKE ?  OR smart_playlist_type = ? AND path NOT NULL AND path LIKE ?"
+.field static final MUSICINFOSTORE_WHERE_MY_EDITABLE_PLAYLISTS_FROM_R:Ljava/lang/String; = "smart_playlist_type = ? AND path NOT NULL AND path LIKE ?  OR smart_playlist_type = ? AND path NOT NULL AND path LIKE ?"
 
 
 # direct methods
@@ -199,7 +199,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v8, Lcom/sonyericsson/music/Constants;->USER_CREATED_PLAYLIST_DATA_PATH_FROM_Q:Ljava/lang/String;
+    sget-object v8, Lcom/sonyericsson/music/Constants;->USER_CREATED_PLAYLIST_DATA_PATH_FROM_R:Ljava/lang/String;
 
     invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -213,7 +213,7 @@
 
     aput-object v0, v2, v1
 
-    sput-object v2, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_Q:[Ljava/lang/String;
+    sput-object v2, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_R:[Ljava/lang/String;
 
     .line 85
     new-array v0, v4, [Ljava/lang/String;
@@ -320,7 +320,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/sonyericsson/music/Constants;->USER_CREATED_PLAYLIST_DATA_PATH_FROM_Q:Ljava/lang/String;
+    sget-object v2, Lcom/sonyericsson/music/Constants;->USER_CREATED_PLAYLIST_DATA_PATH_FROM_R:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -334,7 +334,7 @@
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MUSICINFOSTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_Q:[Ljava/lang/String;
+    sput-object v0, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MUSICINFOSTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_R:[Ljava/lang/String;
 
     return-void
 .end method
@@ -921,12 +921,12 @@
     .line 430
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v5, 0x1c
+    const/16 v5, 0x1d
 
     if-le v4, v5, :cond_3
 
     .line 431
-    sget-object v4, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_Q:[Ljava/lang/String;
+    sget-object v4, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_R:[Ljava/lang/String;
 
     invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -1369,7 +1369,7 @@
     .line 316
     sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v7, 0x1c
+    const/16 v7, 0x1d
 
     if-le v6, v7, :cond_6
 
@@ -1379,7 +1379,7 @@
     invoke-static {v0, v6}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addRawStatement(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 319
-    sget-object v6, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MUSICINFOSTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_Q:[Ljava/lang/String;
+    sget-object v6, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MUSICINFOSTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_R:[Ljava/lang/String;
 
     invoke-static {v6}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 

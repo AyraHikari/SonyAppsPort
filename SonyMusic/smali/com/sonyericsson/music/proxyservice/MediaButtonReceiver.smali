@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 25
+    .line 26
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -16,7 +16,7 @@
 .method public static createInternalMediaButtonPendingIntent(Landroid/content/Context;II)Landroid/app/PendingIntent;
     .locals 2
 
-    .line 59
+    .line 60
     const-class v0, Lcom/sonyericsson/music/proxyservice/MediaButtonReceiver;
 
     const/4 v1, 0x0
@@ -31,7 +31,7 @@
 .method static createInternalMediaButtonPendingIntent(Landroid/content/Context;IILjava/lang/Class;Ljava/lang/String;)Landroid/app/PendingIntent;
     .locals 4
 
-    .line 70
+    .line 71
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.sonyericsson.music.intent.action.MEDIA_BUTTON"
@@ -40,7 +40,7 @@
 
     const-string v1, "android.intent.extra.KEY_EVENT"
 
-    .line 71
+    .line 72
     new-instance v2, Landroid/view/KeyEvent;
 
     const/4 v3, 0x0
@@ -51,7 +51,7 @@
 
     if-eqz p3, :cond_0
 
-    .line 73
+    .line 74
     new-instance p1, Landroid/content/ComponentName;
 
     invoke-direct {p1, p0, p3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
@@ -61,13 +61,21 @@
     :cond_0
     if-eqz p4, :cond_1
 
-    .line 76
+    .line 77
     invoke-virtual {v0, p4}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     :cond_1
     const/high16 p1, 0x10000000
 
-    .line 79
+    .line 81
+    sget-boolean p3, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_S_API:Z
+
+    if-eqz p3, :cond_2
+
+    const/high16 p1, 0x14000000
+
+    .line 85
+    :cond_2
     invoke-static {p0, p2, v0, p1}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p0
@@ -80,7 +88,7 @@
 
     const-string v0, "android.intent.extra.KEY_EVENT"
 
-    .line 87
+    .line 93
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -91,7 +99,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 89
+    .line 95
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result p1
@@ -149,7 +157,7 @@
 
     const-string v0, "com.sonyericsson.music.intent.action.MEDIA_BUTTON"
 
-    .line 33
+    .line 34
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -162,7 +170,7 @@
 
     const-string v0, "android.intent.action.MEDIA_BUTTON"
 
-    .line 34
+    .line 35
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -173,7 +181,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 35
+    .line 36
     :cond_0
     invoke-direct {p0, p2}, Lcom/sonyericsson/music/proxyservice/MediaButtonReceiver;->isSupportedMediaKey(Landroid/content/Intent;)Z
 
@@ -181,27 +189,27 @@
 
     if-eqz v0, :cond_1
 
-    .line 37
+    .line 38
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->goAsync()Landroid/content/BroadcastReceiver$PendingResult;
 
     move-result-object v0
 
-    .line 40
+    .line 41
     invoke-static {p1}, Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserConnection;->getMediaBrowserConnection(Landroid/content/Context;)Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserConnection;
 
     move-result-object p1
 
-    .line 41
+    .line 42
     invoke-virtual {p1, p2, v0}, Lcom/sonyericsson/music/proxyservice/mediabrowser/MediaBrowserConnection;->addIntent(Landroid/content/Intent;Landroid/content/BroadcastReceiver$PendingResult;)V
 
-    .line 43
+    .line 44
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->isOrderedBroadcast()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 44
+    .line 45
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->abortBroadcast()V
 
     :cond_1

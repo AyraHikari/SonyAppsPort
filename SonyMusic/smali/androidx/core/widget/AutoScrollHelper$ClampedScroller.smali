@@ -352,13 +352,13 @@
 
     sub-long v2, v0, v2
 
-    long-to-int v2, v2
+    long-to-int v3, v2
 
-    iget v3, p0, Landroidx/core/widget/AutoScrollHelper$ClampedScroller;->mRampDownDuration:I
+    iget v2, p0, Landroidx/core/widget/AutoScrollHelper$ClampedScroller;->mRampDownDuration:I
 
     const/4 v4, 0x0
 
-    invoke-static {v2, v4, v3}, Landroidx/core/widget/AutoScrollHelper;->constrain(III)I
+    invoke-static {v3, v4, v2}, Landroidx/core/widget/AutoScrollHelper;->constrain(III)I
 
     move-result v2
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 581
+    .line 638
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$9;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +37,7 @@
 
     const-string v0, "com.sonymobile.audioeffect.intent.action.CLEARAUDIO_PLUS_STATUS"
 
-    .line 584
+    .line 641
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -52,7 +52,7 @@
 
     const/4 v1, 0x0
 
-    .line 585
+    .line 642
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
@@ -61,11 +61,11 @@
 
     const/4 v1, 0x1
 
-    .line 588
+    .line 645
     :cond_0
     invoke-static {p1, v1}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setClearAudioPlusEnabled(Landroid/content/Context;Z)V
 
-    .line 590
+    .line 647
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$9;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/MusicActivity;->getPlayerController()Lcom/sonyericsson/music/player/PlayerController;

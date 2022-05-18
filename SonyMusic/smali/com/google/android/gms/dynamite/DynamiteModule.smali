@@ -762,7 +762,7 @@
 
     monitor-enter v0
     :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_6
 
     .line 57
     :try_start_1
@@ -807,8 +807,8 @@
 
     monitor-enter v2
     :try_end_2
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_4
+    .catch Ljava/lang/IllegalAccessException; {:try_start_2 .. :try_end_2} :catch_3
     .catch Ljava/lang/NoSuchFieldException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -1001,7 +1001,7 @@
     :goto_2
     monitor-exit v2
 
-    goto :goto_3
+    goto :goto_4
 
     :catchall_0
     move-exception v1
@@ -1013,14 +1013,25 @@
     :try_start_c
     throw v1
     :try_end_c
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_c .. :try_end_c} :catch_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_c .. :try_end_c} :catch_2
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_c .. :try_end_c} :catch_4
+    .catch Ljava/lang/IllegalAccessException; {:try_start_c .. :try_end_c} :catch_3
     .catch Ljava/lang/NoSuchFieldException; {:try_start_c .. :try_end_c} :catch_2
     .catchall {:try_start_c .. :try_end_c} :catchall_1
 
     :catch_2
     move-exception v1
 
+    goto :goto_3
+
+    :catch_3
+    move-exception v1
+
+    goto :goto_3
+
+    :catch_4
+    move-exception v1
+
+    :goto_3
     :try_start_d
     const-string v2, "DynamiteModule"
 
@@ -1059,7 +1070,7 @@
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     .line 98
-    :goto_3
+    :goto_4
     sput-object v1, Lcom/google/android/gms/dynamite/DynamiteModule;->zziu:Ljava/lang/Boolean;
 
     .line 99
@@ -1074,7 +1085,7 @@
 
     move-result v0
     :try_end_e
-    .catch Ljava/lang/Throwable; {:try_start_e .. :try_end_e} :catch_4
+    .catch Ljava/lang/Throwable; {:try_start_e .. :try_end_e} :catch_6
 
     if-eqz v0, :cond_8
 
@@ -1084,12 +1095,12 @@
 
     move-result p0
     :try_end_f
-    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_f .. :try_end_f} :catch_3
-    .catch Ljava/lang/Throwable; {:try_start_f .. :try_end_f} :catch_4
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_f .. :try_end_f} :catch_5
+    .catch Ljava/lang/Throwable; {:try_start_f .. :try_end_f} :catch_6
 
     return p0
 
-    :catch_3
+    :catch_5
     move-exception p1
 
     :try_start_10
@@ -1116,14 +1127,14 @@
 
     move-result-object p1
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_7
     new-instance p1, Ljava/lang/String;
 
     invoke-direct {p1, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    :goto_4
+    :goto_5
     invoke-static {p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -1136,7 +1147,7 @@
 
     move-result p0
     :try_end_10
-    .catch Ljava/lang/Throwable; {:try_start_10 .. :try_end_10} :catch_4
+    .catch Ljava/lang/Throwable; {:try_start_10 .. :try_end_10} :catch_6
 
     return p0
 
@@ -1152,9 +1163,9 @@
     :try_start_12
     throw p1
     :try_end_12
-    .catch Ljava/lang/Throwable; {:try_start_12 .. :try_end_12} :catch_4
+    .catch Ljava/lang/Throwable; {:try_start_12 .. :try_end_12} :catch_6
 
-    :catch_4
+    :catch_6
     move-exception p1
 
     .line 107
@@ -1467,10 +1478,10 @@
     :goto_0
     sput-object p0, Lcom/google/android/gms/dynamite/DynamiteModule;->zziw:Lcom/google/android/gms/dynamite/zzm;
     :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
@@ -1478,7 +1489,28 @@
     :catch_0
     move-exception p0
 
+    goto :goto_1
+
+    :catch_1
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_2
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_3
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_4
+    move-exception p0
+
     .line 256
+    :goto_1
     new-instance v1, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
 
     const-string v2, "Failed to instantiate dynamite loader"
@@ -2350,8 +2382,8 @@
 
     check-cast v0, Landroid/os/IBinder;
     :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object v0
@@ -2359,7 +2391,18 @@
     :catch_0
     move-exception v0
 
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v0
+
     .line 260
+    :goto_0
     new-instance v1, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
 
     const-string v2, "Failed to instantiate module class: "
@@ -2378,14 +2421,14 @@
 
     move-result-object p1
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     new-instance p1, Ljava/lang/String;
 
     invoke-direct {p1, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    :goto_0
+    :goto_1
     const/4 v2, 0x0
 
     invoke-direct {v1, p1, v0, v2}, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;Lcom/google/android/gms/dynamite/zzb;)V

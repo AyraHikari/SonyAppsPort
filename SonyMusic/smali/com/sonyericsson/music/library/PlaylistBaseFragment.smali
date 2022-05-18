@@ -1096,9 +1096,9 @@
     .line 440
     new-instance v3, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataRemoveFromPlaylist;
 
-    long-to-int v1, v1
+    long-to-int v2, v1
 
-    new-array v2, v8, [Ljava/lang/Long;
+    new-array v1, v8, [Ljava/lang/Long;
 
     .line 442
     invoke-interface/range {p1 .. p1}, Landroid/view/MenuItem;->getMenuInfo()Landroid/view/ContextMenu$ContextMenuInfo;
@@ -1114,13 +1114,13 @@
 
     move-result-object v4
 
-    aput-object v4, v2, v6
+    aput-object v4, v1, v6
 
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-direct {v3, v1, v2}, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataRemoveFromPlaylist;-><init>(ILjava/util/Collection;)V
+    invoke-direct {v3, v2, v1}, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataRemoveFromPlaylist;-><init>(ILjava/util/Collection;)V
 
     .line 443
     new-instance v1, Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
@@ -1447,10 +1447,10 @@
 
     if-lez v4, :cond_1
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
     .line 325
-    invoke-static {v0}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$Members;->getContentUri(I)Landroid/net/Uri;
+    invoke-static {v1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$Members;->getContentUri(I)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -1531,7 +1531,7 @@
 
     if-eq p1, v2, :cond_1
 
-    const v3, 0x7f10018b
+    const v3, 0x7f10018d
 
     .line 192
     new-array v2, v2, [Ljava/lang/Object;
@@ -1551,7 +1551,7 @@
     goto :goto_1
 
     :cond_1
-    const p1, 0x7f10018c
+    const p1, 0x7f10018e
 
     .line 194
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;

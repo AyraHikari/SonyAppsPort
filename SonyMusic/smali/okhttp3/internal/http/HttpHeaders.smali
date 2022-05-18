@@ -219,9 +219,9 @@
     return p0
 
     :cond_1
-    long-to-int p0, p0
+    long-to-int p1, p0
 
-    return p0
+    return p1
 
     :catch_0
     return p1
