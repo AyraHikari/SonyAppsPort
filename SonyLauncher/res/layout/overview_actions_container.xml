@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.quickstep.views.OverviewActionsView android:layout_gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/overview_actions_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/action_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Space android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <Button android:theme="@style/ThemeControlHighlightWorkspaceColor" android:id="@id/action_screenshot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_screenshot" android:drawableStart="@drawable/ic_screenshot" style="@style/OverviewActionButton" />
+        <Space android:id="@id/screenshot_space" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <Button android:theme="@style/ThemeControlHighlightWorkspaceColor" android:id="@id/action_share" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_share" android:drawableStart="@drawable/ic_share" style="@style/OverviewActionButton" />
+        <Space android:id="@id/action_split_space" android:visibility="gone" android:layout_width="@dimen/overview_actions_button_spacing" android:layout_height="1.0dip" />
+        <Button android:theme="@style/ThemeControlHighlightWorkspaceColor" android:id="@id/action_split" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_split" style="@style/OverviewActionButton" />
+        <Space android:id="@id/oav_three_button_space" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <Button android:theme="@style/ThemeControlHighlightWorkspaceColor" android:id="@id/action_popupwindow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recents_action_popup_window" android:drawableStart="@drawable/ic_share" style="@style/OverviewActionButton" />
+        <Space android:id="@id/popupwindow_space" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <Button android:theme="@style/ThemeControlHighlightWorkspaceColor" android:id="@id/action_mwswitch" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recents_action_multi_window_switch" android:drawableStart="@drawable/ic_share" android:paddingStart="0.0dip" android:paddingEnd="0.0dip" style="@style/OverviewActionButton" />
+        <Space android:id="@id/mwswitch_space" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <Button android:theme="@style/ThemeControlHighlightWorkspaceColor" android:id="@id/action_clearall" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recents_clear_all" android:drawableStart="@drawable/ic_clear_all" style="@style/OverviewActionButton" />
+        <Space android:id="@id/clearall_space" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</com.android.quickstep.views.OverviewActionsView>

@@ -396,12 +396,11 @@
 
     const v4, 0x7f10018d
 
-    .line 129
+    .line 130
     new-array v5, v3, [Ljava/lang/Object;
 
     const/4 v6, 0x0
 
-    .line 130
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -564,7 +563,7 @@
     .line 101
     invoke-virtual {p1, p2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    const p3, 0x7f0901fb
+    const p3, 0x7f0901fc
 
     .line 102
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -575,7 +574,7 @@
 
     iput-object p3, p2, Lcom/sonyericsson/music/library/ArtistsAdapter$ViewHolder;->text1:Landroid/widget/TextView;
 
-    const p3, 0x7f0901fc
+    const p3, 0x7f0901fd
 
     .line 103
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;

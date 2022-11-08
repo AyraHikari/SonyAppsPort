@@ -63,7 +63,7 @@
     .line 69
     iput-object p1, p0, Lcom/sonyericsson/music/fullplayer/SeekHandler;->mSeekBar:Landroid/widget/SeekBar;
 
-    const p1, 0x7f090220
+    const p1, 0x7f090221
 
     .line 70
     invoke-virtual {p2, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -74,7 +74,7 @@
 
     iput-object p1, p0, Lcom/sonyericsson/music/fullplayer/SeekHandler;->mTrackPosition:Landroid/widget/TextView;
 
-    const p1, 0x7f09021d
+    const p1, 0x7f09021e
 
     .line 71
     invoke-virtual {p2, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;

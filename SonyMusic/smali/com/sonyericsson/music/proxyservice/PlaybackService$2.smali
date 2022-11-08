@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/proxyservice/PlaybackService;)V
     .locals 0
 
-    .line 151
+    .line 155
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 154
+    .line 158
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->access$000(Lcom/sonyericsson/music/proxyservice/PlaybackService;)I
@@ -57,7 +57,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 155
+    .line 159
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->access$100(Lcom/sonyericsson/music/proxyservice/PlaybackService;)Z
@@ -66,7 +66,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 159
+    .line 163
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     iget-object v0, v0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
@@ -85,21 +85,21 @@
 
     iget-object v0, v0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
 
-    .line 160
+    .line 164
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->isPlayExpected()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 161
+    .line 165
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     iget-object v0, v0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mIMediaPlayback:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->stop()V
 
-    .line 162
+    .line 166
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     iget-object v0, v0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mIMediaPlayback:Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;
@@ -108,7 +108,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/proxyservice/IMediaPlaybackStub;->setMediaPlayback(Lcom/sonyericsson/music/proxyservice/MediaPlayback;)V
 
-    .line 163
+    .line 167
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     iget-object v0, v0, Lcom/sonyericsson/music/proxyservice/PlaybackService;->mMediaPlayback:Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;
@@ -117,7 +117,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->release(Z)V
 
-    .line 165
+    .line 169
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->access$200(Lcom/sonyericsson/music/proxyservice/PlaybackService;)Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;
@@ -126,7 +126,7 @@
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->unregister()V
 
-    .line 166
+    .line 170
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->access$300(Lcom/sonyericsson/music/proxyservice/PlaybackService;)Lcom/sonyericsson/music/proxyservice/PlaybackService$MusicInfoSyncObserver;
@@ -135,14 +135,14 @@
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$MusicInfoSyncObserver;->unregister()V
 
-    .line 168
+    .line 172
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->delayedNotificationAutoDismiss()V
 
     goto :goto_0
 
-    .line 170
+    .line 174
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
@@ -152,7 +152,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 171
+    .line 175
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$2;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService;->access$400(Lcom/sonyericsson/music/proxyservice/PlaybackService;)Lcom/sonyericsson/music/proxyservice/PlaybackService$ServiceWrapper;

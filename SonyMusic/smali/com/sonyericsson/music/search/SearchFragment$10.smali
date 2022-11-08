@@ -24,7 +24,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 839
+    .line 843
     invoke-static {}, Lcom/sonyericsson/music/search/SearchConstants$Type;->values()[Lcom/sonyericsson/music/search/SearchConstants$Type;
 
     move-result-object v0
@@ -82,7 +82,7 @@
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 806
+    .line 810
     :catch_2
     invoke-static {}, Lcom/sonyericsson/music/common/DrmUtils$RightsCheckResult;->values()[Lcom/sonyericsson/music/common/DrmUtils$RightsCheckResult;
 

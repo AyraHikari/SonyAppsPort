@@ -1655,7 +1655,7 @@
 
     invoke-virtual {p2, p3}, Lcom/sonyericsson/music/navigationdrawer/NavigationDrawerAdapter;->setListener(Lcom/sonyericsson/music/navigationdrawer/NavigationDrawerAdapter$NavigationMenuItemListener;)V
 
-    const p2, 0x7f09015a
+    const p2, 0x7f09015b
 
     .line 416
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -266,7 +266,7 @@
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    const p3, 0x7f0901fa
+    const p3, 0x7f0901fb
 
     .line 257
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 920
+    .line 917
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$11;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 924
+    .line 921
     :try_start_0
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$11;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
@@ -57,7 +57,7 @@
     :catch_0
     move-exception p1
 
-    .line 926
+    .line 923
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0

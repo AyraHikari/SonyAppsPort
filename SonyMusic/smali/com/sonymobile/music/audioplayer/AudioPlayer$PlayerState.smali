@@ -46,7 +46,7 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .line 33
+    .line 36
     new-instance v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     const-string v1, "IDLE"
@@ -129,7 +129,7 @@
 
     const/16 v0, 0x8
 
-    .line 32
+    .line 35
     new-array v0, v0, [Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     sget-object v1, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->IDLE:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -177,7 +177,7 @@
         }
     .end annotation
 
-    .line 32
+    .line 35
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -186,7 +186,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
     .locals 1
 
-    .line 32
+    .line 35
     const-class v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -201,7 +201,7 @@
 .method public static values()[Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
     .locals 1
 
-    .line 32
+    .line 35
     sget-object v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->$VALUES:[Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-virtual {v0}, [Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->clone()Ljava/lang/Object;

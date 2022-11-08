@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/library/PlaylistsFragment;Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;)V
     .locals 0
 
-    .line 517
+    .line 519
     iput-object p1, p0, Lcom/sonyericsson/music/library/PlaylistsFragment$3;->this$0:Lcom/sonyericsson/music/library/PlaylistsFragment;
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/PlaylistsFragment$3;->val$newSortOrder:Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 520
+    .line 522
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistsFragment$3;->this$0:Lcom/sonyericsson/music/library/PlaylistsFragment;
 
     invoke-static {v0}, Lcom/sonyericsson/music/library/PlaylistsFragment;->access$200(Lcom/sonyericsson/music/library/PlaylistsFragment;)Lcom/sonyericsson/music/MusicActivity;
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 521
+    .line 523
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistsFragment$3;->this$0:Lcom/sonyericsson/music/library/PlaylistsFragment;
 
     invoke-static {v0}, Lcom/sonyericsson/music/library/PlaylistsFragment;->access$200(Lcom/sonyericsson/music/library/PlaylistsFragment;)Lcom/sonyericsson/music/MusicActivity;
@@ -66,12 +66,12 @@
 
     iget-object v2, p0, Lcom/sonyericsson/music/library/PlaylistsFragment$3;->val$newSortOrder:Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;
 
-    .line 523
+    .line 525
     invoke-virtual {v2}, Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;->getIndex()I
 
     move-result v2
 
-    .line 521
+    .line 523
     invoke-static {v0, v1, v2}, Lcom/sonyericsson/music/common/SettingsProviderWrapper;->set(Landroid/content/Context;Ljava/lang/String;I)Z
 
     :cond_0

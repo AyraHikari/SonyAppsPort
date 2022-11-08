@@ -106,7 +106,7 @@
     .line 228
     iput p8, p0, Lcom/sonyericsson/music/library/CloudAdapter$FileViewHolder;->mProgressBarColor:I
 
-    const p2, 0x7f0901fb
+    const p2, 0x7f0901fc
 
     .line 230
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -117,7 +117,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/CloudAdapter$FileViewHolder;->mText1:Landroid/widget/TextView;
 
-    const p2, 0x7f0901fc
+    const p2, 0x7f0901fd
 
     .line 231
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -139,7 +139,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/CloudAdapter$FileViewHolder;->mImageView:Landroid/widget/ImageView;
 
-    const p2, 0x7f090195
+    const p2, 0x7f090196
 
     .line 233
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -190,7 +190,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f0901d8
+    const p3, 0x7f0901d9
 
     .line 241
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -199,7 +199,7 @@
 
     iput-object p3, p0, Lcom/sonyericsson/music/library/CloudAdapter$FileViewHolder;->mPaddingStart:Landroid/view/View;
 
-    const p3, 0x7f0901d7
+    const p3, 0x7f0901d8
 
     .line 242
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -355,11 +355,11 @@
 
     move-result p1
 
-    const v0, 0x7f09018f
+    const v0, 0x7f090190
 
     if-eq p1, v0, :cond_2
 
-    const v0, 0x7f0901cd
+    const v0, 0x7f0901ce
 
     if-eq p1, v0, :cond_0
 
@@ -454,7 +454,7 @@
     .line 71
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(I)V
 
-    const v0, 0x7f09018f
+    const v0, 0x7f090190
 
     .line 73
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -468,7 +468,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0901cd
+    const v0, 0x7f0901ce
 
     .line 76
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -482,7 +482,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f090191
+    const v0, 0x7f090192
 
     .line 79
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -493,7 +493,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/settings/GoogleDriveSettingsActivity;->mGoogleDriveConnectionSubtitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0901ce
+    const v0, 0x7f0901cf
 
     .line 82
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -504,7 +504,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/settings/GoogleDriveSettingsActivity;->mGoogleDriveSignInSignOutTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0901cf
+    const v0, 0x7f0901d0
 
     .line 83
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;

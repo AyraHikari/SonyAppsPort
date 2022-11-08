@@ -1854,7 +1854,7 @@
 
     const/16 v0, 0x1d
 
-    .line 8298
+    .line 8299
     new-array v1, v0, [I
 
     fill-array-data v1, :array_0
@@ -1863,7 +1863,7 @@
 
     const/4 v1, 0x1
 
-    .line 8730
+    .line 8731
     new-array v2, v1, [I
 
     const/4 v3, 0x0
@@ -1874,7 +1874,7 @@
 
     sput-object v2, Lcom/sonyericsson/music/R$styleable;->ActionBarLayout:[I
 
-    .line 8773
+    .line 8774
     new-array v2, v1, [I
 
     const v4, 0x101013f
@@ -1883,14 +1883,14 @@
 
     sput-object v2, Lcom/sonyericsson/music/R$styleable;->ActionMenuItemView:[I
 
-    .line 8789
+    .line 8790
     new-array v2, v3, [I
 
     sput-object v2, Lcom/sonyericsson/music/R$styleable;->ActionMenuView:[I
 
     const/4 v2, 0x6
 
-    .line 8812
+    .line 8813
     new-array v4, v2, [I
 
     fill-array-data v4, :array_1
@@ -1899,7 +1899,7 @@
 
     const/4 v4, 0x2
 
-    .line 8911
+    .line 8912
     new-array v5, v4, [I
 
     fill-array-data v5, :array_2
@@ -1908,21 +1908,21 @@
 
     const/16 v5, 0x8
 
-    .line 8967
+    .line 8968
     new-array v6, v5, [I
 
     fill-array-data v6, :array_3
 
     sput-object v6, Lcom/sonyericsson/music/R$styleable;->AlertDialog:[I
 
-    .line 9087
+    .line 9088
     new-array v6, v2, [I
 
     fill-array-data v6, :array_4
 
     sput-object v6, Lcom/sonyericsson/music/R$styleable;->AnimatedStateListDrawableCompat:[I
 
-    .line 9178
+    .line 9179
     new-array v6, v4, [I
 
     fill-array-data v6, :array_5
@@ -1931,42 +1931,42 @@
 
     const/4 v6, 0x4
 
-    .line 9225
+    .line 9226
     new-array v7, v6, [I
 
     fill-array-data v7, :array_6
 
     sput-object v7, Lcom/sonyericsson/music/R$styleable;->AnimatedStateListDrawableTransition:[I
 
-    .line 9300
+    .line 9301
     new-array v7, v2, [I
 
     fill-array-data v7, :array_7
 
     sput-object v7, Lcom/sonyericsson/music/R$styleable;->AppBarLayout:[I
 
-    .line 9390
+    .line 9391
     new-array v7, v6, [I
 
     fill-array-data v7, :array_8
 
     sput-object v7, Lcom/sonyericsson/music/R$styleable;->AppBarLayoutStates:[I
 
-    .line 9446
+    .line 9447
     new-array v7, v4, [I
 
     fill-array-data v7, :array_9
 
     sput-object v7, Lcom/sonyericsson/music/R$styleable;->AppBarLayout_Layout:[I
 
-    .line 9499
+    .line 9500
     new-array v7, v6, [I
 
     fill-array-data v7, :array_a
 
     sput-object v7, Lcom/sonyericsson/music/R$styleable;->AppCompatImageView:[I
 
-    .line 9587
+    .line 9588
     new-array v7, v6, [I
 
     fill-array-data v7, :array_b
@@ -1975,7 +1975,7 @@
 
     const/4 v7, 0x7
 
-    .line 9677
+    .line 9678
     new-array v8, v7, [I
 
     fill-array-data v8, :array_c
@@ -1984,7 +1984,7 @@
 
     const/16 v8, 0xb
 
-    .line 9816
+    .line 9817
     new-array v9, v8, [I
 
     fill-array-data v9, :array_d
@@ -1993,14 +1993,14 @@
 
     const/16 v9, 0x79
 
-    .line 10251
+    .line 10252
     new-array v9, v9, [I
 
     fill-array-data v9, :array_e
 
     sput-object v9, Lcom/sonyericsson/music/R$styleable;->AppCompatTheme:[I
 
-    .line 11940
+    .line 11941
     new-array v9, v4, [I
 
     fill-array-data v9, :array_f
@@ -2009,14 +2009,14 @@
 
     const/4 v9, 0x3
 
-    .line 11983
+    .line 11984
     new-array v10, v9, [I
 
     fill-array-data v10, :array_10
 
     sput-object v10, Lcom/sonyericsson/music/R$styleable;->BlurredDrawerContainer:[I
 
-    .line 12036
+    .line 12037
     new-array v10, v2, [I
 
     fill-array-data v10, :array_11
@@ -2025,21 +2025,21 @@
 
     const/16 v10, 0xa
 
-    .line 12147
+    .line 12148
     new-array v11, v10, [I
 
     fill-array-data v11, :array_12
 
     sput-object v11, Lcom/sonyericsson/music/R$styleable;->BottomNavigationView:[I
 
-    .line 12295
+    .line 12296
     new-array v11, v6, [I
 
     fill-array-data v11, :array_13
 
     sput-object v11, Lcom/sonyericsson/music/R$styleable;->BottomSheetBehavior_Layout:[I
 
-    .line 12361
+    .line 12362
     new-array v11, v1, [I
 
     const v12, 0x7f04002a
@@ -2050,14 +2050,14 @@
 
     const/16 v11, 0xd
 
-    .line 12411
+    .line 12412
     new-array v12, v11, [I
 
     fill-array-data v12, :array_14
 
     sput-object v12, Lcom/sonyericsson/music/R$styleable;->CardView:[I
 
-    .line 12614
+    .line 12615
     new-array v12, v2, [I
 
     fill-array-data v12, :array_15
@@ -2066,14 +2066,14 @@
 
     const/16 v12, 0x22
 
-    .line 12763
+    .line 12764
     new-array v12, v12, [I
 
     fill-array-data v12, :array_16
 
     sput-object v12, Lcom/sonyericsson/music/R$styleable;->Chip:[I
 
-    .line 13205
+    .line 13206
     new-array v12, v2, [I
 
     fill-array-data v12, :array_17
@@ -2082,49 +2082,49 @@
 
     const/16 v12, 0x10
 
-    .line 13321
+    .line 13322
     new-array v13, v12, [I
 
     fill-array-data v13, :array_18
 
     sput-object v13, Lcom/sonyericsson/music/R$styleable;->CollapsingToolbarLayout:[I
 
-    .line 13555
+    .line 13556
     new-array v13, v4, [I
 
     fill-array-data v13, :array_19
 
     sput-object v13, Lcom/sonyericsson/music/R$styleable;->CollapsingToolbarLayout_Layout:[I
 
-    .line 13600
+    .line 13601
     new-array v13, v9, [I
 
     fill-array-data v13, :array_1a
 
     sput-object v13, Lcom/sonyericsson/music/R$styleable;->ColorStateListItem:[I
 
-    .line 13649
+    .line 13650
     new-array v13, v9, [I
 
     fill-array-data v13, :array_1b
 
     sput-object v13, Lcom/sonyericsson/music/R$styleable;->CompoundButton:[I
 
-    .line 13717
+    .line 13718
     new-array v13, v4, [I
 
     fill-array-data v13, :array_1c
 
     sput-object v13, Lcom/sonyericsson/music/R$styleable;->CoordinatorLayout:[I
 
-    .line 13779
+    .line 13780
     new-array v7, v7, [I
 
     fill-array-data v7, :array_1d
 
     sput-object v7, Lcom/sonyericsson/music/R$styleable;->CoordinatorLayout_Layout:[I
 
-    .line 13947
+    .line 13948
     new-array v7, v4, [I
 
     fill-array-data v7, :array_1e
@@ -2133,28 +2133,28 @@
 
     const/16 v7, 0xc
 
-    .line 14007
+    .line 14008
     new-array v13, v7, [I
 
     fill-array-data v13, :array_1f
 
     sput-object v13, Lcom/sonyericsson/music/R$styleable;->DialogPreference:[I
 
-    .line 14174
+    .line 14175
     new-array v5, v5, [I
 
     fill-array-data v5, :array_20
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->DrawerArrowToggle:[I
 
-    .line 14320
+    .line 14321
     new-array v5, v11, [I
 
     fill-array-data v5, :array_21
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->FloatingActionButton:[I
 
-    .line 14518
+    .line 14519
     new-array v5, v1, [I
 
     const v13, 0x7f04003b
@@ -2163,42 +2163,42 @@
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->FloatingActionButton_Behavior_Layout:[I
 
-    .line 14544
+    .line 14545
     new-array v5, v4, [I
 
     fill-array-data v5, :array_22
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->FlowLayout:[I
 
-    .line 14594
+    .line 14595
     new-array v5, v2, [I
 
     fill-array-data v5, :array_23
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->FontFamily:[I
 
-    .line 14730
+    .line 14731
     new-array v5, v10, [I
 
     fill-array-data v5, :array_24
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->FontFamilyFont:[I
 
-    .line 14881
+    .line 14882
     new-array v5, v9, [I
 
     fill-array-data v5, :array_25
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->ForegroundLinearLayout:[I
 
-    .line 14969
+    .line 14970
     new-array v5, v7, [I
 
     fill-array-data v5, :array_26
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->GradientColor:[I
 
-    .line 15153
+    .line 15154
     new-array v5, v4, [I
 
     fill-array-data v5, :array_27
@@ -2207,49 +2207,49 @@
 
     const/16 v5, 0x9
 
-    .line 15207
+    .line 15208
     new-array v13, v5, [I
 
     fill-array-data v13, :array_28
 
     sput-object v13, Lcom/sonyericsson/music/R$styleable;->LinearLayoutCompat:[I
 
-    .line 15377
+    .line 15378
     new-array v13, v6, [I
 
     fill-array-data v13, :array_29
 
     sput-object v13, Lcom/sonyericsson/music/R$styleable;->LinearLayoutCompat_Layout:[I
 
-    .line 15477
+    .line 15478
     new-array v13, v4, [I
 
     fill-array-data v13, :array_2a
 
     sput-object v13, Lcom/sonyericsson/music/R$styleable;->ListPopupWindow:[I
 
-    .line 15526
+    .line 15527
     new-array v13, v6, [I
 
     fill-array-data v13, :array_2b
 
     sput-object v13, Lcom/sonyericsson/music/R$styleable;->ListPreference:[I
 
-    .line 15597
+    .line 15598
     new-array v13, v9, [I
 
     fill-array-data v13, :array_2c
 
     sput-object v13, Lcom/sonyericsson/music/R$styleable;->LoadingImageView:[I
 
-    .line 15678
+    .line 15679
     new-array v12, v12, [I
 
     fill-array-data v12, :array_2d
 
     sput-object v12, Lcom/sonyericsson/music/R$styleable;->MaterialButton:[I
 
-    .line 15946
+    .line 15947
     new-array v12, v4, [I
 
     fill-array-data v12, :array_2e
@@ -2258,21 +2258,21 @@
 
     const/16 v12, 0x20
 
-    .line 16046
+    .line 16047
     new-array v12, v12, [I
 
     fill-array-data v12, :array_2f
 
     sput-object v12, Lcom/sonyericsson/music/R$styleable;->MaterialComponentsTheme:[I
 
-    .line 16482
+    .line 16483
     new-array v12, v6, [I
 
     fill-array-data v12, :array_30
 
     sput-object v12, Lcom/sonyericsson/music/R$styleable;->MediaRouteButton:[I
 
-    .line 16560
+    .line 16561
     new-array v12, v2, [I
 
     fill-array-data v12, :array_31
@@ -2281,35 +2281,35 @@
 
     const/16 v12, 0x17
 
-    .line 16707
+    .line 16708
     new-array v12, v12, [I
 
     fill-array-data v12, :array_32
 
     sput-object v12, Lcom/sonyericsson/music/R$styleable;->MenuItem:[I
 
-    .line 17084
+    .line 17085
     new-array v5, v5, [I
 
     fill-array-data v5, :array_33
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->MenuView:[I
 
-    .line 17225
+    .line 17226
     new-array v5, v6, [I
 
     fill-array-data v5, :array_34
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->MultiSelectListPreference:[I
 
-    .line 17314
+    .line 17315
     new-array v5, v7, [I
 
     fill-array-data v5, :array_35
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->NavigationView:[I
 
-    .line 17478
+    .line 17479
     new-array v5, v1, [I
 
     const v7, 0x7f040139
@@ -2318,14 +2318,14 @@
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->PlayerControlsLayout_Layout:[I
 
-    .line 17505
+    .line 17506
     new-array v5, v9, [I
 
     fill-array-data v5, :array_36
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->PopupWindow:[I
 
-    .line 17557
+    .line 17558
     new-array v5, v1, [I
 
     const v7, 0x7f0401bf
@@ -2336,35 +2336,35 @@
 
     const/16 v5, 0x23
 
-    .line 17654
+    .line 17655
     new-array v5, v5, [I
 
     fill-array-data v5, :array_37
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->Preference:[I
 
-    .line 18091
+    .line 18092
     new-array v5, v6, [I
 
     fill-array-data v5, :array_38
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->PreferenceFragment:[I
 
-    .line 18165
+    .line 18166
     new-array v5, v6, [I
 
     fill-array-data v5, :array_39
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->PreferenceFragmentCompat:[I
 
-    .line 18238
+    .line 18239
     new-array v5, v9, [I
 
     fill-array-data v5, :array_3a
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->PreferenceGroup:[I
 
-    .line 18300
+    .line 18301
     new-array v5, v6, [I
 
     fill-array-data v5, :array_3b
@@ -2373,28 +2373,28 @@
 
     const/16 v5, 0x17
 
-    .line 18410
+    .line 18411
     new-array v5, v5, [I
 
     fill-array-data v5, :array_3c
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->PreferenceTheme:[I
 
-    .line 18731
+    .line 18732
     new-array v5, v4, [I
 
     fill-array-data v5, :array_3d
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->RecycleListView:[I
 
-    .line 18793
+    .line 18794
     new-array v5, v8, [I
 
     fill-array-data v5, :array_3e
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->RecyclerView:[I
 
-    .line 18950
+    .line 18951
     new-array v5, v1, [I
 
     const v6, 0x7f04011a
@@ -2403,7 +2403,7 @@
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->ScrimInsetsFrameLayout:[I
 
-    .line 18979
+    .line 18980
     new-array v5, v1, [I
 
     const v6, 0x7f04003e
@@ -2414,35 +2414,35 @@
 
     const/16 v5, 0x11
 
-    .line 19039
+    .line 19040
     new-array v5, v5, [I
 
     fill-array-data v5, :array_3f
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->SearchView:[I
 
-    .line 19349
+    .line 19350
     new-array v5, v2, [I
 
     fill-array-data v5, :array_40
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->SeekBarPreference:[I
 
-    .line 19436
+    .line 19437
     new-array v5, v9, [I
 
     fill-array-data v5, :array_41
 
     sput-object v5, Lcom/sonyericsson/music/R$styleable;->SignInButton:[I
 
-    .line 19510
+    .line 19511
     new-array v4, v4, [I
 
     fill-array-data v4, :array_42
 
     sput-object v4, Lcom/sonyericsson/music/R$styleable;->Snackbar:[I
 
-    .line 19552
+    .line 19553
     new-array v4, v9, [I
 
     fill-array-data v4, :array_43
@@ -2451,21 +2451,21 @@
 
     const/4 v4, 0x5
 
-    .line 19615
+    .line 19616
     new-array v4, v4, [I
 
     fill-array-data v4, :array_44
 
     sput-object v4, Lcom/sonyericsson/music/R$styleable;->Spinner:[I
 
-    .line 19719
+    .line 19720
     new-array v2, v2, [I
 
     fill-array-data v2, :array_45
 
     sput-object v2, Lcom/sonyericsson/music/R$styleable;->StateListDrawable:[I
 
-    .line 19808
+    .line 19809
     new-array v2, v1, [I
 
     const v4, 0x1010199
@@ -2476,28 +2476,28 @@
 
     const/16 v2, 0xe
 
-    .line 19862
+    .line 19863
     new-array v2, v2, [I
 
     fill-array-data v2, :array_46
 
     sput-object v2, Lcom/sonyericsson/music/R$styleable;->SwitchCompat:[I
 
-    .line 20102
+    .line 20103
     new-array v2, v10, [I
 
     fill-array-data v2, :array_47
 
     sput-object v2, Lcom/sonyericsson/music/R$styleable;->SwitchPreference:[I
 
-    .line 20250
+    .line 20251
     new-array v2, v10, [I
 
     fill-array-data v2, :array_48
 
     sput-object v2, Lcom/sonyericsson/music/R$styleable;->SwitchPreferenceCompat:[I
 
-    .line 20382
+    .line 20383
     new-array v2, v9, [I
 
     fill-array-data v2, :array_49
@@ -2506,14 +2506,14 @@
 
     const/16 v2, 0x19
 
-    .line 20478
+    .line 20479
     new-array v2, v2, [I
 
     fill-array-data v2, :array_4a
 
     sput-object v2, Lcom/sonyericsson/music/R$styleable;->TabLayout:[I
 
-    .line 20843
+    .line 20844
     new-array v2, v11, [I
 
     fill-array-data v2, :array_4b
@@ -2522,21 +2522,21 @@
 
     const/16 v2, 0x1c
 
-    .line 21083
+    .line 21084
     new-array v2, v2, [I
 
     fill-array-data v2, :array_4c
 
     sput-object v2, Lcom/sonyericsson/music/R$styleable;->TextInputLayout:[I
 
-    .line 21442
+    .line 21443
     new-array v2, v9, [I
 
     fill-array-data v2, :array_4d
 
     sput-object v2, Lcom/sonyericsson/music/R$styleable;->ThemeEnforcement:[I
 
-    .line 21488
+    .line 21489
     new-array v1, v1, [I
 
     const v2, 0x7f040170
@@ -2545,7 +2545,7 @@
 
     sput-object v1, Lcom/sonyericsson/music/R$styleable;->ThemedImageView:[I
 
-    .line 21576
+    .line 21577
     new-array v0, v0, [I
 
     fill-array-data v0, :array_4e
@@ -2554,21 +2554,21 @@
 
     const/4 v0, 0x5
 
-    .line 22020
+    .line 22021
     new-array v0, v0, [I
 
     fill-array-data v0, :array_4f
 
     sput-object v0, Lcom/sonyericsson/music/R$styleable;->View:[I
 
-    .line 22119
+    .line 22120
     new-array v0, v9, [I
 
     fill-array-data v0, :array_50
 
     sput-object v0, Lcom/sonyericsson/music/R$styleable;->ViewBackgroundHelper:[I
 
-    .line 22191
+    .line 22192
     new-array v0, v9, [I
 
     fill-array-data v0, :array_51
@@ -3719,7 +3719,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 8226
+    .line 8227
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

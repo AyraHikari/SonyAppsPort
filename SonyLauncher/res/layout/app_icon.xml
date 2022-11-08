@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.launcher3.views.DoubleShadowBubbleTextView launcher:centerVertically="true" style="@style/BaseIcon.Workspace" xmlns:launcher="http://schemas.android.com/apk/res-auto" />

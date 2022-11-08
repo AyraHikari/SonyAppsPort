@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 2368
+    .line 2385
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-direct {p0}, Landroidx/mediarouter/media/MediaRouter$Callback;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/sonyericsson/music/MusicActivity;Lcom/sonyericsson/music/MusicActivity$1;)V
     .locals 0
 
-    .line 2368
+    .line 2385
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;-><init>(Lcom/sonyericsson/music/MusicActivity;)V
 
     return-void
@@ -44,10 +44,10 @@
 .method public onRouteAdded(Landroidx/mediarouter/media/MediaRouter;Landroidx/mediarouter/media/MediaRouter$RouteInfo;)V
     .locals 0
 
-    .line 2372
+    .line 2389
     invoke-super {p0, p1, p2}, Landroidx/mediarouter/media/MediaRouter$Callback;->onRouteAdded(Landroidx/mediarouter/media/MediaRouter;Landroidx/mediarouter/media/MediaRouter$RouteInfo;)V
 
-    .line 2377
+    .line 2394
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-virtual {p1}, Landroid/app/Activity;->isFinishing()Z
@@ -58,7 +58,7 @@
 
     return-void
 
-    .line 2381
+    .line 2398
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
@@ -72,7 +72,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 2382
+    .line 2399
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-static {p1}, Lcom/sonyericsson/music/MusicActivity;->access$1100(Lcom/sonyericsson/music/MusicActivity;)Landroidx/mediarouter/media/MediaRouter;
@@ -81,7 +81,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 2383
+    .line 2400
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-static {p1}, Lcom/sonyericsson/music/MusicActivity;->access$1100(Lcom/sonyericsson/music/MusicActivity;)Landroidx/mediarouter/media/MediaRouter;
@@ -90,7 +90,7 @@
 
     invoke-static {p1, p2}, Lcom/sonyericsson/music/CastGa;->addDevice(Landroidx/mediarouter/media/MediaRouter;Landroidx/mediarouter/media/MediaRouter$RouteInfo;)V
 
-    .line 2386
+    .line 2403
     :cond_1
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
@@ -98,7 +98,7 @@
 
     if-nez p2, :cond_2
 
-    .line 2387
+    .line 2404
     invoke-virtual {p1}, Landroidx/appcompat/app/AppCompatActivity;->invalidateOptionsMenu()V
 
     :cond_2
@@ -108,7 +108,7 @@
 .method public onRouteRemoved(Landroidx/mediarouter/media/MediaRouter;Landroidx/mediarouter/media/MediaRouter$RouteInfo;)V
     .locals 0
 
-    .line 2456
+    .line 2473
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-static {p1}, Lcom/sonyericsson/music/MusicActivity;->access$1000(Lcom/sonyericsson/music/MusicActivity;)Landroidx/mediarouter/media/MediaRouteSelector;
@@ -127,7 +127,7 @@
 
     if-nez p2, :cond_0
 
-    .line 2457
+    .line 2474
     invoke-virtual {p1}, Landroidx/appcompat/app/AppCompatActivity;->invalidateOptionsMenu()V
 
     :cond_0
@@ -137,19 +137,19 @@
 .method public onRouteSelected(Landroidx/mediarouter/media/MediaRouter;Landroidx/mediarouter/media/MediaRouter$RouteInfo;)V
     .locals 5
 
-    .line 2398
+    .line 2415
     iget-object p1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/MusicActivity;->getPlayerController()Lcom/sonyericsson/music/player/PlayerController;
 
     move-result-object p1
 
-    .line 2399
+    .line 2416
     invoke-virtual {p1}, Lcom/sonyericsson/music/player/PlayerController;->getPlayerState()Lcom/sonyericsson/music/player/PlayerState;
 
     move-result-object v0
 
-    .line 2401
+    .line 2418
     iget-object v1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->isFinishing()Z
@@ -164,7 +164,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 2402
+    .line 2419
     invoke-virtual {v0}, Lcom/sonyericsson/music/player/PlayerState;->getRouteType()I
 
     move-result v0
@@ -177,7 +177,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 2403
+    .line 2420
     invoke-static {v0}, Lcom/sonyericsson/music/MusicActivity;->access$1100(Lcom/sonyericsson/music/MusicActivity;)Landroidx/mediarouter/media/MediaRouter;
 
     move-result-object v0
@@ -186,7 +186,7 @@
 
     goto/16 :goto_3
 
-    .line 2407
+    .line 2424
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
@@ -200,7 +200,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 2408
+    .line 2425
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-static {v0}, Lcom/sonyericsson/music/MusicActivity;->access$1100(Lcom/sonyericsson/music/MusicActivity;)Landroidx/mediarouter/media/MediaRouter;
@@ -221,7 +221,7 @@
 
     goto :goto_0
 
-    .line 2414
+    .line 2431
     :cond_1
     iget-object v3, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
@@ -229,7 +229,7 @@
 
     goto :goto_1
 
-    .line 2412
+    .line 2429
     :cond_2
     :goto_0
     iget-object v3, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
@@ -238,7 +238,7 @@
 
     invoke-virtual {v3, v4}, Landroid/app/Activity;->setVolumeControlStream(I)V
 
-    .line 2417
+    .line 2434
     :goto_1
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -252,22 +252,22 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 2418
+    .line 2435
     iget-object v1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
-    .line 2419
+    .line 2436
     invoke-static {v1, v4}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->isShowCastConnectChargerDlg(Landroid/content/Context;Z)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 2422
+    .line 2439
     invoke-static {v3}, Lcom/sonyericsson/music/dialogs/CastConnectChargerDialog;->newInstance(I)Lcom/sonyericsson/music/dialogs/CastConnectChargerDialog;
 
     move-result-object v0
 
-    .line 2424
+    .line 2441
     iget-object v1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-virtual {v1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -283,22 +283,22 @@
     :cond_3
     if-ne v0, v2, :cond_4
 
-    .line 2427
+    .line 2444
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
-    .line 2428
+    .line 2445
     invoke-static {v0, v3}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->isShowCastConnectChargerDlg(Landroid/content/Context;Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 2431
+    .line 2448
     invoke-static {v4}, Lcom/sonyericsson/music/dialogs/CastConnectChargerDialog;->newInstance(I)Lcom/sonyericsson/music/dialogs/CastConnectChargerDialog;
 
     move-result-object v0
 
-    .line 2433
+    .line 2450
     iget-object v1, p0, Lcom/sonyericsson/music/MusicActivity$MediaRouterCallback;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-virtual {v1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -309,7 +309,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
-    .line 2439
+    .line 2456
     :cond_4
     :goto_2
     invoke-virtual {p2}, Landroidx/mediarouter/media/MediaRouter$RouteInfo;->getExtras()Landroid/os/Bundle;

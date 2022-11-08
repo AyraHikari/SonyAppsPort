@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;Lcom/sonyericsson/music/common/InputDialogClickListener;)V
     .locals 0
 
-    .line 181
+    .line 173
     iput-object p1, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$3;->this$0:Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;
 
     iput-object p2, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$3;->val$listener:Lcom/sonyericsson/music/common/InputDialogClickListener;
@@ -42,7 +42,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 185
+    .line 177
     iget-object p2, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$3;->val$listener:Lcom/sonyericsson/music/common/InputDialogClickListener;
 
     invoke-interface {p2, p1}, Lcom/sonyericsson/music/common/InputDialogClickListener;->onCancel(Landroid/content/DialogInterface;)V

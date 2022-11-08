@@ -144,83 +144,63 @@
 
     sput-object v2, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS:[Ljava/lang/String;
 
-    const/16 v2, 0x9
-
     .line 66
-    new-array v2, v2, [Ljava/lang/String;
+    new-array v1, v1, [Ljava/lang/String;
 
-    const-string v10, "WALKMAN most played tracks"
+    const-string v2, "WALKMAN most played tracks"
 
-    aput-object v10, v2, v3
+    aput-object v2, v1, v3
 
-    const-string v10, "WALKMAN recently played tracks"
+    const-string v2, "WALKMAN recently played tracks"
 
-    aput-object v10, v2, v4
+    aput-object v2, v1, v4
 
-    const-string v10, "WALKMAN favorites"
+    const-string v2, "WALKMAN favorites"
 
-    aput-object v10, v2, v5
+    aput-object v2, v1, v5
 
-    const-string v10, "Music_most_played_tracks"
+    const-string v2, "Music_most_played_tracks"
 
-    aput-object v10, v2, v6
+    aput-object v2, v1, v6
 
-    const-string v10, "Music_recently_played_tracks"
+    const-string v2, "Music_recently_played_tracks"
 
-    aput-object v10, v2, v7
+    aput-object v2, v1, v7
 
-    const-string v10, "Music_newly_added_tracks"
+    const-string v2, "Music_newly_added_tracks"
 
-    aput-object v10, v2, v8
+    aput-object v2, v1, v8
 
-    const-string v8, "Music_favorites"
+    const-string v2, "Music_favorites"
 
-    aput-object v8, v2, v9
+    aput-object v2, v1, v9
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v9, Lcom/sonyericsson/music/Constants;->USER_CREATED_PLAYLIST_DATA_PATH:Ljava/lang/String;
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v9, "%"
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    aput-object v8, v2, v0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     sget-object v8, Lcom/sonyericsson/music/Constants;->USER_CREATED_PLAYLIST_DATA_PATH_FROM_R:Ljava/lang/String;
 
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v8, "%"
+    const-string v8, "%.m3u"
 
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    aput-object v0, v2, v1
+    aput-object v2, v1, v0
 
-    sput-object v2, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_R:[Ljava/lang/String;
+    sput-object v1, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_R:[Ljava/lang/String;
 
-    .line 85
+    .line 84
     new-array v0, v4, [Ljava/lang/String;
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;->SMART_PLAYLIST_TYPE_NONE:Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;
 
-    .line 86
+    .line 85
     invoke-virtual {v1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;->getId()I
 
     move-result v1
@@ -233,12 +213,12 @@
 
     sput-object v0, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MUSICINFOSTORE_WHERE_ARGS_MYPLAYLISTS:[Ljava/lang/String;
 
-    .line 102
+    .line 101
     new-array v0, v5, [Ljava/lang/String;
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;->SMART_PLAYLIST_TYPE_NONE:Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;
 
-    .line 103
+    .line 102
     invoke-virtual {v1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;->getId()I
 
     move-result v1
@@ -269,12 +249,12 @@
 
     sput-object v0, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MUSICINFOSTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS:[Ljava/lang/String;
 
-    .line 110
+    .line 109
     new-array v0, v7, [Ljava/lang/String;
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;->SMART_PLAYLIST_TYPE_NONE:Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;
 
-    .line 111
+    .line 110
     invoke-virtual {v1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;->getId()I
 
     move-result v1
@@ -305,7 +285,7 @@
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;->SMART_PLAYLIST_TYPE_NONE:Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;
 
-    .line 113
+    .line 112
     invoke-virtual {v1}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$PlaylistProviderTypeIndex;->getId()I
 
     move-result v1
@@ -324,7 +304,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, "%"
+    const-string v2, "%.m3u"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -351,14 +331,14 @@
 .method private static addLike(Ljava/lang/StringBuilder;Ljava/lang/String;)V
     .locals 1
 
-    .line 523
+    .line 522
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 524
+    .line 523
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -367,10 +347,10 @@
 
     const-string v0, " AND "
 
-    .line 525
+    .line 524
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 527
+    .line 526
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -395,14 +375,14 @@
 .method private static addNot(Ljava/lang/StringBuilder;Ljava/lang/String;)V
     .locals 1
 
-    .line 532
+    .line 531
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 533
+    .line 532
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -411,10 +391,10 @@
 
     const-string v0, " AND "
 
-    .line 534
+    .line 533
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 536
+    .line 535
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -439,14 +419,14 @@
 .method private static addNotNull(Ljava/lang/StringBuilder;Ljava/lang/String;)V
     .locals 1
 
-    .line 514
+    .line 513
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 515
+    .line 514
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -455,10 +435,10 @@
 
     const-string v0, " AND "
 
-    .line 516
+    .line 515
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 518
+    .line 517
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -483,14 +463,14 @@
 .method private static addRawStatement(Ljava/lang/StringBuilder;Ljava/lang/String;)V
     .locals 1
 
-    .line 541
+    .line 540
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 542
+    .line 541
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -499,10 +479,10 @@
 
     const-string v0, " AND "
 
-    .line 543
+    .line 542
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 545
+    .line 544
     :cond_0
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -513,14 +493,14 @@
 .method private static addToWhereString(Ljava/lang/StringBuilder;Ljava/lang/String;IZ)V
     .locals 2
 
-    .line 497
+    .line 496
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 498
+    .line 497
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -529,7 +509,7 @@
 
     const-string v0, " AND "
 
-    .line 499
+    .line 498
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -537,7 +517,7 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 502
+    .line 501
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -559,7 +539,7 @@
     :cond_1
     if-le p2, v0, :cond_4
 
-    .line 504
+    .line 503
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -597,7 +577,7 @@
 
     const-string p3, "?,"
 
-    .line 506
+    .line 505
     invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 p1, p1, 0x1
@@ -607,7 +587,7 @@
     :cond_3
     const-string p1, "?)"
 
-    .line 508
+    .line 507
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_4
@@ -618,31 +598,31 @@
 .method public static appendParams(Landroid/net/Uri;Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;[Ljava/lang/String;)Landroid/net/Uri;
     .locals 1
 
-    .line 465
+    .line 464
     invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object p0
 
-    .line 466
+    .line 465
     invoke-static {p2}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->concatParamsValue([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 467
+    .line 466
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 468
+    .line 467
     invoke-virtual {p1}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getParameter()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {p0, p1, p2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 470
+    .line 469
     :cond_0
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
@@ -656,7 +636,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 486
+    .line 485
     array-length v0, p0
 
     const/4 v1, 0x1
@@ -665,7 +645,7 @@
 
     const/4 v0, 0x0
 
-    .line 487
+    .line 486
     aget-object p0, p0, v0
 
     return-object p0
@@ -673,7 +653,7 @@
     :cond_0
     const-string v0, ","
 
-    .line 489
+    .line 488
     invoke-static {v0, p0}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -701,12 +681,12 @@
         }
     .end annotation
 
-    .line 375
+    .line 374
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 376
+    .line 375
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -715,7 +695,7 @@
 
     if-eqz p0, :cond_8
 
-    .line 379
+    .line 378
     invoke-virtual {p0}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
 
     move-result-object v3
@@ -738,21 +718,21 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 380
+    .line 379
     invoke-static {v4}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getFilterType(Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;
 
     move-result-object v5
 
     if-eqz v5, :cond_0
 
-    .line 382
+    .line 381
     invoke-virtual {p0, v4}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     const-string v7, "null"
 
-    .line 383
+    .line 382
     invoke-virtual {v7, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -765,7 +745,7 @@
 
     if-nez v7, :cond_4
 
-    .line 386
+    .line 385
     sget-object v7, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$1;->$SwitchMap$com$sonyericsson$music$metadata$provider$FilterQueryParams$Filter:[I
 
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
@@ -782,14 +762,14 @@
     :pswitch_1
     const-string v4, "1"
 
-    .line 412
+    .line 411
     invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 413
+    .line 412
     invoke-virtual {v5}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getMediaStoreColumnName()Ljava/lang/String;
 
     move-result-object v4
@@ -798,12 +778,12 @@
 
     const-string v4, "0"
 
-    .line 415
+    .line 414
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 440
+    .line 439
     :pswitch_2
     invoke-virtual {p0, v4}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
@@ -815,21 +795,21 @@
 
     move-result-object v4
 
-    .line 441
+    .line 440
     array-length v6, v4
 
     const/4 v7, 0x1
 
     if-gt v6, v7, :cond_1
 
-    .line 446
+    .line 445
     invoke-virtual {v5}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getMediaStoreColumnName()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-static {v0, v5}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addLike(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 447
+    .line 446
     invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v4
@@ -838,7 +818,7 @@
 
     goto :goto_0
 
-    .line 442
+    .line 441
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -852,7 +832,7 @@
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->FILTER_PLAYLIST_NAME_LIKE:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;
 
-    .line 444
+    .line 443
     invoke-virtual {v1}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -867,7 +847,7 @@
 
     throw p0
 
-    .line 419
+    .line 418
     :pswitch_3
     sget-object v4, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$PlaylistSet;->PLAYLIST_TYPE_ALL_NOT_SMART:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$PlaylistSet;
 
@@ -883,23 +863,23 @@
 
     const-string v4, "name NOT IN (?,?,?,?,?,?,?) "
 
-    .line 420
+    .line 419
     invoke-static {v0, v4}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addRawStatement(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 422
+    .line 421
     sget-object v4, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MEDIASTORE_WHERE_ARGS_MYPLAYLISTS:[Ljava/lang/String;
 
-    .line 423
+    .line 422
     invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v4
 
-    .line 422
+    .line 421
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     goto/16 :goto_0
 
-    .line 424
+    .line 423
     :cond_2
     sget-object v4, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$PlaylistSet;->PLAYLIST_TYPE_EDITABLE_ONLY:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$PlaylistSet;
 
@@ -915,17 +895,17 @@
 
     const-string v4, "name NOT IN (?,?,?,?,?,?,?)  AND _data NOT NULL AND _data LIKE ?"
 
-    .line 425
+    .line 424
     invoke-static {v0, v4}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addRawStatement(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 430
+    .line 429
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x1d
 
     if-le v4, v5, :cond_3
 
-    .line 431
+    .line 430
     sget-object v4, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_R:[Ljava/lang/String;
 
     invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -936,21 +916,21 @@
 
     goto/16 :goto_0
 
-    .line 434
+    .line 433
     :cond_3
     sget-object v4, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MEDIASTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS:[Ljava/lang/String;
 
-    .line 435
+    .line 434
     invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v4
 
-    .line 434
+    .line 433
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     goto/16 :goto_0
 
-    .line 406
+    .line 405
     :pswitch_4
     invoke-virtual {p0, v4}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
@@ -962,22 +942,22 @@
 
     move-result-object v4
 
-    .line 407
+    .line 406
     invoke-virtual {v5}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getMediaStoreColumnName()Ljava/lang/String;
 
     move-result-object v6
 
     array-length v7, v4
 
-    .line 408
+    .line 407
     invoke-virtual {v5}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->isInclusive()Z
 
     move-result v5
 
-    .line 407
+    .line 406
     invoke-static {v0, v6, v7, v5}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addToWhereString(Ljava/lang/StringBuilder;Ljava/lang/String;IZ)V
 
-    .line 409
+    .line 408
     invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v4
@@ -986,7 +966,7 @@
 
     goto/16 :goto_0
 
-    .line 384
+    .line 383
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -996,7 +976,7 @@
 
     throw p0
 
-    .line 457
+    .line 456
     :cond_5
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -1013,7 +993,7 @@
 
     move-result-object p0
 
-    .line 458
+    .line 457
     :goto_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1023,7 +1003,7 @@
 
     goto :goto_2
 
-    .line 459
+    .line 458
     :cond_7
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1044,7 +1024,7 @@
     :cond_8
     move-object p0, v2
 
-    .line 461
+    .line 460
     :goto_2
     new-instance v0, Landroid/util/Pair;
 
@@ -1087,12 +1067,12 @@
         }
     .end annotation
 
-    .line 258
+    .line 257
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 259
+    .line 258
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -1101,7 +1081,7 @@
 
     if-eqz p0, :cond_b
 
-    .line 264
+    .line 263
     invoke-virtual {p0}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
 
     move-result-object v3
@@ -1128,21 +1108,21 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 265
+    .line 264
     invoke-static {v6}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getFilterType(Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;
 
     move-result-object v7
 
     if-eqz v7, :cond_0
 
-    .line 267
+    .line 266
     invoke-virtual {p0, v6}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     const-string v9, "null"
 
-    .line 268
+    .line 267
     invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
@@ -1155,7 +1135,7 @@
 
     if-nez v9, :cond_7
 
-    .line 271
+    .line 270
     sget-object v9, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$1;->$SwitchMap$com$sonyericsson$music$metadata$provider$FilterQueryParams$Filter:[I
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
@@ -1172,7 +1152,7 @@
 
     goto :goto_0
 
-    .line 347
+    .line 346
     :pswitch_0
     invoke-virtual {p0, v6}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1184,19 +1164,19 @@
 
     move-result-object v6
 
-    .line 348
+    .line 347
     array-length v8, v6
 
     if-gt v8, v11, :cond_1
 
-    .line 353
+    .line 352
     invoke-virtual {v7}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getMusicInfoColumnName()Ljava/lang/String;
 
     move-result-object v7
 
     invoke-static {v0, v7}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addLike(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 354
+    .line 353
     invoke-static {v6}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v6
@@ -1205,7 +1185,7 @@
 
     goto :goto_0
 
-    .line 349
+    .line 348
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1219,7 +1199,7 @@
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->FILTER_PLAYLIST_NAME_LIKE:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;
 
-    .line 351
+    .line 350
     invoke-virtual {v1}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -1239,10 +1219,10 @@
 
     const-string v5, "is_deleted = ? AND is_available = ?"
 
-    .line 331
+    .line 330
     invoke-static {v0, v5}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addRawStatement(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 333
+    .line 332
     new-array v5, v10, [Ljava/lang/String;
 
     const-string v6, "0"
@@ -1261,7 +1241,7 @@
 
     const/4 v5, 0x1
 
-    .line 338
+    .line 337
     :cond_2
     invoke-virtual {v7}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getMusicInfoColumnName()Ljava/lang/String;
 
@@ -1271,7 +1251,7 @@
 
     const-string v6, "1"
 
-    .line 340
+    .line 339
     invoke-virtual {v6, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -1280,7 +1260,7 @@
 
     const-string v6, "1"
 
-    .line 341
+    .line 340
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
@@ -1288,7 +1268,7 @@
     :cond_3
     const-string v6, "0"
 
-    .line 343
+    .line 342
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
@@ -1298,10 +1278,10 @@
 
     const-string v5, "is_deleted = ? AND is_available = ?"
 
-    .line 300
+    .line 299
     invoke-static {v0, v5}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addRawStatement(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 302
+    .line 301
     new-array v5, v10, [Ljava/lang/String;
 
     const-string v6, "0"
@@ -1320,7 +1300,7 @@
 
     const/4 v5, 0x1
 
-    .line 307
+    .line 306
     :cond_4
     sget-object v6, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$PlaylistSet;->PLAYLIST_TYPE_ALL_NOT_SMART:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$PlaylistSet;
 
@@ -1336,23 +1316,23 @@
 
     const-string v6, "smart_playlist_type = ?"
 
-    .line 308
+    .line 307
     invoke-static {v0, v6}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addRawStatement(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 310
+    .line 309
     sget-object v6, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MUSICINFOSTORE_WHERE_ARGS_MYPLAYLISTS:[Ljava/lang/String;
 
-    .line 311
+    .line 310
     invoke-static {v6}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v6
 
-    .line 310
+    .line 309
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     goto/16 :goto_0
 
-    .line 312
+    .line 311
     :cond_5
     sget-object v6, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$PlaylistSet;->PLAYLIST_TYPE_EDITABLE_ONLY:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$PlaylistSet;
 
@@ -1366,7 +1346,7 @@
 
     if-eqz v6, :cond_0
 
-    .line 316
+    .line 315
     sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v7, 0x1d
@@ -1375,10 +1355,10 @@
 
     const-string v6, "smart_playlist_type = ? AND path NOT NULL AND path LIKE ?  OR smart_playlist_type = ? AND path NOT NULL AND path LIKE ?"
 
-    .line 317
+    .line 316
     invoke-static {v0, v6}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addRawStatement(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 319
+    .line 318
     sget-object v6, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MUSICINFOSTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS_FROM_R:[Ljava/lang/String;
 
     invoke-static {v6}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -1392,10 +1372,10 @@
     :cond_6
     const-string v6, "smart_playlist_type = ? AND path NOT NULL AND path LIKE ?"
 
-    .line 322
+    .line 321
     invoke-static {v0, v6}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addRawStatement(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 324
+    .line 323
     sget-object v6, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->MUSICINFOSTORE_WHERE_ARGS_MY_EDITABLE_PLAYLISTS:[Ljava/lang/String;
 
     invoke-static {v6}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -1409,27 +1389,27 @@
     :pswitch_3
     const-string v6, ","
 
-    .line 293
+    .line 292
     invoke-virtual {v8, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 294
+    .line 293
     invoke-virtual {v7}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getMusicInfoColumnName()Ljava/lang/String;
 
     move-result-object v8
 
     array-length v9, v6
 
-    .line 295
+    .line 294
     invoke-virtual {v7}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->isInclusive()Z
 
     move-result v7
 
-    .line 294
+    .line 293
     invoke-static {v0, v8, v9, v7}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams;->addToWhereString(Ljava/lang/StringBuilder;Ljava/lang/String;IZ)V
 
-    .line 296
+    .line 295
     invoke-static {v6}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v6
@@ -1438,7 +1418,7 @@
 
     goto/16 :goto_0
 
-    .line 269
+    .line 268
     :cond_7
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1448,7 +1428,7 @@
 
     throw p0
 
-    .line 365
+    .line 364
     :cond_8
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -1465,7 +1445,7 @@
 
     move-result-object p0
 
-    .line 366
+    .line 365
     :goto_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1475,7 +1455,7 @@
 
     goto :goto_2
 
-    .line 367
+    .line 366
     :cond_a
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1496,7 +1476,7 @@
     :cond_b
     move-object p0, v2
 
-    .line 369
+    .line 368
     :goto_2
     new-instance v0, Landroid/util/Pair;
 
@@ -1530,7 +1510,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 476
+    .line 475
     invoke-virtual {p1}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getParameter()Ljava/lang/String;
 
     move-result-object p1
@@ -1543,7 +1523,7 @@
 
     const-string p1, ","
 
-    .line 478
+    .line 477
     invoke-virtual {p0, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0

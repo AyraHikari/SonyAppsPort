@@ -65,7 +65,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/library/store/StoreAdapter$ItemViewHolder;->mImageView:Lcom/sonyericsson/music/ui/SquareImageView;
 
-    const v0, 0x7f0901fb
+    const v0, 0x7f0901fc
 
     .line 308
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -76,7 +76,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/library/store/StoreAdapter$ItemViewHolder;->mArtistTextView:Landroid/widget/TextView;
 
-    const v0, 0x7f0901fc
+    const v0, 0x7f0901fd
 
     .line 309
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/search/SearchFragment;Landroid/net/Uri;)V
     .locals 0
 
-    .line 808
+    .line 812
     iput-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment$7;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
 
     iput-object p2, p0, Lcom/sonyericsson/music/search/SearchFragment$7;->val$uri:Landroid/net/Uri;
@@ -42,14 +42,14 @@
 .method public onAvailable()V
     .locals 3
 
-    .line 811
+    .line 815
     new-instance v0, Lcom/sonyericsson/music/common/OpenAndPlayConditions;
 
     invoke-direct {v0}, Lcom/sonyericsson/music/common/OpenAndPlayConditions;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 812
+    .line 816
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/common/OpenAndPlayConditions;->setTracksPosition(I)Lcom/sonyericsson/music/common/OpenAndPlayConditions;
 
     move-result-object v0
@@ -58,7 +58,7 @@
 
     move-result-object v0
 
-    .line 813
+    .line 817
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment$7;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
 
     invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -69,14 +69,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 814
+    .line 818
     invoke-virtual {v1}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 815
+    .line 819
     iget-object v2, p0, Lcom/sonyericsson/music/search/SearchFragment$7;->val$uri:Landroid/net/Uri;
 
     invoke-virtual {v1, v2, v0}, Lcom/sonyericsson/music/MusicActivity;->openAndPlayContent(Landroid/net/Uri;Lcom/sonyericsson/music/common/OpenAndPlayConditions;)Z
@@ -88,7 +88,7 @@
 .method public onError()V
     .locals 1
 
-    .line 821
+    .line 825
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment$7;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
 
     invoke-static {v0}, Lcom/sonyericsson/music/search/SearchFragment;->access$1300(Lcom/sonyericsson/music/search/SearchFragment;)V

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$DiscardDialog;)V
     .locals 0
 
-    .line 753
+    .line 784
     iput-object p1, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$DiscardDialog$1;->this$0:Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$DiscardDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    .line 756
+    .line 787
     iget-object p2, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$DiscardDialog$1;->this$0:Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$DiscardDialog;
 
     invoke-virtual {p2}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -47,7 +47,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 757
+    .line 788
     invoke-virtual {p2}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v0
@@ -56,13 +56,13 @@
 
     const/4 v0, 0x0
 
-    .line 758
+    .line 789
     invoke-virtual {p2, v0}, Landroid/app/Activity;->setResult(I)V
 
-    .line 759
+    .line 790
     invoke-virtual {p2}, Landroid/app/Activity;->finish()V
 
-    .line 761
+    .line 792
     :cond_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 

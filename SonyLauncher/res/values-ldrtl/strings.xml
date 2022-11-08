@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_show_google_now_summary">@string/msg_minus_one_on_right</string>
+</resources>

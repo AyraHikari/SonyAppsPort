@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 960
+    .line 957
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$12;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 963
+    .line 960
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$12;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     new-instance v1, Lcom/sonyericsson/music/MusicActivity$12$1;

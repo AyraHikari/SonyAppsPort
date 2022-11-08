@@ -54,38 +54,38 @@
 .method constructor <init>(Landroid/app/Activity;Landroid/widget/ImageView;Landroid/widget/ImageView;I)V
     .locals 1
 
-    .line 261
+    .line 263
     invoke-direct {p0}, Lcom/sonyericsson/music/artdecoder/ArtDecoder$OnDecodedListener;-><init>()V
 
-    .line 262
+    .line 264
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$PlaylistArtDecodedListener;->mActivityRef:Ljava/lang/ref/WeakReference;
 
-    .line 263
+    .line 265
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$PlaylistArtDecodedListener;->mArtImageView:Ljava/lang/ref/WeakReference;
 
-    .line 264
+    .line 266
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$PlaylistArtDecodedListener;->mDefaultArtImageView:Ljava/lang/ref/WeakReference;
 
-    .line 265
+    .line 267
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$PlaylistArtDecodedListener;->mDecodeStartTime:J
 
-    .line 266
+    .line 268
     iput p4, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$PlaylistArtDecodedListener;->mDefaultImageResource:I
 
     return-void
@@ -96,7 +96,7 @@
 .method public onDecoded(Landroid/graphics/Bitmap;)V
     .locals 7
 
-    .line 271
+    .line 273
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$PlaylistArtDecodedListener;->mActivityRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -107,7 +107,7 @@
 
     check-cast v1, Landroid/app/Activity;
 
-    .line 272
+    .line 274
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$PlaylistArtDecodedListener;->mArtImageView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -118,7 +118,7 @@
 
     check-cast v2, Landroid/widget/ImageView;
 
-    .line 273
+    .line 275
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$PlaylistArtDecodedListener;->mDefaultArtImageView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -137,24 +137,24 @@
 
     if-nez p1, :cond_0
 
-    .line 277
+    .line 279
     iget v0, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$PlaylistArtDecodedListener;->mDefaultImageResource:I
 
     if-eqz v0, :cond_0
 
-    .line 278
+    .line 280
     invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
     const v0, 0x7f0700c3
 
-    .line 279
+    .line 281
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    .line 280
+    .line 282
     iget v4, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$PlaylistArtDecodedListener;->mDefaultImageResource:I
 
     sget-object v5, Lcom/sonyericsson/music/common/ScalingUtilities$ScalingLogic;->FIT:Lcom/sonyericsson/music/common/ScalingUtilities$ScalingLogic;
@@ -166,10 +166,10 @@
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 285
+    .line 287
     invoke-virtual {v2, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 286
+    .line 288
     iget-wide v4, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$PlaylistArtDecodedListener;->mDecodeStartTime:J
 
     invoke-static {v4, v5}, Lcom/sonyericsson/music/library/PlaylistBaseFragment;->doCrossFade(J)Z
@@ -184,7 +184,7 @@
 
     const/4 v6, 0x0
 
-    .line 287
+    .line 289
     invoke-static/range {v1 .. v6}, Lcom/sonyericsson/music/common/AnimationHelper;->crossFadeInFadeOut(Landroid/content/Context;Landroid/view/View;Landroid/view/View;ILandroid/view/animation/Animation$AnimationListener;Landroid/view/animation/Animation$AnimationListener;)V
 
     goto :goto_0
@@ -192,12 +192,12 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 290
+    .line 292
     invoke-virtual {v2, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     const/4 p1, 0x4
 
-    .line 291
+    .line 293
     invoke-virtual {v3, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_2

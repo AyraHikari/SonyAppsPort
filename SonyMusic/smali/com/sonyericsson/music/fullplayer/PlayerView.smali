@@ -288,7 +288,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerView;->mArtContainer:Landroid/view/View;
 
-    const v0, 0x7f09011f
+    const v0, 0x7f090120
 
     .line 77
     invoke-direct {p0, v0}, Lcom/sonyericsson/music/fullplayer/PlayerView;->findViewByIdOrThrow(I)Landroid/view/View;
@@ -297,7 +297,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerView;->mMetadata:Landroid/view/View;
 
-    const v0, 0x7f090221
+    const v0, 0x7f090222
 
     .line 78
     invoke-direct {p0, v0}, Lcom/sonyericsson/music/fullplayer/PlayerView;->findViewByIdOrThrow(I)Landroid/view/View;
@@ -306,7 +306,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerView;->mSeekBarContainer:Landroid/view/View;
 
-    const v0, 0x7f090186
+    const v0, 0x7f090187
 
     .line 79
     invoke-direct {p0, v0}, Lcom/sonyericsson/music/fullplayer/PlayerView;->findViewByIdOrThrow(I)Landroid/view/View;

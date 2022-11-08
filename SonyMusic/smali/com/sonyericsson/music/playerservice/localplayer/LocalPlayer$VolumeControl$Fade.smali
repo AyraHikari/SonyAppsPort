@@ -42,7 +42,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .line 1915
+    .line 1957
     new-instance v0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
 
     const-string v1, "NONE"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;->NONE:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
 
-    .line 1916
+    .line 1958
     new-instance v0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
 
     const-string v1, "FAST"
@@ -66,7 +66,7 @@
 
     sput-object v0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;->FAST:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
 
-    .line 1917
+    .line 1959
     new-instance v0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
 
     const-string v1, "SLOW"
@@ -79,7 +79,7 @@
 
     sput-object v0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;->SLOW:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
 
-    .line 1918
+    .line 1960
     new-instance v0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
 
     const-string v1, "SUPER_SLOW"
@@ -94,7 +94,7 @@
 
     const/4 v0, 0x4
 
-    .line 1914
+    .line 1956
     new-array v0, v0, [Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
 
     sget-object v1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;->NONE:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
@@ -126,10 +126,10 @@
         }
     .end annotation
 
-    .line 1922
+    .line 1964
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1923
+    .line 1965
     iput p3, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;->delayMillis:I
 
     return-void
@@ -138,7 +138,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
     .locals 1
 
-    .line 1914
+    .line 1956
     const-class v0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -153,7 +153,7 @@
 .method public static values()[Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
     .locals 1
 
-    .line 1914
+    .line 1956
     sget-object v0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;->$VALUES:[Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;
 
     invoke-virtual {v0}, [Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;->clone()Ljava/lang/Object;

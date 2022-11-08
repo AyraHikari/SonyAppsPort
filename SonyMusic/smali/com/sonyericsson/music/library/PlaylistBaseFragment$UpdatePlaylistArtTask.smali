@@ -36,16 +36,16 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
     .locals 0
 
-    .line 688
+    .line 685
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 689
+    .line 686
     iput-object p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mContext:Landroid/content/Context;
 
-    .line 690
+    .line 687
     iput-object p3, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mArtUri:Ljava/lang/String;
 
-    .line 691
+    .line 688
     iput-object p2, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mPlaylistArtStoreUri:Landroid/net/Uri;
 
     return-void
@@ -56,7 +56,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 680
+    .line 677
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -69,19 +69,19 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 7
 
-    .line 696
+    .line 693
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mPlaylistArtStoreUri:Landroid/net/Uri;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_5
 
-    .line 697
+    .line 694
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mArtUri:Ljava/lang/String;
 
     if-eqz p1, :cond_4
 
-    .line 699
+    .line 696
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -104,7 +104,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 702
+    .line 699
     :try_start_0
     invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
@@ -114,7 +114,7 @@
 
     goto :goto_0
 
-    .line 706
+    .line 703
     :cond_0
     invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
@@ -122,7 +122,7 @@
 
     if-lez v1, :cond_2
 
-    .line 707
+    .line 704
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
@@ -131,7 +131,7 @@
 
     const-string v1, "playlist_art_uri"
 
-    .line 708
+    .line 705
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
@@ -142,7 +142,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 711
+    .line 708
     iget-object v2, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mArtUri:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -151,19 +151,19 @@
 
     if-nez v1, :cond_2
 
-    .line 712
+    .line 709
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
     const-string v2, "playlist_art_uri"
 
-    .line 713
+    .line 710
     iget-object v3, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mArtUri:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 714
+    .line 711
     iget-object v2, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -176,7 +176,7 @@
 
     goto :goto_1
 
-    .line 703
+    .line 700
     :cond_1
     :goto_0
     new-instance v1, Landroid/content/ContentValues;
@@ -185,12 +185,12 @@
 
     const-string v2, "playlist_art_uri"
 
-    .line 704
+    .line 701
     iget-object v3, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mArtUri:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 705
+    .line 702
     iget-object v2, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -207,7 +207,7 @@
     :goto_1
     if-eqz p1, :cond_5
 
-    .line 721
+    .line 718
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     goto :goto_2
@@ -219,11 +219,11 @@
 
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 723
+    .line 720
     :cond_3
     throw v0
 
-    .line 725
+    .line 722
     :cond_4
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$UpdatePlaylistArtTask;->mContext:Landroid/content/Context;
 

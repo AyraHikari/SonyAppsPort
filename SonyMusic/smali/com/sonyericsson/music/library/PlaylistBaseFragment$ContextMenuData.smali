@@ -24,13 +24,13 @@
 .method public constructor <init>(Landroid/content/ContentValues;I)V
     .locals 0
 
-    .line 738
+    .line 735
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 739
+    .line 736
     iput-object p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$ContextMenuData;->mContentValues:Landroid/content/ContentValues;
 
-    .line 740
+    .line 737
     iput p2, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$ContextMenuData;->mSelectedItemPosition:I
 
     return-void
@@ -41,7 +41,7 @@
 .method public getContentValues()Landroid/content/ContentValues;
     .locals 1
 
-    .line 744
+    .line 741
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$ContextMenuData;->mContentValues:Landroid/content/ContentValues;
 
     return-object v0
@@ -50,7 +50,7 @@
 .method public getSelectedItemPosition()I
     .locals 1
 
-    .line 748
+    .line 745
     iget v0, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$ContextMenuData;->mSelectedItemPosition:I
 
     return v0

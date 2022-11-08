@@ -489,8 +489,10 @@
     :cond_3
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/worker/Worker;->mMainThreadHandler:Lcom/sonyericsson/music/proxyservice/worker/MainThreadHandler;
 
+    .line 1236
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/worker/Worker;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
+    .line 1235
     invoke-virtual {v0, v2, v3, v8, v1}, Lcom/sonyericsson/music/proxyservice/worker/MainThreadHandler;->postToMain(IIILjava/lang/Object;)V
 
     .line 1238
@@ -1862,8 +1864,10 @@
     :cond_3
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/worker/Worker;->mMainThreadHandler:Lcom/sonyericsson/music/proxyservice/worker/MainThreadHandler;
 
+    .line 1184
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/worker/Worker;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
+    .line 1183
     invoke-virtual {v0, v2, v3, v8, v1}, Lcom/sonyericsson/music/proxyservice/worker/MainThreadHandler;->postToMain(IIILjava/lang/Object;)V
 
     .line 1186
@@ -3606,10 +3610,10 @@
 
     goto :goto_0
 
+    .line 2214
     :cond_1
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/worker/Worker;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
-    .line 2214
     invoke-virtual {v1}, Lcom/sonyericsson/music/common/Track;->getTitle()Ljava/lang/String;
 
     move-result-object v1
@@ -4456,19 +4460,19 @@
 
     if-eqz v1, :cond_d
 
+    .line 512
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/worker/Worker;->mPlayQueue:Lcom/sonyericsson/music/proxyservice/worker/PlayQueue;
 
-    .line 512
     invoke-virtual {v1}, Lcom/sonyericsson/music/proxyservice/worker/PlayQueue;->getTrackCountInPlayqueue()I
 
     move-result v1
 
     goto :goto_3
 
+    .line 513
     :cond_d
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/worker/Worker;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
-    .line 513
     invoke-virtual {v1}, Lcom/sonyericsson/music/common/Track;->getPlayqueuePosition()I
 
     move-result v1

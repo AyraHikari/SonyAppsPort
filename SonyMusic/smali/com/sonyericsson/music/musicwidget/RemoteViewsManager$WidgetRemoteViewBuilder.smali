@@ -78,7 +78,7 @@
 .method public setAlbumArt(Landroid/graphics/Bitmap;)Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;
     .locals 3
 
-    const v0, 0x7f090234
+    const v0, 0x7f090235
 
     if-nez p1, :cond_0
 
@@ -120,11 +120,11 @@
 
     xor-int/lit8 v2, p1, 0x1
 
-    const v3, 0x7f090245
+    const v3, 0x7f090246
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/widget/RemoteViews;->setBoolean(ILjava/lang/String;Z)V
 
-    const v0, 0x7f09023e
+    const v0, 0x7f09023f
 
     if-eqz p1, :cond_0
 
@@ -159,7 +159,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090245
+    const v1, 0x7f090246
 
     if-eqz p1, :cond_0
 
@@ -208,7 +208,7 @@
 
     const v0, 0x7f090047
 
-    const v1, 0x7f09023c
+    const v1, 0x7f09023d
 
     if-nez p1, :cond_0
 
@@ -272,9 +272,9 @@
 
     move-result v1
 
-    const v2, 0x7f090238
+    const v2, 0x7f090239
 
-    const v3, 0x7f090237
+    const v3, 0x7f090238
 
     const/4 v4, 0x0
 
@@ -341,9 +341,9 @@
 
     move-result p1
 
-    const v0, 0x7f090242
+    const v0, 0x7f090243
 
-    const v1, 0x7f090243
+    const v1, 0x7f090244
 
     if-eqz p1, :cond_3
 
@@ -440,7 +440,7 @@
 
     iget-object v2, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
-    const v3, 0x7f090236
+    const v3, 0x7f090237
 
     invoke-static {v1, v2, v3, v0}, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager;->access$000(Landroid/content/Context;Landroid/widget/RemoteViews;ILandroid/content/Intent;)V
 
@@ -449,7 +449,7 @@
 
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
-    const v2, 0x7f090240
+    const v2, 0x7f090241
 
     const/16 v3, 0x58
 
@@ -460,7 +460,7 @@
 
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
-    const v2, 0x7f090245
+    const v2, 0x7f090246
 
     const/16 v3, 0x55
 
@@ -471,7 +471,7 @@
 
     iget-object v1, p0, Lcom/sonyericsson/music/musicwidget/RemoteViewsManager$WidgetRemoteViewBuilder;->mRemoteView:Landroid/widget/RemoteViews;
 
-    const v2, 0x7f09023f
+    const v2, 0x7f090240
 
     const/16 v3, 0x57
 

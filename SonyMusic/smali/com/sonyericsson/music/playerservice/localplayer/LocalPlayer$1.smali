@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;)V
     .locals 0
 
-    .line 137
+    .line 138
     iput-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$1;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 140
+    .line 141
     iget-object v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$1;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     const/4 v1, 0x0

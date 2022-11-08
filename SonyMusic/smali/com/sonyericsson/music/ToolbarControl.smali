@@ -119,7 +119,7 @@
     .line 175
     iget-object p1, p0, Lcom/sonyericsson/music/ToolbarControl;->mAppBarWrapper:Landroid/view/ViewGroup;
 
-    const v1, 0x7f090156
+    const v1, 0x7f090157
 
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -132,7 +132,7 @@
     .line 176
     iget-object p1, p0, Lcom/sonyericsson/music/ToolbarControl;->mAppBarWrapper:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0901e1
+    const v1, 0x7f0901e2
 
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -141,7 +141,7 @@
     .line 177
     iget-object v1, p0, Lcom/sonyericsson/music/ToolbarControl;->mAppBarWrapper:Landroid/view/ViewGroup;
 
-    const v2, 0x7f090218
+    const v2, 0x7f090219
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -999,6 +999,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 344
     iget p1, p0, Lcom/sonyericsson/music/ToolbarControl;->mColorMaterialPrimary:I
 
     goto :goto_0
@@ -1009,6 +1010,7 @@
     :goto_0
     const-wide/16 v1, 0x190
 
+    .line 343
     invoke-virtual {v0, p1, v1, v2}, Lcom/sonyericsson/music/ui/BackgroundColorDrawable;->setColorWithAnimation(IJ)V
 
     return-void

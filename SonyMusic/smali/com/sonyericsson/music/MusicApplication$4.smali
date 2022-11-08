@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicApplication;)V
     .locals 0
 
-    .line 266
+    .line 262
     iput-object p1, p0, Lcom/sonyericsson/music/MusicApplication$4;->this$0:Lcom/sonyericsson/music/MusicApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +43,12 @@
         }
     .end annotation
 
-    .line 269
+    .line 265
     invoke-interface {p1}, Lokhttp3/Interceptor$Chain;->request()Lokhttp3/Request;
 
     move-result-object v0
 
-    .line 271
+    .line 267
     invoke-virtual {v0}, Lokhttp3/Request;->newBuilder()Lokhttp3/Request$Builder;
 
     move-result-object v0
@@ -61,12 +61,12 @@
 
     invoke-virtual {v0, v1, v2}, Lokhttp3/Request$Builder;->header(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
 
-    .line 272
+    .line 268
     invoke-virtual {v0}, Lokhttp3/Request$Builder;->build()Lokhttp3/Request;
 
     move-result-object v0
 
-    .line 270
+    .line 266
     invoke-interface {p1, v0}, Lokhttp3/Interceptor$Chain;->proceed(Lokhttp3/Request;)Lokhttp3/Response;
 
     move-result-object p1

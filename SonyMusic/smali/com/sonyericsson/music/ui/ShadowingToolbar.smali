@@ -92,11 +92,11 @@
 
     if-lt v0, v1, :cond_0
 
+    .line 106
     sget-object v0, Landroid/renderscript/RenderScript$ContextType;->NORMAL:Landroid/renderscript/RenderScript$ContextType;
 
     const/4 v1, 0x2
 
-    .line 106
     invoke-static {p1, v0, v1}, Landroid/renderscript/RenderScript;->create(Landroid/content/Context;Landroid/renderscript/RenderScript$ContextType;I)Landroid/renderscript/RenderScript;
 
     move-result-object p1

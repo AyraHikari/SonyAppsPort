@@ -1,4 +1,4 @@
-.class final Lcom/sonymobile/music/common/GoogleAnalyticsProxy$2;
+.class Lcom/sonymobile/music/common/GoogleAnalyticsProxy$2;
 .super Ljava/lang/Object;
 .source "GoogleAnalyticsProxy.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

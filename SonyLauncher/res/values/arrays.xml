@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="all_apps_sort_modes">
+        <item>@string/all_apps_sort_mode_alphabetical</item>
+        <item>@string/all_apps_sort_mode_own_order</item>
+    </string-array>
+    <array name="dynamic_resources">
+        <item>@dimen/swipe_up_scale_start</item>
+        <item>@dimen/swipe_up_max_velocity</item>
+    </array>
+    <array name="filtered_components" />
+    <string-array name="gesture_blocking_activities">
+        <item>com.sonymobile.launcher/com.android.quickstep.interaction.GestureSandboxActivity</item>
+    </string-array>
+    <string-array name="home_folder_customization_categories">
+        <item>default</item>
+        <item>tools</item>
+        <item>other</item>
+    </string-array>
+    <string-array name="home_folder_names">
+        <item>@string/folder_hint_text</item>
+        <item>@string/folder_name_tools</item>
+        <item>@string/folder_name_other</item>
+    </string-array>
+</resources>

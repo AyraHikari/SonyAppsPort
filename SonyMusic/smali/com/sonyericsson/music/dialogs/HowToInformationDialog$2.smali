@@ -53,7 +53,7 @@
     :cond_0
     check-cast p1, Landroid/app/Dialog;
 
-    const p2, 0x7f09015d
+    const p2, 0x7f09015e
 
     .line 75
     invoke-virtual {p1, p2}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;

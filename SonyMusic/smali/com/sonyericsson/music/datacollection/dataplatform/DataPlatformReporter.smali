@@ -167,9 +167,9 @@
     :try_start_0
     const-string v0, "com.sonyericsson.music"
 
-    const-string v1, "9.4.10.A.0.11"
+    const-string v1, "9.4.10.A.0.22"
 
-    const v2, 0x129400b
+    const v2, 0x1294016
 
     .line 162
     new-instance v3, Lorg/json/JSONObject;

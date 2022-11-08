@@ -42,15 +42,15 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 1
 
-    .line 114
+    .line 106
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 115
+    .line 107
     iget-object p1, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$1;->this$0:Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->access$200(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;I)V
+    invoke-static {p1, v0}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->access$100(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;I)V
 
     return-void
 .end method
@@ -60,7 +60,7 @@
 
     const/4 v0, 0x0
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_0
 
     .line 94
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -73,7 +73,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
     .line 95
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
@@ -92,35 +92,7 @@
 
     invoke-direct {p1, v1, p2}, Lcom/sonyericsson/music/playlist/PlaylistAsyncDataRenamePlaylist;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 99
-    sget-boolean p2, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
-
-    if-eqz p2, :cond_0
-
-    .line 100
-    iget-object p2, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$1;->this$0:Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;
-
-    invoke-virtual {p2}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p2
-
-    check-cast p2, Lcom/sonyericsson/music/MusicActivity;
-
-    if-eqz p2, :cond_1
-
-    .line 102
-    iget-object v1, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$1;->this$0:Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;
-
-    invoke-static {v1}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->access$000(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;)J
-
-    move-result-wide v1
-
-    invoke-virtual {p2, p1, v1, v2}, Lcom/sonyericsson/music/MusicActivity;->showRequestDialogToModifyPlaylist(Ljava/lang/Object;J)V
-
-    goto :goto_0
-
-    .line 105
-    :cond_0
+    .line 98
     iget-object p2, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$1;->this$0:Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;
 
     new-instance v1, Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
@@ -131,12 +103,12 @@
 
     invoke-direct {v1, v2}, Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;-><init>(Landroid/app/Activity;)V
 
-    invoke-static {p2, v1}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->access$102(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;)Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
+    invoke-static {p2, v1}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->access$002(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;)Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
-    .line 106
+    .line 99
     iget-object p2, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$1;->this$0:Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;
 
-    invoke-static {p2}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->access$100(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;)Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
+    invoke-static {p2}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->access$000(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;)Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
 
     move-result-object p2
 
@@ -148,12 +120,11 @@
 
     invoke-virtual {p2, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 109
-    :cond_1
-    :goto_0
+    .line 101
+    :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$1;->this$0:Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;
 
-    invoke-static {p1, v0}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->access$200(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;I)V
+    invoke-static {p1, v0}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->access$100(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;I)V
 
     return-void
 .end method

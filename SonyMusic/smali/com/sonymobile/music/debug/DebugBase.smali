@@ -312,6 +312,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 162
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -338,6 +339,7 @@
 
     move-result-object v0
 
+    .line 161
     invoke-interface {p0, p1, v0}, Lcom/sonymobile/music/debug/DebugBase$Logger;->line(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 163

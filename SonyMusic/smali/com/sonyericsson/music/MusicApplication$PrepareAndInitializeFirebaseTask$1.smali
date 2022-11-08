@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;Landroid/content/Context;)V
     .locals 0
 
-    .line 516
+    .line 512
     iput-object p1, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask$1;->this$0:Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;
 
     iput-object p2, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask$1;->val$context:Landroid/content/Context;
@@ -39,7 +39,7 @@
 .method public run()V
     .locals 1
 
-    .line 519
+    .line 515
     iget-object v0, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask$1;->val$context:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/sonyericsson/music/metadata/cloud/GoogleDriveUtils;->removeGoogleDriveData(Landroid/content/Context;)V

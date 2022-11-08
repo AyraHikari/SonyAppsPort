@@ -30,10 +30,10 @@
 .method public constructor <init>(Lcom/sonyericsson/music/library/PlaylistFragment;Landroid/content/Context;)V
     .locals 0
 
-    .line 444
+    .line 459
     iput-object p1, p0, Lcom/sonyericsson/music/library/PlaylistFragment$ConcretePlaylistAdapter;->this$0:Lcom/sonyericsson/music/library/PlaylistFragment;
 
-    .line 445
+    .line 460
     iget-object p1, p1, Lcom/sonyericsson/music/library/PlaylistBaseFragment;->mArtDecoder:Lcom/sonyericsson/music/artdecoder/ArtDecoder;
 
     invoke-direct {p0, p2, p1}, Lcom/sonyericsson/music/library/PlaylistAdapter;-><init>(Landroid/content/Context;Lcom/sonyericsson/music/artdecoder/ArtDecoder;)V
@@ -46,7 +46,7 @@
 .method protected getAlbum(Landroid/database/Cursor;)Ljava/lang/String;
     .locals 1
 
-    .line 476
+    .line 491
     iget v0, p0, Lcom/sonyericsson/music/library/PlaylistFragment$ConcretePlaylistAdapter;->mAlbumColumn:I
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -59,7 +59,7 @@
 .method protected getArtist(Landroid/database/Cursor;)Ljava/lang/String;
     .locals 1
 
-    .line 471
+    .line 486
     iget v0, p0, Lcom/sonyericsson/music/library/PlaylistFragment$ConcretePlaylistAdapter;->mArtistColumn:I
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -72,7 +72,7 @@
 .method protected getTitle(Landroid/database/Cursor;)Ljava/lang/String;
     .locals 1
 
-    .line 466
+    .line 481
     iget v0, p0, Lcom/sonyericsson/music/library/PlaylistFragment$ConcretePlaylistAdapter;->mTitleColumn:I
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -85,7 +85,7 @@
 .method protected getTrackId(Landroid/database/Cursor;)Ljava/lang/String;
     .locals 1
 
-    .line 481
+    .line 496
     iget v0, p0, Lcom/sonyericsson/music/library/PlaylistFragment$ConcretePlaylistAdapter;->mId:I
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -102,7 +102,7 @@
 
     const-string v0, "title"
 
-    .line 451
+    .line 466
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v0
@@ -111,7 +111,7 @@
 
     const-string v0, "artist"
 
-    .line 452
+    .line 467
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v0
@@ -120,7 +120,7 @@
 
     const-string v0, "album"
 
-    .line 453
+    .line 468
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v0
@@ -129,7 +129,7 @@
 
     const-string v0, "audio_id"
 
-    .line 454
+    .line 469
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v0
@@ -141,19 +141,19 @@
     :cond_0
     const/4 v0, -0x1
 
-    .line 456
+    .line 471
     iput v0, p0, Lcom/sonyericsson/music/library/PlaylistFragment$ConcretePlaylistAdapter;->mTitleColumn:I
 
-    .line 457
+    .line 472
     iput v0, p0, Lcom/sonyericsson/music/library/PlaylistFragment$ConcretePlaylistAdapter;->mArtistColumn:I
 
-    .line 458
+    .line 473
     iput v0, p0, Lcom/sonyericsson/music/library/PlaylistFragment$ConcretePlaylistAdapter;->mAlbumColumn:I
 
-    .line 459
+    .line 474
     iput v0, p0, Lcom/sonyericsson/music/library/PlaylistFragment$ConcretePlaylistAdapter;->mId:I
 
-    .line 461
+    .line 476
     :goto_0
     invoke-super {p0, p1}, Lcom/sonyericsson/music/library/PlaylistAdapter;->swapCursor(Landroid/database/Cursor;)Landroid/database/Cursor;
 

@@ -75,7 +75,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/store/StoreAdapter$SpinnerViewHolder;->mStoreAdapterRef:Ljava/lang/ref/WeakReference;
 
-    const p2, 0x7f0901e5
+    const p2, 0x7f0901e6
 
     .line 249
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

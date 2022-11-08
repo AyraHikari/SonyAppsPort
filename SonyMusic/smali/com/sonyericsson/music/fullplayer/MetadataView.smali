@@ -647,7 +647,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/MetadataView;->mFavoriteOffDrawable:Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f090213
+    const v0, 0x7f090214
 
     .line 79
     invoke-direct {p0, v0}, Lcom/sonyericsson/music/fullplayer/MetadataView;->findViewByIdOrThrow(I)Landroid/view/View;
@@ -851,6 +851,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 122
     iget-object v1, p0, Lcom/sonyericsson/music/fullplayer/MetadataView;->mFavoriteOnDrawable:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
@@ -858,7 +859,6 @@
     :cond_0
     iget-object v1, p0, Lcom/sonyericsson/music/fullplayer/MetadataView;->mFavoriteOffDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 122
     :goto_0
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 

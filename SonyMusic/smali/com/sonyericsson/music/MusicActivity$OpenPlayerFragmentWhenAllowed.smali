@@ -18,7 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 2467
+    .line 2484
     invoke-direct {p0}, Lcom/sonyericsson/music/common/ToDoWhenFragmentAllowedTask$ToDoWhenFragmentAllowed;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method synthetic constructor <init>(Lcom/sonyericsson/music/MusicActivity$1;)V
     .locals 0
 
-    .line 2467
+    .line 2484
     invoke-direct {p0}, Lcom/sonyericsson/music/MusicActivity$OpenPlayerFragmentWhenAllowed;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 2470
+    .line 2487
     invoke-virtual {p1}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v0
@@ -49,7 +49,7 @@
 
     const/4 v0, 0x1
 
-    .line 2471
+    .line 2488
     invoke-static {p1, v0}, Lcom/sonyericsson/music/common/MusicUtils;->openPlayerFragment(Landroid/app/Activity;Z)V
 
     :cond_0

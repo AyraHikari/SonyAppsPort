@@ -55,7 +55,7 @@
 
     sget-object v1, Lcom/sonyericsson/music/dialogs/SleepTimerDialog$SleepTimerOption;->OFF:Lcom/sonyericsson/music/dialogs/SleepTimerDialog$SleepTimerOption;
 
-    const v2, 0x7f09016d
+    const v2, 0x7f09016e
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -68,7 +68,7 @@
 
     sget-object v1, Lcom/sonyericsson/music/dialogs/SleepTimerDialog$SleepTimerOption;->FIFTEEN_MINUTES:Lcom/sonyericsson/music/dialogs/SleepTimerDialog$SleepTimerOption;
 
-    const v2, 0x7f09016e
+    const v2, 0x7f09016f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -81,7 +81,7 @@
 
     sget-object v1, Lcom/sonyericsson/music/dialogs/SleepTimerDialog$SleepTimerOption;->THIRTY_MINUTES:Lcom/sonyericsson/music/dialogs/SleepTimerDialog$SleepTimerOption;
 
-    const v2, 0x7f09016f
+    const v2, 0x7f090170
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -94,7 +94,7 @@
 
     sget-object v1, Lcom/sonyericsson/music/dialogs/SleepTimerDialog$SleepTimerOption;->ONE_HOUR:Lcom/sonyericsson/music/dialogs/SleepTimerDialog$SleepTimerOption;
 
-    const v2, 0x7f090170
+    const v2, 0x7f090171
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -107,7 +107,7 @@
 
     move-result v0
 
-    const v1, 0x7f090171
+    const v1, 0x7f090172
 
     if-eqz v0, :cond_0
 
@@ -176,7 +176,7 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f09016d
+    const p1, 0x7f09016e
 
     :goto_0
     return p1
@@ -426,7 +426,7 @@
     .line 145
     invoke-virtual {p1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    const v2, 0x7f09020e
+    const v2, 0x7f09020f
 
     .line 147
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -323,7 +323,7 @@
     .line 77
     invoke-virtual {p1, p2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    const p3, 0x7f0901fb
+    const p3, 0x7f0901fc
 
     .line 78
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -334,7 +334,7 @@
 
     iput-object p3, p2, Lcom/sonyericsson/music/library/TracksAdapter$ViewHolder;->text1:Landroid/widget/TextView;
 
-    const p3, 0x7f0901fc
+    const p3, 0x7f0901fd
 
     .line 79
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -1049,7 +1049,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090156
+    const v1, 0x7f090157
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -1141,7 +1141,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090122
+    const v1, 0x7f090123
 
     .line 660
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentManager;->findFragmentById(I)Landroidx/fragment/app/Fragment;
@@ -1779,7 +1779,7 @@
     :goto_2
     iget-object p1, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mSeekBarContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f090220
+    const v0, 0x7f090221
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -1790,7 +1790,7 @@
     .line 900
     iget-object p1, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mSeekBarContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f09021d
+    const v0, 0x7f09021e
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -1830,7 +1830,7 @@
 .method private setupPlayerView(Landroid/view/ViewGroup;)V
     .locals 7
 
-    const v0, 0x7f0901ec
+    const v0, 0x7f0901ed
 
     .line 775
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1872,7 +1872,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mAlbumArtContainer:Landroid/view/View;
 
-    const v0, 0x7f090186
+    const v0, 0x7f090187
 
     .line 779
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1892,7 +1892,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mLoadingProgress:Landroid/widget/ProgressBar;
 
-    const v0, 0x7f09011f
+    const v0, 0x7f090120
 
     .line 781
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1903,7 +1903,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mMetadataView:Lcom/sonyericsson/music/fullplayer/MetadataView;
 
-    const v0, 0x7f0901c1
+    const v0, 0x7f0901c2
 
     .line 782
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1914,7 +1914,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mSeekBar:Landroid/widget/SeekBar;
 
-    const v0, 0x7f090221
+    const v0, 0x7f090222
 
     .line 783
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1925,7 +1925,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mSeekBarContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0901cc
+    const v0, 0x7f0901cd
 
     .line 784
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1936,7 +1936,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mShuffleButton:Lcom/sonyericsson/music/fullplayer/ShuffleButton;
 
-    const v0, 0x7f090194
+    const v0, 0x7f090195
 
     .line 785
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1947,7 +1947,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mPrevButton:Landroid/widget/ImageButton;
 
-    const v0, 0x7f090184
+    const v0, 0x7f090185
 
     .line 786
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1958,7 +1958,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mPlayPauseButton:Lcom/sonyericsson/music/ui/PlayPauseButton;
 
-    const v0, 0x7f09015e
+    const v0, 0x7f09015f
 
     .line 787
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1969,7 +1969,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mNextButton:Landroid/widget/ImageButton;
 
-    const v0, 0x7f0901a4
+    const v0, 0x7f0901a5
 
     .line 788
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -2067,7 +2067,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->setupPlayControl(Landroid/widget/ImageButton;Lcom/sonyericsson/music/ui/PlayControlDrawable;)V
 
-    const v0, 0x7f090222
+    const v0, 0x7f090223
 
     .line 805
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -2868,11 +2868,11 @@
         0x7f09003e -> :sswitch_7
         0x7f09004f -> :sswitch_6
         0x7f090050 -> :sswitch_5
-        0x7f09015e -> :sswitch_4
-        0x7f090184 -> :sswitch_3
-        0x7f090194 -> :sswitch_2
-        0x7f0901a4 -> :sswitch_1
-        0x7f0901cc -> :sswitch_0
+        0x7f09015f -> :sswitch_4
+        0x7f090185 -> :sswitch_3
+        0x7f090195 -> :sswitch_2
+        0x7f0901a5 -> :sswitch_1
+        0x7f0901cd -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -3320,7 +3320,7 @@
     .line 706
     iget-object v0, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mRootView:Landroid/view/ViewGroup;
 
-    const v1, 0x7f090173
+    const v1, 0x7f090174
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -3485,9 +3485,9 @@
         0x7f09010d -> :sswitch_5
         0x7f090110 -> :sswitch_4
         0x7f090113 -> :sswitch_3
-        0x7f090118 -> :sswitch_2
-        0x7f090119 -> :sswitch_1
-        0x7f09011b -> :sswitch_0
+        0x7f090119 -> :sswitch_2
+        0x7f09011a -> :sswitch_1
+        0x7f09011c -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -3515,7 +3515,7 @@
 
     move-result v2
 
-    const v3, 0x7f09011b
+    const v3, 0x7f09011c
 
     .line 394
     iget-boolean v4, p0, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->mVisualizerAvailable:Z
@@ -3547,7 +3547,7 @@
     .line 398
     invoke-direct {p0, p1, v3, v0}, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->safeSetVisible(Landroid/view/Menu;IZ)V
 
-    const v0, 0x7f090118
+    const v0, 0x7f090119
 
     .line 400
     invoke-direct {p0, p1, v0, v2}, Lcom/sonyericsson/music/fullplayer/PlayerFragment;->safeSetVisible(Landroid/view/Menu;IZ)V

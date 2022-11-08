@@ -25,6 +25,8 @@
 
 
 # instance fields
+.field private final SHORTCUT_ID_PLAYLIST_PREFIX:Ljava/lang/String;
+
 .field private final mActivity:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -44,10 +46,15 @@
 .method constructor <init>(Landroid/app/Activity;I)V
     .locals 1
 
-    .line 169
+    .line 171
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 170
+    const-string v0, "music-shortcut-playlist-"
+
+    .line 169
+    iput-object v0, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;->SHORTCUT_ID_PLAYLIST_PREFIX:Ljava/lang/String;
+
+    .line 172
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -56,7 +63,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 171
+    .line 173
     invoke-virtual {p1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
@@ -73,7 +80,7 @@
     :goto_0
     iput-object p1, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;->mPickAction:Ljava/lang/String;
 
-    .line 172
+    .line 174
     iput p2, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;->mInternalId:I
 
     return-void
@@ -82,18 +89,18 @@
 .method private createPickUri(Landroid/content/Context;I)Landroid/content/Intent;
     .locals 7
 
-    .line 204
+    .line 206
     invoke-static {}, Lcom/sonymobile/music/common/ThreadingUtils;->throwIfMainDebug()V
 
     const/4 v0, 0x0
 
-    .line 207
+    .line 209
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 208
+    .line 210
     invoke-static {p2}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists;->getContentUri(I)Landroid/net/Uri;
 
     move-result-object v2
@@ -122,7 +129,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 210
+    .line 212
     :try_start_1
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -132,7 +139,7 @@
 
     const-string p2, "mediastore_id"
 
-    .line 212
+    .line 214
     invoke-interface {p1, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p2
@@ -141,32 +148,32 @@
 
     move-result p2
 
-    .line 213
+    .line 215
     sget-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 214
+    .line 216
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 213
+    .line 215
     invoke-static {v0, p2}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p2
 
-    .line 216
+    .line 218
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 217
+    .line 219
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz p1, :cond_0
 
-    .line 222
+    .line 224
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     :cond_0
@@ -195,306 +202,345 @@
 
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 224
+    .line 226
     :cond_3
     throw p2
 .end method
 
 .method private createShortcutIntent(Landroid/content/Context;I)Landroid/content/Intent;
-    .locals 9
+    .locals 13
 
-    .line 229
+    .line 231
     invoke-static {}, Lcom/sonymobile/music/common/ThreadingUtils;->throwIfMainDebug()V
 
-    .line 232
+    .line 234
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v6
+    move-result-object v8
 
-    const/4 v7, 0x0
+    const/4 v9, 0x0
 
-    .line 234
+    .line 236
     :try_start_0
     invoke-static {p2}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists;->getContentUri(I)Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v3
 
-    const/4 v0, 0x2
+    const/4 v2, 0x2
 
-    new-array v2, v0, [Ljava/lang/String;
-
-    const-string v0, "name"
-
-    const/4 v8, 0x0
-
-    aput-object v0, v2, v8
-
-    const-string v0, "mediastore_id"
-
-    const/4 v3, 0x1
-
-    aput-object v0, v2, v3
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, v6
-
-    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    if-eqz v0, :cond_5
-
-    .line 236
-    :try_start_1
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    const-string v1, "mediastore_id"
-
-    .line 239
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v1
+    new-array v4, v2, [Ljava/lang/String;
 
     const-string v2, "name"
 
-    .line 240
-    invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    const/4 v10, 0x0
+
+    aput-object v2, v4, v10
+
+    const-string v2, "mediastore_id"
+
+    const/4 v5, 0x1
+
+    aput-object v2, v4, v5
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move-object v2, v8
+
+    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v7
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    if-eqz v7, :cond_6
+
+    .line 238
+    :try_start_1
+    invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v2
 
-    invoke-interface {v0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    if-eqz v2, :cond_6
+
+    const-string v2, "mediastore_id"
+
+    .line 241
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v2
+
+    const-string v3, "name"
+
+    .line 242
+    invoke-interface {v7, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-interface {v7, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 244
+    new-instance v12, Landroid/content/Intent;
+
+    const-class v3, Lcom/sonyericsson/music/MusicActivity;
+
+    invoke-direct {v12, p1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v3, "android.intent.action.VIEW"
+
+    .line 245
+    invoke-virtual {v12, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v3, "vnd.android.cursor.dir/playlist"
+
+    .line 246
+    invoke-virtual {v12, v3}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v3, "playlist"
+
+    .line 247
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 242
-    new-instance v3, Landroid/content/Intent;
+    invoke-virtual {v12, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    const-class v4, Lcom/sonyericsson/music/MusicActivity;
+    .line 254
+    :try_start_2
+    invoke-static {v10}, Lcom/sonyericsson/music/common/DBUtils;->getMyPlaylistProjection(Z)[Ljava/lang/String;
 
-    invoke-direct {v3, p1, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result-object v2
 
-    const-string v4, "android.intent.action.VIEW"
+    .line 253
+    invoke-static {v8, v2, p2}, Lcom/sonyericsson/music/common/DBUtils;->getMyPlaylistTracksCursor(Landroid/content/ContentResolver;[Ljava/lang/String;I)Landroid/database/Cursor;
 
-    .line 243
-    invoke-virtual {v3, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    move-result-object v9
 
-    const-string v4, "vnd.android.cursor.dir/playlist"
+    const-string v2, "artist"
 
-    .line 244
-    invoke-virtual {v3, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+    const-string v3, "album"
 
-    const-string v4, "playlist"
+    const-string v4, "album_id"
 
-    .line 245
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    .line 257
+    invoke-static {v9, v2, v3, v4}, Lcom/sonyericsson/music/common/AlbumArtUtils;->getUnique2by2Images(Landroid/database/Cursor;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v3, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    .line 261
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    .line 247
+    move-result v3
+
+    new-array v3, v3, [Landroid/net/Uri;
+
+    .line 263
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/util/Pair;
+
+    add-int/lit8 v5, v10, 0x1
+
+    .line 264
+    iget-object v6, v4, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v6, Ljava/lang/String;
+
+    iget-object v4, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v4, Ljava/lang/String;
+
+    invoke-static {v6, v4}, Lcom/sonyericsson/music/common/AlbumArtUtils;->getAlbumArtUri(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    aput-object v4, v3, v10
+
+    move v10, v5
+
+    goto :goto_0
+
+    .line 266
+    :cond_0
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0700cd
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v2
+
+    float-to-int v2, v2
+
+    .line 267
+    invoke-static {p1, v3, v2}, Lcom/sonyericsson/music/common/AlbumArtUtils;->createPlaylistBitmap(Landroid/content/Context;[Landroid/net/Uri;I)Landroid/graphics/Bitmap;
+
+    move-result-object v4
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    if-eqz v9, :cond_1
+
+    .line 270
+    :try_start_3
+    invoke-interface {v9}, Landroid/database/Cursor;->close()V
+
+    .line 274
+    :cond_1
+    sget-boolean v2, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_Q_API:Z
+
+    if-eqz v2, :cond_2
+
+    .line 275
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "music-shortcut-playlist-"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const v6, 0x7f0801c1
+
+    move-object v1, p1
+
+    move-object v2, v11
+
+    move-object v5, v12
+
+    .line 276
+    invoke-static/range {v1 .. v6}, Lcom/sonyericsson/music/picker/PlaylistPickerFragment;->access$000(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/content/Intent;I)Landroid/content/Intent;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    .line 280
+    :cond_2
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    const-string v4, "android.intent.extra.shortcut.INTENT"
+    if-eqz v4, :cond_3
 
-    .line 248
-    invoke-virtual {v1, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    const-string v0, "android.intent.extra.shortcut.ICON"
 
-    const-string v3, "android.intent.extra.shortcut.NAME"
-
-    .line 249
-    invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 256
-    :try_start_2
-    invoke-static {v8}, Lcom/sonyericsson/music/common/DBUtils;->getMyPlaylistProjection(Z)[Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 255
-    invoke-static {v6, v2, p2}, Lcom/sonyericsson/music/common/DBUtils;->getMyPlaylistTracksCursor(Landroid/content/ContentResolver;[Ljava/lang/String;I)Landroid/database/Cursor;
-
-    move-result-object v7
-
-    const-string p2, "artist"
-
-    const-string v2, "album"
-
-    const-string v3, "album_id"
-
-    .line 259
-    invoke-static {v7, p2, v2, v3}, Lcom/sonyericsson/music/common/AlbumArtUtils;->getUnique2by2Images(Landroid/database/Cursor;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object p2
-
-    .line 263
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    new-array v2, v2, [Landroid/net/Uri;
-
-    .line 265
-    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/util/Pair;
-
-    add-int/lit8 v4, v8, 0x1
-
-    .line 266
-    iget-object v5, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v5, Ljava/lang/String;
-
-    iget-object v3, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-static {v5, v3}, Lcom/sonyericsson/music/common/AlbumArtUtils;->getAlbumArtUri(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v3
-
-    aput-object v3, v2, v8
-
-    move v8, v4
-
-    goto :goto_0
-
-    .line 268
-    :cond_0
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    const v3, 0x7f0700cd
-
-    invoke-virtual {p2, v3}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result p2
-
-    float-to-int p2, p2
-
-    .line 269
-    invoke-static {p1, v2, p2}, Lcom/sonyericsson/music/common/AlbumArtUtils;->createPlaylistBitmap(Landroid/content/Context;[Landroid/net/Uri;I)Landroid/graphics/Bitmap;
-
-    move-result-object p2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    if-eqz v7, :cond_1
-
-    .line 272
-    :try_start_3
-    invoke-interface {v7}, Landroid/database/Cursor;->close()V
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    const-string p1, "android.intent.extra.shortcut.ICON"
-
-    .line 276
-    invoke-virtual {v1, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    .line 282
+    invoke-virtual {v1, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     goto :goto_1
 
-    :cond_2
-    const-string p2, "android.intent.extra.shortcut.ICON_RESOURCE"
+    :cond_3
+    const-string v2, "android.intent.extra.shortcut.ICON_RESOURCE"
 
-    const v2, 0x7f0801c1
+    const v3, 0x7f0801c1
 
-    .line 279
-    invoke-static {p1, v2}, Landroid/content/Intent$ShortcutIconResource;->fromContext(Landroid/content/Context;I)Landroid/content/Intent$ShortcutIconResource;
+    .line 285
+    invoke-static {p1, v3}, Landroid/content/Intent$ShortcutIconResource;->fromContext(Landroid/content/Context;I)Landroid/content/Intent$ShortcutIconResource;
 
-    move-result-object p1
+    move-result-object v0
 
-    .line 278
-    invoke-virtual {v1, p2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    .line 284
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    :goto_1
+    move-object v0, v1
+
+    :goto_2
+    const-string v1, "android.intent.extra.shortcut.INTENT"
+
+    .line 289
+    invoke-virtual {v0, v1, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string v1, "android.intent.extra.shortcut.NAME"
+
+    .line 290
+    invoke-virtual {v0, v1, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    :goto_1
-    if-eqz v0, :cond_3
-
-    .line 287
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    :cond_3
-    return-object v1
-
-    :catchall_0
-    move-exception p1
-
     if-eqz v7, :cond_4
 
-    .line 272
-    :try_start_4
+    .line 296
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 274
     :cond_4
-    throw p1
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    if-eqz v9, :cond_5
+
+    .line 270
+    :try_start_4
+    invoke-interface {v9}, Landroid/database/Cursor;->close()V
+
+    .line 272
+    :cond_5
+    throw v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     :catchall_1
-    move-exception p1
+    move-exception v0
 
-    goto :goto_2
-
-    :cond_5
-    if-eqz v0, :cond_6
-
-    .line 287
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+    goto :goto_3
 
     :cond_6
-    return-object v7
+    if-eqz v7, :cond_7
+
+    .line 296
+    invoke-interface {v7}, Landroid/database/Cursor;->close()V
+
+    :cond_7
+    return-object v9
 
     :catchall_2
-    move-exception p1
+    move-exception v0
 
-    move-object v0, v7
+    move-object v7, v9
 
-    :goto_2
-    if-eqz v0, :cond_7
+    :goto_3
+    if-eqz v7, :cond_8
 
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+    invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 289
-    :cond_7
-    throw p1
+    .line 298
+    :cond_8
+    throw v0
 
     return-void
 .end method
@@ -504,7 +550,7 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Landroid/content/Intent;
     .locals 2
 
-    .line 177
+    .line 179
     iget-object p1, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -515,21 +561,21 @@
 
     if-eqz p1, :cond_1
 
-    .line 178
+    .line 180
     iget-object v0, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;->mPickAction:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
     const-string v1, "android.intent.action.CREATE_SHORTCUT"
 
-    .line 179
+    .line 181
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 180
+    .line 182
     iget v0, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;->mInternalId:I
 
     invoke-direct {p0, p1, v0}, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;->createShortcutIntent(Landroid/content/Context;I)Landroid/content/Intent;
@@ -538,7 +584,7 @@
 
     return-object p1
 
-    .line 182
+    .line 184
     :cond_0
     iget v0, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;->mInternalId:I
 
@@ -557,7 +603,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 163
+    .line 164
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;->doInBackground([Ljava/lang/Void;)Landroid/content/Intent;
@@ -570,7 +616,7 @@
 .method protected onPostExecute(Landroid/content/Intent;)V
     .locals 2
 
-    .line 190
+    .line 192
     iget-object v0, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -590,11 +636,11 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 198
+    .line 200
     :goto_0
     invoke-virtual {v0, v1, p1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
-    .line 199
+    .line 201
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     :cond_1
@@ -604,7 +650,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 163
+    .line 164
     check-cast p1, Landroid/content/Intent;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;->onPostExecute(Landroid/content/Intent;)V

@@ -207,7 +207,7 @@
 
     const v4, 0x7f0c0039
 
-    const v5, 0x7f0901fa
+    const v5, 0x7f0901fb
 
     invoke-direct {v2, v3, v4, v5, p1}, Lcom/sonyericsson/music/metadata/ImageUpdateContextMenu$ContextListAdapter;-><init>(Landroid/content/Context;IILjava/util/ArrayList;)V
 

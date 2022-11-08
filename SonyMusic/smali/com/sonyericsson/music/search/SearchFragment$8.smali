@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/search/SearchFragment;Lcom/sonyericsson/music/library/AlbumFragment;)V
     .locals 0
 
-    .line 857
+    .line 861
     iput-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment$8;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
 
     iput-object p2, p0, Lcom/sonyericsson/music/search/SearchFragment$8;->val$fragment:Lcom/sonyericsson/music/library/AlbumFragment;
@@ -42,7 +42,7 @@
 .method public onAvailable()V
     .locals 3
 
-    .line 860
+    .line 864
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment$8;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
 
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment$8;->val$fragment:Lcom/sonyericsson/music/library/AlbumFragment;
@@ -57,7 +57,7 @@
 .method public onError()V
     .locals 1
 
-    .line 865
+    .line 869
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment$8;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
 
     invoke-static {v0}, Lcom/sonyericsson/music/search/SearchFragment;->access$1300(Lcom/sonyericsson/music/search/SearchFragment;)V

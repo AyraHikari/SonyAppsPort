@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 504
+    .line 507
     invoke-static {}, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;->values()[Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
 
     move-result-object v0

@@ -130,7 +130,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 161
+    .line 183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -139,7 +139,7 @@
 .method public static getAlbumColumn(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Ljava/lang/String;
     .locals 0
 
-    .line 226
+    .line 248
     invoke-static {p0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils;->isPlaylist(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Z
 
     move-result p0
@@ -160,7 +160,7 @@
 .method public static getAlbumIdColumn(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Ljava/lang/String;
     .locals 0
 
-    .line 236
+    .line 258
     invoke-static {p0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils;->isPlaylist(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Z
 
     move-result p0
@@ -181,7 +181,7 @@
 .method public static getArtistColumn(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Ljava/lang/String;
     .locals 0
 
-    .line 246
+    .line 268
     invoke-static {p0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils;->isPlaylist(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Z
 
     move-result p0
@@ -202,7 +202,7 @@
 .method public static getArtistIdColumn(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Ljava/lang/String;
     .locals 0
 
-    .line 256
+    .line 278
     invoke-static {p0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils;->isPlaylist(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Z
 
     move-result p0
@@ -223,7 +223,7 @@
 .method public static getDurationColumn(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Ljava/lang/String;
     .locals 0
 
-    .line 266
+    .line 288
     invoke-static {p0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils;->isPlaylist(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Z
 
     move-result p0
@@ -244,12 +244,12 @@
 .method public static getSmartPlaylistProperties(Landroid/content/Context;Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;
     .locals 3
 
-    .line 167
+    .line 189
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    .line 169
+    .line 191
     sget-object v0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$1;->$SwitchMap$com$sonyericsson$music$common$SmartPlaylistUtils$SmartPlaylistType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -264,7 +264,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 193
+    .line 215
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -285,7 +285,7 @@
 
     throw p0
 
-    .line 188
+    .line 210
     :pswitch_0
     invoke-static {p0}, Lcom/sonyericsson/music/common/DBUtils;->getFavouritesProperties(Landroid/content/ContentResolver;)Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;
 
@@ -293,7 +293,7 @@
 
     goto :goto_0
 
-    .line 183
+    .line 205
     :pswitch_1
     invoke-static {v2, v1}, Lcom/sonyericsson/music/common/DBUtils;->getNewlyAddedDescProperty([Ljava/lang/String;I)Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;
 
@@ -301,7 +301,7 @@
 
     goto :goto_0
 
-    .line 177
+    .line 199
     :pswitch_2
     sget-object p1, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;->MOST_PLAYED:Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;
 
@@ -311,7 +311,7 @@
 
     goto :goto_0
 
-    .line 171
+    .line 193
     :pswitch_3
     sget-object p1, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;->RECENTLY_PLAYED:Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;
 
@@ -334,7 +334,7 @@
 .method public static getTitleColumn(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Ljava/lang/String;
     .locals 0
 
-    .line 216
+    .line 238
     invoke-static {p0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils;->isPlaylist(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Z
 
     move-result p0
@@ -355,7 +355,7 @@
 .method public static getTrackIdColumn(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Ljava/lang/String;
     .locals 0
 
-    .line 206
+    .line 228
     invoke-static {p0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils;->isPlaylist(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Z
 
     move-result p0
@@ -376,7 +376,7 @@
 .method private static isPlaylist(Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;)Z
     .locals 1
 
-    .line 200
+    .line 222
     sget-object v0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;->MOST_PLAYED:Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;
 
     if-eq p0, v0, :cond_1

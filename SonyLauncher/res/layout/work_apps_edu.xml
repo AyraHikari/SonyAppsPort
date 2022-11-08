@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.launcher3.allapps.WorkEduCard android:gravity="center" android:paddingTop="@dimen/work_edu_card_margin" android:paddingBottom="@dimen/work_edu_card_bottom_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/wrapper" android:background="@drawable/work_card" android:paddingTop="@dimen/work_card_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/work_card_margin" android:paddingEnd="@dimen/work_card_margin">
+        <TextView android:textSize="18.0sp" android:textColor="?android:textColorPrimary" android:id="@id/work_apps_paused_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/work_card_margin" android:text="@string/work_profile_edu_work_apps" android:textDirection="locale" android:layout_marginEnd="@dimen/work_card_margin" style="@style/PrimaryHeadline" />
+        <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/padded_rounded_button_height">
+            <FrameLayout android:background="@drawable/rounded_action_button" android:padding="@dimen/rounded_button_padding" android:layout_width="@dimen/rounded_button_width" android:layout_height="@dimen/rounded_button_width" android:layout_alignParentEnd="true">
+                <ImageButton android:layout_gravity="center" android:id="@id/action_btn" android:padding="@dimen/x_icon_padding" android:layout_width="@dimen/x_icon_size" android:layout_height="@dimen/x_icon_size" android:src="@drawable/ic_remove_no_shadow" android:contentDescription="@string/accessibility_close" />
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</com.android.launcher3.allapps.WorkEduCard>

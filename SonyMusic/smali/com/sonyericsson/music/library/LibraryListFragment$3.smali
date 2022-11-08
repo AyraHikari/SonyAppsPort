@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/library/LibraryListFragment;Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 601
+    .line 613
     iput-object p1, p0, Lcom/sonyericsson/music/library/LibraryListFragment$3;->this$0:Lcom/sonyericsson/music/library/LibraryListFragment;
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/LibraryListFragment$3;->val$musicActivity:Lcom/sonyericsson/music/MusicActivity;
@@ -42,12 +42,12 @@
 .method public run()V
     .locals 2
 
-    .line 604
+    .line 616
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment$3;->val$musicActivity:Lcom/sonyericsson/music/MusicActivity;
 
     if-eqz v0, :cond_0
 
-    .line 605
+    .line 617
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->getMusicFragmentManager()Lcom/sonyericsson/music/MusicFragmentManager;
 
     move-result-object v0

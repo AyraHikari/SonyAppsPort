@@ -587,7 +587,7 @@
 
     const-wide v1, 0x3fb999999999999aL    # 0.1
 
-    .line 245
+    .line 246
     invoke-static {p0, p1}, Ljava/lang/Double;->isNaN(D)Z
 
     mul-double p0, p0, v1

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicApplication;Landroid/net/Uri;)V
     .locals 0
 
-    .line 245
+    .line 241
     iput-object p1, p0, Lcom/sonyericsson/music/MusicApplication$3;->this$0:Lcom/sonyericsson/music/MusicApplication;
 
     iput-object p2, p0, Lcom/sonyericsson/music/MusicApplication$3;->val$syncedUri:Landroid/net/Uri;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 248
+    .line 244
     iget-object v0, p0, Lcom/sonyericsson/music/MusicApplication$3;->this$0:Lcom/sonyericsson/music/MusicApplication;
 
     invoke-static {v0}, Lcom/sonyericsson/music/MusicApplication;->access$200(Lcom/sonyericsson/music/MusicApplication;)Lcom/sonyericsson/music/datacollection/googleanalytics/GoogleAnalyticsReporting;
@@ -53,7 +53,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/datacollection/googleanalytics/GoogleAnalyticsReporting;->sendSyncDependentAnalytics(Landroid/net/Uri;)V
 
-    .line 249
+    .line 245
     iget-object v0, p0, Lcom/sonyericsson/music/MusicApplication$3;->this$0:Lcom/sonyericsson/music/MusicApplication;
 
     invoke-static {v0}, Lcom/sonyericsson/music/MusicApplication;->access$300(Lcom/sonyericsson/music/MusicApplication;)Lcom/sonyericsson/music/datacollection/firebase/FirebaseAnalyticsReporting;

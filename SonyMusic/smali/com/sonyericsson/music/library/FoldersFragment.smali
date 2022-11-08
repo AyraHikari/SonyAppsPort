@@ -214,7 +214,7 @@
     .line 299
     iget-object v0, p0, Lcom/sonyericsson/music/library/FoldersFragment;->mNoContentHeaderView:Landroid/view/View;
 
-    const v1, 0x7f0901fa
+    const v1, 0x7f0901fb
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -346,6 +346,7 @@
 
     new-instance v4, Lcom/sonyericsson/music/library/BaseFragment$MatcherData;
 
+    .line 229
     sget-boolean v5, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
 
     if-eqz v5, :cond_1

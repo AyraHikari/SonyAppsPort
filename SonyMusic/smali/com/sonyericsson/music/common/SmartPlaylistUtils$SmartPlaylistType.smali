@@ -424,6 +424,160 @@
     return-object v0
 .end method
 
+.method public getMediaBaseID()I
+    .locals 8
+
+    .line 160
+    sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    .line 162
+    :cond_0
+    iget-object v0, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;->mId:Ljava/lang/String;
+
+    const/4 v2, -0x1
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    const v4, -0x6a6895a9
+
+    const/4 v5, 0x3
+
+    const/4 v6, 0x2
+
+    const/4 v7, 0x1
+
+    if-eq v3, v4, :cond_4
+
+    const v4, -0x3d7ec292
+
+    if-eq v3, v4, :cond_3
+
+    const v1, 0x1e7f51ca
+
+    if-eq v3, v1, :cond_2
+
+    const v1, 0x64acf30f
+
+    if-eq v3, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "most_played"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/4 v1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    const-string v1, "recently_played"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/4 v1, 0x2
+
+    goto :goto_1
+
+    :cond_3
+    const-string v3, "newly_added"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    goto :goto_1
+
+    :cond_4
+    const-string v1, "favorites"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/4 v1, 0x3
+
+    goto :goto_1
+
+    :cond_5
+    :goto_0
+    const/4 v1, -0x1
+
+    :goto_1
+    packed-switch v1, :pswitch_data_0
+
+    .line 176
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Unexpected value: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;->mId:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    const/4 v5, 0x4
+
+    goto :goto_2
+
+    :pswitch_1
+    const/4 v5, 0x2
+
+    goto :goto_2
+
+    :pswitch_2
+    const/4 v5, 0x1
+
+    :goto_2
+    :pswitch_3
+    return v5
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_3
+        :pswitch_0
+    .end packed-switch
+.end method
+
 .method public getMediaPlaybackConstant()I
     .locals 1
 

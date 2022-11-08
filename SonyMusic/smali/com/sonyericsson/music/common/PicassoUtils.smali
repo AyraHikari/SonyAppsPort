@@ -11,7 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 24
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 
     const/4 v0, -0x1
 
-    .line 139
+    .line 144
     invoke-static {p0, p1, v0, p2}, Lcom/sonyericsson/music/common/PicassoUtils;->getBitmap(Landroid/content/Context;Ljava/io/File;II)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -43,12 +43,12 @@
         }
     .end annotation
 
-    .line 144
+    .line 149
     invoke-static {p0, p1, p2}, Lcom/sonyericsson/music/common/PicassoUtils;->getRequestCreatorForFile(Landroid/content/Context;Ljava/io/File;I)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p0
 
-    .line 145
+    .line 150
     invoke-virtual {p0, p3, p3}, Lcom/squareup/picasso/RequestCreator;->resize(II)Lcom/squareup/picasso/RequestCreator;
 
     invoke-virtual {p0}, Lcom/squareup/picasso/RequestCreator;->onlyScaleDown()Lcom/squareup/picasso/RequestCreator;
@@ -72,7 +72,7 @@
 
     const/4 v0, -0x1
 
-    .line 151
+    .line 156
     invoke-static {p0, p1, v0, p2}, Lcom/sonyericsson/music/common/PicassoUtils;->getBitmap(Landroid/content/Context;Ljava/lang/String;II)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -88,12 +88,12 @@
         }
     .end annotation
 
-    .line 156
+    .line 161
     invoke-static {p0, p1, p2}, Lcom/sonyericsson/music/common/PicassoUtils;->getRequestCreatorForPath(Landroid/content/Context;Ljava/lang/String;I)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p0
 
-    .line 157
+    .line 162
     invoke-virtual {p0, p3, p3}, Lcom/squareup/picasso/RequestCreator;->resize(II)Lcom/squareup/picasso/RequestCreator;
 
     invoke-virtual {p0}, Lcom/squareup/picasso/RequestCreator;->onlyScaleDown()Lcom/squareup/picasso/RequestCreator;
@@ -112,7 +112,7 @@
 
     const/4 v0, -0x1
 
-    .line 29
+    .line 30
     invoke-static {p0, p1, v0}, Lcom/sonyericsson/music/common/PicassoUtils;->getRequestCreatorForFile(Landroid/content/Context;Ljava/io/File;I)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p0
@@ -123,17 +123,17 @@
 .method public static getRequestCreatorForFile(Landroid/content/Context;Ljava/io/File;I)Lcom/squareup/picasso/RequestCreator;
     .locals 1
 
-    .line 34
+    .line 35
     invoke-static {p0}, Lcom/squareup/picasso/Picasso;->with(Landroid/content/Context;)Lcom/squareup/picasso/Picasso;
 
     move-result-object v0
 
-    .line 38
+    .line 39
     invoke-virtual {v0, p1}, Lcom/squareup/picasso/Picasso;->load(Ljava/io/File;)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p1
 
-    .line 39
+    .line 40
     invoke-static {p0, p1, p2}, Lcom/sonyericsson/music/common/PicassoUtils;->setNetworkPolicies(Landroid/content/Context;Lcom/squareup/picasso/RequestCreator;I)V
 
     return-object p1
@@ -144,7 +144,7 @@
 
     const/4 v0, -0x1
 
-    .line 44
+    .line 45
     invoke-static {p0, p1, v0}, Lcom/sonyericsson/music/common/PicassoUtils;->getRequestCreatorForPath(Landroid/content/Context;Ljava/lang/String;I)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p0
@@ -155,17 +155,17 @@
 .method public static getRequestCreatorForPath(Landroid/content/Context;Ljava/lang/String;I)Lcom/squareup/picasso/RequestCreator;
     .locals 1
 
-    .line 49
+    .line 50
     invoke-static {p0}, Lcom/squareup/picasso/Picasso;->with(Landroid/content/Context;)Lcom/squareup/picasso/Picasso;
 
     move-result-object v0
 
-    .line 53
+    .line 54
     invoke-virtual {v0, p1}, Lcom/squareup/picasso/Picasso;->load(Ljava/lang/String;)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p1
 
-    .line 54
+    .line 55
     invoke-static {p0, p1, p2}, Lcom/sonyericsson/music/common/PicassoUtils;->setNetworkPolicies(Landroid/content/Context;Lcom/squareup/picasso/RequestCreator;I)V
 
     return-object p1
@@ -176,7 +176,7 @@
 
     const/4 v0, -0x1
 
-    .line 59
+    .line 60
     invoke-static {p0, p1, v0}, Lcom/sonyericsson/music/common/PicassoUtils;->getRequestCreatorForUri(Landroid/content/Context;Landroid/net/Uri;I)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p0
@@ -187,17 +187,17 @@
 .method public static getRequestCreatorForUri(Landroid/content/Context;Landroid/net/Uri;I)Lcom/squareup/picasso/RequestCreator;
     .locals 1
 
-    .line 64
+    .line 65
     invoke-static {p0}, Lcom/squareup/picasso/Picasso;->with(Landroid/content/Context;)Lcom/squareup/picasso/Picasso;
 
     move-result-object v0
 
-    .line 68
+    .line 69
     invoke-virtual {v0, p1}, Lcom/squareup/picasso/Picasso;->load(Landroid/net/Uri;)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p1
 
-    .line 69
+    .line 70
     invoke-static {p0, p1, p2}, Lcom/sonyericsson/music/common/PicassoUtils;->setNetworkPolicies(Landroid/content/Context;Lcom/squareup/picasso/RequestCreator;I)V
 
     return-object p1
@@ -206,7 +206,7 @@
 .method public static invalidate(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 0
 
-    .line 74
+    .line 75
     invoke-static {p0}, Lcom/squareup/picasso/Picasso;->with(Landroid/content/Context;)Lcom/squareup/picasso/Picasso;
 
     move-result-object p0
@@ -217,32 +217,46 @@
 .end method
 
 .method public static loadBitmapNoStore(Landroid/content/Context;Ljava/io/File;Landroid/widget/ImageView;ILcom/squareup/picasso/Callback;)V
-    .locals 0
+    .locals 1
 
-    .line 128
+    .line 131
     invoke-static {p0, p1, p3}, Lcom/sonyericsson/music/common/PicassoUtils;->getRequestCreatorForFile(Landroid/content/Context;Ljava/io/File;I)Lcom/squareup/picasso/RequestCreator;
 
-    move-result-object p0
+    move-result-object p1
 
-    .line 129
-    sget-object p1, Lcom/squareup/picasso/MemoryPolicy;->NO_STORE:Lcom/squareup/picasso/MemoryPolicy;
+    .line 132
+    sget-object p3, Lcom/squareup/picasso/MemoryPolicy;->NO_STORE:Lcom/squareup/picasso/MemoryPolicy;
 
-    const/4 p3, 0x0
+    const/4 v0, 0x0
 
-    new-array p3, p3, [Lcom/squareup/picasso/MemoryPolicy;
+    new-array v0, v0, [Lcom/squareup/picasso/MemoryPolicy;
 
-    invoke-virtual {p0, p1, p3}, Lcom/squareup/picasso/RequestCreator;->memoryPolicy(Lcom/squareup/picasso/MemoryPolicy;[Lcom/squareup/picasso/MemoryPolicy;)Lcom/squareup/picasso/RequestCreator;
+    invoke-virtual {p1, p3, v0}, Lcom/squareup/picasso/RequestCreator;->memoryPolicy(Lcom/squareup/picasso/MemoryPolicy;[Lcom/squareup/picasso/MemoryPolicy;)Lcom/squareup/picasso/RequestCreator;
+
+    .line 133
+    invoke-static {p0}, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils;->getImageResizeWidth(Landroid/content/Context;)F
+
+    move-result p0
+
+    float-to-int p0, p0
+
+    .line 134
+    invoke-virtual {p1, p0, p0}, Lcom/squareup/picasso/RequestCreator;->resize(II)Lcom/squareup/picasso/RequestCreator;
+
+    invoke-virtual {p1}, Lcom/squareup/picasso/RequestCreator;->onlyScaleDown()Lcom/squareup/picasso/RequestCreator;
+
+    invoke-virtual {p1}, Lcom/squareup/picasso/RequestCreator;->centerInside()Lcom/squareup/picasso/RequestCreator;
 
     if-eqz p4, :cond_0
 
-    .line 131
-    invoke-virtual {p0, p2, p4}, Lcom/squareup/picasso/RequestCreator;->into(Landroid/widget/ImageView;Lcom/squareup/picasso/Callback;)V
+    .line 136
+    invoke-virtual {p1, p2, p4}, Lcom/squareup/picasso/RequestCreator;->into(Landroid/widget/ImageView;Lcom/squareup/picasso/Callback;)V
 
     goto :goto_0
 
-    .line 133
+    .line 138
     :cond_0
-    invoke-virtual {p0, p2}, Lcom/squareup/picasso/RequestCreator;->into(Landroid/widget/ImageView;)V
+    invoke-virtual {p1, p2}, Lcom/squareup/picasso/RequestCreator;->into(Landroid/widget/ImageView;)V
 
     :goto_0
     return-void
@@ -253,7 +267,7 @@
 
     const/4 v0, -0x1
 
-    .line 123
+    .line 126
     invoke-static {p0, p1, p2, v0, p3}, Lcom/sonyericsson/music/common/PicassoUtils;->loadBitmapNoStore(Landroid/content/Context;Ljava/io/File;Landroid/widget/ImageView;ILcom/squareup/picasso/Callback;)V
 
     return-void
@@ -264,31 +278,45 @@
 
     const/4 v0, -0x1
 
-    .line 111
+    .line 112
     invoke-static {p0, p1, p2, v0}, Lcom/sonyericsson/music/common/PicassoUtils;->loadBitmapNoStore(Landroid/content/Context;Ljava/io/File;Lcom/squareup/picasso/Target;I)V
 
     return-void
 .end method
 
 .method public static loadBitmapNoStore(Landroid/content/Context;Ljava/io/File;Lcom/squareup/picasso/Target;I)V
-    .locals 0
-
-    .line 116
-    invoke-static {p0, p1, p3}, Lcom/sonyericsson/music/common/PicassoUtils;->getRequestCreatorForFile(Landroid/content/Context;Ljava/io/File;I)Lcom/squareup/picasso/RequestCreator;
-
-    move-result-object p0
+    .locals 1
 
     .line 117
-    sget-object p1, Lcom/squareup/picasso/MemoryPolicy;->NO_STORE:Lcom/squareup/picasso/MemoryPolicy;
+    invoke-static {p0, p1, p3}, Lcom/sonyericsson/music/common/PicassoUtils;->getRequestCreatorForFile(Landroid/content/Context;Ljava/io/File;I)Lcom/squareup/picasso/RequestCreator;
 
-    const/4 p3, 0x0
-
-    new-array p3, p3, [Lcom/squareup/picasso/MemoryPolicy;
-
-    invoke-virtual {p0, p1, p3}, Lcom/squareup/picasso/RequestCreator;->memoryPolicy(Lcom/squareup/picasso/MemoryPolicy;[Lcom/squareup/picasso/MemoryPolicy;)Lcom/squareup/picasso/RequestCreator;
+    move-result-object p1
 
     .line 118
-    invoke-virtual {p0, p2}, Lcom/squareup/picasso/RequestCreator;->into(Lcom/squareup/picasso/Target;)V
+    sget-object p3, Lcom/squareup/picasso/MemoryPolicy;->NO_STORE:Lcom/squareup/picasso/MemoryPolicy;
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Lcom/squareup/picasso/MemoryPolicy;
+
+    invoke-virtual {p1, p3, v0}, Lcom/squareup/picasso/RequestCreator;->memoryPolicy(Lcom/squareup/picasso/MemoryPolicy;[Lcom/squareup/picasso/MemoryPolicy;)Lcom/squareup/picasso/RequestCreator;
+
+    .line 119
+    invoke-static {p0}, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils;->getImageResizeWidth(Landroid/content/Context;)F
+
+    move-result p0
+
+    float-to-int p0, p0
+
+    .line 120
+    invoke-virtual {p1, p0, p0}, Lcom/squareup/picasso/RequestCreator;->resize(II)Lcom/squareup/picasso/RequestCreator;
+
+    invoke-virtual {p1}, Lcom/squareup/picasso/RequestCreator;->onlyScaleDown()Lcom/squareup/picasso/RequestCreator;
+
+    invoke-virtual {p1}, Lcom/squareup/picasso/RequestCreator;->centerInside()Lcom/squareup/picasso/RequestCreator;
+
+    .line 121
+    invoke-virtual {p1, p2}, Lcom/squareup/picasso/RequestCreator;->into(Lcom/squareup/picasso/Target;)V
 
     return-void
 .end method
@@ -296,12 +324,12 @@
 .method public static loadBitmapNoStore(Landroid/content/Context;Ljava/lang/String;Landroid/widget/ImageView;ILcom/squareup/picasso/Callback;)V
     .locals 0
 
-    .line 101
+    .line 102
     invoke-static {p0, p1, p3}, Lcom/sonyericsson/music/common/PicassoUtils;->getRequestCreatorForPath(Landroid/content/Context;Ljava/lang/String;I)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p0
 
-    .line 102
+    .line 103
     sget-object p1, Lcom/squareup/picasso/MemoryPolicy;->NO_STORE:Lcom/squareup/picasso/MemoryPolicy;
 
     const/4 p3, 0x0
@@ -312,12 +340,12 @@
 
     if-eqz p4, :cond_0
 
-    .line 104
+    .line 105
     invoke-virtual {p0, p2, p4}, Lcom/squareup/picasso/RequestCreator;->into(Landroid/widget/ImageView;Lcom/squareup/picasso/Callback;)V
 
     goto :goto_0
 
-    .line 106
+    .line 107
     :cond_0
     invoke-virtual {p0, p2}, Lcom/squareup/picasso/RequestCreator;->into(Landroid/widget/ImageView;)V
 
@@ -330,7 +358,7 @@
 
     const/4 v0, -0x1
 
-    .line 96
+    .line 97
     invoke-static {p0, p1, p2, v0, p3}, Lcom/sonyericsson/music/common/PicassoUtils;->loadBitmapNoStore(Landroid/content/Context;Ljava/lang/String;Landroid/widget/ImageView;ILcom/squareup/picasso/Callback;)V
 
     return-void
@@ -341,7 +369,7 @@
 
     const/4 v0, -0x1
 
-    .line 84
+    .line 85
     invoke-static {p0, p1, p2, v0}, Lcom/sonyericsson/music/common/PicassoUtils;->loadBitmapNoStore(Landroid/content/Context;Ljava/lang/String;Lcom/squareup/picasso/Target;I)V
 
     return-void
@@ -350,12 +378,12 @@
 .method public static loadBitmapNoStore(Landroid/content/Context;Ljava/lang/String;Lcom/squareup/picasso/Target;I)V
     .locals 0
 
-    .line 89
+    .line 90
     invoke-static {p0, p1, p3}, Lcom/sonyericsson/music/common/PicassoUtils;->getRequestCreatorForPath(Landroid/content/Context;Ljava/lang/String;I)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p0
 
-    .line 90
+    .line 91
     sget-object p1, Lcom/squareup/picasso/MemoryPolicy;->NO_STORE:Lcom/squareup/picasso/MemoryPolicy;
 
     const/4 p3, 0x0
@@ -364,7 +392,7 @@
 
     invoke-virtual {p0, p1, p3}, Lcom/squareup/picasso/RequestCreator;->memoryPolicy(Lcom/squareup/picasso/MemoryPolicy;[Lcom/squareup/picasso/MemoryPolicy;)Lcom/squareup/picasso/RequestCreator;
 
-    .line 91
+    .line 92
     invoke-virtual {p0, p2}, Lcom/squareup/picasso/RequestCreator;->into(Lcom/squareup/picasso/Target;)V
 
     return-void
@@ -375,14 +403,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 78
+    .line 79
     invoke-static {p0, p2}, Lcom/sonyericsson/music/common/DataSaverUtil;->isAllowedToSendData(Landroid/content/Context;I)Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    .line 79
+    .line 80
     sget-object p0, Lcom/squareup/picasso/NetworkPolicy;->OFFLINE:Lcom/squareup/picasso/NetworkPolicy;
 
     const/4 p2, 0x0

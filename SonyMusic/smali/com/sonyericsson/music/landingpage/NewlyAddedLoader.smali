@@ -732,7 +732,7 @@
     :goto_2
     if-nez v0, :cond_7
 
-    .line 193
+    .line 194
     new-instance v0, Landroid/database/MatrixCursor;
 
     sget-object v1, Lcom/sonyericsson/music/landingpage/NewlyAddedLoader;->LOCAL_PLAYLISTS_PROJECTION:[Ljava/lang/String;
@@ -744,7 +744,7 @@
 
     if-nez v9, :cond_8
 
-    .line 195
+    .line 196
     new-instance v9, Landroid/database/MatrixCursor;
 
     invoke-direct {v9, v11, v12}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;I)V

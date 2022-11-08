@@ -2,6 +2,7 @@
 <menu
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:enabled="true" android:id="@id/action_mediaroute" android:visible="false" android:title="@string/media_route_menu_title" app:actionProviderClass="com.sonyericsson.music.ui.TintedMediaRouteActionProvider" app:showAsAction="always" />
-    <item android:icon="@drawable/ic_search" android:id="@id/menu_option_search" android:title="@string/menu_search" app:actionViewClass="com.sonyericsson.music.search.MusicSearchView" app:showAsAction="collapseActionView|ifRoom" />
+    <item android:icon="@drawable/ic_search" android:id="@id/menu_option_search" android:title="@string/menu_search" app:showAsAction="collapseActionView|ifRoom" />
+    <item android:id="@id/menu_option_search_frag" android:visible="false" android:title="@string/menu_search" app:actionViewClass="com.sonyericsson.music.search.MusicSearchView" app:showAsAction="collapseActionView|ifRoom" />
     <item android:icon="@drawable/ic_refresh" android:id="@id/menu_option_refresh" android:visible="false" android:title="@string/music_menu_refresh" app:showAsAction="always" />
 </menu>

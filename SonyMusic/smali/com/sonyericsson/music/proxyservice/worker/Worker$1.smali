@@ -1339,8 +1339,10 @@
 
     const/4 v1, 0x3
 
+    .line 1974
     iget-object p2, p2, Lcom/sonyericsson/music/proxyservice/worker/Worker;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
+    .line 1973
     invoke-virtual {v0, v1, p1, v4, p2}, Lcom/sonyericsson/music/proxyservice/worker/MainThreadHandler;->postToMain(IIILjava/lang/Object;)V
 
     .line 1982
@@ -1887,8 +1889,10 @@
 
     const/4 v0, 0x4
 
+    .line 1907
     iget-object p1, p1, Lcom/sonyericsson/music/proxyservice/worker/Worker;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
+    .line 1906
     invoke-virtual {p2, v0, v1, v8, p1}, Lcom/sonyericsson/music/proxyservice/worker/MainThreadHandler;->postToMain(IIILjava/lang/Object;)V
 
     .line 1909

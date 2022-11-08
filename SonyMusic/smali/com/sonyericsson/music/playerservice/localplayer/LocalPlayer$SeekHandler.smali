@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;)V
     .locals 0
 
-    .line 1674
+    .line 1692
     iput-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -47,7 +47,7 @@
 .method private internalSeek(I)Z
     .locals 4
 
-    .line 1716
+    .line 1734
     iget-object v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     iget-object v1, v0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mAudioPlayer:Lcom/sonymobile/music/audioplayer/AudioPlayer;
@@ -56,12 +56,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 1717
+    .line 1735
     invoke-virtual {v0}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->getPlaybackPosition()I
 
     move-result v0
 
-    .line 1718
+    .line 1736
     iget-object v1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-virtual {v1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->getDuration()I
@@ -76,7 +76,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 1729
+    .line 1747
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->isPlaying()Z
@@ -85,27 +85,27 @@
 
     if-eqz p1, :cond_0
 
-    .line 1735
+    .line 1753
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     iget-object p1, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mAudioPlayer:Lcom/sonymobile/music/audioplayer/AudioPlayer;
 
     invoke-virtual {p1}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->pause()V
 
-    .line 1736
+    .line 1754
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     iput-boolean v2, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mStartPlayingAfterWinding:Z
 
     goto :goto_0
 
-    .line 1738
+    .line 1756
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     iput-boolean v3, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mStartPlayingAfterWinding:Z
 
-    .line 1742
+    .line 1760
     :goto_0
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
@@ -116,7 +116,7 @@
     :cond_1
     if-gtz p1, :cond_3
 
-    .line 1754
+    .line 1772
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->isPlaying()Z
@@ -125,27 +125,27 @@
 
     if-eqz p1, :cond_2
 
-    .line 1760
+    .line 1778
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     iget-object p1, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mAudioPlayer:Lcom/sonymobile/music/audioplayer/AudioPlayer;
 
     invoke-virtual {p1}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->pause()V
 
-    .line 1761
+    .line 1779
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     iput-boolean v2, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mStartPlayingAfterWinding:Z
 
     goto :goto_1
 
-    .line 1763
+    .line 1781
     :cond_2
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     iput-boolean v3, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mStartPlayingAfterWinding:Z
 
-    .line 1766
+    .line 1784
     :goto_1
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
@@ -153,7 +153,7 @@
 
     return v3
 
-    .line 1775
+    .line 1793
     :cond_3
     iget-object v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
@@ -168,14 +168,14 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 1689
+    .line 1707
     iget-object v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     iget-boolean v0, v0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mWinding:Z
 
     if-eqz v0, :cond_1
 
-    .line 1690
+    .line 1708
     iget p1, p1, Landroid/os/Message;->what:I
 
     const-wide/16 v0, 0x1f4
@@ -186,14 +186,14 @@
 
     const/16 p1, -0x1388
 
-    .line 1691
+    .line 1709
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->internalSeek(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 1694
+    .line 1712
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-virtual {p1, v2, v0, v1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->postNextSeek(IJ)V
@@ -207,14 +207,14 @@
 
     const/16 p1, 0x1388
 
-    .line 1697
+    .line 1715
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->internalSeek(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 1700
+    .line 1718
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$SeekHandler;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-virtual {p1, v2, v0, v1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->postNextSeek(IJ)V

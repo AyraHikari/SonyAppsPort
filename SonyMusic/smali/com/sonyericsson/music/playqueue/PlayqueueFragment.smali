@@ -1263,7 +1263,7 @@
 
     move-result v0
 
-    const v1, 0x7f09011c
+    const v1, 0x7f09011d
 
     if-eq v0, v1, :cond_0
 

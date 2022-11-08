@@ -25,16 +25,27 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 53
+    .line 54
     invoke-direct {p0}, Lcom/sonyericsson/music/library/LibraryListFragment;-><init>()V
 
     return-void
 .end method
 
+.method static synthetic access$000(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/content/Intent;I)Landroid/content/Intent;
+    .locals 0
+
+    .line 54
+    invoke-static/range {p0 .. p5}, Lcom/sonyericsson/music/library/LibraryListFragment;->createShortcutIntentResult(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/content/Intent;I)Landroid/content/Intent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static newInstance()Lcom/sonyericsson/music/picker/PlaylistPickerFragment;
     .locals 1
 
-    .line 62
+    .line 63
     new-instance v0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment;
 
     invoke-direct {v0}, Lcom/sonyericsson/music/picker/PlaylistPickerFragment;-><init>()V
@@ -47,24 +58,24 @@
 .method protected getAdapter()Landroid/widget/CursorAdapter;
     .locals 4
 
-    .line 88
+    .line 89
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    .line 89
+    .line 90
     iget-object v1, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment;->mArtDecoder:Lcom/sonyericsson/music/artdecoder/ArtDecoder;
 
     if-nez v1, :cond_0
 
-    .line 91
+    .line 92
     new-instance v1, Lcom/sonyericsson/music/artdecoder/ArtDecoder;
 
     invoke-direct {v1, v0}, Lcom/sonyericsson/music/artdecoder/ArtDecoder;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment;->mArtDecoder:Lcom/sonyericsson/music/artdecoder/ArtDecoder;
 
-    .line 93
+    .line 94
     :cond_0
     new-instance v1, Lcom/sonyericsson/music/library/PlaylistsAdapter;
 
@@ -80,7 +91,7 @@
 .method protected bridge synthetic getAdapter()Landroid/widget/ListAdapter;
     .locals 1
 
-    .line 53
+    .line 54
     invoke-virtual {p0}, Lcom/sonyericsson/music/picker/PlaylistPickerFragment;->getAdapter()Landroid/widget/CursorAdapter;
 
     move-result-object v0
@@ -101,7 +112,7 @@
 
     const/4 v0, 0x2
 
-    .line 98
+    .line 99
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
@@ -130,7 +141,7 @@
 
     const v0, 0x7f100218
 
-    .line 83
+    .line 84
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -141,7 +152,7 @@
 .method protected getSystemUIConfig()Lcom/sonyericsson/music/library/SystemUIConfig;
     .locals 1
 
-    .line 296
+    .line 305
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -170,7 +181,7 @@
 
     if-nez p1, :cond_0
 
-    .line 107
+    .line 108
     new-instance p1, Lcom/sonyericsson/music/common/PlaylistsLoader;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -190,14 +201,14 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 109
+    .line 110
     new-instance p1, Landroidx/loader/content/CursorLoader;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
 
-    .line 110
+    .line 111
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p2
@@ -233,20 +244,20 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 68
+    .line 69
     iget-object v0, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment;->mArtDecoder:Lcom/sonyericsson/music/artdecoder/ArtDecoder;
 
     if-eqz v0, :cond_0
 
-    .line 69
+    .line 70
     invoke-virtual {v0}, Lcom/sonyericsson/music/artdecoder/ArtDecoder;->destroy()V
 
     const/4 v0, 0x0
 
-    .line 70
+    .line 71
     iput-object v0, p0, Lcom/sonyericsson/music/picker/PlaylistPickerFragment;->mArtDecoder:Lcom/sonyericsson/music/artdecoder/ArtDecoder;
 
-    .line 73
+    .line 74
     :cond_0
     invoke-super {p0}, Lcom/sonyericsson/music/library/LibraryListFragment;->onDestroy()V
 
@@ -265,7 +276,7 @@
         }
     .end annotation
 
-    .line 132
+    .line 133
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -278,15 +289,15 @@
 
     if-nez p3, :cond_0
 
-    .line 135
+    .line 136
     invoke-virtual {p1, p2}, Landroid/app/Activity;->setResult(I)V
 
-    .line 136
+    .line 137
     invoke-virtual {p1}, Landroid/app/Activity;->finish()V
 
     return-void
 
-    .line 140
+    .line 141
     :cond_0
     new-instance p1, Lcom/sonyericsson/music/picker/PlaylistPickerFragment$SetPickedResult;
 
@@ -320,7 +331,7 @@
         }
     .end annotation
 
-    .line 117
+    .line 118
     invoke-virtual {p1}, Landroidx/loader/content/Loader;->getId()I
 
     move-result v0
@@ -329,7 +340,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 119
+    .line 120
     iget-object p1, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/library/LibraryListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
@@ -340,7 +351,7 @@
 
     const/4 v0, 0x0
 
-    .line 120
+    .line 121
     invoke-virtual {p1, p2, v0}, Lcom/sonyericsson/music/library/PlaylistsAdapter;->loadPlaylistArtUriToAdapter(Landroid/database/Cursor;Z)V
 
     goto :goto_0
@@ -350,7 +361,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 122
+    .line 123
     invoke-interface {p2}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
@@ -362,16 +373,16 @@
 
     if-nez v0, :cond_2
 
-    .line 123
+    .line 124
     invoke-virtual {p0}, Lcom/sonyericsson/music/library/LibraryListFragment;->showNoContentHeaderView()V
 
-    .line 125
+    .line 126
     :cond_2
     new-instance v0, Lcom/sonyericsson/music/library/PlaylistsCursorWrapper;
 
     invoke-direct {v0, p2}, Lcom/sonyericsson/music/library/PlaylistsCursorWrapper;-><init>(Landroid/database/Cursor;)V
 
-    .line 126
+    .line 127
     invoke-super {p0, p1, v0}, Lcom/sonyericsson/music/library/LibraryListFragment;->onLoadFinished(Landroidx/loader/content/Loader;Landroid/database/Cursor;)V
 
     :cond_3
@@ -382,7 +393,7 @@
 .method public bridge synthetic onLoadFinished(Landroidx/loader/content/Loader;Ljava/lang/Object;)V
     .locals 0
 
-    .line 53
+    .line 54
     check-cast p2, Landroid/database/Cursor;
 
     invoke-virtual {p0, p1, p2}, Lcom/sonyericsson/music/picker/PlaylistPickerFragment;->onLoadFinished(Landroidx/loader/content/Loader;Landroid/database/Cursor;)V

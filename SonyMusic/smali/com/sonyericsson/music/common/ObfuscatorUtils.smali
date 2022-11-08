@@ -68,6 +68,7 @@
 
     if-nez v8, :cond_1
 
+    .line 23
     rem-int/lit8 v8, v1, 0x4
 
     mul-int/lit8 v9, v5, 0x2
@@ -78,18 +79,18 @@
 
     mul-int/lit8 v8, v8, 0x8
 
-    :goto_1
     shr-int v8, v9, v8
 
     and-int/lit16 v8, v8, 0xff
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_1
     sub-int v8, v5, v6
 
     if-le v7, v8, :cond_2
 
+    .line 24
     rem-int/lit8 v8, v1, 0x4
 
     add-int/lit8 v9, v5, -0x1
@@ -104,8 +105,13 @@
 
     rsub-int/lit8 v8, v8, 0x18
 
+    shr-int v8, v9, v8
+
+    and-int/lit16 v8, v8, 0xff
+
     goto :goto_1
 
+    .line 25
     :cond_2
     rem-int/lit8 v8, v1, 0x4
 
@@ -121,9 +127,11 @@
 
     rsub-int/lit8 v8, v8, 0x20
 
-    goto :goto_1
+    shr-int v8, v9, v8
 
-    :goto_2
+    and-int/lit16 v8, v8, 0xff
+
+    :goto_1
     int-to-byte v8, v8
 
     aput-byte v8, v2, v4

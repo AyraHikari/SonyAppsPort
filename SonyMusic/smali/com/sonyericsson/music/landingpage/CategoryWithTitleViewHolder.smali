@@ -59,7 +59,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/landingpage/CategoryWithTitleViewHolder;->mCategoryTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f09016c
+    const v0, 0x7f09016d
 
     .line 42
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

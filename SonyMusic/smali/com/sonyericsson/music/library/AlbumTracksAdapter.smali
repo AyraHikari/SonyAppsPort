@@ -408,7 +408,7 @@
     .line 112
     invoke-virtual {p1, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    const v0, 0x7f0901fb
+    const v0, 0x7f0901fc
 
     .line 113
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -419,7 +419,7 @@
 
     iput-object v0, v1, Lcom/sonyericsson/music/library/AlbumTracksAdapter$ViewHolder;->text1:Landroid/widget/TextView;
 
-    const v0, 0x7f0901fc
+    const v0, 0x7f0901fd
 
     .line 114
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -463,7 +463,7 @@
 
     iput-object v0, v1, Lcom/sonyericsson/music/library/AlbumTracksAdapter$ViewHolder;->highResAudioIndicator:Landroid/widget/ImageView;
 
-    const v0, 0x7f09021f
+    const v0, 0x7f090220
 
     .line 118
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

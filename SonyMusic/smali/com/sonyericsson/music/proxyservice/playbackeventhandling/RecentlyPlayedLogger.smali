@@ -36,7 +36,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
     .locals 0
 
-    .line 49
+    .line 50
     invoke-direct {p0, p1, p2}, Lcom/sonyericsson/music/common/HandlerBasedBroadcastReceiver;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
     return-void
@@ -45,7 +45,7 @@
 .method public static buildRecentlyPlayedIntent(Landroid/content/Context;Ljava/lang/String;JILjava/lang/String;JLjava/lang/String;Z)Landroid/content/Intent;
     .locals 2
 
-    .line 56
+    .line 57
     new-instance v0, Landroid/content/Intent;
 
     invoke-static {p0}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedStore;->getRecentlyPlayedIntent(Landroid/content/Context;)Ljava/lang/String;
@@ -54,7 +54,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 57
+    .line 58
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -63,39 +63,39 @@
 
     const-string v1, "track_uri"
 
-    .line 58
+    .line 59
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p1, "track_id"
 
-    .line 59
+    .line 60
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     const-string p1, "playqueue_pos"
 
-    .line 60
+    .line 61
     invoke-virtual {v0, p1, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string p1, "container_uri"
 
-    .line 61
+    .line 62
     invoke-virtual {v0, p1, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p1, "play_timestamp"
 
-    .line 62
+    .line 63
     invoke-virtual {v0, p1, p6, p7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     const-string p1, "playback_action"
 
-    .line 63
+    .line 64
     invoke-virtual {v0, p1, p8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     if-eqz p9, :cond_0
 
     const-string p1, "com.sonyericsson.music.permission.BROADCAST"
 
-    .line 66
+    .line 67
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     :cond_0
@@ -118,7 +118,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 85
     invoke-virtual {p0}, Lcom/sonyericsson/music/common/HandlerBasedBroadcastReceiver;->isStarted()Z
 
     move-result v0
@@ -129,7 +129,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 85
+    .line 86
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -139,7 +139,7 @@
     :cond_0
     move-object v0, v1
 
-    .line 91
+    .line 92
     :goto_0
     iget-object v2, p0, Lcom/sonyericsson/music/common/HandlerBasedBroadcastReceiver;->mAppContext:Landroid/content/Context;
 
@@ -155,7 +155,7 @@
 
     iget-object v0, p0, Lcom/sonyericsson/music/common/HandlerBasedBroadcastReceiver;->mAppContext:Landroid/content/Context;
 
-    .line 92
+    .line 93
     invoke-static {v0}, Lcom/sonyericsson/music/common/PermissionUtils;->isWriteStoragePermissionGranted(Landroid/content/Context;)Z
 
     move-result v0
@@ -164,7 +164,7 @@
 
     const-string v0, "track_uri"
 
-    .line 94
+    .line 95
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -173,7 +173,7 @@
 
     const-wide/16 v4, -0x1
 
-    .line 95
+    .line 96
     invoke-virtual {p1, v0, v4, v5}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v4
@@ -182,21 +182,21 @@
 
     const/4 v2, -0x1
 
-    .line 96
+    .line 97
     invoke-virtual {p1, v0, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
     const-string v0, "container_uri"
 
-    .line 97
+    .line 98
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
     const-string v0, "play_timestamp"
 
-    .line 98
+    .line 99
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
@@ -207,19 +207,19 @@
 
     const-string v0, "playback_action"
 
-    .line 99
+    .line 100
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 101
+    .line 102
     new-instance v0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;
 
     move-object v2, v0
 
     invoke-direct/range {v2 .. v9}, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;-><init>(Ljava/lang/String;JILjava/lang/String;J)V
 
-    .line 103
+    .line 104
     iget-object v2, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger;->mRunnable:Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;
 
     if-eqz v2, :cond_3
@@ -232,7 +232,7 @@
 
     goto :goto_1
 
-    .line 116
+    .line 117
     :cond_1
     iget-object v2, p0, Lcom/sonyericsson/music/common/HandlerBasedBroadcastReceiver;->mAppContext:Landroid/content/Context;
 
@@ -240,7 +240,7 @@
 
     move-result-object v2
 
-    .line 117
+    .line 118
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -255,7 +255,7 @@
 
     if-eqz p1, :cond_5
 
-    .line 119
+    .line 120
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger;->mRunnable:Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;->isReported()Z
@@ -264,12 +264,12 @@
 
     if-nez p1, :cond_2
 
-    .line 120
+    .line 121
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger;->mRunnable:Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/common/HandlerBasedBroadcastReceiver;->cancel(Ljava/lang/Runnable;)V
 
-    .line 122
+    .line 123
     iget-object p1, v0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mTrackUri:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -282,14 +282,14 @@
 
     if-eqz p1, :cond_2
 
-    .line 123
+    .line 124
     new-instance p1, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;
 
     iget-object v1, p0, Lcom/sonyericsson/music/common/HandlerBasedBroadcastReceiver;->mAppContext:Landroid/content/Context;
 
     invoke-direct {p1, v1, v0}, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;-><init>(Landroid/content/Context;Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;)V
 
-    .line 124
+    .line 125
     new-instance v0, Landroid/util/Pair;
 
     const/4 v1, 0x0
@@ -302,20 +302,20 @@
 
     return-object v0
 
-    .line 127
+    .line 128
     :cond_2
     iput-object v1, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger;->mRunnable:Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;
 
     goto :goto_2
 
-    .line 108
+    .line 109
     :cond_3
     :goto_1
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger;->mRunnable:Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/common/HandlerBasedBroadcastReceiver;->cancel(Ljava/lang/Runnable;)V
 
-    .line 110
+    .line 111
     iget-object p1, v0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mTrackUri:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -328,7 +328,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 111
+    .line 112
     new-instance p1, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;
 
     iget-object v1, p0, Lcom/sonyericsson/music/common/HandlerBasedBroadcastReceiver;->mAppContext:Landroid/content/Context;
@@ -337,7 +337,7 @@
 
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger;->mRunnable:Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;
 
-    .line 112
+    .line 113
     new-instance p1, Landroid/util/Pair;
 
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger;->mRunnable:Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;
@@ -352,7 +352,7 @@
 
     return-object p1
 
-    .line 114
+    .line 115
     :cond_4
     iput-object v1, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger;->mRunnable:Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$RecentlyPlayedRunnable;
 
@@ -364,12 +364,12 @@
 .method protected registerBroadcastReceiver()Z
     .locals 4
 
-    .line 74
+    .line 75
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 75
+    .line 76
     iget-object v1, p0, Lcom/sonyericsson/music/common/HandlerBasedBroadcastReceiver;->mAppContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/sonyericsson/music/landingpage/provider/RecentlyPlayedStore;->getRecentlyPlayedIntent(Landroid/content/Context;)Ljava/lang/String;
@@ -378,7 +378,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 77
+    .line 78
     iget-object v1, p0, Lcom/sonyericsson/music/common/HandlerBasedBroadcastReceiver;->mAppContext:Landroid/content/Context;
 
     const-string v2, "com.sonyericsson.music.permission.BROADCAST"

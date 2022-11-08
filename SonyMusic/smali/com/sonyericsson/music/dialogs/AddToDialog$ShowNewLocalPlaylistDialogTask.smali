@@ -50,17 +50,17 @@
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;Z)V
     .locals 1
 
-    .line 395
+    .line 419
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 396
+    .line 420
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->mActivityRef:Ljava/lang/ref/WeakReference;
 
-    .line 397
+    .line 421
     invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -71,10 +71,10 @@
 
     iput-object p1, p0, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 398
+    .line 422
     iput-object p2, p0, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->mPlaylistName:Ljava/lang/String;
 
-    .line 399
+    .line 423
     iput-boolean p3, p0, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->mIsFolderContent:Z
 
     return-void
@@ -91,14 +91,14 @@
         }
     .end annotation
 
-    .line 449
+    .line 473
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x1
 
-    .line 451
+    .line 475
     new-array v4, v1, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -107,17 +107,17 @@
 
     aput-object v1, v4, v2
 
-    .line 455
+    .line 479
     invoke-static {p1, p2}, Lcom/sonyericsson/music/common/DBUtils;->getAlbumTracksSelection(J)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 457
+    .line 481
     iget-object v2, p0, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v3, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    const-string v7, "track"
+    const-string v7, "track, title COLLATE NOCASE"
 
     const/4 v6, 0x0
 
@@ -130,12 +130,12 @@
     :try_start_0
     const-string p2, "_id"
 
-    .line 462
+    .line 487
     invoke-interface {p1, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p2
 
-    .line 463
+    .line 488
     :goto_0
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -143,7 +143,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 464
+    .line 489
     invoke-interface {p1, p2}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v1
@@ -158,7 +158,7 @@
 
     goto :goto_0
 
-    .line 467
+    .line 492
     :cond_0
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
@@ -169,7 +169,7 @@
 
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 468
+    .line 493
     throw p2
 
     :cond_1
@@ -188,20 +188,20 @@
         }
     .end annotation
 
-    .line 475
+    .line 500
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 477
+    .line 502
     iget-object v1, p0, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 478
+    .line 503
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 477
+    .line 502
     invoke-static {v1, p1}, Lcom/sonyericsson/music/common/FolderUtils;->getMusicFilesFromFolder(Landroid/content/ContentResolver;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p1
@@ -211,124 +211,24 @@
     :try_start_0
     const-string p2, "_id"
 
-    .line 481
-    invoke-interface {p1, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result p2
-
-    .line 482
-    :goto_0
-    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 483
-    invoke-interface {p1, p2}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    .line 486
-    :cond_0
-    invoke-interface {p1}, Landroid/database/Cursor;->close()V
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p2
-
-    invoke-interface {p1}, Landroid/database/Cursor;->close()V
-
-    .line 487
-    throw p2
-
-    :cond_1
-    :goto_1
-    return-object v0
-.end method
-
-.method private getGenreTracks(J)Ljava/util/ArrayList;
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J)",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
-
-    .line 493
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    const-string v1, "external"
-
-    .line 495
-    invoke-static {v1, p1, p2}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Genres$Members;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
-
-    move-result-object v3
-
-    const/4 p1, 0x1
-
-    .line 496
-    new-array v4, p1, [Ljava/lang/String;
-
-    sget-object p1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Genres$Members;->AUDIO_ID:Ljava/lang/String;
-
-    const/4 p2, 0x0
-
-    aput-object p1, v4, p2
-
-    .line 500
-    iget-object v2, p0, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->mContentResolver:Landroid/content/ContentResolver;
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    .line 504
-    :try_start_0
-    sget-object p2, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Genres$Members;->AUDIO_ID:Ljava/lang/String;
-
-    invoke-interface {p1, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result p2
-
     .line 506
-    :goto_0
-    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
+    invoke-interface {p1, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v1
-
-    if-eqz v1, :cond_0
+    move-result p2
 
     .line 507
+    :goto_0
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 508
     invoke-interface {p1, p2}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v1
 
-    .line 508
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -358,12 +258,112 @@
     return-object v0
 .end method
 
+.method private getGenreTracks(J)Ljava/util/ArrayList;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J)",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+
+    .line 518
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    const-string v1, "external"
+
+    .line 520
+    invoke-static {v1, p1, p2}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Genres$Members;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
+
+    move-result-object v3
+
+    const/4 p1, 0x1
+
+    .line 521
+    new-array v4, p1, [Ljava/lang/String;
+
+    sget-object p1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Genres$Members;->AUDIO_ID:Ljava/lang/String;
+
+    const/4 p2, 0x0
+
+    aput-object p1, v4, p2
+
+    .line 525
+    iget-object v2, p0, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->mContentResolver:Landroid/content/ContentResolver;
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    .line 529
+    :try_start_0
+    sget-object p2, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Genres$Members;->AUDIO_ID:Ljava/lang/String;
+
+    invoke-interface {p1, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result p2
+
+    .line 531
+    :goto_0
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 532
+    invoke-interface {p1, p2}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v1
+
+    .line 533
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    .line 536
+    :cond_0
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p2
+
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
+
+    .line 537
+    throw p2
+
+    :cond_1
+    :goto_1
+    return-object v0
+.end method
+
 
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 383
+    .line 407
     check-cast p1, [Landroid/util/Pair;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->doInBackground([Landroid/util/Pair;)Ljava/util/ArrayList;
@@ -390,15 +390,15 @@
 
     const/4 v0, 0x0
 
-    .line 405
+    .line 429
     aget-object p1, p1, v0
 
-    .line 406
+    .line 430
     iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Landroid/net/Uri;
 
-    .line 407
+    .line 431
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Integer;
@@ -407,7 +407,7 @@
 
     move-result p1
 
-    .line 408
+    .line 432
     invoke-virtual {v0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v0
@@ -422,7 +422,7 @@
 
     goto :goto_0
 
-    .line 428
+    .line 452
     :pswitch_0
     invoke-direct {p0, v0, v1}, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->getGenreTracks(J)Ljava/util/ArrayList;
 
@@ -430,7 +430,7 @@
 
     goto :goto_0
 
-    .line 423
+    .line 447
     :pswitch_1
     invoke-direct {p0, v0, v1}, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->getFolderTracks(J)Ljava/util/ArrayList;
 
@@ -438,7 +438,7 @@
 
     goto :goto_0
 
-    .line 418
+    .line 442
     :pswitch_2
     invoke-direct {p0, v0, v1}, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->getAlbumTracks(J)Ljava/util/ArrayList;
 
@@ -446,13 +446,13 @@
 
     goto :goto_0
 
-    .line 412
+    .line 436
     :pswitch_3
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 413
+    .line 437
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -464,7 +464,7 @@
 
     goto :goto_1
 
-    .line 433
+    .line 457
     :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
@@ -485,7 +485,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 383
+    .line 407
     check-cast p1, Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->onPostExecute(Ljava/util/ArrayList;)V
@@ -504,7 +504,7 @@
         }
     .end annotation
 
-    .line 438
+    .line 462
     iget-object v0, p0, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->mActivityRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -515,7 +515,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 440
+    .line 464
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->isFragmentTransactionAllowed()Z
 
     move-result v1
@@ -528,17 +528,17 @@
 
     if-nez v1, :cond_0
 
-    .line 441
+    .line 465
     iget-object v1, p0, Lcom/sonyericsson/music/dialogs/AddToDialog$ShowNewLocalPlaylistDialogTask;->mPlaylistName:Ljava/lang/String;
 
-    .line 442
+    .line 466
     invoke-static {v1, p1}, Lcom/sonyericsson/music/dialogs/PlaylistNameDialog;->newLocalInstance(Ljava/lang/String;Ljava/util/ArrayList;)Landroidx/fragment/app/DialogFragment;
 
     move-result-object p1
 
     check-cast p1, Lcom/sonyericsson/music/dialogs/PlaylistNameDialog;
 
-    .line 443
+    .line 467
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0

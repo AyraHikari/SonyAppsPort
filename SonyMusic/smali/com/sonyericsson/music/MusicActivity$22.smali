@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sonyericsson/music/MusicActivity;->checkAndPurgeMusicStoreDatabase()V
+    value = Lcom/sonyericsson/music/MusicActivity;->clearMUFiles()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;Landroid/content/Context;)V
     .locals 0
 
-    .line 2332
+    .line 2335
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$22;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     iput-object p2, p0, Lcom/sonyericsson/music/MusicActivity$22;->val$ctx:Landroid/content/Context;
@@ -40,16 +40,21 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 2335
-    new-instance v0, Lcom/sonyericsson/music/metadata/UpdateMusicInfo;
+    .line 2338
+    iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$22;->val$ctx:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/sonyericsson/music/MusicActivity$22;->val$ctx:Landroid/content/Context;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, v1}, Lcom/sonyericsson/music/metadata/UpdateMusicInfo;-><init>(Landroid/content/Context;)V
+    .line 2339
+    invoke-static {v0}, Lcom/sonyericsson/music/common/MusicUtils;->deleteMUFiles(Landroid/content/Context;)V
 
-    invoke-virtual {v0}, Lcom/sonyericsson/music/metadata/UpdateMusicInfo;->cleanUpUnusedArt()V
+    .line 2340
+    iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$22;->val$ctx:Landroid/content/Context;
 
+    invoke-static {v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setMUFilesCleared(Landroid/content/Context;)V
+
+    :cond_0
     return-void
 .end method

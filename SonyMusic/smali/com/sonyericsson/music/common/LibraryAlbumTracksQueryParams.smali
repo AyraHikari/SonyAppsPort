@@ -109,7 +109,7 @@
 .method public static getSortOrder()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "track"
+    const-string v0, "track, title COLLATE NOCASE"
 
     return-object v0
 .end method

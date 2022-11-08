@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;)V
     .locals 0
 
-    .line 711
+    .line 735
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver$1;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 714
+    .line 738
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver$1;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->access$500(Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;)Landroid/content/Context;
@@ -47,7 +47,7 @@
 
     invoke-static {v0}, Lcom/sonyericsson/music/metadata/MusicInfoService;->startPlaylistSync(Landroid/content/Context;)V
 
-    .line 715
+    .line 739
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver$1;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J

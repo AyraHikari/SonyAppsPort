@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="other">%d päeva tagasi</item>
+        <item quantity="one">%d päev tagasi</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="other">%d min tagasi</item>
+        <item quantity="one">%d min tagasi</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="other">%d a tagasi</item>
+        <item quantity="one">%d a tagasi</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d uut märguannet</item>
+        <item quantity="one">%d uus märguanne</item>
+    </plurals>
+</resources>

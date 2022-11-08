@@ -58,7 +58,7 @@
 
     const/4 v0, 0x1
 
-    .line 778
+    .line 782
     new-array v0, v0, [Ljava/lang/String;
 
     const-string v1, "name"
@@ -79,7 +79,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 758
+    .line 762
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -90,7 +90,7 @@
 
     const-string v0, "content://com.sonyericsson.music.musicinfo/cloud_account"
 
-    .line 783
+    .line 787
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

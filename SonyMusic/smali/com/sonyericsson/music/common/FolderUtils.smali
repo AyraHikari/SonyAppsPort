@@ -1435,6 +1435,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 266
     sget-object p1, Lcom/sonyericsson/music/common/FolderUtils;->FOLDER_FILES_PROJECTION_FROM_R:[Ljava/lang/String;
 
     goto :goto_1

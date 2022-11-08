@@ -30,22 +30,22 @@
 .method constructor <init>(Ljava/lang/String;JILjava/lang/String;J)V
     .locals 0
 
-    .line 504
+    .line 507
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 505
+    .line 508
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mTrackUri:Ljava/lang/String;
 
-    .line 506
+    .line 509
     iput-wide p2, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mTrackId:J
 
-    .line 507
+    .line 510
     iput p4, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mPlayqueuePos:I
 
-    .line 508
+    .line 511
     iput-object p5, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mContainerUri:Ljava/lang/String;
 
-    .line 509
+    .line 512
     iput-wide p6, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mTimeStampMs:J
 
     return-void
@@ -62,7 +62,7 @@
 
     return v0
 
-    .line 517
+    .line 520
     :cond_0
     instance-of v1, p1, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;
 
@@ -72,11 +72,11 @@
 
     return v2
 
-    .line 520
+    .line 523
     :cond_1
     check-cast p1, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;
 
-    .line 521
+    .line 524
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mTrackUri:Ljava/lang/String;
 
     if-eqz v1, :cond_2
@@ -101,7 +101,7 @@
 
     iget-object p1, p1, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mContainerUri:Ljava/lang/String;
 
-    .line 523
+    .line 526
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -120,7 +120,7 @@
 .method public hashCode()I
     .locals 2
 
-    .line 528
+    .line 531
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mTrackUri:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -137,14 +137,14 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 529
+    .line 532
     iget v1, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mPlayqueuePos:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 530
+    .line 533
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/playbackeventhandling/RecentlyPlayedLogger$CurrentTrack;->mContainerUri:Ljava/lang/String;
 
     if-eqz v1, :cond_1

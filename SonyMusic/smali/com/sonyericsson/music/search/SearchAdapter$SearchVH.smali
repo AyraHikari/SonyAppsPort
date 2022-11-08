@@ -45,7 +45,7 @@
     .line 392
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0901fb
+    const v0, 0x7f0901fc
 
     .line 394
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -56,7 +56,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/search/SearchAdapter$SearchVH;->mTxtPrimary:Landroid/widget/TextView;
 
-    const v0, 0x7f0901fc
+    const v0, 0x7f0901fd
 
     .line 395
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

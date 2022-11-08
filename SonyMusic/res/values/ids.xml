@@ -238,6 +238,7 @@
     <item type="id" name="menu_option_rename" />
     <item type="id" name="menu_option_reset_to_default" />
     <item type="id" name="menu_option_search" />
+    <item type="id" name="menu_option_search_frag" />
     <item type="id" name="menu_option_share" />
     <item type="id" name="menu_option_sleep_timer" />
     <item type="id" name="menu_option_sort_playlists" />

@@ -3390,7 +3390,7 @@
     .line 592
     iget-object v1, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->mAudioSystem:Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;
 
-    invoke-virtual {v1, v4}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->release(Z)V
+    invoke-virtual {v1, p1}, Lcom/sonyericsson/music/proxyservice/audiosystem/AudioSystem;->release(Z)V
 
     .line 594
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/MediaPlaybackImpl;->mShouldCreateNewPlayer:Z

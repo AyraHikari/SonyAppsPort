@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.searchlauncher.HotseatQsbWidget android:layout_gravity="center|top" android:id="@id/search_container_hotseat" android:layout_width="fill_parent" android:layout_height="@dimen/search_widget_hotseat_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:name="com.android.searchlauncher.HotseatQsbWidget$HotseatQsbFragment" android:id="@id/search_wrapper_view" android:tag="qsb_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.android.launcher3.ExtendedEditText android:id="@id/fallback_search_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+</com.android.searchlauncher.HotseatQsbWidget>

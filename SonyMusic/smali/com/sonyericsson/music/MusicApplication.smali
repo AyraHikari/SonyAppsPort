@@ -194,7 +194,7 @@
 .method public static addConfigFetchCompleteListener(Lcom/sonyericsson/music/MusicApplication$ConfigFetchCompleteListener;)V
     .locals 1
 
-    .line 309
+    .line 305
     sget-object v0, Lcom/sonyericsson/music/MusicApplication;->sConfigFetchCompleteListeners:Ljava/util/List;
 
     invoke-interface {v0, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -203,12 +203,12 @@
 
     if-nez v0, :cond_0
 
-    .line 310
+    .line 306
     sget-object v0, Lcom/sonyericsson/music/MusicApplication;->sConfigFetchCompleteListeners:Ljava/util/List;
 
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 315
+    .line 311
     :cond_0
     invoke-static {}, Lcom/sonyericsson/music/MusicApplication;->isConfigFetchComplete()Z
 
@@ -216,7 +216,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 316
+    .line 312
     invoke-interface {p0}, Lcom/sonyericsson/music/MusicApplication$ConfigFetchCompleteListener;->onConfigFetchComplete()V
 
     :cond_1
@@ -235,7 +235,7 @@
 .method public static isConfigFetchComplete()Z
     .locals 1
 
-    .line 289
+    .line 285
     sget-boolean v0, Lcom/sonyericsson/music/MusicApplication;->sIsConfigFetchComplete:Z
 
     return v0
@@ -244,7 +244,7 @@
 .method public static isCrashlyticsDisabled()Z
     .locals 1
 
-    .line 305
+    .line 301
     sget-boolean v0, Lcom/sonyericsson/music/MusicApplication;->sIsCrashlyticsDisabled:Z
 
     return v0
@@ -253,7 +253,7 @@
 .method public static isGafDisabled()Z
     .locals 1
 
-    .line 301
+    .line 297
     sget-boolean v0, Lcom/sonyericsson/music/MusicApplication;->sIsGafDisabled:Z
 
     return v0
@@ -262,7 +262,7 @@
 .method public static isGoogleDriveDisabled()Z
     .locals 1
 
-    .line 297
+    .line 293
     sget-boolean v0, Lcom/sonyericsson/music/MusicApplication;->sIsGoogleDriveDisabled:Z
 
     return v0
@@ -271,7 +271,7 @@
 .method public static isMoraDisabled()Z
     .locals 1
 
-    .line 293
+    .line 289
     sget-boolean v0, Lcom/sonyericsson/music/MusicApplication;->sIsMoraDisabled:Z
 
     return v0
@@ -280,21 +280,21 @@
 .method private static notifyConfigFetchCompleteListeners()V
     .locals 2
 
-    .line 325
+    .line 321
     invoke-static {}, Lcom/sonyericsson/music/MusicApplication;->isConfigFetchComplete()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 328
+    .line 324
     new-instance v0, Ljava/util/ArrayList;
 
     sget-object v1, Lcom/sonyericsson/music/MusicApplication;->sConfigFetchCompleteListeners:Ljava/util/List;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 330
+    .line 326
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -315,7 +315,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 333
+    .line 329
     invoke-interface {v1}, Lcom/sonyericsson/music/MusicApplication$ConfigFetchCompleteListener;->onConfigFetchComplete()V
 
     goto :goto_0
@@ -327,7 +327,7 @@
 .method public static removeConfigFetchCompleteListener(Lcom/sonyericsson/music/MusicApplication$ConfigFetchCompleteListener;)V
     .locals 1
 
-    .line 321
+    .line 317
     sget-object v0, Lcom/sonyericsson/music/MusicApplication;->sConfigFetchCompleteListeners:Ljava/util/List;
 
     invoke-interface {v0, p0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -338,7 +338,7 @@
 .method private static setAllowTracking(Z)V
     .locals 0
 
-    .line 261
+    .line 257
     sput-boolean p0, Lcom/sonyericsson/music/MusicApplication;->sAllowTracking:Z
 
     return-void
@@ -347,12 +347,12 @@
 .method private setupAnalytics()V
     .locals 2
 
-    .line 179
+    .line 175
     invoke-static {}, Lcom/sonyericsson/music/common/VersionUtils;->getVersionName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 181
+    .line 177
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -361,11 +361,11 @@
 
     return-void
 
-    .line 187
+    .line 183
     :cond_0
     invoke-virtual {p0}, Lcom/sonyericsson/music/MusicApplication;->runPrepareAnalyticsTask()V
 
-    .line 190
+    .line 186
     new-instance v0, Lcom/sonyericsson/music/datacollection/googleanalytics/GoogleAnalyticsReporting;
 
     iget-boolean v1, p0, Lcom/sonyericsson/music/MusicApplication;->mIsServiceProcess:Z
@@ -374,7 +374,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/MusicApplication;->mGoogleAnalyticsReporting:Lcom/sonyericsson/music/datacollection/googleanalytics/GoogleAnalyticsReporting;
 
-    .line 191
+    .line 187
     iget-object v0, p0, Lcom/sonyericsson/music/MusicApplication;->mGoogleAnalyticsReporting:Lcom/sonyericsson/music/datacollection/googleanalytics/GoogleAnalyticsReporting;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/datacollection/googleanalytics/GoogleAnalyticsReporting;->sendInitialAnalytics()V
@@ -385,7 +385,7 @@
 .method private setupFirebaseAnalytics()V
     .locals 2
 
-    .line 195
+    .line 191
     new-instance v0, Lcom/sonyericsson/music/datacollection/firebase/FirebaseAnalyticsReporting;
 
     iget-boolean v1, p0, Lcom/sonyericsson/music/MusicApplication;->mIsServiceProcess:Z
@@ -396,7 +396,7 @@
 
     const/4 v0, 0x1
 
-    .line 197
+    .line 193
     invoke-virtual {p0, v0}, Lcom/sonyericsson/music/MusicApplication;->runPrepareAndInitializeFirebaseTask(Z)V
 
     return-void
@@ -405,19 +405,19 @@
 .method private setupPicasso()V
     .locals 3
 
-    .line 265
+    .line 261
     new-instance v0, Lokhttp3/OkHttpClient$Builder;
 
     invoke-direct {v0}, Lokhttp3/OkHttpClient$Builder;-><init>()V
 
-    .line 266
+    .line 262
     new-instance v1, Lcom/sonyericsson/music/MusicApplication$4;
 
     invoke-direct {v1, p0}, Lcom/sonyericsson/music/MusicApplication$4;-><init>(Lcom/sonyericsson/music/MusicApplication;)V
 
     invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$Builder;->addNetworkInterceptor(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$Builder;
 
-    .line 275
+    .line 271
     new-instance v1, Lcom/squareup/picasso/Picasso$Builder;
 
     invoke-virtual {p0}, Landroid/app/Application;->getApplicationContext()Landroid/content/Context;
@@ -426,7 +426,7 @@
 
     invoke-direct {v1, v2}, Lcom/squareup/picasso/Picasso$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 276
+    .line 272
     new-instance v2, Lcom/jakewharton/picasso/OkHttp3Downloader;
 
     invoke-virtual {v0}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
@@ -437,14 +437,14 @@
 
     invoke-virtual {v1, v2}, Lcom/squareup/picasso/Picasso$Builder;->downloader(Lcom/squareup/picasso/Downloader;)Lcom/squareup/picasso/Picasso$Builder;
 
-    .line 277
+    .line 273
     sget-object v0, Lcom/sonyericsson/music/common/Debug;->DEBUG:Lcom/sonyericsson/music/common/Debug;
 
     const/4 v0, 0x0
 
     invoke-virtual {v1, v0}, Lcom/squareup/picasso/Picasso$Builder;->loggingEnabled(Z)Lcom/squareup/picasso/Picasso$Builder;
 
-    .line 279
+    .line 275
     :try_start_0
     invoke-virtual {v1}, Lcom/squareup/picasso/Picasso$Builder;->build()Lcom/squareup/picasso/Picasso;
 
@@ -456,7 +456,7 @@
 
     goto :goto_0
 
-    .line 282
+    .line 278
     :catch_0
     sget-object v0, Lcom/sonyericsson/music/common/Debug;->DEBUG:Lcom/sonyericsson/music/common/Debug;
 
@@ -471,7 +471,7 @@
 
     const/4 v0, 0x0
 
-    .line 164
+    .line 160
     :try_start_0
     iget-object v1, p0, Lcom/sonyericsson/music/MusicApplication;->mPrefs:Ljava/util/concurrent/Future;
 
@@ -551,79 +551,66 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lcom/sonyericsson/music/common/PermissionUtils;->isDataTrafficWarningRequired(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 119
     invoke-static {p0}, Lcom/sonyericsson/music/common/PermissionUtils;->isDataAllowed(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 120
-    invoke-static {p0}, Lcom/google/firebase/FirebaseApp;->initializeApp(Landroid/content/Context;)Lcom/google/firebase/FirebaseApp;
-
-    goto :goto_1
-
-    .line 123
+    .line 119
     :cond_0
     invoke-static {p0}, Lcom/google/firebase/FirebaseApp;->initializeApp(Landroid/content/Context;)Lcom/google/firebase/FirebaseApp;
 
-    .line 126
+    .line 122
     :cond_1
-    :goto_1
     invoke-static {p0}, Lcom/sonymobile/music/common/ProcessUtils;->isRunningInServiceProcess(Landroid/content/Context;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/sonyericsson/music/MusicApplication;->mIsServiceProcess:Z
 
-    .line 128
+    .line 124
     invoke-static {p0}, Lcom/sonymobile/music/common/GoogleAnalyticsUtil;->allowGaTracking(Landroid/content/Context;)Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/sonyericsson/music/MusicApplication;->setAllowTracking(Z)V
 
-    .line 131
+    .line 127
     invoke-direct {p0}, Lcom/sonyericsson/music/MusicApplication;->setupAnalytics()V
 
-    .line 132
+    .line 128
     invoke-direct {p0}, Lcom/sonyericsson/music/MusicApplication;->setupFirebaseAnalytics()V
 
-    .line 135
+    .line 131
     invoke-direct {p0}, Lcom/sonyericsson/music/MusicApplication;->setupPicasso()V
 
-    .line 137
+    .line 133
     iget-boolean v0, p0, Lcom/sonyericsson/music/MusicApplication;->mIsServiceProcess:Z
 
     if-nez v0, :cond_2
 
     const-string v0, "NEW INSTANCE"
 
-    .line 138
+    .line 134
     invoke-static {v0}, Lcom/sonyericsson/music/debug/DebugTimer;->print(Ljava/lang/String;)V
 
     const-string v0, "coldstart_until_lp_draw"
 
-    .line 139
+    .line 135
     invoke-static {v0}, Lcom/sonyericsson/music/debug/DebugTimer;->start(Ljava/lang/String;)V
 
-    .line 140
+    .line 136
     invoke-static {p0}, Lcom/sonyericsson/music/common/BlurUtils;->init(Landroid/content/Context;)V
 
-    goto :goto_2
+    goto :goto_1
 
-    .line 142
+    .line 138
     :cond_2
     invoke-static {p0}, Lcom/sonyericsson/music/NotificationChannels;->create(Landroid/content/Context;)V
 
-    .line 145
-    :goto_2
+    .line 141
+    :goto_1
     new-instance v0, Ljava/util/concurrent/FutureTask;
 
     new-instance v1, Lcom/sonyericsson/music/MusicApplication$1;
@@ -632,15 +619,15 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
-    .line 156
+    .line 152
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 157
+    .line 153
     iput-object v0, p0, Lcom/sonyericsson/music/MusicApplication;->mPrefs:Ljava/util/concurrent/Future;
 
-    .line 159
+    .line 155
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -653,12 +640,12 @@
 .method public runPrepareAnalyticsTask()V
     .locals 3
 
-    .line 201
+    .line 197
     invoke-static {}, Lcom/sonyericsson/music/common/VersionUtils;->getVersionName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 203
+    .line 199
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -667,7 +654,7 @@
 
     goto :goto_0
 
-    .line 211
+    .line 207
     :cond_0
     new-instance v0, Lcom/sonyericsson/music/MusicApplication$PrepareAnalyticsTask;
 
@@ -690,12 +677,12 @@
 .method public runPrepareAndInitializeFirebaseTask(Z)V
     .locals 7
 
-    .line 217
+    .line 213
     invoke-static {}, Lcom/sonyericsson/music/common/VersionUtils;->getVersionName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 218
+    .line 214
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -704,7 +691,7 @@
 
     goto :goto_0
 
-    .line 223
+    .line 219
     :cond_0
     new-instance v0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;
 
@@ -726,7 +713,7 @@
 
     new-array p1, p1, [Ljava/lang/Void;
 
-    .line 224
+    .line 220
     invoke-virtual {v0, p1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     :goto_0
@@ -736,24 +723,24 @@
 .method public sendAnalytics()V
     .locals 2
 
-    .line 229
+    .line 225
     new-instance v0, Lcom/sonyericsson/music/MusicApplication$2;
 
     invoke-direct {v0, p0}, Lcom/sonyericsson/music/MusicApplication$2;-><init>(Lcom/sonyericsson/music/MusicApplication;)V
 
-    .line 237
+    .line 233
     invoke-static {}, Lcom/sonymobile/music/common/ThreadingUtils;->isMain()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 238
+    .line 234
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 240
+    .line 236
     :cond_0
     iget-object v1, p0, Lcom/sonyericsson/music/MusicApplication;->mHandler:Landroid/os/Handler;
 
@@ -766,24 +753,24 @@
 .method public sendSyncDependentAnalytics(Landroid/net/Uri;)V
     .locals 1
 
-    .line 245
+    .line 241
     new-instance v0, Lcom/sonyericsson/music/MusicApplication$3;
 
     invoke-direct {v0, p0, p1}, Lcom/sonyericsson/music/MusicApplication$3;-><init>(Lcom/sonyericsson/music/MusicApplication;Landroid/net/Uri;)V
 
-    .line 253
+    .line 249
     invoke-static {}, Lcom/sonymobile/music/common/ThreadingUtils;->isMain()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 254
+    .line 250
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 256
+    .line 252
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/MusicApplication;->mHandler:Landroid/os/Handler;
 

@@ -18,7 +18,7 @@
 .method constructor <init>(Ljava/lang/Exception;)V
     .locals 1
 
-    .line 47
+    .line 50
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0

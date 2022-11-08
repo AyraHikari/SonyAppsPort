@@ -1207,7 +1207,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0901a2
+    const p2, 0x7f0901a3
 
     .line 189
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1218,7 +1218,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/CloudFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    const p2, 0x7f090166
+    const p2, 0x7f090167
 
     .line 190
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1236,7 +1236,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/CloudFragment;->mEmptyText:Landroid/view/View;
 
-    const p2, 0x7f0901a5
+    const p2, 0x7f0901a6
 
     .line 192
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1247,7 +1247,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/CloudFragment;->mRetryButton:Landroid/widget/Button;
 
-    const p2, 0x7f090195
+    const p2, 0x7f090196
 
     .line 193
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1278,7 +1278,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/CloudFragment;->mInfoText2:Landroid/widget/TextView;
 
-    const p2, 0x7f0901ed
+    const p2, 0x7f0901ee
 
     .line 196
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1289,7 +1289,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/CloudFragment;->mSwipeRefresh:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-    const p2, 0x7f090163
+    const p2, 0x7f090164
 
     .line 197
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

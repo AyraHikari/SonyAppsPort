@@ -292,6 +292,7 @@
 
     new-instance v3, Lcom/sonyericsson/music/library/BaseFragment$MatcherData;
 
+    .line 288
     sget-boolean v4, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
 
     if-eqz v4, :cond_0
@@ -813,6 +814,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 221
     sget-object p1, Lcom/sonyericsson/music/library/AlbumsFragment$AlbumLayout;->LIST:Lcom/sonyericsson/music/library/AlbumsFragment$AlbumLayout;
 
     goto :goto_0

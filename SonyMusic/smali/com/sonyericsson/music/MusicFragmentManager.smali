@@ -248,7 +248,7 @@
     .line 215
     iget-object v0, p0, Lcom/sonyericsson/music/MusicFragmentManager;->mMusicActivity:Lcom/sonyericsson/music/MusicActivity;
 
-    const v1, 0x7f090122
+    const v1, 0x7f090123
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
@@ -263,7 +263,7 @@
     .line 218
     iget-object v0, p0, Lcom/sonyericsson/music/MusicFragmentManager;->mMusicActivity:Lcom/sonyericsson/music/MusicActivity;
 
-    const v1, 0x7f090124
+    const v1, 0x7f090125
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 

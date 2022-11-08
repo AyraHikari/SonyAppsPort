@@ -566,7 +566,7 @@
 
     if-eqz p2, :cond_2
 
-    .line 184
+    .line 185
     iget-boolean p2, p0, Lcom/sonyericsson/music/library/AlbumsAdapter;->mShowContextMenu:Z
 
     if-nez p2, :cond_2
@@ -576,7 +576,6 @@
     :cond_2
     const/16 v5, 0x8
 
-    .line 185
     :goto_2
     invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
@@ -808,7 +807,7 @@
     .line 132
     invoke-virtual {p1, p2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    const p3, 0x7f0901fb
+    const p3, 0x7f0901fc
 
     .line 133
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -819,7 +818,7 @@
 
     iput-object p3, p2, Lcom/sonyericsson/music/library/AlbumsAdapter$ViewHolder;->text1:Landroid/widget/TextView;
 
-    const p3, 0x7f0901fc
+    const p3, 0x7f0901fd
 
     .line 134
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;

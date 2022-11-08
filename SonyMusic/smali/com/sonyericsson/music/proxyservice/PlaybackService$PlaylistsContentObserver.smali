@@ -30,31 +30,31 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 642
+    .line 666
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 639
+    .line 663
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mLastOnChangeCallTime:J
 
-    .line 711
+    .line 735
     new-instance v0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver$1;
 
     invoke-direct {v0, p0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver$1;-><init>(Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mRunnable:Ljava/lang/Runnable;
 
-    .line 643
+    .line 667
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mContext:Landroid/content/Context;
 
-    .line 644
+    .line 668
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -67,7 +67,7 @@
 .method static synthetic access$500(Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;)Landroid/content/Context;
     .locals 0
 
-    .line 634
+    .line 658
     iget-object p0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -76,7 +76,7 @@
 .method static synthetic access$602(Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;J)J
     .locals 0
 
-    .line 634
+    .line 658
     iput-wide p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mLastOnChangeCallTime:J
 
     return-wide p1
@@ -87,7 +87,7 @@
 .method isRegistered()Z
     .locals 1
 
-    .line 679
+    .line 703
     iget-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mRegistered:Z
 
     return v0
@@ -98,7 +98,7 @@
 
     const/4 v0, 0x0
 
-    .line 684
+    .line 708
     invoke-virtual {p0, p1, v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->onChange(ZLandroid/net/Uri;)V
 
     return-void
@@ -107,12 +107,12 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 3
 
-    .line 692
+    .line 716
     sget-boolean p1, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
 
     if-eqz p1, :cond_3
 
-    .line 693
+    .line 717
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -127,7 +127,7 @@
 
     if-ltz v2, :cond_1
 
-    .line 694
+    .line 718
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mPlaylistSyncHandler:Landroid/os/Handler;
 
     iget-object p2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mRunnable:Ljava/lang/Runnable;
@@ -138,20 +138,20 @@
 
     if-eqz p1, :cond_0
 
-    .line 695
+    .line 719
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mPlaylistSyncHandler:Landroid/os/Handler;
 
     iget-object p2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 697
+    .line 721
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/sonyericsson/music/metadata/MusicInfoService;->startPlaylistSync(Landroid/content/Context;)V
 
-    .line 698
+    .line 722
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -160,7 +160,7 @@
 
     goto :goto_0
 
-    .line 700
+    .line 724
     :cond_1
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mPlaylistSyncHandler:Landroid/os/Handler;
 
@@ -172,7 +172,7 @@
 
     if-nez p1, :cond_2
 
-    .line 701
+    .line 725
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mPlaylistSyncHandler:Landroid/os/Handler;
 
     iget-object p2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mRunnable:Ljava/lang/Runnable;
@@ -185,13 +185,13 @@
     :goto_0
     return-void
 
-    .line 707
+    .line 731
     :cond_3
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/sonyericsson/music/metadata/MusicInfoService;->startPlaylistSync(Landroid/content/Context;)V
 
-    .line 708
+    .line 732
     iget-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/sonyericsson/music/metadata/MusicInfoService;->startHighResContainersSync(Landroid/content/Context;)V
@@ -202,17 +202,17 @@
 .method register()V
     .locals 3
 
-    .line 648
+    .line 672
     iget-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mRegistered:Z
 
     if-nez v0, :cond_1
 
-    .line 656
+    .line 680
     sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
 
     if-eqz v0, :cond_0
 
-    .line 657
+    .line 681
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -225,7 +225,7 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 660
+    .line 684
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mContext:Landroid/content/Context;
 
@@ -239,7 +239,7 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 662
+    .line 686
     iput-boolean v2, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mRegistered:Z
 
     :cond_1
@@ -249,12 +249,12 @@
 .method unregister()V
     .locals 1
 
-    .line 667
+    .line 691
     iget-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mRegistered:Z
 
     if-eqz v0, :cond_0
 
-    .line 672
+    .line 696
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -265,7 +265,7 @@
 
     const/4 v0, 0x0
 
-    .line 674
+    .line 698
     iput-boolean v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$PlaylistsContentObserver;->mRegistered:Z
 
     :cond_0

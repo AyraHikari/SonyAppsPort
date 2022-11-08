@@ -136,7 +136,7 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/sonyericsson/music/library/PlaylistsFragment;Lcom/sonyericsson/music/artdecoder/ArtDecoder;ZLcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;)V
     .locals 2
 
-    .line 135
+    .line 136
     sget-object v0, Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;->ALPHABETICAL:Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;
 
     if-ne p5, v0, :cond_0
@@ -148,6 +148,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 135
     :goto_0
     invoke-direct {p0, p1, v0}, Lcom/sonyericsson/music/library/RearrangeAdapter;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -989,12 +990,12 @@
 
     goto :goto_5
 
+    .line 238
     :cond_7
     iget-object v5, p0, Lcom/sonyericsson/music/library/PlaylistsAdapter;->mContext:Landroid/content/Context;
 
     const v6, 0x7f10018e
 
-    .line 238
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v5
@@ -1395,7 +1396,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0901fb
+    const p2, 0x7f0901fc
 
     .line 179
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1406,7 +1407,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const p2, 0x7f0901fc
+    const p2, 0x7f0901fd
 
     .line 180
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1634,7 +1635,7 @@
     .line 525
     iput-object p1, p0, Lcom/sonyericsson/music/library/PlaylistsAdapter;->mSortOrder:Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;
 
-    .line 526
+    .line 527
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistsAdapter;->mSortOrder:Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;
 
     sget-object v0, Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;->ALPHABETICAL:Lcom/sonyericsson/music/common/DBUtils$PlaylistSortOrder;
@@ -1648,6 +1649,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 526
     :goto_0
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/library/RearrangeAdapter;->setSortIndex(Ljava/lang/String;)V
 

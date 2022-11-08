@@ -58,7 +58,7 @@
 .method private addPermissionEntries(Landroid/content/Context;Landroid/view/View;[Lcom/sonyericsson/music/dialogs/PermissionsHowToEnableDialog$PermissionInfo;)V
     .locals 9
 
-    const v0, 0x7f09017c
+    const v0, 0x7f09017d
 
     .line 146
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -95,7 +95,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f090213
+    const v5, 0x7f090214
 
     .line 151
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -104,7 +104,7 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    const v6, 0x7f0901a0
+    const v6, 0x7f0901a1
 
     .line 152
     invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -231,7 +231,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0901e9
+    const v2, 0x7f0901ea
 
     .line 62
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

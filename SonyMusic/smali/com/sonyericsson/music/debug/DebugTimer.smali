@@ -46,6 +46,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 38
     :goto_0
     sput-object v0, Lcom/sonyericsson/music/debug/DebugTimer;->sMap:Ljava/lang/ThreadLocal;
 

@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 271
+    .line 270
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->values()[Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;
 
     move-result-object v0

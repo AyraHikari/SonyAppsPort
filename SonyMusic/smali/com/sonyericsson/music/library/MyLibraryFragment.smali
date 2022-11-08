@@ -203,7 +203,7 @@
 
     iput-object v2, p0, Lcom/sonyericsson/music/library/MyLibraryFragment;->mHandler:Landroid/os/Handler;
 
-    const v2, 0x7f090175
+    const v2, 0x7f090176
 
     .line 69
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

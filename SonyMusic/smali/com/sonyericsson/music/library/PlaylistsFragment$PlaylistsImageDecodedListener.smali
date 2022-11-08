@@ -32,7 +32,7 @@
 .method public constructor <init>(Landroid/widget/ImageView;Ljava/lang/String;Landroid/content/Context;)V
     .locals 2
 
-    .line 845
+    .line 866
     invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -41,14 +41,14 @@
 
     invoke-direct {p0, v0, v1, p3}, Lcom/sonyericsson/music/artdecoder/ArtDecoder$CachingColorOnDecodedListener;-><init>(Landroid/net/Uri;ILandroid/content/Context;)V
 
-    .line 846
+    .line 867
     new-instance p3, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p3, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p3, p0, Lcom/sonyericsson/music/library/PlaylistsFragment$PlaylistsImageDecodedListener;->mImageView:Ljava/lang/ref/WeakReference;
 
-    .line 847
+    .line 868
     iput-object p2, p0, Lcom/sonyericsson/music/library/PlaylistsFragment$PlaylistsImageDecodedListener;->mUrl:Ljava/lang/String;
 
     return-void
@@ -59,10 +59,10 @@
 .method public onDecoded(Landroid/graphics/Bitmap;)V
     .locals 3
 
-    .line 852
+    .line 873
     invoke-super {p0, p1}, Lcom/sonyericsson/music/artdecoder/ArtDecoder$CachingColorOnDecodedListener;->onDecoded(Landroid/graphics/Bitmap;)V
 
-    .line 854
+    .line 875
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistsFragment$PlaylistsImageDecodedListener;->mImageView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -75,7 +75,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 855
+    .line 876
     invoke-virtual {v0}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -88,7 +88,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 856
+    .line 877
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     :cond_0

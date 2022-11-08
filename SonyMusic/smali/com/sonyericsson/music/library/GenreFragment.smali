@@ -776,6 +776,7 @@
 
     new-instance v4, Lcom/sonyericsson/music/library/BaseFragment$MatcherData;
 
+    .line 510
     sget-boolean v5, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
 
     if-eqz v5, :cond_0
@@ -1130,7 +1131,7 @@
     .line 238
     iget-object p1, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mTitleHeaderView:Lcom/sonyericsson/music/ui/LibraryImageHeaderLayout;
 
-    const p3, 0x7f0901ea
+    const p3, 0x7f0901eb
 
     invoke-virtual {p1, p3}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 

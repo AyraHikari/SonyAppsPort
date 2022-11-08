@@ -509,7 +509,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0901e4
+    const p2, 0x7f0901e5
 
     .line 139
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -520,7 +520,7 @@
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/store/StoreFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    const p2, 0x7f0901e3
+    const p2, 0x7f0901e4
 
     .line 140
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -583,7 +583,7 @@
 
     invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    const p2, 0x7f090199
+    const p2, 0x7f09019a
 
     .line 150
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -1209,6 +1209,7 @@
 
     new-instance v3, Lcom/sonyericsson/music/library/BaseFragment$MatcherData;
 
+    .line 794
     sget-boolean v4, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
 
     if-eqz v4, :cond_0
@@ -2056,7 +2057,7 @@
     .line 285
     iget-object p1, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mTitleHeaderView:Lcom/sonyericsson/music/ui/LibraryImageHeaderLayout;
 
-    const p3, 0x7f0901ea
+    const p3, 0x7f0901eb
 
     invoke-virtual {p1, p3}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2069,7 +2070,7 @@
     .line 286
     iget-object p1, p0, Lcom/sonyericsson/music/library/LibraryListFragment;->mTitleHeaderView:Lcom/sonyericsson/music/ui/LibraryImageHeaderLayout;
 
-    const p3, 0x7f0901eb
+    const p3, 0x7f0901ec
 
     invoke-virtual {p1, p3}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2602,7 +2603,7 @@
         0x7f09010a -> :sswitch_3
         0x7f09010e -> :sswitch_2
         0x7f09010f -> :sswitch_1
-        0x7f090118 -> :sswitch_0
+        0x7f090119 -> :sswitch_0
     .end sparse-switch
 .end method
 

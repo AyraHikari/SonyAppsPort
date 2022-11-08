@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings version="1">
+    <groups type="stage">
+        <group>
+            <groups type="activities">
+                <group>
+                    <setting key="name">com.android.dialer.main.impl.MainActivity</setting>
+                    <setting key="package-name">com.sonymobile.android.dialer</setting>
+                    <setting key="position">0</setting>
+                </group>
+                <group>
+                    <setting key="name">.extensions.GoogleDialtactsActivity</setting>
+                    <setting key="package-name">com.google.android.dialer</setting>
+                    <setting key="position">0</setting>
+                </group>
+                <group>
+                    <setting key="name">.ui.ConversationListActivity</setting>
+                    <setting key="package-name">com.google.android.apps.messaging</setting>
+                    <setting key="position">1</setting>
+                </group>
+                <group>
+                    <setting key="name">com.google.android.apps.chrome.Main</setting>
+                    <setting key="package-name">com.android.chrome</setting>
+                    <setting key="position">2</setting>
+                </group>
+                <group>
+                    <setting key="name">.home.HomeActivity</setting>
+                    <setting key="package-name">com.google.android.apps.photos</setting>
+                    <setting key="position">3</setting>
+                </group>
+                <group>
+                    <setting key="name">.CameraActivity</setting>
+                    <setting key="package-name">com.sonyericsson.android.camera</setting>
+                    <setting key="position">4</setting>
+                </group>
+            </groups>
+        </group>
+    </groups>
+</settings>

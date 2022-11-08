@@ -1081,6 +1081,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 274
     iget-object v2, p0, Lcom/sonyericsson/music/player/PlayerState;->mPlayQueueCursor:Landroid/database/Cursor;
 
     if-nez v2, :cond_2
@@ -1089,7 +1090,6 @@
 
     goto :goto_2
 
-    .line 274
     :cond_2
     invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
 

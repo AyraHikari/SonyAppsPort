@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="com.android.launcher3" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <permission android:name="com.sonymobile.launcher.permission.HOTSEAT_EDU" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS"/>
+    <uses-permission android:name="android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.START_TASKS_FROM_RECENTS"/>
+    <uses-permission android:name="android.permission.REMOVE_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACTIVITY_TASKS"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.STOP_APP_SWITCHES"/>
+    <uses-permission android:name="android.permission.SET_ORIENTATION"/>
+    <uses-permission android:name="android.permission.READ_FRAME_BUFFER"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCESSIBILITY"/>
+    <uses-permission android:name="android.permission.MONITOR_INPUT"/>
+    <uses-permission android:name="android.permission.ALLOW_SLIPPERY_TOUCHES"/>
+    <uses-permission android:name="com.sonymobile.launcher.permission.HOTSEAT_EDU"/>
+    <uses-permission android:name="android.permission.SYSTEM_APPLICATION_OVERLAY"/>
+    <uses-permission android:name="com.sonymobile.freeformcontroller.permission.FREEFORMCONTROLLER_INTENT"/>
+    <permission android:description="@string/home_permission_provider_insert_badge_description" android:label="@string/home_permission_provider_insert_badge_label" android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" android:protectionLevel="normal"/>
+    <permission android:description="@string/home_permission_provider_insert_badge_description" android:label="@string/home_permission_provider_insert_badge_label" android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE_PROXY" android:protectionLevel="signatureOrSystem"/>
+    <permission android:description="@string/home_permission_provider_read_badge_description" android:label="@string/home_permission_provider_read_badge_label" android:name="com.sonymobile.home.permission.PROVIDER_READ_BADGE" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.sonymobile.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.sonymobile.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_READ_BADGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
+    <uses-permission android:name="android.permission.BIND_APPWIDGET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.READ_DEVICE_CONFIG"/>
+    <uses-permission android:name="android.permission.ROTATE_SURFACE_FLINGER"/>
+    <permission android:description="@string/permdesc_read_settings" android:label="@string/permlab_read_settings" android:name="com.sonymobile.launcher.permission.READ_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:description="@string/permdesc_write_settings" android:label="@string/permlab_write_settings" android:name="com.sonymobile.launcher.permission.WRITE_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.sonymobile.launcher.gameenhancer.permission.HideLauncherIconContentProvider" android:protectionLevel="privileged|signature"/>
+    <permission android:name="com.sonymobile.launcher.gameenhancer.permission.ACCESS_LAUNCHER_APP" android:protectionLevel="privileged|signature"/>
+    <uses-permission android:name="com.sonymobile.gameenhancer.permission.BIND_API_SERVICE"/>
+    <uses-permission android:name="com.sonymobile.gameenhancer.provider.permission.SharedPreferenceContentProvider"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <permission android:name="com.android.launcher3.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.android.launcher3.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:backupAgent="com.android.launcher3.LauncherBackupAgent" android:backupInForeground="true" android:extractNativeLibs="false" android:fullBackupContent="@xml/backupscheme" android:fullBackupOnly="true" android:hardwareAccelerated="true" android:icon="@drawable/somc_home_launcher_icon" android:label="@string/derived_app_name" android:largeHeap="@bool/config_largeHeap" android:manageSpaceActivity="com.sonymobile.launcher.gameenhancer.ManageSpaceActivity" android:name="com.sonymobile.launcher.XperiaLauncherApplication" android:restoreAnyVersion="true" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesNonSdkApi="true">
+        <service android:directBootAware="true" android:exported="true" android:name="com.android.quickstep.TouchInteractionService" android:permission="android.permission.STATUS_BAR_SERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.QUICKSTEP_SERVICE"/>
+            </intent-filter>
+        </service>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="density|keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.android.quickstep.RecentsActivity" android:resizeableActivity="true" android:resumeWhilePausing="true" android:screenOrientation="unspecified" android:stateNotNeeded="true" android:taskAffinity="" android:theme="@style/LauncherTheme"/>
+        <provider android:authorities="com.sonymobile.launcher" android:exported="true" android:grantUriPermissions="true" android:multiprocess="true" android:name="com.android.quickstep.LauncherSearchIndexablesProvider" android:permission="android.permission.READ_SEARCH_INDEXABLES">
+            <intent-filter>
+                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider android:authorities="com.sonymobile.launcher.overview.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/overview_file_provider_paths"/>
+        </provider>
+        <activity android:clearTaskOnLaunch="true" android:exported="false" android:launchMode="singleTask" android:name="com.android.launcher3.proxy.ProxyActivityStarter" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:exported="true" android:name="com.android.quickstep.interaction.GestureSandboxActivity">
+            <intent-filter>
+                <action android:name="com.android.quickstep.action.GESTURE_SANDBOX"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:exported="true" android:label="@string/allset_title" android:name="com.android.quickstep.interaction.AllSetActivity" android:permission="android.permission.REBOOT" android:theme="@style/AllSetTheme">
+            <intent-filter>
+                <action android:name="com.android.quickstep.action.GESTURE_ONBOARDING_ALL_SET"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:clearTaskOnLaunch="true" android:exported="true" android:launchMode="singleTask" android:name="com.android.launcher3.hybridhotseat.HotseatEduActivity" android:noHistory="true" android:permission="com.sonymobile.launcher.permission.HOTSEAT_EDU" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="com.android.launcher3.action.SHOW_HYBRID_HOTSEAT_EDU"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <uses-library android:name="com.sonyericsson.idd"/>
+        <service android:name="com.sonymobile.launcher.idd.IddJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:enabled="true" android:exported="true" android:launchMode="singleTask" android:name="com.sonymobile.launcher.XperiaLauncher" android:resizeableActivity="true" android:resumeWhilePausing="true" android:screenOrientation="unspecified" android:stateNotNeeded="true" android:taskAffinity="" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.SHOW_WORK_APPS"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.MONKEY"/>
+                <category android:name="android.intent.category.LAUNCHER_APP"/>
+            </intent-filter>
+            <meta-data android:name="com.android.launcher3.grid.control" android:value="com.sonymobile.launcher.grid_control"/>
+        </activity>
+        <provider android:authorities="com.sonymobile.home.resourceprovider" android:exported="true" android:name="com.sonymobile.launcher.provider.BadgeResourceProvider" android:syncable="false"/>
+        <receiver android:exported="true" android:name="com.sonymobile.launcher.gameenhancer.DeleteGameEnhancerDataReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED"/>
+                <data android:scheme="package" android:sspPrefix="com.sonymobile.gameenhancer"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.sonymobile.launcher.XperiaSessionCommitReceiver">
+            <intent-filter>
+                <action android:name="android.content.pm.action.SESSION_COMMITTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.android.launcher3.AppWidgetsRestoredReceiver">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_HOST_RESTORED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:label="@string/notification_dots_service_title" android:name="com.android.launcher3.notification.NotificationListener" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.sonymobile.launcher.gameenhancer.GameEnhancerShortcutService" android:permission="com.sonymobile.launcher.gameenhancer.permission.ACCESS_LAUNCHER_APP"/>
+        <meta-data android:name="android.nfc.disable_beam_default" android:value="true"/>
+        <activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:exported="true" android:name="com.android.launcher3.dragndrop.AddItemActivity" android:theme="@style/AddItemActivityTheme">
+            <intent-filter>
+                <action android:name="android.content.pm.action.CONFIRM_PIN_SHORTCUT"/>
+                <action android:name="android.content.pm.action.CONFIRM_PIN_APPWIDGET"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.sonymobile.launcher.settings" android:exported="true" android:name="com.android.launcher3.LauncherProvider" android:readPermission="com.sonymobile.launcher.permission.READ_SETTINGS" android:writePermission="com.sonymobile.launcher.permission.WRITE_SETTINGS"/>
+        <provider android:authorities="com.sonymobile.launcher.grid_control" android:exported="true" android:name="com.android.launcher3.graphics.GridCustomizationsProvider"/>
+        <provider android:authorities="com.sonymobile.launcher.hidelaunchericonscontentprovider" android:exported="true" android:name="com.sonymobile.launcher.gameenhancer.HideLauncherIconContentProvider" android:permission="com.sonymobile.launcher.gameenhancer.permission.HideLauncherIconContentProvider"/>
+        <activity android:autoRemoveFromRecents="true" android:exported="true" android:label="@string/settings_button_text" android:name="com.android.launcher3.settings.SettingsActivity" android:theme="@style/HomeSettings.Theme">
+            <intent-filter>
+                <action android:name="android.intent.action.APPLICATION_PREFERENCES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.sonymobile.launcher.TestInfo" android:enabled="false" android:exported="true" android:name="com.android.launcher3.testing.TestInformationProvider" android:readPermission="android.permission.WRITE_SECURE_SETTINGS" android:writePermission="android.permission.WRITE_SECURE_SETTINGS"/>
+        <activity android:enabled="true" android:exported="true" android:launchMode="singleTop" android:name="com.android.launcher3.secondarydisplay.SecondaryDisplayLauncher" android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.SECONDARY_HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.android.launcher3.androidx-startup" android:name="androidx.startup.InitializationProvider"/>
+        <activity android:launchMode="singleTask" android:name="com.sonymobile.launcher.gameenhancer.ManageSpaceActivity" android:taskAffinity="com.sonymobile.launcher.gameenhancer.TASK_MANAGE_SPACE" android:theme="@style/Transparent"/>
+        <activity android:excludeFromRecents="true" android:name="androidx.slice.compat.SlicePermissionActivity"/>
+    </application>
+</manifest>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/all_apps_menu_sort" android:title="@string/all_apps_options_menu_sort_apps" />
+    <item android:id="@id/all_apps_menu_rearrange" android:title="@string/all_apps_options_menu_rearrange" />
+    <item android:id="@id/all_apps_menu_exit" android:title="@string/all_apps_options_menu_rearrange_exit" />
+</menu>

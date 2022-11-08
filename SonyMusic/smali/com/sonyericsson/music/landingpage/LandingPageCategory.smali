@@ -181,10 +181,10 @@
 
     goto :goto_0
 
+    .line 241
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/landingpage/LandingPageCategory;->mAdapter:Lcom/sonyericsson/music/landingpage/LandingPageCategoryAdapter;
 
-    .line 241
     invoke-virtual {v0}, Lcom/sonyericsson/music/landingpage/LandingPageCategoryAdapter;->getCurrentData()Landroid/database/Cursor;
 
     move-result-object v0

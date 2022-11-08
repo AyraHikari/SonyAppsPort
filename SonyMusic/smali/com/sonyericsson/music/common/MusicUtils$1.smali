@@ -1,4 +1,4 @@
-.class final Lcom/sonyericsson/music/common/MusicUtils$1;
+.class Lcom/sonyericsson/music/common/MusicUtils$1;
 .super Ljava/lang/Object;
 .source "MusicUtils.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -31,7 +31,7 @@
 .method constructor <init>(Landroid/app/Activity;Landroidx/fragment/app/Fragment;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 179
+    .line 183
     iput-object p1, p0, Lcom/sonyericsson/music/common/MusicUtils$1;->val$activity:Landroid/app/Activity;
 
     iput-object p2, p0, Lcom/sonyericsson/music/common/MusicUtils$1;->val$player:Landroidx/fragment/app/Fragment;
@@ -50,19 +50,19 @@
 .method public run()V
     .locals 5
 
-    .line 182
+    .line 186
     iget-object v0, p0, Lcom/sonyericsson/music/common/MusicUtils$1;->val$activity:Landroid/app/Activity;
 
     instance-of v1, v0, Lcom/sonyericsson/music/MusicActivity;
 
     if-eqz v1, :cond_1
 
-    .line 183
+    .line 187
     move-object v1, v0
 
     check-cast v1, Lcom/sonyericsson/music/MusicActivity;
 
-    .line 184
+    .line 188
     invoke-static {v0}, Lcom/sonymobile/music/common/FragmentUtil;->isFragmentTransactionAllowed(Landroid/app/Activity;)Z
 
     move-result v0
@@ -71,7 +71,7 @@
 
     return-void
 
-    .line 187
+    .line 191
     :cond_0
     invoke-virtual {v1}, Lcom/sonyericsson/music/MusicActivity;->getMusicFragmentManager()Lcom/sonyericsson/music/MusicFragmentManager;
 
@@ -85,7 +85,7 @@
 
     xor-int/lit8 v4, v3, 0x1
 
-    .line 188
+    .line 192
     invoke-virtual {v0, v1, v2, v4, v3}, Lcom/sonyericsson/music/MusicFragmentManager;->openFragment(Landroidx/fragment/app/Fragment;Ljava/lang/String;ZZ)V
 
     :cond_1

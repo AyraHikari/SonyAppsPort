@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/library/LibraryListFragment;)V
     .locals 0
 
-    .line 69
+    .line 81
     iput-object p1, p0, Lcom/sonyericsson/music/library/LibraryListFragment$1;->this$0:Lcom/sonyericsson/music/library/LibraryListFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 72
+    .line 84
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment$1;->this$0:Lcom/sonyericsson/music/library/LibraryListFragment;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 73
+    .line 85
     iget-object v1, p0, Lcom/sonyericsson/music/library/LibraryListFragment$1;->this$0:Lcom/sonyericsson/music/library/LibraryListFragment;
 
     iget-object v1, v1, Lcom/sonyericsson/music/library/LibraryListFragment;->mAdapter:Lcom/sonyericsson/music/library/LibraryListAdapter;
@@ -56,7 +56,7 @@
 
     const/4 v2, 0x1
 
-    .line 74
+    .line 86
     invoke-virtual {v1, v0, v2}, Lcom/sonyericsson/music/library/LibraryListAdapter;->setLoading(Landroid/content/Context;Z)V
 
     :cond_0

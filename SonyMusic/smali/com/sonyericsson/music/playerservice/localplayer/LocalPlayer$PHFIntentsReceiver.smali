@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;)V
     .locals 0
 
-    .line 2259
+    .line 2301
     iput-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,34 +35,34 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 8
 
-    .line 2262
+    .line 2304
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "android.media.AUDIO_BECOMING_NOISY"
 
-    .line 2264
+    .line 2306
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 2283
+    .line 2325
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     const/4 p2, 0x0
 
     iput-boolean p2, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mResumePlayback:Z
 
-    .line 2284
+    .line 2326
     iput-boolean p2, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mIsInContinuousPlayingState:Z
 
-    .line 2285
+    .line 2327
     invoke-virtual {p1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->discardWinding()V
 
-    .line 2287
+    .line 2329
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-static {p1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->access$100(Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;)Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -73,21 +73,21 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 2288
+    .line 2330
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     iget-object v0, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mAudioPlayer:Lcom/sonymobile/music/audioplayer/AudioPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 2289
+    .line 2331
     invoke-virtual {v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->getCurrentPosition()I
 
     move-result v0
 
     iput v0, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mSavedPlaybackPosition:I
 
-    .line 2292
+    .line 2334
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     iget-object p1, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mAudioPlayer:Lcom/sonymobile/music/audioplayer/AudioPlayer;
@@ -96,29 +96,29 @@
 
     goto :goto_0
 
-    .line 2294
+    .line 2336
     :cond_0
     iput p2, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mSavedPlaybackPosition:I
 
-    .line 2297
+    .line 2339
     :goto_0
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->stopReleaseTimer()V
 
-    .line 2298
+    .line 2340
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0, p2}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->releaseAudioPlayer(ZZ)V
 
-    .line 2299
+    .line 2341
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     iput-boolean v0, p1, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->mReleasedToSavePower:Z
 
-    .line 2302
+    .line 2344
     :cond_1
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
@@ -132,7 +132,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 2306
+    .line 2348
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-static {p1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->access$2100(Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;)Lcom/sonyericsson/music/common/Track;
@@ -143,7 +143,7 @@
 
     move-result-object p1
 
-    .line 2307
+    .line 2349
     iget-object v1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-static {v1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->access$2400(Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;)Lcom/sonyericsson/music/playerservice/PlayerServiceState;
@@ -166,7 +166,7 @@
 
     iget-object v1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
-    .line 2308
+    .line 2350
     invoke-static {v1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->access$2300(Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;)Lcom/sonyericsson/music/common/Track;
 
     move-result-object v1
@@ -181,10 +181,10 @@
 
     move-object v4, p1
 
-    .line 2307
+    .line 2349
     invoke-virtual/range {v2 .. v7}, Lcom/sonyericsson/music/playerservice/PlayerServiceState;->notifyPaused(Ljava/lang/String;Ljava/lang/String;IZI)V
 
-    .line 2313
+    .line 2355
     iget-object v1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-static {v1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->access$2600(Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;)Lcom/sonyericsson/music/playerservice/PlayerServiceState;
@@ -209,7 +209,7 @@
 
     goto :goto_1
 
-    .line 2316
+    .line 2358
     :cond_2
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
@@ -229,7 +229,7 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/sonyericsson/music/playerservice/PlayerServiceState;->notifyPaused(Ljava/lang/String;Ljava/lang/String;IZI)V
 
-    .line 2318
+    .line 2360
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 
     invoke-static {p1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;->access$2800(Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;)Lcom/sonyericsson/music/playerservice/PlayerServiceState;
@@ -240,7 +240,7 @@
 
     invoke-virtual {p1, v1, v1, v0, p2}, Lcom/sonyericsson/music/playerservice/PlayerServiceState;->notifyBuffering(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 2321
+    .line 2363
     :goto_1
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$PHFIntentsReceiver;->this$0:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer;
 

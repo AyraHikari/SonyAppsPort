@@ -25,7 +25,7 @@
     .line 223
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f09021b
+    const v0, 0x7f09021c
 
     .line 224
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

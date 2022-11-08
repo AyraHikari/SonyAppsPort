@@ -26,16 +26,16 @@
 .method constructor <init>(Ljava/lang/String;ZLandroid/os/Parcelable;)V
     .locals 0
 
-    .line 1006
+    .line 1012
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1007
+    .line 1013
     iput-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment$RetainObject;->mQueryText:Ljava/lang/String;
 
-    .line 1008
+    .line 1014
     iput-boolean p2, p0, Lcom/sonyericsson/music/search/SearchFragment$RetainObject;->mToggleInput:Z
 
-    .line 1009
+    .line 1015
     iput-object p3, p0, Lcom/sonyericsson/music/search/SearchFragment$RetainObject;->mLayoutManagerState:Landroid/os/Parcelable;
 
     return-void
@@ -46,7 +46,7 @@
 .method getLayoutManagerState()Landroid/os/Parcelable;
     .locals 1
 
-    .line 1021
+    .line 1027
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment$RetainObject;->mLayoutManagerState:Landroid/os/Parcelable;
 
     return-object v0
@@ -55,7 +55,7 @@
 .method getQueryText()Ljava/lang/String;
     .locals 1
 
-    .line 1013
+    .line 1019
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment$RetainObject;->mQueryText:Ljava/lang/String;
 
     return-object v0
@@ -64,7 +64,7 @@
 .method shouldToggleInput()Z
     .locals 1
 
-    .line 1017
+    .line 1023
     iget-boolean v0, p0, Lcom/sonyericsson/music/search/SearchFragment$RetainObject;->mToggleInput:Z
 
     return v0

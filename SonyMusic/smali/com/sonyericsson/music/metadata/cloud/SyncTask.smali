@@ -195,6 +195,7 @@
 
     iget v0, p0, Lcom/sonyericsson/music/metadata/cloud/SyncTask;->mAccountId:I
 
+    .line 52
     iget-boolean v1, p0, Lcom/sonyericsson/music/metadata/cloud/SyncTask;->mIsManualSync:Z
 
     const/4 v2, 0x1
@@ -208,6 +209,7 @@
     :cond_0
     const/4 v1, 0x1
 
+    .line 51
     :goto_0
     invoke-static {p1, v0, v1}, Lcom/sonyericsson/music/metadata/cloud/db/AccountTable;->updateSyncState(Landroid/content/ContentResolver;II)I
 

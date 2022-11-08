@@ -260,11 +260,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 96
     sget-object v1, Lcom/sonyericsson/music/CastGa;->sCastDevices:Ljava/util/HashSet;
 
     const-string v2, "GC"
 
-    .line 96
     invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v1
@@ -284,11 +284,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 98
     sget-object v1, Lcom/sonyericsson/music/CastGa;->sCastDevices:Ljava/util/HashSet;
 
     const-string v2, "DC"
 
-    .line 98
     invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v1
@@ -308,11 +308,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 100
     sget-object v1, Lcom/sonyericsson/music/CastGa;->sCastDevices:Ljava/util/HashSet;
 
     const-string v2, "LA"
 
-    .line 100
     invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v1

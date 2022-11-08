@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/library/PlaylistsFragment;)V
     .locals 0
 
-    .line 260
+    .line 262
     iput-object p1, p0, Lcom/sonyericsson/music/library/PlaylistsFragment$2;->this$0:Lcom/sonyericsson/music/library/PlaylistsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 264
+    .line 266
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistsFragment$2;->this$0:Lcom/sonyericsson/music/library/PlaylistsFragment;
 
     const/4 v0, 0x0

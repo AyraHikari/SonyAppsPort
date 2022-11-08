@@ -213,7 +213,7 @@
     .line 206
     invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
 
-    const v1, 0x7f0901fb
+    const v1, 0x7f0901fc
 
     .line 207
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -337,6 +337,7 @@
 
     new-instance v3, Lcom/sonyericsson/music/library/BaseFragment$MatcherData;
 
+    .line 381
     sget-boolean v4, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
 
     if-eqz v4, :cond_0

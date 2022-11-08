@@ -75,7 +75,7 @@
     .line 186
     invoke-static {p1, v0, v0}, Lcom/sonyericsson/music/common/UIUtils;->setSystemUIVisibilityPreKK(Landroid/view/View;IZ)Z
 
-    const v0, 0x7f090249
+    const v0, 0x7f09024a
 
     .line 192
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -84,7 +84,7 @@
 
     check-cast v0, Lcom/sonyericsson/music/authentication/SignInIntroductionFragmentShadowWrapper;
 
-    const v1, 0x7f090174
+    const v1, 0x7f090175
 
     .line 193
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

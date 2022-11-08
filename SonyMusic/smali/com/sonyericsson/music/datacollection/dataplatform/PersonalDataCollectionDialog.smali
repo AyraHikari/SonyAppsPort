@@ -132,7 +132,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
     :cond_0
-    const v3, 0x7f09011f
+    const v3, 0x7f090120
 
     .line 55
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -168,7 +168,7 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    const v7, 0x7f0901c7
+    const v7, 0x7f0901c8
 
     .line 59
     invoke-virtual {v1, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -177,7 +177,7 @@
 
     check-cast v7, Landroid/widget/TextView;
 
-    const v8, 0x7f0901c6
+    const v8, 0x7f0901c7
 
     .line 60
     invoke-virtual {v1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;

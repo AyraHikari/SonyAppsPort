@@ -310,6 +310,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 131
     sget-object p0, Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;->ACCEPTED:Lcom/sonymobile/music/common/ServiceProcessPreferenceUtils$WifiAndMobileDataAccepted;
 
     goto :goto_0

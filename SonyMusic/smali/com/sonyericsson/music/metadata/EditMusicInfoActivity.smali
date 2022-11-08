@@ -408,7 +408,7 @@
 
     move-result v0
 
-    const v2, 0x7f0901aa
+    const v2, 0x7f0901ab
 
     if-ne v0, v2, :cond_2
 
@@ -509,7 +509,7 @@
 
     if-eqz p1, :cond_0
 
-    const v1, 0x7f0901ab
+    const v1, 0x7f0901ac
 
     xor-int/lit8 v2, p2, 0x1
 

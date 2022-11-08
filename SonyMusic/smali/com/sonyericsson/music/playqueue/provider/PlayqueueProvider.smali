@@ -842,7 +842,7 @@
 
     move-result-object v0
 
-    .line 944
+    .line 945
     iget-object v1, p0, Lcom/sonyericsson/music/playqueue/provider/PlayqueueProvider;->mMemCache:Ljava/util/List;
 
     if-eqz v1, :cond_0
@@ -856,7 +856,7 @@
     :cond_0
     sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    .line 946
+    .line 947
     :goto_0
     iget-object v1, p0, Lcom/sonyericsson/music/playqueue/provider/PlayqueueProvider;->mInserts:Ljava/util/List;
 
@@ -871,7 +871,7 @@
     :cond_1
     sget-object v3, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    .line 948
+    .line 949
     :goto_1
     iget-object v1, p0, Lcom/sonyericsson/music/playqueue/provider/PlayqueueProvider;->mCacheInsertMap:Ljava/util/List;
 
@@ -883,6 +883,7 @@
 
     goto :goto_2
 
+    .line 950
     :cond_2
     sget-object v4, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 

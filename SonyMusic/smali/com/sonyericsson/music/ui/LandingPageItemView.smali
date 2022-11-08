@@ -475,7 +475,7 @@
 .method private dp(F)F
     .locals 1
 
-    .line 575
+    .line 584
     iget v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mDensity:F
 
     mul-float v0, v0, p1
@@ -486,7 +486,7 @@
 .method private ellipsize(Ljava/lang/String;Landroid/text/TextPaint;)Ljava/lang/String;
     .locals 8
 
-    .line 459
+    .line 468
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v0
@@ -495,7 +495,7 @@
 
     return-object p1
 
-    .line 465
+    .line 474
     :cond_0
     iget v1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mBackPlateHorizontalPadding:I
 
@@ -503,7 +503,7 @@
 
     sub-int/2addr v0, v1
 
-    .line 466
+    .line 475
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingLeft()I
 
     move-result v1
@@ -526,7 +526,7 @@
 
     sub-float v4, v0, v1
 
-    .line 467
+    .line 476
     sget-object v5, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     const/4 v6, 0x1
@@ -541,7 +541,7 @@
 
     move-result-object p1
 
-    .line 468
+    .line 477
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -818,7 +818,7 @@
 .method private loadResourceDrawable(IZ)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 484
+    .line 493
     sget-object v0, Lcom/sonyericsson/music/ui/LandingPageItemView;->CACHE:Landroid/util/LruCache;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -833,7 +833,7 @@
 
     if-nez v0, :cond_1
 
-    .line 486
+    .line 495
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -844,10 +844,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 488
+    .line 497
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    .line 490
+    .line 499
     :cond_0
     sget-object p2, Lcom/sonyericsson/music/ui/LandingPageItemView;->CACHE:Landroid/util/LruCache;
 
@@ -857,7 +857,7 @@
 
     invoke-virtual {p2, p1, v0}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 492
+    .line 501
     :cond_1
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
@@ -877,7 +877,7 @@
 .method private loadThemeDrawable(I)Landroid/graphics/drawable/Drawable;
     .locals 3
 
-    .line 497
+    .line 506
     sget-object v0, Lcom/sonyericsson/music/ui/LandingPageItemView;->CACHE:Landroid/util/LruCache;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -894,14 +894,14 @@
 
     const/4 v0, 0x1
 
-    .line 499
+    .line 508
     new-array v0, v0, [I
 
     const/4 v1, 0x0
 
     aput p1, v0, v1
 
-    .line 500
+    .line 509
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -910,15 +910,15 @@
 
     move-result-object v0
 
-    .line 501
+    .line 510
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 502
+    .line 511
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 503
+    .line 512
     sget-object v0, Lcom/sonyericsson/music/ui/LandingPageItemView;->CACHE:Landroid/util/LruCache;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -929,7 +929,7 @@
 
     move-object v0, v1
 
-    .line 505
+    .line 514
     :cond_0
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
@@ -949,12 +949,12 @@
 .method private notifyOnContextMenuClicked()V
     .locals 1
 
-    .line 563
+    .line 572
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mListener:Lcom/sonyericsson/music/ui/LandingPageItemView$OnClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 564
+    .line 573
     invoke-interface {v0, p0}, Lcom/sonyericsson/music/ui/LandingPageItemView$OnClickListener;->onContextMenuClicked(Landroid/view/View;)V
 
     :cond_0
@@ -964,12 +964,12 @@
 .method private notifyOnItemClicked()V
     .locals 1
 
-    .line 557
+    .line 566
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mListener:Lcom/sonyericsson/music/ui/LandingPageItemView$OnClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 558
+    .line 567
     invoke-interface {v0, p0}, Lcom/sonyericsson/music/ui/LandingPageItemView$OnClickListener;->onItemClicked(Landroid/view/View;)V
 
     :cond_0
@@ -979,12 +979,12 @@
 .method private notifyOnLongPressed()V
     .locals 1
 
-    .line 569
+    .line 578
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mListener:Lcom/sonyericsson/music/ui/LandingPageItemView$OnClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 570
+    .line 579
     invoke-interface {v0, p0}, Lcom/sonyericsson/music/ui/LandingPageItemView$OnClickListener;->onItemLongPressed(Landroid/view/View;)V
 
     :cond_0
@@ -994,12 +994,12 @@
 .method private setHiResBounds()V
     .locals 5
 
-    .line 509
+    .line 518
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mHiResIcon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 510
+    .line 519
     iget-object v1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtRect:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->bottom:I
@@ -1008,24 +1008,24 @@
 
     sub-int/2addr v1, v2
 
-    .line 511
+    .line 520
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v0
 
-    .line 512
+    .line 521
     iget-object v2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mHiResIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v2
 
-    .line 513
+    .line 522
     iget-boolean v3, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mIsRtl:Z
 
     if-eqz v3, :cond_0
 
-    .line 514
+    .line 523
     iget-object v3, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtRect:Landroid/graphics/Rect;
 
     iget v3, v3, Landroid/graphics/Rect;->left:I
@@ -1034,7 +1034,7 @@
 
     add-int/2addr v3, v4
 
-    .line 515
+    .line 524
     iget-object v4, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mHiResIcon:Landroid/graphics/drawable/Drawable;
 
     sub-int v0, v1, v0
@@ -1045,7 +1045,7 @@
 
     goto :goto_0
 
-    .line 517
+    .line 526
     :cond_0
     iget-object v3, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtRect:Landroid/graphics/Rect;
 
@@ -1055,7 +1055,7 @@
 
     sub-int/2addr v3, v4
 
-    .line 518
+    .line 527
     iget-object v4, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mHiResIcon:Landroid/graphics/drawable/Drawable;
 
     sub-int v2, v3, v2
@@ -1072,25 +1072,25 @@
 .method private setPlayingStateBounds()V
     .locals 5
 
-    .line 524
+    .line 533
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mPlayingState:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 525
+    .line 534
     iget v1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mDefaultIconSize:I
 
-    .line 526
+    .line 535
     iget-object v2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtRect:Landroid/graphics/Rect;
 
     iget v3, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 527
+    .line 536
     iget-boolean v4, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mIsRtl:Z
 
     if-eqz v4, :cond_0
 
-    .line 528
+    .line 537
     iget v2, v2, Landroid/graphics/Rect;->right:I
 
     iget v4, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mSmallIconPadding:I
@@ -1101,12 +1101,12 @@
 
     sub-int v1, v3, v1
 
-    .line 529
+    .line 538
     invoke-virtual {v0, v4, v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     goto :goto_0
 
-    .line 531
+    .line 540
     :cond_0
     iget v2, v2, Landroid/graphics/Rect;->left:I
 
@@ -1118,7 +1118,7 @@
 
     add-int/2addr v1, v2
 
-    .line 532
+    .line 541
     invoke-virtual {v0, v2, v4, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     :cond_1
@@ -1129,14 +1129,14 @@
 .method private setRippleState(Z)V
     .locals 2
 
-    .line 538
+    .line 547
     iget-boolean v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextRippleState:Z
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 543
+    .line 552
     :cond_0
     iput-boolean p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextRippleState:Z
 
@@ -1144,28 +1144,28 @@
 
     if-eqz p1, :cond_1
 
-    .line 546
+    .line 555
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextRipple:Landroid/graphics/drawable/Drawable;
 
     sget-object v1, Lcom/sonyericsson/music/ui/LandingPageItemView;->RIPPLE_PRESSED_STATE:[I
 
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 547
+    .line 556
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextRipple:Landroid/graphics/drawable/Drawable;
 
     const/4 v1, 0x1
 
     invoke-virtual {p1, v1, v1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
-    .line 548
+    .line 557
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextRipple:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
     goto :goto_0
 
-    .line 550
+    .line 559
     :cond_1
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextRipple:Landroid/graphics/drawable/Drawable;
 
@@ -1175,7 +1175,7 @@
 
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 551
+    .line 560
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextRipple:Landroid/graphics/drawable/Drawable;
 
     new-instance v1, Lcom/sonyericsson/music/ui/LandingPageItemView$InvalidateCallback;
@@ -1184,7 +1184,7 @@
 
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 553
+    .line 562
     :goto_0
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
@@ -1194,7 +1194,7 @@
 .method private sp(F)F
     .locals 1
 
-    .line 579
+    .line 588
     iget v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mScaledDensity:F
 
     mul-float v0, v0, p1
@@ -1207,20 +1207,20 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 10
 
-    .line 415
+    .line 424
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 418
+    .line 427
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArt:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 419
+    .line 428
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 421
+    .line 430
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtRect:Landroid/graphics/Rect;
 
@@ -1228,36 +1228,36 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 426
+    .line 435
     :goto_0
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mPlayingState:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 427
+    .line 436
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtShadow:Lcom/sonyericsson/music/ui/ExpLinearShadow;
 
     invoke-virtual {v0, p1}, Lcom/sonyericsson/music/ui/ExpLinearShadow;->draw(Landroid/graphics/Canvas;)V
 
-    .line 430
+    .line 439
     :cond_1
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mPlayingState:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_2
 
-    .line 431
+    .line 440
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 434
+    .line 443
     :cond_2
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mHiResIcon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_3
 
-    .line 435
+    .line 444
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 438
+    .line 447
     :cond_3
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTitleShortened:Ljava/lang/String;
 
@@ -1267,20 +1267,20 @@
 
     if-eqz v0, :cond_4
 
-    .line 439
+    .line 448
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v6
 
-    .line 440
+    .line 449
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTitlePosition:[F
 
     aget v7, v0, v2
 
-    .line 441
+    .line 450
     aget v8, v0, v1
 
-    .line 442
+    .line 451
     iget-object v4, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTitleShortened:Ljava/lang/String;
 
     const/4 v5, 0x0
@@ -1291,26 +1291,26 @@
 
     invoke-virtual/range {v3 .. v9}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;IIFFLandroid/graphics/Paint;)V
 
-    .line 445
+    .line 454
     :cond_4
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mSubtitleShortened:Ljava/lang/String;
 
     if-eqz v0, :cond_5
 
-    .line 446
+    .line 455
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v6
 
-    .line 447
+    .line 456
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mSubtitlePosition:[F
 
     aget v7, v0, v2
 
-    .line 448
+    .line 457
     aget v8, v0, v1
 
-    .line 449
+    .line 458
     iget-object v4, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mSubtitleShortened:Ljava/lang/String;
 
     const/4 v5, 0x0
@@ -1321,13 +1321,13 @@
 
     invoke-virtual/range {v3 .. v9}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;IIFFLandroid/graphics/Paint;)V
 
-    .line 453
+    .line 462
     :cond_5
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextRipple:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 455
+    .line 464
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mDotPositions:[F
 
     iget-object v1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextPaint:Landroid/graphics/Paint;
@@ -1345,82 +1345,89 @@
 
     move-result p2
 
-    const/16 v0, 0x42
+    const/4 v0, 0x1
 
-    if-eq p1, v0, :cond_1
+    if-eqz p2, :cond_0
 
-    const/16 v0, 0x17
+    return v0
 
-    if-ne p1, v0, :cond_0
+    :cond_0
+    const/16 p2, 0x42
+
+    if-eq p1, p2, :cond_2
+
+    const/16 p2, 0x17
+
+    if-ne p1, p2, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    return p2
-
-    .line 177
     :cond_1
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 179
+    :cond_2
     :goto_0
     invoke-direct {p0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->notifyOnItemClicked()V
 
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
 .method protected onLayout(ZIIII)V
     .locals 7
 
-    .line 355
+    .line 364
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
     sub-int/2addr p4, p2
 
-    .line 358
+    .line 367
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingTop()I
 
     move-result p1
 
-    .line 359
+    .line 368
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingLeft()I
 
     move-result p2
 
-    .line 360
+    .line 369
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingRight()I
 
     move-result p3
 
     sub-int/2addr p4, p3
 
-    .line 362
+    .line 371
     iget p3, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtSize:I
 
     add-int/2addr p3, p1
 
     int-to-float p5, p3
 
-    .line 363
+    .line 372
     iget v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mBackPlateHeight:F
 
     add-float/2addr v0, p5
 
-    .line 365
+    .line 374
     iget-object v1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1, p2, p1, p4, p3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 367
+    .line 376
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArt:Landroid/graphics/drawable/Drawable;
 
     if-eqz p1, :cond_0
 
-    .line 368
+    .line 377
     iget-object v1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 371
+    .line 380
     :cond_0
     iget p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtSize:I
 
@@ -1432,39 +1439,39 @@
 
     div-int/2addr p1, v2
 
-    .line 372
+    .line 381
     new-instance v3, Landroid/graphics/Rect;
 
     iget-object v4, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtRect:Landroid/graphics/Rect;
 
     invoke-direct {v3, v4}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 373
+    .line 382
     iget v4, v3, Landroid/graphics/Rect;->top:I
 
     add-int/2addr v4, p1
 
     iput v4, v3, Landroid/graphics/Rect;->top:I
 
-    .line 374
+    .line 383
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtShadow:Lcom/sonyericsson/music/ui/ExpLinearShadow;
 
     invoke-virtual {p1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 376
+    .line 385
     invoke-direct {p0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->setHiResBounds()V
 
-    .line 377
+    .line 386
     invoke-direct {p0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->setPlayingStateBounds()V
 
-    .line 379
+    .line 388
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/graphics/Paint;->getStrokeWidth()F
 
     move-result p1
 
-    .line 380
+    .line 389
     iget-object v3, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v3}, Landroid/graphics/Paint;->getStrokeWidth()F
@@ -1475,14 +1482,14 @@
 
     div-float/2addr v3, v4
 
-    .line 381
+    .line 390
     iget-boolean v5, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mIsRtl:Z
 
     const/4 v6, 0x0
 
     if-eqz v5, :cond_1
 
-    .line 382
+    .line 391
     iget-object p4, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mDotPositions:[F
 
     iget v5, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mBackPlateHorizontalPadding:I
@@ -1497,7 +1504,7 @@
 
     goto :goto_0
 
-    .line 384
+    .line 393
     :cond_1
     iget-object p2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mDotPositions:[F
 
@@ -1511,7 +1518,7 @@
 
     aput p4, p2, v6
 
-    .line 386
+    .line 395
     :goto_0
     iget-object p2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mDotPositions:[F
 
@@ -1525,12 +1532,12 @@
 
     aput p5, p2, p4
 
-    .line 387
+    .line 396
     aget p5, p2, v6
 
     aput p5, p2, v1
 
-    .line 388
+    .line 397
     aget p5, p2, p4
 
     sub-float/2addr p5, p1
@@ -1541,14 +1548,14 @@
 
     const/4 p5, 0x4
 
-    .line 389
+    .line 398
     aget v1, p2, v6
 
     aput v1, p2, p5
 
     const/4 p5, 0x5
 
-    .line 390
+    .line 399
     aget v1, p2, p4
 
     add-float/2addr v1, p1
@@ -1557,14 +1564,14 @@
 
     aput v1, p2, p5
 
-    .line 392
+    .line 401
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextRipple:Landroid/graphics/drawable/Drawable;
 
     aget p2, p2, v6
 
     const/high16 p5, 0x41c00000    # 24.0f
 
-    .line 393
+    .line 402
     invoke-direct {p0, p5}, Lcom/sonyericsson/music/ui/LandingPageItemView;->dp(F)F
 
     move-result v1
@@ -1579,7 +1586,7 @@
 
     aget v1, v1, v6
 
-    .line 395
+    .line 404
     invoke-direct {p0, p5}, Lcom/sonyericsson/music/ui/LandingPageItemView;->dp(F)F
 
     move-result p5
@@ -1590,15 +1597,15 @@
 
     move-result p5
 
-    .line 396
+    .line 405
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
     move-result v1
 
-    .line 392
+    .line 401
     invoke-virtual {p1, p2, p3, p5, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 399
+    .line 408
     iget-boolean p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mIsRtl:Z
 
     if-eqz p1, :cond_2
@@ -1613,6 +1620,7 @@
 
     goto :goto_1
 
+    .line 409
     :cond_2
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtRect:Landroid/graphics/Rect;
 
@@ -1622,7 +1630,7 @@
 
     add-int/2addr p1, p2
 
-    .line 402
+    .line 411
     :goto_1
     iget-object p2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTitleTextPaint:Landroid/text/TextPaint;
 
@@ -1640,14 +1648,14 @@
 
     div-float/2addr p2, v4
 
-    .line 403
+    .line 412
     iget-object p3, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTitlePosition:[F
 
     int-to-float p1, p1
 
     aput p1, p3, v6
 
-    .line 404
+    .line 413
     iget-object p5, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtRect:Landroid/graphics/Rect;
 
     iget p5, p5, Landroid/graphics/Rect;->bottom:I
@@ -1668,7 +1676,7 @@
 
     aput p5, p3, p4
 
-    .line 407
+    .line 416
     iget-object p2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mSubtitleTextPaint:Landroid/text/TextPaint;
 
     invoke-virtual {p2}, Landroid/text/TextPaint;->descent()F
@@ -1685,12 +1693,12 @@
 
     div-float/2addr p2, v4
 
-    .line 408
+    .line 417
     iget-object p3, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mSubtitlePosition:[F
 
     aput p1, p3, v6
 
-    .line 409
+    .line 418
     iget p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mBackPlateVerticalPadding:I
 
     int-to-float p1, p1
@@ -1713,15 +1721,15 @@
 .method protected onMeasure(II)V
     .locals 3
 
-    .line 327
+    .line 336
     invoke-super {p0, p1, p2}, Landroidx/cardview/widget/CardView;->onMeasure(II)V
 
-    .line 329
+    .line 338
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 330
+    .line 339
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingLeft()I
 
     move-result p2
@@ -1734,10 +1742,10 @@
 
     add-int/2addr p2, v0
 
-    .line 332
+    .line 341
     iput p2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtSize:I
 
-    .line 334
+    .line 343
     iget v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mBackPlateVerticalPadding:I
 
     int-to-float v1, v0
@@ -1762,7 +1770,7 @@
 
     iput v1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mBackPlateHeight:F
 
-    .line 341
+    .line 350
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingTop()I
 
     move-result v0
@@ -1777,14 +1785,14 @@
 
     int-to-float p2, v0
 
-    .line 348
+    .line 357
     iget v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mBackPlateHeight:F
 
     add-float/2addr p2, v0
 
     float-to-int p2, p2
 
-    .line 350
+    .line 359
     invoke-virtual {p0, p1, p2}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
 
     return-void
@@ -1793,10 +1801,10 @@
 .method protected onSizeChanged(IIII)V
     .locals 0
 
-    .line 320
+    .line 329
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->onSizeChanged(IIII)V
 
-    .line 321
+    .line 330
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTitle:Ljava/lang/String;
 
     iget-object p2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTitleTextPaint:Landroid/text/TextPaint;
@@ -1807,7 +1815,7 @@
 
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTitleShortened:Ljava/lang/String;
 
-    .line 322
+    .line 331
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mSubtitle:Ljava/lang/String;
 
     iget-object p2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mSubtitleTextPaint:Landroid/text/TextPaint;
@@ -1824,7 +1832,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 7
 
-    .line 186
+    .line 195
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -1833,7 +1841,7 @@
 
     move-result v0
 
-    .line 187
+    .line 196
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
@@ -1842,7 +1850,7 @@
 
     move-result v1
 
-    .line 188
+    .line 197
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
@@ -1857,13 +1865,13 @@
 
     goto/16 :goto_0
 
-    .line 228
+    .line 237
     :pswitch_0
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mScheduleLongPress:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 229
+    .line 238
     sget-object v0, Lcom/sonyericsson/music/ui/LandingPageItemView$2;->$SwitchMap$com$sonyericsson$music$ui$LandingPageItemView$Touching:[I
 
     iget-object v1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTouchState:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
@@ -1876,33 +1884,33 @@
 
     packed-switch v0, :pswitch_data_1
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    .line 236
+    .line 245
     :pswitch_1
     sget-object v0, Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;->NOTHING:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
     iput-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTouchState:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
-    .line 237
+    .line 246
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
     return p1
 
-    .line 231
+    .line 240
     :pswitch_2
     sget-object p1, Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;->NOTHING:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTouchState:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
-    .line 232
+    .line 241
     invoke-direct {p0, v3}, Lcom/sonyericsson/music/ui/LandingPageItemView;->setRippleState(Z)V
 
     return v6
 
-    .line 204
+    .line 213
     :pswitch_3
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTouchState:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
@@ -1912,13 +1920,13 @@
 
     return v6
 
-    .line 210
+    .line 219
     :pswitch_4
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mScheduleLongPress:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 211
+    .line 220
     sget-object v0, Lcom/sonyericsson/music/ui/LandingPageItemView$2;->$SwitchMap$com$sonyericsson$music$ui$LandingPageItemView$Touching:[I
 
     iget-object v1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTouchState:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
@@ -1933,32 +1941,27 @@
 
     goto :goto_0
 
-    .line 221
+    .line 230
     :pswitch_5
-    sget-object v0, Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;->NOTHING:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
+    sget-object p1, Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;->NOTHING:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
-    iput-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTouchState:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
+    iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTouchState:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
+
+    .line 231
+    invoke-virtual {p0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->performClick()Z
+
+    return v6
 
     .line 222
-    invoke-direct {p0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->notifyOnItemClicked()V
-
-    .line 223
-    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
-
-    .line 213
     :pswitch_6
     sget-object v0, Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;->NOTHING:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
     iput-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTouchState:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
-    .line 214
+    .line 223
     invoke-direct {p0, v3}, Lcom/sonyericsson/music/ui/LandingPageItemView;->setRippleState(Z)V
 
-    .line 215
+    .line 224
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v0
@@ -1973,13 +1976,13 @@
 
     if-gez p1, :cond_0
 
-    .line 216
+    .line 225
     invoke-direct {p0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->notifyOnContextMenuClicked()V
 
     :cond_0
     return v6
 
-    .line 190
+    .line 199
     :pswitch_7
     iget-object v2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTouchState:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
@@ -1987,12 +1990,12 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 191
+    .line 200
     iget-object v2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mScheduleLongPress:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v2, v4, v5}, Landroid/widget/FrameLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 192
+    .line 201
     iget-object v2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mContextRipple:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
@@ -2005,30 +2008,30 @@
 
     if-eqz v0, :cond_1
 
-    .line 193
+    .line 202
     sget-object p1, Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;->CONTEXT:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTouchState:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
-    .line 194
+    .line 203
     invoke-direct {p0, v6}, Lcom/sonyericsson/music/ui/LandingPageItemView;->setRippleState(Z)V
 
     return v6
 
-    .line 197
+    .line 206
     :cond_1
     sget-object v0, Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;->ITEM:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
     iput-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTouchState:Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 
-    .line 198
+    .line 207
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
     return p1
 
-    .line 241
+    .line 250
     :cond_2
     :goto_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -2036,8 +2039,6 @@
     move-result p1
 
     return p1
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -2060,12 +2061,26 @@
     .end packed-switch
 .end method
 
+.method public performClick()Z
+    .locals 1
+
+    .line 188
+    invoke-super {p0}, Landroid/widget/FrameLayout;->performClick()Z
+
+    .line 189
+    invoke-direct {p0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->notifyOnItemClicked()V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
 .method public setAlbumArt(Landroid/graphics/Bitmap;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
-    .line 262
+    .line 271
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -2076,7 +2091,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArt:Landroid/graphics/drawable/Drawable;
 
-    .line 263
+    .line 272
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArt:Landroid/graphics/drawable/Drawable;
 
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArtRect:Landroid/graphics/Rect;
@@ -2088,10 +2103,10 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 265
+    .line 274
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mAlbumArt:Landroid/graphics/drawable/Drawable;
 
-    .line 267
+    .line 276
     :goto_0
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
@@ -2101,7 +2116,7 @@
 .method public setClickListener(Lcom/sonyericsson/music/ui/LandingPageItemView$OnClickListener;)V
     .locals 0
 
-    .line 245
+    .line 254
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mListener:Lcom/sonyericsson/music/ui/LandingPageItemView$OnClickListener;
 
     return-void
@@ -2110,14 +2125,14 @@
 .method public setPlayingState(Lcom/sonyericsson/music/ui/LandingPageItemView$State;)V
     .locals 4
 
-    .line 281
+    .line 290
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mState:Lcom/sonyericsson/music/ui/LandingPageItemView$State;
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 284
+    .line 293
     :cond_0
     sget-object v1, Lcom/sonyericsson/music/ui/LandingPageItemView$State;->LOADING:Lcom/sonyericsson/music/ui/LandingPageItemView$State;
 
@@ -2131,20 +2146,20 @@
 
     if-eqz v1, :cond_1
 
-    .line 286
+    .line 295
     check-cast v0, Lcom/sonyericsson/music/ui/LoadingStateDrawable;
 
-    .line 287
+    .line 296
     invoke-virtual {v0}, Lcom/sonyericsson/music/ui/LoadingStateDrawable;->stop()V
 
-    .line 288
+    .line 297
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 291
+    .line 300
     :cond_1
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mState:Lcom/sonyericsson/music/ui/LandingPageItemView$State;
 
-    .line 293
+    .line 302
     sget-object v0, Lcom/sonyericsson/music/ui/LandingPageItemView$2;->$SwitchMap$com$sonyericsson$music$ui$LandingPageItemView$State:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -2161,13 +2176,13 @@
 
     goto :goto_0
 
-    .line 306
+    .line 315
     :pswitch_0
     new-instance p1, Lcom/sonyericsson/music/ui/LoadingStateDrawable;
 
     invoke-direct {p1}, Lcom/sonyericsson/music/ui/LoadingStateDrawable;-><init>()V
 
-    .line 307
+    .line 316
     new-instance v0, Landroid/graphics/PorterDuffColorFilter;
 
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -2176,17 +2191,17 @@
 
     invoke-virtual {p1, v0}, Lcom/sonyericsson/music/ui/LoadingStateDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 308
+    .line 317
     new-instance v0, Lcom/sonyericsson/music/ui/LandingPageItemView$InvalidateCallback;
 
     invoke-direct {v0, p0, v2}, Lcom/sonyericsson/music/ui/LandingPageItemView$InvalidateCallback;-><init>(Lcom/sonyericsson/music/ui/LandingPageItemView;Lcom/sonyericsson/music/ui/LandingPageItemView$1;)V
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 309
+    .line 318
     invoke-virtual {p1}, Lcom/sonyericsson/music/ui/LoadingStateDrawable;->start()V
 
-    .line 310
+    .line 319
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mPlayingState:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
@@ -2194,14 +2209,14 @@
     :pswitch_1
     const p1, 0x7f080165
 
-    .line 302
+    .line 311
     invoke-direct {p0, p1, v0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->loadResourceDrawable(IZ)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mPlayingState:Landroid/graphics/drawable/Drawable;
 
-    .line 303
+    .line 312
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mPlayingState:Landroid/graphics/drawable/Drawable;
 
     invoke-static {p1, v1}, Landroidx/core/graphics/drawable/DrawableCompat;->setTint(Landroid/graphics/drawable/Drawable;I)V
@@ -2211,29 +2226,29 @@
     :pswitch_2
     const p1, 0x7f080164
 
-    .line 298
+    .line 307
     invoke-direct {p0, p1, v0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->loadResourceDrawable(IZ)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mPlayingState:Landroid/graphics/drawable/Drawable;
 
-    .line 299
+    .line 308
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mPlayingState:Landroid/graphics/drawable/Drawable;
 
     invoke-static {p1, v1}, Landroidx/core/graphics/drawable/DrawableCompat;->setTint(Landroid/graphics/drawable/Drawable;I)V
 
     goto :goto_0
 
-    .line 295
+    .line 304
     :pswitch_3
     iput-object v2, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mPlayingState:Landroid/graphics/drawable/Drawable;
 
-    .line 314
+    .line 323
     :goto_0
     invoke-direct {p0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->setPlayingStateBounds()V
 
-    .line 315
+    .line 324
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
@@ -2256,14 +2271,14 @@
 
     const/4 v0, 0x0
 
-    .line 272
+    .line 281
     invoke-direct {p0, p1, v0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->loadResourceDrawable(IZ)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mHiResIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 273
+    .line 282
     invoke-direct {p0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->setHiResBounds()V
 
     goto :goto_0
@@ -2271,10 +2286,10 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 275
+    .line 284
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mHiResIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 277
+    .line 286
     :goto_0
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
@@ -2284,10 +2299,10 @@
 .method public setSubtitle(Ljava/lang/String;)V
     .locals 1
 
-    .line 255
+    .line 264
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mSubtitle:Ljava/lang/String;
 
-    .line 256
+    .line 265
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mSubtitleTextPaint:Landroid/text/TextPaint;
 
     invoke-direct {p0, p1, v0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->ellipsize(Ljava/lang/String;Landroid/text/TextPaint;)Ljava/lang/String;
@@ -2296,7 +2311,7 @@
 
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mSubtitleShortened:Ljava/lang/String;
 
-    .line 257
+    .line 266
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
@@ -2305,10 +2320,10 @@
 .method public setTitle(Ljava/lang/String;)V
     .locals 1
 
-    .line 249
+    .line 258
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTitle:Ljava/lang/String;
 
-    .line 250
+    .line 259
     iget-object v0, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTitleTextPaint:Landroid/text/TextPaint;
 
     invoke-direct {p0, p1, v0}, Lcom/sonyericsson/music/ui/LandingPageItemView;->ellipsize(Ljava/lang/String;Landroid/text/TextPaint;)Ljava/lang/String;
@@ -2317,7 +2332,7 @@
 
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView;->mTitleShortened:Ljava/lang/String;
 
-    .line 251
+    .line 260
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void

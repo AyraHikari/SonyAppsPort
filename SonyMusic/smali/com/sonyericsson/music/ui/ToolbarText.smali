@@ -102,6 +102,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 78
     iget v0, p0, Lcom/sonyericsson/music/ui/ToolbarText;->mTagetColor:I
 
     goto :goto_0

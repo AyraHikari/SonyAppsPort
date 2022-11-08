@@ -33,10 +33,10 @@
 .method public constructor <init>(Lcom/sonyericsson/music/dialogs/AddToDialog;)V
     .locals 1
 
-    .line 109
+    .line 117
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 110
+    .line 118
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -51,7 +51,7 @@
 .method public run()V
     .locals 3
 
-    .line 115
+    .line 123
     iget-object v0, p0, Lcom/sonyericsson/music/dialogs/AddToDialog$SetSelection;->mAddTo:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -62,7 +62,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 117
+    .line 125
     invoke-static {v0}, Lcom/sonyericsson/music/dialogs/AddToDialog;->access$100(Lcom/sonyericsson/music/dialogs/AddToDialog;)Landroid/widget/ListView;
 
     move-result-object v1
@@ -75,7 +75,7 @@
 
     const/4 v1, -0x1
 
-    .line 118
+    .line 126
     invoke-static {v0, v1}, Lcom/sonyericsson/music/dialogs/AddToDialog;->access$002(Lcom/sonyericsson/music/dialogs/AddToDialog;I)I
 
     :cond_0

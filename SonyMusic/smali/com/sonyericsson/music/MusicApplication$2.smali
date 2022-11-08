@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicApplication;)V
     .locals 0
 
-    .line 229
+    .line 225
     iput-object p1, p0, Lcom/sonyericsson/music/MusicApplication$2;->this$0:Lcom/sonyericsson/music/MusicApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 232
+    .line 228
     iget-object v0, p0, Lcom/sonyericsson/music/MusicApplication$2;->this$0:Lcom/sonyericsson/music/MusicApplication;
 
     invoke-static {v0}, Lcom/sonyericsson/music/MusicApplication;->access$200(Lcom/sonyericsson/music/MusicApplication;)Lcom/sonyericsson/music/datacollection/googleanalytics/GoogleAnalyticsReporting;
@@ -47,7 +47,7 @@
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/datacollection/googleanalytics/GoogleAnalyticsReporting;->sendAnalytics()V
 
-    .line 233
+    .line 229
     iget-object v0, p0, Lcom/sonyericsson/music/MusicApplication$2;->this$0:Lcom/sonyericsson/music/MusicApplication;
 
     invoke-static {v0}, Lcom/sonyericsson/music/MusicApplication;->access$300(Lcom/sonyericsson/music/MusicApplication;)Lcom/sonyericsson/music/datacollection/firebase/FirebaseAnalyticsReporting;

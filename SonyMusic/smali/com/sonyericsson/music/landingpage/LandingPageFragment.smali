@@ -818,9 +818,9 @@
 
     if-eqz v0, :cond_3
 
+    .line 751
     iget-object v3, p0, Lcom/sonyericsson/music/landingpage/LandingPageFragment;->mQuickPlayType:Lcom/sonyericsson/music/common/QuickPlayUtils$Type;
 
-    .line 751
     invoke-virtual {v3}, Lcom/sonyericsson/music/common/QuickPlayUtils$Type;->getContentDescription()I
 
     move-result v3
@@ -1091,7 +1091,7 @@
     .line 1012
     iget-object p1, p0, Lcom/sonyericsson/music/landingpage/LandingPageFragment;->mRootView:Landroid/view/ViewGroup;
 
-    const v0, 0x7f090160
+    const v0, 0x7f090161
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1626,7 +1626,7 @@
     .line 232
     iget-object p1, p0, Lcom/sonyericsson/music/landingpage/LandingPageFragment;->mRootView:Landroid/view/ViewGroup;
 
-    const p3, 0x7f09019b
+    const p3, 0x7f09019c
 
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -2996,7 +2996,7 @@
 
     const/16 v2, 0xf
 
-    const v3, 0x7f090160
+    const v3, 0x7f090161
 
     if-le v1, v2, :cond_1
 

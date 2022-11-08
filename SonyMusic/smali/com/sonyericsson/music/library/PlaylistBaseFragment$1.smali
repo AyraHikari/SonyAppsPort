@@ -38,7 +38,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/library/PlaylistBaseFragment;Lcom/sonyericsson/music/common/MenuUtils$TrackData;Landroid/content/Context;Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 456
+    .line 470
     iput-object p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$1;->this$0:Lcom/sonyericsson/music/library/PlaylistBaseFragment;
 
     iput-object p2, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$1;->val$data:Lcom/sonyericsson/music/common/MenuUtils$TrackData;
@@ -57,7 +57,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 456
+    .line 470
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/library/PlaylistBaseFragment$1;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
@@ -70,14 +70,14 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/String;
     .locals 2
 
-    .line 459
+    .line 473
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$1;->val$data:Lcom/sonyericsson/music/common/MenuUtils$TrackData;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/common/MenuUtils$TrackData;->getArtistName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 460
+    .line 474
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$1;->val$data:Lcom/sonyericsson/music/common/MenuUtils$TrackData;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/common/MenuUtils$TrackData;->getArtistName()Ljava/lang/String;
@@ -94,7 +94,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 461
+    .line 475
     iget-object p1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -103,7 +103,7 @@
 
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$1;->val$data:Lcom/sonyericsson/music/common/MenuUtils$TrackData;
 
-    .line 462
+    .line 476
     invoke-virtual {v0}, Lcom/sonyericsson/music/common/MenuUtils$TrackData;->getArtistUri()Landroid/net/Uri;
 
     move-result-object v0
@@ -116,7 +116,7 @@
 
     move-result-wide v0
 
-    .line 461
+    .line 475
     invoke-static {p1, v0, v1}, Lcom/sonyericsson/music/common/DBUtils;->getArtistName(Landroid/content/ContentResolver;J)Ljava/lang/String;
 
     move-result-object p1
@@ -128,7 +128,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 456
+    .line 470
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/library/PlaylistBaseFragment$1;->onPostExecute(Ljava/lang/String;)V
@@ -139,31 +139,31 @@
 .method protected onPostExecute(Ljava/lang/String;)V
     .locals 4
 
-    .line 468
+    .line 482
     sget-object v0, Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;->ARTIST_ID:Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;
 
     iget-object v1, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$1;->val$data:Lcom/sonyericsson/music/common/MenuUtils$TrackData;
 
-    .line 469
+    .line 483
     invoke-virtual {v1}, Lcom/sonyericsson/music/common/MenuUtils$TrackData;->getArtistUri()Landroid/net/Uri;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$1;->this$0:Lcom/sonyericsson/music/library/PlaylistBaseFragment;
 
-    .line 470
+    .line 484
     invoke-virtual {v2}, Lcom/sonyericsson/music/library/PlaylistBaseFragment;->getAggregator()Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    .line 468
+    .line 482
     invoke-static {v0, v1, p1, v3, v2}, Lcom/sonyericsson/music/library/artist/ArtistFragment;->newInstance(Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;Landroid/net/Uri;Ljava/lang/String;Landroid/net/Uri;Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;)Lcom/sonyericsson/music/library/artist/ArtistFragment;
 
     move-result-object p1
 
-    .line 471
+    .line 485
     iget-object v0, p0, Lcom/sonyericsson/music/library/PlaylistBaseFragment$1;->val$activity:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->getMusicFragmentManager()Lcom/sonyericsson/music/MusicFragmentManager;

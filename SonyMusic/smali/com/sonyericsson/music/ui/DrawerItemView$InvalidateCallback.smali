@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/sonyericsson/music/ui/DrawerItemView;)V
     .locals 0
 
-    .line 348
+    .line 357
     iput-object p1, p0, Lcom/sonyericsson/music/ui/DrawerItemView$InvalidateCallback;->this$0:Lcom/sonyericsson/music/ui/DrawerItemView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/sonyericsson/music/ui/DrawerItemView;Lcom/sonyericsson/music/ui/DrawerItemView$1;)V
     .locals 0
 
-    .line 348
+    .line 357
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/ui/DrawerItemView$InvalidateCallback;-><init>(Lcom/sonyericsson/music/ui/DrawerItemView;)V
 
     return-void
@@ -47,7 +47,7 @@
 .method public invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 351
+    .line 360
     iget-object p1, p0, Lcom/sonyericsson/music/ui/DrawerItemView$InvalidateCallback;->this$0:Lcom/sonyericsson/music/ui/DrawerItemView;
 
     invoke-virtual {p1}, Landroid/view/View;->postInvalidateOnAnimation()V

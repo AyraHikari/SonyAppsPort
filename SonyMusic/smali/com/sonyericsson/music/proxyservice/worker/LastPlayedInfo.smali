@@ -176,6 +176,7 @@
     :cond_1
     const/4 v6, 0x1
 
+    .line 134
     :goto_1
     iput-boolean v6, p0, Lcom/sonyericsson/music/proxyservice/worker/LastPlayedInfo;->mShuffle:Z
 

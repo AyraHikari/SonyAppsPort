@@ -111,10 +111,9 @@
 
     if-eqz p5, :cond_1
 
-    .line 69
+    .line 70
     array-length p1, p5
 
-    .line 70
     invoke-static {p5, p1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object p1

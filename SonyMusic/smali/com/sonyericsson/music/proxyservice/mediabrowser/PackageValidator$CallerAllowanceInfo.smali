@@ -24,13 +24,13 @@
 .method constructor <init>(ZZ)V
     .locals 0
 
-    .line 265
+    .line 267
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 266
+    .line 268
     iput-boolean p1, p0, Lcom/sonyericsson/music/proxyservice/mediabrowser/PackageValidator$CallerAllowanceInfo;->usageAllowed:Z
 
-    .line 267
+    .line 269
     iput-boolean p2, p0, Lcom/sonyericsson/music/proxyservice/mediabrowser/PackageValidator$CallerAllowanceInfo;->fullLibraryBrowseAllowed:Z
 
     return-void

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profiles xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <grid-option launcher:dbFile="launcher_4_by_4.db" launcher:defaultLayoutId="@xml/default_settings_desktop" launcher:name="4_by_4_Folder_3_by_4" launcher:numColumns="4" launcher:numFolderColumns="4" launcher:numFolderRows="3" launcher:numHotseatIcons="5" launcher:numRows="4">
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="48.0" launcher:iconTextSize="11.0" launcher:minHeightDps="568.0" launcher:minWidthDps="296.0" launcher:name="Xperia JP1 - large display size" />
+    </grid-option>
+    <grid-option launcher:dbFile="launcher_5_by_4.db" launcher:defaultLayoutId="@xml/default_settings_desktop" launcher:name="5_by_4" launcher:numColumns="4" launcher:numFolderColumns="4" launcher:numFolderRows="4" launcher:numHotseatIcons="5" launcher:numRows="5">
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="56.0" launcher:iconTextSize="13.0" launcher:minHeightDps="567.0" launcher:minWidthDps="359.0" launcher:name="Xperia XZ - default display size" />
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="48.0" launcher:iconTextSize="13.0" launcher:minHeightDps="580.0" launcher:minWidthDps="319.0" launcher:name="Xperia XZ2 - 18:9 - large display size" />
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="56.0" launcher:iconTextSize="11.0" launcher:minHeightDps="648.0" launcher:minWidthDps="336.0" launcher:name="Xperia JP1 - default display size" />
+    </grid-option>
+    <grid-option launcher:dbFile="launcher_6_by_4.db" launcher:defaultLayoutId="@xml/default_settings_desktop" launcher:name="6_by_4" launcher:numColumns="4" launcher:numFolderColumns="4" launcher:numFolderRows="4" launcher:numHotseatIcons="5" launcher:numRows="6">
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="56.0" launcher:iconTextSize="13.0" launcher:minHeightDps="647.0" launcher:minWidthDps="359.0" launcher:name="Xperia XZ2 - 18:9 - default display size" />
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="48.0" launcher:iconTextSize="10.0" launcher:minHeightDps="674.0" launcher:minWidthDps="296.0" launcher:name="Xperia XA3 - 21:9 - large display size" />
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="56.0" launcher:iconTextSize="11.0" launcher:minHeightDps="768.0" launcher:minWidthDps="336.0" launcher:name="Xperia XA3 - 21:9 - default display size" />
+    </grid-option>
+    <grid-option launcher:dbFile="launcher_6_by_5.db" launcher:defaultLayoutId="@xml/default_settings_desktop" launcher:name="6_by_5" launcher:numColumns="5" launcher:numFolderColumns="4" launcher:numFolderRows="4" launcher:numHotseatIcons="5" launcher:numRows="6">
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="56.0" launcher:iconTextSize="14.4" launcher:minHeightDps="739.0" launcher:minWidthDps="410.0" launcher:name="Xperia XZ2 - 18:9 - small display size" />
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="56.0" launcher:iconTextSize="13.2" launcher:minHeightDps="899.0" launcher:minWidthDps="391.0" launcher:name="Xperia XA3 plus - 21:9 - default display size" />
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="56.0" launcher:iconTextSize="13.2" launcher:minHeightDps="775.0" launcher:minWidthDps="399.0" launcher:name="Xperia JP1 - small display size" />
+    </grid-option>
+    <grid-option launcher:dbFile="launcher_7_by_4.db" launcher:defaultLayoutId="@xml/default_settings_desktop" launcher:name="7_by_4" launcher:numColumns="4" launcher:numFolderColumns="4" launcher:numFolderRows="4" launcher:numHotseatIcons="5" launcher:numRows="7">
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="56.0" launcher:iconTextSize="13.2" launcher:minHeightDps="916.0" launcher:minWidthDps="399.0" launcher:name="Xperia XA3 - 21:9 - small display size" />
+    </grid-option>
+    <grid-option launcher:dbFile="launcher_7_by_5.db" launcher:defaultLayoutId="@xml/default_settings_desktop" launcher:name="7_by_5" launcher:numColumns="5" launcher:numFolderColumns="4" launcher:numFolderRows="4" launcher:numHotseatIcons="5" launcher:numRows="7">
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="56.0" launcher:iconTextSize="13.2" launcher:minHeightDps="916.0" launcher:minWidthDps="399.0" launcher:name="Xperia XA3 - 21:9 - small display size" />
+    </grid-option>
+    <grid-option launcher:dbFile="launcher_8_by_5.db" launcher:defaultLayoutId="@xml/default_settings_desktop" launcher:name="8_by_5" launcher:numColumns="5" launcher:numFolderColumns="4" launcher:numFolderRows="4" launcher:numHotseatIcons="5" launcher:numRows="8">
+        <display-option launcher:canBeDefault="true" launcher:iconImageSize="50.0" launcher:iconTextSize="12.0" launcher:minHeightDps="916.0" launcher:minWidthDps="399.0" launcher:name="Xperia XA3 - 21:9 - small display size" />
+    </grid-option>
+</profiles>

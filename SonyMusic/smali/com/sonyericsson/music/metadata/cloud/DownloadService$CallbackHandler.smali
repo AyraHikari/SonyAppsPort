@@ -82,14 +82,13 @@
 
     if-le p2, v0, :cond_0
 
-    .line 163
+    .line 164
     iget-object v2, p0, Lcom/sonyericsson/music/metadata/cloud/DownloadService$CallbackHandler;->this$0:Lcom/sonyericsson/music/metadata/cloud/DownloadService;
 
     const v3, 0x7f100079
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 164
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -102,12 +101,12 @@
 
     goto :goto_0
 
+    .line 165
     :cond_0
     iget-object p2, p0, Lcom/sonyericsson/music/metadata/cloud/DownloadService$CallbackHandler;->this$0:Lcom/sonyericsson/music/metadata/cloud/DownloadService;
 
     const v2, 0x7f10007a
 
-    .line 165
     invoke-virtual {p2, v2}, Landroid/app/IntentService;->getString(I)Ljava/lang/String;
 
     move-result-object p2

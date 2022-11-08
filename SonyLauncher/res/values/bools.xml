@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="config_enableTaskSnapshotPreloading">true</bool>
+    <bool name="config_header_protection_supported">false</bool>
+    <bool name="config_largeHeap">false</bool>
+    <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
+    <bool name="google_search_widget_visible">true</bool>
+    <bool name="hide_qsb_in_vertical_bar_layout">false</bool>
+    <bool name="home_settings_allow_divider">false</bool>
+    <bool name="home_settings_icon_space_reserved">false</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="simple_cache_enable_im_memory">false</bool>
+</resources>

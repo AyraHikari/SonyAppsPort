@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider android:minWidth="@dimen/widget_min_width" android:updatePeriodMillis="0" android:initialLayout="@layout/musicwidget" android:previewImage="@drawable/widget_preview" android:resizeMode="horizontal" android:minResizeWidth="@dimen/widget_min_resize_width" android:targetCellWidth="4" android:targetCellHeight="1"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

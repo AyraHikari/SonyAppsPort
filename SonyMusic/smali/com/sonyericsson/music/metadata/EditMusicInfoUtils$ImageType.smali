@@ -34,7 +34,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 66
+    .line 69
     new-instance v0, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
 
     const-string v1, "ALBUM"
@@ -45,7 +45,7 @@
 
     sput-object v0, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;->ALBUM:Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
 
-    .line 67
+    .line 70
     new-instance v0, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
 
     const-string v1, "ARTIST"
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x2
 
-    .line 65
+    .line 68
     new-array v0, v0, [Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
 
     sget-object v1, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;->ALBUM:Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
@@ -82,7 +82,7 @@
         }
     .end annotation
 
-    .line 65
+    .line 68
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -91,7 +91,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
     .locals 1
 
-    .line 65
+    .line 68
     const-class v0, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -106,7 +106,7 @@
 .method public static values()[Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
     .locals 1
 
-    .line 65
+    .line 68
     sget-object v0, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;->$VALUES:[Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
 
     invoke-virtual {v0}, [Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;->clone()Ljava/lang/Object;

@@ -31,7 +31,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 87
+    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,20 +54,20 @@
         }
     .end annotation
 
-    .line 94
+    .line 99
     sget-object v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$Factory;->sAudioPlayer:Lcom/sonymobile/music/audioplayer/AudioPlayer;
 
     if-nez v0, :cond_0
 
-    .line 96
+    .line 101
     new-instance v0, Lcom/sonymobile/music/audioplayer/AudioPlayer;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/sonymobile/music/audioplayer/AudioPlayer;-><init>(Landroid/content/Context;Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;Lcom/sonymobile/music/audioplayer/Watchdog$WatchDogListener;)V
 
-    .line 97
+    .line 102
     invoke-static {v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->access$000(Lcom/sonymobile/music/audioplayer/AudioPlayer;)V
 
-    .line 99
+    .line 104
     :cond_0
     invoke-static {v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->access$100(Lcom/sonymobile/music/audioplayer/AudioPlayer;)Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
@@ -92,7 +92,7 @@
         }
     .end annotation
 
-    .line 104
+    .line 109
     sput-object p0, Lcom/sonymobile/music/audioplayer/AudioPlayer$Factory;->sAudioPlayer:Lcom/sonymobile/music/audioplayer/AudioPlayer;
 
     return-void

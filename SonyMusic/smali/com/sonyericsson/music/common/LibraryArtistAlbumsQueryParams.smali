@@ -85,7 +85,7 @@
 
     const-string v0, "unknown_album"
 
-    .line 46
+    .line 48
     sget-boolean v1, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
 
     if-eqz v1, :cond_0
@@ -97,6 +97,7 @@
     :cond_0
     sget-object v1, Lcom/sonyericsson/music/common/LibraryArtistAlbumsQueryParams;->COLUMNS:[Ljava/lang/String;
 
+    .line 46
     :goto_0
     invoke-static {p0, v0, v1}, Lcom/sonyericsson/music/common/StringUtils;->getLocalizedStringArray(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)[Ljava/lang/String;
 

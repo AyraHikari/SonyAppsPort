@@ -54,27 +54,27 @@
 .method private constructor <init>(Landroid/content/Context;Ljava/util/concurrent/CountDownLatch;Lcom/sonyericsson/music/datacollection/firebase/FirebaseAnalyticsReporting;Z)V
     .locals 1
 
-    .line 394
+    .line 390
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 395
+    .line 391
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->mContext:Ljava/lang/ref/WeakReference;
 
-    .line 396
+    .line 392
     iput-object p2, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->mSharedPrefsLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 397
+    .line 393
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->mFirebaseAnalyticsReporting:Ljava/lang/ref/WeakReference;
 
-    .line 398
+    .line 394
     iput-boolean p4, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->mShouldSetUserProperty:Z
 
     return-void
@@ -83,7 +83,7 @@
 .method synthetic constructor <init>(Landroid/content/Context;Ljava/util/concurrent/CountDownLatch;Lcom/sonyericsson/music/datacollection/firebase/FirebaseAnalyticsReporting;ZLcom/sonyericsson/music/MusicApplication$1;)V
     .locals 0
 
-    .line 382
+    .line 378
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;-><init>(Landroid/content/Context;Ljava/util/concurrent/CountDownLatch;Lcom/sonyericsson/music/datacollection/firebase/FirebaseAnalyticsReporting;Z)V
 
     return-void
@@ -94,7 +94,7 @@
 
     const-string v0, "^.+(internal).*$"
 
-    .line 510
+    .line 506
     invoke-virtual {p0, v0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result p0
@@ -107,7 +107,7 @@
 .method private handleGoogleDriveDisabled(Landroid/content/Context;)V
     .locals 1
 
-    .line 514
+    .line 510
     invoke-static {p1}, Lcom/sonymobile/music/common/ProcessUtils;->isRunningInServiceProcess(Landroid/content/Context;)Z
 
     move-result v0
@@ -116,12 +116,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 516
+    .line 512
     new-instance v0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask$1;
 
     invoke-direct {v0, p0, p1}, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask$1;-><init>(Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;Landroid/content/Context;)V
 
-    .line 521
+    .line 517
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     :cond_0
@@ -133,7 +133,7 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Landroid/os/Bundle;
     .locals 5
 
-    .line 404
+    .line 400
     iget-object p1, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->mContext:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -146,7 +146,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 408
+    .line 404
     :try_start_0
     iget-object v1, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->mSharedPrefsLatch:Ljava/util/concurrent/CountDownLatch;
 
@@ -158,7 +158,7 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 416
+    .line 412
     :catch_0
     invoke-static {p1}, Lcom/sonymobile/music/common/ProcessUtils;->isRunningInServiceProcess(Landroid/content/Context;)Z
 
@@ -166,15 +166,15 @@
 
     if-nez v1, :cond_0
 
-    .line 419
+    .line 415
     invoke-static {p1}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->getGoogleDriveDisabled(Landroid/content/Context;)Z
 
     move-result v1
 
-    .line 418
+    .line 414
     invoke-static {v1}, Lcom/sonyericsson/music/MusicApplication;->access$402(Z)Z
 
-    .line 421
+    .line 417
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -197,7 +197,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 382
+    .line 378
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->doInBackground([Ljava/lang/Void;)Landroid/os/Bundle;
@@ -210,10 +210,10 @@
 .method protected onPostExecute(Landroid/os/Bundle;)V
     .locals 5
 
-    .line 430
+    .line 426
     iget-object v0, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->mFirebaseAnalyticsReporting:Ljava/lang/ref/WeakReference;
 
-    .line 431
+    .line 427
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -224,7 +224,7 @@
 
     return-void
 
-    .line 435
+    .line 431
     :cond_0
     iget-object v1, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->mContext:Ljava/lang/ref/WeakReference;
 
@@ -238,7 +238,7 @@
 
     if-eqz p1, :cond_5
 
-    .line 438
+    .line 434
     invoke-virtual {p1}, Landroid/os/Bundle;->isEmpty()Z
 
     move-result v2
@@ -247,29 +247,29 @@
 
     const-string v2, "config-fetch-complete"
 
-    .line 442
+    .line 438
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 441
+    .line 437
     invoke-static {v2}, Lcom/sonyericsson/music/MusicApplication;->access$502(Z)Z
 
     const-string v2, "is-crashlytics-disabled"
 
     const/4 v3, 0x0
 
-    .line 449
+    .line 445
     invoke-virtual {p1, v2, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
 
-    .line 452
+    .line 448
     invoke-static {}, Lcom/sonyericsson/music/common/VersionUtils;->getVersionName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 451
+    .line 447
     invoke-static {v4}, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->allowFirebaseCrashlyticsForVersion(Ljava/lang/String;)Z
 
     move-result v4
@@ -289,55 +289,55 @@
     :goto_0
     const/4 v2, 0x1
 
-    .line 453
+    .line 449
     :goto_1
     invoke-static {v2}, Lcom/sonyericsson/music/MusicApplication;->access$602(Z)Z
 
-    .line 465
+    .line 461
     invoke-static {v1}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseCrashlyticsUtils;->handleFirebaseCrashlyticsSetup(Landroid/content/Context;)V
 
     const-string v2, "is-mora-disabled"
 
-    .line 468
+    .line 464
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 467
+    .line 463
     invoke-static {v2}, Lcom/sonyericsson/music/MusicApplication;->access$702(Z)Z
 
     const-string v2, "is-google-drive-disabled"
 
-    .line 470
+    .line 466
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 469
+    .line 465
     invoke-static {v2}, Lcom/sonyericsson/music/MusicApplication;->access$402(Z)Z
 
     const-string v2, "is-gaf-disabled"
 
-    .line 471
+    .line 467
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v2
 
     invoke-static {v2}, Lcom/sonyericsson/music/MusicApplication;->access$802(Z)Z
 
-    .line 474
+    .line 470
     invoke-static {}, Lcom/sonyericsson/music/common/VersionUtils;->getAppBuild()Lcom/sonyericsson/music/common/VersionUtils$AppBuild;
 
     move-result-object v2
 
     if-eqz v2, :cond_3
 
-    .line 475
+    .line 471
     sget-object v4, Lcom/sonyericsson/music/common/VersionUtils$AppBuild;->PRODUCTION:Lcom/sonyericsson/music/common/VersionUtils$AppBuild;
 
     if-ne v2, v4, :cond_3
 
-    .line 476
+    .line 472
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
@@ -350,50 +350,50 @@
 
     const-string v2, "latest-version-code-available"
 
-    .line 478
+    .line 474
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 480
+    .line 476
     :cond_3
     invoke-static {v3}, Lcom/sonyericsson/music/common/VersionUtils;->setLatestAvailableVersionCode(I)V
 
-    .line 482
+    .line 478
     invoke-static {v1}, Lcom/sonymobile/music/common/ProcessUtils;->isRunningInServiceProcess(Landroid/content/Context;)Z
 
     move-result p1
 
     if-nez p1, :cond_4
 
-    .line 485
+    .line 481
     invoke-static {}, Lcom/sonyericsson/music/MusicApplication;->access$400()Z
 
     move-result p1
 
     invoke-static {v1, p1}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setGoogleDriveDisabled(Landroid/content/Context;Z)V
 
-    .line 489
+    .line 485
     :cond_4
     invoke-static {}, Lcom/sonyericsson/music/MusicApplication;->access$900()V
 
-    .line 492
+    .line 488
     invoke-static {}, Lcom/sonyericsson/music/MusicApplication;->access$400()Z
 
     move-result p1
 
     if-eqz p1, :cond_5
 
-    .line 493
+    .line 489
     invoke-direct {p0, v1}, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->handleGoogleDriveDisabled(Landroid/content/Context;)V
 
-    .line 497
+    .line 493
     :cond_5
     iget-boolean p1, p0, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->mShouldSetUserProperty:Z
 
     invoke-static {v1, p1}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseAnalyticsUtils;->handleFirebaseAnalyticsSetup(Landroid/content/Context;Z)V
 
-    .line 503
+    .line 499
     invoke-virtual {v0}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseAnalyticsReporting;->sendInitialAnalytics()V
 
     :cond_6
@@ -403,7 +403,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 382
+    .line 378
     check-cast p1, Landroid/os/Bundle;
 
     invoke-virtual {p0, p1}, Lcom/sonyericsson/music/MusicApplication$PrepareAndInitializeFirebaseTask;->onPostExecute(Landroid/os/Bundle;)V

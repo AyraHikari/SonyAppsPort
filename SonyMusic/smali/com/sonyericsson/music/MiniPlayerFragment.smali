@@ -712,7 +712,7 @@
 .method private setUpMiniPlayerView(Landroid/content/res/Resources;Landroid/view/View;)V
     .locals 2
 
-    const v0, 0x7f090123
+    const v0, 0x7f090124
 
     .line 210
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -721,7 +721,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/MiniPlayerFragment;->mMiniPlayer:Landroid/view/View;
 
-    const v0, 0x7f090179
+    const v0, 0x7f09017a
 
     .line 211
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -743,7 +743,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/MiniPlayerFragment;->mArtistName:Landroid/widget/TextView;
 
-    const v0, 0x7f090213
+    const v0, 0x7f090214
 
     .line 213
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -765,7 +765,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/MiniPlayerFragment;->mInfoLayout:Lcom/sonyericsson/music/ui/MiniPlayerInfoLayout;
 
-    const v0, 0x7f09015e
+    const v0, 0x7f09015f
 
     .line 215
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -776,7 +776,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/MiniPlayerFragment;->mNextButton:Landroid/widget/ImageButton;
 
-    const v0, 0x7f090192
+    const v0, 0x7f090193
 
     .line 216
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -820,7 +820,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/MiniPlayerFragment;->mBufferingSpinner:Landroid/widget/ProgressBar;
 
-    const v0, 0x7f090185
+    const v0, 0x7f090186
 
     .line 220
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -831,7 +831,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/MiniPlayerFragment;->mPlaybackProgress:Landroid/widget/ProgressBar;
 
-    const v0, 0x7f09020f
+    const v0, 0x7f090210
 
     .line 221
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -840,7 +840,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/MiniPlayerFragment;->mTimerBanner:Landroid/view/View;
 
-    const v0, 0x7f090212
+    const v0, 0x7f090213
 
     .line 223
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -858,7 +858,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f090211
+    const v0, 0x7f090212
 
     .line 246
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -869,7 +869,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/MiniPlayerFragment;->mTimerCountdownText:Landroid/widget/TextView;
 
-    const v0, 0x7f090210
+    const v0, 0x7f090211
 
     .line 248
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1566,11 +1566,11 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f090122 -> :sswitch_3
         0x7f090123 -> :sswitch_3
-        0x7f09015e -> :sswitch_2
-        0x7f090179 -> :sswitch_1
-        0x7f090192 -> :sswitch_0
+        0x7f090124 -> :sswitch_3
+        0x7f09015f -> :sswitch_2
+        0x7f09017a -> :sswitch_1
+        0x7f090193 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -1723,7 +1723,7 @@
 
     move-result p1
 
-    const v0, 0x7f090123
+    const v0, 0x7f090124
 
     if-ne p1, v0, :cond_2
 

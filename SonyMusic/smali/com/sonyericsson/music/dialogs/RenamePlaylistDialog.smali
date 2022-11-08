@@ -37,16 +37,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;)J
-    .locals 2
-
-    .line 33
-    iget-wide v0, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->mPlaylistId:J
-
-    return-wide v0
-.end method
-
-.method static synthetic access$100(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;)Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
+.method static synthetic access$000(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;)Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
     .locals 0
 
     .line 33
@@ -55,7 +46,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$102(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;)Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
+.method static synthetic access$002(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;)Lcom/sonyericsson/music/playlist/PlaylistAsyncTask;
     .locals 0
 
     .line 33
@@ -64,7 +55,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$200(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;I)V
+.method static synthetic access$100(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;I)V
     .locals 0
 
     .line 33
@@ -73,7 +64,7 @@
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;)Landroid/widget/EditText;
+.method static synthetic access$200(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;)Landroid/widget/EditText;
     .locals 0
 
     .line 33
@@ -123,12 +114,12 @@
 .method private setInput(Ljava/lang/String;)V
     .locals 1
 
-    .line 155
+    .line 147
     iget-object v0, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 156
+    .line 148
     iget-object v0, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -137,7 +128,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setSelection(I)V
 
-    .line 157
+    .line 149
     iget-object p1, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->selectAll()V
@@ -148,7 +139,7 @@
 .method private setInputView(Landroid/content/Context;)V
     .locals 2
 
-    .line 161
+    .line 153
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
@@ -157,14 +148,14 @@
 
     const/4 v1, 0x0
 
-    .line 162
+    .line 154
     invoke-virtual {p1, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
     const v0, 0x7f0900ea
 
-    .line 163
+    .line 155
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -173,12 +164,12 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->mEditText:Landroid/widget/EditText;
 
-    .line 164
+    .line 156
     iget-object v0, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->mPlaylistName:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->setInput(Ljava/lang/String;)V
 
-    .line 165
+    .line 157
     iget-object v0, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
     invoke-virtual {v0, p1}, Landroidx/appcompat/app/AlertDialog;->setView(Landroid/view/View;)V
@@ -189,7 +180,7 @@
 .method private setNegativeButton(Ljava/lang/String;Lcom/sonyericsson/music/common/InputDialogClickListener;)V
     .locals 2
 
-    .line 180
+    .line 172
     iget-object v0, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
     new-instance v1, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$3;
@@ -206,7 +197,7 @@
 .method private setPositiveButton(Ljava/lang/String;Lcom/sonyericsson/music/common/InputDialogClickListener;)V
     .locals 2
 
-    .line 169
+    .line 161
     iget-object v0, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
     new-instance v1, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$2;
@@ -223,7 +214,7 @@
 .method private toggleSoftInput(I)V
     .locals 2
 
-    .line 144
+    .line 136
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -240,7 +231,7 @@
 
     const/4 v1, 0x0
 
-    .line 147
+    .line 139
     invoke-virtual {v0, p1, v1}, Landroid/view/inputmethod/InputMethodManager;->toggleSoftInput(II)V
 
     :cond_0
@@ -354,7 +345,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog$1;-><init>(Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;Landroid/os/Bundle;)V
 
-    .line 119
+    .line 111
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -371,7 +362,7 @@
 
     invoke-direct {p0, p1, v0}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->setPositiveButton(Ljava/lang/String;Lcom/sonyericsson/music/common/InputDialogClickListener;)V
 
-    .line 120
+    .line 112
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -388,7 +379,7 @@
 
     invoke-direct {p0, p1, v0}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->setNegativeButton(Ljava/lang/String;Lcom/sonyericsson/music/common/InputDialogClickListener;)V
 
-    .line 122
+    .line 114
     iget-object p1, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
     return-object p1
@@ -397,10 +388,10 @@
 .method public onPause()V
     .locals 3
 
-    .line 134
+    .line 126
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
-    .line 136
+    .line 128
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -415,7 +406,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 139
+    .line 131
     iget-object v1, p0, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
@@ -433,12 +424,12 @@
 .method public onResume()V
     .locals 1
 
-    .line 127
+    .line 119
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onResume()V
 
     const/4 v0, 0x2
 
-    .line 129
+    .line 121
     invoke-direct {p0, v0}, Lcom/sonyericsson/music/dialogs/RenamePlaylistDialog;->toggleSoftInput(I)V
 
     return-void

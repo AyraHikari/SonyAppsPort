@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;)V
     .locals 0
 
-    .line 298
+    .line 317
     iput-object p1, p0, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$3;->this$0:Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;
 
     iput-object p2, p0, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$3;->val$firebaseRemoteConfig:Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;
@@ -59,14 +59,14 @@
         }
     .end annotation
 
-    .line 304
+    .line 323
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 306
+    .line 325
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getException()Ljava/lang/Exception;
 
     move-result-object p1
@@ -75,25 +75,25 @@
 
     if-eqz p1, :cond_0
 
-    .line 317
+    .line 336
     invoke-static {}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;->access$200()Ljava/lang/Object;
 
     move-result-object p1
 
     monitor-enter p1
 
-    .line 318
+    .line 337
     :try_start_0
     sget-object v0, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;->CONFIG_FETCH_COMPLETE:Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;
 
     invoke-static {v0}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;->access$302(Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;)Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;
 
-    .line 319
+    .line 338
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 322
+    .line 341
     iget-object p1, p0, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$3;->this$0:Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;
 
     invoke-static {p1}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;->access$400(Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;)V
@@ -103,7 +103,7 @@
     :catchall_0
     move-exception v0
 
-    .line 319
+    .line 338
     :try_start_1
     monitor-exit p1
     :try_end_1
@@ -111,7 +111,7 @@
 
     throw v0
 
-    .line 327
+    .line 346
     :cond_0
     invoke-static {}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;->access$200()Ljava/lang/Object;
 
@@ -119,25 +119,25 @@
 
     monitor-enter p1
 
-    .line 328
+    .line 347
     :try_start_2
     sget-object v1, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;->CONFIG_FETCH_COMPLETE:Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;
 
     invoke-static {v1}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;->access$302(Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;)Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$ConfigFetchResult;
 
-    .line 329
+    .line 348
     monitor-exit p1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     if-eqz v0, :cond_1
 
-    .line 339
+    .line 358
     iget-object p1, p0, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$3;->val$firebaseRemoteConfig:Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;
 
     invoke-virtual {p1}, Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;->activateFetched()Z
 
-    .line 343
+    .line 362
     iget-object p1, p0, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$3;->this$0:Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;
 
     iget-object v0, p0, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$3;->val$firebaseRemoteConfig:Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;
@@ -146,13 +146,13 @@
 
     goto :goto_0
 
-    .line 356
+    .line 375
     :cond_1
     iget-object p1, p0, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider$3;->this$0:Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;
 
     invoke-static {p1}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;->access$400(Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;)V
 
-    .line 361
+    .line 380
     :goto_0
     invoke-static {}, Lcom/sonyericsson/music/datacollection/firebase/FirebaseRemoteConfigProvider;->access$500()Ljava/util/concurrent/CountDownLatch;
 
@@ -165,7 +165,7 @@
     :catchall_1
     move-exception v0
 
-    .line 329
+    .line 348
     :try_start_3
     monitor-exit p1
     :try_end_3

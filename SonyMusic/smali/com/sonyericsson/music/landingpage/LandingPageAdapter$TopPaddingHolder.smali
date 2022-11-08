@@ -43,7 +43,7 @@
     .line 839
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const p1, 0x7f09021b
+    const p1, 0x7f09021c
 
     .line 841
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

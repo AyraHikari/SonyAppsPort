@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 143
+    .line 152
     invoke-static {}, Lcom/sonyericsson/music/ui/DrawerItemView$Touching;->values()[Lcom/sonyericsson/music/ui/DrawerItemView$Touching;
 
     move-result-object v0

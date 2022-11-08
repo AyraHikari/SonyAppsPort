@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/sonyericsson/music/ui/LandingPageItemView;)V
     .locals 0
 
-    .line 582
+    .line 591
     iput-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView$InvalidateCallback;->this$0:Lcom/sonyericsson/music/ui/LandingPageItemView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/sonyericsson/music/ui/LandingPageItemView;Lcom/sonyericsson/music/ui/LandingPageItemView$1;)V
     .locals 0
 
-    .line 582
+    .line 591
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/ui/LandingPageItemView$InvalidateCallback;-><init>(Lcom/sonyericsson/music/ui/LandingPageItemView;)V
 
     return-void
@@ -47,7 +47,7 @@
 .method public invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 587
+    .line 596
     iget-object p1, p0, Lcom/sonyericsson/music/ui/LandingPageItemView$InvalidateCallback;->this$0:Lcom/sonyericsson/music/ui/LandingPageItemView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->postInvalidateOnAnimation()V

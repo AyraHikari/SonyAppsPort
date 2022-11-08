@@ -173,7 +173,7 @@
 
     iput-object v1, p0, Lcom/sonyericsson/music/library/StorePagerFragment;->mStorePagerAdapter:Lcom/sonyericsson/music/library/StorePagerFragment$StorePagerAdapter;
 
-    const v1, 0x7f090175
+    const v1, 0x7f090176
 
     .line 76
     invoke-virtual {p3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

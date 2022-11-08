@@ -1,4 +1,4 @@
-.class final Lcom/sonyericsson/music/debug/DebugTimer$1;
+.class Lcom/sonyericsson/music/debug/DebugTimer$1;
 .super Ljava/lang/ThreadLocal;
 .source "DebugTimer.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

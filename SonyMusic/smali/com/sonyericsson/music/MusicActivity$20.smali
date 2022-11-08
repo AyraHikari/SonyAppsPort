@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sonyericsson/music/MusicActivity;->clearSunsetFiles()V
+    value = Lcom/sonyericsson/music/MusicActivity;->clearMusicLikeDB()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;Landroid/content/Context;)V
     .locals 0
 
-    .line 2303
+    .line 2305
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$20;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     iput-object p2, p0, Lcom/sonyericsson/music/MusicActivity$20;->val$ctx:Landroid/content/Context;
@@ -42,18 +42,18 @@
 .method public run()V
     .locals 1
 
-    .line 2306
+    .line 2308
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$20;->val$ctx:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
-    .line 2307
-    invoke-static {v0}, Lcom/sonyericsson/music/common/MusicUtils;->deleteSunsetFiles(Landroid/content/Context;)V
+    .line 2309
+    invoke-static {v0}, Lcom/sonyericsson/music/like/model/MusicLikeDatabaseHelper;->deletMusicLikeDatabase(Landroid/content/Context;)Z
 
-    .line 2308
+    .line 2310
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$20;->val$ctx:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setSunsetFilesCleared(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setMusicLikeDBCleared(Landroid/content/Context;)V
 
     :cond_0
     return-void

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/library/LibraryListFragment;)V
     .locals 0
 
-    .line 238
+    .line 250
     iput-object p1, p0, Lcom/sonyericsson/music/library/LibraryListFragment$2;->this$0:Lcom/sonyericsson/music/library/LibraryListFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 241
+    .line 253
     iget-object v0, p0, Lcom/sonyericsson/music/library/LibraryListFragment$2;->this$0:Lcom/sonyericsson/music/library/LibraryListFragment;
 
     iget-object v1, v0, Lcom/sonyericsson/music/library/LibraryListFragment;->mListViewState:Landroid/os/Parcelable;
@@ -49,7 +49,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 242
+    .line 254
     invoke-virtual {v0, v1}, Landroid/widget/AbsListView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     :cond_0

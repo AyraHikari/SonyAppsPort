@@ -293,6 +293,7 @@
 
     if-nez p1, :cond_0
 
+    .line 123
     sget-object p1, Lcom/sonyericsson/music/dialogs/ClearDataDialog$Type;->ALBUM:Lcom/sonyericsson/music/dialogs/ClearDataDialog$Type;
 
     goto :goto_0

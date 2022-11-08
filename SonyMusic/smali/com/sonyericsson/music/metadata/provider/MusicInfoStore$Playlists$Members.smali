@@ -50,7 +50,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 501
+    .line 505
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,7 +61,7 @@
 
     const-string v0, "content://com.sonyericsson.music.musicinfo/"
 
-    .line 503
+    .line 507
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    .line 504
+    .line 508
     invoke-static {p0}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$Members;->getMembersPath(I)Ljava/lang/String;
 
     move-result-object p0
@@ -89,7 +89,7 @@
 .method public static getMembersPath(I)Ljava/lang/String;
     .locals 2
 
-    .line 514
+    .line 518
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,7 +118,7 @@
 .method public static getMoveContentUri(III)Landroid/net/Uri;
     .locals 1
 
-    .line 508
+    .line 512
     invoke-static {p0}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists$Members;->getContentUri(I)Landroid/net/Uri;
 
     move-result-object p0
@@ -129,7 +129,7 @@
 
     const-string v0, "from"
 
-    .line 509
+    .line 513
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -140,7 +140,7 @@
 
     const-string p1, "to"
 
-    .line 510
+    .line 514
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p2

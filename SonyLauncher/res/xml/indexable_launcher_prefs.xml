@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:title="@string/auto_add_shortcuts_label" android:key="pref_add_icon_to_home" android:summary="@string/auto_add_shortcuts_description" android:defaultValue="true" />
+    <SwitchPreference android:persistent="true" android:title="@string/allow_rotation_title" android:key="pref_allowRotation" android:summary="@string/allow_rotation_desc" android:defaultValue="false" />
+</PreferenceScreen>

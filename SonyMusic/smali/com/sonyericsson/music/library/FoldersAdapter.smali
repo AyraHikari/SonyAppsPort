@@ -134,7 +134,7 @@
 
     invoke-direct {v2}, Lcom/sonyericsson/music/library/FoldersAdapter$ViewHolder;-><init>()V
 
-    const v3, 0x7f0901fb
+    const v3, 0x7f0901fc
 
     .line 84
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -145,7 +145,7 @@
 
     iput-object v3, v2, Lcom/sonyericsson/music/library/FoldersAdapter$ViewHolder;->text1:Landroid/widget/TextView;
 
-    const v3, 0x7f0901fc
+    const v3, 0x7f0901fd
 
     .line 85
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;

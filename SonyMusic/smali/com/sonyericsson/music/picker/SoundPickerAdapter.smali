@@ -54,8 +54,8 @@
 
     :array_0
     .array-data 4
-        0x7f0901fb
         0x7f0901fc
+        0x7f0901fd
     .end array-data
 .end method
 
@@ -130,7 +130,7 @@
 
     invoke-direct {p2}, Lcom/sonyericsson/music/picker/SoundPickerAdapter$ViewHolder;-><init>()V
 
-    const p3, 0x7f0901fb
+    const p3, 0x7f0901fc
 
     .line 51
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -141,7 +141,7 @@
 
     iput-object p3, p2, Lcom/sonyericsson/music/picker/SoundPickerAdapter$ViewHolder;->text1:Landroid/widget/TextView;
 
-    const p3, 0x7f0901fc
+    const p3, 0x7f0901fd
 
     .line 52
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -30,7 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1060
+    .line 1064
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 
     const-string v0, "content://com.sonyericsson.music.musicinfo/search_history"
 
-    .line 1188
+    .line 1192
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

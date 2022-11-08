@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicApplication;)V
     .locals 0
 
-    .line 145
+    .line 141
     iput-object p1, p0, Lcom/sonyericsson/music/MusicApplication$1;->this$0:Lcom/sonyericsson/music/MusicApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +52,7 @@
         }
     .end annotation
 
-    .line 148
+    .line 144
     iget-object v0, p0, Lcom/sonyericsson/music/MusicApplication$1;->this$0:Lcom/sonyericsson/music/MusicApplication;
 
     invoke-static {v0}, Landroidx/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
@@ -63,10 +63,10 @@
 
     const/4 v2, 0x0
 
-    .line 149
+    .line 145
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    .line 151
+    .line 147
     iget-object v1, p0, Lcom/sonyericsson/music/MusicApplication$1;->this$0:Lcom/sonyericsson/music/MusicApplication;
 
     iget-object v1, v1, Lcom/sonyericsson/music/MusicApplication;->mSharedPrefsLatch:Ljava/util/concurrent/CountDownLatch;
@@ -84,7 +84,7 @@
         }
     .end annotation
 
-    .line 145
+    .line 141
     invoke-virtual {p0}, Lcom/sonyericsson/music/MusicApplication$1;->call()Landroid/content/SharedPreferences;
 
     move-result-object v0

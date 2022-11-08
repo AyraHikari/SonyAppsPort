@@ -38,7 +38,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 819
+    .line 850
     new-instance v0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;
 
     const-string v1, "SET_IMAGE"
@@ -51,7 +51,7 @@
 
     sput-object v0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;->SET_IMAGE:Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;
 
-    .line 820
+    .line 851
     new-instance v0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;
 
     const-string v1, "REMOVE_IMAGE"
@@ -66,7 +66,7 @@
 
     const/4 v0, 0x2
 
-    .line 818
+    .line 849
     new-array v0, v0, [Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;
 
     sget-object v1, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;->SET_IMAGE:Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;
@@ -90,10 +90,10 @@
         }
     .end annotation
 
-    .line 824
+    .line 855
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 825
+    .line 856
     iput p3, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;->mStringId:I
 
     return-void
@@ -102,7 +102,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;
     .locals 1
 
-    .line 818
+    .line 849
     const-class v0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -117,7 +117,7 @@
 .method public static values()[Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;
     .locals 1
 
-    .line 818
+    .line 849
     sget-object v0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;->$VALUES:[Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;
 
     invoke-virtual {v0}, [Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;->clone()Ljava/lang/Object;

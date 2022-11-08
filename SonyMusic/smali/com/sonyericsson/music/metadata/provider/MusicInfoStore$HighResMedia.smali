@@ -33,7 +33,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 615
+    .line 619
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
 
     const/4 v0, 0x5
 
-    .line 740
+    .line 744
     new-array v0, v0, [Ljava/lang/String;
 
     const-string v1, "source"
@@ -85,7 +85,7 @@
 
     const-string v0, "content://com.sonyericsson.music.musicinfo/"
 
-    .line 685
+    .line 689
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    .line 686
+    .line 690
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia;->getPath()Ljava/lang/String;
 
     move-result-object v1
@@ -119,7 +119,7 @@
 .method public static getContentUri()Landroid/net/Uri;
     .locals 2
 
-    .line 681
+    .line 685
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

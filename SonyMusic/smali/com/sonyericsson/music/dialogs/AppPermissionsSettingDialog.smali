@@ -187,7 +187,7 @@
 
     iput-object v4, p0, Lcom/sonyericsson/music/dialogs/AppPermissionsSettingDialog;->mAdapter:Lcom/sonyericsson/music/dialogs/AppPermissionsAdapter;
 
-    const v1, 0x7f09017e
+    const v1, 0x7f09017f
 
     .line 66
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

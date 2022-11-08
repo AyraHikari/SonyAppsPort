@@ -29,13 +29,5 @@
         <Preference android:title="@string/setting_oss_btn" android:key="pref_key_oss" />
         <com.sonyericsson.music.settings.TitleLinkPreference android:selectable="false" android:key="pref_key_accessibility" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="More Info">
-        <Preference android:title="Ported by @AyraHikari">
-            <intent android:action="android.intent.action.VIEW" android:data="https://t.me/AyraHikari" />
-        </Preference>
-        <Preference android:title="Follow my Telegram Channel">
-            <intent android:action="android.intent.action.VIEW" android:data="https://t.me/AyraProject" />
-        </Preference>
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/beta_settings" android:key="pref_key_beta" />
 </PreferenceScreen>

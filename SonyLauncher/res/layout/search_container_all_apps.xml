@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.searchlauncher.HotseatQsbWidget android:layout_gravity="center|top" android:id="@id/search_container_all_apps" android:layout_width="fill_parent" android:layout_height="@dimen/search_widget_hotseat_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/all_apps_menu_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" layout="@layout/all_apps_menu_button" />
+        <com.android.launcher3.ExtendedEditText android:textSize="16.0sp" android:textColor="@color/all_apps_searchbox_hint_color" android:textColorHint="@drawable/all_apps_search_hint" android:gravity="center_vertical" android:id="@id/fallback_search_view" android:background="@drawable/bg_all_apps_searchbox" android:focusableInTouchMode="true" android:visibility="visible" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="@dimen/all_apps_search_bar_field_height" android:hint="@string/all_apps_search_bar_hint" android:maxLines="1" android:scrollHorizontally="true" android:singleLine="true" android:layout_centerVertical="true" android:inputType="textCapWords|textNoSuggestions" android:imeOptions="actionSearch|flagNoExtractUi" android:paddingStart="16.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="8.0dip" android:layout_toStartOf="@id/all_apps_menu_button" android:elevation="1.0dip" />
+    </RelativeLayout>
+</com.android.searchlauncher.HotseatQsbWidget>

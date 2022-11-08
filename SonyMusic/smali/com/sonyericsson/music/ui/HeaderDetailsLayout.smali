@@ -252,7 +252,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/ui/HeaderDetailsLayout;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0901ea
+    const v0, 0x7f0901eb
 
     .line 74
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -263,7 +263,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    const v1, 0x7f0901eb
+    const v1, 0x7f0901ec
 
     .line 75
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;

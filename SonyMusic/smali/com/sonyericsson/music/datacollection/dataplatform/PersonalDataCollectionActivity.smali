@@ -254,7 +254,7 @@
 
     iput-object p1, p0, Lcom/sonyericsson/music/datacollection/dataplatform/PersonalDataCollectionActivity;->mHeaderImage:Landroid/widget/ImageView;
 
-    const p1, 0x7f090217
+    const p1, 0x7f090218
 
     .line 72
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;

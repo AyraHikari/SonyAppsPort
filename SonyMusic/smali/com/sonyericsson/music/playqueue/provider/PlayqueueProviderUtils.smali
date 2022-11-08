@@ -153,7 +153,7 @@
         }
     .end annotation
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
     .line 281
     new-instance v0, Lcom/sonyericsson/music/playqueue/provider/MemCacheEntry;
@@ -267,18 +267,20 @@
 
     if-nez p2, :cond_0
 
+    const/4 p2, 0x1
+
     goto :goto_0
 
     :cond_0
     const/4 p2, 0x0
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
-    :goto_0
     const/4 p2, 0x1
 
-    :goto_1
+    .line 294
+    :goto_0
     iput-boolean p2, v0, Lcom/sonyericsson/music/playqueue/provider/MemCacheEntry;->mAvailable:Z
 
     const-string p2, "album_id"
@@ -304,12 +306,13 @@
 
     move-result-wide v7
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_2
     move-wide v7, v5
 
-    :goto_2
+    .line 296
+    :goto_1
     iput-wide v7, v0, Lcom/sonyericsson/music/playqueue/provider/MemCacheEntry;->mAlbumId:J
 
     const-string p2, "artist_id"
@@ -333,6 +336,7 @@
 
     move-result-wide v5
 
+    .line 298
     :cond_3
     iput-wide v5, v0, Lcom/sonyericsson/music/playqueue/provider/MemCacheEntry;->mArtistId:J
 
@@ -343,7 +347,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_4
+    if-eqz p2, :cond_5
 
     const-string p2, "hd_audio"
 
@@ -359,18 +363,24 @@
 
     if-ne p2, v4, :cond_4
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_4
     const/4 v4, 0x0
 
-    :goto_3
+    goto :goto_2
+
+    :cond_5
+    const/4 v4, 0x0
+
+    .line 300
+    :goto_2
     iput-boolean v4, v0, Lcom/sonyericsson/music/playqueue/provider/MemCacheEntry;->mHDAudio:Z
 
     .line 302
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    if-eqz p4, :cond_6
+    if-eqz p4, :cond_7
 
     const-string p0, "source_play_order"
 
@@ -379,7 +389,7 @@
 
     move-result p0
 
-    if-eqz p0, :cond_5
+    if-eqz p0, :cond_6
 
     const-string p0, "source_play_order"
 
@@ -394,7 +404,7 @@
     move-result v1
 
     .line 309
-    :cond_5
+    :cond_6
     new-instance p0, Lcom/sonyericsson/music/playqueue/provider/PlayqueueProvider$CacheInsertMapEntry;
 
     iget p1, p4, Lcom/sonyericsson/music/playqueue/provider/PlayqueueProvider$InsertEntry;->mId:I
@@ -404,7 +414,7 @@
     .line 311
     invoke-interface {p3, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_6
+    :cond_7
     return-void
 .end method
 
@@ -642,6 +652,7 @@
 
     goto :goto_0
 
+    .line 416
     :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
@@ -651,6 +662,7 @@
 
     goto :goto_1
 
+    .line 415
     :cond_1
     :goto_0
     new-instance p0, Ljava/util/ArrayList;
@@ -1373,6 +1385,7 @@
     :cond_1
     move-wide v4, v2
 
+    .line 356
     :goto_1
     iput-wide v4, v0, Lcom/sonyericsson/music/playqueue/provider/MemCacheEntry;->mAlbumId:J
 
@@ -1397,6 +1410,7 @@
 
     move-result-wide v2
 
+    .line 358
     :cond_2
     iput-wide v2, v0, Lcom/sonyericsson/music/playqueue/provider/MemCacheEntry;->mArtistId:J
 

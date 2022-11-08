@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sonyericsson/music/MusicActivity;->clearMUFiles()V
+    value = Lcom/sonyericsson/music/MusicActivity;->clearSunsetFiles()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;Landroid/content/Context;)V
     .locals 0
 
-    .line 2318
+    .line 2320
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$21;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     iput-object p2, p0, Lcom/sonyericsson/music/MusicActivity$21;->val$ctx:Landroid/content/Context;
@@ -42,18 +42,18 @@
 .method public run()V
     .locals 1
 
-    .line 2321
+    .line 2323
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$21;->val$ctx:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
-    .line 2322
-    invoke-static {v0}, Lcom/sonyericsson/music/common/MusicUtils;->deleteMUFiles(Landroid/content/Context;)V
+    .line 2324
+    invoke-static {v0}, Lcom/sonyericsson/music/common/MusicUtils;->deleteSunsetFiles(Landroid/content/Context;)V
 
-    .line 2323
+    .line 2325
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$21;->val$ctx:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setMUFilesCleared(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/sonyericsson/music/common/ActivityProcessPreferenceUtils;->setSunsetFilesCleared(Landroid/content/Context;)V
 
     :cond_0
     return-void

@@ -95,7 +95,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/settings/CustomizeMyLibraryActivity;->mAdapter:Lcom/sonyericsson/music/settings/CustomizeMyLibraryAdapter;
 
-    const v0, 0x7f0901a2
+    const v0, 0x7f0901a3
 
     .line 49
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;

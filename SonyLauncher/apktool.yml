@@ -1,0 +1,25 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: SonyLauncher.apk
+compressionType: false
+doNotCompress:
+- classes.dex
+- resources.arsc
+- png
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: com.sonymobile.launcher
+sdkInfo:
+  minSdkVersion: '33'
+  targetSdkVersion: '33'
+sharedLibrary: false
+sparseResources: false
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.6.2-dirty
+versionInfo:
+  versionCode: '33'
+  versionName: '13'

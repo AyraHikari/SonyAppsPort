@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings version="1">
+    <groups type="desktop">
+        <group>
+            <groups type="folders">
+                <group>
+                    <setting key="name">Google</setting>
+                    <setting key="id">google</setting>
+                    <setting key="x">0</setting>
+                    <setting key="y">5</setting>
+                    <setting key="pane">0</setting>
+                </group>
+                <groups type="activities">
+                    <group>
+                        <setting key="name">.SearchActivity</setting>
+                        <setting key="package-name">com.google.android.googlequicksearchbox</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">.ConversationListActivityGmail</setting>
+                        <setting key="package-name">com.google.android.gm</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.google.android.maps.MapsActivity</setting>
+                        <setting key="package-name">com.google.android.apps.maps</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">.app.NewMainProxyActivity</setting>
+                        <setting key="package-name">com.google.android.apps.docs</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.android.music.activitymanagement.TopLevelActivity</setting>
+                        <setting key="package-name">com.google.android.music</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.google.android.apps.youtube.music.activities.MusicActivity</setting>
+                        <setting key="package-name">com.google.android.apps.youtube.music</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.google.android.videos.GoogleTvEntryPoint</setting>
+                        <setting key="package-name">com.google.android.videos</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.google.android.apps.tachyon.MainActivitySecondLauncher</setting>
+                        <setting key="package-name">com.google.android.apps.tachyon</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.android.contacts.activities.PeopleActivity</setting>
+                        <setting key="package-name">com.google.android.contacts</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.google.android.apps.docs.app.NewMainProxyActivity</setting>
+                        <setting key="package-name">com.google.android.apps.docs.editors.docs</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.google.android.apps.docs.app.NewMainProxyActivity</setting>
+                        <setting key="package-name">com.google.android.apps.docs.editors.sheets</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.google.android.apps.docs.app.NewMainProxyActivity</setting>
+                        <setting key="package-name">com.google.android.apps.docs.editors.slides</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.google.commerce.tapandpay.android.cardlist.CardListActivity</setting>
+                        <setting key="package-name">com.google.android.apps.walletnfcrel</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.google.vr.apps.ornament.app.lens.LensLauncherActivity</setting>
+                        <setting key="package-name">com.google.ar.lens</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.google.android.apps.subscriptions.red.LauncherActivity</setting>
+                        <setting key="package-name">com.google.android.apps.subscriptions.red</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                    <group>
+                        <setting key="name">com.google.android.apps.podcasts.PodcastsActivity</setting>
+                        <setting key="package-name">com.google.android.apps.podcasts</setting>
+                        <setting key="folder">google</setting>
+                    </group>
+                </groups>
+                <group>
+                    <setting key="name">Amazon</setting>
+                    <setting key="id">amazon</setting>
+                    <setting key="x">3</setting>
+                    <setting key="y">5</setting>
+                    <setting key="pane">1</setting>
+                </group>
+                <groups type="activities">
+                    <group>
+                        <setting key="name">com.amazon.mShop.home.HomeActivity</setting>
+                        <setting key="package-name">com.amazon.mShop.android.shopping</setting>
+                        <setting key="folder">amazon</setting>
+                    </group>
+                    <group>
+                        <setting key="name">.LauncherActivity</setting>
+                        <setting key="package-name">com.amazon.avod.thirdpartyclient</setting>
+                        <setting key="folder">amazon</setting>
+                    </group>
+                    <group>
+                        <setting key="name">.display.LauncherActivity</setting>
+                        <setting key="package-name">com.amazon.clouddrive.photos</setting>
+                        <setting key="folder">amazon</setting>
+                    </group>
+                </groups>
+            </groups>
+            <groups type="shortcuts">
+                <group>
+                    <setting key="name">Multi-window</setting>
+                    <setting key="uri">#Intent;action=com.sonymobile.senseapp.action.LAUNCH_MULTI_WINDOW;package=com.sonymobile.sidesenseapp;component=com.sonymobile.sidesenseapp/.mwindow.shortcut.MultiShortcutActivity;end</setting>
+                    <setting key="x">4</setting>
+                    <setting key="y">4</setting>
+                    <setting key="pane">0</setting>
+                    <setting key="icon-package-name">com.sonymobile.sidesenseapp</setting>
+                    <setting key="icon-resource-name">com.sonymobile.sidesenseapp:mipmap/multi_window_shortcut_icn</setting>
+                </group>
+            </groups>
+            <groups type="activities">
+                <group>
+                    <setting key="name">.common.MainActivity</setting>
+                    <setting key="package-name">com.sonymobile.gameenhancer</setting>
+                    <setting key="x">0</setting>
+                    <setting key="y">4</setting>
+                    <setting key="pane">0</setting>
+                </group>
+                <group>
+                    <setting key="name">.AssetBrowserActivity</setting>
+                    <setting key="package-name">com.android.vending</setting>
+                    <setting key="x">1</setting>
+                    <setting key="y">5</setting>
+                    <setting key="pane">0</setting>
+                </group>
+                <group>
+                    <setting key="name">.app.honeycomb.Shell$HomeActivity</setting>
+                    <setting key="package-name">com.google.android.youtube</setting>
+                    <setting key="x">2</setting>
+                    <setting key="y">5</setting>
+                    <setting key="pane">0</setting>
+                </group>
+                <group>
+                    <setting key="name">.CinemaProActivity</setting>
+                    <setting key="package-name">com.sonymobile.cinemapro</setting>
+                    <setting key="x">3</setting>
+                    <setting key="y">5</setting>
+                    <setting key="pane">0</setting>
+                </group>
+                <group>
+                    <setting key="name">.PhotoProActivity</setting>
+                    <setting key="package-name">com.sonymobile.photopro</setting>
+                    <setting key="x">4</setting>
+                    <setting key="y">5</setting>
+                    <setting key="pane">0</setting>
+                </group>
+                <group>
+                    <setting key="name">.ui.launch.UIWebViewActivity</setting>
+                    <setting key="package-name">com.netflix.mediaclient</setting>
+                    <setting key="x">0</setting>
+                    <setting key="y">4</setting>
+                    <setting key="pane">1</setting>
+                </group>
+                <group>
+                    <setting key="name">com.aspiro.wamp.LoginFragmentActivity</setting>
+                    <setting key="package-name">com.aspiro.tidal</setting>
+                    <setting key="x">1</setting>
+                    <setting key="y">4</setting>
+                    <setting key="pane">1</setting>
+                </group>
+                <group>
+                    <setting key="name">.startup.HomeActivity</setting>
+                    <setting key="package-name">com.booking</setting>
+                    <setting key="x">2</setting>
+                    <setting key="y">4</setting>
+                    <setting key="pane">1</setting>
+                </group>
+                <group>
+                    <setting key="name">com.linkedin.android.authenticator.LaunchActivity</setting>
+                    <setting key="package-name">com.linkedin.android</setting>
+                    <setting key="x">3</setting>
+                    <setting key="y">4</setting>
+                    <setting key="pane">1</setting>
+                </group>
+                <group>
+                    <setting key="name">com.tencent.tmgp.cod.PermissionGrantActivity</setting>
+                    <setting key="package-name">com.activision.callofduty.shooter</setting>
+                    <setting key="x">4</setting>
+                    <setting key="y">4</setting>
+                    <setting key="pane">1</setting>
+                </group>
+                <group>
+                    <setting key="name">com.google.apps.dots.android.app.activity.CurrentsStartActivity</setting>
+                    <setting key="package-name">com.google.android.apps.magazines</setting>
+                    <setting key="x">0</setting>
+                    <setting key="y">5</setting>
+                    <setting key="pane">1</setting>
+                </group>
+                <group>
+                    <setting key="name">com.android.calendar.AllInOneActivity</setting>
+                    <setting key="package-name">com.google.android.calendar</setting>
+                    <setting key="x">1</setting>
+                    <setting key="y">5</setting>
+                    <setting key="pane">1</setting>
+                </group>
+                <group>
+                    <setting key="name">.LoginActivity</setting>
+                    <setting key="package-name">com.facebook.katana</setting>
+                    <setting key="x">2</setting>
+                    <setting key="y">5</setting>
+                    <setting key="pane">1</setting>
+                </group>
+                <group>
+                    <setting key="name">.Settings</setting>
+                    <setting key="package-name">com.android.settings</setting>
+                    <setting key="x">4</setting>
+                    <setting key="y">5</setting>
+                    <setting key="pane">1</setting>
+                </group>
+            </groups>
+        </group>
+    </groups>
+</settings>

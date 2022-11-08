@@ -42,7 +42,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/settings/CustomizeMyLibraryAdapter$ItemHolder;->mDragHandle:Landroid/widget/ImageView;
 
-    const v0, 0x7f0901fa
+    const v0, 0x7f0901fb
 
     .line 135
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

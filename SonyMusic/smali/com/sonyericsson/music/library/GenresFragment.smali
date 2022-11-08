@@ -425,6 +425,7 @@
 
     new-instance v3, Lcom/sonyericsson/music/library/BaseFragment$MatcherData;
 
+    .line 269
     sget-boolean v4, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
 
     if-eqz v4, :cond_0

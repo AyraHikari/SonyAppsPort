@@ -15,7 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 35
+    .line 38
     invoke-direct {p0}, Landroidx/core/app/JobIntentService;-><init>()V
 
     return-void
@@ -24,7 +24,7 @@
 .method private static enqueueWork(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 68
+    .line 88
     const-class v0, Lcom/sonyericsson/music/metadata/MusicInfoService;
 
     const/4 v1, 0x2
@@ -37,7 +37,18 @@
 .method public static startHighResContainersSync(Landroid/content/Context;)V
     .locals 2
 
-    .line 55
+    .line 67
+    sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_O_API:Z
+
+    if-eqz v0, :cond_0
+
+    .line 68
+    invoke-static {p0}, Lcom/sonyericsson/music/metadata/MusicInfoWorker;->startHighResContainersSync(Landroid/content/Context;)V
+
+    return-void
+
+    .line 71
+    :cond_0
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/sonyericsson/music/metadata/MusicInfoService;
@@ -46,10 +57,10 @@
 
     const-string v1, "com.sonyericsson.music.musicinfo.SYNC_HIGH_RES_MEDIA"
 
-    .line 56
+    .line 72
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 58
+    .line 74
     invoke-static {p0, v0}, Lcom/sonyericsson/music/metadata/MusicInfoService;->enqueueWork(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -58,7 +69,18 @@
 .method public static startMediaStoreDataSync(Landroid/content/Context;)V
     .locals 2
 
-    .line 62
+    .line 78
+    sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
+
+    if-eqz v0, :cond_0
+
+    .line 79
+    invoke-static {p0}, Lcom/sonyericsson/music/metadata/MusicInfoWorker;->startMediaStoreDataSync(Landroid/content/Context;)V
+
+    return-void
+
+    .line 82
+    :cond_0
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/sonyericsson/music/metadata/MusicInfoService;
@@ -67,10 +89,10 @@
 
     const-string v1, "com.sonyericsson.music.musicinfo.SYNC_MEDIASTORE_DATA"
 
-    .line 63
+    .line 83
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 64
+    .line 84
     invoke-static {p0, v0}, Lcom/sonyericsson/music/metadata/MusicInfoService;->enqueueWork(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -79,9 +101,20 @@
 .method public static startPlaylistSync(Landroid/content/Context;)V
     .locals 1
 
+    .line 42
+    sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_O_API:Z
+
+    if-eqz v0, :cond_0
+
+    .line 43
+    invoke-static {p0}, Lcom/sonyericsson/music/metadata/MusicInfoWorker;->startPlaylistSync(Landroid/content/Context;)V
+
+    return-void
+
+    :cond_0
     const/4 v0, 0x0
 
-    .line 39
+    .line 46
     invoke-static {p0, v0}, Lcom/sonyericsson/music/metadata/MusicInfoService;->startPlaylistSync(Landroid/content/Context;I)V
 
     return-void
@@ -90,7 +123,18 @@
 .method public static startPlaylistSync(Landroid/content/Context;I)V
     .locals 2
 
-    .line 43
+    .line 50
+    sget-boolean v0, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_O_API:Z
+
+    if-eqz v0, :cond_0
+
+    .line 51
+    invoke-static {p0, p1}, Lcom/sonyericsson/music/metadata/MusicInfoWorker;->startPlaylistSync(Landroid/content/Context;I)V
+
+    return-void
+
+    .line 55
+    :cond_0
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/sonyericsson/music/metadata/MusicInfoService;
@@ -99,15 +143,15 @@
 
     const-string v1, "com.sonyericsson.music.musicinfo.SYNC_PLAYLISTS"
 
-    .line 44
+    .line 56
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "delay_art_refresh"
 
-    .line 48
+    .line 60
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 51
+    .line 63
     invoke-static {p0, v0}, Lcom/sonyericsson/music/metadata/MusicInfoService;->enqueueWork(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -120,22 +164,22 @@
 
     if-eqz p1, :cond_2
 
-    .line 75
+    .line 95
     invoke-virtual {p0}, Landroid/app/Service;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 76
+    .line 96
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 78
+    .line 98
     sget-object v2, Lcom/sonyericsson/music/common/Debug;->DEBUG:Lcom/sonyericsson/music/common/Debug;
 
     const-string v2, "com.sonyericsson.music.musicinfo.SYNC_PLAYLISTS"
 
-    .line 82
+    .line 102
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -144,14 +188,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 83
+    .line 103
     invoke-static {v0}, Lcom/sonyericsson/music/common/PermissionUtils;->isWriteStoragePermissionGranted(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 84
+    .line 104
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
@@ -162,15 +206,15 @@
 
     const/4 v5, 0x0
 
-    .line 86
+    .line 106
     invoke-virtual {p1, v4, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 85
+    .line 105
     invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 90
+    .line 110
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -188,14 +232,14 @@
     :cond_0
     const-string p1, "com.sonyericsson.music.musicinfo.SYNC_HIGH_RES_MEDIA"
 
-    .line 93
+    .line 113
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 94
+    .line 114
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -213,21 +257,21 @@
     :cond_1
     const-string p1, "com.sonyericsson.music.musicinfo.SYNC_MEDIASTORE_DATA"
 
-    .line 96
+    .line 116
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 97
+    .line 117
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
     const-string v0, "content://com.sonyericsson.music.musicinfo/"
 
-    .line 98
+    .line 118
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

@@ -1,4 +1,4 @@
-.class final Lcom/sonymobile/music/common/ThreadingUtils$1;
+.class Lcom/sonymobile/music/common/ThreadingUtils$1;
 .super Landroid/os/AsyncTask;
 .source "ThreadingUtils.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

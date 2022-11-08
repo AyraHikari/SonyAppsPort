@@ -98,9 +98,7 @@
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 68
-    invoke-static {p0, v0}, Lcom/sonyericsson/music/common/AvailabilityUtils;->isIntentAvailable(Landroid/content/Context;Landroid/content/Intent;)Z
-
-    move-result p0
+    const p0, 0x1
 
     return p0
 .end method

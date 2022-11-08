@@ -27,12 +27,12 @@
 .method constructor <init>(Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;)V
     .locals 0
 
-    .line 691
+    .line 722
     iput-object p1, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ImageClickListener;->this$0:Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 692
+    .line 723
     iput-object p2, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ImageClickListener;->mImageType:Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
 
     return-void
@@ -43,7 +43,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 5
 
-    .line 698
+    .line 729
     iget-object p1, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ImageClickListener;->this$0:Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;
 
     iget-object p1, p1, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;->mActivity:Lcom/sonyericsson/music/metadata/EditMusicInfoActivity;
@@ -56,7 +56,7 @@
 
     return-void
 
-    .line 703
+    .line 734
     :cond_0
     iget-object p1, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ImageClickListener;->this$0:Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;
 
@@ -64,14 +64,14 @@
 
     const-string v0, "input_method"
 
-    .line 704
+    .line 735
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 705
+    .line 736
     iget-object v0, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ImageClickListener;->this$0:Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;
 
     iget-object v0, v0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;->mActivity:Lcom/sonyericsson/music/metadata/EditMusicInfoActivity;
@@ -84,14 +84,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 707
+    .line 738
     invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v0
 
     invoke-virtual {p1, v0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 710
+    .line 741
     :cond_1
     iget-object p1, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ImageClickListener;->this$0:Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;
 
@@ -99,7 +99,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 713
+    .line 744
     iget-object v2, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ImageClickListener;->mImageType:Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
 
     sget-object v3, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;->ALBUM:Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
@@ -108,7 +108,7 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 714
+    .line 745
     invoke-virtual {p1}, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;->isAlbumImageModifiable()Z
 
     move-result p1
@@ -119,7 +119,7 @@
 
     iget-object p1, p1, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;->mEditMusicInfo:Lcom/sonyericsson/music/metadata/EditMusicInfo;
 
-    .line 715
+    .line 746
     invoke-virtual {p1}, Lcom/sonyericsson/music/metadata/EditMusicInfo;->hasRemovableAlbumArt()Z
 
     move-result p1
@@ -130,13 +130,13 @@
 
     goto :goto_0
 
-    .line 716
+    .line 747
     :cond_2
     sget-object p1, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;->ARTIST:Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
 
     if-ne v2, p1, :cond_3
 
-    .line 717
+    .line 748
     invoke-virtual {v0}, Lcom/sonyericsson/music/metadata/EditMusicInfo;->getArtistArt()Ljava/io/File;
 
     move-result-object p1
@@ -145,7 +145,7 @@
 
     const/4 v1, 0x1
 
-    .line 720
+    .line 751
     :cond_3
     :goto_0
     iget-object p1, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ImageClickListener;->this$0:Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;
@@ -158,7 +158,7 @@
 
     move-result-object p1
 
-    .line 721
+    .line 752
     iget-object v0, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ImageClickListener;->this$0:Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;

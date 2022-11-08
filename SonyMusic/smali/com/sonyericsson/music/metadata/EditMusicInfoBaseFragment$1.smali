@@ -24,7 +24,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 729
+    .line 760
     invoke-static {}, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;->values()[Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment$ArtAction;
 
     move-result-object v0
@@ -66,7 +66,7 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 179
+    .line 180
     :catch_1
     invoke-static {}, Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;->values()[Lcom/sonyericsson/music/metadata/EditMusicInfoUtils$ImageType;
 

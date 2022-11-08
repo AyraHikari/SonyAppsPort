@@ -83,7 +83,7 @@
 
     sget-object v1, Lcom/sonyericsson/music/common/QuickPlayUtils$Type;->USER_PLAYLIST:Lcom/sonyericsson/music/common/QuickPlayUtils$Type;
 
-    const v2, 0x7f090189
+    const v2, 0x7f09018a
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -322,7 +322,7 @@
     goto :goto_0
 
     :pswitch_1
-    const v2, 0x7f09018a
+    const v2, 0x7f09018b
 
     .line 364
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -640,7 +640,7 @@
 
     if-eq p1, v0, :cond_3
 
-    const v0, 0x7f090189
+    const v0, 0x7f09018a
 
     if-eq p1, v0, :cond_0
 
@@ -810,7 +810,7 @@
 
     if-eq p1, v0, :cond_2
 
-    const v0, 0x7f09018b
+    const v0, 0x7f09018c
 
     if-eq p1, v0, :cond_0
 
@@ -899,7 +899,7 @@
 
     iput-object v2, p0, Lcom/sonyericsson/music/QuickPlaySelectionActivity;->mAllTracksRadioButton:Landroid/widget/RadioButton;
 
-    const v2, 0x7f090189
+    const v2, 0x7f09018a
 
     .line 94
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -921,7 +921,7 @@
 
     iput-object v4, p0, Lcom/sonyericsson/music/QuickPlaySelectionActivity;->mHideRadioButton:Landroid/widget/RadioButton;
 
-    const v4, 0x7f09018c
+    const v4, 0x7f09018d
 
     .line 96
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -950,7 +950,7 @@
 
     iput-object v4, p0, Lcom/sonyericsson/music/QuickPlaySelectionActivity;->mAllTracksGroup:Landroid/view/View;
 
-    const v4, 0x7f09018b
+    const v4, 0x7f09018c
 
     .line 99
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;

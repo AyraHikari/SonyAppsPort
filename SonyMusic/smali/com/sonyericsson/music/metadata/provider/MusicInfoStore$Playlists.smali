@@ -25,20 +25,32 @@
 
 # static fields
 .field static final FAVOURITE_ID:I = -0x5
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field public static final MEMBERS:Ljava/lang/String; = "members"
 
 .field static final MOSTLY_PLAYED_ID:I = -0x3
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field static final MOVE_FROM_PARAM:Ljava/lang/String; = "from"
 
 .field static final MOVE_TO_PARAM:Ljava/lang/String; = "to"
 
 .field static final NEWLY_ADDED_ID:I = -0x2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field private static final PATH:Ljava/lang/String; = "playlists"
 
 .field static final RECENTLY_PLAYED_ID:I = -0x4
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field static final SENSME_ID:I = -0x1
     .annotation runtime Ljava/lang/Deprecated;
@@ -63,7 +75,7 @@
 
     const-string v0, "content://com.sonyericsson.music.musicinfo/"
 
-    .line 293
+    .line 297
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -74,7 +86,7 @@
 
     const-string v1, "playlists"
 
-    .line 294
+    .line 298
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendEncodedPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -95,7 +107,7 @@
 .method public static getContentUri()Landroid/net/Uri;
     .locals 2
 
-    .line 298
+    .line 302
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,7 +138,7 @@
 
     const-string v0, "content://com.sonyericsson.music.musicinfo/"
 
-    .line 308
+    .line 312
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -149,7 +161,7 @@
 
     move-result-object p0
 
-    .line 309
+    .line 313
     invoke-virtual {v0, p0}, Landroid/net/Uri$Builder;->appendEncodedPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p0
@@ -166,7 +178,7 @@
 
     const/4 v0, 0x0
 
-    .line 319
+    .line 323
     invoke-static {p0, v0}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists;->getContentUri(Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$PlaylistSet;Ljava/lang/Boolean;)Landroid/net/Uri;
 
     move-result-object p0
@@ -177,7 +189,7 @@
 .method public static getContentUri(Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$PlaylistSet;Ljava/lang/Boolean;)Landroid/net/Uri;
     .locals 2
 
-    .line 324
+    .line 328
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists;->getContentUri()Landroid/net/Uri;
 
     move-result-object v0
@@ -188,32 +200,32 @@
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->FILTER_PLAYLIST_SET:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;
 
-    .line 325
+    .line 329
     invoke-virtual {v1}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getParameter()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 326
+    .line 330
     invoke-virtual {p0}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$PlaylistSet;->getParameter()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 325
+    .line 329
     invoke-virtual {v0, v1, p0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
     if-eqz p1, :cond_1
 
-    .line 328
+    .line 332
     sget-object v0, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->FILTER_IS_HIDDEN:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;
 
-    .line 329
+    .line 333
     invoke-virtual {v0}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getParameter()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 330
+    .line 334
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -227,11 +239,11 @@
     :cond_0
     const-string p1, "0"
 
-    .line 328
+    .line 332
     :goto_0
     invoke-virtual {p0, v0, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 332
+    .line 336
     :cond_1
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
@@ -243,7 +255,7 @@
 .method public static getContentUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
 
-    .line 313
+    .line 317
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists;->getContentUri()Landroid/net/Uri;
 
     move-result-object v0
@@ -254,7 +266,7 @@
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->FILTER_PLAYLIST_NAME:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;
 
-    .line 314
+    .line 318
     invoke-virtual {v1}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getParameter()Ljava/lang/String;
 
     move-result-object v1
@@ -263,7 +275,7 @@
 
     move-result-object p0
 
-    .line 315
+    .line 319
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
@@ -274,7 +286,7 @@
 .method public static getContentUri(Z)Landroid/net/Uri;
     .locals 2
 
-    .line 302
+    .line 306
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Playlists;->getContentUri()Landroid/net/Uri;
 
     move-result-object v0
@@ -285,7 +297,7 @@
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->FILTER_IS_HIDDEN:Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;
 
-    .line 303
+    .line 307
     invoke-virtual {v1}, Lcom/sonyericsson/music/metadata/provider/FilterQueryParams$Filter;->getParameter()Ljava/lang/String;
 
     move-result-object v1
@@ -304,7 +316,7 @@
 
     move-result-object p0
 
-    .line 304
+    .line 308
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
@@ -323,21 +335,21 @@
 .method public static getPlaylistIdParam(Landroid/net/Uri;)I
     .locals 2
 
-    .line 340
+    .line 344
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "members"
 
-    .line 342
+    .line 346
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 343
+    .line 347
     invoke-static {v0}, Lcom/sonyericsson/music/common/DBUtils;->parseMembersContainerId(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -346,7 +358,7 @@
 
     return p0
 
-    .line 345
+    .line 349
     :cond_0
     invoke-virtual {p0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 

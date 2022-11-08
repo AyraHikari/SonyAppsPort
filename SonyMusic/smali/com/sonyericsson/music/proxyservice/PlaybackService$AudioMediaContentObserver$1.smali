@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;)V
     .locals 0
 
-    .line 879
+    .line 903
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver$1;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 882
+    .line 906
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver$1;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->access$700(Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;)Landroid/content/Context;
@@ -47,7 +47,7 @@
 
     invoke-static {v0}, Lcom/sonyericsson/music/metadata/MusicInfoService;->startMediaStoreDataSync(Landroid/content/Context;)V
 
-    .line 883
+    .line 907
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver$1;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;
 
     invoke-static {v0}, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;->access$700(Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;)Landroid/content/Context;
@@ -56,7 +56,7 @@
 
     invoke-static {v0}, Lcom/sonyericsson/music/metadata/MusicInfoService;->startHighResContainersSync(Landroid/content/Context;)V
 
-    .line 884
+    .line 908
     iget-object v0, p0, Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver$1;->this$0:Lcom/sonyericsson/music/proxyservice/PlaybackService$AudioMediaContentObserver;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J

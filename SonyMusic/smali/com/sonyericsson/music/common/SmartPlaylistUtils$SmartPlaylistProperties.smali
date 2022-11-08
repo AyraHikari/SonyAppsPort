@@ -34,28 +34,28 @@
 .method public constructor <init>(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;ILandroid/net/Uri;)V
     .locals 0
 
-    .line 290
+    .line 312
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 291
+    .line 313
     iput-object p1, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mTracksUri:Landroid/net/Uri;
 
-    .line 292
+    .line 314
     iput-object p2, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mProjection:[Ljava/lang/String;
 
-    .line 293
+    .line 315
     iput-object p3, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mWhere:Ljava/lang/String;
 
-    .line 294
+    .line 316
     iput-object p4, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mWhereArgs:[Ljava/lang/String;
 
-    .line 295
+    .line 317
     iput-object p5, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mOrderBy:Ljava/lang/String;
 
-    .line 296
+    .line 318
     iput p6, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mLimit:I
 
-    .line 297
+    .line 319
     iput-object p7, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mContainerUri:Landroid/net/Uri;
 
     return-void
@@ -80,7 +80,7 @@
 
     move-object v7, p6
 
-    .line 286
+    .line 308
     invoke-direct/range {v0 .. v7}, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;-><init>(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;ILandroid/net/Uri;)V
 
     return-void
@@ -91,7 +91,7 @@
 .method public getContainerUri()Landroid/net/Uri;
     .locals 1
 
-    .line 324
+    .line 346
     iget-object v0, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mContainerUri:Landroid/net/Uri;
 
     return-object v0
@@ -100,7 +100,7 @@
 .method public getLimit()I
     .locals 1
 
-    .line 328
+    .line 350
     iget v0, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mLimit:I
 
     return v0
@@ -109,7 +109,7 @@
 .method public getOrderBy()Ljava/lang/String;
     .locals 2
 
-    .line 317
+    .line 339
     invoke-virtual {p0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->hasLimit()Z
 
     move-result v0
@@ -124,7 +124,7 @@
 
     goto :goto_0
 
-    .line 320
+    .line 342
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -148,7 +148,7 @@
 
     return-object v0
 
-    .line 318
+    .line 340
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mOrderBy:Ljava/lang/String;
@@ -159,7 +159,7 @@
 .method public getProjection()[Ljava/lang/String;
     .locals 1
 
-    .line 305
+    .line 327
     iget-object v0, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mProjection:[Ljava/lang/String;
 
     return-object v0
@@ -168,7 +168,7 @@
 .method public getTracksUri()Landroid/net/Uri;
     .locals 1
 
-    .line 301
+    .line 323
     iget-object v0, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mTracksUri:Landroid/net/Uri;
 
     return-object v0
@@ -177,7 +177,7 @@
 .method public getWhere()Ljava/lang/String;
     .locals 1
 
-    .line 309
+    .line 331
     iget-object v0, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mWhere:Ljava/lang/String;
 
     return-object v0
@@ -186,7 +186,7 @@
 .method public getWhereArgs()[Ljava/lang/String;
     .locals 1
 
-    .line 313
+    .line 335
     iget-object v0, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mWhereArgs:[Ljava/lang/String;
 
     return-object v0
@@ -195,7 +195,7 @@
 .method public hasLimit()Z
     .locals 1
 
-    .line 332
+    .line 354
     iget v0, p0, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->mLimit:I
 
     if-lez v0, :cond_0

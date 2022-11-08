@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference android:title="@string/title_show_google_app" android:key="pref_enable_minus_one" android:summary="@string/pref_show_google_now_summary" android:defaultValue="true" />
+    <com.android.launcher3.settings.NotificationDotsPreference android:persistent="false" android:title="@string/notification_dots_title" android:key="pref_icon_badging" android:widgetLayout="@layout/notification_pref_warning" />
+    <SwitchPreference android:persistent="true" android:title="@string/auto_add_shortcuts_label" android:key="pref_add_icon_to_home" android:summary="@string/auto_add_shortcuts_description" android:defaultValue="true" launcher:logIdOff="614" launcher:logIdOn="613" />
+    <SwitchPreference android:persistent="true" android:title="@string/allow_rotation_title" android:key="pref_allowRotation" android:summary="@string/allow_rotation_desc" android:defaultValue="false" launcher:logIdOff="616" launcher:logIdOn="615" />
+    <SwitchPreference android:persistent="true" android:title="@string/title_show_search" android:key="pref_show_quick_search_box" android:summary="@string/msg_search" />
+    <androidx.preference.PreferenceScreen android:persistent="false" android:title="@string/developer_options_title" android:key="pref_developer_options" android:fragment="com.android.launcher3.settings.DeveloperOptionsFragment" />
+</androidx.preference.PreferenceScreen>

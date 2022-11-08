@@ -83,7 +83,7 @@
     move-object v0, v2
 
     :goto_0
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     .line 505
     invoke-virtual {v0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->getTracksUri()Landroid/net/Uri;
@@ -114,22 +114,71 @@
     invoke-virtual {p0, v1}, Landroidx/loader/content/CursorLoader;->setProjection([Ljava/lang/String;)V
 
     .line 509
+    sget-boolean v1, Lcom/sonyericsson/music/common/MusicUtils;->SUPPORT_SDK_R_API:Z
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/sonyericsson/music/library/SmartPlaylistFragment$SmartPlaylistTracksLoader;->mType:Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;
+
+    sget-object v3, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;->NEWLY_ADDED:Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistType;
+
+    if-ne v1, v3, :cond_1
+
+    .line 510
+    invoke-virtual {v0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->hasLimit()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 511
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->getOrderBy()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " LIMIT "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->getLimit()I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroidx/loader/content/CursorLoader;->setSortOrder(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 513
+    :cond_1
     invoke-virtual {v0}, Lcom/sonyericsson/music/common/SmartPlaylistUtils$SmartPlaylistProperties;->getOrderBy()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroidx/loader/content/CursorLoader;->setSortOrder(Ljava/lang/String;)V
 
-    .line 510
+    .line 515
+    :goto_1
     invoke-super {p0}, Landroidx/loader/content/AsyncTaskLoader;->onLoadInBackground()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/database/Cursor;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 513
+    .line 518
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -142,14 +191,14 @@
 
     move-result-object v1
 
-    .line 517
+    .line 522
     new-instance v2, Lcom/sonyericsson/music/common/HighResAttachedCursor;
 
     invoke-direct {v2, v0, v1}, Lcom/sonyericsson/music/common/HighResAttachedCursor;-><init>(Landroid/database/Cursor;Ljava/util/HashSet;)V
 
     return-object v2
 
-    :cond_1
+    :cond_2
     return-object v2
 .end method
 
@@ -167,15 +216,15 @@
 .method protected onReset()V
     .locals 2
 
-    .line 526
+    .line 531
     invoke-super {p0}, Landroidx/loader/content/CursorLoader;->onReset()V
 
-    .line 528
+    .line 533
     iget-boolean v0, p0, Lcom/sonyericsson/music/library/SmartPlaylistFragment$SmartPlaylistTracksLoader;->mRegisteredObserver:Z
 
     if-eqz v0, :cond_0
 
-    .line 529
+    .line 534
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -190,7 +239,7 @@
 
     const/4 v0, 0x0
 
-    .line 530
+    .line 535
     iput-boolean v0, p0, Lcom/sonyericsson/music/library/SmartPlaylistFragment$SmartPlaylistTracksLoader;->mRegisteredObserver:Z
 
     :cond_0

@@ -339,12 +339,12 @@
 .method private closeFragment()V
     .locals 3
 
-    .line 956
+    .line 960
     iget-boolean v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mShouldClose:Z
 
     if-eqz v0, :cond_0
 
-    .line 957
+    .line 961
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -353,14 +353,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 958
+    .line 962
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->isFragmentTransactionAllowed()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 959
+    .line 963
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
@@ -378,7 +378,7 @@
 .method private closeInputMethod()V
     .locals 3
 
-    .line 941
+    .line 945
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -387,19 +387,19 @@
 
     const-string v1, "input_method"
 
-    .line 944
+    .line 948
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 945
+    .line 949
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchView:Lcom/sonyericsson/music/search/MusicSearchView;
 
     if-eqz v1, :cond_0
 
-    .line 946
+    .line 950
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v1
@@ -408,18 +408,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 947
+    .line 951
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchView:Lcom/sonyericsson/music/search/MusicSearchView;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/SearchView;->clearFocus()V
 
-    .line 949
+    .line 953
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchList:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz v0, :cond_1
 
-    .line 950
+    .line 954
     invoke-virtual {v0}, Landroid/view/ViewGroup;->requestFocus()Z
 
     :cond_1
@@ -429,7 +429,7 @@
 .method private getGADataAggregator()Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;
     .locals 2
 
-    .line 994
+    .line 1000
     invoke-direct {p0}, Lcom/sonyericsson/music/search/SearchFragment;->isHistory()Z
 
     move-result v0
@@ -443,7 +443,7 @@
     :cond_0
     const-string v0, "search_result"
 
-    .line 995
+    .line 1001
     :goto_0
     new-instance v1, Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;
 
@@ -455,24 +455,24 @@
 .method private getNewAdapter()Lcom/sonyericsson/music/search/SearchAdapter;
     .locals 3
 
-    .line 977
+    .line 983
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    .line 978
+    .line 984
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mArtDecoder:Lcom/sonyericsson/music/artdecoder/ArtDecoder;
 
     if-nez v1, :cond_0
 
-    .line 979
+    .line 985
     new-instance v1, Lcom/sonyericsson/music/artdecoder/ArtDecoder;
 
     invoke-direct {v1, v0}, Lcom/sonyericsson/music/artdecoder/ArtDecoder;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mArtDecoder:Lcom/sonyericsson/music/artdecoder/ArtDecoder;
 
-    .line 981
+    .line 987
     :cond_0
     new-instance v1, Lcom/sonyericsson/music/search/SearchAdapter;
 
@@ -486,7 +486,7 @@
 .method private static hideAllItemsButSearch(Landroid/view/Menu;)V
     .locals 6
 
-    .line 966
+    .line 970
     invoke-interface {p0}, Landroid/view/Menu;->size()I
 
     move-result v0
@@ -498,27 +498,35 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 968
+    .line 972
     invoke-interface {p0, v2}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v3
 
-    .line 969
+    .line 973
     invoke-interface {v3}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v4
 
-    const v5, 0x7f090117
+    const v5, 0x7f090118
 
     if-eq v4, v5, :cond_0
 
-    .line 970
+    .line 974
     invoke-interface {v3, v1}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 971
+    .line 975
     invoke-interface {v3, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
+    goto :goto_1
+
     :cond_0
+    const/4 v4, 0x1
+
+    .line 977
+    invoke-interface {v3, v4}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
@@ -530,7 +538,7 @@
 .method private isHistory()Z
     .locals 1
 
-    .line 986
+    .line 992
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchAdapter:Lcom/sonyericsson/music/search/SearchAdapter;
 
     if-eqz v0, :cond_0
@@ -543,7 +551,7 @@
 
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchAdapter:Lcom/sonyericsson/music/search/SearchAdapter;
 
-    .line 987
+    .line 993
     invoke-virtual {v0}, Lcom/sonyericsson/music/search/SearchAdapter;->getData()Lcom/sonyericsson/music/search/SearchResult;
 
     move-result-object v0
@@ -597,7 +605,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 765
+    .line 769
     invoke-interface {p1}, Lcom/sonyericsson/music/search/SearchResult;->size()I
 
     move-result v0
@@ -611,14 +619,14 @@
 
     const v1, 0x7f100280
 
-    .line 766
+    .line 770
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/SearchView;->setQueryHint(Ljava/lang/CharSequence;)V
 
-    .line 769
+    .line 773
     :cond_1
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mHandler:Landroid/os/Handler;
 
@@ -626,12 +634,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 771
+    .line 775
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchList:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz v0, :cond_2
 
-    .line 772
+    .line 776
     invoke-virtual {v0}, Landroid/view/ViewGroup;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -644,7 +652,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 775
+    .line 779
     :cond_2
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mProgress:Landroid/widget/ProgressBar;
 
@@ -652,10 +660,10 @@
 
     const/16 v1, 0x8
 
-    .line 776
+    .line 780
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 779
+    .line 783
     :cond_3
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/search/SearchFragment;->swapSearchResult(Lcom/sonyericsson/music/search/SearchResult;)V
 
@@ -665,7 +673,7 @@
 .method private onSearchStarting()V
     .locals 4
 
-    .line 760
+    .line 764
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mShowProgressRunnable:Ljava/lang/Runnable;
@@ -680,27 +688,27 @@
 .method private openAlbum(Lcom/sonyericsson/music/search/SearchItem;)V
     .locals 7
 
-    .line 835
+    .line 839
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getArtistName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 836
+    .line 840
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getAlbumName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 837
+    .line 841
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getArtUri()Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 838
+    .line 842
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
 
     move-result-wide v4
 
-    .line 839
+    .line 843
     sget-object v0, Lcom/sonyericsson/music/search/SearchFragment$10;->$SwitchMap$com$sonyericsson$music$search$SearchConstants$Type:[I
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getType()Lcom/sonyericsson/music/search/SearchConstants$Type;
@@ -717,7 +725,7 @@
 
     return-void
 
-    .line 848
+    .line 852
     :pswitch_0
     sget-object p1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -729,21 +737,21 @@
 
     const/4 v5, 0x0
 
-    .line 850
+    .line 854
     invoke-direct {p0}, Lcom/sonyericsson/music/search/SearchFragment;->getGADataAggregator()Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;
 
     move-result-object v6
 
     move-object v4, p1
 
-    .line 849
+    .line 853
     invoke-static/range {v0 .. v6}, Lcom/sonyericsson/music/library/AlbumFragment;->newInstance(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/net/Uri;Landroid/net/Uri;Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;)Lcom/sonyericsson/music/library/AlbumFragment;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 841
+    .line 845
     :pswitch_1
     sget-object p1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Albums;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -755,19 +763,19 @@
 
     const/4 v5, 0x0
 
-    .line 844
+    .line 848
     invoke-direct {p0}, Lcom/sonyericsson/music/search/SearchFragment;->getGADataAggregator()Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;
 
     move-result-object v6
 
     move-object v0, p1
 
-    .line 843
+    .line 847
     invoke-static/range {v0 .. v6}, Lcom/sonyericsson/music/library/AlbumFragment;->newInstance(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/net/Uri;Landroid/net/Uri;Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;)Lcom/sonyericsson/music/library/AlbumFragment;
 
     move-result-object v0
 
-    .line 857
+    .line 861
     :goto_0
     new-instance v1, Lcom/sonyericsson/music/common/CheckMediaAvailableTask;
 
@@ -785,7 +793,7 @@
 
     const/4 v2, 0x0
 
-    .line 867
+    .line 871
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -808,17 +816,17 @@
 .method private openArtist(Lcom/sonyericsson/music/search/SearchItem;)V
     .locals 5
 
-    .line 871
+    .line 875
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
 
     move-result-wide v0
 
-    .line 872
+    .line 876
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getArtistName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 875
+    .line 879
     sget-object v3, Lcom/sonyericsson/music/search/SearchFragment$10;->$SwitchMap$com$sonyericsson$music$search$SearchConstants$Type:[I
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getType()Lcom/sonyericsson/music/search/SearchConstants$Type;
@@ -837,7 +845,7 @@
 
     return-void
 
-    .line 877
+    .line 881
     :pswitch_0
     sget-object v3, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Artists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -845,10 +853,10 @@
 
     move-result-object v0
 
-    .line 878
+    .line 882
     sget-object v1, Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;->ARTIST_ID:Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;
 
-    .line 879
+    .line 883
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getArtUri()Landroid/net/Uri;
 
     move-result-object p1
@@ -857,14 +865,14 @@
 
     move-result-object v3
 
-    .line 878
+    .line 882
     invoke-static {v1, v0, v2, p1, v3}, Lcom/sonyericsson/music/library/artist/ArtistFragment;->newInstance(Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;Landroid/net/Uri;Ljava/lang/String;Landroid/net/Uri;Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;)Lcom/sonyericsson/music/library/artist/ArtistFragment;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 882
+    .line 886
     :pswitch_1
     sget-object p1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -872,22 +880,22 @@
 
     move-result-object v0
 
-    .line 883
+    .line 887
     sget-object p1, Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;->TRACK_ID:Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;
 
-    .line 884
+    .line 888
     invoke-direct {p0}, Lcom/sonyericsson/music/search/SearchFragment;->getGADataAggregator()Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;
 
     move-result-object v1
 
-    .line 883
+    .line 887
     invoke-static {p1, v0, v2, v4, v1}, Lcom/sonyericsson/music/library/artist/ArtistFragment;->newInstance(Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;Landroid/net/Uri;Ljava/lang/String;Landroid/net/Uri;Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;)Lcom/sonyericsson/music/library/artist/ArtistFragment;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 887
+    .line 891
     :pswitch_2
     sget-object p1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Albums;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -895,20 +903,20 @@
 
     move-result-object v0
 
-    .line 888
+    .line 892
     sget-object p1, Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;->ALBUM_ID:Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;
 
-    .line 889
+    .line 893
     invoke-direct {p0}, Lcom/sonyericsson/music/search/SearchFragment;->getGADataAggregator()Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;
 
     move-result-object v1
 
-    .line 888
+    .line 892
     invoke-static {p1, v0, v2, v4, v1}, Lcom/sonyericsson/music/library/artist/ArtistFragment;->newInstance(Lcom/sonyericsson/music/library/artist/ArtistFragment$ArtistFragmentLoadType;Landroid/net/Uri;Ljava/lang/String;Landroid/net/Uri;Lcom/sonyericsson/music/library/GoogleAnalyticsDataAggregator;)Lcom/sonyericsson/music/library/artist/ArtistFragment;
 
     move-result-object p1
 
-    .line 895
+    .line 899
     :goto_0
     new-instance v1, Lcom/sonyericsson/music/common/CheckMediaAvailableTask;
 
@@ -926,7 +934,7 @@
 
     const/4 v2, 0x0
 
-    .line 905
+    .line 909
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -952,15 +960,15 @@
 
     const/4 v0, 0x0
 
-    .line 918
+    .line 922
     invoke-virtual {p0, v0}, Lcom/sonyericsson/music/search/SearchFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     const/4 v1, 0x0
 
-    .line 920
+    .line 924
     iput-boolean v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mShouldClose:Z
 
-    .line 921
+    .line 925
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchView:Lcom/sonyericsson/music/search/MusicSearchView;
 
     if-eqz v1, :cond_0
@@ -969,15 +977,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 923
+    .line 927
     invoke-virtual {v1, v0}, Landroidx/appcompat/widget/SearchView;->setOnQueryTextListener(Landroidx/appcompat/widget/SearchView$OnQueryTextListener;)V
 
-    .line 924
+    .line 928
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchMenuItem:Landroid/view/MenuItem;
 
     invoke-interface {v0}, Landroid/view/MenuItem;->collapseActionView()Z
 
-    .line 927
+    .line 931
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -987,7 +995,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 928
+    .line 932
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->isFragmentTransactionAllowed()Z
 
     move-result v1
@@ -996,7 +1004,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 930
+    .line 934
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v1
@@ -1011,21 +1019,21 @@
 
     const v4, 0x7f010013
 
-    .line 931
+    .line 935
     invoke-virtual {v1, v2, v4, v3, v4}, Landroidx/fragment/app/FragmentTransaction;->setCustomAnimations(IIII)Landroidx/fragment/app/FragmentTransaction;
 
-    .line 933
+    .line 937
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->getMusicFragmentManager()Lcom/sonyericsson/music/MusicFragmentManager;
 
     move-result-object v0
 
-    .line 934
+    .line 938
     invoke-virtual {v0, v1, p1, p2}, Lcom/sonyericsson/music/MusicFragmentManager;->placeContent(Landroidx/fragment/app/FragmentTransaction;Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
 
-    .line 935
+    .line 939
     invoke-virtual {v1, p2}, Landroidx/fragment/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
-    .line 936
+    .line 940
     invoke-virtual {v1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     :cond_1
@@ -1035,31 +1043,31 @@
 .method private playTrack(J)V
     .locals 3
 
-    .line 801
+    .line 805
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
     check-cast v0, Lcom/sonyericsson/music/MusicActivity;
 
-    .line 803
+    .line 807
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v1, p1, p2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 804
+    .line 808
     invoke-virtual {v0}, Lcom/sonyericsson/music/MusicActivity;->getDrmUtils()Lcom/sonyericsson/music/common/DrmUtils;
 
     move-result-object p2
 
-    .line 805
+    .line 809
     invoke-interface {p2, p1}, Lcom/sonyericsson/music/common/DrmUtils;->hasValidRights(Landroid/net/Uri;)Lcom/sonyericsson/music/common/DrmUtils$RightsCheckResult;
 
     move-result-object v1
 
-    .line 806
+    .line 810
     sget-object v2, Lcom/sonyericsson/music/search/SearchFragment$10;->$SwitchMap$com$sonyericsson$music$common$DrmUtils$RightsCheckResult:[I
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
@@ -1072,13 +1080,13 @@
 
     goto :goto_0
 
-    .line 827
+    .line 831
     :pswitch_0
     invoke-interface {p2, v0, p1}, Lcom/sonyericsson/music/common/DrmUtils;->renewRights(Landroid/app/Activity;Landroid/net/Uri;)V
 
     goto :goto_0
 
-    .line 808
+    .line 812
     :pswitch_1
     new-instance p2, Lcom/sonyericsson/music/common/CheckMediaAvailableTask;
 
@@ -1096,7 +1104,7 @@
 
     const/4 v1, 0x0
 
-    .line 823
+    .line 827
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -1118,14 +1126,14 @@
 .method private showContentUnavailableToast()V
     .locals 3
 
-    .line 909
+    .line 913
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 910
+    .line 914
     invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v1
@@ -1136,7 +1144,7 @@
 
     const/4 v2, 0x0
 
-    .line 911
+    .line 915
     invoke-static {v0, v1, v2}, Lcom/sonyericsson/music/common/MusicToast;->show(Landroid/content/Context;II)V
 
     :cond_0
@@ -1148,7 +1156,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 784
+    .line 788
     invoke-interface {p1}, Lcom/sonyericsson/music/search/SearchResult;->size()I
 
     move-result v0
@@ -1163,7 +1171,7 @@
 
     goto :goto_0
 
-    .line 786
+    .line 790
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mEmptySearchState:Landroid/view/View;
 
@@ -1173,7 +1181,7 @@
 
     if-nez v0, :cond_2
 
-    .line 787
+    .line 791
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mEmptySearchState:Landroid/view/View;
 
     const/4 v1, 0x4
@@ -1182,7 +1190,7 @@
 
     goto :goto_1
 
-    .line 785
+    .line 789
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mEmptySearchState:Landroid/view/View;
@@ -1191,17 +1199,17 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 790
+    .line 794
     :cond_2
     :goto_1
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchAdapter:Lcom/sonyericsson/music/search/SearchAdapter;
 
     if-eqz v0, :cond_3
 
-    .line 791
+    .line 795
     invoke-virtual {v0, p1}, Lcom/sonyericsson/music/search/SearchAdapter;->swapData(Lcom/sonyericsson/music/search/SearchResult;)V
 
-    .line 794
+    .line 798
     :cond_3
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchList:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -1211,7 +1219,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 795
+    .line 799
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     move-result-object p1
@@ -1222,7 +1230,7 @@
 
     const/4 p1, 0x0
 
-    .line 796
+    .line 800
     iput-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mLayoutManagerState:Landroid/os/Parcelable;
 
     :cond_4
@@ -1234,7 +1242,7 @@
 .method public clearQuery()V
     .locals 3
 
-    .line 752
+    .line 756
     invoke-static {}, Lcom/sonyericsson/music/RetainManager;->getInstance()Lcom/sonyericsson/music/RetainManager;
 
     move-result-object v0
@@ -1245,17 +1253,17 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sonyericsson/music/RetainManager;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 753
+    .line 757
     iput-object v2, p0, Lcom/sonyericsson/music/search/SearchFragment;->mQueryText:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 754
+    .line 758
     iput-boolean v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mShouldForceQueryText:Z
 
     const/4 v0, 0x1
 
-    .line 755
+    .line 759
     iput-boolean v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mShouldToggleInput:Z
 
     return-void
@@ -1264,7 +1272,7 @@
 .method protected getDrawerIndicator()Lcom/sonyericsson/music/navigationdrawer/NavigationDrawerFragment$DrawerIndicator;
     .locals 1
 
-    .line 693
+    .line 697
     sget-object v0, Lcom/sonyericsson/music/navigationdrawer/NavigationDrawerFragment$DrawerIndicator;->BACK:Lcom/sonyericsson/music/navigationdrawer/NavigationDrawerFragment$DrawerIndicator;
 
     return-object v0
@@ -1281,7 +1289,7 @@
 .method public isAtBottomOfList()Z
     .locals 3
 
-    .line 722
+    .line 726
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchList:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -1290,12 +1298,12 @@
 
     check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    .line 723
+    .line 727
     invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->findLastCompletelyVisibleItemPosition()I
 
     move-result v0
 
-    .line 724
+    .line 728
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchList:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
@@ -1408,7 +1416,7 @@
 .method public onBackStackChanged()V
     .locals 2
 
-    .line 698
+    .line 702
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -1419,14 +1427,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 699
+    .line 703
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getBackStackEntryCount()I
 
     move-result v1
 
     if-lez v1, :cond_0
 
-    .line 701
+    .line 705
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getBackStackEntryCount()I
 
     move-result v1
@@ -1437,7 +1445,7 @@
 
     move-result-object v0
 
-    .line 702
+    .line 706
     invoke-interface {v0}, Landroidx/fragment/app/FragmentManager$BackStackEntry;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -1446,14 +1454,14 @@
 
     const-string v1, "search_result"
 
-    .line 703
+    .line 707
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 708
+    .line 712
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchMenuItem:Landroid/view/MenuItem;
 
     if-eqz v0, :cond_0
@@ -1466,7 +1474,7 @@
 
     const/4 v0, 0x0
 
-    .line 709
+    .line 713
     invoke-direct {p0, v0, v0}, Lcom/sonyericsson/music/search/SearchFragment;->openFragment(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
 
     :cond_0
@@ -1476,10 +1484,10 @@
 .method public onContextItemSelected(Landroid/view/MenuItem;)Z
     .locals 6
 
-    .line 501
+    .line 505
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onContextItemSelected(Landroid/view/MenuItem;)Z
 
-    .line 503
+    .line 507
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     const/4 v1, 0x0
@@ -1488,7 +1496,7 @@
 
     return v1
 
-    .line 508
+    .line 512
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1496,7 +1504,7 @@
 
     check-cast v0, Lcom/sonyericsson/music/MusicActivity;
 
-    .line 509
+    .line 513
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v2
@@ -1521,7 +1529,7 @@
 
     return v1
 
-    .line 557
+    .line 561
     :pswitch_0
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1533,7 +1541,7 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 559
+    .line 563
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/search/SearchFragment;->openAlbum(Lcom/sonyericsson/music/search/SearchItem;)V
@@ -1541,7 +1549,7 @@
     :cond_1
     return v4
 
-    .line 564
+    .line 568
     :pswitch_1
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1553,14 +1561,14 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 565
+    .line 569
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/search/SearchFragment;->openArtist(Lcom/sonyericsson/music/search/SearchItem;)V
 
     goto :goto_0
 
-    .line 566
+    .line 570
     :cond_2
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1572,7 +1580,7 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 568
+    .line 572
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/search/SearchFragment;->openArtist(Lcom/sonyericsson/music/search/SearchItem;)V
@@ -1581,7 +1589,7 @@
     :goto_0
     return v4
 
-    .line 588
+    .line 592
     :pswitch_2
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1593,7 +1601,7 @@
 
     if-ne p1, v1, :cond_4
 
-    .line 589
+    .line 593
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
@@ -1605,7 +1613,7 @@
     :cond_4
     return v4
 
-    .line 573
+    .line 577
     :pswitch_3
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1617,7 +1625,7 @@
 
     if-ne p1, v1, :cond_5
 
-    .line 574
+    .line 578
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
@@ -1626,17 +1634,17 @@
 
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
-    .line 575
+    .line 579
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getArtistName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 574
+    .line 578
     invoke-static {v0, v1, v2, p1}, Lcom/sonyericsson/music/common/ArtistActions;->deleteArtist(Lcom/sonyericsson/music/MusicActivity;JLjava/lang/String;)V
 
     goto :goto_1
 
-    .line 576
+    .line 580
     :cond_5
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1648,50 +1656,8 @@
 
     if-ne p1, v1, :cond_6
 
-    .line 577
-    sget-object p1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Albums;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
-
-    iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
-
-    .line 578
-    invoke-virtual {v1}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 577
-    invoke-static {p1, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    .line 579
-    iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
-
-    invoke-virtual {v1}, Lcom/sonyericsson/music/search/SearchItem;->getAlbumName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, p1, v1}, Lcom/sonyericsson/music/common/AlbumActions;->deleteAlbum(Lcom/sonyericsson/music/MusicActivity;Landroid/net/Uri;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    .line 580
-    :cond_6
-    iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
-
-    invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getType()Lcom/sonyericsson/music/search/SearchConstants$Type;
-
-    move-result-object p1
-
-    sget-object v1, Lcom/sonyericsson/music/search/SearchConstants$Type;->TRACK:Lcom/sonyericsson/music/search/SearchConstants$Type;
-
-    if-ne p1, v1, :cond_7
-
     .line 581
-    sget-object p1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    sget-object p1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Albums;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1712,6 +1678,48 @@
     .line 583
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
+    invoke-virtual {v1}, Lcom/sonyericsson/music/search/SearchItem;->getAlbumName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, p1, v1}, Lcom/sonyericsson/music/common/AlbumActions;->deleteAlbum(Lcom/sonyericsson/music/MusicActivity;Landroid/net/Uri;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 584
+    :cond_6
+    iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
+
+    invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getType()Lcom/sonyericsson/music/search/SearchConstants$Type;
+
+    move-result-object p1
+
+    sget-object v1, Lcom/sonyericsson/music/search/SearchConstants$Type;->TRACK:Lcom/sonyericsson/music/search/SearchConstants$Type;
+
+    if-ne p1, v1, :cond_7
+
+    .line 585
+    sget-object p1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
+
+    .line 586
+    invoke-virtual {v1}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 585
+    invoke-static {p1, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    .line 587
+    iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
+
     invoke-virtual {v1}, Lcom/sonyericsson/music/search/SearchItem;->getTrackName()Ljava/lang/String;
 
     move-result-object v1
@@ -1722,7 +1730,7 @@
     :goto_1
     return v4
 
-    .line 511
+    .line 515
     :pswitch_4
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1734,7 +1742,7 @@
 
     if-ne p1, v1, :cond_8
 
-    .line 512
+    .line 516
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
@@ -1743,38 +1751,38 @@
 
     iget-object v2, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
-    .line 514
+    .line 518
     invoke-virtual {v2}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
 
     move-result-wide v2
 
-    .line 513
+    .line 517
     invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
-    .line 514
+    .line 518
     invoke-virtual {v3}, Lcom/sonyericsson/music/search/SearchItem;->getArtistName()Ljava/lang/String;
 
     move-result-object v3
 
     iget-object v5, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
-    .line 515
+    .line 519
     invoke-virtual {v5}, Lcom/sonyericsson/music/search/SearchItem;->getAlbumName()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-direct {v1, v2, v3, v5}, Lcom/sonyericsson/music/common/AlbumActions$CreatePlaylistFromAlbumData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 512
+    .line 516
     invoke-static {v0, p1, v1}, Lcom/sonyericsson/music/common/AlbumActions;->addToDialog(Lcom/sonyericsson/music/MusicActivity;Landroidx/fragment/app/FragmentManager;Lcom/sonyericsson/music/common/AlbumActions$CreatePlaylistFromAlbumData;)V
 
     goto :goto_2
 
-    .line 516
+    .line 520
     :cond_8
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1786,15 +1794,15 @@
 
     if-ne p1, v1, :cond_9
 
-    .line 518
+    .line 522
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
-    .line 519
+    .line 523
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
 
     move-result-wide v1
 
-    .line 518
+    .line 522
     invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p1
@@ -1807,7 +1815,7 @@
     :goto_2
     return v4
 
-    .line 527
+    .line 531
     :cond_a
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
@@ -1817,7 +1825,7 @@
 
     const/4 v1, 0x1
 
-    .line 528
+    .line 532
     :cond_b
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1829,7 +1837,7 @@
 
     if-ne p1, v0, :cond_c
 
-    .line 529
+    .line 533
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mPlayerController:Lcom/sonyericsson/music/player/PlayerController;
 
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
@@ -1842,7 +1850,7 @@
 
     goto :goto_3
 
-    .line 531
+    .line 535
     :cond_c
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1854,7 +1862,7 @@
 
     if-ne p1, v0, :cond_d
 
-    .line 533
+    .line 537
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mPlayerController:Lcom/sonyericsson/music/player/PlayerController;
 
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
@@ -1867,7 +1875,7 @@
 
     goto :goto_3
 
-    .line 535
+    .line 539
     :cond_d
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1879,7 +1887,7 @@
 
     if-ne p1, v0, :cond_e
 
-    .line 536
+    .line 540
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mPlayerController:Lcom/sonyericsson/music/player/PlayerController;
 
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
@@ -1890,7 +1898,7 @@
 
     invoke-static {p1, v2, v3, v1}, Lcom/sonyericsson/music/common/ArtistActions;->enqueueArtist(Lcom/sonyericsson/music/player/PlayerController;JZ)V
 
-    .line 540
+    .line 544
     :cond_e
     :goto_3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -1903,7 +1911,7 @@
 
     return v4
 
-    .line 546
+    .line 550
     :cond_f
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1915,7 +1923,7 @@
 
     if-ne p1, v1, :cond_10
 
-    .line 547
+    .line 551
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
@@ -1926,7 +1934,7 @@
 
     goto :goto_4
 
-    .line 548
+    .line 552
     :cond_10
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -1938,7 +1946,7 @@
 
     if-ne p1, v1, :cond_11
 
-    .line 549
+    .line 553
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
@@ -1949,7 +1957,7 @@
 
     goto :goto_4
 
-    .line 551
+    .line 555
     :cond_11
     invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
@@ -1957,7 +1965,7 @@
 
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
-    .line 552
+    .line 556
     invoke-virtual {v0}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
 
     move-result-wide v0
@@ -1966,7 +1974,7 @@
 
     int-to-long v0, v1
 
-    .line 551
+    .line 555
     invoke-static {p1, v0, v1}, Lcom/sonyericsson/music/common/Sender;->sendSingleFile(Landroid/content/Context;J)V
 
     :goto_4
@@ -2047,12 +2055,12 @@
 
     const-string v0, ""
 
-    .line 678
+    .line 682
     invoke-virtual {p2, p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 680
+    .line 684
     :cond_0
     new-instance p2, Lcom/sonyericsson/music/search/SearchLoader;
 
@@ -2068,13 +2076,13 @@
 .method public onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
     .locals 1
 
-    .line 372
+    .line 376
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
-    .line 375
+    .line 379
     invoke-static {p1}, Lcom/sonyericsson/music/search/SearchFragment;->hideAllItemsButSearch(Landroid/view/Menu;)V
 
-    .line 379
+    .line 383
     iget-object p2, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchView:Lcom/sonyericsson/music/search/MusicSearchView;
 
     if-eqz p2, :cond_0
@@ -2089,16 +2097,16 @@
     const/4 p2, 0x0
 
     :goto_0
-    const v0, 0x7f090117
+    const v0, 0x7f090118
 
-    .line 381
+    .line 385
     invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchMenuItem:Landroid/view/MenuItem;
 
-    .line 382
+    .line 386
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchMenuItem:Landroid/view/MenuItem;
 
     new-instance v0, Lcom/sonyericsson/music/search/SearchFragment$6;
@@ -2107,7 +2115,7 @@
 
     invoke-interface {p1, v0}, Landroid/view/MenuItem;->setOnActionExpandListener(Landroid/view/MenuItem$OnActionExpandListener;)Landroid/view/MenuItem;
 
-    .line 478
+    .line 482
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchMenuItem:Landroid/view/MenuItem;
 
     invoke-interface {p1}, Landroid/view/MenuItem;->isActionViewExpanded()Z
@@ -2116,7 +2124,7 @@
 
     if-nez p1, :cond_1
 
-    .line 479
+    .line 483
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchMenuItem:Landroid/view/MenuItem;
 
     invoke-interface {p1}, Landroid/view/MenuItem;->expandActionView()Z
@@ -2128,21 +2136,21 @@
 .method public onCreateSearchItemContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Lcom/sonyericsson/music/search/SearchItem;)V
     .locals 5
 
-    .line 637
+    .line 641
     new-instance p2, Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
     invoke-direct {p2}, Lcom/sonyericsson/music/common/ContextMenuBuilder;-><init>()V
 
     const-string v0, ""
 
-    .line 639
+    .line 643
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mPlayerController:Lcom/sonyericsson/music/player/PlayerController;
 
     const/4 v2, 0x1
 
     if-eqz v1, :cond_0
 
-    .line 640
+    .line 644
     invoke-virtual {v1}, Lcom/sonyericsson/music/player/PlayerController;->getPlayerState()Lcom/sonyericsson/music/player/PlayerState;
 
     move-result-object v1
@@ -2160,11 +2168,11 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 642
+    .line 646
     :goto_0
     iput-object p3, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
-    .line 643
+    .line 647
     invoke-virtual {p3}, Lcom/sonyericsson/music/search/SearchItem;->getType()Lcom/sonyericsson/music/search/SearchConstants$Type;
 
     move-result-object v3
@@ -2173,26 +2181,26 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 644
+    .line 648
     invoke-virtual {p3}, Lcom/sonyericsson/music/search/SearchItem;->getAlbumName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 645
+    .line 649
     invoke-virtual {p2, v2}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setAddTo(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    .line 646
+    .line 650
     invoke-virtual {p2, v1}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setEnqueue(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    .line 647
+    .line 651
     invoke-virtual {p2, v2}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setGoToArtist(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    .line 648
+    .line 652
     invoke-virtual {p2, v2}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setDeleteFromStorage(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
     goto :goto_1
 
-    .line 649
+    .line 653
     :cond_1
     invoke-virtual {p3}, Lcom/sonyericsson/music/search/SearchItem;->getType()Lcom/sonyericsson/music/search/SearchConstants$Type;
 
@@ -2202,20 +2210,20 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 650
+    .line 654
     invoke-virtual {p3}, Lcom/sonyericsson/music/search/SearchItem;->getArtistName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 651
+    .line 655
     invoke-virtual {p2, v1}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setEnqueue(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    .line 652
+    .line 656
     invoke-virtual {p2, v2}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setDeleteFromStorage(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
     goto :goto_1
 
-    .line 653
+    .line 657
     :cond_2
     invoke-virtual {p3}, Lcom/sonyericsson/music/search/SearchItem;->getType()Lcom/sonyericsson/music/search/SearchConstants$Type;
 
@@ -2225,35 +2233,35 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 654
+    .line 658
     invoke-virtual {p3}, Lcom/sonyericsson/music/search/SearchItem;->getTrackName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 655
+    .line 659
     invoke-virtual {p2, v2}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setAddTo(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    .line 656
+    .line 660
     invoke-virtual {p2, v1}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setEnqueue(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    .line 657
+    .line 661
     invoke-virtual {p2, v2}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setGoToArtist(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    .line 658
+    .line 662
     invoke-virtual {p2, v2}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setGoToAlbum(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    .line 659
+    .line 663
     invoke-virtual {p2, v2}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setDeleteFromStorage(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    .line 660
+    .line 664
     invoke-virtual {p2, v2}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setAddToFavorites(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    .line 663
+    .line 667
     :cond_3
     :goto_1
     invoke-virtual {p2, v2}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setSend(Z)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
-    .line 664
+    .line 668
     invoke-virtual {p2, v0}, Lcom/sonyericsson/music/common/ContextMenuBuilder;->setTitle(Ljava/lang/String;)Lcom/sonyericsson/music/common/ContextMenuBuilder;
 
     move-result-object p2
@@ -2281,7 +2289,7 @@
 .method public onDestroy()V
     .locals 3
 
-    .line 351
+    .line 355
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -2292,22 +2300,22 @@
 
     invoke-virtual {v0, p0}, Landroidx/fragment/app/FragmentManager;->removeOnBackStackChangedListener(Landroidx/fragment/app/FragmentManager$OnBackStackChangedListener;)V
 
-    .line 353
+    .line 357
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchAdapter:Lcom/sonyericsson/music/search/SearchAdapter;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 354
+    .line 358
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/search/SearchAdapter;->swapData(Lcom/sonyericsson/music/search/SearchResult;)V
 
-    .line 355
+    .line 359
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchAdapter:Lcom/sonyericsson/music/search/SearchAdapter;
 
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/search/SearchAdapter;->setListener(Lcom/sonyericsson/music/search/SearchAdapter$OnClickListener;)V
 
-    .line 358
+    .line 362
     :cond_0
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mHandler:Landroid/os/Handler;
 
@@ -2315,18 +2323,18 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 360
+    .line 364
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mArtDecoder:Lcom/sonyericsson/music/artdecoder/ArtDecoder;
 
     if-eqz v0, :cond_1
 
-    .line 361
+    .line 365
     invoke-virtual {v0}, Lcom/sonyericsson/music/artdecoder/ArtDecoder;->destroy()V
 
-    .line 362
+    .line 366
     iput-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mArtDecoder:Lcom/sonyericsson/music/artdecoder/ArtDecoder;
 
-    .line 365
+    .line 369
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
@@ -2334,14 +2342,14 @@
 
     invoke-static {v0}, Lcom/sonyericsson/music/common/UIUtils;->unbindDrawables(Landroid/view/View;)V
 
-    .line 367
+    .line 371
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
     return-void
 .end method
 
 .method public onDestroyView()V
-    .locals 2
+    .locals 3
 
     .line 332
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroyView()V
@@ -2358,40 +2366,49 @@
 
     .line 338
     :cond_0
-    iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchList:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchMenuItem:Landroid/view/MenuItem;
+
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
-
-    if-eqz v1, :cond_1
-
     .line 339
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     .line 342
     :cond_1
+    iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchList:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-eqz v0, :cond_2
+
+    iget-object v2, p0, Lcom/sonyericsson/music/search/SearchFragment;->mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+
+    if-eqz v2, :cond_2
+
+    .line 343
+    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->removeOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
+
+    .line 346
+    :cond_2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
     check-cast v0, Lcom/sonyericsson/music/MusicActivity;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    const/4 v1, 0x0
-
-    .line 344
+    .line 348
     invoke-virtual {v0, v1}, Lcom/sonyericsson/music/MusicActivity;->disableCastButtonVisibilityUpdate(Z)V
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
 .method protected onGetToolbarScroller(Lcom/sonyericsson/music/ToolbarControl;)Lcom/sonyericsson/music/ToolbarControl$ToolbarScroller;
     .locals 1
 
-    .line 717
+    .line 721
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mPaddedListScroller:Lcom/sonyericsson/music/library/PaddedHeaderListScroller;
 
     invoke-virtual {v0, p1}, Lcom/sonyericsson/music/library/PaddedHeaderListScroller;->getPaddingScroller(Lcom/sonyericsson/music/ToolbarControl;)Lcom/sonyericsson/music/library/PaddedHeaderListScroller$HidePaddingScroller;
@@ -2420,7 +2437,7 @@
         }
     .end annotation
 
-    .line 685
+    .line 689
     invoke-direct {p0, p2}, Lcom/sonyericsson/music/search/SearchFragment;->onSearchComplete(Lcom/sonyericsson/music/search/SearchResult;)V
 
     return-void
@@ -2454,7 +2471,7 @@
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 2
 
-    .line 492
+    .line 496
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
@@ -2463,7 +2480,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 493
+    .line 497
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchMenuItem:Landroid/view/MenuItem;
 
     invoke-interface {p1}, Landroid/view/MenuItem;->collapseActionView()Z
@@ -2472,7 +2489,7 @@
 
     return p1
 
-    .line 496
+    .line 500
     :cond_0
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
@@ -2524,10 +2541,10 @@
 .method public onPrepareOptionsMenu(Landroid/view/Menu;)V
     .locals 0
 
-    .line 485
+    .line 489
     invoke-super {p0, p1}, Lcom/sonyericsson/music/library/BaseFragment;->onPrepareOptionsMenu(Landroid/view/Menu;)V
 
-    .line 487
+    .line 491
     invoke-static {p1}, Lcom/sonyericsson/music/search/SearchFragment;->hideAllItemsButSearch(Landroid/view/Menu;)V
 
     return-void
@@ -2595,26 +2612,26 @@
 .method public onSearchItemClicked(Landroid/view/View;Lcom/sonyericsson/music/search/SearchItem;)V
     .locals 0
 
-    .line 605
+    .line 609
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchView:Lcom/sonyericsson/music/search/MusicSearchView;
 
     if-eqz p1, :cond_0
 
-    .line 606
+    .line 610
     invoke-virtual {p1}, Landroidx/appcompat/widget/SearchView;->clearFocus()V
 
-    .line 608
+    .line 612
     :cond_0
     iput-object p2, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
-    .line 611
+    .line 615
     invoke-direct {p0}, Lcom/sonyericsson/music/search/SearchFragment;->isHistory()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 612
+    .line 616
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -2623,13 +2640,13 @@
 
     invoke-static {p1, p2}, Lcom/sonyericsson/music/search/SearchHistory;->insertAsync(Landroid/content/Context;Lcom/sonyericsson/music/search/SearchItem;)V
 
-    .line 615
+    .line 619
     :cond_1
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     if-eqz p1, :cond_4
 
-    .line 616
+    .line 620
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getType()Lcom/sonyericsson/music/search/SearchConstants$Type;
 
     move-result-object p1
@@ -2638,7 +2655,7 @@
 
     if-ne p1, p2, :cond_2
 
-    .line 617
+    .line 621
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     invoke-virtual {p1}, Lcom/sonyericsson/music/search/SearchItem;->getContentId()J
@@ -2649,7 +2666,7 @@
 
     goto :goto_0
 
-    .line 618
+    .line 622
     :cond_2
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -2661,14 +2678,14 @@
 
     if-ne p1, p2, :cond_3
 
-    .line 619
+    .line 623
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/search/SearchFragment;->openAlbum(Lcom/sonyericsson/music/search/SearchItem;)V
 
     goto :goto_0
 
-    .line 620
+    .line 624
     :cond_3
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
@@ -2680,7 +2697,7 @@
 
     if-ne p1, p2, :cond_4
 
-    .line 621
+    .line 625
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchItem:Lcom/sonyericsson/music/search/SearchItem;
 
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/search/SearchFragment;->openArtist(Lcom/sonyericsson/music/search/SearchItem;)V
@@ -2693,7 +2710,7 @@
 .method public onSearchItemContextClicked(Landroid/view/View;Lcom/sonyericsson/music/search/SearchItem;)V
     .locals 1
 
-    .line 628
+    .line 632
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchAdapter:Lcom/sonyericsson/music/search/SearchAdapter;
 
     invoke-virtual {v0}, Lcom/sonyericsson/music/search/SearchAdapter;->getData()Lcom/sonyericsson/music/search/SearchResult;
@@ -2706,7 +2723,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 629
+    .line 633
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -2715,7 +2732,7 @@
 
     goto :goto_0
 
-    .line 631
+    .line 635
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->showContextMenu()Z
 
@@ -2813,7 +2830,7 @@
 
     invoke-virtual {v0, p0}, Lcom/sonyericsson/music/search/SearchAdapter;->setListener(Lcom/sonyericsson/music/search/SearchAdapter$OnClickListener;)V
 
-    const v0, 0x7f0901bc
+    const v0, 0x7f0901bd
 
     .line 227
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -2858,7 +2875,7 @@
 
     invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
-    const v0, 0x7f090195
+    const v0, 0x7f090196
 
     .line 240
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -2927,14 +2944,14 @@
 .method public paddingHeightVisible()I
     .locals 2
 
-    .line 729
+    .line 733
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchList:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v0
 
-    .line 730
+    .line 734
     iget-object v1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchList:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
@@ -2945,7 +2962,7 @@
 
     const/4 v1, 0x0
 
-    .line 731
+    .line 735
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v0
@@ -2956,15 +2973,15 @@
 .method public populateQuery(Ljava/lang/String;)V
     .locals 2
 
-    .line 745
+    .line 749
     iput-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mQueryText:Ljava/lang/String;
 
-    .line 746
+    .line 750
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment;->mSearchView:Lcom/sonyericsson/music/search/MusicSearchView;
 
     if-eqz p1, :cond_0
 
-    .line 747
+    .line 751
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment;->mQueryText:Ljava/lang/String;
 
     const/4 v1, 0x0

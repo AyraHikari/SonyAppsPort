@@ -35,7 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1200
+    .line 1204
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +46,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1208
+    .line 1212
     invoke-static {p0}, Landroid/provider/MediaStore$Audio;->keyFor(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0

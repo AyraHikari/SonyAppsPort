@@ -521,8 +521,6 @@
     if-eqz v1, :cond_1
 
     .line 460
-    invoke-virtual {v1, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
-
     .line 464
     :cond_1
     invoke-static {p1}, Lcom/sonyericsson/music/common/AvailabilityUtils;->isAudioControlPanelAvailable(Landroid/content/Context;)Z
@@ -542,8 +540,6 @@
 
     .line 467
     iget-object v0, p0, Lcom/sonyericsson/music/SettingsFragment;->mSoundEnhancementsPref:Landroidx/preference/Preference;
-
-    invoke-virtual {p2, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
     const/4 p2, 0x0
 

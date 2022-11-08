@@ -634,7 +634,7 @@
 
     move-result v0
 
-    const v1, 0x7f090180
+    const v1, 0x7f090181
 
     if-eqz v0, :cond_2
 

@@ -30,22 +30,22 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ZZZ)V
     .locals 0
 
-    .line 252
+    .line 254
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 253
+    .line 255
     iput-object p1, p0, Lcom/sonyericsson/music/proxyservice/mediabrowser/PackageValidator$CallerInfo;->name:Ljava/lang/String;
 
-    .line 254
+    .line 256
     iput-object p2, p0, Lcom/sonyericsson/music/proxyservice/mediabrowser/PackageValidator$CallerInfo;->packageName:Ljava/lang/String;
 
-    .line 255
+    .line 257
     iput-boolean p3, p0, Lcom/sonyericsson/music/proxyservice/mediabrowser/PackageValidator$CallerInfo;->release:Z
 
-    .line 256
+    .line 258
     iput-boolean p4, p0, Lcom/sonyericsson/music/proxyservice/mediabrowser/PackageValidator$CallerInfo;->checkStoragePermission:Z
 
-    .line 257
+    .line 259
     iput-boolean p5, p0, Lcom/sonyericsson/music/proxyservice/mediabrowser/PackageValidator$CallerInfo;->fullLibraryBrowseAllowed:Z
 
     return-void

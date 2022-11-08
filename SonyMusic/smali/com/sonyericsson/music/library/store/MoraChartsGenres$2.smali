@@ -1,4 +1,4 @@
-.class final Lcom/sonyericsson/music/library/store/MoraChartsGenres$2;
+.class Lcom/sonyericsson/music/library/store/MoraChartsGenres$2;
 .super Ljava/util/ArrayList;
 .source "MoraChartsGenres.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

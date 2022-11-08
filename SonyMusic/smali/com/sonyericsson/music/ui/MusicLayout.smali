@@ -459,7 +459,7 @@
     .line 59
     invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
-    const v0, 0x7f090157
+    const v0, 0x7f090158
 
     .line 61
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -472,7 +472,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/ui/MusicLayout;->mNavBarShade:Landroid/view/View;
 
-    const v0, 0x7f090158
+    const v0, 0x7f090159
 
     .line 62
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -511,7 +511,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/ui/MusicLayout;->mAppBarWrap:Landroid/view/View;
 
-    const v0, 0x7f0901e1
+    const v0, 0x7f0901e2
 
     .line 65
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -524,7 +524,7 @@
 
     iput-object v0, p0, Lcom/sonyericsson/music/ui/MusicLayout;->mStatusBarColorView:Landroid/view/View;
 
-    const v0, 0x7f090159
+    const v0, 0x7f09015a
 
     .line 66
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;

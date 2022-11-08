@@ -146,10 +146,10 @@
 
     goto :goto_0
 
+    .line 234
     :cond_0
     iget-object v1, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;->mEditMusicInfo:Lcom/sonyericsson/music/metadata/EditMusicInfo;
 
-    .line 234
     invoke-virtual {v1}, Lcom/sonyericsson/music/metadata/EditMusicInfo;->getArtist()Ljava/lang/String;
 
     move-result-object v1
@@ -186,10 +186,10 @@
 
     goto :goto_1
 
+    .line 237
     :cond_1
     iget-object v1, p0, Lcom/sonyericsson/music/metadata/EditMusicInfoBaseFragment;->mEditMusicInfo:Lcom/sonyericsson/music/metadata/EditMusicInfo;
 
-    .line 237
     invoke-virtual {v1}, Lcom/sonyericsson/music/metadata/EditMusicInfo;->getAlbum()Ljava/lang/String;
 
     move-result-object v1

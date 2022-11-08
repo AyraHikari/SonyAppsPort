@@ -353,8 +353,10 @@
 
     if-eqz v5, :cond_6
 
+    .line 741
     iget-object v4, p0, Lcom/sonyericsson/music/playerservice/BasePlayer;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
+    .line 740
     invoke-virtual {v4}, Lcom/sonyericsson/music/common/Track;->getDataUri()Landroid/net/Uri;
 
     move-result-object v4
@@ -1009,8 +1011,10 @@
 
     if-eqz p1, :cond_1
 
+    .line 210
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/BasePlayer;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
+    .line 209
     invoke-virtual {p1}, Lcom/sonyericsson/music/common/Track;->getDataUri()Landroid/net/Uri;
 
     move-result-object p1
@@ -1203,6 +1207,7 @@
 
     goto :goto_0
 
+    .line 461
     :cond_2
     sget-object p3, Lcom/sonyericsson/music/playerservice/PrepareOperation$PrepareOp;->NONE:Lcom/sonyericsson/music/playerservice/PrepareOperation$PrepareOp;
 
@@ -1400,8 +1405,10 @@
 
     if-eqz v2, :cond_1
 
+    .line 640
     iget-object v2, p0, Lcom/sonyericsson/music/playerservice/BasePlayer;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
+    .line 639
     invoke-virtual {v2}, Lcom/sonyericsson/music/common/Track;->getDataUri()Landroid/net/Uri;
 
     move-result-object v2
@@ -1730,10 +1737,10 @@
 
     goto :goto_2
 
+    .line 541
     :cond_1
     iget-object v4, p0, Lcom/sonyericsson/music/playerservice/BasePlayer;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
-    .line 541
     invoke-virtual {v4}, Lcom/sonyericsson/music/common/Track;->getDuration()I
 
     move-result v4
@@ -1819,8 +1826,10 @@
 
     if-eqz p2, :cond_8
 
+    .line 561
     iget-object p2, p0, Lcom/sonyericsson/music/playerservice/BasePlayer;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
+    .line 560
     invoke-virtual {p2}, Lcom/sonyericsson/music/common/Track;->getDataUri()Landroid/net/Uri;
 
     move-result-object p2
@@ -1930,8 +1939,10 @@
 
     if-eqz v0, :cond_1
 
+    .line 609
     iget-object v0, p0, Lcom/sonyericsson/music/playerservice/BasePlayer;->mCurrentTrack:Lcom/sonyericsson/music/common/Track;
 
+    .line 608
     invoke-virtual {v0}, Lcom/sonyericsson/music/common/Track;->getDataUri()Landroid/net/Uri;
 
     move-result-object v0

@@ -61,23 +61,23 @@
         }
     .end annotation
 
-    .line 1939
+    .line 1981
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     const v0, 0x3d4ccccd    # 0.05f
 
-    .line 1934
+    .line 1976
     iput v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mMinStep:F
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1940
+    .line 1982
     iput v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mCurrentVolume:F
 
-    .line 1941
+    .line 1983
     iput v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mTargetVolume:F
 
-    .line 1942
+    .line 1984
     iput-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mPlayer:Lcom/sonymobile/music/audioplayer/AudioPlayer;
 
     return-void
@@ -88,7 +88,7 @@
 
     sub-float v0, p2, p1
 
-    .line 2005
+    .line 2047
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
@@ -101,18 +101,18 @@
 
     if-gez v1, :cond_0
 
-    .line 2007
+    .line 2049
     invoke-virtual {p0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2008
+    .line 2050
     invoke-direct {p0, p2}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->updateVolume(F)V
 
-    .line 2009
+    .line 2051
     iget-object p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mListener:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$VolumeControlListener;
 
     if-eqz p1, :cond_1
 
-    .line 2010
+    .line 2052
     invoke-interface {p1, p2}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$VolumeControlListener;->onDone(F)V
 
     goto :goto_0
@@ -124,26 +124,26 @@
 
     add-float/2addr p1, v0
 
-    .line 2015
+    .line 2057
     invoke-direct {p0, p1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->updateVolume(F)V
 
-    .line 2016
+    .line 2058
     invoke-virtual {p0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2018
+    .line 2060
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object p1
 
-    .line 2019
+    .line 2061
     iput v3, p1, Landroid/os/Message;->what:I
 
-    .line 2020
+    .line 2062
     iput p3, p1, Landroid/os/Message;->arg1:I
 
     int-to-long p2, p3
 
-    .line 2021
+    .line 2063
     invoke-virtual {p0, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     :cond_1
@@ -154,7 +154,7 @@
 .method private updateVolume(F)V
     .locals 1
 
-    .line 2029
+    .line 2071
     iget-object v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mPlayer:Lcom/sonymobile/music/audioplayer/AudioPlayer;
 
     invoke-virtual {v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->hasPlayer()Z
@@ -163,12 +163,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2030
+    .line 2072
     iget-object v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mPlayer:Lcom/sonymobile/music/audioplayer/AudioPlayer;
 
     invoke-virtual {v0, p1, p1}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->setVolume(FF)V
 
-    .line 2034
+    .line 2076
     :cond_0
     iput p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mCurrentVolume:F
 
@@ -182,10 +182,10 @@
 
     const/4 v0, 0x1
 
-    .line 1999
+    .line 2041
     invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2000
+    .line 2042
     iget v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mTargetVolume:F
 
     invoke-direct {p0, v0}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->updateVolume(F)V
@@ -196,17 +196,17 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 1947
+    .line 1989
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 1949
+    .line 1991
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 1950
+    .line 1992
     iget v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mCurrentVolume:F
 
     iget v1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mTargetVolume:F
@@ -215,7 +215,7 @@
 
     return-void
 
-    .line 1953
+    .line 1995
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -243,7 +243,7 @@
 
     const/4 v0, 0x0
 
-    .line 1991
+    .line 2033
     invoke-virtual {p0, p1, p2, v0}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->setVolume(FLcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$VolumeControlListener;)V
 
     return-void
@@ -252,10 +252,10 @@
 .method public setVolume(FLcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$VolumeControlListener;)V
     .locals 3
 
-    .line 1965
+    .line 2007
     iput p1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mTargetVolume:F
 
-    .line 1966
+    .line 2008
     iget v0, p2, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;->delayMillis:I
 
     const v1, 0x3d4ccccd    # 0.05f
@@ -272,27 +272,27 @@
 
     mul-float v1, v1, v0
 
-    .line 1967
+    .line 2009
     iput v1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mMinStep:F
 
     goto :goto_0
 
-    .line 1969
+    .line 2011
     :cond_0
     iput v1, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mMinStep:F
 
-    .line 1971
+    .line 2013
     :goto_0
     iget p2, p2, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$Fade;->delayMillis:I
 
     if-lez p2, :cond_1
 
-    .line 1972
+    .line 2014
     iget v0, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mCurrentVolume:F
 
     invoke-direct {p0, v0, p1, p2}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->scheduleVolume(FFI)V
 
-    .line 1973
+    .line 2015
     iput-object p3, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mListener:Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$VolumeControlListener;
 
     goto :goto_1
@@ -300,17 +300,17 @@
     :cond_1
     const/4 p2, 0x1
 
-    .line 1975
+    .line 2017
     invoke-virtual {p0, p2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1976
+    .line 2018
     iget p2, p0, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->mTargetVolume:F
 
     invoke-direct {p0, p2}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl;->updateVolume(F)V
 
     if-eqz p3, :cond_2
 
-    .line 1978
+    .line 2020
     invoke-interface {p3, p1}, Lcom/sonyericsson/music/playerservice/localplayer/LocalPlayer$VolumeControl$VolumeControlListener;->onDone(F)V
 
     :cond_2

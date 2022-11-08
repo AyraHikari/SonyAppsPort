@@ -311,7 +311,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f09017a
+    const v6, 0x7f09017b
 
     .line 85
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -340,7 +340,7 @@
 
     invoke-virtual {v6, v3, v4, v8}, Landroid/widget/ListView;->addFooterView(Landroid/view/View;Ljava/lang/Object;Z)V
 
-    const v3, 0x7f0901a3
+    const v3, 0x7f0901a4
 
     .line 91
     invoke-virtual {v5, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;

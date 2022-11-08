@@ -24,7 +24,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 293
+    .line 302
     invoke-static {}, Lcom/sonyericsson/music/ui/LandingPageItemView$State;->values()[Lcom/sonyericsson/music/ui/LandingPageItemView$State;
 
     move-result-object v0
@@ -98,7 +98,7 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 211
+    .line 220
     :catch_3
     invoke-static {}, Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;->values()[Lcom/sonyericsson/music/ui/LandingPageItemView$Touching;
 

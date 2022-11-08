@@ -376,6 +376,7 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 150
     iget v1, p0, Lcom/sonyericsson/music/library/store/StoreAdapter;->mGridIconDimension:I
 
     goto :goto_0
@@ -391,7 +392,7 @@
 
     goto :goto_2
 
-    .line 149
+    .line 150
     :cond_0
     iget v1, p0, Lcom/sonyericsson/music/library/store/StoreAdapter;->mListIconDimension:I
 
@@ -405,19 +406,19 @@
 
     if-ne v1, v2, :cond_1
 
+    .line 152
     iget-object v1, p0, Lcom/sonyericsson/music/library/store/StoreAdapter;->mStoreResponse:Lcom/sonyericsson/music/library/store/StoreResponse;
 
-    .line 152
     invoke-virtual {v1, p2}, Lcom/sonyericsson/music/library/store/StoreResponse;->getFullSizeImage(I)Ljava/lang/String;
 
     move-result-object p2
 
     goto :goto_1
 
+    .line 153
     :cond_1
     iget-object v1, p0, Lcom/sonyericsson/music/library/store/StoreAdapter;->mStoreResponse:Lcom/sonyericsson/music/library/store/StoreResponse;
 
-    .line 153
     invoke-virtual {v1, p2}, Lcom/sonyericsson/music/library/store/StoreResponse;->getWebListSizeImage(I)Ljava/lang/String;
 
     move-result-object p2

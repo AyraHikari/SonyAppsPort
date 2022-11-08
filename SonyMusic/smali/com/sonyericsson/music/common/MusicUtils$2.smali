@@ -1,4 +1,4 @@
-.class final Lcom/sonyericsson/music/common/MusicUtils$2;
+.class Lcom/sonyericsson/music/common/MusicUtils$2;
 .super Ljava/lang/Object;
 .source "MusicUtils.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -27,7 +27,7 @@
 .method constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    .line 364
+    .line 368
     iput-object p1, p0, Lcom/sonyericsson/music/common/MusicUtils$2;->val$appContext:Landroid/content/Context;
 
     iput p2, p0, Lcom/sonyericsson/music/common/MusicUtils$2;->val$labelId:I
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 367
+    .line 371
     iget-object v0, p0, Lcom/sonyericsson/music/common/MusicUtils$2;->val$appContext:Landroid/content/Context;
 
     iget v1, p0, Lcom/sonyericsson/music/common/MusicUtils$2;->val$labelId:I

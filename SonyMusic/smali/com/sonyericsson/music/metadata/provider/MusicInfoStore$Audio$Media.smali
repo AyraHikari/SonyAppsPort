@@ -27,7 +27,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 1291
+    .line 1315
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Media;->getContentUri()Landroid/net/Uri;
 
     move-result-object v0
@@ -40,7 +40,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1288
+    .line 1312
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +49,7 @@
 .method private static getContentUri()Landroid/net/Uri;
     .locals 2
 
-    .line 1298
+    .line 1322
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
@@ -58,14 +58,14 @@
 
     const-string v0, "external"
 
-    .line 1299
+    .line 1323
     invoke-static {v0}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Media;->getContentUriInternal(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     return-object v0
 
-    .line 1301
+    .line 1325
     :cond_0
     sget-object v0, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -75,21 +75,21 @@
 .method public static getContentUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
 
-    .line 1305
+    .line 1329
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 1306
+    .line 1330
     invoke-static {p0}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Media;->getContentUriInternal(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
 
     return-object p0
 
-    .line 1308
+    .line 1332
     :cond_0
     invoke-static {p0}, Landroid/provider/MediaStore$Audio$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -101,14 +101,14 @@
 .method public static getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
     .locals 2
 
-    .line 1314
+    .line 1338
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 1315
+    .line 1339
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -135,7 +135,7 @@
 
     return-object p0
 
-    .line 1317
+    .line 1341
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/provider/MediaStore$Audio$Media;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
 
@@ -147,7 +147,7 @@
 .method private static getContentUriInternal(Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
 
-    .line 1294
+    .line 1318
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

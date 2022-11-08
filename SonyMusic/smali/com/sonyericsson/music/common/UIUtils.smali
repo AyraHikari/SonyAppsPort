@@ -1026,6 +1026,7 @@
 
     or-int/2addr p1, v1
 
+    .line 107
     iput p1, p3, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     .line 108

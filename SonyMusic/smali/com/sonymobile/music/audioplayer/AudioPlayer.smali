@@ -36,7 +36,13 @@
 .end annotation
 
 
+# static fields
+.field static final SUPPORT_SDK_S_API:Z
+
+
 # instance fields
+.field private mAudioManager:Landroid/media/AudioManager;
+
 .field private final mAudioPlayerListener:Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -62,6 +68,29 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 33
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1f
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    sput-boolean v0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->SUPPORT_SDK_S_API:Z
+
+    return-void
+.end method
+
 .method constructor <init>(Landroid/content/Context;Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;Lcom/sonymobile/music/audioplayer/Watchdog$WatchDogListener;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -75,17 +104,17 @@
         }
     .end annotation
 
-    .line 108
+    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
+    .line 54
     new-instance v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     invoke-direct {v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;-><init>()V
 
     iput-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
-    .line 53
+    .line 56
     new-instance v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     invoke-direct {v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;-><init>()V
@@ -94,10 +123,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 113
+    .line 118
     iput-object p2, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioPlayerListener:Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;
 
-    .line 115
+    .line 120
     new-instance p2, Lcom/sonymobile/music/audioplayer/Watchdog;
 
     const-string v0, "audioplayer"
@@ -110,12 +139,12 @@
 
     iput-object p2, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mWatchdog:Lcom/sonymobile/music/audioplayer/Watchdog;
 
-    .line 117
+    .line 122
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->createCurrentMp()V
 
     return-void
 
-    .line 110
+    .line 115
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -129,7 +158,7 @@
 .method static synthetic access$000(Lcom/sonymobile/music/audioplayer/AudioPlayer;)V
     .locals 0
 
-    .line 29
+    .line 30
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->init()V
 
     return-void
@@ -138,7 +167,7 @@
 .method static synthetic access$100(Lcom/sonymobile/music/audioplayer/AudioPlayer;)Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
     .locals 0
 
-    .line 29
+    .line 30
     iget-object p0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     return-object p0
@@ -147,7 +176,7 @@
 .method static synthetic access$200(Lcom/sonymobile/music/audioplayer/AudioPlayer;Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
     .locals 0
 
-    .line 29
+    .line 30
     invoke-direct {p0, p1}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
     return-void
@@ -158,15 +187,15 @@
 
     if-eqz p1, :cond_1
 
-    .line 199
+    .line 215
     iget-boolean v0, p1, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mHasNextMediaPlayer:Z
 
     if-eqz v0, :cond_1
 
-    .line 200
+    .line 216
     iget-object v0, p1, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
-    .line 201
+    .line 217
     sget-object v1, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->IDLE:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     if-eq v0, v1, :cond_0
@@ -179,20 +208,20 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 202
+    .line 218
     iget-object v0, p1, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 204
+    .line 220
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setNextMediaPlayer(Landroid/media/MediaPlayer;)V
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 207
+    .line 223
     iput-boolean v0, p1, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mHasNextMediaPlayer:Z
 
     :cond_1
@@ -202,7 +231,7 @@
 .method private createCurrentMp()V
     .locals 2
 
-    .line 139
+    .line 155
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     invoke-static {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->initNewMediaPlayer(Lcom/sonymobile/music/audioplayer/AudioPlayer;)Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
@@ -211,7 +240,7 @@
 
     iput-object v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
-    .line 140
+    .line 156
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     sget-object v1, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->IDLE:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -224,7 +253,7 @@
 .method private createNextMp()V
     .locals 2
 
-    .line 144
+    .line 160
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     invoke-static {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->initNewMediaPlayer(Lcom/sonymobile/music/audioplayer/AudioPlayer;)Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
@@ -233,7 +262,7 @@
 
     iput-object v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
-    .line 145
+    .line 161
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     sget-object v1, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->IDLE:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -246,12 +275,12 @@
 .method private init()V
     .locals 1
 
-    .line 133
+    .line 149
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mWatchdog:Lcom/sonymobile/music/audioplayer/Watchdog;
 
     if-eqz v0, :cond_0
 
-    .line 134
+    .line 150
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     :cond_0
@@ -271,26 +300,26 @@
         }
     .end annotation
 
-    .line 150
+    .line 166
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mWatchdog:Lcom/sonymobile/music/audioplayer/Watchdog;
 
     invoke-static {v0}, Lcom/sonymobile/music/audioplayer/MediaPlayerFactory;->getMediaPlayer(Lcom/sonymobile/music/audioplayer/Watchdog;)Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     move-result-object v0
 
-    .line 151
+    .line 167
     invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
-    .line 152
+    .line 168
     invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
-    .line 153
+    .line 169
     invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnInfoListener(Landroid/media/MediaPlayer$OnInfoListener;)V
 
-    .line 154
+    .line 170
     invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
-    .line 155
+    .line 171
     invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnSeekCompleteListener(Landroid/media/MediaPlayer$OnSeekCompleteListener;)V
 
     return-object v0
@@ -299,76 +328,24 @@
 .method private releaseCurrentMp()V
     .locals 2
 
-    .line 160
+    .line 176
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->clearNextMediaPlayer(Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;)V
 
-    .line 161
+    .line 177
     sget-object v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->END:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 162
-    iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
-
-    iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    .line 164
-    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
-
-    .line 165
-    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
-
-    .line 166
-    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnInfoListener(Landroid/media/MediaPlayer$OnInfoListener;)V
-
-    .line 167
-    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
-
-    .line 168
-    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnSeekCompleteListener(Landroid/media/MediaPlayer$OnSeekCompleteListener;)V
-
-    .line 169
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
-
-    .line 170
-    iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
-
-    iput-object v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
-
-    :cond_0
-    return-void
-.end method
-
-.method private releaseNextMp()V
-    .locals 2
-
-    .line 175
-    iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
-
-    invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->clearNextMediaPlayer(Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;)V
-
-    .line 176
-    iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
-
-    sget-object v1, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->END:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
-
-    iput-object v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
-
-    const/4 v1, 0x0
-
-    .line 177
-    iput-object v1, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNextTrack:Lcom/sonymobile/music/audioplayer/BasicTrack;
-
     .line 178
+    iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
+
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
+
+    const/4 v1, 0x0
 
     .line 180
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
@@ -389,6 +366,58 @@
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
     .line 186
+    iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
+
+    iput-object v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
+
+    :cond_0
+    return-void
+.end method
+
+.method private releaseNextMp()V
+    .locals 2
+
+    .line 191
+    iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
+
+    invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->clearNextMediaPlayer(Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;)V
+
+    .line 192
+    iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
+
+    sget-object v1, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->END:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
+
+    iput-object v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
+
+    const/4 v1, 0x0
+
+    .line 193
+    iput-object v1, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNextTrack:Lcom/sonymobile/music/audioplayer/BasicTrack;
+
+    .line 194
+    iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
+
+    if-eqz v0, :cond_0
+
+    .line 196
+    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
+
+    .line 197
+    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
+
+    .line 198
+    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnInfoListener(Landroid/media/MediaPlayer$OnInfoListener;)V
+
+    .line 199
+    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
+
+    .line 200
+    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnSeekCompleteListener(Landroid/media/MediaPlayer$OnSeekCompleteListener;)V
+
+    .line 201
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
+
+    .line 202
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iput-object v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
@@ -398,7 +427,7 @@
 .end method
 
 .method private setDataSourceAndMode(Landroid/media/MediaPlayer;Landroid/content/Context;Landroid/net/Uri;Ljava/util/Map;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -421,18 +450,53 @@
         }
     .end annotation
 
-    if-eqz p4, :cond_0
+    .line 128
+    sget-boolean v0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->SUPPORT_SDK_S_API:Z
 
-    .line 124
+    if-eqz v0, :cond_1
+
+    .line 129
+    iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioManager:Landroid/media/AudioManager;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "audio"
+
+    .line 130
+    invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    iput-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioManager:Landroid/media/AudioManager;
+
+    .line 131
+    :cond_0
+    iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioManager:Landroid/media/AudioManager;
+
+    invoke-virtual {v0}, Landroid/media/AudioManager;->generateAudioSessionId()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    .line 132
+    invoke-virtual {p1, v0}, Landroid/media/MediaPlayer;->setAudioSessionId(I)V
+
+    :cond_1
+    if-eqz p4, :cond_2
+
+    .line 140
     invoke-virtual {p1, p2, p3, p4}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;Ljava/util/Map;)V
 
     goto :goto_0
 
-    .line 126
-    :cond_0
+    .line 142
+    :cond_2
     invoke-virtual {p1, p2, p3}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 129
+    .line 145
     :goto_0
     iget-object p2, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioPlayerListener:Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;
 
@@ -444,18 +508,18 @@
 .method private switchMediaPlayerInternal()V
     .locals 2
 
-    .line 212
+    .line 228
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
-    .line 213
+    .line 229
     iget-object v1, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iput-object v1, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
-    .line 214
+    .line 230
     iput-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
-    .line 215
+    .line 231
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -468,12 +532,12 @@
 .method private updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
     .locals 1
 
-    .line 219
+    .line 235
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iput-object p1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
-    .line 220
+    .line 236
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioPlayerListener:Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;
 
     invoke-interface {v0, p1}, Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;->onPlayerStateChanged(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
@@ -486,7 +550,7 @@
 .method public cancelNext()V
     .locals 2
 
-    .line 372
+    .line 388
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -495,28 +559,28 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 373
+    .line 389
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
     goto :goto_0
 
-    .line 375
+    .line 391
     :cond_0
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->clearNextMediaPlayer(Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;)V
 
-    .line 376
+    .line 392
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_1
 
-    .line 377
+    .line 393
     invoke-virtual {v0}, Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;->reset()V
 
-    .line 378
+    .line 394
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     sget-object v1, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->IDLE:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -525,7 +589,7 @@
 
     const/4 v1, 0x0
 
-    .line 379
+    .line 395
     iput-boolean v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mHasNextMediaPlayer:Z
 
     :cond_1
@@ -536,21 +600,21 @@
 .method public getAudioSessionId()I
     .locals 2
 
-    .line 400
+    .line 416
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 401
+    .line 417
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getAudioSessionId()I
 
     move-result v0
 
     return v0
 
-    .line 403
+    .line 419
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -564,21 +628,21 @@
 .method public getCurrentPosition()I
     .locals 2
 
-    .line 462
+    .line 478
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 463
+    .line 479
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
 
     move-result v0
 
     return v0
 
-    .line 465
+    .line 481
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -592,21 +656,21 @@
 .method public getDuration()I
     .locals 2
 
-    .line 454
+    .line 470
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 455
+    .line 471
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getDuration()I
 
     move-result v0
 
     return v0
 
-    .line 457
+    .line 473
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -625,7 +689,7 @@
         }
     .end annotation
 
-    .line 353
+    .line 369
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -634,7 +698,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 354
+    .line 370
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNextTrack:Lcom/sonymobile/music/audioplayer/BasicTrack;
 
     return-object v0
@@ -648,7 +712,7 @@
 .method public hasPlayer()Z
     .locals 1
 
-    .line 490
+    .line 506
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
@@ -669,21 +733,21 @@
 .method public isPlaying()Z
     .locals 2
 
-    .line 482
+    .line 498
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 483
+    .line 499
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
 
     move-result v0
 
     return v0
 
-    .line 485
+    .line 501
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -697,19 +761,19 @@
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 2
 
-    .line 496
+    .line 512
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-ne p1, v0, :cond_1
 
-    .line 497
+    .line 513
     sget-object v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->COMPLETED:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 498
+    .line 514
     sget-object v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$1;->$SwitchMap$com$sonymobile$music$audioplayer$AudioPlayer$PlayerState:[I
 
     iget-object v1, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
@@ -724,10 +788,10 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 512
+    .line 528
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
-    .line 513
+    .line 529
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioPlayerListener:Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;
 
     invoke-interface {v0, p1}, Landroid/media/MediaPlayer$OnCompletionListener;->onCompletion(Landroid/media/MediaPlayer;)V
@@ -737,23 +801,23 @@
     :pswitch_0
     const/4 p1, 0x0
 
-    .line 502
+    .line 518
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 503
+    .line 519
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
 
     move-result p1
 
-    .line 505
+    .line 521
     :cond_0
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->switchMediaPlayerInternal()V
 
-    .line 506
+    .line 522
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioPlayerListener:Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;
 
     iget-object v1, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNextTrack:Lcom/sonymobile/music/audioplayer/BasicTrack;
@@ -768,7 +832,7 @@
     :goto_0
     return-void
 
-    .line 521
+    .line 537
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -788,29 +852,29 @@
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 2
 
-    .line 528
+    .line 544
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-ne p1, v1, :cond_1
 
-    .line 529
+    .line 545
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     sget-object v1, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->ERROR:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     if-eq v0, v1, :cond_0
 
-    .line 530
+    .line 546
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
-    .line 531
+    .line 547
     sget-object v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->ERROR:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 532
+    .line 548
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioPlayerListener:Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/media/MediaPlayer$OnErrorListener;->onError(Landroid/media/MediaPlayer;II)Z
@@ -824,7 +888,7 @@
 
     return p1
 
-    .line 537
+    .line 553
     :cond_1
     iget-object p1, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
@@ -832,10 +896,10 @@
 
     iput-object p2, p1, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
-    .line 538
+    .line 554
     invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->clearNextMediaPlayer(Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;)V
 
-    .line 539
+    .line 555
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
     const/4 p1, 0x0
@@ -846,14 +910,14 @@
 .method public onInfo(Landroid/media/MediaPlayer;II)Z
     .locals 1
 
-    .line 584
+    .line 600
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-ne p1, v0, :cond_0
 
-    .line 585
+    .line 601
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioPlayerListener:Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/media/MediaPlayer$OnInfoListener;->onInfo(Landroid/media/MediaPlayer;II)Z
@@ -871,14 +935,14 @@
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 4
 
-    .line 546
+    .line 562
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-ne p1, v1, :cond_3
 
-    .line 547
+    .line 563
     iget-object v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     sget-object v2, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->PREPARING:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -893,18 +957,18 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 548
+    .line 564
     sget-object v2, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->PREPARED:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     iput-object v2, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
-    .line 550
+    .line 566
     :try_start_0
     iget-object v0, v1, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     invoke-virtual {v0, p1}, Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;->setNextMediaPlayer(Landroid/media/MediaPlayer;)V
 
-    .line 551
+    .line 567
     iget-object p1, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     const/4 v0, 0x1
@@ -918,10 +982,10 @@
     :catch_0
     move-exception p1
 
-    .line 553
+    .line 569
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
-    .line 555
+    .line 571
     sget-object v0, Lcom/sonymobile/music/audioplayer/Debug;->DEBUG:Lcom/sonymobile/music/audioplayer/Debug;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -954,7 +1018,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sonymobile/music/debug/DebugBase;->logW(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 559
+    .line 575
     sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string v1, "eng"
@@ -977,7 +1041,7 @@
 
     goto/16 :goto_0
 
-    .line 560
+    .line 576
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1009,11 +1073,11 @@
 
     throw v0
 
-    .line 565
+    .line 581
     :cond_1
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
-    .line 567
+    .line 583
     sget-object p1, Lcom/sonymobile/music/audioplayer/Debug;->DEBUG:Lcom/sonymobile/music/audioplayer/Debug;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1050,7 +1114,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/sonymobile/music/debug/DebugBase;->logW(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 571
+    .line 587
     sget-object p1, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string v0, "eng"
@@ -1073,7 +1137,7 @@
 
     goto :goto_0
 
-    .line 572
+    .line 588
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1109,13 +1173,13 @@
 
     throw p1
 
-    .line 577
+    .line 593
     :cond_3
     sget-object v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->PREPARED:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 578
+    .line 594
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioPlayerListener:Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;
 
     invoke-interface {v0, p1}, Landroid/media/MediaPlayer$OnPreparedListener;->onPrepared(Landroid/media/MediaPlayer;)V
@@ -1127,14 +1191,14 @@
 .method public onSeekComplete(Landroid/media/MediaPlayer;)V
     .locals 1
 
-    .line 592
+    .line 608
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-ne p1, v0, :cond_0
 
-    .line 593
+    .line 609
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioPlayerListener:Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;
 
     invoke-interface {v0, p1}, Landroid/media/MediaPlayer$OnSeekCompleteListener;->onSeekComplete(Landroid/media/MediaPlayer;)V
@@ -1146,19 +1210,19 @@
 .method public pause()V
     .locals 2
 
-    .line 417
+    .line 433
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 418
+    .line 434
     sget-object v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->PAUSED:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 419
+    .line 435
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
@@ -1167,7 +1231,7 @@
 
     return-void
 
-    .line 421
+    .line 437
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1205,31 +1269,31 @@
 
     if-eqz p2, :cond_3
 
-    .line 231
+    .line 247
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-nez v0, :cond_0
 
-    .line 232
+    .line 248
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->createCurrentMp()V
 
-    .line 234
+    .line 250
     :cond_0
     sget-object v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->PREPARING:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 236
+    .line 252
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
-    .line 238
+    .line 254
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
-    .line 241
+    .line 257
     :try_start_0
     invoke-direct {p0, v0, p1, p2, p4}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->setDataSourceAndMode(Landroid/media/MediaPlayer;Landroid/content/Context;Landroid/net/Uri;Ljava/util/Map;)V
     :try_end_0
@@ -1242,7 +1306,7 @@
 
     if-eqz p3, :cond_1
 
-    .line 247
+    .line 263
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1262,10 +1326,10 @@
 
     move-result-object p2
 
-    .line 249
+    .line 265
     invoke-virtual {p2, p1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 250
+    .line 266
     new-array p3, p1, [Ljava/lang/Object;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1284,7 +1348,7 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 261
+    .line 277
     :catch_0
     :cond_1
     :try_start_2
@@ -1294,19 +1358,19 @@
 
     if-lt p2, p3, :cond_2
 
-    .line 262
+    .line 278
     new-instance p2, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {p2}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
     const/4 p3, 0x2
 
-    .line 263
+    .line 279
     invoke-virtual {p2, p3}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
 
     move-result-object p2
 
-    .line 264
+    .line 280
     invoke-virtual {p2, p1}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
 
     move-result-object p1
@@ -1315,7 +1379,7 @@
 
     move-result-object p1
 
-    .line 262
+    .line 278
     invoke-virtual {v0, p1}, Landroid/media/MediaPlayer;->setAudioAttributes(Landroid/media/AudioAttributes;)V
 
     goto :goto_0
@@ -1323,10 +1387,10 @@
     :cond_2
     const/4 p1, 0x3
 
-    .line 266
+    .line 282
     invoke-virtual {v0, p1}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    .line 268
+    .line 284
     :goto_0
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepareAsync()V
     :try_end_2
@@ -1340,12 +1404,12 @@
     :catch_1
     move-exception p1
 
-    .line 279
+    .line 295
     sget-object p2, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->ERROR:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, p2}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 280
+    .line 296
     new-instance p2, Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerException;
 
     invoke-direct {p2, p1}, Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerException;-><init>(Ljava/lang/Exception;)V
@@ -1355,12 +1419,12 @@
     :catch_2
     move-exception p1
 
-    .line 276
+    .line 292
     sget-object p2, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->ERROR:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, p2}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 277
+    .line 293
     new-instance p2, Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerException;
 
     invoke-direct {p2, p1}, Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerException;-><init>(Ljava/lang/Exception;)V
@@ -1370,12 +1434,12 @@
     :catch_3
     move-exception p1
 
-    .line 273
+    .line 289
     sget-object p2, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->ERROR:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, p2}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 274
+    .line 290
     new-instance p2, Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerException;
 
     invoke-direct {p2, p1}, Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerException;-><init>(Ljava/lang/Exception;)V
@@ -1385,25 +1449,25 @@
     :catch_4
     move-exception p1
 
-    .line 270
+    .line 286
     sget-object p2, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->ERROR:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, p2}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 271
+    .line 287
     new-instance p2, Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerException;
 
     invoke-direct {p2, p1}, Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerException;-><init>(Ljava/lang/Exception;)V
 
     throw p2
 
-    .line 227
+    .line 243
     :cond_3
     sget-object p1, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->ERROR:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, p1}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 228
+    .line 244
     new-instance p1, Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerException;
 
     new-instance p2, Ljava/io/IOException;
@@ -1437,7 +1501,7 @@
         }
     .end annotation
 
-    .line 291
+    .line 307
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -1446,11 +1510,11 @@
 
     if-eq v0, v1, :cond_5
 
-    .line 293
+    .line 309
     :try_start_0
     iput-object p2, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNextTrack:Lcom/sonymobile/music/audioplayer/BasicTrack;
 
-    .line 295
+    .line 311
     iget-object p2, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object p2, p2, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -1465,19 +1529,19 @@
 
     if-nez p2, :cond_1
 
-    .line 298
+    .line 314
     :cond_0
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->createNextMp()V
 
     :cond_1
     if-eqz p3, :cond_5
 
-    .line 302
+    .line 318
     iget-object p2, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object p2, p2, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
-    .line 303
+    .line 319
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -1486,7 +1550,7 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 306
+    .line 322
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
@@ -1497,7 +1561,7 @@
 
     invoke-virtual {p2, v0}, Landroid/media/MediaPlayer;->setAudioSessionId(I)V
 
-    .line 308
+    .line 324
     :cond_2
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
@@ -1505,7 +1569,7 @@
 
     iput-object v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
-    .line 309
+    .line 325
     invoke-direct {p0, p2, p1, p3, p5}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->setDataSourceAndMode(Landroid/media/MediaPlayer;Landroid/content/Context;Landroid/net/Uri;Ljava/util/Map;)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_4
@@ -1517,7 +1581,7 @@
 
     if-eqz p4, :cond_3
 
-    .line 317
+    .line 333
     :try_start_1
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1537,10 +1601,10 @@
 
     move-result-object p3
 
-    .line 319
+    .line 335
     invoke-virtual {p3, p1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 320
+    .line 336
     new-array p4, p1, [Ljava/lang/Object;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1559,7 +1623,7 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 331
+    .line 347
     :catch_0
     :cond_3
     :try_start_2
@@ -1569,19 +1633,19 @@
 
     if-lt p3, p4, :cond_4
 
-    .line 332
+    .line 348
     new-instance p3, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {p3}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
     const/4 p4, 0x2
 
-    .line 333
+    .line 349
     invoke-virtual {p3, p4}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
 
     move-result-object p3
 
-    .line 334
+    .line 350
     invoke-virtual {p3, p1}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
 
     move-result-object p1
@@ -1590,7 +1654,7 @@
 
     move-result-object p1
 
-    .line 332
+    .line 348
     invoke-virtual {p2, p1}, Landroid/media/MediaPlayer;->setAudioAttributes(Landroid/media/AudioAttributes;)V
 
     goto :goto_0
@@ -1598,10 +1662,10 @@
     :cond_4
     const/4 p1, 0x3
 
-    .line 336
+    .line 352
     invoke-virtual {p2, p1}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    .line 338
+    .line 354
     :goto_0
     invoke-virtual {p2}, Landroid/media/MediaPlayer;->prepareAsync()V
     :try_end_2
@@ -1612,25 +1676,25 @@
 
     goto :goto_1
 
-    .line 347
+    .line 363
     :catch_1
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
     goto :goto_1
 
-    .line 345
+    .line 361
     :catch_2
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
     goto :goto_1
 
-    .line 343
+    .line 359
     :catch_3
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
     goto :goto_1
 
-    .line 341
+    .line 357
     :catch_4
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
@@ -1642,18 +1706,18 @@
 .method public release()V
     .locals 1
 
-    .line 437
+    .line 453
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseCurrentMp()V
 
-    .line 438
+    .line 454
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
-    .line 440
+    .line 456
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mWatchdog:Lcom/sonymobile/music/audioplayer/Watchdog;
 
     if-eqz v0, :cond_0
 
-    .line 441
+    .line 457
     invoke-virtual {v0}, Lcom/sonymobile/music/audioplayer/Watchdog;->halt()V
 
     :cond_0
@@ -1663,38 +1727,38 @@
 .method public reset()V
     .locals 2
 
-    .line 426
+    .line 442
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 427
+    .line 443
     sget-object v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->IDLE:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 428
+    .line 444
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     invoke-virtual {v0}, Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;->reset()V
 
-    .line 429
+    .line 445
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mHasNextMediaPlayer:Z
 
-    .line 433
+    .line 449
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
     return-void
 
-    .line 431
+    .line 447
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1708,19 +1772,19 @@
 .method public seekTo(I)V
     .locals 1
 
-    .line 446
+    .line 462
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 447
+    .line 463
     invoke-virtual {v0, p1}, Landroid/media/MediaPlayer;->seekTo(I)V
 
     return-void
 
-    .line 449
+    .line 465
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1734,30 +1798,30 @@
 .method public setVolume(FF)V
     .locals 1
 
-    .line 470
+    .line 486
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_1
 
-    .line 471
+    .line 487
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaPlayer;->setVolume(FF)V
 
-    .line 476
+    .line 492
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 477
+    .line 493
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaPlayer;->setVolume(FF)V
 
     :cond_0
     return-void
 
-    .line 473
+    .line 489
     :cond_1
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1771,19 +1835,19 @@
 .method public start()V
     .locals 2
 
-    .line 408
+    .line 424
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 409
+    .line 425
     sget-object v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;->STARTED:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
 
     invoke-direct {p0, v0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->updateCurrentState(Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;)V
 
-    .line 410
+    .line 426
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mMediaPlayer:Lcom/sonymobile/music/audioplayer/WatchedMediaPlayer;
@@ -1792,7 +1856,7 @@
 
     return-void
 
-    .line 412
+    .line 428
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1806,7 +1870,7 @@
 .method public switchMediaPlayer()Z
     .locals 2
 
-    .line 386
+    .line 402
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNext:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
 
     iget-object v0, v0, Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;->mState:Lcom/sonymobile/music/audioplayer/AudioPlayer$PlayerState;
@@ -1815,13 +1879,13 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 387
+    .line 403
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->switchMediaPlayerInternal()V
 
-    .line 390
+    .line 406
     invoke-direct {p0}, Lcom/sonymobile/music/audioplayer/AudioPlayer;->releaseNextMp()V
 
-    .line 393
+    .line 409
     iget-object v0, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mAudioPlayerListener:Lcom/sonymobile/music/audioplayer/AudioPlayer$AudioPlayerListener;
 
     iget-object v1, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mCurr:Lcom/sonymobile/music/audioplayer/AudioPlayer$MediaPlayerHolder;
@@ -1853,7 +1917,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 360
+    .line 376
     iget-object v1, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNextTrack:Lcom/sonymobile/music/audioplayer/BasicTrack;
 
     invoke-interface {p1, v1, v0}, Lcom/sonymobile/music/audioplayer/BasicTrack;->isSame(Lcom/sonymobile/music/audioplayer/BasicTrack;Z)Z
@@ -1862,7 +1926,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 361
+    .line 377
     iput-object p1, p0, Lcom/sonymobile/music/audioplayer/AudioPlayer;->mNextTrack:Lcom/sonymobile/music/audioplayer/BasicTrack;
 
     const/4 p1, 0x1

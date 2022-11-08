@@ -31,19 +31,27 @@
 
 .field public static final EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
+.field public static final FAVOURITE_ID:I = 0x4
+
+.field public static final MOSTLY_PLAYED_ID:I = 0x2
+
+.field public static final NEWLY_ADDED_ID:I = 0x1
+
 .field public static final NOTIFY_PLAYLIST_URI:Landroid/net/Uri;
+
+.field public static final RECENTLY_PLAYED_ID:I = 0x3
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 1250
+    .line 1267
     sget-object v0, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1253
+    .line 1270
     sget-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoProvider;->NOTIFY_PLAYLIST_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$Audio$Playlists;->NOTIFY_PLAYLIST_URI:Landroid/net/Uri;
@@ -54,7 +62,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1246
+    .line 1263
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,7 +71,7 @@
 .method public static getContentUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 0
 
-    .line 1257
+    .line 1279
     invoke-static {p0}, Landroid/provider/MediaStore$Audio$Playlists;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0

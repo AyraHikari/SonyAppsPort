@@ -1,4 +1,4 @@
-.class final Lcom/sonyericsson/music/library/store/MoraNewReleasesGenres$3;
+.class Lcom/sonyericsson/music/library/store/MoraNewReleasesGenres$3;
 .super Ljava/util/ArrayList;
 .source "MoraNewReleasesGenres.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

@@ -6,6 +6,7 @@ This is modified version of some Sony apps, it was ported and can be installed t
 
 # Source Code
 - [Sony Music](https://github.com/AyraHikari/SonyApps/tree/main/SonyMusic)
+- [Sony Launcher](https://github.com/AyraHikari/SonyApps/tree/main/SonyLauncher)
 
 ## How to build
 - apktool b {target}

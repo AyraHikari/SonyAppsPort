@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/search/SearchFragment$6;)V
     .locals 0
 
-    .line 396
+    .line 400
     iput-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment$6$1;->this$1:Lcom/sonyericsson/music/search/SearchFragment$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onQueryTextChange(Ljava/lang/String;)Z
     .locals 4
 
-    .line 406
+    .line 410
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment$6$1;->this$1:Lcom/sonyericsson/music/search/SearchFragment$6;
 
     iget-object v0, v0, Lcom/sonyericsson/music/search/SearchFragment$6;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
@@ -53,14 +53,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 407
+    .line 411
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment$6$1;->this$1:Lcom/sonyericsson/music/search/SearchFragment$6;
 
     iget-object p1, p1, Lcom/sonyericsson/music/search/SearchFragment$6;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
 
     invoke-static {p1, v2}, Lcom/sonyericsson/music/search/SearchFragment;->access$702(Lcom/sonyericsson/music/search/SearchFragment;Z)Z
 
-    .line 408
+    .line 412
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment$6$1;->this$1:Lcom/sonyericsson/music/search/SearchFragment$6;
 
     iget-object p1, p1, Lcom/sonyericsson/music/search/SearchFragment$6;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
@@ -81,7 +81,7 @@
 
     return v1
 
-    .line 412
+    .line 416
     :cond_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -89,12 +89,12 @@
 
     if-nez v0, :cond_1
 
-    .line 413
+    .line 417
     invoke-static {p1}, Lcom/sonyericsson/music/common/StringUtils;->trimEnd(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 416
+    .line 420
     :cond_1
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment$6$1;->this$1:Lcom/sonyericsson/music/search/SearchFragment$6;
 
@@ -112,7 +112,7 @@
 
     return v1
 
-    .line 420
+    .line 424
     :cond_2
     iget-object v0, p0, Lcom/sonyericsson/music/search/SearchFragment$6$1;->this$1:Lcom/sonyericsson/music/search/SearchFragment$6;
 
@@ -120,20 +120,20 @@
 
     iput-boolean v1, v0, Lcom/sonyericsson/music/search/SearchFragment;->mLaunchQueryHandled:Z
 
-    .line 421
+    .line 425
     invoke-static {v0, p1}, Lcom/sonyericsson/music/search/SearchFragment;->access$302(Lcom/sonyericsson/music/search/SearchFragment;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 423
+    .line 427
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v3, "query_arg"
 
-    .line 424
+    .line 428
     invoke-virtual {v0, v3, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 426
+    .line 430
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment$6$1;->this$1:Lcom/sonyericsson/music/search/SearchFragment$6;
 
     iget-object p1, p1, Lcom/sonyericsson/music/search/SearchFragment$6;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
@@ -148,10 +148,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 428
+    .line 432
     invoke-virtual {p1}, Landroidx/loader/content/Loader;->cancelLoad()Z
 
-    .line 431
+    .line 435
     :cond_3
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment$6$1;->this$1:Lcom/sonyericsson/music/search/SearchFragment$6;
 
@@ -165,7 +165,7 @@
 
     return v2
 
-    .line 436
+    .line 440
     :cond_4
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment$6$1;->this$1:Lcom/sonyericsson/music/search/SearchFragment$6;
 
@@ -181,7 +181,7 @@
 
     invoke-virtual {p1, v2, v0, v3}, Landroidx/loader/app/LoaderManager;->restartLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
 
-    .line 437
+    .line 441
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment$6$1;->this$1:Lcom/sonyericsson/music/search/SearchFragment$6;
 
     iget-object p1, p1, Lcom/sonyericsson/music/search/SearchFragment$6;->this$0:Lcom/sonyericsson/music/search/SearchFragment;
@@ -194,7 +194,7 @@
 .method public onQueryTextSubmit(Ljava/lang/String;)Z
     .locals 0
 
-    .line 400
+    .line 404
     iget-object p1, p0, Lcom/sonyericsson/music/search/SearchFragment$6$1;->this$1:Lcom/sonyericsson/music/search/SearchFragment$6;
 
     iget-object p1, p1, Lcom/sonyericsson/music/search/SearchFragment$6;->this$0:Lcom/sonyericsson/music/search/SearchFragment;

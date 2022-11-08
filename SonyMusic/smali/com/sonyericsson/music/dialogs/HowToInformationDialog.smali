@@ -63,7 +63,7 @@
 
     check-cast p1, Landroid/widget/ScrollView;
 
-    const v1, 0x7f090203
+    const v1, 0x7f090204
 
     .line 41
     invoke-virtual {p1, v1}, Landroid/widget/ScrollView;->findViewById(I)Landroid/view/View;
@@ -79,7 +79,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f09015d
+    const v1, 0x7f09015e
 
     .line 44
     invoke-virtual {p1, v1}, Landroid/widget/ScrollView;->findViewById(I)Landroid/view/View;

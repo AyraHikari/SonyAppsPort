@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sonyericsson/music/MusicActivity;->tryHandleIntent()V
+    value = Lcom/sonyericsson/music/MusicActivity;->initMediaRouter()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/sonyericsson/music/MusicActivity;)V
     .locals 0
 
-    .line 1125
+    .line 1039
     iput-object p1, p0, Lcom/sonyericsson/music/MusicActivity$14;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 1128
+    .line 1042
     iget-object v0, p0, Lcom/sonyericsson/music/MusicActivity$14;->this$0:Lcom/sonyericsson/music/MusicActivity;
 
     new-instance v1, Lcom/sonyericsson/music/MusicActivity$14$1;

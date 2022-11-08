@@ -32,7 +32,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 1236
+    .line 1240
     new-instance v0, Landroidx/collection/ArraySet;
 
     const/4 v1, 0x6
@@ -89,7 +89,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 1234
+    .line 1238
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

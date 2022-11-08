@@ -38,7 +38,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 626
+    .line 630
     new-instance v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;
 
     const-string v1, "TRACK"
@@ -49,7 +49,7 @@
 
     sput-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;->TRACK:Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;
 
-    .line 627
+    .line 631
     new-instance v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;
 
     const-string v1, "ALBUM"
@@ -62,7 +62,7 @@
 
     const/4 v0, 0x2
 
-    .line 625
+    .line 629
     new-array v0, v0, [Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;
 
     sget-object v1, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;->TRACK:Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;
@@ -86,10 +86,10 @@
         }
     .end annotation
 
-    .line 631
+    .line 635
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 632
+    .line 636
     iput p3, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;->mTypeId:I
 
     return-void
@@ -98,7 +98,7 @@
 .method public static getType(I)Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;
     .locals 5
 
-    .line 640
+    .line 644
     invoke-static {}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;->values()[Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;
 
     move-result-object v0
@@ -112,7 +112,7 @@
 
     aget-object v3, v0, v2
 
-    .line 641
+    .line 645
     invoke-virtual {v3}, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;->getId()I
 
     move-result v4
@@ -135,7 +135,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;
     .locals 1
 
-    .line 625
+    .line 629
     const-class v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -150,7 +150,7 @@
 .method public static values()[Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;
     .locals 1
 
-    .line 625
+    .line 629
     sget-object v0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;->$VALUES:[Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;
 
     invoke-virtual {v0}, [Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;->clone()Ljava/lang/Object;
@@ -167,7 +167,7 @@
 .method public getId()I
     .locals 1
 
-    .line 636
+    .line 640
     iget v0, p0, Lcom/sonyericsson/music/metadata/provider/MusicInfoStore$HighResMedia$Type;->mTypeId:I
 
     return v0

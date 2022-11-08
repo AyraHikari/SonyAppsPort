@@ -356,7 +356,7 @@
 
     float-to-int v2, v2
 
-    .line 130
+    .line 131
     iget-object v5, p0, Lcom/sonyericsson/music/ui/SlidingTabStrip;->mCustomTabColorizer:Lcom/sonyericsson/music/ui/SlidingTabLayout$TabColorizer;
 
     if-eqz v5, :cond_0

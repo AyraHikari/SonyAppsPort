@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:shareInterpolator="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha android:interpolator="@interpolator/standard_accelerate" android:duration="100" android:fillBefore="true" android:fillAfter="true" android:startOffset="0" android:fromAlpha="1.0" android:toAlpha="0.0" android:fillEnabled="true" />
+    <translate android:interpolator="@interpolator/fast_out_extra_slow_in" android:duration="450" android:fillBefore="true" android:fillAfter="true" android:startOffset="0" android:fromXDelta="0.0" android:toXDelta="25.0%" android:fillEnabled="true" />
+</set>
